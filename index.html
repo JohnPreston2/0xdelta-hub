@@ -1,129 +1,428 @@
 <!DOCTYPE html>
-<html lang="fr" class="dark">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0xDelta | Cyber Intelligence</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600&family=Orbitron:wght@400;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #030014;
-            --card: rgba(10, 10, 25, 0.7);
-            --neon-blue: #00d2ff;
-            --neon-purple: #9d50bb;
-            --neon-red: #ff0055;
-            --border: rgba(255, 255, 255, 0.08);
-        }
-        body {
-            background-color: var(--bg);
-            background-image: 
-                radial-gradient(circle at 50% 0%, rgba(157, 80, 187, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 100% 100%, rgba(0, 210, 255, 0.1) 0%, transparent 40%);
-            color: #e2e8f0;
-            font-family: 'Exo 2', sans-serif;
-        }
-        .heading-font { font-family: 'Orbitron', sans-serif; }
-        .code-font { font-family: 'Fira Code', monospace; }
-        .cyber-card {
-            background: var(--card);
-            backdrop-filter: blur(15px);
-            border: 1px solid var(--border);
-            transition: all 0.4s;
-        }
-        .cyber-card:hover {
-            border-color: rgba(0, 210, 255, 0.3);
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.1);
-        }
-        .scanline {
-            width: 100%; height: 2px;
-            background: rgba(0, 210, 255, 0.05);
-            position: absolute;
-            animation: scanline 8s linear infinite;
-        }
-        @keyframes scanline { 0% { top: 0; } 100% { top: 100%; } }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0xΔ | Tactical Forensic Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0a0a0c;
+      --border: #1a1a1e;
+      --border-bright: #2a2a30;
+      --accent: #bfff00; /* Phosphor Green */
+      --text-main: #f0f0f0;
+      --text-dim: #66666e;
+      --text-ghost: #333338;
+      
+      --red: #ff3e3e;
+      --blue: #0070ff;
+      --yellow: #ffb800;
+      
+      --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; cursor: crosshair; }
+
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 13px;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Texture Overlay */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: var(--grain);
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: -0.02em; }
+
+    /* ── HEADER TACTIQUE ── */
+    header {
+      height: 60px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      position: relative;
+    }
+
+    .logo-area { display: flex; align-items: center; gap: 15px; }
+    .logo-box {
+      width: 32px; height: 32px;
+      background: var(--accent);
+      color: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      clip-path: polygon(20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 20%);
+    }
+
+    .status-ticker {
+      display: flex;
+      gap: 20px;
+      font-size: 10px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+    }
+
+    .status-item span { color: var(--accent); margin-right: 4px; }
+
+    /* ── LAYOUT PRINCIPAL ── */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr 320px;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* ── COLONNE GAUCHE : WATCHLIST ── */
+    .sidebar {
+      border-right: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(to right, var(--surface), transparent);
+    }
+
+    .sidebar-label {
+      padding: 16px 20px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-ghost);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .token-list { overflow-y: auto; flex: 1; }
+    .token-item {
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+    }
+
+    .token-item:hover { background: rgba(191, 255, 0, 0.05); }
+    .token-item.active {
+      background: rgba(191, 255, 0, 0.1);
+      border-left: 4px solid var(--accent);
+    }
+
+    .token-name { font-weight: 700; font-size: 15px; }
+    .token-meta { font-size: 10px; color: var(--text-dim); text-transform: uppercase; margin-top: 2px; }
+    .token-score {
+      font-family: 'JetBrains Mono';
+      font-weight: 700;
+      font-size: 16px;
+      text-align: right;
+    }
+
+    /* ── CENTRE : INTELLIGENCE ── */
+    .content-area {
+      overflow-y: auto;
+      padding: 40px;
+      position: relative;
+    }
+
+    .intel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 40px;
+    }
+
+    .intel-title h1 {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 0.9;
+      text-transform: uppercase;
+      letter-spacing: -0.04em;
+    }
+
+    .addr-pill {
+      background: var(--surface);
+      border: 1px solid var(--border-bright);
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 11px;
+      color: var(--text-dim);
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .fhs-radar {
+      position: relative;
+      width: 120px; height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-bright);
+      border-radius: 50%;
+    }
+
+    .fhs-radar::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      border-radius: 50%;
+      border: 1px solid var(--accent);
+      clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%);
+      animation: rotate 4s linear infinite;
+    }
+
+    @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    .fhs-val { font-size: 42px; font-weight: 800; font-family: 'JetBrains Mono'; }
+
+    /* ── GRILLE DE MÉTRIQUES ── */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-bottom: 40px;
+    }
+
+    .m-card {
+      background: var(--bg);
+      padding: 20px;
+      transition: background 0.3s;
+    }
+
+    .m-card:hover { background: var(--surface); }
+    .m-label { font-size: 10px; color: var(--text-dim); text-transform: uppercase; margin-bottom: 8px; }
+    .m-val { font-family: 'JetBrains Mono'; font-size: 20px; font-weight: 700; }
+
+    /* ── NARRATIVE BOX ── */
+    .narrative-box {
+      background: var(--surface);
+      border-left: 2px solid var(--accent);
+      padding: 24px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    /* ── RIGHT : TELEMETRY ── */
+    .telemetry {
+      border-left: 1px solid var(--border);
+      background: rgba(10, 10, 12, 0.5);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .t-section-title {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .t-section-title::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+    .alert-item {
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      font-size: 11px;
+      border-left: 3px solid transparent;
+    }
+    .alert-item.critical { background: rgba(255, 62, 62, 0.1); border-color: var(--red); color: #ff9999; }
+    .alert-item.info { background: rgba(0, 112, 255, 0.1); border-color: var(--blue); color: #99c2ff; }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border-bright); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+  </style>
 </head>
-<body class="min-h-screen pb-24">
-    <div class="scanline"></div>
-    <nav class="sticky top-0 z-50 px-6 py-4 flex justify-between items-center border-b border-white/5 bg-black/40 backdrop-blur-md">
-        <div class="flex items-center space-x-4">
-            <div class="w-10 h-10 bg-black rounded-lg flex items-center justify-center border border-white/10">
-                <span class="heading-font text-cyan-400 font-bold text-xl">Δ</span>
-            </div>
-            <div>
-                <h1 class="heading-font text-lg font-bold tracking-widest uppercase">0xDelta <span class="text-xs text-purple-500 ml-2">v2.0</span></h1>
-                <p class="text-[9px] code-font text-slate-500 uppercase">Community Agent // Neural Monitoring</p>
-            </div>
+<body>
+
+<header>
+  <div class="logo-area">
+    <div class="logo-box">Δ</div>
+    <div>
+      <div style="font-weight: 800; font-size: 16px; letter-spacing: -0.02em;">0xDELTA</div>
+      <div class="mono" style="font-size: 9px; color: var(--text-dim);">FIELD INTELLIGENCE UNIT</div>
+    </div>
+  </div>
+  <div class="status-ticker mono">
+    <div class="status-item"><span>●</span> SYSTEM: ONLINE</div>
+    <div class="status-item"><span>●</span> STREAM: ACTIVE</div>
+    <div id="top-updated" class="status-item">LAST SCAN: --</div>
+  </div>
+</header>
+
+<div class="main-grid">
+  <aside class="sidebar">
+    <div class="sidebar-label">
+      <span>Watchlist</span>
+      <span id="top-count" class="mono" style="color: var(--accent);">--</span>
+    </div>
+    <div class="token-list" id="sidebar-list">
+      </div>
+  </aside>
+
+  <main class="content-area" id="detail-panel">
+    <div style="height: 100%; display: flex; align-items: center; justify-content: center; color: var(--text-ghost);">
+      [ SELECTIONNER UN MODULE DE DONNÉES ]
+    </div>
+  </main>
+
+  <aside class="telemetry" id="right-panel">
+    <div>
+      <div class="t-section-title">Live Alerts</div>
+      <div id="alert-container">
         </div>
-        <div id="update-timer" class="code-font text-[10px] px-4 py-1.5 rounded-sm border border-cyan-500/20 bg-cyan-500/5 text-cyan-400">LOADING...</div>
-    </nav>
-    <main class="max-w-[1700px] mx-auto px-6 mt-12">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-            <div class="space-y-6">
-                <div class="flex items-center space-x-3 border-l-2 border-purple-500 pl-4">
-                    <h3 class="heading-font text-sm font-bold tracking-[0.2em] text-purple-400">SOLANA_CORE</h3>
-                </div>
-                <div id="solana-list" class="space-y-4"></div>
-            </div>
-            <div class="space-y-6">
-                <div class="flex items-center space-x-3 border-l-2 border-blue-500 pl-4">
-                    <h3 class="heading-font text-sm font-bold tracking-[0.2em] text-blue-400">BASE_NETWORK</h3>
-                </div>
-                <div id="base-list" class="space-y-4"></div>
-            </div>
-            <div class="space-y-6">
-                <div class="flex items-center space-x-3 border-l-2 border-red-500 pl-4">
-                    <span class="text-xl">🦞</span>
-                    <h3 class="heading-font text-sm font-bold tracking-[0.2em] text-red-500">OPENCLAW_AGENTS</h3>
-                </div>
-                <div id="openclaw-list" class="space-y-4"></div>
-            </div>
+    </div>
+    <div>
+      <div class="t-section-title">Supply Control</div>
+      <div id="holder-container">
         </div>
-    </main>
-    <script>
-        function formatCash(n) {
-            n = parseFloat(n) || 0;
-            if (n < 1e3) return n.toFixed(0);
-            if (n < 1e6) return (n / 1e3).toFixed(1) + "K";
-            if (n < 1e9) return (n / 1e6).toFixed(1) + "M";
-            return (n / 1e9).toFixed(1) + "B";
-        }
-        function renderTokens(tokens, elementId, color) {
-            const container = document.getElementById(elementId);
-            if (!tokens || tokens.length === 0) { container.innerHTML = '<p class="text-slate-500 text-sm">No data</p>'; return; }
-            const neonColor = color === 'purple' ? 'text-purple-400' : 'text-blue-400';
-            container.innerHTML = tokens.map(t => {
-                const change = parseFloat(t.price_change_24h) || 0;
-                return '<div class="cyber-card p-6 rounded-lg"><div class="flex justify-between items-start mb-4"><div><h4 class="heading-font text-base font-bold">' + t.symbol + '</h4><p class="code-font text-[9px] text-slate-600 mt-1">' + (t.pool_address || '').slice(0,12) + '...</p></div><div class="text-right"><p class="code-font text-sm font-bold ' + neonColor + '">$' + parseFloat(t.price_usd).toFixed(6) + '</p><p class="code-font text-[10px] ' + (change >= 0 ? 'text-green-500' : 'text-red-500') + '">' + (change >= 0 ? '▲' : '▼') + ' ' + Math.abs(change).toFixed(1) + '%</p></div></div><div class="flex justify-between mt-6 pt-4 border-t border-white/5 code-font text-[9px] text-slate-500"><div>MCAP <span class="text-slate-300">$' + formatCash(t.market_cap_usd) + '</span></div><div>VOL <span class="text-slate-300">$' + formatCash(t.volume_24h) + '</span></div></div></div>';
-            }).join('');
-        }
-        function renderOpenClaw(tokens) {
-            const container = document.getElementById('openclaw-list');
-            if (!tokens || tokens.length === 0) { container.innerHTML = '<p class="text-slate-500 text-sm">No data</p>'; return; }
-            container.innerHTML = tokens.map(t => {
-                const change = parseFloat(t.price_change_24h) || 0;
-                const isLive = t.pool_address !== "---" && parseFloat(t.price_usd) > 0;
-                return '<div class="cyber-card p-4 rounded-lg ' + (isLive ? '' : 'opacity-60') + '"><div class="flex justify-between items-start mb-2"><div><h4 class="heading-font text-xs font-bold ' + (isLive ? 'text-red-400' : 'text-slate-400') + '">' + (t.name || t.symbol) + '</h4><p class="code-font text-[8px] text-slate-600">' + t.symbol + '</p></div><div class="text-right"><p class="code-font text-[10px] font-bold text-red-500">' + (isLive ? '$' + parseFloat(t.price_usd).toFixed(6) : 'OFFLINE') + '</p>' + (isLive ? '<p class="code-font text-[8px] ' + (change >= 0 ? 'text-green-500' : 'text-red-500') + '">' + (change >= 0 ? '▲' : '▼') + ' ' + Math.abs(change).toFixed(1) + '%</p>' : '') + '</div></div>' + (isLive ? '<div class="mt-3 pt-2 border-t border-white/5 flex justify-between text-[8px] code-font text-slate-500"><div>MCAP <span class="text-slate-300">$' + formatCash(t.market_cap_usd) + '</span></div><div class="w-1 h-1 rounded-full bg-red-500 animate-pulse"></div></div>' : '') + '</div>';
-            }).join('');
-        }
-        function updateTimer(lastUpdated) {
-            const timerEl = document.getElementById('update-timer');
-            const diffMin = Math.floor((new Date() - new Date(lastUpdated)) / 60000);
-            timerEl.innerText = diffMin < 60 ? 'UPDATED ' + diffMin + 'M AGO' : 'UPDATED ' + Math.floor(diffMin/60) + 'H AGO';
-        }
-        async function loadData() {
-            try {
-                const res = await fetch('data.json?' + Date.now());
-                const data = await res.json();
-                updateTimer(data.updated_at);
-                renderTokens(data.trending_solana, 'solana-list', 'purple');
-                renderTokens(data.trending_base, 'base-list', 'blue');
-                renderOpenClaw(data.openclaw_tokens);
-            } catch (err) { console.error(err); }
-        }
-        loadData();
-        setInterval(loadData, 5 * 60 * 1000);
-    </script>
+    </div>
+  </aside>
+</div>
+
+<script>
+let allTokens = [];
+let selected = null;
+
+const colorForFHS = v => v >= 7 ? 'var(--accent)' : v >= 5 ? 'var(--yellow)' : 'var(--red)';
+
+function renderSidebar(tokens) {
+  const el = document.getElementById('sidebar-list');
+  el.innerHTML = tokens.map((t, i) => `
+    <div class="token-item ${selected === t.symbol ? 'active' : ''}" onclick="selectToken(${i})">
+      <div>
+        <div class="token-name">${t.symbol}</div>
+        <div class="token-meta mono">${t.phase}</div>
+      </div>
+      <div class="token-score" style="color: ${colorForFHS(t.fhs)}">${t.fhs.toFixed(1)}</div>
+    </div>
+  `).join('');
+}
+
+function selectToken(idx) {
+  const t = allTokens[idx];
+  selected = t.symbol;
+  renderSidebar(allTokens);
+  renderDetail(t);
+  renderTelemetry(t);
+}
+
+function renderDetail(t) {
+  const panel = document.getElementById('detail-panel');
+  const color = colorForFHS(t.fhs);
+  
+  panel.innerHTML = `
+    <div class="intel-header">
+      <div class="intel-title">
+        <div class="mono" style="color: var(--accent); font-size: 12px; margin-bottom: 8px;">// SUBJECT_ANALYSIS</div>
+        <h1>${t.symbol}</h1>
+        <div class="addr-pill mono">${t.address}</div>
+      </div>
+      <div class="fhs-radar">
+        <div class="mono" style="font-size: 9px; color: var(--text-dim); position: absolute; top: 15px;">HEALTH</div>
+        <div class="fhs-val" style="color: ${color}">${t.fhs}</div>
+        <div class="mono" style="font-size: 9px; color: var(--text-dim); position: absolute; bottom: 15px;">/ 10.0</div>
+      </div>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="m-card">
+        <div class="m-label">NBP 24H</div>
+        <div class="m-val" style="color: ${t.nbp >= 0 ? 'var(--accent)' : 'var(--red)'}">${t.nbp}%</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">ICR Index</div>
+        <div class="m-val">${t.icr}</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">Liquidity Coverage</div>
+        <div class="m-val">${t.lcr}%</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">Confidence</div>
+        <div class="m-val">${t.phase_confidence}%</div>
+      </div>
+    </div>
+
+    <div class="narrative-box">
+      <div class="mono" style="font-size: 10px; color: var(--accent); margin-bottom: 15px;">[ NARRATIVE_INSIGHT ]</div>
+      <p>${t.narrative_phase}</p>
+      <p style="margin-top: 15px; color: var(--text-dim);">${t.narrative_insight || ''}</p>
+    </div>
+  `;
+}
+
+function renderTelemetry(t) {
+  const alertContainer = document.getElementById('alert-container');
+  const holderContainer = document.getElementById('holder-container');
+
+  alertContainer.innerHTML = (t.alerts || []).map(a => `
+    <div class="alert-item ${a.severity === 'critical' ? 'critical' : 'info'}">
+      <div class="mono" style="font-weight: 700; margin-bottom: 4px;">${a.code}</div>
+      <div>${a.message}</div>
+    </div>
+  `).join('') || '<div class="mono" style="color: var(--text-ghost)">NO_THREATS_DETECTED</div>';
+
+  holderContainer.innerHTML = (t.top20_holders || []).slice(0, 5).map(h => `
+    <div style="margin-bottom: 12px;">
+      <div style="display: flex; justify-content: space-between; font-size: 10px; margin-bottom: 4px;">
+        <span class="mono">${h.address.slice(0,12)}...</span>
+        <span class="mono">${h.pct_supply}%</span>
+      </div>
+      <div style="height: 2px; background: var(--border); width: 100%;">
+        <div style="height: 100%; background: var(--blue); width: ${h.pct_supply}%"></div>
+      </div>
+    </div>
+  `).join('');
+}
+
+async function loadMemory() {
+  try {
+    const res = await fetch('memory.json?' + Date.now());
+    const data = await res.json();
+    allTokens = data.tokens.sort((a, b) => b.fhs - a.fhs);
+    
+    document.getElementById('top-updated').textContent = 'SCAN: ' + new Date(data.updated_at).toLocaleTimeString();
+    document.getElementById('top-count').textContent = allTokens.length + ' UNIT(S)';
+    
+    renderSidebar(allTokens);
+    if (!selected) selectToken(0);
+  } catch (e) { console.error("Data error", e); }
+}
+
+loadMemory();
+setInterval(loadMemory, 30000);
+</script>
 </body>
 </html>

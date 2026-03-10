@@ -11,15 +11,13 @@
       --surface: #0a0a0c;
       --border: #1a1a1e;
       --border-bright: #2a2a30;
-      --accent: #bfff00; /* Phosphor Green */
+      --accent: #bfff00;
       --text-main: #f0f0f0;
       --text-dim: #66666e;
       --text-ghost: #333338;
-      
       --red: #ff3e3e;
       --blue: #0070ff;
       --yellow: #ffb800;
-      
       --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
 
@@ -36,7 +34,6 @@
       flex-direction: column;
     }
 
-    /* Texture Overlay */
     body::before {
       content: "";
       position: fixed;
@@ -49,7 +46,6 @@
 
     .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: -0.02em; }
 
-    /* ── HEADER TACTIQUE ── */
     header {
       height: 60px;
       padding: 0 24px;
@@ -58,7 +54,6 @@
       justify-content: space-between;
       border-bottom: 1px solid var(--border);
       background: var(--surface);
-      position: relative;
     }
 
     .logo-area { display: flex; align-items: center; gap: 15px; }
@@ -66,25 +61,14 @@
       width: 32px; height: 32px;
       background: var(--accent);
       color: var(--bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 18px;
       clip-path: polygon(20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 20%);
     }
 
-    .status-ticker {
-      display: flex;
-      gap: 20px;
-      font-size: 10px;
-      color: var(--text-dim);
-      text-transform: uppercase;
-    }
-
+    .status-ticker { display: flex; gap: 20px; font-size: 10px; color: var(--text-dim); text-transform: uppercase; }
     .status-item span { color: var(--accent); margin-right: 4px; }
 
-    /* ── LAYOUT PRINCIPAL ── */
     .main-grid {
       display: grid;
       grid-template-columns: 280px 1fr 320px;
@@ -92,176 +76,173 @@
       overflow: hidden;
     }
 
-    /* ── COLONNE GAUCHE : WATCHLIST ── */
+    /* SIDEBAR */
     .sidebar {
       border-right: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
+      display: flex; flex-direction: column;
       background: linear-gradient(to right, var(--surface), transparent);
     }
 
     .sidebar-label {
       padding: 16px 20px;
-      font-size: 11px;
-      font-weight: 700;
+      font-size: 11px; font-weight: 700;
       color: var(--text-ghost);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      display: flex;
-      justify-content: space-between;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      display: flex; justify-content: space-between;
+      border-bottom: 1px solid var(--border);
     }
 
     .token-list { overflow-y: auto; flex: 1; }
     .token-item {
-      padding: 12px 20px;
+      padding: 10px 20px;
       border-bottom: 1px solid var(--border);
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
+      cursor: pointer;
     }
-
     .token-item:hover { background: rgba(191, 255, 0, 0.05); }
-    .token-item.active {
-      background: rgba(191, 255, 0, 0.1);
-      border-left: 4px solid var(--accent);
-    }
+    .token-item.active { background: rgba(191, 255, 0, 0.1); border-left: 3px solid var(--accent); }
 
-    .token-name { font-weight: 700; font-size: 15px; }
-    .token-meta { font-size: 10px; color: var(--text-dim); text-transform: uppercase; margin-top: 2px; }
-    .token-score {
-      font-family: 'JetBrains Mono';
-      font-weight: 700;
-      font-size: 16px;
-      text-align: right;
-    }
+    .token-name { font-weight: 700; font-size: 14px; }
+    .token-meta { font-size: 10px; color: var(--text-dim); text-transform: uppercase; margin-top: 2px; display: flex; gap: 8px; align-items: center; }
+    .token-score { font-family: 'JetBrains Mono'; font-weight: 700; font-size: 16px; text-align: right; }
+    .token-rsi { font-size: 9px; color: var(--text-dim); text-align: right; margin-top: 2px; font-family: 'JetBrains Mono'; }
 
-    /* ── CENTRE : INTELLIGENCE ── */
-    .content-area {
-      overflow-y: auto;
-      padding: 40px;
-      position: relative;
-    }
+    /* CONTENT */
+    .content-area { overflow-y: auto; padding: 32px 40px; }
 
     .intel-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 40px;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin-bottom: 24px;
     }
 
     .intel-title h1 {
-      font-size: 48px;
-      font-weight: 800;
-      line-height: 0.9;
-      text-transform: uppercase;
-      letter-spacing: -0.04em;
+      font-size: 44px; font-weight: 800; line-height: 0.9;
+      text-transform: uppercase; letter-spacing: -0.04em;
     }
 
+    .intel-meta { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; align-items: center; }
+
     .addr-pill {
-      background: var(--surface);
-      border: 1px solid var(--border-bright);
-      padding: 4px 12px;
-      border-radius: 4px;
-      font-size: 11px;
-      color: var(--text-dim);
-      display: inline-block;
-      margin-top: 10px;
+      background: var(--surface); border: 1px solid var(--border-bright);
+      padding: 3px 10px; border-radius: 3px;
+      font-size: 10px; color: var(--text-dim);
+    }
+    .price-pill {
+      background: var(--surface); border: 1px solid var(--border-bright);
+      padding: 3px 10px; border-radius: 3px;
+      font-size: 10px;
     }
 
     .fhs-radar {
-      position: relative;
-      width: 120px; height: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid var(--border-bright);
-      border-radius: 50%;
+      position: relative; width: 110px; height: 110px;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      border: 1px solid var(--border-bright); border-radius: 50%; flex-shrink: 0;
     }
-
     .fhs-radar::after {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      border-radius: 50%;
+      content: ""; position: absolute; inset: -1px; border-radius: 50%;
       border: 1px solid var(--accent);
       clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%);
       animation: rotate 4s linear infinite;
     }
-
     @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .fhs-val { font-size: 38px; font-weight: 800; font-family: 'JetBrains Mono'; }
 
-    .fhs-val { font-size: 42px; font-weight: 800; font-family: 'JetBrains Mono'; }
+    /* SECTION TITLES */
+    .section-title {
+      font-size: 10px; font-weight: 800; text-transform: uppercase;
+      color: var(--text-ghost); letter-spacing: 0.12em;
+      margin-bottom: 10px; margin-top: 24px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-title::after { content: ""; flex: 1; height: 1px; background: var(--border); }
 
-    /* ── GRILLE DE MÉTRIQUES ── */
+    /* METRICS */
     .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      margin-bottom: 40px;
+      display: grid; gap: 1px;
+      background: var(--border); border: 1px solid var(--border);
+      margin-bottom: 4px;
     }
+    .metrics-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .metrics-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 
-    .m-card {
-      background: var(--bg);
-      padding: 20px;
-      transition: background 0.3s;
-    }
-
+    .m-card { background: var(--bg); padding: 14px 16px; transition: background 0.2s; }
     .m-card:hover { background: var(--surface); }
-    .m-label { font-size: 10px; color: var(--text-dim); text-transform: uppercase; margin-bottom: 8px; }
-    .m-val { font-family: 'JetBrains Mono'; font-size: 20px; font-weight: 700; }
+    .m-label { font-size: 9px; color: var(--text-dim); text-transform: uppercase; margin-bottom: 5px; letter-spacing: 0.05em; }
+    .m-val { font-family: 'JetBrains Mono'; font-size: 17px; font-weight: 700; }
+    .m-sub { font-size: 9px; color: var(--text-dim); margin-top: 3px; }
 
-    /* ── NARRATIVE BOX ── */
+    /* CHART */
+    .chart-container {
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 14px; margin-bottom: 4px;
+    }
+    .chart-svg { width: 100%; height: 70px; }
+
+    /* BULL FLAG */
+    .bull-flag-box {
+      background: var(--surface); border: 1px solid var(--border);
+      padding: 14px; margin-bottom: 4px;
+    }
+    .bf-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 10px; border-radius: 3px; font-size: 11px; font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .bf-badge.detected { background: rgba(191,255,0,0.15); color: var(--accent); border: 1px solid rgba(191,255,0,0.4); }
+    .bf-badge.none { color: var(--text-dim); border: 1px solid var(--border); }
+
+    /* NARRATIVE */
     .narrative-box {
-      background: var(--surface);
-      border-left: 2px solid var(--accent);
-      padding: 24px;
-      line-height: 1.6;
-      font-size: 14px;
+      background: var(--surface); border-left: 2px solid var(--accent);
+      padding: 18px; line-height: 1.6; font-size: 13px; margin-bottom: 4px;
     }
 
-    /* ── RIGHT : TELEMETRY ── */
+    /* RIGHT PANEL */
     .telemetry {
       border-left: 1px solid var(--border);
-      background: rgba(10, 10, 12, 0.5);
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
+      background: rgba(10,10,12,0.5);
+      padding: 20px; display: flex; flex-direction: column; gap: 22px;
+      overflow-y: auto;
     }
 
     .t-section-title {
-      font-size: 11px;
-      font-weight: 800;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      font-size: 10px; font-weight: 800; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 12px;
+      display: flex; align-items: center; gap: 8px;
     }
-
     .t-section-title::after { content: ""; flex: 1; height: 1px; background: var(--border); }
 
     .alert-item {
-      padding: 10px;
-      border-radius: 4px;
-      margin-bottom: 8px;
-      font-size: 11px;
-      border-left: 3px solid transparent;
+      padding: 9px 10px; border-radius: 3px; margin-bottom: 7px;
+      font-size: 11px; border-left: 3px solid transparent;
     }
-    .alert-item.critical { background: rgba(255, 62, 62, 0.1); border-color: var(--red); color: #ff9999; }
-    .alert-item.info { background: rgba(0, 112, 255, 0.1); border-color: var(--blue); color: #99c2ff; }
+    .alert-item.critical { background: rgba(255,62,62,0.1); border-color: var(--red); color: #ff9999; }
+    .alert-item.warning { background: rgba(255,184,0,0.1); border-color: var(--yellow); color: #ffd966; }
+    .alert-item.info { background: rgba(0,112,255,0.1); border-color: var(--blue); color: #99c2ff; }
 
-    /* ── SCROLLBAR ── */
-    ::-webkit-scrollbar { width: 4px; }
+    .holder-row { margin-bottom: 9px; }
+    .holder-info { display: flex; justify-content: space-between; font-size: 10px; margin-bottom: 3px; }
+    .holder-addr { color: var(--text-dim); font-family: 'JetBrains Mono'; }
+    .holder-pct { color: var(--text-main); font-weight: 700; font-family: 'JetBrains Mono'; }
+    .holder-bar-bg { height: 2px; background: var(--border); }
+    .holder-bar-fill { height: 100%; }
+    .holder-entity { font-size: 9px; color: var(--accent); margin-top: 2px; }
+
+    .market-row {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+      background: var(--border); border: 1px solid var(--border); margin-bottom: 4px;
+    }
+    .market-cell { background: var(--bg); padding: 10px 14px; }
+    .market-label { font-size: 9px; color: var(--text-dim); text-transform: uppercase; margin-bottom: 4px; }
+    .market-val { font-family: 'JetBrains Mono'; font-size: 13px; font-weight: 700; }
+
+    ::-webkit-scrollbar { width: 3px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--border-bright); }
     ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-
   </style>
 </head>
 <body>
@@ -270,8 +251,8 @@
   <div class="logo-area">
     <div class="logo-box">Δ</div>
     <div>
-      <div style="font-weight: 800; font-size: 16px; letter-spacing: -0.02em;">0xDELTA</div>
-      <div class="mono" style="font-size: 9px; color: var(--text-dim);">FIELD INTELLIGENCE UNIT</div>
+      <div style="font-weight:800;font-size:16px;letter-spacing:-0.02em;">0xDELTA</div>
+      <div class="mono" style="font-size:9px;color:var(--text-dim);">FIELD INTELLIGENCE UNIT</div>
     </div>
   </div>
   <div class="status-ticker mono">
@@ -285,28 +266,29 @@
   <aside class="sidebar">
     <div class="sidebar-label">
       <span>Watchlist</span>
-      <span id="top-count" class="mono" style="color: var(--accent);">--</span>
+      <span id="top-count" class="mono" style="color:var(--accent);">--</span>
     </div>
-    <div class="token-list" id="sidebar-list">
-      </div>
+    <div class="token-list" id="sidebar-list"></div>
   </aside>
 
   <main class="content-area" id="detail-panel">
-    <div style="height: 100%; display: flex; align-items: center; justify-content: center; color: var(--text-ghost);">
+    <div style="height:100%;display:flex;align-items:center;justify-content:center;color:var(--text-ghost);">
       [ SELECTIONNER UN MODULE DE DONNÉES ]
     </div>
   </main>
 
-  <aside class="telemetry" id="right-panel">
+  <aside class="telemetry">
     <div>
       <div class="t-section-title">Live Alerts</div>
-      <div id="alert-container">
-        </div>
+      <div id="alert-container"></div>
     </div>
     <div>
       <div class="t-section-title">Supply Control</div>
-      <div id="holder-container">
-        </div>
+      <div id="holder-container"></div>
+    </div>
+    <div>
+      <div class="t-section-title">Market</div>
+      <div id="market-container"></div>
     </div>
   </aside>
 </div>
@@ -315,19 +297,26 @@
 let allTokens = [];
 let selected = null;
 
-const colorForFHS = v => v >= 7 ? 'var(--accent)' : v >= 5 ? 'var(--yellow)' : 'var(--red)';
+const colorFHS = v => v >= 7 ? 'var(--accent)' : v >= 5 ? 'var(--yellow)' : 'var(--red)';
+const fmt = (n, d=2) => (n != null && !isNaN(n)) ? (+n).toFixed(d) : '--';
+const fmtUSD = n => !n ? '--' : n >= 1e6 ? '$'+(n/1e6).toFixed(2)+'M' : n >= 1e3 ? '$'+(n/1e3).toFixed(1)+'K' : '$'+n.toFixed(2);
+const fmtPct = n => (n >= 0 ? '+' : '') + fmt(n,1) + '%';
 
 function renderSidebar(tokens) {
-  const el = document.getElementById('sidebar-list');
-  el.innerHTML = tokens.map((t, i) => `
+  document.getElementById('sidebar-list').innerHTML = tokens.map((t, i) => `
     <div class="token-item ${selected === t.symbol ? 'active' : ''}" onclick="selectToken(${i})">
       <div>
         <div class="token-name">${t.symbol}</div>
-        <div class="token-meta mono">${t.phase}</div>
+        <div class="token-meta mono">
+          <span>${t.phase}</span>
+          ${t.bull_flag ? '<span style="color:var(--accent)">▲BF</span>' : ''}
+        </div>
       </div>
-      <div class="token-score" style="color: ${colorForFHS(t.fhs)}">${t.fhs.toFixed(1)}</div>
-    </div>
-  `).join('');
+      <div>
+        <div class="token-score" style="color:${colorFHS(t.fhs)}">${fmt(t.fhs,1)}</div>
+        <div class="token-rsi">RSI ${fmt(t.rsi_1h,0)}</div>
+      </div>
+    </div>`).join('');
 }
 
 function selectToken(idx) {
@@ -338,87 +327,281 @@ function selectToken(idx) {
   renderTelemetry(t);
 }
 
+function renderChart(history) {
+  if (!history || history.length < 2) return `
+    <div class="chart-container">
+      <div class="mono" style="color:var(--text-ghost);font-size:10px;">NO HISTORY DATA</div>
+    </div>`;
+
+  const vals = history.map(h => +h.fhs);
+  const min = Math.min(...vals) - 0.3;
+  const max = Math.max(...vals) + 0.3;
+  const W = 600, H = 70;
+  const x = (i) => (i / (vals.length - 1)) * W;
+  const y = (v) => H - ((v - min) / (max - min)) * H;
+  const pts = vals.map((v,i) => `${x(i)},${y(v)}`).join(' ');
+  const area = `0,${H} ${pts} ${W},${H}`;
+  const last = vals[vals.length-1], first = vals[0];
+  const trendCol = last > first ? 'var(--accent)' : last < first ? 'var(--red)' : 'var(--yellow)';
+
+  return `
+    <div class="chart-container">
+      <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+        <div class="mono" style="font-size:9px;color:var(--text-ghost);">FHS HISTORY (48H · ${vals.length} points)</div>
+        <div class="mono" style="font-size:10px;color:${trendCol};">${fmt(first,1)} → ${fmt(last,1)}</div>
+      </div>
+      <svg class="chart-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="${trendCol}" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="${trendCol}" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <polygon points="${area}" fill="url(#g)"/>
+        <polyline points="${pts}" fill="none" stroke="${trendCol}" stroke-width="1.5" stroke-linejoin="round"/>
+        ${vals.map((v,i) => `<circle cx="${x(i)}" cy="${y(v)}" r="2.5" fill="${trendCol}" opacity="0.8"/>`).join('')}
+      </svg>
+      <div style="display:flex;justify-content:space-between;margin-top:4px;">
+        <div class="mono" style="font-size:9px;color:var(--text-ghost);">${history[0].ts}</div>
+        <div class="mono" style="font-size:9px;color:var(--text-ghost);">${history[history.length-1].ts}</div>
+      </div>
+    </div>`;
+}
+
 function renderDetail(t) {
-  const panel = document.getElementById('detail-panel');
-  const color = colorForFHS(t.fhs);
-  
-  panel.innerHTML = `
+  const color = colorFHS(t.fhs);
+  const berCol = t.ber_zone === 'oversold' ? 'var(--red)' : t.ber_zone === 'overbought' ? 'var(--yellow)' : 'var(--accent)';
+  const rsiCol = t.rsi_1h < 30 ? 'var(--red)' : t.rsi_1h > 70 ? 'var(--yellow)' : 'var(--text-main)';
+
+  document.getElementById('detail-panel').innerHTML = `
     <div class="intel-header">
       <div class="intel-title">
-        <div class="mono" style="color: var(--accent); font-size: 12px; margin-bottom: 8px;">// SUBJECT_ANALYSIS</div>
+        <div class="mono" style="color:var(--accent);font-size:11px;margin-bottom:6px;">// SUBJECT_ANALYSIS</div>
         <h1>${t.symbol}</h1>
-        <div class="addr-pill mono">${t.address}</div>
+        <div class="intel-meta">
+          <div class="addr-pill mono">${t.address}</div>
+          ${t.price_usd ? `<div class="price-pill mono">$${(+t.price_usd).toFixed(8)}</div>` : ''}
+          ${t.price_change_24h != null ? `<div class="price-pill mono" style="color:${(+t.price_change_24h)>=0?'var(--accent)':'var(--red)'}">${fmtPct(t.price_change_24h)}</div>` : ''}
+        </div>
       </div>
       <div class="fhs-radar">
-        <div class="mono" style="font-size: 9px; color: var(--text-dim); position: absolute; top: 15px;">HEALTH</div>
-        <div class="fhs-val" style="color: ${color}">${t.fhs}</div>
-        <div class="mono" style="font-size: 9px; color: var(--text-dim); position: absolute; bottom: 15px;">/ 10.0</div>
+        <div class="mono" style="font-size:9px;color:var(--text-dim);position:absolute;top:14px;">HEALTH</div>
+        <div class="fhs-val" style="color:${color}">${t.fhs}</div>
+        <div class="mono" style="font-size:9px;color:var(--text-dim);position:absolute;bottom:14px;">/ 10.0</div>
       </div>
     </div>
 
-    <div class="metrics-grid">
+    ${renderChart(t.history)}
+
+    <div class="section-title">Flows</div>
+    <div class="metrics-grid cols-4">
       <div class="m-card">
         <div class="m-label">NBP 24H</div>
-        <div class="m-val" style="color: ${t.nbp >= 0 ? 'var(--accent)' : 'var(--red)'}">${t.nbp}%</div>
+        <div class="m-val" style="color:${(+t.nbp||0)>=0?'var(--accent)':'var(--red)'}">${fmt(t.nbp,1)}%</div>
+        <div class="m-sub">${t.nbp_status||''}</div>
       </div>
       <div class="m-card">
-        <div class="m-label">ICR Index</div>
-        <div class="m-val">${t.icr}</div>
+        <div class="m-label">EV (Vol Rel.)</div>
+        <div class="m-val">${fmt(t.ev,2)}</div>
+        <div class="m-sub">${t.ev_trend||''}</div>
       </div>
       <div class="m-card">
-        <div class="m-label">Liquidity Coverage</div>
-        <div class="m-val">${t.lcr}%</div>
+        <div class="m-label">AC</div>
+        <div class="m-val">${fmtUSD(t.ac)}</div>
       </div>
       <div class="m-card">
-        <div class="m-label">Confidence</div>
-        <div class="m-val">${t.phase_confidence}%</div>
+        <div class="m-label">VWAD</div>
+        <div class="m-val">${fmt(t.vwad,3)}</div>
+        <div class="m-sub">${t.flow_classification||''}</div>
       </div>
     </div>
 
+    <div class="section-title">Liquidité</div>
+    <div class="metrics-grid cols-4">
+      <div class="m-card">
+        <div class="m-label">ICR Index</div>
+        <div class="m-val" style="color:${t.icr_alert?'var(--red)':'var(--text-main)'}">${fmt(t.icr,2)}</div>
+        <div class="m-sub">${t.icr_alert?'⚠ alert':'ok'}</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">LCR</div>
+        <div class="m-val">${fmt(t.lcr,1)}%</div>
+        <div class="m-sub">${t.lcr_fragile?'⚠ fragile':'stable'}</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">DAI</div>
+        <div class="m-val" style="color:${(+t.dai||0)<0?'var(--red)':'var(--accent)'}">${fmt(t.dai,3)}</div>
+        <div class="m-sub">${t.dai_status||''}</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">LVR</div>
+        <div class="m-val">${fmt(t.lvr,3)}</div>
+        <div class="m-sub">${t.lvr_status||''}</div>
+      </div>
+    </div>
+    <div class="metrics-grid cols-3">
+      <div class="m-card">
+        <div class="m-label">IPS 10K$</div>
+        <div class="m-val">${fmt(t.ips_10k,2)}%</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">IPS 50K$</div>
+        <div class="m-val">${fmt(t.ips_50k,2)}%</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">IPS 100K$</div>
+        <div class="m-val">${fmt(t.ips_100k,2)}%</div>
+      </div>
+    </div>
+
+    <div class="section-title">Technique</div>
+    <div class="metrics-grid cols-4">
+      <div class="m-card">
+        <div class="m-label">RSI 1H</div>
+        <div class="m-val" style="color:${rsiCol}">${fmt(t.rsi_1h,1)}</div>
+        <div class="m-sub">${(+t.rsi_1h)<30?'oversold':(+t.rsi_1h)>70?'overbought':'neutral'}</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">BER</div>
+        <div class="m-val" style="color:${berCol}">${fmt(t.ber,3)}</div>
+        <div class="m-sub">${t.ber_zone||''}</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">RMD</div>
+        <div class="m-val" style="color:${(+t.rmd||0)>=0?'var(--accent)':'var(--red)'}">${fmt(t.rmd,3)}</div>
+        <div class="m-sub">${t.rmd_divergence||'none'}</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">SI</div>
+        <div class="m-val">${fmt(t.si,1)}%</div>
+        <div class="m-sub">${t.si_status||''}</div>
+      </div>
+    </div>
+
+    <div class="section-title">Forensic</div>
+    <div class="metrics-grid cols-4">
+      <div class="m-card">
+        <div class="m-label">WCC</div>
+        <div class="m-val" style="color:${t.wcc_alert?'var(--red)':'var(--text-main)'}">${fmt(t.wcc,1)}%</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">SCR / Top5</div>
+        <div class="m-val">${fmt(t.scr,1)}%</div>
+        <div class="m-sub">top10: ${fmt(t.top10_pct,1)}% · top20: ${fmt(t.top20_pct,1)}%</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">TCI</div>
+        <div class="m-val">${fmt(t.tci,2)}</div>
+      </div>
+      <div class="m-card">
+        <div class="m-label">FCI</div>
+        <div class="m-val">${fmt(t.fci,1)}</div>
+      </div>
+    </div>
+
+    <div class="section-title">Bull Flag</div>
+    <div class="bull-flag-box">
+      <div class="bf-badge ${t.bull_flag?'detected':'none'}">
+        ${t.bull_flag ? '▲ BULL FLAG DETECTED' : '— NO BULL FLAG'}
+        ${t.bull_flag && t.bf_class ? ' · CLASS ' + t.bf_class : ''}
+      </div>
+      ${t.bull_flag ? `
+      <div class="metrics-grid cols-4" style="border:none;gap:1px;background:var(--border);">
+        <div class="m-card" style="background:var(--surface);">
+          <div class="m-label">Retracement</div>
+          <div class="m-val" style="color:var(--accent)">${fmt(t.bf_retracement,1)}%</div>
+        </div>
+        <div class="m-card" style="background:var(--surface);">
+          <div class="m-label">FQS</div>
+          <div class="m-val">${fmt(t.fqs,1)}</div>
+          <div class="m-sub">${t.fqs_label||''}</div>
+        </div>
+        <div class="m-card" style="background:var(--surface);">
+          <div class="m-label">BPI</div>
+          <div class="m-val">${fmt(t.bpi,2)}</div>
+          <div class="m-sub">${t.bpi_label||''}</div>
+        </div>
+        <div class="m-card" style="background:var(--surface);">
+          <div class="m-label">Target +${fmt(t.fib_upside_pct,1)}%</div>
+          <div class="m-val" style="color:var(--accent)">${t.fib_target ? '$'+(+t.fib_target).toFixed(8) : '--'}</div>
+          <div class="m-sub">Fib 1.618</div>
+        </div>
+      </div>` : ''}
+    </div>
+
+    <div class="section-title">Narrative</div>
     <div class="narrative-box">
-      <div class="mono" style="font-size: 10px; color: var(--accent); margin-bottom: 15px;">[ NARRATIVE_INSIGHT ]</div>
-      <p>${t.narrative_phase}</p>
-      <p style="margin-top: 15px; color: var(--text-dim);">${t.narrative_insight || ''}</p>
+      <div class="mono" style="font-size:10px;color:var(--accent);margin-bottom:12px;">[ NARRATIVE_INSIGHT ]</div>
+      ${t.narrative_phase ? `<p style="margin-bottom:8px;">${t.narrative_phase}</p>` : ''}
+      ${t.narrative_insight ? `<p style="margin-bottom:8px;color:var(--text-dim);">${t.narrative_insight}</p>` : ''}
+      ${t.narrative_structure ? `<p style="color:var(--blue);">${t.narrative_structure}</p>` : ''}
+      ${!t.narrative_phase && !t.narrative_insight ? '<p style="color:var(--text-ghost);">No narrative available</p>' : ''}
     </div>
   `;
 }
 
 function renderTelemetry(t) {
-  const alertContainer = document.getElementById('alert-container');
-  const holderContainer = document.getElementById('holder-container');
+  // Alerts
+  document.getElementById('alert-container').innerHTML =
+    (t.alerts||[]).map(a => `
+      <div class="alert-item ${a.severity}">
+        <div class="mono" style="font-weight:700;margin-bottom:3px;font-size:10px;">${a.code}</div>
+        <div style="font-size:11px;">${a.message}</div>
+      </div>`).join('') ||
+    '<div class="mono" style="color:var(--text-ghost);font-size:10px;">NO_THREATS_DETECTED</div>';
 
-  alertContainer.innerHTML = (t.alerts || []).map(a => `
-    <div class="alert-item ${a.severity === 'critical' ? 'critical' : 'info'}">
-      <div class="mono" style="font-weight: 700; margin-bottom: 4px;">${a.code}</div>
-      <div>${a.message}</div>
-    </div>
-  `).join('') || '<div class="mono" style="color: var(--text-ghost)">NO_THREATS_DETECTED</div>';
+  // Holders
+  const holders = (t.top20_holders||[]).slice(0,10);
+  const maxPct = holders.length ? Math.max(...holders.map(h => +(h.pct_supply||0))) : 1;
+  document.getElementById('holder-container').innerHTML = holders.length ?
+    holders.map(h => {
+      const pct = +(h.pct_supply||0);
+      const col = h.is_contract ? 'var(--blue)' : 'var(--accent)';
+      const label = h.label || h.entity;
+      return `<div class="holder-row">
+        <div class="holder-info">
+          <span class="holder-addr">${(h.address||'').slice(0,10)}…</span>
+          <span class="holder-pct">${pct.toFixed(2)}%</span>
+        </div>
+        <div class="holder-bar-bg">
+          <div class="holder-bar-fill" style="width:${(pct/maxPct)*100}%;background:${col};"></div>
+        </div>
+        ${label ? `<div class="holder-entity">${label}</div>` : ''}
+      </div>`;
+    }).join('') :
+    '<div class="mono" style="color:var(--text-ghost);font-size:10px;">NO HOLDER DATA</div>';
 
-  holderContainer.innerHTML = (t.top20_holders || []).slice(0, 5).map(h => `
-    <div style="margin-bottom: 12px;">
-      <div style="display: flex; justify-content: space-between; font-size: 10px; margin-bottom: 4px;">
-        <span class="mono">${h.address.slice(0,12)}...</span>
-        <span class="mono">${h.pct_supply}%</span>
-      </div>
-      <div style="height: 2px; background: var(--border); width: 100%;">
-        <div style="height: 100%; background: var(--blue); width: ${h.pct_supply}%"></div>
-      </div>
+  // Market
+  document.getElementById('market-container').innerHTML = `
+    <div class="market-row">
+      <div class="market-cell"><div class="market-label">MCAP</div><div class="market-val">${fmtUSD(t.mcap)}</div></div>
+      <div class="market-cell"><div class="market-label">Volume 24h</div><div class="market-val">${fmtUSD(t.volume_24h)}</div></div>
     </div>
-  `).join('');
+    <div class="market-row">
+      <div class="market-cell"><div class="market-label">Buys 24h</div><div class="market-val" style="color:var(--accent)">${t.buys_24h||'--'}</div></div>
+      <div class="market-cell"><div class="market-label">Sells 24h</div><div class="market-val" style="color:var(--red)">${t.sells_24h||'--'}</div></div>
+    </div>
+    <div class="market-row">
+      <div class="market-cell"><div class="market-label">Liquidity</div><div class="market-val">${fmtUSD(t.liquidity_usd)}</div></div>
+      <div class="market-cell"><div class="market-label">Crash Threshold</div><div class="market-val" style="color:var(--yellow)">${fmtUSD(t.crash_threshold)}</div></div>
+    </div>`;
 }
 
 async function loadMemory() {
   try {
     const res = await fetch('memory.json?' + Date.now());
     const data = await res.json();
-    allTokens = data.tokens.sort((a, b) => b.fhs - a.fhs);
-    
+    allTokens = data.tokens.sort((a,b) => b.fhs - a.fhs);
     document.getElementById('top-updated').textContent = 'SCAN: ' + new Date(data.updated_at).toLocaleTimeString();
     document.getElementById('top-count').textContent = allTokens.length + ' UNIT(S)';
-    
     renderSidebar(allTokens);
-    if (!selected) selectToken(0);
-  } catch (e) { console.error("Data error", e); }
+    if (!selected) {
+      selectToken(0);
+    } else {
+      const idx = allTokens.findIndex(t => t.symbol === selected);
+      if (idx >= 0) { renderDetail(allTokens[idx]); renderTelemetry(allTokens[idx]); }
+    }
+  } catch(e) { console.error('Data error', e); }
 }
 
 loadMemory();

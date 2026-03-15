@@ -413,128 +413,171 @@
 <section id="how-it-works">
   <div class="section-label">// Workflow — Automated Pipeline · every 2h</div>
 
-  <!-- CRON HEADER -->
-  <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
-    <div style="background:var(--surface);border:1px solid var(--border-bright);padding:12px 24px;display:flex;align-items:center;gap:16px;">
-      <div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">Cron Trigger</div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--accent);">0 */2 * * *</div>
-      </div>
-      <div style="width:1px;height:32px;background:var(--border);"></div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);">run_pipeline.sh</div>
-    </div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:var(--text-ghost);">↓</div>
-    <div style="font-size:11px;color:var(--text-dim);">Executes every 2 hours · duration ≈ 2–4 min</div>
-  </div>
+  <!-- PIPELINE VISUAL -->
+  <div style="font-family:'JetBrains Mono',monospace;">
 
-  <!-- PIPELINE STEPS -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);">
-
-    <!-- STEP 0 -->
-    <div style="background:var(--bg);padding:24px 28px;border-left:3px solid var(--text-ghost);position:relative;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-ghost);background:var(--surface);padding:2px 8px;border:1px solid var(--border);">STEP 0</span>
-        <span style="font-size:11px;color:var(--text-ghost);">Pre-check</span>
+    <!-- CRON HEADER -->
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+      <div style="border:1px solid #1e1e22;background:#0e0e10;padding:10px 18px;display:flex;align-items:baseline;gap:10px;">
+        <span style="font-size:15px;font-weight:700;color:var(--accent);">0 */2 * * *</span>
+        <span style="font-size:10px;color:#44444a;">run_pipeline.sh · GCP VPS · every 2h</span>
       </div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">Check open position</div>
-      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Reads <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">position.json</code> — if position open &gt; T+90min → execute sell via bankr.sh before proceeding.</div>
+      <div style="flex:1;height:1px;background:#1a1a1e;"></div>
+      <div style="font-size:9px;color:#44444a;letter-spacing:0.15em;text-transform:uppercase;">19 tokens · Base chain</div>
     </div>
 
-    <!-- STEP 1 -->
-    <div style="background:var(--bg);padding:24px 28px;border-left:3px solid var(--text-ghost);">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-ghost);background:var(--surface);padding:2px 8px;border:1px solid var(--border);">STEP 1</span>
-        <span style="font-size:11px;color:var(--text-ghost);">Data collection</span>
-      </div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">collector.py</div>
-      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Fetches live data for 19 Base chain tokens via Moralis &amp; GeckoTerminal. Wallet flows, holder distribution, liquidity depth, price action.</div>
-      <div style="margin-top:12px;display:flex;gap:6px;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);padding:2px 8px;border:1px solid var(--border);">Moralis API</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);padding:2px 8px;border:1px solid var(--border);">GeckoTerminal</span>
-      </div>
-    </div>
+    <!-- STEPS -->
+    <div style="display:flex;flex-direction:column;gap:2px;">
 
-    <!-- STEP 2 -->
-    <div style="background:var(--bg);padding:24px 28px;border-left:3px solid var(--accent);">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);background:rgba(191,255,0,0.08);padding:2px 8px;border:1px solid rgba(191,255,0,0.3);">STEP 2</span>
-        <span style="font-size:11px;color:var(--text-dim);">Forensic engine</span>
-      </div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">report_builder.py</div>
-      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Runs <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">forensic_engine_v5</code> — computes 65+ metrics per token. Phase detection: EARLY_BREAKOUT, DISTRIBUTION, ACCUMULATION. Outputs <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">forensic_*.json</code>.</div>
-      <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent);padding:2px 8px;border:1px solid rgba(191,255,0,0.3);">FHS · NBP · ICR</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent);padding:2px 8px;border:1px solid rgba(191,255,0,0.3);">LCR · BPI · WCC</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent);padding:2px 8px;border:1px solid rgba(191,255,0,0.3);">65+ metrics</span>
-      </div>
-    </div>
-
-    <!-- STEP 3 -->
-    <div style="background:var(--surface);padding:24px 28px;border-left:3px solid var(--accent);">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);background:rgba(191,255,0,0.08);padding:2px 8px;border:1px solid rgba(191,255,0,0.3);">STEP 3</span>
-        <span style="font-size:11px;color:var(--text-dim);">AI synthesis</span>
-      </div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">request_analysis.py</div>
-      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Loads .md memory files + delta vs N-1 cycle → sends to <strong style="color:var(--text-main);">Venice AI (Gemini 3 Flash)</strong> via PROMPT_ANALYSIS.md → generates CES ranking, entry zones, whale watch, full EN narrative. Writes <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">synthesis.json</code>.</div>
-      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--yellow);padding:3px 10px;border:1px solid rgba(255,184,0,0.4);background:rgba(255,184,0,0.06);">→ Telegram alert</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-dim);padding:3px 10px;border:1px solid var(--border);">→ Moltbook</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--amber);padding:3px 10px;border:1px solid rgba(255,140,0,0.4);background:rgba(255,140,0,0.06);">→ synthesis.json</span>
-      </div>
-    </div>
-
-    <!-- STEP 3b -->
-    <div style="background:var(--bg);padding:24px 28px;border-left:3px solid var(--yellow);">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--yellow);background:rgba(255,184,0,0.06);padding:2px 8px;border:1px solid rgba(255,184,0,0.3);">STEP 3b</span>
-        <span style="font-size:11px;color:var(--text-dim);">Auto-trading</span>
-      </div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">enter_new_position</div>
-      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Token #1 from CES ranking → swap 75% ETH via bankr.sh. Position saved to <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">position.json</code> with T+90min auto-close timer.</div>
-      <div style="margin-top:12px;display:flex;gap:6px;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--yellow);padding:2px 8px;border:1px solid rgba(255,184,0,0.3);">bankr.sh · Base DEX</span>
-        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);padding:2px 8px;border:1px solid var(--border);">OPEN · T+90min</span>
-      </div>
-    </div>
-
-    <!-- STEP 4 -->
-    <div style="background:var(--bg);padding:24px 28px;border-left:3px solid var(--text-ghost);">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-ghost);background:var(--surface);padding:2px 8px;border:1px solid var(--border);">STEP 4</span>
-        <span style="font-size:11px;color:var(--text-ghost);">Memory export</span>
-      </div>
-      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">export_memory_json.py v4</div>
-      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Reads each <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">SYMBOL_0xADDRESS.md</code> file, translates to EN, bundles 65 fields + forensic_report into a single <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">memory.json</code> for the frontend.</div>
-    </div>
-
-    <!-- STEP 5 — full width -->
-    <div style="background:var(--surface);padding:24px 28px;border-left:3px solid var(--blue);grid-column:1/-1;">
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
-        <div style="flex:1;min-width:300px;">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#0070ff;background:rgba(0,112,255,0.06);padding:2px 8px;border:1px solid rgba(0,112,255,0.3);">STEP 5</span>
-            <span style="font-size:11px;color:var(--text-dim);">Publish</span>
+      <div style="display:grid;grid-template-columns:32px 1fr;gap:0;">
+        <div style="display:flex;flex-direction:column;align-items:center;padding-top:18px;">
+          <div style="width:6px;height:6px;border-radius:50%;background:#1e1e22;border:1px solid #2e2e34;flex-shrink:0;"></div>
+          <div style="flex:1;width:1px;background:#1e1e22;margin-top:5px;"></div>
+        </div>
+        <div style="background:#0e0e10;border:1px solid #1e1e22;padding:14px 18px;margin-bottom:0;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px;">
+            <span style="font-size:9px;color:#44444a;letter-spacing:0.08em;">STEP 0</span>
+            <span style="font-size:13px;font-weight:700;color:#c8c8c8;font-family:'Bricolage Grotesque',sans-serif;">Check open position</span>
           </div>
-          <div style="font-weight:800;font-size:18px;margin-bottom:6px;">Push GitHub Pages</div>
-          <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">
-            <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">push_to_github.py</code> → data.json &nbsp;·&nbsp;
-            <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">push_memory_github.py</code> → memory.json + synthesis.json
+          <div style="font-size:11px;color:#555560;line-height:1.65;">Reads position.json — if position open &gt; T+90min, executes sell before proceeding.</div>
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">position.json</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid rgba(191,255,0,0.25);color:var(--accent);">bankr API</span>
           </div>
         </div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
-          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#0070ff;padding:6px 14px;border:1px solid rgba(0,112,255,0.4);background:rgba(0,112,255,0.06);">johnpreston2.github.io/0xdelta-hub</span>
-          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--amber);padding:6px 14px;border:1px solid rgba(255,140,0,0.4);background:rgba(255,140,0,0.06);">x402 · $0.02 / $0.05 USDC</span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr;gap:0;">
+        <div style="display:flex;flex-direction:column;align-items:center;padding-top:18px;">
+          <div style="width:6px;height:6px;border-radius:50%;background:#1e1e22;border:1px solid #2e2e34;flex-shrink:0;"></div>
+          <div style="flex:1;width:1px;background:#1e1e22;margin-top:5px;"></div>
         </div>
+        <div style="background:#0e0e10;border:1px solid #1e1e22;padding:14px 18px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px;">
+            <span style="font-size:9px;color:#44444a;letter-spacing:0.08em;">STEP 1</span>
+            <span style="font-size:13px;font-weight:700;color:#c8c8c8;font-family:'Bricolage Grotesque',sans-serif;">collector.py</span>
+          </div>
+          <div style="font-size:11px;color:#555560;line-height:1.65;">Fetches live data for 19 Base chain tokens. Wallet flows, holder distribution, liquidity, price action.</div>
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">Moralis</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">GeckoTerminal</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">Base chain</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr;gap:0;">
+        <div style="display:flex;flex-direction:column;align-items:center;padding-top:18px;">
+          <div style="width:6px;height:6px;border-radius:50%;background:#1e1e22;border:1px solid #2e2e34;flex-shrink:0;"></div>
+          <div style="flex:1;width:1px;background:#1e1e22;margin-top:5px;"></div>
+        </div>
+        <div style="background:#0e0e10;border:1px solid #1e1e22;padding:14px 18px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px;">
+            <span style="font-size:9px;color:#44444a;letter-spacing:0.08em;">STEP 2</span>
+            <span style="font-size:13px;font-weight:700;color:#c8c8c8;font-family:'Bricolage Grotesque',sans-serif;">report_builder.py</span>
+          </div>
+          <div style="font-size:11px;color:#555560;line-height:1.65;">Runs forensic_engine_v5 — computes 65+ metrics per token. Phase detection: EARLY_BREAKOUT, DISTRIBUTION, ACCUMULATION.</div>
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">FHS</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">NBP</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">ICR</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">LCR</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">BPI</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">WCC</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">65+ metrics</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr;gap:0;">
+        <div style="display:flex;flex-direction:column;align-items:center;padding-top:18px;">
+          <div style="width:6px;height:6px;border-radius:50%;background:#1e1e22;border:1px solid #2e2e34;flex-shrink:0;"></div>
+          <div style="flex:1;width:1px;background:#1e1e22;margin-top:5px;"></div>
+        </div>
+        <div style="background:#0e0e10;border:1px solid #1e1e22;padding:14px 18px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px;">
+            <span style="font-size:9px;color:#44444a;letter-spacing:0.08em;">STEP 3</span>
+            <span style="font-size:13px;font-weight:700;color:#c8c8c8;font-family:'Bricolage Grotesque',sans-serif;">request_analysis.py</span>
+          </div>
+          <div style="font-size:11px;color:#555560;line-height:1.65;">Loads .md memory + delta vs N-1 → CES ranking, entry zones, whale watch, full EN narrative. Outputs synthesis.json.</div>
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
+            <span style="font-size:9px;padding:2px 8px;border:1px solid rgba(191,255,0,0.25);color:var(--accent);">Venice AI</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid rgba(191,255,0,0.25);color:var(--accent);">Gemini 3 Flash Preview</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">→ Telegram</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">→ synthesis.json</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">→ Moltbook</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr;gap:0;">
+        <div style="display:flex;flex-direction:column;align-items:center;padding-top:18px;">
+          <div style="width:6px;height:6px;border-radius:50%;background:#1e1e22;border:1px solid #2e2e34;flex-shrink:0;"></div>
+          <div style="flex:1;width:1px;background:#1e1e22;margin-top:5px;"></div>
+        </div>
+        <div style="background:#0e0e10;border:1px solid #1e1e22;padding:14px 18px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px;">
+            <span style="font-size:9px;color:#44444a;letter-spacing:0.08em;">STEP 3b</span>
+            <span style="font-size:13px;font-weight:700;color:#c8c8c8;font-family:'Bricolage Grotesque',sans-serif;">enter_new_position</span>
+          </div>
+          <div style="font-size:11px;color:#555560;line-height:1.65;">Token #1 from CES ranking → swap 75% ETH. Position saved with T+90min auto-close timer.</div>
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
+            <span style="font-size:9px;padding:2px 8px;border:1px solid rgba(191,255,0,0.25);color:var(--accent);">bankr API</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">Base DEX</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">OPEN · T+90m</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr;gap:0;">
+        <div style="display:flex;flex-direction:column;align-items:center;padding-top:18px;">
+          <div style="width:6px;height:6px;border-radius:50%;background:#1e1e22;border:1px solid #2e2e34;flex-shrink:0;"></div>
+          <div style="flex:1;width:1px;background:#1e1e22;margin-top:5px;"></div>
+        </div>
+        <div style="background:#0e0e10;border:1px solid #1e1e22;padding:14px 18px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px;">
+            <span style="font-size:9px;color:#44444a;letter-spacing:0.08em;">STEP 4</span>
+            <span style="font-size:13px;font-weight:700;color:#c8c8c8;font-family:'Bricolage Grotesque',sans-serif;">export_memory_json.py v4</span>
+          </div>
+          <div style="font-size:11px;color:#555560;line-height:1.65;">Reads each SYMBOL_0xADDRESS.md, translates to EN, bundles 65 fields + forensic_report into memory.json.</div>
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">65 fields</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">memory.json</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:32px 1fr;gap:0;">
+        <div style="display:flex;flex-direction:column;align-items:center;padding-top:18px;">
+          <div style="width:6px;height:6px;border-radius:50%;background:#1e1e22;border:1px solid #2e2e34;flex-shrink:0;"></div>
+        </div>
+        <div style="background:#0e0e10;border:1px solid #1e1e22;padding:14px 18px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:5px;">
+            <span style="font-size:9px;color:#44444a;letter-spacing:0.08em;">STEP 5</span>
+            <span style="font-size:13px;font-weight:700;color:#c8c8c8;font-family:'Bricolage Grotesque',sans-serif;">Push GitHub Pages</span>
+          </div>
+          <div style="font-size:11px;color:#555560;line-height:1.65;">Publishes data.json, memory.json and synthesis.json to 0xdelta-hub. Frontend unlocks via x402 micropayment on Base.</div>
+          <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:8px;">
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">data.json</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">memory.json</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:#44444a;">synthesis.json</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid rgba(191,255,0,0.25);color:var(--accent);">x402 · $0.02 USDC</span>
+            <span style="font-size:9px;padding:2px 8px;border:1px solid rgba(191,255,0,0.25);color:var(--accent);">x402 · $0.05 USDC</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding:10px 16px;border:1px solid #1e1e22;background:#0e0e10;">
+      <div style="font-size:9px;color:#44444a;letter-spacing:0.06em;">Pipeline complete · duration ≈ 2–4 min · pipeline.log</div>
+      <div style="display:flex;gap:8px;">
+        <span style="font-size:9px;padding:2px 10px;border:1px solid rgba(191,255,0,0.2);color:var(--accent);">dashboard · $0.02</span>
+        <span style="font-size:9px;padding:2px 10px;border:1px solid rgba(191,255,0,0.2);color:var(--accent);">synthesis · $0.05</span>
       </div>
     </div>
 
-  </div>
-
-  <!-- FOOTER BAR -->
-  <div style="padding:14px 20px;border:1px solid var(--border);border-top:none;background:var(--bg);display:flex;align-items:center;justify-content:space-between;">
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-ghost);">Pipeline complete · duration ≈ 2–4 min · log pipeline.log</div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-ghost);">Next run in ~2h · GCP VPS · openclaw-agent</div>
   </div>
 
 </section>

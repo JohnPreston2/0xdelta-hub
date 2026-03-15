@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0xΔ | Global Synthesis Report</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0a0a0c;
+      --border: #1a1a1e;
+      --border-bright: #2a2a30;
+      --accent: #bfff00;
+      --text-main: #f0f0f0;
+      --text-dim: #66666e;
+      --text-ghost: #333338;
+      --red: #ff3e3e;
+      --blue: #0070ff;
+      --yellow: #ffb800;
+      --amber: #ff8c00;
+      --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; cursor: crosshair; }
+
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 13px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body::before {
+      content: "";
+      position: fixed; inset: 0;
+      background: var(--grain);
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: -0.02em; }
+
+    /* ── HEADER ── */
+    header {
+      height: 60px; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      position: sticky; top: 0; z-index: 50;
+    }
+
+    .logo-area { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+    .logo-box {
+      width: 32px; height: 32px; background: var(--accent); color: var(--bg);
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 18px;
+      clip-path: polygon(20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 20%);
+    }
+
+    .status-ticker { display: flex; gap: 20px; font-size: 10px; color: var(--text-dim); text-transform: uppercase; }
+    .status-item span { color: var(--accent); margin-right: 4px; }
+    .status-item.amber span { color: var(--amber); }
+
+    #wallet-btn {
+      display: flex; align-items: center; gap: 8px;
+      padding: 8px 16px;
+      background: transparent; border: 1px solid var(--border-bright);
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.15s;
+    }
+    #wallet-btn:hover { border-color: var(--accent); color: var(--accent); }
+    #wallet-btn.connected { border-color: var(--accent); color: var(--accent); }
+    #wallet-btn .w-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--text-ghost); }
+    #wallet-btn.connected .w-dot { background: var(--accent); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+    /* ── LAYOUT ── */
+    .page { display: grid; grid-template-columns: 320px 1fr; flex: 1; overflow: hidden; height: calc(100vh - 60px); }
+
+    /* ── LEFT PANEL — always visible ── */
+    .left-panel {
+      border-right: 1px solid var(--border);
+      background: var(--surface);
+      display: flex; flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .panel-header {
+      padding: 20px;
+      border-bottom: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .panel-header-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 12px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .panel-header-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .cycle-badge {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 14px;
+      border: 1px solid var(--border-bright);
+      background: var(--bg);
+      margin-bottom: 12px;
+    }
+    .cycle-label { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.08em; }
+    .cycle-val { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--accent); }
+
+    .next-refresh {
+      font-size: 10px; color: var(--text-ghost);
+      font-family: 'JetBrains Mono', monospace;
+      text-align: center; padding: 8px;
+      border: 1px solid var(--border);
+    }
+
+    /* TOKEN PREVIEW LIST */
+    .token-preview-list { flex: 1; }
+    .preview-item {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      display: grid; grid-template-columns: 1fr auto;
+      align-items: center;
+      position: relative;
+    }
+    .preview-item::before {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0;
+      width: 3px;
+    }
+    .preview-item.rank-1::before { background: var(--accent); }
+    .preview-item.rank-2::before { background: var(--yellow); }
+    .preview-item.rank-3::before { background: var(--text-dim); }
+    .preview-item.danger::before { background: var(--red); }
+
+    .preview-name { font-weight: 700; font-size: 14px; }
+    .preview-meta { font-size: 10px; color: var(--text-dim); text-transform: uppercase; margin-top: 3px; }
+    .preview-ces {
+      text-align: right;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .ces-val { font-size: 18px; font-weight: 700; }
+    .ces-label { font-size: 9px; color: var(--text-ghost); text-transform: uppercase; margin-top: 2px; }
+
+    .locked-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-family: 'JetBrains Mono', monospace; font-size: 9px;
+      color: var(--text-ghost); background: var(--bg);
+      padding: 2px 8px; border: 1px solid var(--border);
+      margin-top: 4px;
+    }
+
+    /* MARKET OVERVIEW — always visible */
+    .market-overview {
+      padding: 16px 20px;
+      border-top: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .market-grid-small {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 8px; margin-top: 12px;
+    }
+    .mkt-cell {
+      background: var(--bg); border: 1px solid var(--border); padding: 10px 12px;
+    }
+    .mkt-label { font-size: 9px; color: var(--text-ghost); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 5px; }
+    .mkt-val { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; }
+
+    /* ── RIGHT PANEL — paywall ── */
+    .right-panel {
+      position: relative;
+      overflow-y: auto;
+      background: var(--bg);
+    }
+
+    /* PAYWALL GATE */
+    .paywall-gate {
+      position: absolute; inset: 0;
+      background: rgba(5,5,5,0.94);
+      backdrop-filter: blur(3px);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 20;
+    }
+
+    .paywall-card {
+      border: 1px solid var(--border-bright);
+      background: var(--surface);
+      padding: 48px 52px;
+      max-width: 480px; width: 100%;
+      text-align: center;
+    }
+
+    .pw-chip {
+      display: inline-block;
+      padding: 4px 14px;
+      border: 1px solid rgba(255,184,0,0.4);
+      background: rgba(255,184,0,0.08);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--amber); margin-bottom: 24px;
+    }
+
+    .pw-title {
+      font-size: 32px; font-weight: 800;
+      letter-spacing: -0.03em; text-transform: uppercase;
+      line-height: 0.9; margin-bottom: 16px;
+    }
+
+    .pw-desc {
+      font-size: 13px; color: var(--text-dim);
+      line-height: 1.7; margin-bottom: 32px;
+      max-width: 360px; margin-left: auto; margin-right: auto;
+    }
+
+    .pw-refresh-note {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 16px;
+      border: 1px solid var(--border-bright);
+      background: var(--bg);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: var(--text-dim);
+      margin-bottom: 32px;
+    }
+    .pw-refresh-note .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
+
+    .pw-price-row {
+      display: flex; align-items: baseline; justify-content: center;
+      gap: 8px; margin-bottom: 8px;
+    }
+    .pw-price { font-family: 'JetBrains Mono', monospace; font-size: 52px; font-weight: 700; color: var(--amber); }
+    .pw-price-unit { font-size: 13px; color: var(--text-dim); font-family: 'JetBrains Mono', monospace; }
+
+    .pw-price-note {
+      font-size: 10px; color: var(--text-ghost);
+      font-family: 'JetBrains Mono', monospace;
+      margin-bottom: 32px;
+    }
+
+    .pw-features {
+      list-style: none; text-align: left;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0; margin-bottom: 28px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    }
+    .pw-features li {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 12px; color: var(--text-dim);
+    }
+    .pw-features li::before { content: '▸'; color: var(--amber); flex-shrink: 0; }
+
+    .pw-status {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: var(--text-ghost);
+      min-height: 16px; margin-bottom: 16px;
+      letter-spacing: 0.03em;
+    }
+    .pw-status.ok { color: var(--accent); }
+    .pw-status.err { color: var(--red); }
+    .pw-status.pending { color: var(--yellow); }
+
+    .btn-connect {
+      width: 100%; padding: 14px;
+      background: transparent; border: 1px solid var(--border-bright);
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.15s; margin-bottom: 10px;
+    }
+    .btn-connect:hover { border-color: var(--accent); color: var(--accent); }
+
+    .btn-unlock {
+      width: 100%; padding: 15px;
+      background: var(--amber); color: #0a0a0c;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+      border: none; cursor: pointer;
+      clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);
+      transition: background 0.15s;
+    }
+    .btn-unlock:hover { background: #ffaa00; }
+    .btn-unlock:disabled { background: var(--border-bright); color: var(--text-ghost); cursor: not-allowed; clip-path: none; }
+
+    .pw-chain-info {
+      margin-top: 20px; padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; color: var(--text-ghost); line-height: 1.8;
+      text-align: center;
+    }
+
+    /* ── REPORT CONTENT (unlocked) ── */
+    .report-content { padding: 40px 48px; }
+
+    .report-header { margin-bottom: 40px; }
+    .report-eyebrow {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--amber);
+      margin-bottom: 16px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .report-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .report-title {
+      font-size: 40px; font-weight: 800;
+      letter-spacing: -0.04em; text-transform: uppercase;
+      line-height: 0.9; margin-bottom: 12px;
+    }
+    .report-meta {
+      display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px;
+    }
+    .report-meta-item {
+      display: flex; align-items: center; gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: var(--text-dim);
+      padding: 4px 10px; border: 1px solid var(--border);
+    }
+    .report-meta-item .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+
+    /* SECTION */
+    .r-section { margin-bottom: 40px; }
+    .r-section-title {
+      font-size: 11px; font-weight: 800; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 20px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .r-section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* TOP OPPORTUNITIES */
+    .opp-grid { display: flex; flex-direction: column; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .opp-card {
+      background: var(--bg); padding: 24px 28px;
+      display: grid; grid-template-columns: 1fr auto;
+      gap: 24px; align-items: start;
+      transition: background 0.2s;
+    }
+    .opp-card:hover { background: var(--surface); }
+    .opp-card.rank-1 { border-left: 3px solid var(--accent); }
+    .opp-card.rank-2 { border-left: 3px solid var(--yellow); }
+    .opp-card.rank-3 { border-left: 3px solid var(--text-dim); }
+
+    .opp-name {
+      font-size: 22px; font-weight: 800;
+      letter-spacing: -0.03em; text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .opp-phase {
+      display: inline-block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 2px 8px; border: 1px solid var(--border-bright);
+      color: var(--text-dim); margin-bottom: 14px;
+    }
+    .opp-signals {
+      font-size: 12px; color: var(--text-dim); line-height: 1.7;
+      margin-bottom: 14px;
+    }
+    .opp-signals strong { color: var(--text-main); font-weight: 700; }
+
+    .opp-entry {
+      display: flex; gap: 8px; flex-wrap: wrap;
+    }
+    .entry-pill {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; padding: 4px 10px;
+      border: 1px solid var(--border-bright);
+      color: var(--text-dim);
+    }
+    .entry-pill.entry { border-color: rgba(191,255,0,0.3); color: var(--accent); }
+    .entry-pill.stop { border-color: rgba(255,62,62,0.3); color: var(--red); }
+    .entry-pill.target { border-color: rgba(255,184,0,0.3); color: var(--yellow); }
+
+    .opp-scores {
+      display: flex; flex-direction: column; gap: 8px;
+      align-items: flex-end;
+    }
+    .score-box {
+      text-align: center; padding: 12px 20px;
+      border: 1px solid var(--border-bright); background: var(--surface);
+      min-width: 90px;
+    }
+    .score-val { font-family: 'JetBrains Mono', monospace; font-size: 26px; font-weight: 700; }
+    .score-key { font-size: 9px; color: var(--text-ghost); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2px; }
+
+    .risk-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 10px;
+      font-family: 'JetBrains Mono', monospace; font-size: 10px;
+      border-left: 2px solid var(--red);
+      background: rgba(255,62,62,0.08);
+      color: #ff9999; margin-top: 10px;
+    }
+
+    /* ALERTS SECTION */
+    .alert-grid { display: flex; flex-direction: column; gap: 8px; }
+    .r-alert {
+      padding: 16px 20px;
+      border-left: 3px solid transparent;
+      display: grid; grid-template-columns: auto 1fr auto;
+      gap: 16px; align-items: center;
+    }
+    .r-alert.critical { background: rgba(255,62,62,0.07); border-color: var(--red); }
+    .r-alert.warn { background: rgba(255,184,0,0.07); border-color: var(--yellow); }
+    .r-alert-token { font-weight: 800; font-size: 14px; min-width: 80px; }
+    .r-alert-msg { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+    .r-alert-icr {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; font-weight: 700;
+      color: var(--red); text-align: right; white-space: nowrap;
+    }
+
+    /* WHALE TABLE */
+    .whale-table { width: 100%; border-collapse: collapse; }
+    .whale-table th {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--text-ghost);
+      padding: 10px 14px; text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .whale-table td {
+      padding: 12px 14px; border-bottom: 1px solid var(--border);
+      font-size: 12px; vertical-align: middle;
+    }
+    .whale-table tr:last-child td { border-bottom: none; }
+    .whale-table tr:hover td { background: var(--surface); }
+    .w-token { font-weight: 800; font-size: 13px; }
+    .w-icr { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; }
+
+    /* SYNTHESIS TABLE */
+    .synth-table { width: 100%; border-collapse: collapse; font-family: 'JetBrains Mono', monospace; }
+    .synth-table th {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-ghost);
+      padding: 10px 12px; text-align: left;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .synth-table th:last-child { border-right: none; }
+    .synth-table td {
+      padding: 10px 12px; border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      font-size: 11px; vertical-align: middle;
+    }
+    .synth-table td:last-child { border-right: none; }
+    .synth-table tr:hover td { background: var(--surface); }
+    .sig-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; }
+
+    /* CHANGES SECTION */
+    .changes-list { display: flex; flex-direction: column; gap: 10px; }
+    .change-item {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 14px 18px; border: 1px solid var(--border);
+      background: var(--surface);
+    }
+    .change-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+    .change-text { font-size: 12px; color: var(--text-dim); line-height: 1.6; }
+    .change-text strong { color: var(--text-main); }
+
+    /* DOWNLOAD BTN */
+    .download-bar {
+      padding: 24px 48px;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .download-info { font-size: 11px; color: var(--text-dim); }
+    .download-info strong { color: var(--text-main); }
+    .btn-download {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 24px;
+      background: transparent; border: 1px solid var(--border-bright);
+      color: var(--text-dim);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .btn-download:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border-bright); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+    /* BLUR WHEN LOCKED */
+    .right-panel.locked .report-content { filter: blur(6px); pointer-events: none; user-select: none; }
+    .right-panel.locked .download-bar { filter: blur(6px); pointer-events: none; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="landing.html" class="logo-area" style="text-decoration:none;">
+    <div class="logo-box">Δ</div>
+    <div>
+      <div style="font-weight:800;font-size:16px;letter-spacing:-0.02em;color:var(--text-main);">0xDELTA</div>
+      <div class="mono" style="font-size:9px;color:var(--text-dim);">FIELD INTELLIGENCE UNIT</div>
+    </div>
+  </a>
+  <div class="status-ticker mono">
+    <div class="status-item"><span>●</span> BASE CHAIN · 19 TOKENS</div>
+    <div class="status-item amber"><span>●</span> REPORT: EVERY 2H</div>
+    <div class="status-item" id="header-updated">LAST CYCLE: --</div>
+  </div>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <div id="unlock-status" class="mono" style="font-size:10px;color:var(--accent);display:none;">✓ UNLOCKED</div>
+    <button id="wallet-btn" onclick="connectWallet()">
+      <span class="w-dot"></span>
+      <span id="wallet-label">Connect Wallet</span>
+    </button>
+  </div>
+</header>
+
+<div class="page">
+
+  <!-- LEFT PANEL — always visible -->
+  <div class="left-panel">
+    <div class="panel-header">
+      <div class="panel-header-label">// Cycle Status</div>
+      <div class="cycle-badge">
+        <span class="cycle-label">Last report</span>
+        <span class="cycle-val" id="cycle-time">--:--</span>
+      </div>
+      <div class="cycle-badge">
+        <span class="cycle-label">Next refresh</span>
+        <span class="cycle-val" id="next-refresh">in ~2h</span>
+      </div>
+      <div class="next-refresh mono" id="countdown">Computing next cycle...</div>
+    </div>
+
+    <div class="panel-header" style="border-bottom:1px solid var(--border);">
+      <div class="panel-header-label">// Top Opportunities</div>
+      <p style="font-size:11px;color:var(--text-ghost);line-height:1.6;">
+        CES ranking visible. Full analysis, entry zones &amp; risk breakdown locked.
+      </p>
+    </div>
+
+    <!-- TOKEN PREVIEW — always visible -->
+    <div class="token-preview-list" id="preview-list">
+      <!-- populated by JS -->
+    </div>
+
+    <!-- MARKET OVERVIEW — always visible -->
+    <div class="market-overview">
+      <div class="panel-header-label" style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:8px;">
+        // Market Overview
+        <span style="flex:1;height:1px;background:var(--border);display:block;"></span>
+      </div>
+      <div class="market-grid-small" id="market-overview">
+        <div class="mkt-cell"><div class="mkt-label">Tokens Monitored</div><div class="mkt-val">19</div></div>
+        <div class="mkt-cell"><div class="mkt-label">In Distribution</div><div class="mkt-val" id="dist-count" style="color:var(--red)">--</div></div>
+        <div class="mkt-cell"><div class="mkt-label">Critical ICR</div><div class="mkt-val" id="critical-count" style="color:var(--red)">--</div></div>
+        <div class="mkt-cell"><div class="mkt-label">Bull Flags</div><div class="mkt-val" id="flag-count" style="color:var(--accent)">--</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="right-panel locked" id="right-panel">
+
+    <!-- PAYWALL GATE -->
+    <div class="paywall-gate" id="paywall-gate">
+      <div class="paywall-card">
+        <div class="pw-chip">Global Synthesis Report · Every 2 Hours</div>
+        <h2 class="pw-title">Full Intel<br>Unlocked</h2>
+        <p class="pw-desc">
+          Every 2 hours, the agent runs request_analysis.py — cross-checking 19 tokens,
+          CES ranking, whale watch, entry zones and changes vs previous cycle.
+          One micropayment. Full report.
+        </p>
+        <div class="pw-refresh-note">
+          <span class="dot"></span>
+          Data refreshed every 2h · Step 3 · Venice AI · Gemini 3 Flash
+        </div>
+        <div class="pw-price-row">
+          <span class="pw-price">$0.05</span>
+          <span class="pw-price-unit">USDC</span>
+        </div>
+        <div class="pw-price-note">Base chain · trustless · this session</div>
+        <ul class="pw-features">
+          <li>TOP 3 opportunities + CES score</li>
+          <li>Entry zones &amp; stop loss levels</li>
+          <li>Whale Watch table</li>
+          <li>ICR critical alerts</li>
+          <li>Full synthesis table (19 tokens)</li>
+          <li>Changes vs previous cycle</li>
+          <li>Download report as .md</li>
+          <li>Venice LLM full narrative</li>
+        </ul>
+        <div class="pw-status" id="pw-status">Connect wallet to unlock</div>
+        <button class="btn-connect" id="btn-connect" onclick="connectWallet()">Connect Wallet</button>
+        <button class="btn-unlock" id="btn-unlock" onclick="triggerPayment()" disabled>
+          Unlock Full Report · $0.05 USDC
+        </button>
+        <div class="pw-chain-info">
+          NETWORK: Base (chainId 8453)<br>
+          TOKEN: USDC · 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913<br>
+          PROTOCOL: x402 · no backend · no account required
+        </div>
+      </div>
+    </div>
+
+    <!-- REPORT CONTENT (revealed after payment) -->
+    <div class="report-content" id="report-content">
+      <div style="height:200px;display:flex;align-items:center;justify-content:center;color:var(--text-ghost);">
+        [ LOADING REPORT... ]
+      </div>
+    </div>
+
+    <div class="download-bar" id="download-bar" style="display:none;">
+      <div class="download-info">
+        <strong id="dl-filename">synthesis_report.md</strong><br>
+        Full Venice AI synthesis · <span id="dl-tokens">19 tokens</span> · Base chain
+      </div>
+      <button class="btn-download" onclick="downloadReport()">↓ Download .md</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════
+   CONFIG
+══════════════════════════════════════════════ */
+const RECEIVER_ADDRESS = '0x71fd4359eB2da83C1BCd34f93a1C206d68b1eFba'; // ← replace with your address
+const USDC_BASE = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913';
+const USDC_AMOUNT = '50000'; // $0.05 USDC (6 decimals)
+const BASE_CHAIN_ID = 8453;
+const SESSION_KEY = '0xdelta_report_unlocked';
+
+/* ══════════════════════════════════════════════
+   STATE
+══════════════════════════════════════════════ */
+let reportData = null;
+let walletAddress = null;
+let isUnlocked = false;
+
+/* ══════════════════════════════════════════════
+   UNLOCK
+══════════════════════════════════════════════ */
+function checkSession() {
+  if (sessionStorage.getItem(SESSION_KEY)) {
+    unlockReport();
+    return true;
+  }
+  return false;
+}
+
+function unlockReport() {
+  isUnlocked = true;
+  sessionStorage.setItem(SESSION_KEY, Date.now().toString());
+  document.getElementById('paywall-gate').style.display = 'none';
+  document.getElementById('right-panel').classList.remove('locked');
+  document.getElementById('unlock-status').style.display = 'block';
+  document.getElementById('download-bar').style.display = 'flex';
+  if (reportData) renderReport(reportData);
+}
+
+/* ══════════════════════════════════════════════
+   WALLET
+══════════════════════════════════════════════ */
+async function connectWallet() {
+  if (!window.ethereum) { setStatus('No wallet — install MetaMask', 'err'); return; }
+  try {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    await provider.send('eth_requestAccounts', []);
+    walletAddress = await provider.getSigner().getAddress();
+    const btn = document.getElementById('wallet-btn');
+    btn.classList.add('connected');
+    document.getElementById('wallet-label').textContent = walletAddress.slice(0,6) + '...' + walletAddress.slice(-4);
+    document.getElementById('btn-connect').style.display = 'none';
+    document.getElementById('btn-unlock').disabled = false;
+    setStatus('Wallet connected — ready', 'ok');
+  } catch(e) { setStatus('Connection refused', 'err'); }
+}
+
+/* ══════════════════════════════════════════════
+   PAYMENT
+══════════════════════════════════════════════ */
+async function triggerPayment() {
+  if (!walletAddress) { await connectWallet(); return; }
+  setStatus('Switching to Base network...', 'pending');
+  try {
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    try {
+      await window.ethereum.request({ method: 'wallet_switchEthereumChain', params: [{ chainId: '0x' + BASE_CHAIN_ID.toString(16) }] });
+    } catch(e) {
+      if (e.code === 4902) {
+        await window.ethereum.request({ method: 'wallet_addEthereumChain', params: [{
+          chainId: '0x' + BASE_CHAIN_ID.toString(16),
+          chainName: 'Base',
+          nativeCurrency: { name: 'ETH', symbol: 'ETH', decimals: 18 },
+          rpcUrls: ['https://mainnet.base.org'],
+          blockExplorerUrls: ['https://basescan.org']
+        }]});
+      } else throw e;
+    }
+    setStatus('Confirm in wallet...', 'pending');
+    const signer = provider.getSigner();
+    const usdc = new ethers.Contract(USDC_BASE, ['function transfer(address to, uint256 amount) returns (bool)'], signer);
+    const unlockBtn = document.getElementById('btn-unlock');
+    unlockBtn.disabled = true;
+    unlockBtn.textContent = 'Pending...';
+    const tx = await usdc.transfer(RECEIVER_ADDRESS, USDC_AMOUNT);
+    setStatus('Transaction sent · confirming...', 'pending');
+    await tx.wait();
+    setStatus('✓ Payment confirmed', 'ok');
+    setTimeout(unlockReport, 600);
+  } catch(e) {
+    const msg = e.code === 4001 ? 'Cancelled' : (e.message || 'Error').slice(0, 50);
+    setStatus(msg, 'err');
+    const unlockBtn = document.getElementById('btn-unlock');
+    unlockBtn.disabled = false;
+    unlockBtn.textContent = 'Unlock Full Report · $0.05 USDC';
+  }
+}
+
+function setStatus(msg, type) {
+  const el = document.getElementById('pw-status');
+  el.textContent = msg;
+  el.className = 'pw-status ' + (type || '');
+}
+
+/* ══════════════════════════════════════════════
+   DATA LOAD
+══════════════════════════════════════════════ */
+async function loadReport() {
+  try {
+    // Try synthesis.json first, fallback to memory.json
+    let data;
+    try {
+      const res = await fetch('synthesis.json?' + Date.now());
+      data = await res.json();
+    } catch {
+      // Fallback: build from memory.json
+      const res = await fetch('memory.json?' + Date.now());
+      const mem = await res.json();
+      data = buildFromMemory(mem);
+    }
+
+    reportData = data;
+
+    // Update header
+    if (data.updated_at) {
+      const d = new Date(data.updated_at);
+      document.getElementById('header-updated').textContent = 'LAST CYCLE: ' + d.toLocaleTimeString();
+      document.getElementById('cycle-time').textContent = d.toLocaleTimeString();
+      updateCountdown(d);
+    }
+
+    renderPreviewList(data);
+    renderMarketStats(data);
+    if (isUnlocked) renderReport(data);
+
+  } catch(e) { console.error('Report load error', e); }
+}
+
+function buildFromMemory(mem) {
+  const tokens = (mem.tokens || []).sort((a, b) => b.fhs - a.fhs);
+  const criticalICR = tokens.filter(t => (t.icr || 0) > 1.5).length;
+  const distribution = tokens.filter(t => (t.phase || '').includes('DIST')).length;
+  return {
+    updated_at: mem.updated_at,
+    tokens: tokens,
+    top_opportunities: tokens.slice(0, 3).map((t, i) => ({
+      rank: i + 1,
+      symbol: t.symbol,
+      ces: t.ces || Math.round(45 - i * 10),
+      fhs: t.fhs,
+      phase: t.phase || 'DISTRIBUTION',
+      phase_confidence: t.phase_confidence || 0,
+      signals: t.narrative_phase || 'Analysis pending.',
+      entry_zone: t.entry_zone || null,
+      stop_loss: t.stop_loss || null,
+      target: t.target || null,
+      icr: t.icr || 0,
+      risk_note: (t.icr || 0) > 5 ? `ICR ${t.icr} CRITICAL — scalp only` : null,
+    })),
+    critical_alerts: tokens.filter(t => (t.icr || 0) > 1.5 || (t.alerts || []).some(a => a.severity === 'critical')).map(t => ({
+      symbol: t.symbol,
+      type: (t.icr || 0) > 5 ? 'critical' : 'warn',
+      message: (t.alerts || []).map(a => a.message).join(' ') || `ICR ${t.icr} — crash risk`,
+      icr: t.icr || 0,
+    })),
+    whale_watch: tokens.filter(t => (t.icr || 0) > 1).slice(0, 6).map(t => ({
+      symbol: t.symbol,
+      icr: t.icr || 0,
+      momentum: (t.nbp || 0) >= 0 ? 'Accumulation' : 'Distribution',
+      nbp: t.nbp || 0,
+      top5_pct: t.top5_pct || 0,
+    })),
+    synthesis_table: tokens,
+    changes: [
+      { icon: '📊', text: `Report generated from ${tokens.length} tokens · Base chain · Venice AI synthesis` },
+      { icon: '🔄', text: 'Data refreshed every 2 hours via automated cron pipeline' },
+    ],
+    stats: { distribution, criticalICR, bull_flags: tokens.filter(t => (t.bpi || 0) > 0.5).length },
+    raw_report: mem.synthesis_report || null,
+  };
+}
+
+/* ══════════════════════════════════════════════
+   RENDER PREVIEW (always visible)
+══════════════════════════════════════════════ */
+function renderPreviewList(data) {
+  const el = document.getElementById('preview-list');
+  const opps = (data.top_opportunities || []).slice(0, 5);
+  const tokens = data.tokens || data.synthesis_table || [];
+
+  // Show top 3 ranked + critical alerts
+  const items = [
+    ...opps.map((o, i) => ({ ...o, rankClass: `rank-${i+1}`, showCES: true })),
+    ...((data.critical_alerts || []).slice(0, 3).map(a => ({
+      symbol: a.symbol, phase: 'CRITICAL ALERT', ces: null, fhs: null,
+      rankClass: 'danger', showCES: false, alert_msg: a.message
+    })))
+  ].slice(0, 6);
+
+  el.innerHTML = items.map(item => `
+    <div class="preview-item ${item.rankClass}">
+      <div>
+        <div class="preview-name">${item.symbol}</div>
+        <div class="preview-meta mono">${item.phase || ''}</div>
+        ${item.showCES ? `<div class="locked-badge">🔒 entry zone · risk · targets</div>` : `<div class="locked-badge">🔒 ${(item.alert_msg || '').slice(0,30)}...</div>`}
+      </div>
+      <div class="preview-ces">
+        ${item.ces !== null ? `<div class="ces-val" style="color:${item.ces>=40?'var(--accent)':item.ces>=25?'var(--yellow)':'var(--red)'}">${item.ces}</div>
+        <div class="ces-label">CES/100</div>` : `<div style="color:var(--red);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;">⚠</div>`}
+        ${item.fhs ? `<div class="mono" style="font-size:10px;color:var(--text-ghost);margin-top:4px">FHS ${item.fhs}</div>` : ''}
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderMarketStats(data) {
+  const stats = data.stats || {};
+  document.getElementById('dist-count').textContent = stats.distribution || '--';
+  document.getElementById('critical-count').textContent = stats.criticalICR || '--';
+  document.getElementById('flag-count').textContent = stats.bull_flags || '--';
+}
+
+/* ══════════════════════════════════════════════
+   RENDER FULL REPORT (after unlock)
+══════════════════════════════════════════════ */
+function renderReport(data) {
+  const el = document.getElementById('report-content');
+  const d = data.updated_at ? new Date(data.updated_at) : new Date();
+  const tokens = data.synthesis_table || data.tokens || [];
+
+  el.innerHTML = `
+    <!-- REPORT HEADER -->
+    <div class="report-header">
+      <div class="report-eyebrow">// Senior On-Chain Forensic Analysis</div>
+      <h1 class="report-title">GLOBAL<br>SYNTHESIS</h1>
+      <div class="report-meta">
+        <div class="report-meta-item"><span class="dot"></span> ${d.toLocaleDateString('en-GB')} · ${d.toLocaleTimeString()}</div>
+        <div class="report-meta-item">19 tokens · Base chain</div>
+        <div class="report-meta-item">Venice AI · Gemini 3 Flash</div>
+        <div class="report-meta-item" style="border-color:rgba(255,184,0,0.3);color:var(--amber);">Refreshed every 2h</div>
+      </div>
+    </div>
+
+    <!-- TOP OPPORTUNITIES -->
+    <div class="r-section">
+      <div class="r-section-title">// Top Opportunities</div>
+      <div class="opp-grid">${renderOpportunities(data.top_opportunities || [])}</div>
+    </div>
+
+    <!-- CRITICAL ALERTS -->
+    <div class="r-section">
+      <div class="r-section-title">// Structural Alerts</div>
+      <div class="alert-grid">${renderAlerts(data.critical_alerts || [])}</div>
+    </div>
+
+    <!-- WHALE WATCH -->
+    <div class="r-section">
+      <div class="r-section-title">// Whale Watch</div>
+      <table class="whale-table">
+        <thead><tr>
+          <th>Token</th><th>ICR</th><th>Alert</th><th>Momentum</th><th>NBP</th><th>Top 5%</th>
+        </tr></thead>
+        <tbody>${renderWhaleTable(data.whale_watch || [])}</tbody>
+      </table>
+    </div>
+
+    <!-- SYNTHESIS TABLE -->
+    <div class="r-section">
+      <div class="r-section-title">// Full Synthesis Table</div>
+      <div style="overflow-x:auto;">
+        <table class="synth-table">
+          <thead><tr>
+            <th>Token</th><th>Phase</th><th>FHS</th><th>NBP</th><th>BPI</th><th>ICR</th><th>Top5%</th><th>CES</th><th>Signal</th>
+          </tr></thead>
+          <tbody>${renderSynthTable(tokens)}</tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- CHANGES VS N-1 -->
+    <div class="r-section">
+      <div class="r-section-title">// Changes vs Previous Cycle</div>
+      <div class="changes-list">${renderChanges(data.changes || [])}</div>
+    </div>
+
+    ${data.raw_report ? `
+    <div class="r-section">
+      <div class="r-section-title">// Venice AI Full Narrative</div>
+      <div style="background:var(--surface);border-left:2px solid var(--amber);padding:24px 28px;font-size:12px;line-height:1.9;color:var(--text-dim);white-space:pre-wrap;">${escHtml(data.raw_report)}</div>
+    </div>` : ''}
+  `;
+
+  // Update download filename
+  document.getElementById('dl-filename').textContent = `synthesis_${d.toISOString().slice(0,10)}.md`;
+  document.getElementById('dl-tokens').textContent = tokens.length + ' tokens';
+}
+
+function renderOpportunities(opps) {
+  if (!opps.length) return '<div style="padding:24px;color:var(--text-ghost)">No opportunities this cycle</div>';
+  return opps.slice(0, 3).map((o, i) => `
+    <div class="opp-card rank-${i+1}">
+      <div>
+        <div class="opp-name">${o.symbol}</div>
+        <div class="opp-phase">${o.phase || 'UNKNOWN'} · CP: ${o.phase_confidence || 0}%</div>
+        <div class="opp-signals">${o.signals || ''}</div>
+        ${o.entry_zone || o.stop_loss || o.target ? `
+        <div class="opp-entry">
+          ${o.entry_zone ? `<span class="entry-pill entry">Entry: ${o.entry_zone}</span>` : ''}
+          ${o.stop_loss ? `<span class="entry-pill stop">Stop: ${o.stop_loss}</span>` : ''}
+          ${o.target ? `<span class="entry-pill target">Target: ${o.target}</span>` : ''}
+        </div>` : ''}
+        ${o.risk_note ? `<div class="risk-tag">⚠ ${o.risk_note}</div>` : ''}
+      </div>
+      <div class="opp-scores">
+        <div class="score-box">
+          <div class="score-val" style="color:${o.ces>=40?'var(--accent)':o.ces>=25?'var(--yellow)':'var(--red)'}">${o.ces || '--'}</div>
+          <div class="score-key">CES</div>
+        </div>
+        <div class="score-box">
+          <div class="score-val" style="color:${o.fhs>=7?'var(--accent)':o.fhs>=5?'var(--yellow)':'var(--red)'}">${o.fhs || '--'}</div>
+          <div class="score-key">FHS</div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function renderAlerts(alerts) {
+  if (!alerts.length) return '<div style="padding:16px;color:var(--text-ghost);font-family:\'JetBrains Mono\',monospace;font-size:11px;">NO CRITICAL ALERTS THIS CYCLE</div>';
+  return alerts.map(a => `
+    <div class="r-alert ${a.type || 'warn'}">
+      <div class="r-alert-token">${a.symbol}</div>
+      <div class="r-alert-msg">${a.message || ''}</div>
+      ${a.icr ? `<div class="r-alert-icr">ICR ${a.icr}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+function renderWhaleTable(whales) {
+  if (!whales.length) return '<tr><td colspan="6" style="color:var(--text-ghost);text-align:center;padding:20px;">No data</td></tr>';
+  return whales.map(w => {
+    const icrColor = w.icr > 5 ? 'var(--red)' : w.icr > 1.5 ? 'var(--yellow)' : 'var(--text-dim)';
+    const icon = w.icr > 5 ? '🔴' : w.icr > 1.5 ? '⚠️' : '✅';
+    return `<tr>
+      <td><span class="w-token">${w.symbol}</span></td>
+      <td><span class="w-icr" style="color:${icrColor}">${w.icr}</span></td>
+      <td>${icon}</td>
+      <td style="color:var(--text-dim);font-size:11px;">${w.momentum || '--'}</td>
+      <td style="color:${(w.nbp||0)>=0?'var(--accent)':'var(--red)'};font-family:'JetBrains Mono',monospace;font-size:11px;">${(w.nbp||0) >= 0 ? '+' : ''}${w.nbp || 0}%</td>
+      <td style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);">${w.top5_pct || '--'}%</td>
+    </tr>`;
+  }).join('');
+}
+
+function renderSynthTable(tokens) {
+  if (!tokens.length) return '';
+  return tokens.map(t => {
+    const fhsColor = (t.fhs||0) >= 7 ? 'var(--accent)' : (t.fhs||0) >= 5 ? 'var(--yellow)' : 'var(--red)';
+    const nbpColor = (t.nbp||0) >= 0 ? 'var(--accent)' : 'var(--red)';
+    const sigDot = (t.bpi||0) > 0.5 ? '#bfff00' : (t.alerts||[]).some(a=>a.severity==='critical') ? '#ff3e3e' : '#333338';
+    const sigText = (t.bpi||0) > 0.5 ? 'Bull Flag' : (t.alerts||[]).some(a=>a.severity==='critical') ? 'Alert' : 'Watch';
+    return `<tr>
+      <td style="font-weight:700;font-size:12px;">${t.symbol}</td>
+      <td style="color:var(--text-dim);font-size:10px;">${(t.phase||'').slice(0,5)}</td>
+      <td style="color:${fhsColor};font-weight:700;">${t.fhs || '--'}</td>
+      <td style="color:${nbpColor};">${t.nbp !== undefined ? (t.nbp >= 0 ? '+' : '') + t.nbp + '%' : '--'}</td>
+      <td>${t.bpi !== undefined ? t.bpi : '--'}</td>
+      <td style="color:${(t.icr||0)>1.5?'var(--red)':'var(--text-dim)'}">${t.icr !== undefined ? t.icr : '--'}</td>
+      <td>${t.top5_pct !== undefined ? t.top5_pct + '%' : '--'}</td>
+      <td style="color:${(t.ces||0)>=40?'var(--accent)':(t.ces||0)>=25?'var(--yellow)':'var(--text-dim)'};font-weight:700;">${t.ces || '--'}</td>
+      <td><span class="sig-dot" style="background:${sigDot}"></span>${sigText}</td>
+    </tr>`;
+  }).join('');
+}
+
+function renderChanges(changes) {
+  if (!changes.length) return '<div style="color:var(--text-ghost)">No change data available</div>';
+  return changes.map(c => `
+    <div class="change-item">
+      <span class="change-icon">${c.icon || '→'}</span>
+      <div class="change-text">${c.text || ''}</div>
+    </div>
+  `).join('');
+}
+
+function escHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+/* ══════════════════════════════════════════════
+   DOWNLOAD
+══════════════════════════════════════════════ */
+function downloadReport() {
+  if (!reportData) return;
+  const d = reportData.updated_at ? new Date(reportData.updated_at) : new Date();
+  const tokens = reportData.synthesis_table || reportData.tokens || [];
+
+  let md = `# 0xDELTA — Global Forensic Synthesis Report\n`;
+  md += `**Generated:** ${d.toISOString()}\n`;
+  md += `**Tokens monitored:** 19 · Base chain\n`;
+  md += `**Engine:** Venice AI · Gemini 3 Flash\n`;
+  md += `**Refresh cycle:** Every 2 hours\n\n---\n\n`;
+
+  md += `## TOP OPPORTUNITIES\n\n`;
+  (reportData.top_opportunities || []).forEach(o => {
+    md += `### ${o.symbol} — CES: ${o.ces}/100 | FHS: ${o.fhs}/10\n`;
+    md += `- **Phase:** ${o.phase} | CP: ${o.phase_confidence}%\n`;
+    md += `- ${o.signals}\n`;
+    if (o.entry_zone) md += `- Entry: ${o.entry_zone} | Stop: ${o.stop_loss} | Target: ${o.target}\n`;
+    if (o.risk_note) md += `- ⚠ Risk: ${o.risk_note}\n`;
+    md += '\n';
+  });
+
+  md += `## STRUCTURAL ALERTS\n\n`;
+  (reportData.critical_alerts || []).forEach(a => {
+    md += `- **${a.symbol}** — ${a.message} | ICR: ${a.icr}\n`;
+  });
+
+  md += `\n## WHALE WATCH\n\n`;
+  md += `| Token | ICR | Alert | Momentum | NBP | Top5% |\n`;
+  md += `|-------|-----|-------|----------|-----|-------|\n`;
+  (reportData.whale_watch || []).forEach(w => {
+    const icon = w.icr > 5 ? '🔴' : w.icr > 1.5 ? '⚠️' : '✅';
+    md += `| **${w.symbol}** | ${w.icr} | ${icon} | ${w.momentum} | ${w.nbp >= 0 ? '+' : ''}${w.nbp}% | ${w.top5_pct}% |\n`;
+  });
+
+  md += `\n## SYNTHESIS TABLE\n\n`;
+  md += `| Token | Phase | FHS | NBP | BPI | ICR | Top5% | CES | Signal |\n`;
+  md += `|-------|-------|-----|-----|-----|-----|-------|-----|--------|\n`;
+  tokens.forEach(t => {
+    md += `| ${t.symbol} | ${(t.phase||'').slice(0,5)} | ${t.fhs} | ${t.nbp !== undefined ? (t.nbp>=0?'+':'')+t.nbp+'%' : '--'} | ${t.bpi||'--'} | ${t.icr||'--'} | ${t.top5_pct||'--'}% | ${t.ces||'--'} | — |\n`;
+  });
+
+  if (reportData.raw_report) {
+    md += `\n## VENICE AI FULL NARRATIVE\n\n${reportData.raw_report}\n`;
+  }
+
+  const blob = new Blob([md], { type: 'text/markdown' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `0xdelta_synthesis_${d.toISOString().slice(0,10)}.md`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+/* ══════════════════════════════════════════════
+   COUNTDOWN
+══════════════════════════════════════════════ */
+function updateCountdown(lastUpdate) {
+  const TWO_HOURS = 2 * 60 * 60 * 1000;
+  function tick() {
+    const next = new Date(lastUpdate.getTime() + TWO_HOURS);
+    const diff = next - Date.now();
+    if (diff <= 0) {
+      document.getElementById('countdown').textContent = 'Refresh imminent...';
+      document.getElementById('next-refresh').textContent = 'now';
+      return;
+    }
+    const m = Math.floor(diff / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('countdown').textContent =
+      `Next cycle in ${m}m ${s.toString().padStart(2,'0')}s`;
+    document.getElementById('next-refresh').textContent =
+      next.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+  }
+  tick();
+  setInterval(tick, 1000);
+}
+
+/* ══════════════════════════════════════════════
+   INIT
+══════════════════════════════════════════════ */
+checkSession();
+loadReport();
+setInterval(loadReport, 120000); // reload every 2min to check for new cycle
+</script>
+</body>
+</html>

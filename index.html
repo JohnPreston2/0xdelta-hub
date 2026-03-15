@@ -3,609 +3,423 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>0xΔ | Tactical Forensic Intelligence</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>0xDelta | Forensic Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #050505;
-      --surface: #0a0a0c;
-      --border: #1a1a1e;
-      --border-bright: #2a2a30;
-      --accent: #bfff00;
-      --text-main: #f0f0f0;
-      --text-dim: #66666e;
-      --text-ghost: #333338;
-      --red: #ff3e3e;
-      --blue: #0070ff;
-      --yellow: #ffb800;
-      --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; cursor: crosshair; }
+    :root {
+      --bg:        #0d0d0f;
+      --surface:   #141416;
+      --surface2:  #1c1c20;
+      --border:    #242428;
+      --border2:   #2e2e34;
+      --text:      #e8e8ea;
+      --text2:     #8888a0;
+      --text3:     #4a4a5e;
+      --green:     #22d3a0;
+      --red:       #f04a5a;
+      --yellow:    #f5a623;
+      --blue:      #4f8ef7;
+      --purple:    #9b6dff;
+      --green-bg:  rgba(34,211,160,0.08);
+      --red-bg:    rgba(240,74,90,0.08);
+      --yellow-bg: rgba(245,166,35,0.08);
+      --blue-bg:   rgba(79,142,247,0.08);
+    }
 
     body {
       background: var(--bg);
-      color: var(--text-main);
-      font-family: 'Bricolage Grotesque', sans-serif;
-      font-size: 13px;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 100vh;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background: var(--grain);
-      opacity: 0.03;
-      pointer-events: none;
-      z-index: 100;
-    }
+    .mono { font-family: 'JetBrains Mono', monospace; }
 
-    .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: -0.02em; }
-
-    header {
-      height: 60px;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 24px; height: 56px;
+      background: rgba(13,13,15,0.95);
       border-bottom: 1px solid var(--border);
-      background: var(--surface);
+      backdrop-filter: blur(12px);
     }
-
-    .logo-area { display: flex; align-items: center; gap: 15px; }
-    .logo-box {
-      width: 32px; height: 32px;
-      background: var(--accent);
-      color: var(--bg);
+    .nav-brand { display: flex; align-items: center; gap: 12px; }
+    .nav-logo {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--surface2); border: 1px solid var(--border2);
       display: flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 18px;
-      clip-path: polygon(20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 20%);
+      font-size: 16px; font-weight: 700; color: var(--blue);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .nav-title { font-size: 15px; font-weight: 600; letter-spacing: 0.02em; }
+    .nav-sub { font-size: 11px; color: var(--text3); margin-top: 1px; }
+    .nav-badge {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      padding: 4px 10px; border-radius: 6px;
+      background: var(--surface2); border: 1px solid var(--border2);
+      color: var(--text2);
     }
 
-    .status-ticker { display: flex; gap: 20px; font-size: 10px; color: var(--text-dim); text-transform: uppercase; }
-    .status-item span { color: var(--accent); margin-right: 4px; }
+    /* ── LAYOUT ── */
+    .page { max-width: 1600px; margin: 0 auto; padding: 28px 24px 60px; }
 
-    .main-grid {
+    /* ── SECTION HEADER ── */
+    .section-header {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 16px;
+    }
+    .section-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .section-title { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text2); }
+
+    /* ── TRENDING GRID ── */
+    .trending-grid {
       display: grid;
-      grid-template-columns: 280px 1fr 320px;
-      flex: 1;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+    @media (max-width: 900px) { .trending-grid { grid-template-columns: 1fr; } }
+
+    /* ── TOKEN CARD (trending) ── */
+    .token-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .token-card:hover {
+      border-color: var(--border2);
+      background: var(--surface2);
+    }
+    .token-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+    .token-symbol { font-weight: 600; font-size: 14px; }
+    .token-addr { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text3); margin-top: 2px; }
+    .token-price { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; text-align: right; }
+    .token-change { font-size: 11px; margin-top: 2px; text-align: right; }
+    .token-meta { display: flex; gap: 16px; padding-top: 10px; border-top: 1px solid var(--border); }
+    .token-meta-item { font-size: 11px; color: var(--text3); }
+    .token-meta-item span { color: var(--text2); }
+    .up { color: var(--green); }
+    .down { color: var(--red); }
+
+    /* ── DIVIDER ── */
+    .divider { height: 1px; background: var(--border); margin: 32px 0; }
+
+    /* ── FORENSIC SECTION ── */
+    .forensic-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .forensic-title-group { display: flex; align-items: center; gap: 12px; }
+    .forensic-title { font-size: 16px; font-weight: 600; }
+    .forensic-count {
+      font-size: 11px; font-family: 'JetBrains Mono', monospace;
+      background: var(--surface2); border: 1px solid var(--border2);
+      color: var(--text2); padding: 3px 8px; border-radius: 5px;
+    }
+
+    /* ── FORENSIC GRID ── */
+    .forensic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 12px;
+    }
+
+    /* ── FORENSIC CARD ── */
+    .f-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      transition: border-color 0.2s;
+      position: relative;
       overflow: hidden;
     }
-
-    /* SIDEBAR */
-    .sidebar {
-      border-right: 1px solid var(--border);
-      display: flex; flex-direction: column;
-      background: linear-gradient(to right, var(--surface), transparent);
+    .f-card:hover { border-color: var(--border2); }
+    .f-card-accent {
+      position: absolute; top: 0; left: 0; right: 0; height: 2px;
     }
 
-    .sidebar-label {
-      padding: 16px 20px;
-      font-size: 11px; font-weight: 700;
-      color: var(--text-ghost);
-      text-transform: uppercase; letter-spacing: 0.1em;
-      display: flex; justify-content: space-between;
-      border-bottom: 1px solid var(--border);
+    .f-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .f-symbol { font-size: 15px; font-weight: 600; }
+    .f-addr { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text3); margin-top: 3px; }
+
+    .f-score-block { text-align: right; }
+    .f-fhs { font-size: 22px; font-weight: 700; line-height: 1; }
+    .f-fhs-label { font-size: 10px; color: var(--text3); margin-top: 2px; }
+
+    /* badges */
+    .badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+    .badge {
+      font-size: 10px; font-family: 'JetBrains Mono', monospace;
+      padding: 3px 8px; border-radius: 5px; font-weight: 500;
+      border: 1px solid transparent;
+    }
+    .badge-green  { background: var(--green-bg);  color: var(--green);  border-color: rgba(34,211,160,0.2); }
+    .badge-red    { background: var(--red-bg);    color: var(--red);    border-color: rgba(240,74,90,0.2); }
+    .badge-yellow { background: var(--yellow-bg); color: var(--yellow); border-color: rgba(245,166,35,0.2); }
+    .badge-blue   { background: var(--blue-bg);   color: var(--blue);   border-color: rgba(79,142,247,0.2); }
+
+    /* metrics row */
+    .f-metrics {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 6px; padding-top: 12px; border-top: 1px solid var(--border);
+    }
+    .f-metric { text-align: center; }
+    .f-metric-label { font-size: 9px; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 3px; }
+    .f-metric-value { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; }
+
+    /* alerts */
+    .f-alerts { margin-top: 10px; }
+    .f-alert {
+      font-size: 10px; color: var(--red);
+      background: var(--red-bg); border: 1px solid rgba(240,74,90,0.15);
+      border-radius: 5px; padding: 5px 8px; margin-top: 4px;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
 
-    .token-list { overflow-y: auto; flex: 1; }
-    .token-item {
-      padding: 10px 20px;
-      border-bottom: 1px solid var(--border);
-      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      cursor: pointer;
-    }
-    .token-item:hover { background: rgba(191, 255, 0, 0.05); }
-    .token-item.active { background: rgba(191, 255, 0, 0.1); border-left: 3px solid var(--accent); }
-
-    .token-name { font-weight: 700; font-size: 14px; }
-    .token-meta { font-size: 10px; color: var(--text-dim); text-transform: uppercase; margin-top: 2px; display: flex; gap: 8px; align-items: center; }
-    .token-score { font-family: 'JetBrains Mono'; font-weight: 700; font-size: 16px; text-align: right; }
-    .token-rsi { font-size: 9px; color: var(--text-dim); text-align: right; margin-top: 2px; font-family: 'JetBrains Mono'; }
-
-    /* CONTENT */
-    .content-area { overflow-y: auto; padding: 32px 40px; }
-
-    .intel-header {
-      display: flex; justify-content: space-between; align-items: flex-start;
-      margin-bottom: 24px;
-    }
-
-    .intel-title h1 {
-      font-size: 44px; font-weight: 800; line-height: 0.9;
-      text-transform: uppercase; letter-spacing: -0.04em;
-    }
-
-    .intel-meta { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; align-items: center; }
-
-    .addr-pill {
-      background: var(--surface); border: 1px solid var(--border-bright);
-      padding: 3px 10px; border-radius: 3px;
-      font-size: 10px; color: var(--text-dim);
-    }
-    .price-pill {
-      background: var(--surface); border: 1px solid var(--border-bright);
-      padding: 3px 10px; border-radius: 3px;
-      font-size: 10px;
-    }
-
-    .fhs-radar {
-      position: relative; width: 110px; height: 110px;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      border: 1px solid var(--border-bright); border-radius: 50%; flex-shrink: 0;
-    }
-    .fhs-radar::after {
-      content: ""; position: absolute; inset: -1px; border-radius: 50%;
-      border: 1px solid var(--accent);
-      clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%);
-      animation: rotate 4s linear infinite;
-    }
-    @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-    .fhs-val { font-size: 38px; font-weight: 800; font-family: 'JetBrains Mono'; }
-
-    /* SECTION TITLES */
-    .section-title {
-      font-size: 10px; font-weight: 800; text-transform: uppercase;
-      color: var(--text-ghost); letter-spacing: 0.12em;
-      margin-bottom: 10px; margin-top: 24px;
-      display: flex; align-items: center; gap: 10px;
-    }
-    .section-title::after { content: ""; flex: 1; height: 1px; background: var(--border); }
-
-    /* METRICS */
-    .metrics-grid {
-      display: grid; gap: 1px;
-      background: var(--border); border: 1px solid var(--border);
-      margin-bottom: 4px;
-    }
-    .metrics-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
-    .metrics-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-
-    .m-card { background: var(--bg); padding: 14px 16px; transition: background 0.2s; }
-    .m-card:hover { background: var(--surface); }
-    .m-label { font-size: 9px; color: var(--text-dim); text-transform: uppercase; margin-bottom: 5px; letter-spacing: 0.05em; }
-    .m-val { font-family: 'JetBrains Mono'; font-size: 17px; font-weight: 700; }
-    .m-sub { font-size: 9px; color: var(--text-dim); margin-top: 3px; }
-
-    /* CHART */
-    .chart-container {
-      background: var(--surface); border: 1px solid var(--border);
-      padding: 14px; margin-bottom: 4px;
-    }
-    .chart-svg { width: 100%; height: 70px; }
-
-    /* BULL FLAG */
-    .bull-flag-box {
-      background: var(--surface); border: 1px solid var(--border);
-      padding: 14px; margin-bottom: 4px;
-    }
-    .bf-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 4px 10px; border-radius: 3px; font-size: 11px; font-weight: 700;
-      margin-bottom: 12px;
-    }
-    .bf-badge.detected { background: rgba(191,255,0,0.15); color: var(--accent); border: 1px solid rgba(191,255,0,0.4); }
-    .bf-badge.none { color: var(--text-dim); border: 1px solid var(--border); }
-
-    /* NARRATIVE */
-    .narrative-box {
-      background: var(--surface); border-left: 2px solid var(--accent);
-      padding: 18px; line-height: 1.6; font-size: 13px; margin-bottom: 4px;
-    }
-
-    /* RIGHT PANEL */
-    .telemetry {
-      border-left: 1px solid var(--border);
-      background: rgba(10,10,12,0.5);
-      padding: 20px; display: flex; flex-direction: column; gap: 22px;
-      overflow-y: auto;
-    }
-
-    .t-section-title {
-      font-size: 10px; font-weight: 800; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 12px;
-      display: flex; align-items: center; gap: 8px;
-    }
-    .t-section-title::after { content: ""; flex: 1; height: 1px; background: var(--border); }
-
-    .alert-item {
-      padding: 9px 10px; border-radius: 3px; margin-bottom: 7px;
-      font-size: 11px; border-left: 3px solid transparent;
-    }
-    .alert-item.critical { background: rgba(255,62,62,0.1); border-color: var(--red); color: #ff9999; }
-    .alert-item.warning { background: rgba(255,184,0,0.1); border-color: var(--yellow); color: #ffd966; }
-    .alert-item.info { background: rgba(0,112,255,0.1); border-color: var(--blue); color: #99c2ff; }
-
-    .holder-row { margin-bottom: 9px; }
-    .holder-info { display: flex; justify-content: space-between; font-size: 10px; margin-bottom: 3px; }
-    .holder-addr { color: var(--text-dim); font-family: 'JetBrains Mono'; }
-    .holder-pct { color: var(--text-main); font-weight: 700; font-family: 'JetBrains Mono'; }
-    .holder-bar-bg { height: 2px; background: var(--border); }
-    .holder-bar-fill { height: 100%; }
-    .holder-entity { font-size: 9px; color: var(--accent); margin-top: 2px; }
-
-    .market-row {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
-      background: var(--border); border: 1px solid var(--border); margin-bottom: 4px;
-    }
-    .market-cell { background: var(--bg); padding: 10px 14px; }
-    .market-label { font-size: 9px; color: var(--text-dim); text-transform: uppercase; margin-bottom: 4px; }
-    .market-val { font-family: 'JetBrains Mono'; font-size: 13px; font-weight: 700; }
-
-    ::-webkit-scrollbar { width: 3px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--border-bright); }
-    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+    /* ── LOADING ── */
+    .loading { color: var(--text3); font-size: 13px; padding: 20px 0; }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="logo-area">
-    <div class="logo-box">Δ</div>
+<nav>
+  <div class="nav-brand">
+    <div class="nav-logo">Δ</div>
     <div>
-      <div style="font-weight:800;font-size:16px;letter-spacing:-0.02em;">0xDELTA</div>
-      <div class="mono" style="font-size:9px;color:var(--text-dim);">FIELD INTELLIGENCE UNIT</div>
+      <div class="nav-title">0xDelta</div>
+      <div class="nav-sub mono">Forensic Intelligence Platform</div>
     </div>
   </div>
-  <div class="status-ticker mono">
-    <div class="status-item"><span>●</span> SYSTEM: ONLINE</div>
-    <div class="status-item"><span>●</span> STREAM: ACTIVE</div>
-    <div id="top-updated" class="status-item">LAST SCAN: --</div>
+  <div id="update-timer" class="nav-badge">—</div>
+</nav>
+
+<div class="page">
+
+  <!-- ── TRENDING ── -->
+  <div class="trending-grid">
+    <div>
+      <div class="section-header">
+        <div class="section-dot" style="background:var(--purple)"></div>
+        <span class="section-title">Solana Trending</span>
+      </div>
+      <div id="solana-list" class="loading">Chargement...</div>
+    </div>
+    <div>
+      <div class="section-header">
+        <div class="section-dot" style="background:var(--blue)"></div>
+        <span class="section-title">Base Network</span>
+      </div>
+      <div id="base-list" class="loading">Chargement...</div>
+    </div>
+    <div>
+      <div class="section-header">
+        <div class="section-dot" style="background:var(--red)"></div>
+        <span class="section-title">🦞 OpenClaw Watchlist</span>
+      </div>
+      <div id="openclaw-list" class="loading">Chargement...</div>
+    </div>
   </div>
-</header>
 
-<div class="main-grid">
-  <aside class="sidebar">
-    <div class="sidebar-label">
-      <span>Watchlist</span>
-      <span id="top-count" class="mono" style="color:var(--accent);">--</span>
-    </div>
-    <div class="token-list" id="sidebar-list"></div>
-  </aside>
+  <div class="divider"></div>
 
-  <main class="content-area" id="detail-panel">
-    <div style="height:100%;display:flex;align-items:center;justify-content:center;color:var(--text-ghost);">
-      [ SELECTIONNER UN MODULE DE DONNÉES ]
+  <!-- ── FORENSIC ── -->
+  <div class="forensic-header">
+    <div class="forensic-title-group">
+      <div class="forensic-title">Forensic Intelligence</div>
+      <div class="forensic-count" id="forensic-count">— tokens</div>
     </div>
-  </main>
+    <div id="forensic-updated" class="nav-badge" style="font-size:10px">—</div>
+  </div>
 
-  <aside class="telemetry">
-    <div>
-      <div class="t-section-title">Live Alerts</div>
-      <div id="alert-container"></div>
-    </div>
-    <div>
-      <div class="t-section-title">Supply Control</div>
-      <div id="holder-container"></div>
-    </div>
-    <div>
-      <div class="t-section-title">Market</div>
-      <div id="market-container"></div>
-    </div>
-  </aside>
+  <div id="forensic-grid" class="forensic-grid">
+    <div class="loading">Chargement des fiches forensic...</div>
+  </div>
+
 </div>
 
 <script>
-let allTokens = [];
-let selected = null;
+// ── UTILS ──
+function cash(n) {
+  n = parseFloat(n) || 0;
+  if (n >= 1e9) return (n/1e9).toFixed(2)+'B';
+  if (n >= 1e6) return (n/1e6).toFixed(2)+'M';
+  if (n >= 1e3) return (n/1e3).toFixed(1)+'K';
+  return n.toFixed(2);
+}
 
-const colorFHS = v => v >= 7 ? 'var(--accent)' : v >= 5 ? 'var(--yellow)' : 'var(--red)';
-const fmt = (n, d=2) => (n != null && !isNaN(n)) ? (+n).toFixed(d) : '--';
-const fmtUSD = n => !n ? '--' : n >= 1e6 ? '$'+(n/1e6).toFixed(2)+'M' : n >= 1e3 ? '$'+(n/1e3).toFixed(1)+'K' : '$'+n.toFixed(2);
-const fmtPct = n => (n >= 0 ? '+' : '') + fmt(n,1) + '%';
+function timeAgo(iso) {
+  if (!iso) return '—';
+  const diff = Math.floor((Date.now() - new Date(iso)) / 60000);
+  if (diff < 60) return diff + 'm ago';
+  return Math.floor(diff/60) + 'h ago';
+}
 
-function renderSidebar(tokens) {
-  document.getElementById('sidebar-list').innerHTML = tokens.map((t, i) => `
-    <div class="token-item ${selected === t.symbol ? 'active' : ''}" onclick="selectToken(${i})">
+// ── TRENDING CARDS ──
+function tokenCard(t, accent) {
+  const change = parseFloat(t.price_change_24h) || 0;
+  const up = change >= 0;
+  return `<div class="token-card" style="border-top:2px solid ${accent}">
+    <div class="token-card-header">
       <div>
-        <div class="token-name">${t.symbol}</div>
-        <div class="token-meta mono">
-          <span>${t.phase}</span>
-          ${t.bull_flag ? '<span style="color:var(--accent)">▲BF</span>' : ''}
-        </div>
+        <div class="token-symbol">${t.symbol || t.name || '?'}</div>
+        <div class="token-addr">${(t.pool_address||'').slice(0,14)}…</div>
       </div>
       <div>
-        <div class="token-score" style="color:${colorFHS(t.fhs)}">${fmt(t.fhs,1)}</div>
-        <div class="token-rsi">RSI ${fmt(t.rsi_1h,0)}</div>
+        <div class="token-price" style="color:${accent}">$${parseFloat(t.price_usd||0).toFixed(6)}</div>
+        <div class="token-change ${up?'up':'down'}">${up?'▲':'▼'} ${Math.abs(change).toFixed(1)}%</div>
       </div>
-    </div>`).join('');
+    </div>
+    <div class="token-meta">
+      <div class="token-meta-item">MCAP <span>$${cash(t.market_cap_usd)}</span></div>
+      <div class="token-meta-item">VOL <span>$${cash(t.volume_24h)}</span></div>
+    </div>
+  </div>`;
 }
 
-function selectToken(idx) {
-  const t = allTokens[idx];
-  selected = t.symbol;
-  renderSidebar(allTokens);
-  renderDetail(t);
-  renderTelemetry(t);
+function renderTokens(tokens, id, accent) {
+  const el = document.getElementById(id);
+  if (!tokens || !tokens.length) { el.innerHTML = '<div class="loading">Aucune donnée</div>'; return; }
+  el.innerHTML = tokens.map(t => tokenCard(t, accent)).join('');
 }
 
-function renderChart(history) {
-  if (!history || history.length < 2) return `
-    <div class="chart-container">
-      <div class="mono" style="color:var(--text-ghost);font-size:10px;">NO HISTORY DATA</div>
-    </div>`;
-
-  const vals = history.map(h => +h.fhs);
-  const min = Math.min(...vals) - 0.3;
-  const max = Math.max(...vals) + 0.3;
-  const W = 600, H = 70;
-  const x = (i) => (i / (vals.length - 1)) * W;
-  const y = (v) => H - ((v - min) / (max - min)) * H;
-  const pts = vals.map((v,i) => `${x(i)},${y(v)}`).join(' ');
-  const area = `0,${H} ${pts} ${W},${H}`;
-  const last = vals[vals.length-1], first = vals[0];
-  const trendCol = last > first ? 'var(--accent)' : last < first ? 'var(--red)' : 'var(--yellow)';
-
-  return `
-    <div class="chart-container">
-      <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-        <div class="mono" style="font-size:9px;color:var(--text-ghost);">FHS HISTORY (48H · ${vals.length} points)</div>
-        <div class="mono" style="font-size:10px;color:${trendCol};">${fmt(first,1)} → ${fmt(last,1)}</div>
-      </div>
-      <svg class="chart-svg" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="${trendCol}" stop-opacity="0.25"/>
-            <stop offset="100%" stop-color="${trendCol}" stop-opacity="0"/>
-          </linearGradient>
-        </defs>
-        <polygon points="${area}" fill="url(#g)"/>
-        <polyline points="${pts}" fill="none" stroke="${trendCol}" stroke-width="1.5" stroke-linejoin="round"/>
-        ${vals.map((v,i) => `<circle cx="${x(i)}" cy="${y(v)}" r="2.5" fill="${trendCol}" opacity="0.8"/>`).join('')}
-      </svg>
-      <div style="display:flex;justify-content:space-between;margin-top:4px;">
-        <div class="mono" style="font-size:9px;color:var(--text-ghost);">${history[0].ts}</div>
-        <div class="mono" style="font-size:9px;color:var(--text-ghost);">${history[history.length-1].ts}</div>
-      </div>
-    </div>`;
-}
-
-function renderDetail(t) {
-  const color = colorFHS(t.fhs);
-  const berCol = t.ber_zone === 'oversold' ? 'var(--red)' : t.ber_zone === 'overbought' ? 'var(--yellow)' : 'var(--accent)';
-  const rsiCol = t.rsi_1h < 30 ? 'var(--red)' : t.rsi_1h > 70 ? 'var(--yellow)' : 'var(--text-main)';
-
-  document.getElementById('detail-panel').innerHTML = `
-    <div class="intel-header">
-      <div class="intel-title">
-        <div class="mono" style="color:var(--accent);font-size:11px;margin-bottom:6px;">// SUBJECT_ANALYSIS</div>
-        <h1>${t.symbol}</h1>
-        <div class="intel-meta">
-          <div class="addr-pill mono">${t.address}</div>
-          ${t.price_usd ? `<div class="price-pill mono">$${(+t.price_usd).toFixed(8)}</div>` : ''}
-          ${t.price_change_24h != null ? `<div class="price-pill mono" style="color:${(+t.price_change_24h)>=0?'var(--accent)':'var(--red)'}">${fmtPct(t.price_change_24h)}</div>` : ''}
+function renderOpenClaw(tokens) {
+  const el = document.getElementById('openclaw-list');
+  if (!tokens || !tokens.length) { el.innerHTML = '<div class="loading">Watchlist vide</div>'; return; }
+  el.innerHTML = tokens.map(t => {
+    const change = parseFloat(t.price_change_24h) || 0;
+    const live = t.pool_address !== '---' && parseFloat(t.price_usd) > 0;
+    const up = change >= 0;
+    return `<div class="token-card" style="border-top:2px solid var(--red);${!live?'opacity:0.5':''}">
+      <div class="token-card-header">
+        <div>
+          <div class="token-symbol">${t.name||t.symbol||'?'}</div>
+          <div class="token-addr mono">${t.symbol||''}</div>
+        </div>
+        <div>
+          ${live
+            ? `<div class="token-price" style="color:var(--red)">$${parseFloat(t.price_usd).toFixed(6)}</div>
+               <div class="token-change ${up?'up':'down'}">${up?'▲':'▼'} ${Math.abs(change).toFixed(1)}%</div>`
+            : `<div class="token-price" style="color:var(--text3)">OFFLINE</div>`}
         </div>
       </div>
-      <div class="fhs-radar">
-        <div class="mono" style="font-size:9px;color:var(--text-dim);position:absolute;top:14px;">HEALTH</div>
-        <div class="fhs-val" style="color:${color}">${t.fhs}</div>
-        <div class="mono" style="font-size:9px;color:var(--text-dim);position:absolute;bottom:14px;">/ 10.0</div>
-      </div>
-    </div>
-
-    ${renderChart(t.history)}
-
-    <div class="section-title">Flows</div>
-    <div class="metrics-grid cols-4">
-      <div class="m-card">
-        <div class="m-label">NBP 24H</div>
-        <div class="m-val" style="color:${(+t.nbp||0)>=0?'var(--accent)':'var(--red)'}">${fmt(t.nbp,1)}%</div>
-        <div class="m-sub">${t.nbp_status||''}</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">EV (Vol Rel.)</div>
-        <div class="m-val">${fmt(t.ev,2)}</div>
-        <div class="m-sub">${t.ev_trend||''}</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">AC</div>
-        <div class="m-val">${fmtUSD(t.ac)}</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">VWAD</div>
-        <div class="m-val">${fmt(t.vwad,3)}</div>
-        <div class="m-sub">${t.flow_classification||''}</div>
-      </div>
-    </div>
-
-    <div class="section-title">Liquidité</div>
-    <div class="metrics-grid cols-4">
-      <div class="m-card">
-        <div class="m-label">ICR Index</div>
-        <div class="m-val" style="color:${t.icr_alert?'var(--red)':'var(--text-main)'}">${fmt(t.icr,2)}</div>
-        <div class="m-sub">${t.icr_alert?'⚠ alert':'ok'}</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">LCR</div>
-        <div class="m-val">${fmt(t.lcr,1)}%</div>
-        <div class="m-sub">${t.lcr_fragile?'⚠ fragile':'stable'}</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">DAI</div>
-        <div class="m-val" style="color:${(+t.dai||0)<0?'var(--red)':'var(--accent)'}">${fmt(t.dai,3)}</div>
-        <div class="m-sub">${t.dai_status||''}</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">LVR</div>
-        <div class="m-val">${fmt(t.lvr,3)}</div>
-        <div class="m-sub">${t.lvr_status||''}</div>
-      </div>
-    </div>
-    <div class="metrics-grid cols-3">
-      <div class="m-card">
-        <div class="m-label">IPS 10K$</div>
-        <div class="m-val">${fmt(t.ips_10k,2)}%</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">IPS 50K$</div>
-        <div class="m-val">${fmt(t.ips_50k,2)}%</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">IPS 100K$</div>
-        <div class="m-val">${fmt(t.ips_100k,2)}%</div>
-      </div>
-    </div>
-
-    <div class="section-title">Technique</div>
-    <div class="metrics-grid cols-4">
-      <div class="m-card">
-        <div class="m-label">RSI 1H</div>
-        <div class="m-val" style="color:${rsiCol}">${fmt(t.rsi_1h,1)}</div>
-        <div class="m-sub">${(+t.rsi_1h)<30?'oversold':(+t.rsi_1h)>70?'overbought':'neutral'}</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">BER</div>
-        <div class="m-val" style="color:${berCol}">${fmt(t.ber,3)}</div>
-        <div class="m-sub">${t.ber_zone||''}</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">RMD</div>
-        <div class="m-val" style="color:${(+t.rmd||0)>=0?'var(--accent)':'var(--red)'}">${fmt(t.rmd,3)}</div>
-        <div class="m-sub">${t.rmd_divergence||'none'}</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">SI</div>
-        <div class="m-val">${fmt(t.si,1)}%</div>
-        <div class="m-sub">${t.si_status||''}</div>
-      </div>
-    </div>
-
-    <div class="section-title">Forensic</div>
-    <div class="metrics-grid cols-4">
-      <div class="m-card">
-        <div class="m-label">WCC</div>
-        <div class="m-val" style="color:${t.wcc_alert?'var(--red)':'var(--text-main)'}">${fmt(t.wcc,1)}%</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">SCR / Top5</div>
-        <div class="m-val">${fmt(t.scr,1)}%</div>
-        <div class="m-sub">top10: ${fmt(t.top10_pct,1)}% · top20: ${fmt(t.top20_pct,1)}%</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">TCI</div>
-        <div class="m-val">${fmt(t.tci,2)}</div>
-      </div>
-      <div class="m-card">
-        <div class="m-label">FCI</div>
-        <div class="m-val">${fmt(t.fci,1)}</div>
-      </div>
-    </div>
-
-    <div class="section-title">Bull Flag</div>
-    <div class="bull-flag-box">
-      <div class="bf-badge ${t.bull_flag?'detected':'none'}">
-        ${t.bull_flag ? '▲ BULL FLAG DETECTED' : '— NO BULL FLAG'}
-        ${t.bull_flag && t.bf_class ? ' · CLASS ' + t.bf_class : ''}
-      </div>
-      ${t.bull_flag ? `
-      <div class="metrics-grid cols-4" style="border:none;gap:1px;background:var(--border);">
-        <div class="m-card" style="background:var(--surface);">
-          <div class="m-label">Retracement</div>
-          <div class="m-val" style="color:var(--accent)">${fmt(t.bf_retracement,1)}%</div>
-        </div>
-        <div class="m-card" style="background:var(--surface);">
-          <div class="m-label">FQS</div>
-          <div class="m-val">${fmt(t.fqs,1)}</div>
-          <div class="m-sub">${t.fqs_label||''}</div>
-        </div>
-        <div class="m-card" style="background:var(--surface);">
-          <div class="m-label">BPI</div>
-          <div class="m-val">${fmt(t.bpi,2)}</div>
-          <div class="m-sub">${t.bpi_label||''}</div>
-        </div>
-        <div class="m-card" style="background:var(--surface);">
-          <div class="m-label">Target +${fmt(t.fib_upside_pct,1)}%</div>
-          <div class="m-val" style="color:var(--accent)">${t.fib_target ? '$'+(+t.fib_target).toFixed(8) : '--'}</div>
-          <div class="m-sub">Fib 1.618</div>
-        </div>
+      ${live ? `<div class="token-meta">
+        <div class="token-meta-item">MCAP <span>$${cash(t.market_cap_usd)}</span></div>
+        <div class="token-meta-item"><span style="color:var(--red);font-size:8px">● LIVE</span></div>
       </div>` : ''}
-    </div>
-
-    <div class="section-title">Narrative</div>
-    <div class="narrative-box">
-      <div class="mono" style="font-size:10px;color:var(--accent);margin-bottom:12px;">[ NARRATIVE_INSIGHT ]</div>
-      ${t.narrative_phase ? `<p style="margin-bottom:8px;">${t.narrative_phase}</p>` : ''}
-      ${t.narrative_insight ? `<p style="margin-bottom:8px;color:var(--text-dim);">${t.narrative_insight}</p>` : ''}
-      ${t.narrative_structure ? `<p style="color:var(--blue);">${t.narrative_structure}</p>` : ''}
-      ${!t.narrative_phase && !t.narrative_insight ? '<p style="color:var(--text-ghost);">No narrative available</p>' : ''}
-    </div>
-  `;
+    </div>`;
+  }).join('');
 }
 
-function renderTelemetry(t) {
-  // Alerts
-  document.getElementById('alert-container').innerHTML =
-    (t.alerts||[]).map(a => `
-      <div class="alert-item ${a.severity}">
-        <div class="mono" style="font-weight:700;margin-bottom:3px;font-size:10px;">${a.code}</div>
-        <div style="font-size:11px;">${a.message}</div>
-      </div>`).join('') ||
-    '<div class="mono" style="color:var(--text-ghost);font-size:10px;">NO_THREATS_DETECTED</div>';
+// ── FORENSIC CARDS ──
+function fhsColor(v) {
+  if (v >= 7) return 'var(--green)';
+  if (v >= 5) return 'var(--yellow)';
+  return 'var(--red)';
+}
 
-  // Holders
-  const holders = (t.top20_holders||[]).slice(0,10);
-  const maxPct = holders.length ? Math.max(...holders.map(h => +(h.pct_supply||0))) : 1;
-  document.getElementById('holder-container').innerHTML = holders.length ?
-    holders.map(h => {
-      const pct = +(h.pct_supply||0);
-      const col = h.is_contract ? 'var(--blue)' : 'var(--accent)';
-      const label = h.label || h.entity;
-      return `<div class="holder-row">
-        <div class="holder-info">
-          <span class="holder-addr">${(h.address||'').slice(0,10)}…</span>
-          <span class="holder-pct">${pct.toFixed(2)}%</span>
-        </div>
-        <div class="holder-bar-bg">
-          <div class="holder-bar-fill" style="width:${(pct/maxPct)*100}%;background:${col};"></div>
-        </div>
-        ${label ? `<div class="holder-entity">${label}</div>` : ''}
-      </div>`;
-    }).join('') :
-    '<div class="mono" style="color:var(--text-ghost);font-size:10px;">NO HOLDER DATA</div>';
+function phaseBadge(p) {
+  const map = {
+    'ACCUMULATION': 'badge-green',
+    'CONSOLIDATION': 'badge-yellow',
+    'DISTRIBUTION': 'badge-red',
+    'RUPTURE': 'badge-red',
+  };
+  return `<span class="badge ${map[p]||'badge-blue'}">${p}</span>`;
+}
 
-  // Market
-  document.getElementById('market-container').innerHTML = `
-    <div class="market-row">
-      <div class="market-cell"><div class="market-label">MCAP</div><div class="market-val">${fmtUSD(t.mcap)}</div></div>
-      <div class="market-cell"><div class="market-label">Volume 24h</div><div class="market-val">${fmtUSD(t.volume_24h)}</div></div>
+function forensicCard(t) {
+  const color = fhsColor(t.fhs);
+  const nbpUp = t.nbp >= 0;
+  const alertsHtml = (t.alerts||[]).slice(0,2).map(a =>
+    `<div class="f-alert" title="${a}">⚠ ${a}</div>`
+  ).join('');
+
+  return `<div class="f-card">
+    <div class="f-card-accent" style="background:${color}"></div>
+    <div class="f-card-top">
+      <div>
+        <div class="f-symbol">${t.symbol}</div>
+        <div class="f-addr">${(t.address||'').slice(0,14)}…</div>
+      </div>
+      <div class="f-score-block">
+        <div class="f-fhs" style="color:${color}">${t.fhs}</div>
+        <div class="f-fhs-label">FHS / 10</div>
+      </div>
     </div>
-    <div class="market-row">
-      <div class="market-cell"><div class="market-label">Buys 24h</div><div class="market-val" style="color:var(--accent)">${t.buys_24h||'--'}</div></div>
-      <div class="market-cell"><div class="market-label">Sells 24h</div><div class="market-val" style="color:var(--red)">${t.sells_24h||'--'}</div></div>
+
+    <div class="badges">
+      ${phaseBadge(t.phase)}
+      ${t.bull_flag ? '<span class="badge badge-yellow">🚩 Bull Flag</span>' : ''}
+      ${t.cp >= 60 ? '<span class="badge badge-green">CP '+t.cp+'%</span>' : ''}
+      ${t.alerts && t.alerts.length > 0 ? `<span class="badge badge-red">⚠ ${t.alerts.length}</span>` : ''}
     </div>
-    <div class="market-row">
-      <div class="market-cell"><div class="market-label">Liquidity</div><div class="market-val">${fmtUSD(t.liquidity_usd)}</div></div>
-      <div class="market-cell"><div class="market-label">Crash Threshold</div><div class="market-val" style="color:var(--yellow)">${fmtUSD(t.crash_threshold)}</div></div>
-    </div>`;
+
+    <div class="f-metrics">
+      <div class="f-metric">
+        <div class="f-metric-label">NBP</div>
+        <div class="f-metric-value" style="color:${nbpUp?'var(--green)':'var(--red)'}">${nbpUp?'+':''}${t.nbp}%</div>
+      </div>
+      <div class="f-metric">
+        <div class="f-metric-label">ICR</div>
+        <div class="f-metric-value" style="color:${t.icr>1?'var(--red)':'var(--green)'}">${t.icr}</div>
+      </div>
+      <div class="f-metric">
+        <div class="f-metric-label">CP</div>
+        <div class="f-metric-value" style="color:var(--text2)">${t.cp}%</div>
+      </div>
+    </div>
+
+    ${alertsHtml ? `<div class="f-alerts">${alertsHtml}</div>` : ''}
+  </div>`;
+}
+
+function renderForensic(tokens) {
+  const grid = document.getElementById('forensic-grid');
+  const count = document.getElementById('forensic-count');
+  if (!tokens || !tokens.length) {
+    grid.innerHTML = '<div class="loading">Aucune fiche disponible</div>';
+    return;
+  }
+  // Trier par FHS décroissant
+  const sorted = [...tokens].sort((a,b) => b.fhs - a.fhs);
+  count.textContent = sorted.length + ' tokens';
+  grid.innerHTML = sorted.map(forensicCard).join('');
+}
+
+// ── LOAD DATA ──
+async function loadData() {
+  try {
+    const res = await fetch('data.json?' + Date.now());
+    const data = await res.json();
+    document.getElementById('update-timer').textContent = 'Updated ' + timeAgo(data.updated_at);
+    renderTokens(data.trending_solana, 'solana-list', 'var(--purple)');
+    renderTokens(data.trending_base, 'base-list', 'var(--blue)');
+    renderOpenClaw(data.openclaw_tokens);
+  } catch(e) { console.error('data.json:', e); }
 }
 
 async function loadMemory() {
   try {
     const res = await fetch('memory.json?' + Date.now());
     const data = await res.json();
-    allTokens = data.tokens.sort((a,b) => b.fhs - a.fhs);
-    document.getElementById('top-updated').textContent = 'SCAN: ' + new Date(data.updated_at).toLocaleTimeString();
-    document.getElementById('top-count').textContent = allTokens.length + ' UNIT(S)';
-    renderSidebar(allTokens);
-    if (!selected) {
-      selectToken(0);
-    } else {
-      const idx = allTokens.findIndex(t => t.symbol === selected);
-      if (idx >= 0) { renderDetail(allTokens[idx]); renderTelemetry(allTokens[idx]); }
-    }
-  } catch(e) { console.error('Data error', e); }
+    document.getElementById('forensic-updated').textContent = 'Forensic ' + timeAgo(data.updated_at);
+    renderForensic(data.tokens);
+  } catch(e) { console.error('memory.json:', e); }
 }
 
+loadData();
 loadMemory();
-setInterval(loadMemory, 30000);
+setInterval(loadData, 5 * 60 * 1000);
+setInterval(loadMemory, 5 * 60 * 1000);
 </script>
 </body>
 </html>

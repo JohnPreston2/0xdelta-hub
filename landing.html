@@ -413,106 +413,128 @@
 <section id="how-it-works">
   <div class="section-label">// Workflow — Automated Pipeline · every 2h</div>
 
-  <div style="display:flex;align-items:stretch;gap:0;border:1px solid var(--border);margin-bottom:1px;">
-
-    <!-- CRON TRIGGER -->
-    <div style="flex:0 0 140px;background:var(--surface);border-right:1px solid var(--border);padding:20px 16px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);margin-bottom:10px;letter-spacing:0.1em;">TRIGGER</div>
-      <div style="font-weight:800;font-size:13px;margin-bottom:6px;">Cron</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--accent);">0 */2 * * *</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);margin-top:6px;">run_pipeline.sh</div>
+  <!-- CRON HEADER -->
+  <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;">
+    <div style="background:var(--surface);border:1px solid var(--border-bright);padding:12px 24px;display:flex;align-items:center;gap:16px;">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:4px;">Cron Trigger</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--accent);">0 */2 * * *</div>
+      </div>
+      <div style="width:1px;height:32px;background:var(--border);"></div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);">run_pipeline.sh</div>
     </div>
-
-    <!-- ARROW -->
-    <div style="display:flex;align-items:center;padding:0 8px;background:var(--bg);color:var(--text-ghost);font-size:16px;">→</div>
-
-    <!-- STEPS COLUMN -->
-    <div style="flex:1;display:flex;flex-direction:column;gap:1px;background:var(--border);">
-
-      <!-- STEP 0 -->
-      <div style="background:var(--bg);padding:14px 20px;display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--text-ghost);">0</div>
-        <div>
-          <div style="font-weight:700;font-size:13px;margin-bottom:2px;">Check open position</div>
-          <div style="font-size:11px;color:var(--text-dim);">position.json — if T+90min → sell via bankr.sh</div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);padding:2px 8px;border:1px solid var(--border);">position.json</div>
-      </div>
-
-      <!-- STEP 1 -->
-      <div style="background:var(--bg);padding:14px 20px;display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--text-ghost);">1</div>
-        <div>
-          <div style="font-weight:700;font-size:13px;margin-bottom:2px;">collector.py</div>
-          <div style="font-size:11px;color:var(--text-dim);">Fetch 19 tokens Base — Moralis / GeckoTerminal</div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);padding:2px 8px;border:1px solid var(--border);">API · Base chain</div>
-      </div>
-
-      <!-- STEP 2 -->
-      <div style="background:var(--bg);padding:14px 20px;display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--text-ghost);">2</div>
-        <div>
-          <div style="font-weight:700;font-size:13px;margin-bottom:2px;">report_builder.py</div>
-          <div style="font-size:11px;color:var(--text-dim);">forensic_engine_v5 → 65 metrics → forensic_*.json</div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent);padding:2px 8px;border:1px solid rgba(191,255,0,0.3);">65+ metrics</div>
-      </div>
-
-      <!-- STEP 3 -->
-      <div style="background:var(--surface);padding:14px 20px;display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;border-left:2px solid var(--accent);">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--accent);">3</div>
-        <div>
-          <div style="font-weight:800;font-size:13px;margin-bottom:2px;">request_analysis.py</div>
-          <div style="font-size:11px;color:var(--text-dim);">Loads .md memory + changes vs N-1 → Venice AI (Gemini 3 Flash) → CES/FHS analysis</div>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end;">
-          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--yellow);padding:2px 8px;border:1px solid rgba(255,184,0,0.3);">→ Telegram</div>
-          <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-dim);padding:2px 8px;border:1px solid var(--border);">→ Moltbook</div>
-        </div>
-      </div>
-
-      <!-- STEP 3b -->
-      <div style="background:var(--bg);padding:14px 20px;display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--text-ghost);">3b</div>
-        <div>
-          <div style="font-weight:700;font-size:13px;margin-bottom:2px;">enter_new_position</div>
-          <div style="font-size:11px;color:var(--text-dim);">Token #1 from report → swap 75% ETH via bankr.sh</div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);padding:2px 8px;border:1px solid var(--border);">OPEN · T+90min</div>
-      </div>
-
-      <!-- STEP 4 -->
-      <div style="background:var(--bg);padding:14px 20px;display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--text-ghost);">4</div>
-        <div>
-          <div style="font-weight:700;font-size:13px;margin-bottom:2px;">export_memory_json.py v4</div>
-          <div style="font-size:11px;color:var(--text-dim);">65 fields + forensic_report (.md) → memory.json</div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);padding:2px 8px;border:1px solid var(--border);">memory.json</div>
-      </div>
-
-      <!-- STEP 5 -->
-      <div style="background:var(--surface);padding:14px 20px;display:grid;grid-template-columns:28px 1fr auto;gap:12px;align-items:center;border-left:2px solid var(--blue);">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#0070ff;">5</div>
-        <div>
-          <div style="font-weight:800;font-size:13px;margin-bottom:2px;">Push GitHub Pages</div>
-          <div style="font-size:11px;color:var(--text-dim);">push_to_github.py (data.json) + push_memory_github.py (memory.json)</div>
-        </div>
-        <div style="font-family:'JetBrains Mono',monospace;font-size:9px;color:#0070ff;padding:2px 8px;border:1px solid rgba(0,112,255,0.3);">0xdelta-hub</div>
-      </div>
-
-    </div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:20px;color:var(--text-ghost);">↓</div>
+    <div style="font-size:11px;color:var(--text-dim);">Executes every 2 hours · duration ≈ 2–4 min</div>
   </div>
 
-  <!-- PIPELINE END + x402 -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);border-top:none;">
-    <div style="background:var(--bg);padding:16px 20px;display:flex;align-items:center;gap:12px;">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-ghost);">Pipeline complete · duration ≈ 2–4 min · log pipeline.log</div>
+  <!-- PIPELINE STEPS -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);">
+
+    <!-- STEP 0 -->
+    <div style="background:var(--bg);padding:24px 28px;border-left:3px solid var(--text-ghost);position:relative;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-ghost);background:var(--surface);padding:2px 8px;border:1px solid var(--border);">STEP 0</span>
+        <span style="font-size:11px;color:var(--text-ghost);">Pre-check</span>
+      </div>
+      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">Check open position</div>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Reads <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">position.json</code> — if position open &gt; T+90min → execute sell via bankr.sh before proceeding.</div>
     </div>
-    <div style="background:var(--surface);padding:16px 20px;display:flex;align-items:center;gap:12px;border-left:2px solid var(--amber);">
-      <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--amber);">Next step → x402 paywall · forensic_report in memory.json → Unlock $0.02 / $0.05 USDC</div>
+
+    <!-- STEP 1 -->
+    <div style="background:var(--bg);padding:24px 28px;border-left:3px solid var(--text-ghost);">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-ghost);background:var(--surface);padding:2px 8px;border:1px solid var(--border);">STEP 1</span>
+        <span style="font-size:11px;color:var(--text-ghost);">Data collection</span>
+      </div>
+      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">collector.py</div>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Fetches live data for 19 Base chain tokens via Moralis &amp; GeckoTerminal. Wallet flows, holder distribution, liquidity depth, price action.</div>
+      <div style="margin-top:12px;display:flex;gap:6px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);padding:2px 8px;border:1px solid var(--border);">Moralis API</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);padding:2px 8px;border:1px solid var(--border);">GeckoTerminal</span>
+      </div>
     </div>
+
+    <!-- STEP 2 -->
+    <div style="background:var(--bg);padding:24px 28px;border-left:3px solid var(--accent);">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);background:rgba(191,255,0,0.08);padding:2px 8px;border:1px solid rgba(191,255,0,0.3);">STEP 2</span>
+        <span style="font-size:11px;color:var(--text-dim);">Forensic engine</span>
+      </div>
+      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">report_builder.py</div>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Runs <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">forensic_engine_v5</code> — computes 65+ metrics per token. Phase detection: EARLY_BREAKOUT, DISTRIBUTION, ACCUMULATION. Outputs <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">forensic_*.json</code>.</div>
+      <div style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent);padding:2px 8px;border:1px solid rgba(191,255,0,0.3);">FHS · NBP · ICR</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent);padding:2px 8px;border:1px solid rgba(191,255,0,0.3);">LCR · BPI · WCC</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--accent);padding:2px 8px;border:1px solid rgba(191,255,0,0.3);">65+ metrics</span>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div style="background:var(--surface);padding:24px 28px;border-left:3px solid var(--accent);">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);background:rgba(191,255,0,0.08);padding:2px 8px;border:1px solid rgba(191,255,0,0.3);">STEP 3</span>
+        <span style="font-size:11px;color:var(--text-dim);">AI synthesis</span>
+      </div>
+      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">request_analysis.py</div>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Loads .md memory files + delta vs N-1 cycle → sends to <strong style="color:var(--text-main);">Venice AI (Gemini 3 Flash)</strong> via PROMPT_ANALYSIS.md → generates CES ranking, entry zones, whale watch, full EN narrative. Writes <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">synthesis.json</code>.</div>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--yellow);padding:3px 10px;border:1px solid rgba(255,184,0,0.4);background:rgba(255,184,0,0.06);">→ Telegram alert</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-dim);padding:3px 10px;border:1px solid var(--border);">→ Moltbook</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--amber);padding:3px 10px;border:1px solid rgba(255,140,0,0.4);background:rgba(255,140,0,0.06);">→ synthesis.json</span>
+      </div>
+    </div>
+
+    <!-- STEP 3b -->
+    <div style="background:var(--bg);padding:24px 28px;border-left:3px solid var(--yellow);">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--yellow);background:rgba(255,184,0,0.06);padding:2px 8px;border:1px solid rgba(255,184,0,0.3);">STEP 3b</span>
+        <span style="font-size:11px;color:var(--text-dim);">Auto-trading</span>
+      </div>
+      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">enter_new_position</div>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Token #1 from CES ranking → swap 75% ETH via bankr.sh. Position saved to <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">position.json</code> with T+90min auto-close timer.</div>
+      <div style="margin-top:12px;display:flex;gap:6px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--yellow);padding:2px 8px;border:1px solid rgba(255,184,0,0.3);">bankr.sh · Base DEX</span>
+        <span style="font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--text-ghost);padding:2px 8px;border:1px solid var(--border);">OPEN · T+90min</span>
+      </div>
+    </div>
+
+    <!-- STEP 4 -->
+    <div style="background:var(--bg);padding:24px 28px;border-left:3px solid var(--text-ghost);">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-ghost);background:var(--surface);padding:2px 8px;border:1px solid var(--border);">STEP 4</span>
+        <span style="font-size:11px;color:var(--text-ghost);">Memory export</span>
+      </div>
+      <div style="font-weight:800;font-size:18px;margin-bottom:6px;">export_memory_json.py v4</div>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">Reads each <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">SYMBOL_0xADDRESS.md</code> file, translates to EN, bundles 65 fields + forensic_report into a single <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">memory.json</code> for the frontend.</div>
+    </div>
+
+    <!-- STEP 5 — full width -->
+    <div style="background:var(--surface);padding:24px 28px;border-left:3px solid var(--blue);grid-column:1/-1;">
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+        <div style="flex:1;min-width:300px;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#0070ff;background:rgba(0,112,255,0.06);padding:2px 8px;border:1px solid rgba(0,112,255,0.3);">STEP 5</span>
+            <span style="font-size:11px;color:var(--text-dim);">Publish</span>
+          </div>
+          <div style="font-weight:800;font-size:18px;margin-bottom:6px;">Push GitHub Pages</div>
+          <div style="font-size:12px;color:var(--text-dim);line-height:1.6;">
+            <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">push_to_github.py</code> → data.json &nbsp;·&nbsp;
+            <code style="font-family:'JetBrains Mono',monospace;color:var(--text-main);font-size:11px;">push_memory_github.py</code> → memory.json + synthesis.json
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:#0070ff;padding:6px 14px;border:1px solid rgba(0,112,255,0.4);background:rgba(0,112,255,0.06);">johnpreston2.github.io/0xdelta-hub</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--amber);padding:6px 14px;border:1px solid rgba(255,140,0,0.4);background:rgba(255,140,0,0.06);">x402 · $0.02 / $0.05 USDC</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER BAR -->
+  <div style="padding:14px 20px;border:1px solid var(--border);border-top:none;background:var(--bg);display:flex;align-items:center;justify-content:space-between;">
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-ghost);">Pipeline complete · duration ≈ 2–4 min · log pipeline.log</div>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-ghost);">Next run in ~2h · GCP VPS · openclaw-agent</div>
   </div>
 
 </section>
@@ -650,7 +672,7 @@
         <li style="display:flex;align-items:center;gap:8px;font-size:13px;padding:5px 0;border-bottom:1px solid var(--border);"><span style="color:var(--amber);">▸</span>Full synthesis table · 19 tokens</li>
         <li style="display:flex;align-items:center;gap:8px;font-size:13px;padding:5px 0;"><span style="color:var(--amber);">▸</span>Download report as .md</li>
       </ul>
-      <a href="dashboard.html" style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--amber);color:#0a0a0c;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;clip-path:polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);transition:background 0.15s;">Open Synthesis →</a>
+      <a href="report.html" style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--amber);color:#0a0a0c;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;clip-path:polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);transition:background 0.15s;">Open Synthesis →</a>
       <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
         <!-- PREVIEW locked -->
         <div style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-ghost);margin-bottom:12px;">// Preview — Global cycle</div>

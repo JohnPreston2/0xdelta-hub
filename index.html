@@ -31,7 +31,7 @@
       font-family: 'Bricolage Grotesque', sans-serif;
       font-size: 13px;
       height: 100vh;
-      overflow: hidden;
+      /* overflow: hidden; */
       display: flex;
       flex-direction: column;
     }
@@ -104,8 +104,10 @@
     .main-grid {
       display: grid;
       grid-template-columns: 280px 1fr 320px;
-      flex: 1;
+      height: calc(100vh - 60px);
       overflow: hidden;
+      flex: 1;
+      /* overflow: hidden; */
     }
 
     /* ── SIDEBAR GAUCHE ── */

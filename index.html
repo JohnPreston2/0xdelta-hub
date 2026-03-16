@@ -36,6 +36,10 @@
       flex-direction: column;
     }
 
+    .content-area { overflow-y: auto; }
+    .telemetry    { overflow-y: auto; }
+    .token-list   { overflow-y: auto; }
+
     body::before {
       content: "";
       position: fixed; inset: 0;
@@ -590,13 +594,14 @@
 /* ══════════════════════════════════════════════
    CONFIG
 ══════════════════════════════════════════════ */
-const RECEIVER_ADDRESS  = '0x71fd4359eB2da83C1BCd34f93a1C206d68b1eFba';
+const RECEIVER_ADDRESS  = '0xYOUR_RECEIVER_ADDRESS';
 const USDC_BASE         = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913';
 const AMOUNT_DASHBOARD  = '20000';   // $0.02
 const AMOUNT_SYNTHESIS  = '50000';   // $0.05
 const BASE_CHAIN_ID     = 8453;
 const SK_DASH           = '0xdelta_unlocked';
 const SK_SYNTH          = '0xdelta_report_unlocked';
+const CYCLE_MS          = 2 * 60 * 60 * 1000; // 2h in ms
 
 /* ══════════════════════════════════════════════
    STATE
@@ -608,6 +613,8 @@ let walletAddress= null;
 let isDashUnlocked  = false;
 let isSynthUnlocked = false;
 let currentView  = 'dashboard';
+// Track which tokens have been paid for this cycle
+let paidTokens   = {}; // { symbol: timestamp }
 
 /* ══════════════════════════════════════════════
    VIEW SWITCHER
@@ -617,7 +624,6 @@ function switchView(view) {
   document.getElementById('view-dashboard').style.display  = view === 'dashboard'  ? 'block' : 'none';
   document.getElementById('view-synthesis').style.display  = view === 'synthesis'  ? 'block' : 'none';
   document.getElementById('synth-entry-btn').classList.toggle('active', view === 'synthesis');
-  // Deselect token in sidebar when viewing synthesis
   if (view === 'synthesis') {
     document.querySelectorAll('.token-item').forEach(el => el.classList.remove('active'));
   }
@@ -629,23 +635,69 @@ function selectToken(idx) {
   selected = t.symbol;
   switchView('dashboard');
   renderSidebar(allTokens);
-  if (isDashUnlocked) { renderDetail(t); renderTelemetry(t); }
+
+  // Check if this token is paid and not expired
+  const paidAt = paidTokens[t.symbol];
+  const isValid = paidAt && (Date.now() - paidAt) < CYCLE_MS;
+
+  if (isValid) {
+    // Already paid this cycle — show content directly
+    document.getElementById('detail-panel').classList.remove('locked');
+    document.getElementById('right-panel').classList.remove('locked');
+    document.getElementById('center-paywall').style.display = 'none';
+    document.getElementById('right-paywall').style.display  = 'none';
+    renderDetail(t);
+    renderTelemetry(t);
+  } else {
+    // Lock and show paywall for this token
+    isDashUnlocked = false;
+    document.getElementById('detail-panel').classList.add('locked');
+    document.getElementById('right-panel').classList.add('locked');
+    document.getElementById('center-paywall').style.display = 'flex';
+    document.getElementById('right-paywall').style.display  = 'flex';
+    // Update paywall to show token name
+    document.querySelector('#center-paywall h2').textContent = t.symbol;
+    document.getElementById('badge-dash').style.display = 'none';
+    // Reset pay button
+    const payBtn = document.getElementById('btn-pay-center');
+    payBtn.disabled = !walletAddress;
+    payBtn.textContent = 'Unlock for $0.02 USDC';
+    setStatus(walletAddress ? 'Ready to unlock' : 'Connect wallet to unlock', '', 'dashboard');
+  }
 }
 
 /* ══════════════════════════════════════════════
    SESSION CHECK
 ══════════════════════════════════════════════ */
 function checkSession() {
-  if (sessionStorage.getItem(SK_DASH))  { unlockDashboard(true); }
-  if (sessionStorage.getItem(SK_SYNTH)) { unlockSynthesis(true); }
+  // Restore paid tokens from sessionStorage
+  try {
+    const saved = JSON.parse(sessionStorage.getItem('paidTokens') || '{}');
+    const now = Date.now();
+    // Keep only tokens paid within current 2h cycle
+    Object.entries(saved).forEach(([sym, ts]) => {
+      if (now - ts < CYCLE_MS) paidTokens[sym] = ts;
+    });
+    sessionStorage.setItem('paidTokens', JSON.stringify(paidTokens));
+  } catch(e) {}
+
+  if (sessionStorage.getItem(SK_SYNTH)) {
+    const ts = parseInt(sessionStorage.getItem(SK_SYNTH));
+    if (Date.now() - ts < CYCLE_MS) unlockSynthesis(true);
+    else sessionStorage.removeItem(SK_SYNTH);
+  }
 }
 
 /* ══════════════════════════════════════════════
-   UNLOCK — DASHBOARD
+   UNLOCK — DASHBOARD (per token)
 ══════════════════════════════════════════════ */
 function unlockDashboard(fromSession) {
   isDashUnlocked = true;
-  if (!fromSession) sessionStorage.setItem(SK_DASH, Date.now().toString());
+  // Save this token as paid
+  if (!fromSession && selected) {
+    paidTokens[selected] = Date.now();
+    sessionStorage.setItem('paidTokens', JSON.stringify(paidTokens));
+  }
   document.getElementById('detail-panel').classList.remove('locked');
   document.getElementById('right-panel').classList.remove('locked');
   document.getElementById('center-paywall').style.display = 'none';
@@ -753,6 +805,33 @@ function setStatus(msg, type, target) {
 ══════════════════════════════════════════════ */
 const colorForFHS = v => v >= 7 ? 'var(--accent)' : v >= 5 ? 'var(--yellow)' : 'var(--red)';
 
+// Format numbers — max 5 significant decimals, no trailing zeros
+function fmt(val, decimals) {
+  if (val === undefined || val === null || val === '') return '--';
+  const n = parseFloat(val);
+  if (isNaN(n)) return '--';
+  if (decimals !== undefined) return n.toFixed(decimals);
+  // Auto: use up to 5 decimals, strip trailing zeros
+  if (Math.abs(n) >= 1000) return n.toLocaleString('en', {maximumFractionDigits: 2});
+  if (Math.abs(n) >= 1)    return parseFloat(n.toFixed(4)).toString();
+  // Small numbers: show up to 5 significant decimals
+  return parseFloat(n.toPrecision(5)).toString();
+}
+
+function fmtPct(val) {
+  if (val === undefined || val === null) return '--';
+  return parseFloat(parseFloat(val).toFixed(2)).toString() + '%';
+}
+
+function fmtUsd(val) {
+  if (!val) return '--';
+  const n = parseFloat(val);
+  if (isNaN(n)) return '--';
+  if (n >= 1e6) return '$' + (n/1e6).toFixed(2) + 'M';
+  if (n >= 1e3) return '$' + (n/1e3).toFixed(1) + 'K';
+  return '$' + n.toFixed(2);
+}
+
 function renderSidebar(tokens) {
   document.getElementById('sidebar-list').innerHTML = tokens.map((t, i) => `
     <div class="token-item ${selected === t.symbol && currentView==='dashboard' ? 'active' : ''}" onclick="selectToken(${i})">
@@ -782,47 +861,47 @@ function renderDetail(t) {
         <div class="mono" style="color:var(--accent);font-size:12px;margin-bottom:8px;">// SUBJECT_ANALYSIS</div>
         <h1>${t.symbol}</h1>
         <span class="addr-pill mono">${t.address||''}</span>
-        ${t.price_usd?`<span class="price-badge mono">$${parseFloat(t.price_usd).toExponential(4)}</span>`:''}
+        ${t.price_usd?`<span class="price-badge mono">${fmt(t.price_usd)}</span>`:''}
         ${t.change_24h?`<span class="price-badge mono" style="color:${t.change_24h>=0?'var(--accent)':'var(--red)'}">
-          ${t.change_24h>=0?'+':''}${t.change_24h.toFixed(1)}%</span>`:''}
+          ${t.change_24h>=0?'+':''}${fmt(t.change_24h,2)}%</span>`:''}
       </div>
       <div class="fhs-radar">
         <div class="mono" style="font-size:9px;color:var(--text-dim);position:absolute;top:15px;">HEALTH</div>
-        <div class="fhs-val" style="color:${color}">${t.fhs}</div>
+        <div class="fhs-val" style="color:${color}">${fmt(t.fhs,1)}</div>
         <div class="mono" style="font-size:9px;color:var(--text-dim);position:absolute;bottom:15px;">/ 10.0</div>
       </div>
     </div>
 
     <div class="section-header">FLOWS</div>
     <div class="metrics-grid">
-      <div class="m-card"><div class="m-label">NBP 24H</div><div class="m-val" style="color:${(t.nbp||0)>=0?'var(--accent)':'var(--red)'}">${t.nbp!==undefined?t.nbp+'%':'--'}</div><div class="m-sub">${t.nbp_label||''}</div></div>
-      <div class="m-card"><div class="m-label">EV (VOL REL)</div><div class="m-val">${t.ev_vol_rel!==undefined?t.ev_vol_rel.toFixed(2):'--'}</div><div class="m-sub">${t.ev_label||'stable'}</div></div>
-      <div class="m-card"><div class="m-label">AC</div><div class="m-val">${t.ac!==undefined?'$'+t.ac.toLocaleString():'--'}</div></div>
-      <div class="m-card"><div class="m-label">VWAD</div><div class="m-val">${t.vwad!==undefined?t.vwad.toFixed(3):'--'}</div><div class="m-sub">${t.vwad_label||''}</div></div>
+      <div class="m-card"><div class="m-label">NBP 24H</div><div class="m-val" style="color:${(t.nbp||0)>=0?'var(--accent)':'var(--red)'}">${fmt(t.nbp,2)}%</div><div class="m-sub">${t.nbp_label||''}</div></div>
+      <div class="m-card"><div class="m-label">EV (VOL REL)</div><div class="m-val">${fmt(t.ev_vol_rel,2)}</div><div class="m-sub">${t.ev_label||'stable'}</div></div>
+      <div class="m-card"><div class="m-label">AC</div><div class="m-val">${fmtUsd(t.ac)}</div></div>
+      <div class="m-card"><div class="m-label">VWAD</div><div class="m-val">${fmt(t.vwad,3)}</div><div class="m-sub">${t.vwad_label||''}</div></div>
     </div>
 
     <div class="section-header">LIQUIDITÉ</div>
     <div class="metrics-grid">
-      <div class="m-card"><div class="m-label">ICR INDEX</div><div class="m-val" style="color:${(t.icr||0)>1.5?'var(--red)':(t.icr||0)>1?'var(--yellow)':'var(--text-main)'}">${t.icr!==undefined?t.icr:'--'}</div><div class="m-sub" style="color:${(t.icr||0)>1.5?'var(--red)':'var(--text-ghost)'}">${(t.icr||0)>1.5?'▲ alert':'stable'}</div></div>
-      <div class="m-card"><div class="m-label">LCR</div><div class="m-val">${t.lcr!==undefined?t.lcr+'%':'--'}</div><div class="m-sub">${t.lcr_label||'stable'}</div></div>
-      <div class="m-card"><div class="m-label">DAI</div><div class="m-val" style="color:${(t.dai||0)<0?'var(--red)':'var(--text-main)'}">${t.dai!==undefined?t.dai:'--'}</div><div class="m-sub">${t.dai_label||''}</div></div>
-      <div class="m-card"><div class="m-label">LVR</div><div class="m-val">${t.lvr!==undefined?t.lvr:'--'}</div><div class="m-sub">${t.lvr_label||''}</div></div>
+      <div class="m-card"><div class="m-label">ICR INDEX</div><div class="m-val" style="color:${(t.icr||0)>1.5?'var(--red)':(t.icr||0)>1?'var(--yellow)':'var(--text-main)'}">${fmt(t.icr,2)}</div><div class="m-sub" style="color:${(t.icr||0)>1.5?'var(--red)':'var(--text-ghost)'}">${(t.icr||0)>1.5?'▲ alert':'stable'}</div></div>
+      <div class="m-card"><div class="m-label">LCR</div><div class="m-val">${fmt(t.lcr,1)}%</div><div class="m-sub">${t.lcr_label||'stable'}</div></div>
+      <div class="m-card"><div class="m-label">DAI</div><div class="m-val" style="color:${(t.dai||0)<0?'var(--red)':'var(--text-main)'}">${fmt(t.dai,3)}</div><div class="m-sub">${t.dai_label||''}</div></div>
+      <div class="m-card"><div class="m-label">LVR</div><div class="m-val">${fmt(t.lvr,3)}</div><div class="m-sub">${t.lvr_label||''}</div></div>
     </div>
 
     <div class="section-header">TECHNIQUE</div>
     <div class="metrics-grid">
-      <div class="m-card"><div class="m-label">RSI 1H</div><div class="m-val" style="color:${(t.rsi_1h||50)>70?'var(--red)':(t.rsi_1h||50)<30?'var(--accent)':'var(--text-main)'}">${t.rsi_1h!==undefined?t.rsi_1h.toFixed(1):'--'}</div><div class="m-sub">${(t.rsi_1h||50)>70?'overbought':(t.rsi_1h||50)<30?'oversold':'neutral'}</div></div>
-      <div class="m-card"><div class="m-label">BER</div><div class="m-val" style="color:${(t.ber||1)>1.2?'var(--yellow)':'var(--text-main)'}">${t.ber!==undefined?t.ber:'--'}</div><div class="m-sub">${t.ber_label||''}</div></div>
-      <div class="m-card"><div class="m-label">RMD</div><div class="m-val" style="color:${(t.rmd||0)<0?'var(--red)':'var(--text-main)'}">${t.rmd!==undefined?t.rmd:'--'}</div></div>
-      <div class="m-card"><div class="m-label">SI</div><div class="m-val">${t.si!==undefined?t.si+'%':'--'}</div><div class="m-sub">${t.si_label||''}</div></div>
+      <div class="m-card"><div class="m-label">RSI 1H</div><div class="m-val" style="color:${(t.rsi_1h||50)>70?'var(--red)':(t.rsi_1h||50)<30?'var(--accent)':'var(--text-main)'}">${fmt(t.rsi_1h,1)}</div><div class="m-sub">${(t.rsi_1h||50)>70?'overbought':(t.rsi_1h||50)<30?'oversold':'neutral'}</div></div>
+      <div class="m-card"><div class="m-label">BER</div><div class="m-val" style="color:${(t.ber||1)>1.2?'var(--yellow)':'var(--text-main)'}">${fmt(t.ber,3)}</div><div class="m-sub">${t.ber_label||''}</div></div>
+      <div class="m-card"><div class="m-label">RMD</div><div class="m-val" style="color:${(t.rmd||0)<0?'var(--red)':'var(--text-main)'}">${fmt(t.rmd,3)}</div></div>
+      <div class="m-card"><div class="m-label">SI</div><div class="m-val">${fmt(t.si,1)}%</div><div class="m-sub">${t.si_label||''}</div></div>
     </div>
 
     <div class="section-header">FORENSIC</div>
     <div class="metrics-grid">
-      <div class="m-card"><div class="m-label">WCC</div><div class="m-val" style="color:${(t.wcc||0)>40?'var(--red)':'var(--text-main)'}">${t.wcc!==undefined?t.wcc+'%':'--'}</div></div>
-      <div class="m-card"><div class="m-label">SCR / TOPS</div><div class="m-val">${t.scr!==undefined?t.scr+'%':'--'}</div><div class="m-sub">${t.scr_detail||''}</div></div>
-      <div class="m-card"><div class="m-label">TCI</div><div class="m-val">${t.tci!==undefined?t.tci:'--'}</div></div>
-      <div class="m-card"><div class="m-label">FCI</div><div class="m-val">${t.fci!==undefined?t.fci:'--'}</div></div>
+      <div class="m-card"><div class="m-label">WCC</div><div class="m-val" style="color:${(t.wcc||0)>40?'var(--red)':'var(--text-main)'}">${fmt(t.wcc,1)}%</div></div>
+      <div class="m-card"><div class="m-label">SCR / TOPS</div><div class="m-val">${fmt(t.scr,1)}%</div><div class="m-sub">${t.scr_detail||''}</div></div>
+      <div class="m-card"><div class="m-label">TCI</div><div class="m-val">${fmt(t.tci,2)}</div></div>
+      <div class="m-card"><div class="m-label">FCI</div><div class="m-val">${fmt(t.fci,2)}</div></div>
     </div>
 
     ${history.length>0?`<div class="chart-container"><div class="chart-title">FHS HISTORY (${history.length} points)</div><canvas id="fhs-chart"></canvas></div>`:''}
@@ -879,19 +958,19 @@ function renderTelemetry(t) {
     <div style="margin-bottom:12px;">
       <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:4px;">
         <span class="mono" style="color:var(--text-dim)">${h.address?h.address.slice(0,12)+'...':(h.label||'--')}</span>
-        <span class="mono">${h.pct_supply}%</span>
+        <span class="mono">${parseFloat(h.pct_supply).toFixed(2)}%</span>
       </div>
       <div style="height:2px;background:var(--border);width:100%;"><div style="height:100%;background:var(--blue);width:${Math.min(h.pct_supply,100)}%"></div></div>
     </div>`).join('')||'<div class="mono" style="font-size:10px;color:var(--text-ghost)">NO_DATA</div>';
 
   document.getElementById('market-container').innerHTML = `
     <div class="market-grid">
-      <div class="mkt-cell"><div class="mkt-label">MCAP</div><div class="mkt-val">$${t.mcap?Number(t.mcap).toLocaleString():'--'}</div></div>
-      <div class="mkt-cell"><div class="mkt-label">VOL 24H</div><div class="mkt-val">$${t.volume_24h?Number(t.volume_24h).toLocaleString():'--'}</div></div>
+      <div class="mkt-cell"><div class="mkt-label">MCAP</div><div class="mkt-val">${fmtUsd(t.mcap)}</div></div>
+      <div class="mkt-cell"><div class="mkt-label">VOL 24H</div><div class="mkt-val">${fmtUsd(t.volume_24h)}</div></div>
       <div class="mkt-cell"><div class="mkt-label">BUYS 24H</div><div class="mkt-val" style="color:var(--accent)">${t.buys_24h||'--'}</div></div>
       <div class="mkt-cell"><div class="mkt-label">SELLS 24H</div><div class="mkt-val" style="color:var(--red)">${t.sells_24h||'--'}</div></div>
-      <div class="mkt-cell"><div class="mkt-label">LIQUIDITY</div><div class="mkt-val">$${t.liquidity?Number(t.liquidity).toLocaleString():'--'}</div></div>
-      <div class="mkt-cell"><div class="mkt-label">CRASH THRESHOLD</div><div class="mkt-val" style="color:var(--red)">$${t.crash_threshold?Number(t.crash_threshold).toLocaleString():'--'}</div></div>
+      <div class="mkt-cell"><div class="mkt-label">LIQUIDITY</div><div class="mkt-val">${fmtUsd(t.liquidity)}</div></div>
+      <div class="mkt-cell"><div class="mkt-label">CRASH THRESHOLD</div><div class="mkt-val" style="color:var(--red)">${fmtUsd(t.crash_threshold)}</div></div>
     </div>`;
 }
 

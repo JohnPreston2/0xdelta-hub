@@ -72,6 +72,27 @@ Cron: every 2 hours — run_pipeline.sh
 
 ---
 
+## Repo Structure
+
+```
+0xdelta-hub/
+├── README.md
+├── landing.html          # Project presentation page
+├── index.html            # Live dashboard (x402 gated)
+├── report.html           # Global synthesis report (x402 gated)
+├── memory.json           # Live forensic data — updated every 2h by agent
+├── data.json             # Trending data feed
+└── src/
+    ├── collector.py          # Step 1 — fetches 19 Base tokens (Moralis + GeckoTerminal)
+    ├── report_builder.py     # Step 2 — runs forensic engine, outputs forensic_*.json
+    ├── forensic_engine_v5.py # Core — 65+ metric computation engine
+    ├── request_analysis.py   # Step 3 — Venice AI synthesis, Telegram + Moltbook alerts
+    ├── export_memory_json.py # Step 4 — bundles .md memory files into memory.json
+    └── run_pipeline.sh       # Cron entrypoint — orchestrates all steps every 2h
+```
+
+---
+
 ## Forensic Metrics
 
 | Metric | Full Name | Description |
@@ -116,7 +137,6 @@ No backend. No API key. No middleman. The content is already in `memory.json` �
 | Agent runtime | OpenClaw · GCP VPS (`openclaw-agent` · 34.14.53.149) |
 | LLM synthesis | Venice AI · Gemini 3 Flash Preview |
 | On-chain data | Moralis · GeckoTerminal · DexScreener |
-| Solana data | Helius API |
 | On-chain execution | bankr.sh (Base chain swaps) |
 | Paywall | x402 · USDC · Base |
 | Frontend | GitHub Pages · `JohnPreston2/0xdelta-hub` |

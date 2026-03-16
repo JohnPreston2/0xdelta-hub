@@ -635,11 +635,37 @@
 /* ══════════════════════════════════════════════
    CONFIG
 ══════════════════════════════════════════════ */
-const RECEIVER_ADDRESS = '0x71fd4359eB2da83C1BCd34f93a1C206d68b1eFba'; // ← replace with your address
+const RECEIVER_ADDRESS = '0xYOUR_RECEIVER_ADDRESS'; // ← replace with your address
 const USDC_BASE = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913';
 const USDC_AMOUNT = '50000'; // $0.05 USDC (6 decimals)
 const BASE_CHAIN_ID = 8453;
 const SESSION_KEY = '0xdelta_report_unlocked';
+const CYCLE_MS = 2 * 60 * 60 * 1000; // 2h
+
+/* ══════════════════════════════════════════════
+   NUMBER FORMATTING
+══════════════════════════════════════════════ */
+function fmt(val, dec) {
+  if (val === undefined || val === null) return '--';
+  const n = parseFloat(val);
+  if (isNaN(n)) return '--';
+  if (dec !== undefined) return parseFloat(n.toFixed(dec)).toString();
+  if (Math.abs(n) >= 1000) return n.toLocaleString('fr', {maximumFractionDigits: 2});
+  if (Math.abs(n) >= 1)    return parseFloat(n.toFixed(3)).toString();
+  return parseFloat(n.toPrecision(4)).toString();
+}
+function fmtUsd(val) {
+  if (!val) return '--';
+  const n = parseFloat(val);
+  if (isNaN(n)) return '--';
+  if (n >= 1e6) return '$' + (n/1e6).toFixed(2) + 'M';
+  if (n >= 1e3) return '$' + (n/1e3).toFixed(1) + 'K';
+  return '$' + n.toFixed(2);
+}
+function fmtPct(val) {
+  if (val === undefined || val === null) return '--';
+  return parseFloat(parseFloat(val).toFixed(2)).toString() + '%';
+}
 
 /* ══════════════════════════════════════════════
    STATE
@@ -652,16 +678,18 @@ let isUnlocked = false;
    UNLOCK
 ══════════════════════════════════════════════ */
 function checkSession() {
-  if (sessionStorage.getItem(SESSION_KEY)) {
-    unlockReport();
+  const ts = sessionStorage.getItem(SESSION_KEY);
+  if (ts && (Date.now() - parseInt(ts)) < CYCLE_MS) {
+    unlockReport(true);
     return true;
   }
+  if (ts) sessionStorage.removeItem(SESSION_KEY); // expired
   return false;
 }
 
-function unlockReport() {
+function unlockReport(fromSession) {
   isUnlocked = true;
-  sessionStorage.setItem(SESSION_KEY, Date.now().toString());
+  if (!fromSession) sessionStorage.setItem(SESSION_KEY, Date.now().toString());
   document.getElementById('paywall-gate').style.display = 'none';
   document.getElementById('right-panel').classList.remove('locked');
   document.getElementById('unlock-status').style.display = 'block';
@@ -863,25 +891,36 @@ function renderReport(data) {
   el.innerHTML = `
     <!-- REPORT HEADER -->
     <div class="report-header">
-      <div class="report-eyebrow">// Senior On-Chain Forensic Analysis</div>
-      <h1 class="report-title">GLOBAL<br>SYNTHESIS</h1>
+      <div class="report-eyebrow">// Analyse Forensic Senior On-Chain</div>
+      <h1 class="report-title">RAPPORT<br>SYNTHÈSE</h1>
       <div class="report-meta">
-        <div class="report-meta-item"><span class="dot"></span> ${d.toLocaleDateString('en-GB')} · ${d.toLocaleTimeString()}</div>
+        <div class="report-meta-item"><span class="dot"></span> ${d.toLocaleDateString('fr-FR')} · ${d.toLocaleTimeString('fr-FR')}</div>
         <div class="report-meta-item">19 tokens · Base chain</div>
         <div class="report-meta-item">Venice AI · Gemini 3 Flash</div>
-        <div class="report-meta-item" style="border-color:rgba(255,184,0,0.3);color:var(--amber);">Refreshed every 2h</div>
+        <div class="report-meta-item" style="border-color:rgba(255,184,0,0.3);color:var(--amber);">Actualisé toutes les 2h</div>
       </div>
     </div>
 
-    <!-- TOP OPPORTUNITIES -->
+    <!-- RAPPORT GEMINI EN TÊTE -->
+    ${data.raw_report ? `
     <div class="r-section">
-      <div class="r-section-title">// Top Opportunities</div>
+      <div class="r-section-title">// Analyse Venice AI · Gemini 3 Flash</div>
+      <div style="background:var(--surface);border-left:2px solid var(--amber);padding:24px 28px;font-size:13px;line-height:1.9;color:var(--text-dim);white-space:pre-wrap;">${escHtml(data.raw_report)}</div>
+    </div>` : `
+    <div class="r-section">
+      <div class="r-section-title">// Analyse Venice AI</div>
+      <div style="padding:24px;color:var(--text-ghost);font-family:'JetBrains Mono',monospace;font-size:11px;">Rapport non disponible pour ce cycle — synthesis.json non encore généré. Téléchargez le rapport complet ci-dessous.</div>
+    </div>`}
+
+    <!-- TOP OPPORTUNITÉS -->
+    <div class="r-section">
+      <div class="r-section-title">// Top Opportunités</div>
       <div class="opp-grid">${renderOpportunities(data.top_opportunities || [])}</div>
     </div>
 
-    <!-- CRITICAL ALERTS -->
+    <!-- ALERTES STRUCTURELLES -->
     <div class="r-section">
-      <div class="r-section-title">// Structural Alerts</div>
+      <div class="r-section-title">// Alertes Structurelles</div>
       <div class="alert-grid">${renderAlerts(data.critical_alerts || [])}</div>
     </div>
 
@@ -890,15 +929,15 @@ function renderReport(data) {
       <div class="r-section-title">// Whale Watch</div>
       <table class="whale-table">
         <thead><tr>
-          <th>Token</th><th>ICR</th><th>Alert</th><th>Momentum</th><th>NBP</th><th>Top 5%</th>
+          <th>Token</th><th>ICR</th><th>Alerte</th><th>Momentum</th><th>NBP</th><th>Top 5%</th>
         </tr></thead>
         <tbody>${renderWhaleTable(data.whale_watch || [])}</tbody>
       </table>
     </div>
 
-    <!-- SYNTHESIS TABLE -->
+    <!-- TABLEAU SYNTHÈSE -->
     <div class="r-section">
-      <div class="r-section-title">// Full Synthesis Table</div>
+      <div class="r-section-title">// Tableau Synthèse Complet</div>
       <div style="overflow-x:auto;">
         <table class="synth-table">
           <thead><tr>
@@ -909,21 +948,14 @@ function renderReport(data) {
       </div>
     </div>
 
-    <!-- CHANGES VS N-1 -->
+    <!-- CHANGEMENTS VS N-1 -->
     <div class="r-section">
-      <div class="r-section-title">// Changes vs Previous Cycle</div>
+      <div class="r-section-title">// Changements vs Cycle Précédent</div>
       <div class="changes-list">${renderChanges(data.changes || [])}</div>
     </div>
-
-    ${data.raw_report ? `
-    <div class="r-section">
-      <div class="r-section-title">// Venice AI Full Narrative</div>
-      <div style="background:var(--surface);border-left:2px solid var(--amber);padding:24px 28px;font-size:12px;line-height:1.9;color:var(--text-dim);white-space:pre-wrap;">${escHtml(data.raw_report)}</div>
-    </div>` : ''}
   `;
 
-  // Update download filename
-  document.getElementById('dl-filename').textContent = `synthesis_${d.toISOString().slice(0,10)}.md`;
+  document.getElementById('dl-filename').textContent = `synthese_${d.toISOString().slice(0,10)}.md`;
   document.getElementById('dl-tokens').textContent = tokens.length + ' tokens';
 }
 
@@ -975,11 +1007,11 @@ function renderWhaleTable(whales) {
     const icon = w.icr > 5 ? '🔴' : w.icr > 1.5 ? '⚠️' : '✅';
     return `<tr>
       <td><span class="w-token">${w.symbol}</span></td>
-      <td><span class="w-icr" style="color:${icrColor}">${w.icr}</span></td>
+      <td><span class="w-icr" style="color:${icrColor}">${fmt(w.icr,2)}</span></td>
       <td>${icon}</td>
       <td style="color:var(--text-dim);font-size:11px;">${w.momentum || '--'}</td>
-      <td style="color:${(w.nbp||0)>=0?'var(--accent)':'var(--red)'};font-family:'JetBrains Mono',monospace;font-size:11px;">${(w.nbp||0) >= 0 ? '+' : ''}${w.nbp || 0}%</td>
-      <td style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);">${w.top5_pct || '--'}%</td>
+      <td style="color:${(w.nbp||0)>=0?'var(--accent)':'var(--red)'};font-family:'JetBrains Mono',monospace;font-size:11px;">${(w.nbp||0) >= 0 ? '+' : ''}${fmt(w.nbp,2)}%</td>
+      <td style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-dim);">${fmt(w.top5_pct,2)}%</td>
     </tr>`;
   }).join('');
 }
@@ -990,15 +1022,15 @@ function renderSynthTable(tokens) {
     const fhsColor = (t.fhs||0) >= 7 ? 'var(--accent)' : (t.fhs||0) >= 5 ? 'var(--yellow)' : 'var(--red)';
     const nbpColor = (t.nbp||0) >= 0 ? 'var(--accent)' : 'var(--red)';
     const sigDot = (t.bpi||0) > 0.5 ? '#bfff00' : (t.alerts||[]).some(a=>a.severity==='critical') ? '#ff3e3e' : '#333338';
-    const sigText = (t.bpi||0) > 0.5 ? 'Bull Flag' : (t.alerts||[]).some(a=>a.severity==='critical') ? 'Alert' : 'Watch';
+    const sigText = (t.bpi||0) > 0.5 ? 'Bull Flag' : (t.alerts||[]).some(a=>a.severity==='critical') ? 'Alerte' : 'Watch';
     return `<tr>
       <td style="font-weight:700;font-size:12px;">${t.symbol}</td>
       <td style="color:var(--text-dim);font-size:10px;">${(t.phase||'').slice(0,5)}</td>
-      <td style="color:${fhsColor};font-weight:700;">${t.fhs || '--'}</td>
-      <td style="color:${nbpColor};">${t.nbp !== undefined ? (t.nbp >= 0 ? '+' : '') + t.nbp + '%' : '--'}</td>
-      <td>${t.bpi !== undefined ? t.bpi : '--'}</td>
-      <td style="color:${(t.icr||0)>1.5?'var(--red)':'var(--text-dim)'}">${t.icr !== undefined ? t.icr : '--'}</td>
-      <td>${t.top5_pct !== undefined ? t.top5_pct + '%' : '--'}</td>
+      <td style="color:${fhsColor};font-weight:700;">${fmt(t.fhs,1)}</td>
+      <td style="color:${nbpColor};">${t.nbp !== undefined ? (t.nbp >= 0 ? '+' : '') + fmt(t.nbp,2) + '%' : '--'}</td>
+      <td>${fmt(t.bpi,2)}</td>
+      <td style="color:${(t.icr||0)>1.5?'var(--red)':'var(--text-dim)'}">${fmt(t.icr,2)}</td>
+      <td>${fmt(t.top5_pct,2)}%</td>
       <td style="color:${(t.ces||0)>=40?'var(--accent)':(t.ces||0)>=25?'var(--yellow)':'var(--text-dim)'};font-weight:700;">${t.ces || '--'}</td>
       <td><span class="sig-dot" style="background:${sigDot}"></span>${sigText}</td>
     </tr>`;

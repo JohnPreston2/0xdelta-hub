@@ -36,7 +36,8 @@
       flex-direction: column;
     }
 
-    .content-area { overflow-y: auto; }
+    .content-area {
+      min-height: 0; overflow-y: auto; }
     .telemetry    { overflow-y: auto; }
     .token-list   { overflow-y: auto; }
 
@@ -112,6 +113,7 @@
 
     /* ── SIDEBAR GAUCHE ── */
     .sidebar {
+      min-height: 0;
       border-right: 1px solid var(--border);
       display: flex; flex-direction: column;
       background: linear-gradient(to right, var(--surface), transparent);
@@ -167,6 +169,7 @@
 
     /* ── CONTENT AREA ── */
     .content-area {
+      min-height: 0;
       overflow-y: auto;
       padding: 40px;
       position: relative;
@@ -318,6 +321,7 @@
 
     /* ── RIGHT TELEMETRY ── */
     .telemetry {
+      min-height: 0;
       border-left: 1px solid var(--border);
       background: rgba(10,10,12,0.5);
       padding: 20px;

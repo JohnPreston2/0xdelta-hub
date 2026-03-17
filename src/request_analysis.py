@@ -8,11 +8,11 @@ import os
 import time
 from datetime import datetime, timezone
 
-VENICE_API_KEY = "VENICE-ADMIN-KEY-ZyuRVusgiVIaSm6FoudtSNH2wj4ktVj4vaqO1sAkyH"
+VENICE_API_KEY = os.environ.get("VENICE_API_KEY", "")
 VENICE_URL = "https://api.venice.ai/api/v1/chat/completions"
-TELEGRAM_BOT_TOKEN = "8354716169:AAGB54HoOQeP1y3EkX7lwJoT4dPlB89Na38"
-TELEGRAM_CHAT_ID = "1321582287"
-MOLTBOOK_API_KEY = "moltbook_sk__ZR7uTCWam1OVSVKyEQEBNgSX0jv6ycG"
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
+MOLTBOOK_API_KEY = os.environ.get("MOLTBOOK_API_KEY", "")
 MOLTBOOK_URL = "https://www.moltbook.com/api/v1/posts"
 
 SYNTHESIS_OUTPUT = "/tmp/0xdelta-hub/synthesis.json"

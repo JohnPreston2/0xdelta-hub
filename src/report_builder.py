@@ -12,7 +12,7 @@ import requests
 
 def publish_forensic_digest(results):
     """Publie un tableau synthèse des 17 tokens sur Moltbook"""
-    MOLTBOOK_API_KEY = "moltbook_sk__ZR7uTCWam1OVSVKyEQEBNgSX0jv6ycG"
+    MOLTBOOK_API_KEY = os.environ.get("MOLTBOOK_API_KEY", "")
     MOLTBOOK_URL = "https://www.moltbook.com/api/v1/posts"
     
     # Construction du tableau synthétique

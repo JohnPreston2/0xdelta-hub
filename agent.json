@@ -1,0 +1,58 @@
+{
+  "name": "0xDELTA",
+  "description": "Autonomous forensic intelligence agent on Base chain",
+  "version": "5.1",
+  "operatorWallet": "0x0ab463A9427FEe78f2A3724e84114B79Ff9697f7",
+  "erc8004": {
+    "agentId": 32715,
+    "chain": "base",
+    "registrationTx": "https://basescan.org/tx/0xd79072ca8c98f1ae8d4eced124e3cd43b02df6e85aff688c868ad9f5923843db"
+  },
+  "supportedTools": [
+    "moralis-api",
+    "geckoterminal-api",
+    "dexscreener-api",
+    "venice-ai",
+    "bankr-wallet",
+    "telegram-bot-api",
+    "github-pages"
+  ],
+  "techStack": {
+    "runtime": "Python 3.11",
+    "orchestration": "OpenClaw",
+    "llm": "gemini-3-flash-preview (via Venice AI)",
+    "execution": "Bankr LLM Gateway",
+    "frontend": "HTML/JS on GitHub Pages",
+    "hosting": "GCP VPS (Ubuntu 24.04)"
+  },
+  "computeConstraints": {
+    "pipelineCycleMins": 120,
+    "tokensPerCycle": 19,
+    "metricsPerToken": 65,
+    "apiCallsPerCycle": "~200",
+    "llmCallsPerCycle": 1,
+    "maxConcurrentPositions": 2,
+    "capitalPerTrade": "40%"
+  },
+  "taskCategories": [
+    "on-chain-forensics",
+    "autonomous-trading",
+    "risk-analysis",
+    "report-generation",
+    "x402-micropayments"
+  ],
+  "autonomousLoop": {
+    "discover": "Fetch on-chain data for 19 monitored tokens via Moralis/GeckoTerminal/DexScreener",
+    "plan": "Compute 65+ forensic metrics (FHS, NBP, ICR, LCR, BPI, WCC, DAI)",
+    "execute": "Synthesize via Venice AI, execute swaps via Bankr wallet",
+    "verify": "Compare reports, detect signal changes, validate positions",
+    "publish": "Push to GitHub Pages, send Telegram report, gate via x402"
+  },
+  "safetyGuardrails": {
+    "maxPositions": 2,
+    "autoCloseHours": 3,
+    "capitalLimit": "40% per trade",
+    "fhsThreshold": "Only enter if FHS > 6.0",
+    "dryRunSupported": true
+  }
+}

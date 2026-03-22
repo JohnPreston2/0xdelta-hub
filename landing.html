@@ -19,6 +19,7 @@
       --blue: #0070ff;
       --yellow: #ffb800;
       --amber: #ff8c00;
+      --purple: #c084fc;
       --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     }
     * { box-sizing: border-box; margin: 0; padding: 0; cursor: crosshair; }
@@ -37,7 +38,7 @@
     .hero-title { font-size: clamp(56px, 7vw, 96px); font-weight: 800; line-height: 0.88; letter-spacing: -0.04em; text-transform: uppercase; margin-bottom: 32px; }
     .hero-title .accent { color: var(--accent); }
     .hero-title .dim { color: var(--text-ghost); }
-    .hero-desc { font-size: 15px; line-height: 1.7; color: var(--text-dim); max-width: 440px; margin-bottom: 48px; }
+    .hero-desc { font-size: 14px; line-height: 1.7; color: var(--text-dim); max-width: 480px; margin-bottom: 48px; }
     .hero-desc strong { color: var(--text-main); font-weight: 700; }
     .cta-group { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
     .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; background: var(--accent); color: var(--bg); font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%); transition: background 0.15s, transform 0.15s; }
@@ -54,7 +55,7 @@
     .t-line .out { color: var(--text-dim); }
     .t-line .val { color: var(--text-main); }
     .t-line .warn { color: var(--yellow); }
-    .t-line .priv { color: #c084fc; }
+    .t-line .priv { color: var(--purple); }
     .cursor { display: inline-block; width: 8px; height: 13px; background: var(--accent); vertical-align: middle; animation: blink 1s step-end infinite; }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
     .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
@@ -83,7 +84,6 @@
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--border-bright); }
     ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
-    /* Pipeline step style */
     .pipe-step { display:grid;grid-template-columns:32px 1fr;gap:0; }
     .pipe-dot-col { display:flex;flex-direction:column;align-items:center;padding-top:18px; }
     .pipe-dot { width:6px;height:6px;border-radius:50%;background:#1e1e22;border:1px solid #2e2e34;flex-shrink:0; }
@@ -96,7 +96,7 @@
     .pipe-tags { display:flex;gap:5px;flex-wrap:wrap;margin-top:8px; }
     .pipe-tag { font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:var(--text-ghost); }
     .pipe-tag-accent { font-size:9px;padding:2px 8px;border:1px solid rgba(191,255,0,0.25);color:var(--accent); }
-    .pipe-tag-purple { font-size:9px;padding:2px 8px;border:1px solid rgba(192,132,252,0.3);color:#c084fc; }
+    .pipe-tag-purple { font-size:9px;padding:2px 8px;border:1px solid rgba(192,132,252,0.3);color:var(--purple); }
   </style>
 </head>
 <body>
@@ -118,17 +118,17 @@
 
 <div class="hero">
   <div class="hero-left">
-    <div class="eyebrow">On-chain forensic intelligence</div>
+    <div class="eyebrow">Autonomous forensic agent · Base chain</div>
     <h1 class="hero-title">
       <span class="accent">0x</span>DELTA<br>
       <span class="dim">FORENSIC</span><br>
       SYSTEM
     </h1>
     <p class="hero-desc">
-      <strong>Autonomous crypto surveillance</strong> on Base chain.
-      19 tokens monitored continuously — every 2 hours, AI agents compute
-      <strong>65+ forensic metrics</strong>, detect wallet patterns, and
-      score each token with a Forensic Health Score.
+      A fully autonomous AI agent that runs <strong>24/7 on a GCP VPS</strong>. Every 2 hours, it collects on-chain data for 19 Base chain tokens, computes <strong>65+ forensic metrics</strong>, runs a <strong>hybrid privacy AI pipeline</strong> (Llama 3.3 70B private + Gemini 3 Flash anonymized via Venice AI), <strong>autonomously trades</strong> the top-ranked token via self-custody wallet on-chain, and publishes the full intelligence report behind an <strong>x402 micropayment</strong> — trustless, no backend, no account.
+    </p>
+    <p style="font-size:12px; color:var(--text-ghost); line-height:1.6; max-width:480px; margin-bottom:32px;">
+      ERC-8004 Agent #32715 on Base · Self-custody via Bankr · Report sealed on-chain (SHA256) · Registered for The Synthesis hackathon across 5 tracks.
     </p>
     <div class="cta-group">
       <a href="index.html" class="btn-primary">Access Dashboard →</a>
@@ -148,9 +148,9 @@
       <div class="t-line"><span class="out">→ Loading watchlist...</span> <span class="val">19 tokens · Base chain</span></div>
       <div class="t-line"><span class="out">→ Fetching onchain data</span> <span class="val">[Moralis / GeckoTerminal / DexScreener]</span></div>
       <div class="t-line"><span class="out">→ Computing metrics:</span> <span class="val">FHS / NBP / ICR / LCR / BPI / SI</span></div>
-      <div class="t-line"><span class="priv">→ Signal tracking... </span><span class="val">llama-3.3-70b [PRIVATE]</span></div>
+      <div class="t-line"><span class="priv">→ Signal tracking... </span><span class="priv">llama-3.3-70b [PRIVATE]</span></div>
       <div class="t-line"><span class="warn">⚠ ANTIHUNTER — ICR=1.76 → CRASH_RISK detected</span></div>
-      <div class="t-line"><span class="out">→ Venice synthesis... </span><span class="val">gemini-3-flash [ANONYMIZED]</span></div>
+      <div class="t-line"><span class="priv">→ Venice synthesis... </span><span class="priv">gemini-3-flash [ANONYMIZED]</span></div>
       <div class="t-line"><span class="out">→ Bankr swap:</span> <span class="val">$BUNKER · 75% ETH · Base DEX ✓</span></div>
       <div class="t-line"><span class="out">→ Push</span> <span class="val">memory.json + signals.json → GitHub Pages</span></div>
       <div class="t-line"><span class="cmd">$</span> <span class="cursor"></span></div>
@@ -164,7 +164,7 @@
   </div>
 </div>
 
-<!-- ═══ SECTION 1: WORKFLOW PIPELINE (with Step 2b Signal Tracker) ═══ -->
+<!-- ═══ SECTION 1: WORKFLOW PIPELINE ═══ -->
 <section id="how-it-works">
   <div class="section-label">// Workflow — 8-Step Automated Pipeline · every 2h</div>
   <div style="font-family:'JetBrains Mono',monospace;">
@@ -180,15 +180,15 @@
 
       <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 0</span><span class="pipe-step-name">Check open position</span></div><div class="pipe-desc">Reads position.json — if position open &gt; T+90min, closes via bankr sell → ETH.</div><div class="pipe-tags"><span class="pipe-tag">position.json</span><span class="pipe-tag-accent">bankr API</span></div></div></div>
 
-      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 0b</span><span class="pipe-step-name">check_balance.py</span></div><div class="pipe-desc">Queries Venice AI billing endpoint — logs remaining credits and usage for the cycle.</div><div class="pipe-tags"><span class="pipe-tag-accent">Venice AI</span><span class="pipe-tag">billing check</span></div></div></div>
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card" style="border-color:rgba(192,132,252,0.2);"><div class="pipe-header"><span class="pipe-step-label">STEP 0b</span><span class="pipe-step-name">check_balance.py</span></div><div class="pipe-desc">Queries Venice AI billing endpoint — logs remaining credits and usage for the cycle.</div><div class="pipe-tags"><span class="pipe-tag-purple">Venice AI</span><span class="pipe-tag">billing check</span></div></div></div>
 
       <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 1</span><span class="pipe-step-name">collector.py</span></div><div class="pipe-desc">Fetches live data for 19 Base chain tokens. Wallet flows, holder distribution, liquidity, OHLCV (1H + 15min).</div><div class="pipe-tags"><span class="pipe-tag">Moralis</span><span class="pipe-tag">GeckoTerminal</span><span class="pipe-tag">DexScreener</span><span class="pipe-tag">OHLCV 1H + 15m</span></div></div></div>
 
       <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 2</span><span class="pipe-step-name">report_builder.py → forensic_engine_v5</span></div><div class="pipe-desc">Computes 65+ forensic metrics per token. Dual-timeframe analysis (hourly + 15min). Phase detection: EARLY_BREAKOUT, DISTRIBUTION, ACCUMULATION.</div><div class="pipe-tags"><span class="pipe-tag">FHS</span><span class="pipe-tag">NBP</span><span class="pipe-tag">ICR</span><span class="pipe-tag">LCR</span><span class="pipe-tag">BPI</span><span class="pipe-tag">WCC</span><span class="pipe-tag">SI</span><span class="pipe-tag">TCI</span><span class="pipe-tag">FCI</span><span class="pipe-tag">65+ metrics</span></div></div></div>
 
-      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card" style="border-color:rgba(192,132,252,0.3);"><div class="pipe-header"><span class="pipe-step-label">STEP 2b</span><span class="pipe-step-name">signal_tracker.py</span><span class="pipe-tag-purple">PRIVATE · Venice AI</span></div><div class="pipe-desc">Runs <strong style="color:#c084fc;">Llama 3.3 70B</strong> in <strong style="color:#c084fc;">private mode</strong> (no data retention). Compares current forensic data vs N-1 cycle. Detects momentum shifts, whale entries, volume anomalies. Outputs structured signals per token.</div><div class="pipe-tags"><span class="pipe-tag-purple">llama-3.3-70b</span><span class="pipe-tag-purple">PRIVATE inference</span><span class="pipe-tag">→ signals.json</span></div></div></div>
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card" style="border-color:rgba(192,132,252,0.3);"><div class="pipe-header"><span class="pipe-step-label">STEP 2b</span><span class="pipe-step-name">signal_tracker.py</span><span class="pipe-tag-purple">PRIVATE · Venice AI</span></div><div class="pipe-desc">Runs <strong style="color:var(--purple);">Llama 3.3 70B</strong> in <strong style="color:var(--purple);">private mode</strong> (no data retention). Compares current forensic data vs N-1 cycle. Detects momentum shifts, whale entries, volume anomalies. Outputs structured signals per token.</div><div class="pipe-tags"><span class="pipe-tag-purple">llama-3.3-70b</span><span class="pipe-tag-purple">PRIVATE inference</span><span class="pipe-tag">→ signals.json</span></div></div></div>
 
-      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 3</span><span class="pipe-step-name">request_analysis.py</span></div><div class="pipe-desc">Injects signals.json + top 5 memories + DECISIONS.md → Venice AI synthesis (Gemini 3 Flash, anonymized). Outputs CES ranking, entry zones, whale watch, full EN narrative.</div><div class="pipe-tags"><span class="pipe-tag-accent">Venice AI</span><span class="pipe-tag-accent">Gemini 3 Flash Preview</span><span class="pipe-tag">→ synthesis.json</span><span class="pipe-tag">→ Telegram</span><span class="pipe-tag">→ Moltbook</span></div></div></div>
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card" style="border-color:rgba(192,132,252,0.2);"><div class="pipe-header"><span class="pipe-step-label">STEP 3</span><span class="pipe-step-name">request_analysis.py</span><span class="pipe-tag-purple">ANONYMIZED · Venice AI</span></div><div class="pipe-desc">Injects signals.json + top 5 memories + DECISIONS.md → <strong style="color:var(--purple);">Gemini 3 Flash Preview</strong> (anonymized, max 6000 tokens). CES ranking, entry zones, whale watch, full EN narrative.</div><div class="pipe-tags"><span class="pipe-tag-purple">gemini-3-flash-preview</span><span class="pipe-tag-purple">ANONYMIZED inference</span><span class="pipe-tag">→ synthesis.json</span><span class="pipe-tag">→ Telegram</span><span class="pipe-tag">→ Moltbook</span></div></div></div>
 
       <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 3b</span><span class="pipe-step-name">enter_new_position.py</span></div><div class="pipe-desc">Token #1 from CES ranking → RULE_BOOK filters (ICR, Top5, Phase, BPI, FHS) → swap 75% ETH via bankr on-chain. Position saved with T+90min auto-close.</div><div class="pipe-tags"><span class="pipe-tag-accent">bankr API</span><span class="pipe-tag">Base DEX</span><span class="pipe-tag">OPEN · T+90m</span></div></div></div>
 
@@ -204,21 +204,39 @@
   </div>
 </section>
 
-<!-- ═══ SECTION 2: TOKEN DASHBOARD + GLOBAL SYNTHESIS (moved up) ═══ -->
+<!-- ═══ SECTION 2: x402 MICROPAYMENTS ═══ -->
 <div style="padding: 80px 64px; border-top: 1px solid var(--border); background: var(--surface);" id="access">
-  <div style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:48px;display:flex;align-items:center;gap:12px;">// x402 Micropayments · Base Chain<span style="flex:1;height:1px;background:var(--border);display:block;"></span></div>
+  <div style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:48px;display:flex;align-items:center;gap:12px;">// x402 Micropayments · Agents that Pay<span style="flex:1;height:1px;background:var(--border);display:block;"></span></div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);">
     <div style="background:var(--bg);padding:40px;">
       <div style="font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:inline-block;padding:3px 12px;border:1px solid rgba(191,255,0,0.3);background:rgba(191,255,0,0.06);">Per-token forensic</div>
       <h2 style="font-size:clamp(28px,3.5vw,48px);font-weight:800;line-height:0.9;letter-spacing:-0.04em;text-transform:uppercase;margin-bottom:20px;">TOKEN<br>DASHBOARD</h2>
-      <p style="font-size:14px;color:var(--text-dim);line-height:1.7;margin-bottom:28px;">FHS scores always visible. Full per-token analysis — 65 metrics, ICR breakdown, wallet flows, LLM narrative — unlocked with a single micropayment. Data refreshed <strong style="color:var(--text-main);">every 2 hours</strong>.</p>
+      <p style="font-size:14px;color:var(--text-dim);line-height:1.7;margin-bottom:16px;">FHS scores are always visible for free. Pay once to unlock the <strong style="color:var(--text-main);">full per-token forensic sheet</strong> for your session:</p>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.8;margin-bottom:24px;">
+        <span style="color:var(--text-main);">→</span> 65+ metrics with thresholds &amp; alerts<br>
+        <span style="color:var(--text-main);">→</span> ICR crash simulation &amp; slippage estimates<br>
+        <span style="color:var(--text-main);">→</span> Wallet flow analysis &amp; holder clustering<br>
+        <span style="color:var(--text-main);">→</span> Bull flag detection with Fibonacci targets<br>
+        <span style="color:var(--text-main);">→</span> AI-generated forensic narrative per token<br>
+        <span style="color:var(--text-main);">→</span> Signal Tracker panel (Llama 70B signals)<br>
+        <span style="color:var(--text-ghost);">Data refreshed every 2 hours automatically.</span>
+      </div>
       <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:28px;"><span style="font-family:'JetBrains Mono',monospace;font-size:52px;font-weight:700;color:var(--accent);">$0.02</span><span style="font-size:12px;color:var(--text-dim);font-family:'JetBrains Mono',monospace;">USDC / session</span></div>
       <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--accent);color:var(--bg);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;clip-path:polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);">Open Dashboard →</a>
     </div>
     <div style="background:var(--bg);padding:40px;border-left:1px solid var(--border);">
       <div style="font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;display:inline-block;padding:3px 12px;border:1px solid rgba(255,140,0,0.3);background:rgba(255,140,0,0.06);">Global synthesis · every 2h</div>
       <h2 style="font-size:clamp(28px,3.5vw,48px);font-weight:800;line-height:0.9;letter-spacing:-0.04em;text-transform:uppercase;margin-bottom:20px;">GLOBAL<br>SYNTHESIS</h2>
-      <p style="font-size:14px;color:var(--text-dim);line-height:1.7;margin-bottom:28px;">Every 2 hours, the agent cross-checks all 19 tokens — CES ranking, entry zones, whale watch. Full Venice AI narrative with <strong style="color:var(--text-main);">hybrid privacy model</strong> (Llama 70B private + Gemini Flash anonymized).</p>
+      <p style="font-size:14px;color:var(--text-dim);line-height:1.7;margin-bottom:16px;">The full Venice AI synthesis report — <strong style="color:var(--text-main);">cross-analysis of all 19 tokens</strong> in a single narrative:</p>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.8;margin-bottom:24px;">
+        <span style="color:var(--text-main);">→</span> CES ranking — all tokens scored &amp; ranked<br>
+        <span style="color:var(--text-main);">→</span> Top 3 opportunities with entry zones<br>
+        <span style="color:var(--text-main);">→</span> Whale watch — who's accumulating, who's dumping<br>
+        <span style="color:var(--text-main);">→</span> Phase transitions &amp; momentum shifts<br>
+        <span style="color:var(--text-main);">→</span> AI trade recommendation (INJECTION PRIORITAIRE)<br>
+        <span style="color:var(--text-main);">→</span> Hybrid privacy: Llama 70B private + Gemini Flash anonymized<br>
+        <span style="color:var(--text-ghost);">Generated every 2h. Report hash sealed on-chain.</span>
+      </div>
       <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:28px;"><span style="font-family:'JetBrains Mono',monospace;font-size:52px;font-weight:700;color:var(--amber);">$0.05</span><span style="font-size:12px;color:var(--text-dim);font-family:'JetBrains Mono',monospace;">USDC / session</span></div>
       <a href="report.html" style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--amber);color:#0a0a0c;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;clip-path:polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);">Open Synthesis →</a>
     </div>
@@ -226,10 +244,9 @@
   <div style="margin-top:16px;padding:16px 20px;border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;"><div class="mono" style="font-size:10px;color:var(--text-ghost);line-height:1.8;">NETWORK: Base (chainId 8453) · USDC: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913</div><div class="mono" style="font-size:10px;color:var(--text-ghost);">x402 · trustless · no backend · no account</div></div>
 </div>
 
-<!-- ═══ SECTION 3: HOW TO READ THE DASHBOARD (unified — no more separate Core Metrics section) ═══ -->
+<!-- ═══ SECTION 3: HOW TO READ THE DASHBOARD ═══ -->
 <section id="reading-guide">
   <div class="section-label">// How to Read the Dashboard — Forensic Metrics Guide</div>
-
   <div style="max-width:700px; margin-bottom:48px;">
     <h2 style="font-size:clamp(28px,3vw,40px); font-weight:800; line-height:1; letter-spacing:-0.03em; text-transform:uppercase; margin-bottom:16px;">
       Don't know<br><span style="color:var(--accent);">where to look?</span>
@@ -262,7 +279,7 @@
     </div>
   </div>
 
-  <!-- STEP 2 — DANGER SIGNALS -->
+  <!-- STEP 2 — DANGER -->
   <div style="display:grid; grid-template-columns:140px 1fr; gap:0; border:1px solid var(--border); border-top:0; margin-bottom:2px;">
     <div style="background:var(--surface); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:1px solid var(--border);">
       <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--red); line-height:1;">⚠</div>
@@ -296,7 +313,7 @@
     </div>
   </div>
 
-  <!-- STEP 3 — OPPORTUNITY SIGNALS -->
+  <!-- STEP 3 — OPPORTUNITY -->
   <div style="display:grid; grid-template-columns:140px 1fr; gap:0; border:1px solid var(--border); border-top:0; margin-bottom:2px;">
     <div style="background:var(--surface); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:1px solid var(--border);">
       <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--accent); line-height:1;">◆</div>
@@ -334,7 +351,7 @@
     </div>
   </div>
 
-  <!-- STEP 4 — DEEP FORENSICS -->
+  <!-- STEP 4 — DEEP -->
   <div style="display:grid; grid-template-columns:140px 1fr; gap:0; border:1px solid var(--border); border-top:0; margin-bottom:32px;">
     <div style="background:var(--surface); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:1px solid var(--border);">
       <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--blue); line-height:1;">⬡</div>
@@ -409,7 +426,6 @@
   </div>
 </section>
 
-<!-- ═══ FOOTER with GitHub link ═══ -->
 <footer>
   <div>0xΔ DELTA · <span class="accent">FIELD INTELLIGENCE UNIT</span> · Base Chain</div>
   <div class="mono">BUILT WITH OPENCLAW · VENICE AI · BANKR · x402</div>

@@ -780,6 +780,42 @@ async function loadReport() {
     }
 
     reportData = data;
+
+    /* Enrich synthesis_table with ICR/top5_pct from memory.json */
+    try {
+      const memRes = await fetch("memory.json?" + Date.now());
+      const memData = await memRes.json();
+      const memTokens = memData.tokens || [];
+      (data.synthesis_table || []).forEach(t => {
+        const mem = memTokens.find(m => m.symbol && t.symbol && m.symbol.toUpperCase() === t.symbol.toUpperCase());
+        if (mem) {
+          if (!t.icr && mem.icr) t.icr = mem.icr;
+          if (!t.top5_pct && mem.top5_pct) t.top5_pct = mem.top5_pct;
+          if (!t.wcc && mem.wcc) t.wcc = mem.wcc;
+          if (!t.nbp && mem.nbp !== undefined) t.nbp = mem.nbp;
+          if (!t.rsi_1h && mem.rsi_1h) t.rsi_1h = mem.rsi_1h;
+        }
+      });
+      /* Build whale_watch from enriched data */
+      if (!data.whale_watch || !data.whale_watch.length) {
+        data.whale_watch = (data.synthesis_table || []).filter(t => (t.icr || 0) > 0.5).sort((a,b) => (b.icr||0) - (a.icr||0)).slice(0, 8).map(t => ({
+          symbol: t.symbol, icr: t.icr || 0, momentum: (t.nbp||0) >= 0 ? "Accumulation" : "Distribution", nbp: t.nbp || 0, top5_pct: t.top5_pct || 0
+        }));
+      }
+      /* Build top_opportunities from CES-enriched data */
+      if (!data.top_opportunities || !data.top_opportunities.length) {
+        const ranked = (data.synthesis_table || []).filter(t => (t.ces||0) > 0).sort((a,b) => (b.ces||0) - (a.ces||0));
+        if (ranked.length) {
+          data.top_opportunities = ranked.slice(0, 3).map((t, i) => ({
+            rank: i+1, symbol: t.symbol, ces: t.ces, fhs: t.fhs, phase: t.phase, phase_confidence: 0,
+            signals: "CES " + t.ces + "/100 | FHS " + t.fhs + "/10 | ICR " + (t.icr||"--") + " | NBP " + (t.nbp ? t.nbp.toFixed(1)+"%" : "--"),
+            entry_zone: null, stop_loss: null, target: null, icr: t.icr || 0,
+            risk_note: (t.icr||0) > 5 ? "ICR " + (t.icr||0).toFixed(1) + " CRITICAL" : null
+          }));
+        }
+      }
+    } catch(e) { console.warn("Memory enrichment failed:", e); }
+
     if (data.raw_report && data.synthesis_table) { parseCESFromReport(data.raw_report, data.synthesis_table); }
 
     // Update header

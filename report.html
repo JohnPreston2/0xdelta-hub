@@ -14,8 +14,8 @@
       --border-bright: #2a2a30;
       --accent: #bfff00;
       --text-main: #f0f0f0;
-      --text-dim: #66666e;
-      --text-ghost: #333338;
+      --text-dim: #888890;
+      --text-ghost: #55555c;
       --red: #ff3e3e;
       --blue: #0070ff;
       --yellow: #ffb800;
@@ -780,6 +780,7 @@ async function loadReport() {
     }
 
     reportData = data;
+    if (data.raw_report && data.synthesis_table) { parseCESFromReport(data.raw_report, data.synthesis_table); }
 
     // Update header
     if (data.updated_at) {
@@ -794,6 +795,32 @@ async function loadReport() {
     if (isUnlocked) renderReport(data);
 
   } catch(e) { console.error('Report load error', e); }
+}
+
+function parseCESFromReport(rawReport, tokens) {
+  if (!rawReport) return tokens;
+  const lines = rawReport.split("\n");
+  for (const line of lines) {
+    const match = line.match(/\*\*([A-Z][A-Za-z0-9]+)\*\*\s*\|.*?\|.*?\|.*?CES.*?(\d+)/i) ||
+                  line.match(/\*\*([A-Z][A-Za-z0-9]+)\*\*.*?CES[:\s]*(\d+)/i);
+    if (match) {
+      const sym = match[1].toUpperCase();
+      const ces = parseInt(match[2]);
+      const t = tokens.find(t => t.symbol.toUpperCase() === sym);
+      if (t && ces > 0) t.ces = ces;
+    }
+  }
+  /* Also parse table rows: | **CLANKER**| ACCUM | 5.9 | ... | **55**| */
+  for (const line of lines) {
+    const tableMatch = line.match(/\|\s*\*\*([A-Z][A-Za-z0-9]+)\*\*\s*\|.*?\*\*(\d+)\*\*\s*\|/);
+    if (tableMatch) {
+      const sym = tableMatch[1].toUpperCase();
+      const ces = parseInt(tableMatch[2]);
+      const t = tokens.find(t => t.symbol.toUpperCase() === sym);
+      if (t && ces > 0) t.ces = ces;
+    }
+  }
+  return tokens;
 }
 
 function buildFromMemory(mem) {
@@ -905,7 +932,7 @@ function renderReport(data) {
     ${data.raw_report ? `
     <div class="r-section">
       <div class="r-section-title">// Analyse Venice AI · Gemini 3 Flash</div>
-      <div style="background:var(--surface);border-left:2px solid var(--amber);padding:28px 32px;font-size:15px;line-height:2.0;color:#c8c8cc;white-space:pre-wrap;">${escHtml(data.raw_report)}</div>
+      <div style="background:var(--surface);border-left:2px solid var(--amber);padding:28px 32px;font-size:15px;line-height:2.0;color:#d4d4d8;white-space:pre-wrap;">${escHtml(data.raw_report)}</div>
     </div>` : `
     <div class="r-section">
       <div class="r-section-title">// Analyse Venice AI</div>

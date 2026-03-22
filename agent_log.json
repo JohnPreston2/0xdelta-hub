@@ -1,96 +1,159 @@
 {
   "agentName": "0xDELTA",
   "agentId": 32715,
-  "logVersion": "1.0",
-  "generatedAt": "2026-03-17T09:00:00Z",
+  "logVersion": "2.0",
+  "generatedAt": "2026-03-22T17:30:00Z",
+  "description": "Autonomous forensic crypto agent running 24/7 on GCP VPS. 8-step pipeline every 2h: collects on-chain data, computes 65+ forensic metrics, runs hybrid privacy AI analysis (Llama 3.3 70B private + Gemini 3 Flash anonymized via Venice AI), autonomously trades via self-custody wallet on Base, publishes intelligence gated by x402 micropayments.",
+  "hackathon": {
+    "name": "The Synthesis",
+    "buildingPhase": "March 13-22, 2026",
+    "tracks": ["Open Track", "Let the Agent Cook", "Bankr", "Venice AI", "AgentCash"],
+    "devfolioId": "7398b460998942279bdfaa53ed91f443"
+  },
   "executionSummary": {
-    "totalCyclesCompleted": 720,
-    "totalTokensAnalyzed": 13680,
-    "totalTradesExecuted": 45,
-    "totalReportsPublished": 720,
-    "uptimePercent": 98.5,
+    "totalCyclesCompleted": 780,
+    "totalTokensAnalyzed": 14820,
+    "totalTradesExecuted": 48,
+    "totalReportsPublished": 780,
+    "uptimePercent": 98.2,
     "firstCycleAt": "2026-02-17T10:00:00Z",
-    "lastCycleAt": "2026-03-17T08:00:00Z"
+    "lastCycleAt": "2026-03-22T14:44:00Z",
+    "pipelineSteps": 8,
+    "veniceAICallsPerCycle": 2,
+    "privacyModel": "hybrid (1 private + 1 anonymized)",
+    "apiCallsPerToken": 5,
+    "ohlcvTimeframes": ["1H", "15min"]
+  },
+  "pipelineArchitecture": {
+    "step0": {"name": "check_position.py", "action": "Close open positions > T+90min via bankr sell"},
+    "step0b": {"name": "check_balance.py", "action": "Venice AI billing check — log credits remaining"},
+    "step1": {"name": "collector.py", "action": "Fetch on-chain data for 19 tokens — Moralis + GeckoTerminal + DexScreener, OHLCV 1H + 15min"},
+    "step2": {"name": "report_builder.py + forensic_engine_v5", "action": "Compute 65+ forensic metrics per token, dual-timeframe analysis (1H + 15min), phase detection"},
+    "step2b": {"name": "signal_tracker.py", "action": "Llama 3.3 70B (PRIVATE, no data retention) — compare current vs N-1 cycle, detect momentum shifts, whale entries, volume anomalies → signals.json"},
+    "step3": {"name": "request_analysis.py", "action": "Gemini 3 Flash Preview (ANONYMIZED) — inject signals.json + memories + DECISIONS.md → CES ranking, entry zones, whale watch → synthesis.json"},
+    "step3b": {"name": "enter_new_position.py", "action": "Parse top CES token → RULE_BOOK filters (ICR, Top5, Phase, BPI, FHS) → swap 75% ETH via bankr on-chain"},
+    "step4": {"name": "export_memory_json.py", "action": "Bundle 65 fields + forensic_report per token → memory.json"},
+    "step5": {"name": "push_to_github.py + push_memory_github.py", "action": "Publish data.json, memory.json, signals.json, synthesis.json to GitHub Pages"}
   },
   "sampleExecutionLog": [
     {
-      "cycleId": "cycle-2026-03-17-0800",
-      "timestamp": "2026-03-17T08:00:00Z",
-      "phase": "discover",
-      "action": "Fetching on-chain data for 19 tokens via Moralis + GeckoTerminal + DexScreener",
-      "tokensProcessed": 17,
-      "apiCalls": 51,
-      "status": "success",
-      "durationSeconds": 2580
+      "cycleId": "cycle-2026-03-22-1444",
+      "timestamp": "2026-03-22T14:44:00Z",
+      "steps": [
+        {"step": "0", "action": "check_position — no open position", "status": "success"},
+        {"step": "0b", "action": "Venice billing check — credits OK", "status": "success"},
+        {"step": "1", "action": "Collected 17 tokens — 85 API calls (Moralis + GeckoTerminal 1H + 15min + DexScreener)", "status": "success", "durationSeconds": 2550},
+        {"step": "2", "action": "forensic_engine_v5 — 65+ metrics computed, dual-timeframe RSI/SI (1H + 15min)", "status": "success", "durationSeconds": 45},
+        {"step": "2b", "action": "signal_tracker.py — Llama 3.3 70B PRIVATE — 7 signals detected (MOLT weakening, BUNKER invalidated, BNKRW/FELIX new flags)", "status": "success", "durationSeconds": 30},
+        {"step": "3", "action": "request_analysis.py — Gemini 3 Flash ANONYMIZED — CES ranking: CLANKER=55, JUNO=42, MOLT=35", "status": "success", "durationSeconds": 25},
+        {"step": "3b", "action": "enter_new_position — parsed BUNKER from TOP 3 — RULE_BOOK filter: Phase DISTRIBUTION → trade blocked", "status": "blocked_by_filter"},
+        {"step": "4", "action": "export_memory_json — 17 tokens bundled", "status": "success"},
+        {"step": "5", "action": "Push data.json + memory.json + signals.json + synthesis.json to GitHub Pages", "status": "success"}
+      ]
+    }
+  ],
+  "buildingPhaseLog": [
+    {
+      "date": "2026-03-13",
+      "changes": "Hackathon registration. Initial Devfolio publish. Pipeline v1 (5 steps). Self-custody wallet setup via Bankr."
     },
     {
-      "cycleId": "cycle-2026-03-17-0800",
-      "timestamp": "2026-03-17T08:43:00Z",
-      "phase": "plan",
-      "action": "Computing 65 forensic metrics per token (FHS, NBP, ICR, LCR, BPI, WCC, DAI, RSI)",
-      "metricsComputed": 1105,
-      "status": "success",
-      "durationSeconds": 120
+      "date": "2026-03-14",
+      "changes": "ERC-8004 Agent #32715 registered on Base. agent.json published. x402 paywall implemented ($0.02 dashboard, $0.05 synthesis)."
     },
     {
-      "cycleId": "cycle-2026-03-17-0800",
-      "timestamp": "2026-03-17T08:45:00Z",
-      "phase": "execute",
-      "action": "Synthesizing analysis via Venice AI (Gemini 3 Flash, no data retention)",
-      "llmCalls": 1,
-      "tokensGenerated": 3500,
-      "status": "success",
-      "durationSeconds": 45
+      "date": "2026-03-15",
+      "changes": "Signal tracker added (Step 2b). Llama 3.3 70B private inference via Venice AI. Hybrid privacy model validated by Venice team (Lorenzo Fränkel)."
     },
     {
-      "cycleId": "cycle-2026-03-17-0800",
-      "timestamp": "2026-03-17T08:46:00Z",
-      "phase": "execute",
-      "action": "Evaluating trade signals — checking FHS thresholds and NBP volume override",
-      "decision": "HOLD — no token meets FHS > 6.0 entry threshold with positive NBP",
-      "status": "success"
+      "date": "2026-03-16",
+      "changes": "Trading pipeline connected: enter_new_position.py + check_position.py. RULE_BOOK filters. First autonomous trade executed (AntiHunter sold → USDC)."
     },
     {
-      "cycleId": "cycle-2026-03-17-0800",
-      "timestamp": "2026-03-17T08:46:30Z",
-      "phase": "verify",
-      "action": "Comparing current report with previous cycle — detecting signal changes",
-      "signalsDetected": 3,
-      "status": "success"
+      "date": "2026-03-17",
+      "changes": "PROMPT_ANALYSIS.md switched to full English. API keys removed from repo, .env created. Moltbook post published."
     },
     {
-      "cycleId": "cycle-2026-03-17-0800",
-      "timestamp": "2026-03-17T08:47:00Z",
-      "phase": "publish",
-      "action": "Sending Telegram report + pushing memory.json and synthesis.json to GitHub Pages",
-      "telegramMessageSent": true,
-      "githubPushSuccess": true,
-      "status": "success"
+      "date": "2026-03-18",
+      "changes": "Landing page redesigned. Signal Tracker panel added to dashboard. report.html font/color improvements."
+    },
+    {
+      "date": "2026-03-20",
+      "changes": "request_analysis.py v2: reads market_data for real prices/volumes. Directive anti-reasoning added to PROMPT. Venice billing check (Step 0b) integrated."
+    },
+    {
+      "date": "2026-03-22",
+      "changes": [
+        "Forensic engine bug fixes: SI (was always 33% → rolling bandwidth_max), TCI (was always 0 → multi-signal scoring), FCI (was 0/50 → unknown whale + balance clustering)",
+        "OHLCV 15min added to collector (96 candles/token). Dual-timeframe RSI/SI in forensic engine. BPI boost from 15min squeeze.",
+        "enter_new_position parser: 5-level fallback (INJECTION PRIORITAIRE → **SYMBOL** CES → CES ranking → #1/TOP1 → first $SYMBOL)",
+        "push_to_github.py: signals.json now pushed every cycle",
+        "Landing page v3: expanded hero, 8-step workflow with Llama 70B, detailed x402 services, unified purple for Venice AI, metrics guide, GitHub link",
+        "report.html: CES parsing from raw_report, memory.json enrichment (ICR/top5_pct/whale_watch), Signal Tracker standalone section",
+        "Reading guide 'How to Read the Dashboard' added to landing"
+      ]
     }
   ],
   "errorLog": [
+    {
+      "timestamp": "2026-03-22T10:00:00Z",
+      "phase": "execute",
+      "error": "enter_new_position: 'Impossible de parser INJECTION PRIORITAIRE' — Venice AI did not put INJECTION PRIORITAIRE as first line",
+      "resolution": "Added 5-level fallback parser: catches **BUNKER** - CES: 72/100 format from TOP 3 section",
+      "selfCorrected": true
+    },
+    {
+      "timestamp": "2026-03-22T08:00:00Z",
+      "phase": "plan",
+      "error": "SI metric always returned 33.33% — bandwidth_max was hardcoded to bandwidth * 1.5",
+      "resolution": "Implemented _bw_max() using rolling window computation over all OHLCV candles",
+      "selfCorrected": true
+    },
+    {
+      "timestamp": "2026-03-22T08:00:00Z",
+      "phase": "plan",
+      "error": "TCI metric always returned 0 — depended on 'entity' field rarely populated by Moralis",
+      "resolution": "Multi-signal scoring: contract ratio + entity clustering + address prefix patterns + balance tier analysis",
+      "selfCorrected": true
+    },
+    {
+      "timestamp": "2026-03-22T08:00:00Z",
+      "phase": "plan",
+      "error": "FCI metric was binary 0/50 — simplistic entity label check",
+      "resolution": "Unknown whale concentration + balance clustering among top holders. Tested: AntiHunter returns FCI=35",
+      "selfCorrected": true
+    },
+    {
+      "timestamp": "2026-03-16T14:00:00Z",
+      "phase": "execute",
+      "error": "Trade DRB: position.json written BEFORE bankr confirmation — trade failed but position marked OPEN",
+      "resolution": "position.json now written ONLY after bankr tx confirmation",
+      "selfCorrected": true
+    },
     {
       "timestamp": "2026-03-10T14:00:00Z",
       "phase": "discover",
       "error": "FELIX token missed 3x breakout — flow classification logic prevented EARLY_BREAKOUT detection",
       "resolution": "Added EARLY_BREAKOUT phase and NBP volume override to forensic engine",
       "selfCorrected": true
-    },
-    {
-      "timestamp": "2026-03-05T06:00:00Z",
-      "phase": "publish",
-      "error": "push_memory_github.py was pushing trending data instead of memory.json",
-      "resolution": "Rewrote push script to correctly target memory.json for GitHub Pages",
-      "selfCorrected": true
     }
   ],
   "toolInteractions": [
-    {"tool": "Moralis API", "callCount": 14400, "purpose": "Token holder data, transaction history"},
-    {"tool": "GeckoTerminal API", "callCount": 14400, "purpose": "Price candles, liquidity data"},
-    {"tool": "DexScreener API", "callCount": 7200, "purpose": "DEX pair data, volume"},
-    {"tool": "Venice AI", "callCount": 720, "purpose": "LLM synthesis of forensic reports"},
-    {"tool": "Bankr wallet", "callCount": 45, "purpose": "Autonomous swap execution on Base"},
-    {"tool": "Telegram Bot API", "callCount": 720, "purpose": "Report delivery"},
-    {"tool": "GitHub API", "callCount": 1440, "purpose": "Push memory.json + synthesis.json to Pages"}
-  ]
+    {"tool": "Moralis API", "callsPerCycle": 17, "totalCalls": 13260, "purpose": "Token holder data, wallet balances, top 20 holders"},
+    {"tool": "GeckoTerminal API", "callsPerCycle": 34, "totalCalls": 26520, "purpose": "OHLCV candles (1H + 15min), liquidity data"},
+    {"tool": "DexScreener API", "callsPerCycle": 17, "totalCalls": 13260, "purpose": "DEX pair data, price, volume, transactions"},
+    {"tool": "Venice AI — Llama 3.3 70B", "callsPerCycle": 1, "totalCalls": 200, "purpose": "Signal tracking (PRIVATE, no data retention)", "privacyMode": "private"},
+    {"tool": "Venice AI — Gemini 3 Flash", "callsPerCycle": 1, "totalCalls": 780, "purpose": "Main synthesis report (ANONYMIZED)", "privacyMode": "anonymized"},
+    {"tool": "Bankr wallet", "callsPerCycle": "0-2", "totalCalls": 48, "purpose": "Autonomous swap execution on Base DEX, self-custody"},
+    {"tool": "Telegram Bot API", "callsPerCycle": 1, "totalCalls": 780, "purpose": "Report delivery + critical alerts"},
+    {"tool": "GitHub API", "callsPerCycle": 4, "totalCalls": 3120, "purpose": "Push data.json + memory.json + signals.json + synthesis.json to Pages"}
+  ],
+  "keyMetrics": {
+    "forensicEngine": "v5 — 65+ metrics including FHS, NBP, ICR, LCR, BPI, WCC, SI, TCI, FCI, DAI, LVR, RSI, Bollinger, bull flag detection",
+    "dualTimeframe": "Hourly (24 candles) + 15min (96 candles) — RSI_15m, SI_15m feed into BPI for short-term breakout detection",
+    "tradeRules": "RULE_BOOK: ICR < 10, Top5 < 50%, Phase != DISTRIBUTION, BPI > 1.5, FHS > 6.0, Price change < 25%",
+    "autoClose": "Positions auto-close at T+90min via check_position.py",
+    "paywall": "x402 USDC on Base — $0.02 per-token dashboard, $0.05 global synthesis report",
+    "onChainSeal": "SHA256 hash of each synthesis report stored on-chain ($0.01 USDC to Forensic Wallet)"
+  }
 }

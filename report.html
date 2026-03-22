@@ -694,7 +694,7 @@ function unlockReport(fromSession) {
   document.getElementById('right-panel').classList.remove('locked');
   document.getElementById('unlock-status').style.display = 'block';
   document.getElementById('download-bar').style.display = 'flex';
-  if (reportData) renderReport(reportData);
+  if (reportData) { renderReport(reportData); loadSignals(); }
 }
 
 /* ══════════════════════════════════════════════
@@ -975,6 +975,14 @@ function renderReport(data) {
       <div style="padding:24px;color:var(--text-dim);font-family:'JetBrains Mono',monospace;font-size:11px;">Rapport non disponible pour ce cycle — synthesis.json non encore généré. Téléchargez le rapport complet ci-dessous.</div>
     </div>`}
 
+    <!-- SIGNAL TRACKER -->
+    <div class="r-section">
+      <div class="r-section-title" style="color:#c084fc;">// Signal Tracker · Llama 3.3 70B · Private</div>
+      <div id="signal-tracker-container" style="display:flex;flex-direction:column;gap:8px;">
+        <div style="padding:20px;color:#55555c;font-family:JetBrains Mono,monospace;font-size:11px;">Loading signals...</div>
+      </div>
+    </div>
+
     <!-- TOP OPPORTUNITÉS -->
     <div class="r-section">
       <div class="r-section-title">// Top Opportunités</div>
@@ -1201,6 +1209,39 @@ function updateCountdown(lastUpdate) {
 checkSession();
 loadReport();
 setInterval(loadReport, 120000); // reload every 2min to check for new cycle
+
+/* Signal Tracker */
+async function loadSignals() {
+  try {
+    var res = await fetch("signals.json?" + Date.now());
+    var data = await res.json();
+    var container = document.getElementById("signal-tracker-container");
+    if (!container) return;
+    var signals = data.signals || data.active_signals || [];
+    if (!signals.length) {
+      container.innerHTML = '<div style="padding:16px;color:#55555c;font-family:JetBrains Mono,monospace;font-size:11px;">No active signals this cycle</div>';
+      return;
+    }
+    var statusColors = {DETECTED:"#0070ff",CONFIRMED:"#bfff00",WEAKENING:"#ffb800",INVALIDATED:"#ff3e3e",HOLDING:"#888890"};
+    var typeColors = {ICR_CRITICAL:"#ff3e3e",BULL_FLAG:"#bfff00",PHASE_CHANGE:"#ffb800",MOMENTUM:"#0070ff"};
+    var time = data.updated_at ? new Date(data.updated_at).toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"}) : "--:--";
+    var out = "";
+    for (var i = 0; i < signals.length; i++) {
+      var s = signals[i];
+      var sC = statusColors[s.status] || "#55555c";
+      var tC = typeColors[s.type] || "#888890";
+      out += '<div style="display:flex;align-items:flex-start;gap:14px;padding:14px 18px;border:1px solid #1e1e22;background:#0a0a0c;">';
+      out += '<div style="flex-shrink:0"><div style="font-weight:800;font-size:14px">' + (s.symbol||"--") + '</div>';
+      out += '<div style="font-size:9px;color:' + sC + ';font-family:JetBrains Mono,monospace;margin-top:3px">' + (s.status||"") + '</div></div>';
+      out += '<div style="flex:1"><div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">';
+      out += '<span style="font-size:9px;padding:2px 8px;border:1px solid ' + tC + ';color:' + tC + ';font-family:JetBrains Mono,monospace">' + (s.type||"SIGNAL") + '</span>';
+      out += '<span style="font-size:9px;color:#55555c;font-family:JetBrains Mono,monospace">' + time + '</span></div>';
+      out += '<div style="font-size:11px;color:#888890;line-height:1.5">' + (s.note||"") + '</div></div></div>';
+    }
+    container.innerHTML = out;
+  } catch(e) { console.warn("Signals load failed:", e); }
+}
+
 </script>
 </body>
 </html>

@@ -976,20 +976,8 @@ function renderReport(data) {
       <div style="padding:24px;color:var(--text-dim);font-family:'JetBrains Mono',monospace;font-size:11px;">Rapport non disponible pour ce cycle — synthesis.json non encore généré. Téléchargez le rapport complet ci-dessous.</div>
     </div>`}
 
-    <!-- SIGNAL TRACKER -->
-    <div class="r-section">
-      <div class="r-section-title" style="color:#c084fc;">// Signal Tracker · Llama 3.3 70B · Private</div>
-      <div id="signal-tracker-container" style="display:flex;flex-direction:column;gap:8px;">
-        <div style="padding:20px;color:var(--text-ghost);font-family:JetBrains Mono,monospace;font-size:11px;">Loading signals.json...</div>
-      </div>
-    </div>
-
-    <!-- SIGNAL TRACKER -->    <div class="r-section">      <div class="r-section-title" style="color:#c084fc;">// Signal Tracker · Llama 3.3 70B · Private</div>      <div id="signal-tracker-container" style="display:flex;flex-direction:column;gap:8px;">        <div style="padding:20px;color:#55555c;font-family:JetBrains Mono,monospace;font-size:11px;">Loading signals...</div>      </div>    </div>    <!-- TOP OPPORTUNITÉS -->
-    <div class="r-section">
-      <div class="r-section-title">// Top Opportunités</div>
-      <div class="opp-grid">${renderOpportunities(data.top_opportunities || [])}</div>
-    </div>
-
+    
+    
     <!-- ALERTES STRUCTURELLES -->
     <div class="r-section">
       <div class="r-section-title">// Alertes Structurelles</div>

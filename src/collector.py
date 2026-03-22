@@ -21,14 +21,27 @@ def fetch_dexscreener(address):
             return max(pairs, key=lambda x: x.get("liquidity", {}).get("usd", 0))
     return {}
 
-def fetch_geckoterminal_ohlcv(address):
-    dex_res = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{address}")
-    time.sleep(settings.DEXSCREENER_DELAY)
-    pairs = dex_res.json().get("pairs", [])
-    if not pairs:
-        return []
-    pool_address = pairs[0].get("pairAddress")
+def fetch_geckoterminal_ohlcv(address, pool_address=None):
+    """Fetch hourly OHLCV (24 candles = 24h)."""
+    if not pool_address:
+        dex_res = requests.get(f"https://api.dexscreener.com/latest/dex/tokens/{address}")
+        time.sleep(settings.DEXSCREENER_DELAY)
+        pairs = dex_res.json().get("pairs", [])
+        if not pairs:
+            return [], None
+        pool_address = pairs[0].get("pairAddress")
     url = f"https://api.geckoterminal.com/api/v2/networks/base/pools/{pool_address}/ohlcv/hour?limit=24"
+    response = requests.get(url)
+    time.sleep(settings.GECKOTERMINAL_DELAY)
+    if response.status_code == 200:
+        return response.json().get("data", {}).get("attributes", {}).get("ohlcv_list", []), pool_address
+    return [], pool_address
+
+def fetch_geckoterminal_ohlcv_15m(pool_address):
+    """Fetch 15-min OHLCV (96 candles = 24h). Reuses pool_address from hourly call."""
+    if not pool_address:
+        return []
+    url = f"https://api.geckoterminal.com/api/v2/networks/base/pools/{pool_address}/ohlcv/minute15?limit=96"
     response = requests.get(url)
     time.sleep(settings.GECKOTERMINAL_DELAY)
     if response.status_code == 200:
@@ -65,7 +78,16 @@ def main():
         logging.info(f"[{i}/{total}] Collecte pour {address[:10]}...")
         
         pool_data = fetch_dexscreener(address)
-        ohlcv_data = fetch_geckoterminal_ohlcv(address)
+        
+        # Get pool address from DexScreener for GeckoTerminal calls
+        pair_address = pool_data.get("pairAddress")
+        
+        # Hourly OHLCV (reuse pair_address to avoid extra DexScreener call)
+        ohlcv_data, pool_addr = fetch_geckoterminal_ohlcv(address, pool_address=pair_address)
+        
+        # 15-min OHLCV (reuse same pool address — 1 extra GeckoTerminal call only)
+        ohlcv_15m_data = fetch_geckoterminal_ohlcv_15m(pool_addr)
+        
         holders_data = fetch_moralis_holders(address)
         
         snapshot["tokens"][address] = {
@@ -74,11 +96,12 @@ def main():
             "pool": pool_data,
             "holders": holders_data,
             "ohlcv": ohlcv_data,
+            "ohlcv_15m": ohlcv_15m_data,
             "indicators": {}
         }
         
         symbol = pool_data.get("baseToken", {}).get("symbol", "???")
-        logging.info(f"    {symbol} - {len(holders_data)} holders, {len(ohlcv_data)} candles")
+        logging.info(f"    {symbol} - {len(holders_data)} holders, {len(ohlcv_data)} candles 1H, {len(ohlcv_15m_data)} candles 15m")
         
         if i < total:
             logging.info(f"    Pause {DELAY_BETWEEN_TOKENS}s...")

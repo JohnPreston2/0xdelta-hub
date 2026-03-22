@@ -1,49 +1,56 @@
 {
-  "updated_at": "2026-03-22T20:42:55.168495+00:00",
-  "cycle": "20260322_2042",
+  "updated_at": "2026-03-22T22:42:50.152000+00:00",
+  "cycle": "20260322_2242",
   "signals": [
-    {
-      "symbol": "MOLT",
-      "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "2026-03-22 20:42 UTC",
-      "note": "Lost bull flag, increased FHS"
-    },
     {
       "symbol": "FELIX",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous cycle",
-      "note": "Minor changes"
+      "since": "previous_cycle",
+      "note": "minor changes"
     },
     {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous cycle",
-      "note": "Minor changes"
+      "since": "previous_cycle",
+      "note": "minor changes"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous cycle",
-      "note": "Minor changes"
+      "since": "previous_cycle",
+      "note": "minor changes"
+    },
+    {
+      "symbol": "VVV",
+      "type": "BULL_FLAG",
+      "status": "NEW",
+      "since": "current_cycle",
+      "note": "new bull flag detected"
     },
     {
       "symbol": "CLANKER",
       "type": "ACCUMULATION",
-      "status": "CONFIRMED",
-      "since": "2026-03-22 20:42 UTC",
-      "note": "Significant increase in NBP"
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "minor changes"
     },
     {
       "symbol": "DRB",
       "type": "CONSOLIDATION",
       "status": "HOLDING",
-      "since": "previous cycle",
-      "note": "Minor changes"
+      "since": "previous_cycle",
+      "note": "minor changes"
+    },
+    {
+      "symbol": "Lumen",
+      "type": "PHASE_CHANGE",
+      "status": "NEW",
+      "since": "current_cycle",
+      "note": "phase change from distribution to consolidation"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a distribution phase, with most tokens showing no significant price or volume changes. Notable shifts include changes in the NBP (Net Buying Pressure) and FHS (Fear and Greed Score) for several tokens, but the overall market trend remains subdued.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements to report, as all tokens have shown 0% change in both price and volume over the observed period.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag has been lost, and there's an increase in FHS by 2.9 and a slight increase in NBP. Status: WEAKENING ⚠️\n- **bio**: FHS decrease by 2.0 and an increase in NBP by 8.3. Status: HOLDING ⏳\n- **FELIX**, **JUNO**, and **Doppel** continue to show bull flag detected, but with minor changes. Status for all: HOLDING ⏳\n- **CLANKER**: Accumulation phase with a significant increase in NBP by 25.7. Status: CONFIRMED ✅\n- **DRB**: Consolidation phase with minor changes. Status: HOLDING ⏳\n\n### 4. NEW SIGNALS DETECTED\nNo new significant bull flags or accumulation signals have been detected this cycle, aside from the ongoing trends mentioned in the signal tracking section.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-03-22 20:42 UTC\", \"note\": \"Lost bull flag, increased FHS\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Minor changes\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Minor changes\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Minor changes\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-22 20:42 UTC\", \"note\": \"Significant increase in NBP\"},\n  {\"symbol\": \"DRB\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Minor changes\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe single most important thing happening across the watchlist right now is the significant increase in NBP for **CLANKER**, indicating a strong accumulation phase, while other tokens either hold their previous signals or show weakening trends."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is showing a mixed trend, with most tokens in distribution phase, but some tokens like CLANKER and DRB are in accumulation and consolidation phases, respectively. Notable shifts include Lumen's phase change from distribution to consolidation and VVV's new bull flag detection.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements among the tokens, as all tokens have a price delta of 0% and a volume delta of 0%. However, some tokens have notable changes in their metrics, such as bio's FHS increase of 2.0 and VVV's BPI increase of 0.439.\n\n### 3. SIGNAL TRACKING\n- FELIX: BULL_FLAG (status: HOLDING) — Minor changes, with a 1.8% increase in NBP and a 0.065 increase in BPI.\n- JUNO: BULL_FLAG (status: HOLDING) — Minor changes, with a 3.6% increase in NBP and a 0.292 increase in BPI.\n- Doppel: BULL_FLAG (status: HOLDING) — Minor changes, with a -3.8% decrease in NBP and a 0.094 increase in BPI.\n- VVV: BULL_FLAG (status: NEW) — New bull flag detected, with a 1.1% increase in NBP and a 0.439 increase in BPI.\n- CLANKER: ACCUMULATION (status: HOLDING) — Minor changes, with a 3.0% increase in NBP and a 0.13 increase in ICR.\n- DRB: CONSOLIDATION (status: HOLDING) — Minor changes, with a 3.5% increase in NBP and a 0.03 increase in ICR.\n\n### 4. NEW SIGNALS DETECTED\n- VVV: New bull flag detected, with a 1.1% increase in NBP and a 0.439 increase in BPI.\n- Lumen: Phase change from distribution to consolidation, with a 5.9% increase in NBP and a 0.01 increase in ICR.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"minor changes\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"minor changes\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"minor changes\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"new bull flag detected\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"minor changes\"},\n  {\"symbol\": \"DRB\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"minor changes\"},\n  {\"symbol\": \"Lumen\", \"type\": \"PHASE_CHANGE\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"phase change from distribution to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the detection of a new bull flag in VVV, along with the phase change of Lumen from distribution to consolidation, indicating potential changes in market trends and opportunities for traders."
 }

@@ -1,42 +1,56 @@
 {
-  "updated_at": "2026-03-18T14:42:24.198415+00:00",
-  "cycle": "20260318_1442",
+  "updated_at": "2026-03-22T14:43:01.776782+00:00",
+  "cycle": "20260322_1443",
   "signals": [
     {
-      "symbol": "WORK",
-      "type": "ICR_CRITICAL",
-      "status": "CONFIRMED",
-      "since": "2026-03-18 12:42",
-      "note": "ICR 18.33 exceeds the 10.0 hard limit. No entry allowed."
+      "symbol": "MOLT",
+      "type": "BULL_FLAG",
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Decrease in FHS"
+    },
+    {
+      "symbol": "BUNKER",
+      "type": "BULL_FLAG",
+      "status": "INVALIDATED",
+      "since": "previous_cycle",
+      "note": "Loss of bull flag"
+    },
+    {
+      "symbol": "JUNO",
+      "type": "BULL_FLAG",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Minor decrease in FHS and NBP"
+    },
+    {
+      "symbol": "Doppel",
+      "type": "BULL_FLAG",
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Decrease in FHS and NBP"
     },
     {
       "symbol": "VVV",
-      "type": "ICR_CRITICAL",
-      "status": "CONFIRMED",
-      "since": "2026-03-18 12:42",
-      "note": "Terminal ICR 626.83. Liquidity concentration makes this a dead pool."
+      "type": "BULL_FLAG",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Mixed signals with increase in FHS but decrease in NBP"
     },
     {
-      "symbol": "CLAWNCH",
+      "symbol": "BNKRW",
       "type": "BULL_FLAG",
       "status": "DETECTED",
-      "since": "2026-03-18 14:42",
-      "note": "Technical flag detected but FHS is weak (5.2)."
+      "since": "current_cycle",
+      "note": "New bull flag detected"
     },
     {
-      "symbol": "SQUAER",
+      "symbol": "FELIX",
       "type": "BULL_FLAG",
       "status": "DETECTED",
-      "since": "2026-03-18 14:42",
-      "note": "Flag detected, but NBP at -66.6% suggests heavy distributor presence."
-    },
-    {
-      "symbol": "DRB",
-      "type": "PHASE_CHANGE",
-      "status": "DETECTED",
-      "since": "2026-03-18 14:42",
-      "note": "Transition to CONSOLIDATION with NBP improvement (+10.3)."
+      "since": "current_cycle",
+      "note": "New bull flag detected"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is currently characterized by heavy exhaustion, with over 80% of tracked tokens residing in the **DISTRIBUTION** phase. While price action remains flat ($0.00 change across the board), internal health metrics suggest a decoupling where momentum is fading (MOLT, FELIX losing bull flags) while a few micro-caps attempt to establish secondary support structures (WORK, VVV shifting to Consolidation).\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nWhile nominal prices and volumes show 0% volatility this cycle, the internal liquidity and flow structures have shifted:\n*   **VVV**: Experienced a massive ICR delta (-9.74) but remains at a terminal **626.83**, effectively making the pool untradeable due to extreme concentration.\n*   **DRB**: Shows the most positive sentiment shift with an **NBP increase of +10.3**, moving from Potential Distribution into a healthier **Consolidation** phase.\n*   **WORK**: Maintains its consolidation posture with a slight ICR improvement (-0.92), though its total ICR of **18.33** remains well above the safety threshold.\n\n### 3. SIGNAL TRACKING\n*   **WORK: ICR_CRITICAL** — **CONFIRMED** ✅. Even with a minor decrease, the ICR of 18.327 is nearly double the absolute hard limit (10.0). Entry is strictly forbidden.\n*   **VVV: ICR_CRITICAL** — **CONFIRMED** ✅. Terminal ICR of 626.83. This liquidity pool is a \"black hole\" risk; any entry would be subject to instant exit liquidity hunting. \n*   **CLANKER: PHASE_CHANGE** — **CONFIRMED** ✅. Now solidified in the Distribution phase with a high ICR (20.41), confirming the end of its tradable cycle.\n*   **DRB: DISTRIBUTION** — **WEAKENING** ⚠️. The shift to Consolidation and the +10.3 NBP recovery suggest the distribution might be stalling, though the lost bull flag prevents a re-entry signal.\n\n### 4. NEW SIGNALS DETECTED\n*   **CLAWNCH (BULL_FLAG)**: A new bull flag has emerged despite the token being in the distribution phase. FHS is low (5.2), making this a high-risk Tier 3 setup.\n*   **SQUAER (BULL_FLAG)**: New technical setup detected. However, NBP is deeply negative (-66.6%), indicating significant sell-pressure overhead that must be absorbed.\n*   **PHASE CHANGE (VVV)**: Formally moved from Accumulation to Consolidation. In normal circumstances, this would be bullish, but the astronomical ICR renders the move irrelevant for trading.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"WORK\", \"type\": \"ICR_CRITICAL\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-18 12:42\", \"note\": \"ICR 18.33 exceeds the 10.0 hard limit. No entry allowed.\"},\n  {\"symbol\": \"VVV\", \"type\": \"ICR_CRITICAL\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-18 12:42\", \"note\": \"Terminal ICR 626.83. Liquidity concentration makes this a dead pool.\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-18 14:42\", \"note\": \"Technical flag detected but FHS is weak (5.2).\"},\n  {\"symbol\": \"SQUAER\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-18 14:42\", \"note\": \"Flag detected, but NBP at -66.6% suggests heavy distributor presence.\"},\n  {\"symbol\": \"DRB\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"2026-03-18 14:42\", \"note\": \"Transition to CONSOLIDATION with NBP improvement (+10.3).\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe market is currently a \"liquidity graveyard\" where technical signals (like new bull flags on CLAWNCH/Squaer) are being invalidated by critical concentration risks (ICR > 10) and systemic distribution."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens experiencing a phase of distribution. Notable shifts include CLANKER transitioning from distribution to accumulation and Lumen changing from consolidation to distribution.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements (greater than 2% or 20%, respectively) reported in the provided data for any of the tokens. However, several tokens have experienced changes in their metrics such as FHS (Fundamental Health Score), NBP (Net Buying Pressure), and ICR (Investor Confidence Rating), indicating shifts in market sentiment and investor behavior.\n\n### 3. SIGNAL TRACKING\n- MOLT: The bull flag detected previously is still active, but its FHS has decreased by 0.8, indicating a weakening of its fundamental health.\n- BUNKER: The bull flag previously detected has been lost, with a significant decrease in FHS by 1.5 and a decrease in NBP, suggesting a weakening of investor confidence.\n- JUNO: The bull flag detected previously is still active but with a decrease in FHS by 0.6 and a slight decrease in NBP, indicating a potential weakening of the signal.\n- Doppel: The bull flag detected previously is still active but with a decrease in FHS by 0.3 and a decrease in NBP, indicating a weakening of the signal.\n- VVV: The bull flag detected previously is still active with a slight increase in FHS by 0.1 but a decrease in NBP, indicating mixed signals.\n\n### 4. NEW SIGNALS DETECTED\n- BNKRW: A new bull flag has been detected with an increase in BPI (Buy Pressure Index) and a slight decrease in ICR, indicating potential for upward movement.\n- FELIX: A new bull flag has been detected with an increase in FHS and a slight increase in ICR, indicating improving investor confidence.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"INVALIDATED\", \"since\": \"previous_cycle\", \"note\": \"Loss of bull flag\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minor decrease in FHS and NBP\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Mixed signals with increase in FHS but decrease in NBP\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe single most important thing happening across the watchlist right now is the detection of new bull flags in BNKRW and FELIX, signaling potential upward movements, while previously detected bull flags in tokens like MOLT and Doppel are weakening, indicating a need for cautious portfolio rebalancing."
 }

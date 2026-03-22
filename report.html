@@ -6,38 +6,7 @@
   <title>0xΔ | Global Synthesis Report</title>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js">
-/* Signal Tracker - loads signals.json */
-async function loadSignals() {
-  try {
-    const res = await fetch("signals.json?" + Date.now());
-    const data = await res.json();
-    const container = document.getElementById("signal-tracker-container");
-    if (!container) return;
-    const signals = data.signals || data.active_signals || [];
-    if (!signals.length) {
-      container.innerHTML = '<div style="padding:16px;color:#55555c;font-family:JetBrains Mono,monospace;font-size:11px;">No active signals this cycle</div>';
-      return;
-    }
-    const statusColors = { DETECTED: "#0070ff", CONFIRMED: "#bfff00", WEAKENING: "#ffb800", INVALIDATED: "#ff3e3e", HOLDING: "#888890" };
-    const typeColors = { ICR_CRITICAL: "#ff3e3e", BULL_FLAG: "#bfff00", PHASE_CHANGE: "#ffb800", MOMENTUM: "#0070ff" };
-    const time = data.updated_at ? new Date(data.updated_at).toLocaleTimeString([], {hour:"2-digit",minute:"2-digit"}) : "--:--";
-    container.innerHTML = signals.map(function(s) {
-      var sColor = statusColors[s.status] || "#55555c";
-      var tColor = typeColors[s.type] || "#888890";
-      return '<div style="display:flex;align-items:flex-start;gap:14px;padding:14px 18px;border:1px solid #1e1e22;background:#0a0a0c;">' +
-        '<div style="flex-shrink:0;"><div style="font-weight:800;font-size:14px;">' + (s.symbol||"--") + '</div>' +
-        '<div style="font-size:9px;color:' + sColor + ';font-family:JetBrains Mono,monospace;margin-top:3px;">\u25a0 ' + (s.status||"--") + '</div></div>' +
-        '<div style="flex:1;min-width:0;">' +
-        '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">' +
-        '<span style="font-size:9px;padding:2px 8px;border:1px solid ' + tColor + '40;color:' + tColor + ';font-family:JetBrains Mono,monospace;">' + (s.type||"SIGNAL") + '</span>' +
-        '<span style="font-size:9px;color:#55555c;font-family:JetBrains Mono,monospace;">' + time + '</span></div>' +
-        '<div style="font-size:11px;color:#888890;line-height:1.5;">' + (s.note||"") + '</div></div></div>';
-    }).join("");
-  } catch(e) { console.warn("Signals load failed:", e); }
-}
-
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
   <style>
     :root {
       --bg: #050505;

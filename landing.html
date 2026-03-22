@@ -349,6 +349,161 @@
   </div>
 </section>
 
+<!-- ═══ NEW: HOW TO READ THE DASHBOARD ═══ -->
+<section id="reading-guide">
+  <div class="section-label">// How to Read the Dashboard — 30-second guide</div>
+
+  <div style="max-width:700px; margin-bottom:48px;">
+    <h2 style="font-size:clamp(28px,3vw,40px); font-weight:800; line-height:1; letter-spacing:-0.03em; text-transform:uppercase; margin-bottom:16px;">
+      Don't know<br><span style="color:var(--accent);">where to look?</span>
+    </h2>
+    <p style="font-size:14px; color:var(--text-dim); line-height:1.7;">
+      The dashboard shows <strong style="color:var(--text-main);">65+ forensic metrics</strong> per token — that's a lot of data.
+      Here's how to read it in seconds: <strong style="color:var(--text-main);">start with the big number, then check the 3 danger signals</strong>.
+    </p>
+  </div>
+
+  <!-- STEP 1 — FHS -->
+  <div style="display:grid; grid-template-columns:140px 1fr; gap:0; border:1px solid var(--border); margin-bottom:2px;">
+    <div style="background:var(--surface); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:1px solid var(--border);">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:48px; font-weight:700; color:var(--accent); line-height:1;">7.2</div>
+      <div style="font-size:9px; color:var(--text-ghost); text-transform:uppercase; letter-spacing:0.1em; margin-top:6px;">example</div>
+    </div>
+    <div style="background:var(--bg); padding:24px 28px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-ghost); letter-spacing:0.08em;">STEP 1</span>
+        <span style="font-size:16px; font-weight:800;">Look at FHS — the Forensic Health Score</span>
+      </div>
+      <p style="font-size:13px; color:var(--text-dim); line-height:1.7; margin-bottom:14px;">
+        This is the <strong style="color:var(--text-main);">single number that summarizes everything</strong>. It's the big circle on the right when you click a token. It aggregates all 65+ metrics into a 0–10 score.
+      </p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; padding:4px 12px; border:1px solid rgba(255,62,62,0.4); color:var(--red);">0–3 → AVOID</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; padding:4px 12px; border:1px solid rgba(255,184,0,0.4); color:var(--yellow);">4–6 → CAUTION</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; padding:4px 12px; border:1px solid rgba(191,255,0,0.4); color:var(--accent);">7–10 → HEALTHY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 — 3 RED FLAGS -->
+  <div style="display:grid; grid-template-columns:140px 1fr; gap:0; border:1px solid var(--border); border-top:0; margin-bottom:2px;">
+    <div style="background:var(--surface); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:1px solid var(--border);">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--red); line-height:1;">⚠</div>
+      <div style="font-size:9px; color:var(--text-ghost); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">danger</div>
+    </div>
+    <div style="background:var(--bg); padding:24px 28px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-ghost); letter-spacing:0.08em;">STEP 2</span>
+        <span style="font-size:16px; font-weight:800;">Check the 3 red flags</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:12px;">
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--red); margin-bottom:6px;">ICR</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Crash Risk</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"If the biggest whale sells, how much does the price drop?"</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--red); margin-top:10px; padding:3px 8px; border:1px solid rgba(255,62,62,0.3); display:inline-block;">&gt;1.5 = RUN AWAY</div>
+        </div>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--red); margin-bottom:6px;">WCC</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Whale Concentration</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"How much of the supply is controlled by a few wallets?"</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--red); margin-top:10px; padding:3px 8px; border:1px solid rgba(255,62,62,0.3); display:inline-block;">&gt;40% = RUG RISK</div>
+        </div>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--red); margin-bottom:6px;">LCR</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Liquidity Coverage</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"Is there enough liquidity to handle a big sell-off?"</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--red); margin-top:10px; padding:3px 8px; border:1px solid rgba(255,62,62,0.3); display:inline-block;">&lt;30% = THIN MARKET</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3 — OPPORTUNITY -->
+  <div style="display:grid; grid-template-columns:140px 1fr; gap:0; border:1px solid var(--border); border-top:0; margin-bottom:2px;">
+    <div style="background:var(--surface); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:1px solid var(--border);">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--accent); line-height:1;">◆</div>
+      <div style="font-size:9px; color:var(--text-ghost); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">signal</div>
+    </div>
+    <div style="background:var(--bg); padding:24px 28px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-ghost); letter-spacing:0.08em;">STEP 3</span>
+        <span style="font-size:16px; font-weight:800;">Spot the opportunity signals</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:12px;">
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--accent); margin-bottom:6px;">BPI</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Breakout Potential</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"Is volume surging while smart wallets are accumulating?"</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--accent); margin-top:10px; padding:3px 8px; border:1px solid rgba(191,255,0,0.3); display:inline-block;">&gt;1.5 = POTENTIAL MOVE</div>
+        </div>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--accent); margin-bottom:6px;">NBP</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Net Buying Pressure</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"Are more people buying than selling right now?"</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--accent); margin-top:10px; padding:3px 8px; border:1px solid rgba(191,255,0,0.3); display:inline-block;">POSITIVE = ACCUMULATION</div>
+        </div>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--accent); margin-bottom:6px;">PHASE</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Market Phase</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"What stage is this token at in its lifecycle?"</div>
+          <div style="display:flex; flex-direction:column; gap:4px; margin-top:10px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--accent); padding:2px 8px; border:1px solid rgba(191,255,0,0.2); display:inline-block; width:fit-content;">EARLY_BREAKOUT ✓</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--yellow); padding:2px 8px; border:1px solid rgba(255,184,0,0.2); display:inline-block; width:fit-content;">ACCUMULATION ~</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--red); padding:2px 8px; border:1px solid rgba(255,62,62,0.2); display:inline-block; width:fit-content;">DISTRIBUTION ✗</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4 — DEEP FORENSICS -->
+  <div style="display:grid; grid-template-columns:140px 1fr; gap:0; border:1px solid var(--border); border-top:0; margin-bottom:32px;">
+    <div style="background:var(--surface); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:1px solid var(--border);">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--blue); line-height:1;">⬡</div>
+      <div style="font-size:9px; color:var(--text-ghost); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">deep</div>
+    </div>
+    <div style="background:var(--bg); padding:24px 28px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-ghost); letter-spacing:0.08em;">STEP 4</span>
+        <span style="font-size:16px; font-weight:800;">Deep forensic signals</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:9px; padding:2px 8px; border:1px solid rgba(0,112,255,0.3); color:var(--blue);">ADVANCED</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:12px;">
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--blue); margin-bottom:6px;">SI</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Suspicious Index</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"Are there suspicious patterns like wash trading or artificial volume?"</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--blue); margin-top:10px; padding:3px 8px; border:1px solid rgba(0,112,255,0.3); display:inline-block;">HIGH = SUSPICIOUS ACTIVITY</div>
+        </div>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--blue); margin-bottom:6px;">TCI</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Team Concentration</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"Are connected wallets (likely insiders) holding a big share?"</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--blue); margin-top:10px; padding:3px 8px; border:1px solid rgba(0,112,255,0.3); display:inline-block;">HIGH = INSIDER RISK</div>
+        </div>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--blue); margin-bottom:6px;">FCI</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Flow Concentration</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"Are a few unknown whales dominating the trading flow?"</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--blue); margin-top:10px; padding:3px 8px; border:1px solid rgba(0,112,255,0.3); display:inline-block;">&gt;35 = CONCENTRATED FLOW</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TL;DR -->
+  <div style="border:1px solid var(--border-bright); background:var(--surface); padding:24px 28px; display:flex; align-items:flex-start; gap:16px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.1em; flex-shrink:0; padding-top:2px;">TL;DR</div>
+    <div style="font-size:13px; color:var(--text-dim); line-height:1.7;">
+      <strong style="color:var(--text-main);">High FHS + low ICR + positive NBP + EARLY_BREAKOUT phase</strong> = the agent's ideal entry zone.
+      <span style="color:var(--accent);">That's exactly the signal the agent uses to trigger an autonomous swap.</span>
+      Everything else is context — useful for deep analysis, but the 4 numbers above are what drive the decision.
+    </div>
+  </div>
+</section>
+<!-- ═══ END: HOW TO READ THE DASHBOARD ═══ -->
+
 <section id="metrics">
   <div class="section-label">// Core Forensic Metrics</div>
   <div class="metrics-explain">

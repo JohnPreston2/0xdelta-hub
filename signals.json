@@ -1,56 +1,49 @@
 {
-  "updated_at": "2026-03-22T14:43:01.776782+00:00",
-  "cycle": "20260322_1443",
+  "updated_at": "2026-03-22T18:43:02.858076+00:00",
+  "cycle": "20260322_1843",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
       "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "Decrease in FHS"
+      "since": "previous cycle",
+      "note": "FHS decrease"
     },
     {
-      "symbol": "BUNKER",
+      "symbol": "FELIX",
       "type": "BULL_FLAG",
-      "status": "INVALIDATED",
-      "since": "previous_cycle",
-      "note": "Loss of bull flag"
+      "status": "HOLDING",
+      "since": "previous cycle",
+      "note": "minor changes"
     },
     {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Minor decrease in FHS and NBP"
+      "since": "previous cycle",
+      "note": "minor changes"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "Decrease in FHS and NBP"
-    },
-    {
-      "symbol": "VVV",
-      "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Mixed signals with increase in FHS but decrease in NBP"
+      "since": "previous cycle",
+      "note": "minor changes"
     },
     {
-      "symbol": "BNKRW",
-      "type": "BULL_FLAG",
+      "symbol": "CLANKER",
+      "type": "ACCUMULATION",
       "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "New bull flag detected"
+      "since": "current cycle",
+      "note": "high NBP"
     },
     {
-      "symbol": "FELIX",
-      "type": "BULL_FLAG",
+      "symbol": "DRB",
+      "type": "CONSOLIDATION",
       "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "New bull flag detected"
+      "since": "current cycle",
+      "note": "low NBP"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens experiencing a phase of distribution. Notable shifts include CLANKER transitioning from distribution to accumulation and Lumen changing from consolidation to distribution.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements (greater than 2% or 20%, respectively) reported in the provided data for any of the tokens. However, several tokens have experienced changes in their metrics such as FHS (Fundamental Health Score), NBP (Net Buying Pressure), and ICR (Investor Confidence Rating), indicating shifts in market sentiment and investor behavior.\n\n### 3. SIGNAL TRACKING\n- MOLT: The bull flag detected previously is still active, but its FHS has decreased by 0.8, indicating a weakening of its fundamental health.\n- BUNKER: The bull flag previously detected has been lost, with a significant decrease in FHS by 1.5 and a decrease in NBP, suggesting a weakening of investor confidence.\n- JUNO: The bull flag detected previously is still active but with a decrease in FHS by 0.6 and a slight decrease in NBP, indicating a potential weakening of the signal.\n- Doppel: The bull flag detected previously is still active but with a decrease in FHS by 0.3 and a decrease in NBP, indicating a weakening of the signal.\n- VVV: The bull flag detected previously is still active with a slight increase in FHS by 0.1 but a decrease in NBP, indicating mixed signals.\n\n### 4. NEW SIGNALS DETECTED\n- BNKRW: A new bull flag has been detected with an increase in BPI (Buy Pressure Index) and a slight decrease in ICR, indicating potential for upward movement.\n- FELIX: A new bull flag has been detected with an increase in FHS and a slight increase in ICR, indicating improving investor confidence.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"INVALIDATED\", \"since\": \"previous_cycle\", \"note\": \"Loss of bull flag\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minor decrease in FHS and NBP\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Mixed signals with increase in FHS but decrease in NBP\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe single most important thing happening across the watchlist right now is the detection of new bull flags in BNKRW and FELIX, signaling potential upward movements, while previously detected bull flags in tokens like MOLT and Doppel are weakening, indicating a need for cautious portfolio rebalancing."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mixed trend, with most tokens in distribution phase, but some showing signs of accumulation or consolidation. Notable shifts include VVV's phase change from accumulation to consolidation and BNKRW's loss of its bull flag.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements among the tokens, with all tokens showing 0% change in price and volume. However, some tokens have notable changes in their metrics, such as MOLT's -1.6 FHS delta and BNKRW's 1.2 FHS delta.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: WEAKENING ⚠️ — FHS decrease and slight NBP decrease.\n- **FELIX**: HOLDING ⏳ — minor changes in metrics, bull flag still detected.\n- **JUNO**: HOLDING ⏳ — minor changes in metrics, bull flag still detected.\n- **Doppel**: HOLDING ⏳ — minor changes in metrics, bull flag still detected.\n- **BNKRW**: INVALIDATED ❌ — lost bull flag.\n- **fomolt**: No previous signal to track.\n- **VVV**: INVALIDATED ❌ — lost bull flag and changed phase to consolidation.\n\n### 4. NEW SIGNALS DETECTED\n- **CLANKER**: ACCUMULATION signal detected, with a high NBP and no bull flag detected.\n- **DRB**: CONSOLIDATION signal detected, with a low NBP and no bull flag detected.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous cycle\", \"note\": \"FHS decrease\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"minor changes\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"minor changes\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"minor changes\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"DETECTED\", \"since\": \"current cycle\", \"note\": \"high NBP\"},\n  {\"symbol\": \"DRB\", \"type\": \"CONSOLIDATION\", \"status\": \"DETECTED\", \"since\": \"current cycle\", \"note\": \"low NBP\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the loss of bull flags by BNKRW and VVV, indicating a potential shift in market sentiment."
 }

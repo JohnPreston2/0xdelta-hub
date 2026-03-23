@@ -1,56 +1,49 @@
 {
-  "updated_at": "2026-03-23T10:42:57.933537+00:00",
-  "cycle": "20260323_1042",
+  "updated_at": "2026-03-23T12:44:01.153589+00:00",
+  "cycle": "20260323_1244",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous cycle",
-      "note": "NBP decrease"
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Weakening NBP"
     },
     {
-      "symbol": "JUNO",
+      "symbol": "AntiHunter",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous cycle",
-      "note": "Minor NBP increase"
-    },
-    {
-      "symbol": "CLAWNCH",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous cycle",
-      "note": "FHS decrease"
-    },
-    {
-      "symbol": "Doppel",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous cycle",
-      "note": "Minor FHS increase and NBP decrease"
-    },
-    {
-      "symbol": "CLANKER",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous cycle",
-      "note": "Minor FHS decrease and NBP decrease"
-    },
-    {
-      "symbol": "Lumen",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous cycle",
-      "note": "Minor FHS decrease and NBP decrease"
-    },
-    {
-      "symbol": "VVV",
-      "type": "PHASE_CHANGE",
       "status": "NEW",
-      "since": "this cycle",
-      "note": "Phase changed from consolidation to accumulation"
+      "since": "current_cycle",
+      "note": "New bull flag detected"
+    },
+    {
+      "symbol": "WORK",
+      "type": "RUPTURE",
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "Phase change to RUPTURE"
+    },
+    {
+      "symbol": "FELIX",
+      "type": "BULL_FLAG",
+      "status": "NEW",
+      "since": "current_cycle",
+      "note": "New bull flag with improving metrics"
+    },
+    {
+      "symbol": "CLAWD",
+      "type": "BULL_FLAG",
+      "status": "NEW",
+      "since": "current_cycle",
+      "note": "New bull flag detected"
+    },
+    {
+      "symbol": "DRB",
+      "type": "BULL_FLAG",
+      "status": "NEW",
+      "since": "current_cycle",
+      "note": "New bull flag with phase change to DISTRIBUTION_POTENTIELLE"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in distribution, but a few showing signs of accumulation or consolidation. Notable shifts include AntiHunter's bull flag loss and VVV's phase change from consolidation to accumulation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price movements (all price deltas are 0%), several tokens have experienced changes in their metrics. For instance, AntiHunter's FHS increased by 0.8, and its NBP decreased by 4.1. CLAWNCH's FHS decreased by 2.5. fomolt's NBP increased by 16.7, indicating a potential shift in market sentiment.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag is still detected, but the NBP delta is -0.6, indicating a slight weakening of the signal.\n- **AntiHunter**: The bull flag was lost, which is a significant change.\n- **CLAWNCH**: The bull flag is still detected, despite the FHS decrease.\n- **JUNO**: The bull flag is still detected, with a minor NBP increase.\n- **Doppel**: The bull flag is still detected, with a minor FHS increase and NBP decrease.\n- **CLANKER**: The bull flag is still detected, but with a minor FHS decrease and NBP decrease.\n- **Lumen**: The bull flag is still detected, but with a minor FHS decrease and NBP decrease.\n- **VVV**: The phase changed from consolidation to accumulation, which is a notable shift.\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags or significant signals were detected in this cycle. However, the phase change in VVV from consolidation to accumulation could be considered a new signal.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"NBP decrease\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Minor NBP increase\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"FHS decrease\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Minor FHS increase and NBP decrease\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Minor FHS decrease and NBP decrease\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Minor FHS decrease and NBP decrease\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"NEW\", \"since\": \"this cycle\", \"note\": \"Phase changed from consolidation to accumulation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the loss of AntiHunter's bull flag and VVV's phase change from consolidation to accumulation, indicating potential shifts in market sentiment and opportunities for accumulation."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is primarily in a state of distribution, with most tokens experiencing negative NBP (Net Buying Pressure) and being in the \"DISTRIBUTION\" phase. However, there are notable exceptions, such as WORK and Lumen, which are in the \"RUPTURE\" phase, and CLANKER and VVV, which are in the \"ACCUMULATION\" phase. This mixed landscape suggests a complex market with varying trends across different tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nDespite the overall distribution trend, tokens like WORK and Lumen have shown significant strength, moving into the \"RUPTURE\" phase, which could indicate potential buying opportunities or strength in their respective markets. WORK, for instance, has seen a substantial increase in its NBP, along with a phase change from \"CONSOLIDATION\" to \"RUPTURE,\" indicating a potential breakout. On the other hand, tokens like Squaer and bio are deeply in distribution, with Squaer having an NBP of -100%, suggesting a strong sell-off or lack of buying interest.\n\n### 3. SIGNAL TRACKING\n- MOLT: The bull flag detected previously is still active, but the NBP has decreased, indicating weakening buying pressure.\n- AntiHunter: A new bull flag has been detected with a decrease in FHS, suggesting a potential buying opportunity emerging.\n- CLAWNCH: The bull flag remains, but the increase in FHS and slight improvement in NBP suggest a stabilizing or slightly improving situation.\n- WORK: The new bull flag detected and the phase change to \"RUPTURE\" confirm the signal's strengthening.\n- Other tokens like FELIX, JUNO, CLAWD, and DRB have either seen new bull flags or improvements in their metrics, indicating potential opportunities.\n\n### 4. NEW SIGNALS DETECTED\nNew bull flags have been detected in AntiHunter, FELIX, CLAWD, and DRB, suggesting emerging buying interest or potential reversals in these tokens. WORK and Lumen's move into the \"RUPTURE\" phase is also a significant development, indicating strong upward momentum.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Weakening NBP\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"WORK\", \"type\": \"RUPTURE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Phase change to RUPTURE\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"New bull flag with improving metrics\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"New bull flag with phase change to DISTRIBUTION_POTENTIELLE\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the emergence of new bull flags in several tokens, coupled with the significant phase changes in WORK and Lumen, indicating potential buying opportunities and market strength in a otherwise largely distributive market landscape."
 }

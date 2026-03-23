@@ -1,49 +1,35 @@
 {
-  "updated_at": "2026-03-23T20:42:53.799267+00:00",
-  "cycle": "20260323_2042",
+  "updated_at": "2026-03-23T22:42:46.402035+00:00",
+  "cycle": "20260323_2242",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "Negative NBP delta"
+      "status": "CONFIRMED",
+      "since": "2026-03-23 22:42",
+      "note": "Increased NBP and FHS"
     },
     {
       "symbol": "AntiHunter",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous_cycle",
+      "since": "2026-03-23 22:42",
       "note": "Minimal changes"
     },
     {
-      "symbol": "CLAWNCH",
-      "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "Decrease in FHS and negative NBP delta"
-    },
-    {
-      "symbol": "BNKRW",
-      "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "Decrease in FHS and negative NBP delta"
-    },
-    {
       "symbol": "WORK",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "current_cycle",
-      "note": "New bull flag detected with phase change to consolidation"
+      "type": "CONSOLIDATION",
+      "status": "DETECTED",
+      "since": "2026-03-23 22:42",
+      "note": "Strong NBP in consolidation"
     },
     {
       "symbol": "CLANKER",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous_cycle",
-      "note": "Increase in FHS and significant BPI delta"
+      "type": "CONSOLIDATION",
+      "status": "DETECTED",
+      "since": "2026-03-23 22:42",
+      "note": "Transitioned from accumulation to consolidation"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is predominantly in a distribution phase, with most tokens experiencing minimal price and volume changes over the last cycle. However, there are notable exceptions, such as WORK, which has transitioned from accumulation to consolidation, and VVV, which shifted from consolidation to accumulation. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\n- **WORK**: Experienced a significant change with its phase shifting from accumulation to consolidation, alongside a bull flag detection. Its FHS increased by 2.0, and NBP saw a positive delta of 2.7. \n- **VVV**: Saw a phase change from consolidation to accumulation, with a decrease in FHS by 0.5 and a negative NBP delta of 2.7.\n- **CLANKER**: Had an increase in FHS by 1.5 and a notable BPI delta of 3.5, indicating potential accumulation.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag detected remains active, but with a negative NBP delta of -11.1, indicating potential weakening.\n- **AntiHunter**: The bull flag is still detected, but the minimal changes across metrics suggest a holding pattern.\n- **CLAWNCH**: Despite a bull flag detection, the decrease in FHS by 1.0 and negative NBP delta may indicate weakening.\n- **BNKRW**: Bull flag is still active, but the decrease in FHS and negative NBP delta suggest weakening.\n- **WORK**: New bull flag detected with a significant increase in FHS and a positive NBP delta, indicating strengthening.\n- **CLANKER**: Bull flag remains active, with an increase in FHS and significant BPI delta, suggesting accumulation.\n\n### 4. NEW SIGNALS DETECTED\n- **WORK**: New bull flag detected, transitioning from accumulation to consolidation.\n- **VVV**: Phase change from consolidation to accumulation, though no new bull flag was detected.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Negative NBP delta\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minimal changes\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and negative NBP delta\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and negative NBP delta\"},\n  {\"symbol\": \"WORK\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected with phase change to consolidation\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Increase in FHS and significant BPI delta\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant development is WORK's transition from accumulation to consolidation, accompanied by a new bull flag detection, indicating potential for further growth amidst the predominantly distribution-phase market."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in distribution, but some displaying signs of consolidation or accumulation. Notable shifts include WORK and CLANKER transitioning into consolidation, while VVV remains in accumulation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nDespite the lack of significant price movements (all tokens priced at $0.000000), there have been notable changes in other metrics:\n- **MOLT** saw a slight increase in its FHS (Fundamental Health Score) and a significant positive change in NBP (Net Buying Pressure), indicating potential strengthening.\n- **CLAWD** had a notable increase in FHS and a significant positive change in BPI (Buying Power Index), suggesting increased buying activity.\n- **CLANKER** transitioned from accumulation to consolidation, with a decrease in FHS and a significant negative change in NBP.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag detected previously is still active, with a slight strengthening (CONFIRMED ✅) due to the increase in NBP.\n- **AntiHunter**: The bull flag remains, but with minimal changes, keeping its status as HOLDING ⏳.\n- **CLAWNCH**, **BNKRW**, **FELIX**, and **JUNO** all saw their bull flags weakening (WEAKENING ⚠️) due to negative deltas in NBP or other metrics.\n- **Doppel** and **VVV** had their bull flags invalidated (INVALIDATED ❌) due to significant negative changes or lack of positive movement.\n\n### 4. NEW SIGNALS DETECTED\n- **WORK** and **CLANKER** are in consolidation, with **WORK** showing a strong NBP and **CLANKER** having transitioned from accumulation, indicating potential for further movement.\n- **VVV** remains in accumulation but with a weakened bull flag, suggesting a need for closer monitoring.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-23 22:42\", \"note\": \"Increased NBP and FHS\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-03-23 22:42\", \"note\": \"Minimal changes\"},\n  {\"symbol\": \"WORK\", \"type\": \"CONSOLIDATION\", \"status\": \"DETECTED\", \"since\": \"2026-03-23 22:42\", \"note\": \"Strong NBP in consolidation\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"CONSOLIDATION\", \"status\": \"DETECTED\", \"since\": \"2026-03-23 22:42\", \"note\": \"Transitioned from accumulation to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is the transition of **CLANKER** from accumulation to consolidation, coupled with **MOLT**'s strengthening bull flag, indicating potential for further price movements in these tokens."
 }

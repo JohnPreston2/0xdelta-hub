@@ -1,244 +1,249 @@
 {
-  "updated_at": "2026-03-23T08:42:28.837046+00:00",
+  "updated_at": "2026-03-23T10:42:26.804719+00:00",
   "count": 17,
   "tokens": [
     {
-      "symbol": "CLAWNCH",
-      "address": "0xa1F724",
+      "symbol": "AntiHunter",
+      "address": "0xe2f3Fa",
       "chain": "base",
-      "fhs": 7.0,
-      "fhs_label": "moderate",
+      "fhs": 7.2,
+      "fhs_label": "solid",
       "phase": "DISTRIBUTION",
-      "cp": 30.7,
-      "icr": 2.299356133862192,
+      "cp": 35.4,
+      "icr": 1.3943892300411997,
       "icr_alert": true,
-      "lcr": 34.2893247211293,
+      "lcr": 130.06255204523006,
       "lcr_fragile": false,
-      "lvr": 0.06828455489867902,
+      "lvr": 0.07227354406688613,
       "lvr_status": "dead",
-      "dai": -0.4883720930232558,
+      "dai": -0.437125748502994,
       "dai_status": "sell_wall",
-      "crash_threshold": 282662.3828571429,
-      "ips_10k": 1.4935503418169183,
-      "ips_50k": 7.046763846989614,
-      "ips_100k": 13.16576717267625,
-      "nbp": -48.837209302325576,
+      "crash_threshold": 82668.78000000001,
+      "ips_10k": 4.9286863444140385,
+      "ips_50k": 20.585126455666924,
+      "ips_100k": 34.14206554443518,
+      "nbp": -43.712574850299404,
       "nbp_status": "distribution",
-      "ev": 33.19509445336617,
+      "ev": 527.2173254372675,
       "ev_trend": "stable",
-      "ac": 30124.933110367892,
+      "ac": 1896.7510204081634,
       "vwad": 0.0,
       "flow_classification": "DISTRIBUTION",
-      "bull_flag": true,
-      "bf_retracement": 18.2,
-      "bf_class": 1,
-      "fqs": 101.73927358375055,
-      "fqs_label": "Standard",
-      "bpi": 6.736146936847679,
-      "bpi_label": "Breakout probable",
-      "fib_target": 4.476055584581111e-05,
-      "fib_upside_pct": 15.839947841126051,
-      "pole_high": 4.00334296803164e-05,
-      "pole_low": 3.23843582151146e-05,
+      "bull_flag": false,
+      "bf_retracement": 0.0,
+      "bf_class": 0,
+      "fqs": 0.0,
+      "fqs_label": "N/A",
+      "bpi": 0.0,
+      "bpi_label": "N/A",
+      "fib_target": 0.0,
+      "fib_upside_pct": 0.0,
+      "pole_high": 0.0,
+      "pole_low": 0.0,
       "squeeze_factor": 1.0,
-      "rsi_1h": 69.41,
+      "rsi_1h": 43.01,
       "rsi_1d": 0,
-      "ber": 1.1445854613344035,
-      "ber_zone": "overbought",
-      "rmd": 1.6419999999999995,
+      "ber": 0.18822638818419946,
+      "ber_zone": "equilibrium",
+      "rmd": 0.7709999999999998,
       "rmd_divergence": "none",
-      "si": 0,
+      "si": 13.166691797230726,
       "si_status": "active_expansion",
       "saturated": false,
-      "wcc": 8.947368421052632,
+      "wcc": 6.315789473684211,
       "wcc_alert": false,
-      "scr": 17.00865533824698,
-      "tci": 35,
-      "fci": 59.50501946856177,
-      "top5_pct": 17.00865533824698,
-      "top10_pct": 24.303837423048506,
-      "top20_pct": 32.779348999135586,
-      "price_usd": 3.864e-05,
-      "price_change_24h": 2.99,
-      "volume_24h": 90073.55,
-      "liquidity_usd": 1319091.12,
-      "mcap": 3846944.0,
-      "buys_24h": 209,
-      "sells_24h": 608,
-      "narrative_phase": "Phase: DISTRIBUTION | NBP -49% (selling pressure) | Active distribution",
-      "narrative_insight": "Moderate (FHS 7.0/10). CP 31%. Monitoring required.",
-      "narrative_structure": "Bull Flag Class 1 | Retrace 18.2% | FQS 102 (Standard) | BPI 6.74 (Breakout probable) | Target 1.618: $0.000045 (+16%)",
-      "support_key": 3.23843582151146e-05,
-      "resistance_key": 4.00334296803164e-05,
+      "scr": 38.5831127813061,
+      "tci": 40,
+      "fci": 65.59950419662125,
+      "top5_pct": 38.5831127813061,
+      "top10_pct": 47.15403507273272,
+      "top20_pct": 59.1602988767045,
+      "price_usd": 2.974e-06,
+      "price_change_24h": -14.7,
+      "volume_24h": 27882.24,
+      "liquidity_usd": 385787.64,
+      "mcap": 296617.0,
+      "buys_24h": 47,
+      "sells_24h": 120,
+      "narrative_phase": "Phase: DISTRIBUTION | NBP -44% (selling pressure) | Active distribution",
+      "narrative_insight": "Moderate (FHS 7.2/10). CP 35%. Monitoring required.",
+      "narrative_structure": "No bull flag detected.",
+      "support_key": 0.0,
+      "resistance_key": 0.0,
       "alerts": [
         {
-          "severity": "critical",
-          "code": "ICR_HIGH",
-          "message": "Top holder can crash >30%. Threshold: $282,662. ICR=2.30"
+          "severity": "warning",
+          "code": "ICR_ELEVATED",
+          "message": "Elevated concentration. ICR=1.39"
         },
         {
           "severity": "warning",
           "code": "SELL_WALL",
-          "message": "Sell wall detected. DAI=-0.49"
+          "message": "Sell wall detected. DAI=-0.44"
+        },
+        {
+          "severity": "critical",
+          "code": "INSIDER_FUNDING",
+          "message": "Insider wallets: FCI=65.6%"
         }
       ],
       "top20_holders": [
         {
           "address": "0x498581ff718922c3f8e6a244956af099b2652b2b",
-          "usd_value": 277007.9313486428,
-          "pct_supply": 7.2491640362324,
+          "usd_value": 77600.1431703662,
+          "pct_supply": 25.9737249199575,
           "is_contract": true,
           "entity": "Uniswap",
           "label": "Uniswap: PoolManager"
         },
         {
-          "address": "0x4e3ae00e8323558fa5cac04b152238924aa31b60",
-          "usd_value": 136713.42876348892,
-          "pct_supply": 3.5777245302588687,
-          "is_contract": false,
-          "entity": "MEXC",
-          "label": "MEXC: Hot Wallet"
-        },
-        {
-          "address": "0x3779b90f1a7f87d7982b055bf4ac9fd2c41bc488",
-          "usd_value": 87964.26458597083,
-          "pct_supply": 2.3019824024738176,
+          "address": "0xa668ddf22a4c0ecbb31c89b16f355b26ae7703c3",
+          "usd_value": 14771.798364379592,
+          "pct_supply": 4.944303085203485,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
-          "address": "0x07da9c5d35028f578dfac5be6e5aaa8a835704f6",
-          "usd_value": 84186.20627666384,
-          "pct_supply": 2.203112437670727,
+          "address": "0x9b5daf8fe589a8fa66d7ff3c9ad5d18fb35504bf",
+          "usd_value": 9021.085988216972,
+          "pct_supply": 3.0194687324585887,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x3d9fe5cb537a6f8253dc000fb1a522c95db594c5",
+          "usd_value": 7526.243156333811,
+          "pct_supply": 2.5191264015345065,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x2fd1887e5d99014cb0b8884f06560ed20d65003d",
+          "usd_value": 6353.185813348776,
+          "pct_supply": 2.1264896421520207,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xb7267b31b943dab687ff4a9a63b3da28ef2b9337",
+          "usd_value": 5666.40283930838,
+          "pct_supply": 1.8966149110156019,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xbf72e1076b5fae08c9f1eb300db48c0145ae1316",
+          "usd_value": 5186.099112695991,
+          "pct_supply": 1.7358513303908596,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x48d652666d7de8e506ce1575bfe6a171ab76e709",
+          "usd_value": 5065.359417458631,
+          "pct_supply": 1.6954382653771822,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xf703fd64093b50797abdc9e450632240fa2ba5d4",
+          "usd_value": 4901.638799902858,
+          "pct_supply": 1.6406389556029304,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x936a220132591ac87dd2d2cec4d8c26ec769dfe8",
+          "usd_value": 4787.3313100011965,
+          "pct_supply": 1.6023788290400405,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xddbcdf710c21219dc5e56a6e1e8576fb4aa99d96",
+          "usd_value": 4719.134297183023,
+          "pct_supply": 1.5795524478127116,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xcd83f4c3a4b96d56367e482a3774802877b82e13",
+          "usd_value": 4129.387735746682,
+          "pct_supply": 1.3821570006727648,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x524f179c214d354c9137a198385c6546ae6e867a",
+          "usd_value": 4126.142104987159,
+          "pct_supply": 1.3810706480309336,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x949a8d342642947b9c6098f71b6bd4242ab51248",
+          "usd_value": 3981.149693052814,
+          "pct_supply": 1.3325398996430624,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xdb3ded7731c781224ec292e2163d9554c094fd7c",
+          "usd_value": 3802.359752983425,
+          "pct_supply": 1.272696701781652,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x7489a07c346ed0a9b20ad50949cc4847711664c8",
+          "usd_value": 3792.5703421190497,
+          "pct_supply": 1.2694200652378056,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
-          "address": "0xe45332fbcb1e94cd47aa6eb9abc0e2d4b0543d60",
-          "usd_value": 64069.652859908434,
-          "pct_supply": 1.6766719316111673,
-          "is_contract": true,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xdb9f90626b16551810a3493f85cee01eb9eaff63",
-          "usd_value": 62189.73687266837,
-          "pct_supply": 1.627475436407978,
+          "address": "0x2e91abc17299fa4a2b67411cba0029e02eb3872a",
+          "usd_value": 3590.4182909145125,
+          "pct_supply": 1.2017572806671075,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
-          "address": "0xb82ace4dc5b5f84675c5352165088acef8e26b26",
-          "usd_value": 56809.66803787488,
-          "pct_supply": 1.4866816283759867,
+          "address": "0x674dd473efd0d824e950a63f6d9ebe9b031deefc",
+          "usd_value": 2859.13624987863,
+          "pct_supply": 0.9569881630242355,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
-          "address": "0x1751596d3fd0ff980e0ae16f15e3890c705c9080",
-          "usd_value": 53497.355274313326,
-          "pct_supply": 1.4000000000000001,
+          "address": "0x20e85118f45e08a2ddb9540ca30e703eee150299",
+          "usd_value": 2448.0461324959165,
+          "pct_supply": 0.8193912309828888,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
-          "address": "0xb393ae8238e9a265169f3d184e3b57544e5a6b7a",
-          "usd_value": 53415.46743804103,
-          "pct_supply": 1.3978570347974517,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x4dbb3835744b2976560e0259cb218cab89abef96",
-          "usd_value": 52854.163649554466,
-          "pct_supply": 1.3831679852201073,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x0e6f8b7f47e8019e3927e60af64067968ec0269c",
-          "usd_value": 39285.04198391942,
-          "pct_supply": 1.0280706120045322,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xe0c7beccdca1b328462f4c68abcbecccb2a428bd",
-          "usd_value": 38212.39662450952,
-          "pct_supply": 1.0,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xbac7c3665a414ba1b8eb5eefad4b5e673803034e",
-          "usd_value": 35179.82062643242,
-          "pct_supply": 0.9206389479341894,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xf816647c6e35c411cf706fb665f2566c73f3662b",
-          "usd_value": 32692.66662175913,
-          "pct_supply": 0.8555513265239684,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xb8fce960baa63e2c52bb5160c7efbfe64e016f72",
-          "usd_value": 31985.548825563503,
-          "pct_supply": 0.8370463946521454,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x443278e10f756ebecdd195e859c8a20b8681bfec",
-          "usd_value": 29914.46767621765,
-          "pct_supply": 0.7828471993047,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x10f7ba31ddff342ca6f818acf879d0cc13a96ce1",
-          "usd_value": 29727.837472584466,
-          "pct_supply": 0.7779631768376695,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x8f8feaa30ab8dba4cfe20b2cadbe21d07eda4d18",
-          "usd_value": 29380.948338633934,
-          "pct_supply": 0.7688852554144412,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x6b13fd18feef65c43f06271d49d1ee823de53aa9",
-          "usd_value": 28762.742012649498,
-          "pct_supply": 0.7527070938597191,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x514cd39ac9c8d3007567827600ff0b83c3a6caa3",
-          "usd_value": 28728.139758791785,
-          "pct_supply": 0.7518015695557155,
+          "address": "0xca7c767854b1e7305de07247ab85e30543d1d9c9",
+          "usd_value": 2422.0510793699777,
+          "pct_supply": 0.8106903661186259,
           "is_contract": false,
           "entity": null,
           "label": null
@@ -246,195 +251,195 @@
       ],
       "history": [
         {
-          "ts": "03-21 10:00",
+          "ts": "03-21 12:00",
           "fhs": 6.1,
           "phase": "DIST",
-          "nbp": "-50%",
-          "icr": 2.37,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 12:00",
-          "fhs": 6.0,
-          "phase": "DIST",
-          "nbp": "-51%",
-          "icr": 2.4,
+          "nbp": "-45%",
+          "icr": 1.49,
           "flow": "DIST"
         },
         {
           "ts": "03-21 14:00",
-          "fhs": 6.5,
+          "fhs": 5.9,
           "phase": "DIST",
-          "nbp": "-55%",
-          "icr": 2.37,
+          "nbp": "-43%",
+          "icr": 1.55,
           "flow": "DIST"
         },
         {
           "ts": "03-21 16:00",
-          "fhs": 6.5,
+          "fhs": 5.9,
           "phase": "DIST",
-          "nbp": "-59%",
-          "icr": 2.36,
+          "nbp": "-53%",
+          "icr": 1.48,
           "flow": "DIST"
         },
         {
           "ts": "03-21 18:00",
-          "fhs": 5.7,
+          "fhs": 6.9,
           "phase": "DIST",
-          "nbp": "-57%",
-          "icr": 2.39,
+          "nbp": "-63%",
+          "icr": 1.46,
           "flow": "DIST"
         },
         {
           "ts": "03-21 20:00",
-          "fhs": 5.5,
+          "fhs": 5.8,
           "phase": "DIST",
           "nbp": "-59%",
-          "icr": 2.36,
+          "icr": 1.49,
           "flow": "DIST"
         },
         {
           "ts": "03-21 22:00",
-          "fhs": 6.4,
+          "fhs": 5.8,
           "phase": "DIST",
-          "nbp": "-59%",
-          "icr": 2.4,
+          "nbp": "-60%",
+          "icr": 1.49,
           "flow": "DIST"
         },
         {
           "ts": "03-22 00:00",
-          "fhs": 6.4,
+          "fhs": 5.8,
           "phase": "DIST",
-          "nbp": "-58%",
-          "icr": 2.41,
+          "nbp": "-61%",
+          "icr": 1.49,
           "flow": "DIST"
         },
         {
           "ts": "03-22 02:00",
-          "fhs": 6.4,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-59%",
-          "icr": 2.36,
+          "nbp": "-75%",
+          "icr": 1.47,
           "flow": "DIST"
         },
         {
           "ts": "03-22 04:00",
-          "fhs": 6.4,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-59%",
-          "icr": 2.38,
+          "nbp": "-70%",
+          "icr": 1.47,
           "flow": "DIST"
         },
         {
           "ts": "03-22 06:00",
-          "fhs": 6.4,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-60%",
-          "icr": 2.38,
+          "nbp": "-71%",
+          "icr": 1.47,
           "flow": "DIST"
         },
         {
           "ts": "03-22 08:00",
-          "fhs": 6.4,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-61%",
-          "icr": 2.38,
+          "nbp": "-71%",
+          "icr": 1.47,
           "flow": "DIST"
         },
         {
           "ts": "03-22 10:00",
-          "fhs": 6.4,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-63%",
-          "icr": 2.36,
+          "nbp": "-67%",
+          "icr": 1.48,
           "flow": "DIST"
         },
         {
           "ts": "03-22 12:00",
-          "fhs": 6.4,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-65%",
-          "icr": 2.36,
+          "nbp": "-62%",
+          "icr": 1.48,
           "flow": "DIST"
         },
         {
           "ts": "03-22 14:00",
-          "fhs": 6.4,
+          "fhs": 7.2,
           "phase": "DIST",
           "nbp": "-63%",
-          "icr": 2.35,
+          "icr": 1.45,
           "flow": "DIST"
         },
         {
           "ts": "03-22 16:00",
-          "fhs": 6.4,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-61%",
-          "icr": 2.35,
+          "nbp": "-56%",
+          "icr": 1.51,
           "flow": "DIST"
         },
         {
           "ts": "03-22 18:00",
-          "fhs": 6.5,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-57%",
-          "icr": 2.33,
+          "nbp": "-52%",
+          "icr": 1.42,
           "flow": "DIST"
         },
         {
           "ts": "03-22 20:00",
-          "fhs": 6.5,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-55%",
-          "icr": 2.31,
+          "nbp": "-52%",
+          "icr": 1.41,
           "flow": "DIST"
         },
         {
           "ts": "03-22 22:00",
-          "fhs": 6.5,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-53%",
-          "icr": 2.31,
+          "nbp": "-51%",
+          "icr": 1.41,
           "flow": "DIST"
         },
         {
           "ts": "03-23 00:00",
-          "fhs": 6.5,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-51%",
-          "icr": 2.33,
+          "nbp": "-47%",
+          "icr": 1.43,
           "flow": "DIST"
         },
         {
           "ts": "03-23 02:00",
-          "fhs": 6.5,
+          "fhs": 7.2,
           "phase": "DIST",
-          "nbp": "-51%",
-          "icr": 2.3,
+          "nbp": "-43%",
+          "icr": 1.42,
           "flow": "DIST"
         },
         {
           "ts": "03-23 04:00",
-          "fhs": 6.5,
+          "fhs": 7.6,
           "phase": "DIST",
-          "nbp": "-50%",
-          "icr": 2.31,
+          "nbp": "-43%",
+          "icr": 1.45,
           "flow": "DIST"
         },
         {
           "ts": "03-23 06:00",
-          "fhs": 5.3,
+          "fhs": 6.7,
           "phase": "DIST",
-          "nbp": "-48%",
-          "icr": 2.31,
+          "nbp": "-41%",
+          "icr": 1.43,
           "flow": "DIST"
         },
         {
           "ts": "03-23 08:00",
-          "fhs": 7.0,
+          "fhs": 6.4,
           "phase": "DIST",
-          "nbp": "-49%",
-          "icr": 2.3,
+          "nbp": "-40%",
+          "icr": 1.42,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 7.2,
+          "phase": "DIST",
+          "nbp": "-44%",
+          "icr": 1.39,
           "flow": "DIST"
         }
       ]
@@ -688,14 +693,6 @@
       ],
       "history": [
         {
-          "ts": "03-21 10:00",
-          "fhs": 6.7,
-          "phase": "DIST",
-          "nbp": "-14%",
-          "icr": 2.01,
-          "flow": "DIST"
-        },
-        {
           "ts": "03-21 12:00",
           "fhs": 6.7,
           "phase": "DIST",
@@ -878,442 +875,13 @@
           "nbp": "-67%",
           "icr": 2.18,
           "flow": "DIST"
-        }
-      ]
-    },
-    {
-      "symbol": "AntiHunter",
-      "address": "0xe2f3Fa",
-      "chain": "base",
-      "fhs": 6.4,
-      "fhs_label": "moderate",
-      "phase": "DISTRIBUTION",
-      "cp": 14.3,
-      "icr": 1.4164731628428222,
-      "icr_alert": true,
-      "lcr": 122.56457448432967,
-      "lcr_fragile": false,
-      "lvr": 0.06680779008166618,
-      "lvr_status": "dead",
-      "dai": -0.39622641509433965,
-      "dai_status": "sell_wall",
-      "crash_threshold": 84278.81571428572,
-      "ips_10k": 4.839086579824096,
-      "ips_50k": 20.271593128692142,
-      "ips_100k": 33.70969420352032,
-      "nbp": -39.62264150943396,
-      "nbp_status": "distribution",
-      "ev": 318.54672665646194,
-      "ev_trend": "stable",
-      "ac": 3139.2568697729994,
-      "vwad": 0.0,
-      "flow_classification": "DISTRIBUTION",
-      "bull_flag": true,
-      "bf_retracement": 48.4,
-      "bf_class": 2,
-      "fqs": 64.70272382807416,
-      "fqs_label": "Fragile",
-      "bpi": 0.0012362268635895226,
-      "bpi_label": "Improbable",
-      "fib_target": 3.97971857401132e-06,
-      "fib_upside_pct": 23.70900136808579,
-      "pole_high": 3.55213572491539e-06,
-      "pole_low": 2.86025409207408e-06,
-      "squeeze_factor": 1.1215973239253798,
-      "rsi_1h": 39.72,
-      "rsi_1d": 0,
-      "ber": 0.4754690770521434,
-      "ber_zone": "equilibrium",
-      "rmd": -0.19100000000000006,
-      "rmd_divergence": "none",
-      "si": 12.159732392537968,
-      "si_status": "active_expansion",
-      "saturated": false,
-      "wcc": 5.7894736842105265,
-      "wcc_alert": false,
-      "scr": 37.47051580736366,
-      "tci": 45,
-      "fci": 66.61208325151401,
-      "top5_pct": 37.47051580736366,
-      "top10_pct": 46.04143809879028,
-      "top20_pct": 58.24959059153619,
-      "price_usd": 3.217e-06,
-      "price_change_24h": -8.37,
-      "volume_24h": 26275.58,
-      "liquidity_usd": 393301.14,
-      "mcap": 320893.0,
-      "buys_24h": 48,
-      "sells_24h": 111,
-      "narrative_phase": "Phase: DISTRIBUTION | NBP -40% (selling pressure) | Active distribution",
-      "narrative_insight": "Moderate (FHS 6.4/10). CP 14%. Monitoring required.",
-      "narrative_structure": "Bull Flag Class 2 | Retrace 48.4% | FQS 65 (Fragile) | BPI 0.00 (Improbable) | Target 1.618: $0.000004 (+24%)",
-      "support_key": 2.86025409207408e-06,
-      "resistance_key": 3.55213572491539e-06,
-      "alerts": [
-        {
-          "severity": "warning",
-          "code": "ICR_ELEVATED",
-          "message": "Elevated concentration. ICR=1.42"
         },
         {
-          "severity": "critical",
-          "code": "INSIDER_FUNDING",
-          "message": "Insider wallets: FCI=66.6%"
-        }
-      ],
-      "top20_holders": [
-        {
-          "address": "0x498581ff718922c3f8e6a244956af099b2652b2b",
-          "usd_value": 79205.9727456076,
-          "pct_supply": 24.861127946015063,
-          "is_contract": true,
-          "entity": "Uniswap",
-          "label": "Uniswap: PoolManager"
-        },
-        {
-          "address": "0xa668ddf22a4c0ecbb31c89b16f355b26ae7703c3",
-          "usd_value": 15752.235226938787,
-          "pct_supply": 4.944303085203485,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x9b5daf8fe589a8fa66d7ff3c9ad5d18fb35504bf",
-          "usd_value": 9619.835377085687,
-          "pct_supply": 3.0194687324585887,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x3d9fe5cb537a6f8253dc000fb1a522c95db594c5",
-          "usd_value": 8025.776526952186,
-          "pct_supply": 2.5191264015345065,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x2fd1887e5d99014cb0b8884f06560ed20d65003d",
-          "usd_value": 6774.86077887738,
-          "pct_supply": 2.1264896421520207,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xb7267b31b943dab687ff4a9a63b3da28ef2b9337",
-          "usd_value": 6042.494502945257,
-          "pct_supply": 1.8966149110156019,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xbf72e1076b5fae08c9f1eb300db48c0145ae1316",
-          "usd_value": 5530.3119578451415,
-          "pct_supply": 1.7358513303908596,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x48d652666d7de8e506ce1575bfe6a171ab76e709",
-          "usd_value": 5401.558502531669,
-          "pct_supply": 1.6954382653771822,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xf703fd64093b50797abdc9e450632240fa2ba5d4",
-          "usd_value": 5226.971386215684,
-          "pct_supply": 1.6406389556029304,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x936a220132591ac87dd2d2cec4d8c26ec769dfe8",
-          "usd_value": 5105.077055903551,
-          "pct_supply": 1.6023788290400405,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xddbcdf710c21219dc5e56a6e1e8576fb4aa99d96",
-          "usd_value": 5032.353656816485,
-          "pct_supply": 1.5795524478127116,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xcd83f4c3a4b96d56367e482a3774802877b82e13",
-          "usd_value": 4403.464314376987,
-          "pct_supply": 1.3821570006727648,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x524f179c214d354c9137a198385c6546ae6e867a",
-          "usd_value": 4400.0032639400215,
-          "pct_supply": 1.3810706480309336,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x949a8d342642947b9c6098f71b6bd4242ab51248",
-          "usd_value": 4245.387385590471,
-          "pct_supply": 1.3325398996430624,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xdb3ded7731c781224ec292e2163d9554c094fd7c",
-          "usd_value": 4054.7307625638146,
-          "pct_supply": 1.272696701781652,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x7489a07c346ed0a9b20ad50949cc4847711664c8",
-          "usd_value": 4044.2916068926515,
-          "pct_supply": 1.2694200652378056,
-          "is_contract": true,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x2e91abc17299fa4a2b67411cba0029e02eb3872a",
-          "usd_value": 3828.7222778486866,
-          "pct_supply": 1.2017572806671075,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xfafa81e2760a33ef04e6c483edbc93c286c82c0b",
-          "usd_value": 3226.01248015634,
-          "pct_supply": 1.0125790548927487,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x674dd473efd0d824e950a63f6d9ebe9b031deefc",
-          "usd_value": 3048.90343362383,
-          "pct_supply": 0.9569881630242355,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x20e85118f45e08a2ddb9540ca30e703eee150299",
-          "usd_value": 2610.52835777,
-          "pct_supply": 0.8193912309828888,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        }
-      ],
-      "history": [
-        {
-          "ts": "03-21 10:00",
-          "fhs": 6.1,
-          "phase": "DIST",
-          "nbp": "-44%",
-          "icr": 1.48,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 12:00",
-          "fhs": 6.1,
-          "phase": "DIST",
-          "nbp": "-45%",
-          "icr": 1.49,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 14:00",
-          "fhs": 5.9,
-          "phase": "DIST",
-          "nbp": "-43%",
-          "icr": 1.55,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 16:00",
-          "fhs": 5.9,
-          "phase": "DIST",
-          "nbp": "-53%",
-          "icr": 1.48,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 18:00",
-          "fhs": 6.9,
-          "phase": "DIST",
-          "nbp": "-63%",
-          "icr": 1.46,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 20:00",
-          "fhs": 5.8,
-          "phase": "DIST",
-          "nbp": "-59%",
-          "icr": 1.49,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 22:00",
-          "fhs": 5.8,
-          "phase": "DIST",
-          "nbp": "-60%",
-          "icr": 1.49,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 00:00",
-          "fhs": 5.8,
-          "phase": "DIST",
-          "nbp": "-61%",
-          "icr": 1.49,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 02:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-75%",
-          "icr": 1.47,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 04:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-70%",
-          "icr": 1.47,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 06:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-71%",
-          "icr": 1.47,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 08:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-71%",
-          "icr": 1.47,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 10:00",
-          "fhs": 7.2,
+          "ts": "03-23 10:00",
+          "fhs": 6.5,
           "phase": "DIST",
           "nbp": "-67%",
-          "icr": 1.48,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 12:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-62%",
-          "icr": 1.48,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 14:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-63%",
-          "icr": 1.45,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 16:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-56%",
-          "icr": 1.51,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 18:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-52%",
-          "icr": 1.42,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 20:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-52%",
-          "icr": 1.41,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 22:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-51%",
-          "icr": 1.41,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-23 00:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-47%",
-          "icr": 1.43,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-23 02:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-43%",
-          "icr": 1.42,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-23 04:00",
-          "fhs": 7.6,
-          "phase": "DIST",
-          "nbp": "-43%",
-          "icr": 1.45,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-23 06:00",
-          "fhs": 6.7,
-          "phase": "DIST",
-          "nbp": "-41%",
-          "icr": 1.43,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-23 08:00",
-          "fhs": 6.4,
-          "phase": "DIST",
-          "nbp": "-40%",
-          "icr": 1.42,
+          "icr": 2.18,
           "flow": "DIST"
         }
       ]
@@ -1325,24 +893,24 @@
       "fhs": 6.4,
       "fhs_label": "moderate",
       "phase": "DISTRIBUTION",
-      "cp": 12.2,
-      "icr": 2.421313032698669,
+      "cp": 12.6,
+      "icr": 2.4465598977355705,
       "icr_alert": true,
-      "lcr": 49.76638314753175,
+      "lcr": 49.270709388776574,
       "lcr_fragile": false,
-      "lvr": 0.06669090508262322,
+      "lvr": 0.06536063220536467,
       "lvr_status": "dead",
-      "dai": -0.5353535353535354,
+      "dai": -0.5232,
       "dai_status": "sell_wall",
-      "crash_threshold": 165864.21000000002,
-      "ips_10k": 2.5187870659981906,
-      "ips_50k": 11.44121586807857,
-      "ips_100k": 20.533185642235647,
-      "nbp": -53.535353535353536,
+      "crash_threshold": 167740.1592857143,
+      "ips_10k": 2.4913195885819883,
+      "ips_50k": 11.327755569146596,
+      "ips_100k": 20.350281043995057,
+      "nbp": -52.32,
       "nbp_status": "distribution",
-      "ev": 57.7284885829322,
+      "ev": 76.42169766403693,
       "ev_trend": "stable",
-      "ac": 17322.46979865772,
+      "ac": 13085.289002557545,
       "vwad": 0.0,
       "flow_classification": "DISTRIBUTION",
       "bull_flag": false,
@@ -1357,32 +925,32 @@
       "pole_high": 0.0,
       "pole_low": 0.0,
       "squeeze_factor": 1.0,
-      "rsi_1h": 37.17,
+      "rsi_1h": 37.97,
       "rsi_1d": 0,
-      "ber": 0.031033330540749433,
-      "ber_zone": "oversold",
-      "rmd": -1.581,
+      "ber": 0.31535283630954764,
+      "ber_zone": "equilibrium",
+      "rmd": -1.594,
       "rmd_divergence": "none",
       "si": 0,
       "si_status": "active_expansion",
       "saturated": false,
-      "wcc": 3.1578947368421053,
+      "wcc": 3.684210526315789,
       "wcc_alert": false,
-      "scr": 25.01450915937235,
-      "tci": 25,
-      "fci": 33.419326282219416,
-      "top5_pct": 25.01450915937235,
-      "top10_pct": 32.962831401854494,
-      "top20_pct": 41.6726408808805,
-      "price_usd": 1.619e-05,
-      "price_change_24h": 2.98,
-      "volume_24h": 51620.96,
-      "liquidity_usd": 774032.98,
-      "mcap": 1555333.0,
-      "buys_24h": 161,
-      "sells_24h": 532,
-      "narrative_phase": "Phase: DISTRIBUTION | NBP -54% (selling pressure) | Active distribution",
-      "narrative_insight": "Moderate (FHS 6.4/10). CP 12%. Monitoring required.",
+      "scr": 24.83096173429874,
+      "tci": 30,
+      "fci": 18.221099893288873,
+      "top5_pct": 24.83096173429874,
+      "top10_pct": 32.581057587850346,
+      "top20_pct": 41.21939895266613,
+      "price_usd": 1.654e-05,
+      "price_change_24h": 3.91,
+      "volume_24h": 51163.48,
+      "liquidity_usd": 782787.41,
+      "mcap": 1588748.0,
+      "buys_24h": 149,
+      "sells_24h": 476,
+      "narrative_phase": "Phase: DISTRIBUTION | NBP -52% (selling pressure) | Active distribution",
+      "narrative_insight": "Moderate (FHS 6.4/10). CP 13%. Monitoring required.",
       "narrative_structure": "No bull flag detected.",
       "support_key": 0.0,
       "resistance_key": 0.0,
@@ -1390,26 +958,26 @@
         {
           "severity": "critical",
           "code": "ICR_HIGH",
-          "message": "Top holder can crash >30%. Threshold: $165,864. ICR=2.42"
+          "message": "Top holder can crash >30%. Threshold: $167,740. ICR=2.45"
         },
         {
           "severity": "warning",
           "code": "SELL_WALL",
-          "message": "Sell wall detected. DAI=-0.54"
+          "message": "Sell wall detected. DAI=-0.52"
         }
       ],
       "top20_holders": [
         {
           "address": "0x498581ff718922c3f8e6a244956af099b2652b2b",
-          "usd_value": 204140.13989666116,
-          "pct_supply": 12.715011853149317,
+          "usd_value": 207110.05733804338,
+          "pct_supply": 12.531464428075706,
           "is_contract": true,
           "entity": "Uniswap",
           "label": "Uniswap: PoolManager"
         },
         {
           "address": "0x000000000000000000000000000000000000dead",
-          "usd_value": 63853.90141339632,
+          "usd_value": 65731.74502698235,
           "pct_supply": 3.9771850541111604,
           "is_contract": false,
           "entity": "Burn Addresses",
@@ -1417,7 +985,7 @@
         },
         {
           "address": "0x778902475c0b5cf97bb91515a007d983ad6e70a6",
-          "usd_value": 55059.5576442213,
+          "usd_value": 56678.7733287837,
           "pct_supply": 3.4294231816918734,
           "is_contract": true,
           "entity": null,
@@ -1425,7 +993,7 @@
         },
         {
           "address": "0x066f6ee5b0ac580d07cfffeebbf4f69a05032b0b",
-          "usd_value": 43094.28824975147,
+          "usd_value": 44361.62403003402,
           "pct_supply": 2.6841579817472505,
           "is_contract": false,
           "entity": null,
@@ -1433,31 +1001,31 @@
         },
         {
           "address": "0x9a632bafc33b4eb23bceda056480c6030a8e4a10",
-          "usd_value": 35461.2861272387,
+          "usd_value": 36504.14722436207,
           "pct_supply": 2.208731088672748,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
-          "address": "0xfd77b6e259025ad609dfa7221f081b898496574c",
-          "usd_value": 32707.705132923715,
-          "pct_supply": 2.037222364327574,
-          "is_contract": true,
-          "entity": null,
-          "label": null
-        },
-        {
           "address": "0x9b5daf8fe589a8fa66d7ff3c9ad5d18fb35504bf",
-          "usd_value": 32112.80672220417,
+          "usd_value": 33057.194264434474,
           "pct_supply": 2.0001686993915757,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
+          "address": "0xfd77b6e259025ad609dfa7221f081b898496574c",
+          "usd_value": 30393.45992600777,
+          "pct_supply": 1.8389959753970346,
+          "is_contract": true,
+          "entity": null,
+          "label": null
+        },
+        {
           "address": "0x5f0b85d2c131b0e27e2304f569e2756aa9988c8d",
-          "usd_value": 22415.652523906858,
+          "usd_value": 23074.86189098793,
           "pct_supply": 1.3961746459164335,
           "is_contract": false,
           "entity": null,
@@ -1465,7 +1033,7 @@
         },
         {
           "address": "0x0712fabf212f06856036f7371d31f0689f825595",
-          "usd_value": 21163.136971580025,
+          "usd_value": 21785.511810483607,
           "pct_supply": 1.3181608358830348,
           "is_contract": false,
           "entity": null,
@@ -1473,7 +1041,7 @@
         },
         {
           "address": "0x06bcf81510e7bcf0dff40fc92b95e8d6ba8415ba",
-          "usd_value": 19211.40269463252,
+          "usd_value": 19776.38007361185,
           "pct_supply": 1.1965956969635274,
           "is_contract": false,
           "entity": null,
@@ -1481,7 +1049,7 @@
         },
         {
           "address": "0xde2fd50c56668d0e6326e32397cf5d8cf7e3bc07",
-          "usd_value": 18091.045795423226,
+          "usd_value": 18623.075226014927,
           "pct_supply": 1.126813481371753,
           "is_contract": false,
           "entity": null,
@@ -1489,7 +1057,7 @@
         },
         {
           "address": "0x78fbd0924400a8dc33f4b198ef7b3de7e223add4",
-          "usd_value": 16406.30640421414,
+          "usd_value": 16888.79027789685,
           "pct_supply": 1.0218783062536456,
           "is_contract": false,
           "entity": null,
@@ -1497,7 +1065,7 @@
         },
         {
           "address": "0xcbaa21e461d7c061706f9f5a101aa38d99b71d29",
-          "usd_value": 15314.969774663065,
+          "usd_value": 15765.359140810402,
           "pct_supply": 0.9539036385202817,
           "is_contract": false,
           "entity": null,
@@ -1505,7 +1073,7 @@
         },
         {
           "address": "0xacaf65505d9a48cd7a9be7eba5f25d886792354a",
-          "usd_value": 15290.541738675087,
+          "usd_value": 15740.21271439745,
           "pct_supply": 0.9523821211582697,
           "is_contract": false,
           "entity": null,
@@ -1513,7 +1081,7 @@
         },
         {
           "address": "0xa705dd88aea423147d409c486d982f022d862a2c",
-          "usd_value": 15044.700457235655,
+          "usd_value": 15487.141624440634,
           "pct_supply": 0.9370697244435513,
           "is_contract": false,
           "entity": null,
@@ -1521,7 +1089,7 @@
         },
         {
           "address": "0x0646e427e490f330850e749d606a2a0b90abda67",
-          "usd_value": 12921.49465187736,
+          "usd_value": 13301.495649043107,
           "pct_supply": 0.8048243610599843,
           "is_contract": false,
           "entity": null,
@@ -1529,23 +1097,15 @@
         },
         {
           "address": "0xc0603f5cca3d74bc8049614f8089c5a165c3160e",
-          "usd_value": 12872.972760002305,
+          "usd_value": 13251.546804033478,
           "pct_supply": 0.8018021409780305,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
-          "address": "0x1f9ba3e5ebcd2f4ca3cdeffa5ecdf1c03cf1865d",
-          "usd_value": 11805.773559786176,
-          "pct_supply": 0.7353308899673836,
-          "is_contract": true,
-          "entity": null,
-          "label": null
-        },
-        {
           "address": "0x7e23677b7b83f6e81d9137813f279e73e70be97c",
-          "usd_value": 11067.592751670696,
+          "usd_value": 11393.073386470805,
           "pct_supply": 0.6893527803721466,
           "is_contract": false,
           "entity": null,
@@ -1553,22 +1113,22 @@
         },
         {
           "address": "0xdc686030b62684de9828c672683f80b1c9159888",
-          "usd_value": 11021.021140638693,
+          "usd_value": 11345.132177020929,
           "pct_supply": 0.6864520349009623,
           "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x1f9ba3e5ebcd2f4ca3cdeffa5ecdf1c03cf1865d",
+          "usd_value": 10971.794904003225,
+          "pct_supply": 0.6638627757571633,
+          "is_contract": true,
           "entity": null,
           "label": null
         }
       ],
       "history": [
-        {
-          "ts": "03-21 10:00",
-          "fhs": 5.1,
-          "phase": "DIST",
-          "nbp": "-52%",
-          "icr": 2.58,
-          "flow": "DIST"
-        },
         {
           "ts": "03-21 12:00",
           "fhs": 5.0,
@@ -1751,6 +1311,14 @@
           "phase": "DIST",
           "nbp": "-54%",
           "icr": 2.42,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 6.4,
+          "phase": "DIST",
+          "nbp": "-52%",
+          "icr": 2.45,
           "flow": "DIST"
         }
       ]
@@ -2004,14 +1572,6 @@
       ],
       "history": [
         {
-          "ts": "03-21 10:00",
-          "fhs": 4.3,
-          "phase": "DIST",
-          "nbp": "-50%",
-          "icr": 2.53,
-          "flow": "DIST"
-        },
-        {
           "ts": "03-21 12:00",
           "fhs": 6.3,
           "phase": "DIST",
@@ -2194,453 +1754,451 @@
           "nbp": "-100%",
           "icr": 2.52,
           "flow": "DIST"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 6.3,
+          "phase": "DIST",
+          "nbp": "-100%",
+          "icr": 2.52,
+          "flow": "DIST"
         }
       ]
     },
     {
-      "symbol": "Lumen",
-      "address": "0xa9FEE7",
+      "symbol": "Doppel",
+      "address": "0xf27b8e",
       "chain": "base",
       "fhs": 6.1,
       "fhs_label": "moderate",
-      "phase": "ACCUMULATION",
-      "cp": 35.2,
-      "icr": 2.483259692243581,
+      "phase": "DISTRIBUTION",
+      "cp": 2.9,
+      "icr": 2.519442280652611,
       "icr_alert": true,
-      "lcr": 84.08922313522655,
+      "lcr": 57.66154968812326,
       "lcr_fragile": false,
-      "lvr": 0.037303066235644784,
-      "lvr_status": "dead",
-      "dai": 0.4222222222222222,
-      "dai_status": "buy_wall",
-      "crash_threshold": 78001.34357142859,
-      "ips_10k": 5.208248292404184,
-      "ips_50k": 21.55143291490436,
-      "ips_100k": 35.460598691571285,
-      "nbp": 42.22222222222222,
-      "nbp_status": "accumulation",
-      "ev": 65.54455372628152,
+      "lvr": 0.14515050642793054,
+      "lvr_status": "suspicious",
+      "dai": -0.5545851528384279,
+      "dai_status": "sell_wall",
+      "crash_threshold": 60279.34285714286,
+      "ips_10k": 6.637823112634565,
+      "ips_50k": 26.225821104232956,
+      "ips_100k": 41.55381343501275,
+      "nbp": -55.45851528384279,
+      "nbp_status": "distribution",
+      "ev": 224.82719164877193,
       "ev_trend": "stable",
-      "ac": 15256.797752808987,
+      "ac": 4447.860566448802,
       "vwad": 0.0,
-      "flow_classification": "ACCUMULATION",
+      "flow_classification": "DISTRIBUTION",
       "bull_flag": true,
-      "bf_retracement": 5.9,
-      "bf_class": 1,
-      "fqs": 99.60217914063095,
-      "fqs_label": "Fragile",
-      "bpi": 0.7117757558619472,
+      "bf_retracement": 60.6,
+      "bf_class": 3,
+      "fqs": 110.49169795486637,
+      "fqs_label": "Standard",
+      "bpi": 0.570440689478692,
       "bpi_label": "Improbable",
-      "fib_target": 4.674248713556976e-06,
-      "fib_upside_pct": 8.000201329874677,
-      "pole_high": 4.35835439301057e-06,
-      "pole_low": 3.84719853452124e-06,
-      "squeeze_factor": 1.0,
-      "rsi_1h": 76.33,
+      "fib_target": 6.8198175064830156e-06,
+      "fib_upside_pct": 35.39443133776087,
+      "pole_high": 5.91987771905016e-06,
+      "pole_low": 4.46366447077693e-06,
+      "squeeze_factor": 1.0136949704364402,
+      "rsi_1h": 38.18,
       "rsi_1d": 0,
-      "ber": 1.0104261613860344,
-      "ber_zone": "overbought",
-      "rmd": 2.544,
+      "ber": 0.33850948824404475,
+      "ber_zone": "equilibrium",
+      "rmd": -0.264,
       "rmd_divergence": "none",
-      "si": 0,
+      "si": 1.3694970436440208,
       "si_status": "active_expansion",
-      "saturated": true,
-      "wcc": 3.1578947368421053,
+      "saturated": false,
+      "wcc": 8.947368421052632,
       "wcc_alert": false,
-      "scr": 44.50001999372817,
-      "tci": 25,
-      "fci": 32.461292037676124,
-      "top5_pct": 44.50001999372817,
-      "top10_pct": 53.80089552661325,
-      "top20_pct": 61.817372744001055,
-      "price_usd": 4.328e-06,
-      "price_change_24h": 0.89,
-      "volume_24h": 13578.55,
-      "liquidity_usd": 364006.27,
-      "mcap": 432881.0,
-      "buys_24h": 160,
-      "sells_24h": 65,
-      "narrative_phase": "Phase: ACCUMULATION | NBP +42% (buying pressure) | Smart money accumulating",
-      "narrative_insight": "Moderate (FHS 6.1/10). CP 35%. Monitoring required.",
-      "narrative_structure": "Bull Flag Class 1 | Retrace 5.9% | FQS 100 (Fragile) | BPI 0.71 (Improbable) | Target 1.618: $0.000005 (+8%)",
-      "support_key": 3.84719853452124e-06,
-      "resistance_key": 4.35835439301057e-06,
+      "scr": 30.39582333250618,
+      "tci": 55,
+      "fci": 58.31695853815515,
+      "top5_pct": 30.39582333250618,
+      "top10_pct": 38.64396800107835,
+      "top20_pct": 51.149005060272216,
+      "price_usd": 5.037e-06,
+      "price_change_24h": -9.18,
+      "volume_24h": 40831.36,
+      "liquidity_usd": 281303.6,
+      "mcap": 486608.0,
+      "buys_24h": 51,
+      "sells_24h": 178,
+      "narrative_phase": "Phase: DISTRIBUTION | NBP -55% (selling pressure) | Active distribution",
+      "narrative_insight": "Moderate (FHS 6.1/10). CP 3%. Monitoring required.",
+      "narrative_structure": "Bull Flag Class 3 | Retrace 60.6% | FQS 110 (Standard) | BPI 0.57 (Improbable) | Target 1.618: $0.000007 (+35%)",
+      "support_key": 4.46366447077693e-06,
+      "resistance_key": 5.91987771905016e-06,
       "alerts": [
         {
           "severity": "critical",
           "code": "ICR_HIGH",
-          "message": "Top holder can crash >30%. Threshold: $78,001. ICR=2.48"
+          "message": "Top holder can crash >30%. Threshold: $60,279. ICR=2.52"
         },
         {
           "severity": "warning",
-          "code": "BUY_WALL",
-          "message": "Buy wall detected. DAI=0.42"
-        },
-        {
-          "severity": "warning",
-          "code": "SATURATED",
-          "message": "Saturated: RSI=76.3, BER=1.01"
-        },
-        {
-          "severity": "warning",
-          "code": "CENTRALIZED",
-          "message": "Centralized supply: Top5=44.5%"
+          "code": "SELL_WALL",
+          "message": "Sell wall detected. DAI=-0.55"
         }
       ],
       "top20_holders": [
         {
           "address": "0x498581ff718922c3f8e6a244956af099b2652b2b",
-          "usd_value": 97762.07673313604,
-          "pct_supply": 22.45982675693473,
+          "usd_value": 98346.71334049203,
+          "pct_supply": 19.683432712476357,
           "is_contract": true,
           "entity": "Uniswap",
           "label": "Uniswap: PoolManager"
         },
         {
-          "address": "0x38488b6ed75be4956b93adc4e8475e6b09c5a93b",
-          "usd_value": 51959.860496670844,
-          "pct_supply": 11.937240943186419,
+          "address": "0x000000000000000000000000000000000000dead",
+          "usd_value": 15731.799644905122,
+          "pct_supply": 3.14861380964071,
+          "is_contract": false,
+          "entity": "Burn Addresses",
+          "label": "Burn Address: 0x00...dEaD"
+        },
+        {
+          "address": "0xcd83f4c3a4b96d56367e482a3774802877b82e13",
+          "usd_value": 13465.43485426853,
+          "pct_supply": 2.6950161514863944,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x08a45d496ec763e503f89d2ce3337cd25be0e560",
+          "usd_value": 13416.037397387676,
+          "pct_supply": 2.685129582981401,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x7769866270304ec1b6b3cbd6a6eefcdf66f3d68d",
+          "usd_value": 10910.33980718732,
+          "pct_supply": 2.1836310759213164,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x7f841af39a9229b2c795393d72be3f29cb7a9a24",
+          "usd_value": 9339.508206616536,
+          "pct_supply": 1.869239704189159,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x859bc5fe903dfe749fe3331512ff7297d2e924f3",
+          "usd_value": 8622.573131285031,
+          "pct_supply": 1.7257499744851807,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x3b787a16f51a5fa01fc3918085c9480fbe25aae9",
+          "usd_value": 7932.821098566877,
+          "pct_supply": 1.5877007477937206,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
-          "address": "0x2e100b1e4cec437468c44435fd4fd81cbe8bf6e5",
-          "usd_value": 19649.080662202425,
-          "pct_supply": 4.514173208602892,
+          "address": "0xe37de56465af7b098e980b9e7cbc350b1b134ad5",
+          "usd_value": 7821.668193996269,
+          "pct_supply": 1.5654542421038242,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
-          "address": "0x515fe019bb81220c45f2f6f119a93202a1c21403",
-          "usd_value": 13010.130475127888,
-          "pct_supply": 2.988943016770506,
+          "address": "0x936a220132591ac87dd2d2cec4d8c26ec769dfe8",
+          "usd_value": 7494.631254906085,
+          "pct_supply": 1.5000000000002858,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xca8056ca9a945d691ec4d26cb32b473c0f09ba2a",
+          "usd_value": 7341.765505163137,
+          "pct_supply": 1.469404949114445,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xeda614d4f7ec885b914712ade5bc6fa770e9a08f",
+          "usd_value": 7179.942616097633,
+          "pct_supply": 1.43701718708287,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x7ad3c2303655f78594e4f976ddb873aef9322efc",
+          "usd_value": 6543.2244206586465,
+          "pct_supply": 1.3095823259569868,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x3eca307c62c524f707c6580339787b38aee4a89c",
+          "usd_value": 6524.624478621325,
+          "pct_supply": 1.3058596727527045,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x85718c19c52107fa97dbc4f4dd76e96c3f7215f8",
+          "usd_value": 6346.418546143084,
+          "pct_supply": 1.270192954854819,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
-          "address": "0xf3622742b1e446d92e45e22923ef11c2fcd55d68",
-          "usd_value": 11316.444064634383,
-          "pct_supply": 2.599836068233627,
+          "address": "0xac8a6c9d8a549b5b457613e591dd4bb5ad2f0b5f",
+          "usd_value": 6245.526045753881,
+          "pct_supply": 1.25,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x4a790b3d830a0a63246fb8283d0d7b208f968c23",
+          "usd_value": 6054.898978340666,
+          "pct_supply": 1.2118472755503888,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x923aa15bc94ea568a485306edd47221abae2ba3b",
+          "usd_value": 5995.705003923726,
+          "pct_supply": 1.2,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x265b3e14ecc4045159d1f360a02b9c860c361631",
+          "usd_value": 5234.1796248265055,
+          "pct_supply": 1.0475858211305205,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xf3973c5d3d7dcfc34daa7ba3d15c9f0f46ab173b",
+          "usd_value": 5014.142505521631,
+          "pct_supply": 1.0035468727511303,
           "is_contract": true,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xb47b3cfcc0d7850fd701f1c8bd4599fc249a92c7",
-          "usd_value": 11147.382993569623,
-          "pct_supply": 2.5609960344051586,
-          "is_contract": true,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x28e5d92148aa12b0fccd268ff643be86bbb5265e",
-          "usd_value": 9892.644722309933,
-          "pct_supply": 2.272732884321763,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xe5387a884a9714304c516f70c8a319b7bf1b44ec",
-          "usd_value": 7498.06683060925,
-          "pct_supply": 1.7226033617013188,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x4409d79d6518b9b4d43d00bd06785e3eb695f65a",
-          "usd_value": 6749.378911558142,
-          "pct_supply": 1.5506000500000001,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x53e6b6ef95a443c393d6578bc387b98aadc67cf7",
-          "usd_value": 5196.939773257692,
-          "pct_supply": 1.1939432024568364,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x520bec061113167c59b1b7b87ced17db0df69907",
-          "usd_value": 4876.055112509357,
-          "pct_supply": 1.1202232679976025,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xa9a8a0cfd1904d16ea097154bd7c4bba159e51d9",
-          "usd_value": 4352.752930427251,
-          "pct_supply": 1.0,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x7e088fd5312edd6a6a9203e743d09c134af1a29c",
-          "usd_value": 3811.5823534240008,
-          "pct_supply": 0.8756716529393891,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xb7656dd77e7a2ce907622448ec463a226dc1dd06",
-          "usd_value": 3393.216355848554,
-          "pct_supply": 0.7795563888151785,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x32e8f4d3c835513148ac21ff42f82169bcf2eb56",
-          "usd_value": 3334.1102944254762,
-          "pct_supply": 0.7659773820652419,
-          "is_contract": true,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x527fe4752386cbc3c1db3db2d3f2b0afbc8c5083",
-          "usd_value": 3154.0449674362944,
-          "pct_supply": 0.7246092341672846,
-          "is_contract": true,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x1b72db473abeec41bb4679645bedff476828aef4",
-          "usd_value": 3150.6146232161773,
-          "pct_supply": 0.7238211480353707,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x952ff99efe64a43b915e8188aeb5cb8bd3c20c17",
-          "usd_value": 2999.7471939287016,
-          "pct_supply": 0.6891609153736775,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x2207cf5db28dbda3ed55ae3f9e83e6dbf64a07fd",
-          "usd_value": 2923.3669517550306,
-          "pct_supply": 0.6716133441252047,
-          "is_contract": true,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xe5a413855c46ee71e3487992ed679bfec3dc81dd",
-          "usd_value": 2898.253916717204,
-          "pct_supply": 0.6658438838688511,
-          "is_contract": false,
           "entity": null,
           "label": null
         }
       ],
       "history": [
         {
-          "ts": "03-21 10:00",
-          "fhs": 5.3,
-          "phase": "CONS",
-          "nbp": "3%",
-          "icr": 2.46,
-          "flow": "NEUT"
-        },
-        {
           "ts": "03-21 12:00",
-          "fhs": 5.5,
-          "phase": "CONS",
-          "nbp": "-1%",
-          "icr": 2.42,
-          "flow": "NEUT"
+          "fhs": 6.2,
+          "phase": "DIST",
+          "nbp": "-43%",
+          "icr": 2.56,
+          "flow": "DIST"
         },
         {
           "ts": "03-21 14:00",
-          "fhs": 5.8,
-          "phase": "CONS",
-          "nbp": "5%",
-          "icr": 2.42,
-          "flow": "NEUT"
+          "fhs": 6.2,
+          "phase": "DIST",
+          "nbp": "-44%",
+          "icr": 2.59,
+          "flow": "DIST"
         },
         {
           "ts": "03-21 16:00",
-          "fhs": 5.9,
-          "phase": "CONS",
-          "nbp": "5%",
-          "icr": 2.46,
-          "flow": "NEUT"
+          "fhs": 6.1,
+          "phase": "DIST",
+          "nbp": "-43%",
+          "icr": 2.66,
+          "flow": "DIST"
         },
         {
           "ts": "03-21 18:00",
-          "fhs": 5.8,
-          "phase": "CONS",
-          "nbp": "8%",
-          "icr": 2.41,
-          "flow": "NEUT"
+          "fhs": 6.2,
+          "phase": "DIST",
+          "nbp": "-44%",
+          "icr": 2.58,
+          "flow": "DIST"
         },
         {
           "ts": "03-21 20:00",
-          "fhs": 6.5,
-          "phase": "CONS",
-          "nbp": "11%",
-          "icr": 2.37,
-          "flow": "NEUT"
+          "fhs": 6.2,
+          "phase": "DIST",
+          "nbp": "-44%",
+          "icr": 2.54,
+          "flow": "DIST"
         },
         {
           "ts": "03-21 22:00",
-          "fhs": 6.5,
-          "phase": "CONS",
-          "nbp": "19%",
-          "icr": 2.39,
-          "flow": "NEUT"
+          "fhs": 6.2,
+          "phase": "DIST",
+          "nbp": "-43%",
+          "icr": 2.59,
+          "flow": "DIST"
         },
         {
           "ts": "03-22 00:00",
-          "fhs": 6.4,
-          "phase": "CONS",
-          "nbp": "25%",
-          "icr": 2.39,
-          "flow": "NEUT"
+          "fhs": 6.3,
+          "phase": "DIST",
+          "nbp": "-40%",
+          "icr": 2.49,
+          "flow": "DIST"
         },
         {
           "ts": "03-22 02:00",
-          "fhs": 6.5,
-          "phase": "CONS",
-          "nbp": "22%",
-          "icr": 2.35,
-          "flow": "NEUT"
+          "fhs": 6.3,
+          "phase": "DIST",
+          "nbp": "-29%",
+          "icr": 2.53,
+          "flow": "DIST"
         },
         {
           "ts": "03-22 04:00",
-          "fhs": 6.4,
-          "phase": "CONS",
-          "nbp": "22%",
-          "icr": 2.4,
-          "flow": "NEUT"
+          "fhs": 5.9,
+          "phase": "DIST",
+          "nbp": "-30%",
+          "icr": 2.56,
+          "flow": "DIST"
         },
         {
           "ts": "03-22 06:00",
-          "fhs": 6.5,
-          "phase": "CONS",
-          "nbp": "19%",
-          "icr": 2.36,
-          "flow": "NEUT"
+          "fhs": 5.3,
+          "phase": "DIST",
+          "nbp": "-32%",
+          "icr": 2.53,
+          "flow": "DIST"
         },
         {
           "ts": "03-22 08:00",
-          "fhs": 6.5,
-          "phase": "CONS",
-          "nbp": "-4%",
-          "icr": 2.35,
-          "flow": "NEUT"
+          "fhs": 5.9,
+          "phase": "DIST",
+          "nbp": "-30%",
+          "icr": 2.53,
+          "flow": "DIST"
         },
         {
           "ts": "03-22 10:00",
-          "fhs": 6.5,
-          "phase": "CONS",
-          "nbp": "-5%",
-          "icr": 2.35,
-          "flow": "NEUT"
+          "fhs": 4.5,
+          "phase": "DIST",
+          "nbp": "-28%",
+          "icr": 2.58,
+          "flow": "DIST"
         },
         {
           "ts": "03-22 12:00",
-          "fhs": 6.5,
-          "phase": "CONS",
-          "nbp": "-1%",
-          "icr": 2.36,
-          "flow": "NEUT"
+          "fhs": 5.6,
+          "phase": "DIST",
+          "nbp": "-29%",
+          "icr": 2.66,
+          "flow": "DIST"
         },
         {
           "ts": "03-22 14:00",
-          "fhs": 6.5,
+          "fhs": 5.3,
           "phase": "DIST",
-          "nbp": "-11%",
-          "icr": 2.32,
+          "nbp": "-32%",
+          "icr": 2.55,
           "flow": "DIST"
         },
         {
           "ts": "03-22 16:00",
-          "fhs": 6.5,
+          "fhs": 5.0,
           "phase": "DIST",
-          "nbp": "-13%",
-          "icr": 2.29,
+          "nbp": "-34%",
+          "icr": 2.54,
           "flow": "DIST"
         },
         {
           "ts": "03-22 18:00",
-          "fhs": 6.5,
+          "fhs": 5.0,
           "phase": "DIST",
-          "nbp": "-19%",
-          "icr": 2.28,
+          "nbp": "-34%",
+          "icr": 2.55,
           "flow": "DIST"
         },
         {
           "ts": "03-22 20:00",
-          "fhs": 6.5,
+          "fhs": 4.9,
           "phase": "DIST",
-          "nbp": "-10%",
-          "icr": 2.34,
+          "nbp": "-34%",
+          "icr": 2.55,
           "flow": "DIST"
         },
         {
           "ts": "03-22 22:00",
-          "fhs": 6.5,
-          "phase": "CONS",
-          "nbp": "-5%",
-          "icr": 2.35,
-          "flow": "NEUT"
+          "fhs": 4.9,
+          "phase": "DIST",
+          "nbp": "-38%",
+          "icr": 2.54,
+          "flow": "DIST"
         },
         {
           "ts": "03-23 00:00",
-          "fhs": 6.5,
-          "phase": "CONS",
-          "nbp": "-5%",
-          "icr": 2.37,
-          "flow": "NEUT"
+          "fhs": 4.8,
+          "phase": "DIST",
+          "nbp": "-40%",
+          "icr": 2.55,
+          "flow": "DIST"
         },
         {
           "ts": "03-23 02:00",
-          "fhs": 6.5,
-          "phase": "CONS",
-          "nbp": "6%",
-          "icr": 2.36,
-          "flow": "NEUT"
+          "fhs": 5.2,
+          "phase": "DIST",
+          "nbp": "-55%",
+          "icr": 2.6,
+          "flow": "DIST"
         },
         {
           "ts": "03-23 04:00",
-          "fhs": 6.5,
-          "phase": "CONS",
-          "nbp": "16%",
-          "icr": 2.37,
-          "flow": "NEUT"
+          "fhs": 6.3,
+          "phase": "DIST",
+          "nbp": "-52%",
+          "icr": 2.54,
+          "flow": "DIST"
         },
         {
           "ts": "03-23 06:00",
-          "fhs": 6.6,
-          "phase": "ACCU",
-          "nbp": "39%",
-          "icr": 2.46,
-          "flow": "ACCU"
+          "fhs": 6.3,
+          "phase": "DIST",
+          "nbp": "-50%",
+          "icr": 2.52,
+          "flow": "DIST"
         },
         {
           "ts": "03-23 08:00",
+          "fhs": 5.8,
+          "phase": "DIST",
+          "nbp": "-54%",
+          "icr": 2.51,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 10:00",
           "fhs": 6.1,
-          "phase": "ACCU",
-          "nbp": "42%",
-          "icr": 2.48,
-          "flow": "ACCU"
+          "phase": "DIST",
+          "nbp": "-55%",
+          "icr": 2.52,
+          "flow": "DIST"
         }
       ]
     },
@@ -2651,24 +2209,24 @@
       "fhs": 6.0,
       "fhs_label": "moderate",
       "phase": "DISTRIBUTION",
-      "cp": 13.3,
+      "cp": 18.9,
       "icr": 3.4612584215373383,
       "icr_alert": true,
       "lcr": 115.25718261974146,
       "lcr_fragile": false,
-      "lvr": 0.007934670432771105,
+      "lvr": 0.007926323522201769,
       "lvr_status": "dead",
-      "dai": -0.5,
+      "dai": -0.3333333333333333,
       "dai_status": "sell_wall",
       "crash_threshold": 52885.264285714286,
       "ips_10k": 7.496310878009159,
       "ips_50k": 28.835238044982393,
       "ips_100k": 44.76296777581094,
-      "nbp": -50.0,
+      "nbp": -33.33333333333333,
       "nbp_status": "distribution",
-      "ev": 3278.4206387303016,
+      "ev": 3102.9547081075552,
       "ev_trend": "stable",
-      "ac": 305.02492211838006,
+      "ac": 322.27347611202634,
       "vwad": 0.0,
       "flow_classification": "DISTRIBUTION",
       "bull_flag": false,
@@ -2687,7 +2245,7 @@
       "rsi_1d": 0,
       "ber": -0.24378249739020738,
       "ber_zone": "oversold",
-      "rmd": -2.228,
+      "rmd": -2.263,
       "rmd_divergence": "none",
       "si": 0,
       "si_status": "active_expansion",
@@ -2701,14 +2259,14 @@
       "top10_pct": 88.83300896140425,
       "top20_pct": 93.5320512533502,
       "price_usd": 2.141e-06,
-      "price_change_24h": -6.42,
-      "volume_24h": 1958.26,
+      "price_change_24h": -6.07,
+      "volume_24h": 1956.2,
       "liquidity_usd": 246797.9,
       "mcap": 214128.0,
       "buys_24h": 2,
-      "sells_24h": 6,
-      "narrative_phase": "Phase: DISTRIBUTION | NBP -50% (selling pressure) | Active distribution",
-      "narrative_insight": "Moderate (FHS 6.0/10). CP 13%. Monitoring required.",
+      "sells_24h": 4,
+      "narrative_phase": "Phase: DISTRIBUTION | NBP -33% (selling pressure) | Active distribution",
+      "narrative_insight": "Moderate (FHS 6.0/10). CP 19%. Monitoring required.",
       "narrative_structure": "No bull flag detected.",
       "support_key": 0.0,
       "resistance_key": 0.0,
@@ -2717,11 +2275,6 @@
           "severity": "critical",
           "code": "ICR_HIGH",
           "message": "Top holder can crash >30%. Threshold: $52,885. ICR=3.46"
-        },
-        {
-          "severity": "warning",
-          "code": "SELL_WALL",
-          "message": "Sell wall detected. DAI=-0.50"
         },
         {
           "severity": "warning",
@@ -2892,14 +2445,6 @@
         }
       ],
       "history": [
-        {
-          "ts": "03-21 10:00",
-          "fhs": 6.0,
-          "phase": "ACCU",
-          "nbp": "24%",
-          "icr": 3.46,
-          "flow": "ACCU"
-        },
         {
           "ts": "03-21 12:00",
           "fhs": 4.5,
@@ -3083,6 +2628,14 @@
           "nbp": "-50%",
           "icr": 3.46,
           "flow": "DIST"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 6.0,
+          "phase": "DIST",
+          "nbp": "-33%",
+          "icr": 3.46,
+          "flow": "DIST"
         }
       ]
     },
@@ -3093,24 +2646,24 @@
       "fhs": 6.0,
       "fhs_label": "moderate",
       "phase": "CONSOLIDATION",
-      "cp": 31.2,
-      "icr": 14.239717770315451,
+      "cp": 28.8,
+      "icr": 14.15336367804906,
       "icr_alert": true,
-      "lcr": 26.07515568666011,
+      "lcr": 26.08196301031727,
       "lcr_fragile": false,
-      "lvr": 0.053860145081471626,
+      "lvr": 0.05160144613495118,
       "lvr_status": "dead",
-      "dai": 0.037037037037037035,
+      "dai": -0.037037037037037035,
       "dai_status": "balanced",
-      "crash_threshold": 17047.56428571429,
-      "ips_10k": 20.089337282897045,
-      "ips_50k": 55.69314857316938,
-      "ips_100k": 71.54219576591822,
-      "nbp": 3.7037037037037033,
+      "crash_threshold": 17004.340714285714,
+      "ips_10k": 20.13012312891764,
+      "ips_50k": 55.7557838680564,
+      "ips_100k": 71.59385351016968,
+      "nbp": -3.7037037037037033,
       "nbp_status": "neutral",
-      "ev": 1734.0123131210823,
+      "ev": 2046.517988844279,
       "ev_trend": "stable",
-      "ac": 576.6971736204575,
+      "ac": 488.63484486873506,
       "vwad": 0.0,
       "flow_classification": "NEUTRAL",
       "bull_flag": false,
@@ -3125,32 +2678,32 @@
       "pole_high": 0.0,
       "pole_low": 0.0,
       "squeeze_factor": 1.0,
-      "rsi_1h": 37.18,
+      "rsi_1h": 26.08,
       "rsi_1d": 0,
-      "ber": 0.2796715975722429,
+      "ber": 0.3036595238501298,
       "ber_zone": "equilibrium",
-      "rmd": -0.539,
+      "rmd": -1.5540000000000003,
       "rmd_divergence": "none",
-      "si": 20.35327227169065,
+      "si": 22.95600444717128,
       "si_status": "active_expansion",
       "saturated": false,
       "wcc": 3.1578947368421053,
       "wcc_alert": false,
-      "scr": 79.4795680612929,
+      "scr": 79.48296893670887,
       "tci": 25,
       "fci": 50,
-      "top5_pct": 79.4795680612929,
-      "top10_pct": 85.05766574134138,
-      "top20_pct": 89.70213078091834,
-      "price_usd": 0.000305,
-      "price_change_24h": -7.43,
-      "volume_24h": 4284.86,
-      "liquidity_usd": 79555.3,
-      "mcap": 305100.0,
-      "buys_24h": 14,
-      "sells_24h": 13,
-      "narrative_phase": "Phase: CONSOLIDATION | NBP +4% | EV 1734.01",
-      "narrative_insight": "Moderate (FHS 6.0/10). CP 31%. Monitoring required.",
+      "top5_pct": 79.48296893670887,
+      "top10_pct": 85.06106661675736,
+      "top20_pct": 89.70553165633432,
+      "price_usd": 0.0003042,
+      "price_change_24h": -8.38,
+      "volume_24h": 4094.76,
+      "liquidity_usd": 79353.59,
+      "mcap": 304247.0,
+      "buys_24h": 13,
+      "sells_24h": 14,
+      "narrative_phase": "Phase: CONSOLIDATION | NBP -4% | EV 2046.52",
+      "narrative_insight": "Moderate (FHS 6.0/10). CP 29%. Monitoring required.",
       "narrative_structure": "No bull flag detected.",
       "support_key": 0.0,
       "resistance_key": 0.0,
@@ -3158,7 +2711,7 @@
         {
           "severity": "critical",
           "code": "ICR_HIGH",
-          "message": "Top holder can crash >30%. Threshold: $17,048. ICR=14.24"
+          "message": "Top holder can crash >30%. Threshold: $17,004. ICR=14.15"
         },
         {
           "severity": "warning",
@@ -3169,7 +2722,7 @@
       "top20_holders": [
         {
           "address": "0xf63ed9b895d1612b6a5e2d8e31859d1193c7f155",
-          "usd_value": 120139.51314222123,
+          "usd_value": 119103.09053922318,
           "pct_supply": 39.334863494174165,
           "is_contract": true,
           "entity": null,
@@ -3177,7 +2730,7 @@
         },
         {
           "address": "0xe2890629ef31b32132003c02b29a50a025deee8a",
-          "usd_value": 54824.24672001895,
+          "usd_value": 54351.28751611653,
           "pct_supply": 17.95,
           "is_contract": false,
           "entity": null,
@@ -3185,15 +2738,15 @@
         },
         {
           "address": "0x3fee213035fcec8cb2589f25f06197008c33641e",
-          "usd_value": 39820.41316285282,
-          "pct_supply": 13.037596666370776,
+          "usd_value": 39487.18701340506,
+          "pct_supply": 13.040997541786755,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0x9c7d938d26866fee2318a8266ef79f024534df10",
-          "usd_value": 18863.56563197325,
+          "usd_value": 18700.832944926562,
           "pct_supply": 6.176117746279593,
           "is_contract": true,
           "entity": null,
@@ -3201,7 +2754,7 @@
         },
         {
           "address": "0x39bc5c4079aa8aa58c51f28e1dcafe70d24ed5cb",
-          "usd_value": 9104.765442814534,
+          "usd_value": 9026.220221070897,
           "pct_supply": 2.9809901544683624,
           "is_contract": true,
           "entity": null,
@@ -3209,7 +2762,7 @@
         },
         {
           "address": "0xe996f822fd307f44d2b27dc68c8a57562e3c9413",
-          "usd_value": 5962.009280079824,
+          "usd_value": 5910.576067013245,
           "pct_supply": 1.9520207386334305,
           "is_contract": false,
           "entity": null,
@@ -3217,7 +2770,7 @@
         },
         {
           "address": "0xe38cca759d9ea4a6b2767c88ef559d19cc0f54b8",
-          "usd_value": 4681.682315936162,
+          "usd_value": 4641.294260038611,
           "pct_supply": 1.5328290418693247,
           "is_contract": false,
           "entity": null,
@@ -3225,7 +2778,7 @@
         },
         {
           "address": "0xd6d3db2d9235210214adb681004877c348e1e31f",
-          "usd_value": 2324.3035796420186,
+          "usd_value": 2304.2522184939294,
           "pct_supply": 0.7609999544114084,
           "is_contract": false,
           "entity": null,
@@ -3233,7 +2786,7 @@
         },
         {
           "address": "0x1a9152528aefbcd9e5df4e0770f4f510e7056913",
-          "usd_value": 2111.848158523376,
+          "usd_value": 2093.629613197639,
           "pct_supply": 0.6914399506314182,
           "is_contract": false,
           "entity": null,
@@ -3241,7 +2794,7 @@
         },
         {
           "address": "0xeca2398266c5929938740b7c5260cf80f9d4cb0a",
-          "usd_value": 1957.2042111859373,
+          "usd_value": 1940.3197521923776,
           "pct_supply": 0.6408079945029007,
           "is_contract": false,
           "entity": null,
@@ -3249,7 +2802,7 @@
         },
         {
           "address": "0x4154ff20d7e528b907b9b1dfa448f4b7bedf27ef",
-          "usd_value": 1829.098554422986,
+          "usd_value": 1813.319240562517,
           "pct_supply": 0.5988649368875678,
           "is_contract": false,
           "entity": null,
@@ -3257,7 +2810,7 @@
         },
         {
           "address": "0x9507c42252a90c2d50ac299812f3dbdb4182b02d",
-          "usd_value": 1791.8054511522173,
+          "usd_value": 1776.3478583821277,
           "pct_supply": 0.5866548064478574,
           "is_contract": false,
           "entity": null,
@@ -3265,7 +2818,7 @@
         },
         {
           "address": "0x89c7d5ae4f52b8ef8b40f7b11784a8047f5f32aa",
-          "usd_value": 1668.6023614947117,
+          "usd_value": 1654.2076202673036,
           "pct_supply": 0.5463168977366611,
           "is_contract": false,
           "entity": null,
@@ -3273,7 +2826,7 @@
         },
         {
           "address": "0x823b6b8da270906f0a231223e46edb5bdea3ff13",
-          "usd_value": 1662.8383648721929,
+          "usd_value": 1648.4933486372286,
           "pct_supply": 0.5444297082983349,
           "is_contract": false,
           "entity": null,
@@ -3281,7 +2834,7 @@
         },
         {
           "address": "0xbd543731c48a75e73488793f8dfdabb386b4abba",
-          "usd_value": 1323.3580286442009,
+          "usd_value": 1311.941649995137,
           "pct_supply": 0.4332804923973463,
           "is_contract": false,
           "entity": null,
@@ -3289,7 +2842,7 @@
         },
         {
           "address": "0xdc2a2492f03366cbf4e9cf1abcfea182b30d91a6",
-          "usd_value": 1276.0223529926056,
+          "usd_value": 1265.0143309523737,
           "pct_supply": 0.41778232454680875,
           "is_contract": false,
           "entity": null,
@@ -3297,7 +2850,7 @@
         },
         {
           "address": "0x1dbfd454d47a2012fc9ed952b5990f0f91114675",
-          "usd_value": 1258.2766185112914,
+          "usd_value": 1247.4216858239477,
           "pct_supply": 0.41197219576261734,
           "is_contract": false,
           "entity": null,
@@ -3305,7 +2858,7 @@
         },
         {
           "address": "0x3f0c1ba3d72db1bdef9b9ef134f2cb38bb5dabba",
-          "usd_value": 1244.5026379054552,
+          "usd_value": 1233.7665309438014,
           "pct_supply": 0.40746245843531037,
           "is_contract": false,
           "entity": null,
@@ -3313,7 +2866,7 @@
         },
         {
           "address": "0xfee7a135e07bca50d4e7a4cc65fb4a28391fac40",
-          "usd_value": 1139.7055670441487,
+          "usd_value": 1129.8735261147924,
           "pct_supply": 0.37315086211612974,
           "is_contract": false,
           "entity": null,
@@ -3321,7 +2874,7 @@
         },
         {
           "address": "0xcfbf780eab68d7685b4d75f799e861051507947b",
-          "usd_value": 991.2662307746558,
+          "usd_value": 982.7147500811445,
           "pct_supply": 0.3245503569483229,
           "is_contract": false,
           "entity": null,
@@ -3329,14 +2882,6 @@
         }
       ],
       "history": [
-        {
-          "ts": "03-21 10:00",
-          "fhs": 5.9,
-          "phase": "DIST",
-          "nbp": "-31%",
-          "icr": 14.64,
-          "flow": "DIST"
-        },
         {
           "ts": "03-21 12:00",
           "fhs": 5.9,
@@ -3520,6 +3065,446 @@
           "nbp": "4%",
           "icr": 14.24,
           "flow": "NEUT"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 6.0,
+          "phase": "CONS",
+          "nbp": "-4%",
+          "icr": 14.15,
+          "flow": "NEUT"
+        }
+      ]
+    },
+    {
+      "symbol": "MOLT",
+      "address": "0xB69555",
+      "chain": "base",
+      "fhs": 5.9,
+      "fhs_label": "moderate",
+      "phase": "DISTRIBUTION",
+      "cp": 0,
+      "icr": 1.6438237447482602,
+      "icr_alert": true,
+      "lcr": 64.38984819795141,
+      "lcr_fragile": false,
+      "lvr": 0.10241596249919065,
+      "lvr_status": "suspicious",
+      "dai": -0.3917808219178082,
+      "dai_status": "sell_wall",
+      "crash_threshold": 344522.85000000003,
+      "ips_10k": 1.2286723218767626,
+      "ips_50k": 5.855578137917954,
+      "ips_100k": 11.06333410278822,
+      "nbp": -39.178082191780824,
+      "nbp_status": "distribution",
+      "ev": 54.35388264359066,
+      "ev_trend": "stable",
+      "ac": 18397.949720670393,
+      "vwad": 0.0,
+      "flow_classification": "DISTRIBUTION",
+      "bull_flag": true,
+      "bf_retracement": 46.2,
+      "bf_class": 2,
+      "fqs": 27.324912026452406,
+      "fqs_label": "Fragile",
+      "bpi": 0.455160710108678,
+      "bpi_label": "Improbable",
+      "fib_target": 3.267689831045577e-05,
+      "fib_upside_pct": 30.917060538684964,
+      "pole_high": 2.82607358528581e-05,
+      "pole_low": 2.11148419085253e-05,
+      "squeeze_factor": 1.2242817016502248,
+      "rsi_1h": 62.92,
+      "rsi_1d": 0,
+      "ber": 0.6529135750983412,
+      "ber_zone": "equilibrium",
+      "rmd": 2.1870000000000003,
+      "rmd_divergence": "none",
+      "si": 22.42817016502248,
+      "si_status": "active_expansion",
+      "saturated": false,
+      "wcc": 7.368421052631578,
+      "wcc_alert": false,
+      "scr": 24.123523102094303,
+      "tci": 30,
+      "fci": 57.50877252623229,
+      "top5_pct": 24.123523102094303,
+      "top10_pct": 30.316379972866176,
+      "top20_pct": 38.65046508636888,
+      "price_usd": 2.496e-05,
+      "price_change_24h": -8.95,
+      "volume_24h": 164661.65,
+      "liquidity_usd": 1607773.3,
+      "mcap": 2496936.0,
+      "buys_24h": 333,
+      "sells_24h": 762,
+      "narrative_phase": "Phase: DISTRIBUTION | NBP -39% (selling pressure) | Active distribution",
+      "narrative_insight": "Moderate (FHS 5.9/10). CP 0%. Monitoring required.",
+      "narrative_structure": "Bull Flag Class 2 | Retrace 46.2% | FQS 27 (Fragile) | BPI 0.46 (Improbable) | Target 1.618: $0.000033 (+31%)",
+      "support_key": 2.11148419085253e-05,
+      "resistance_key": 2.82607358528581e-05,
+      "alerts": [
+        {
+          "severity": "critical",
+          "code": "ICR_HIGH",
+          "message": "Top holder can crash >30%. Threshold: $344,523. ICR=1.64"
+        }
+      ],
+      "top20_holders": [
+        {
+          "address": "0x498581ff718922c3f8e6a244956af099b2652b2b",
+          "usd_value": 208957.51754642083,
+          "pct_supply": 8.90072644848242,
+          "is_contract": true,
+          "entity": "Uniswap",
+          "label": "Uniswap: PoolManager"
+        },
+        {
+          "address": "0xfc72b05ff4970b5744f29884f6d361be2ae0b9db",
+          "usd_value": 162843.1576746764,
+          "pct_supply": 6.936445347784099,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x4e3ae00e8323558fa5cac04b152238924aa31b60",
+          "usd_value": 118369.56366393423,
+          "pct_supply": 5.042054090084826,
+          "is_contract": false,
+          "entity": "MEXC",
+          "label": "MEXC: Hot Wallet"
+        },
+        {
+          "address": "0x34f4f946665d1e06c3376e2f2eee3887ec7a5868",
+          "usd_value": 43674.63791411904,
+          "pct_supply": 1.8603590307476399,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xa84f72c1c0698bf68c5875913e57a601e3acbd02",
+          "usd_value": 32489.96463919268,
+          "pct_supply": 1.3839381849953176,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xd20c77d05669a56ad239362a3557f82361cef1cf",
+          "usd_value": 31750.567309371378,
+          "pct_supply": 1.3524429153024446,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x3d7849b4114c56d10ab22fad7cdb7acad40a6164",
+          "usd_value": 30142.866432454262,
+          "pct_supply": 1.2839615039397472,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x78057826a08a028c17a7b833430242b37e6d3353",
+          "usd_value": 29199.366399871153,
+          "pct_supply": 1.2437723028391412,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x2398dfc659856785620c357bacde24a38de84194",
+          "usd_value": 27279.934433193117,
+          "pct_supply": 1.1620124357021357,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xf26af131ddac672e3bafd6fb5051acc7c1b51982",
+          "usd_value": 27013.60054356799,
+          "pct_supply": 1.1506677129884058,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xbd6b8d8fa94f7307840252548549b56a33c98054",
+          "usd_value": 26649.841745932314,
+          "pct_supply": 1.135173091933364,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xea409250bba048e3166db36d7229cc6234339533",
+          "usd_value": 22705.176118356296,
+          "pct_supply": 0.9671466428538975,
+          "is_contract": true,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x3232422f5dddfec7717abfc6cd48e95d409c8f90",
+          "usd_value": 22573.08015547385,
+          "pct_supply": 0.9615199008999771,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xaf64f47f6b27c8d69ae2950c71bb4899387e0139",
+          "usd_value": 22017.507219481497,
+          "pct_supply": 0.937854790481781,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x7a8ba143f8866242782e5b3a5ad1410bb6722206",
+          "usd_value": 18068.695870762745,
+          "pct_supply": 0.7696517508194228,
+          "is_contract": false,
+          "entity": "HTX",
+          "label": "HTX: Hot Wallet"
+        },
+        {
+          "address": "0x1af331dc34dd7c5c62af28b5685328318b61888a",
+          "usd_value": 17757.596488647534,
+          "pct_supply": 0.7564002031794379,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xd6b7467288bd5c7299df7d03f1344d3f2c038051",
+          "usd_value": 17754.876363942163,
+          "pct_supply": 0.756284337111576,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x9d703cdc89c9934d9e90a52c31d632775c9838c6",
+          "usd_value": 17195.552572205735,
+          "pct_supply": 0.7324594557441568,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x6bc5f9b852fc1af6e6362b4bf5567c798479ad4a",
+          "usd_value": 15561.747761924518,
+          "pct_supply": 0.6628661247298886,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x0c0058fe98cf6252cfd443957dc0aaf184b50f90",
+          "usd_value": 15370.712581374537,
+          "pct_supply": 0.6547288157492049,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        }
+      ],
+      "history": [
+        {
+          "ts": "03-21 12:00",
+          "fhs": 7.2,
+          "phase": "DIST",
+          "nbp": "-38%",
+          "icr": 1.69,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-21 14:00",
+          "fhs": 7.7,
+          "phase": "DIST",
+          "nbp": "-37%",
+          "icr": 1.62,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-21 16:00",
+          "fhs": 7.7,
+          "phase": "DIST",
+          "nbp": "-39%",
+          "icr": 1.64,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-21 18:00",
+          "fhs": 8.4,
+          "phase": "DIST",
+          "nbp": "-38%",
+          "icr": 1.73,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-21 20:00",
+          "fhs": 8.4,
+          "phase": "DIST",
+          "nbp": "-37%",
+          "icr": 1.72,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-21 22:00",
+          "fhs": 7.7,
+          "phase": "DIST",
+          "nbp": "-38%",
+          "icr": 1.7,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 00:00",
+          "fhs": 7.0,
+          "phase": "DIST",
+          "nbp": "-39%",
+          "icr": 1.66,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 02:00",
+          "fhs": 6.8,
+          "phase": "DIST",
+          "nbp": "-43%",
+          "icr": 1.73,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 04:00",
+          "fhs": 8.1,
+          "phase": "DIST",
+          "nbp": "-42%",
+          "icr": 1.83,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 06:00",
+          "fhs": 7.6,
+          "phase": "DIST",
+          "nbp": "-41%",
+          "icr": 1.87,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 08:00",
+          "fhs": 6.9,
+          "phase": "DIST",
+          "nbp": "-40%",
+          "icr": 1.78,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 10:00",
+          "fhs": 7.2,
+          "phase": "DIST",
+          "nbp": "-41%",
+          "icr": 1.8,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 12:00",
+          "fhs": 6.9,
+          "phase": "DIST",
+          "nbp": "-41%",
+          "icr": 1.8,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 14:00",
+          "fhs": 6.1,
+          "phase": "DIST",
+          "nbp": "-43%",
+          "icr": 1.73,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 16:00",
+          "fhs": 5.7,
+          "phase": "DIST",
+          "nbp": "-42%",
+          "icr": 1.76,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 18:00",
+          "fhs": 4.1,
+          "phase": "DIST",
+          "nbp": "-43%",
+          "icr": 1.77,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 20:00",
+          "fhs": 7.0,
+          "phase": "DIST",
+          "nbp": "-40%",
+          "icr": 1.69,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 22:00",
+          "fhs": 7.0,
+          "phase": "DIST",
+          "nbp": "-40%",
+          "icr": 1.68,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 00:00",
+          "fhs": 5.6,
+          "phase": "DIST",
+          "nbp": "-40%",
+          "icr": 1.69,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 02:00",
+          "fhs": 6.9,
+          "phase": "DIST",
+          "nbp": "-37%",
+          "icr": 1.7,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 04:00",
+          "fhs": 7.0,
+          "phase": "DIST",
+          "nbp": "-37%",
+          "icr": 1.72,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 06:00",
+          "fhs": 6.2,
+          "phase": "DIST",
+          "nbp": "-36%",
+          "icr": 1.75,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 08:00",
+          "fhs": 5.7,
+          "phase": "DIST",
+          "nbp": "-39%",
+          "icr": 1.71,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 5.9,
+          "phase": "DIST",
+          "nbp": "-39%",
+          "icr": 1.64,
+          "flow": "DIST"
         }
       ]
     },
@@ -3772,14 +3757,6 @@
       ],
       "history": [
         {
-          "ts": "03-21 10:00",
-          "fhs": 5.9,
-          "phase": "DIST",
-          "nbp": "-62%",
-          "icr": 3.31,
-          "flow": "DIST"
-        },
-        {
           "ts": "03-21 12:00",
           "fhs": 5.9,
           "phase": "DIST",
@@ -3957,6 +3934,14 @@
         },
         {
           "ts": "03-23 08:00",
+          "fhs": 5.9,
+          "phase": "DIST",
+          "nbp": "-34%",
+          "icr": 3.29,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 10:00",
           "fhs": 5.9,
           "phase": "DIST",
           "nbp": "-34%",
@@ -4214,14 +4199,6 @@
       ],
       "history": [
         {
-          "ts": "03-21 10:00",
-          "fhs": 5.9,
-          "phase": "DIST",
-          "nbp": "-80%",
-          "icr": 3.51,
-          "flow": "DIST"
-        },
-        {
           "ts": "03-21 12:00",
           "fhs": 5.9,
           "phase": "DIST",
@@ -4404,6 +4381,14 @@
           "nbp": "-80%",
           "icr": 3.48,
           "flow": "DIST"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 5.9,
+          "phase": "DIST",
+          "nbp": "-80%",
+          "icr": 3.48,
+          "flow": "DIST"
         }
       ]
     },
@@ -4414,24 +4399,24 @@
       "fhs": 5.9,
       "fhs_label": "moderate",
       "phase": "DISTRIBUTION",
-      "cp": 15.2,
-      "icr": 3.3509688403301268,
+      "cp": 15.0,
+      "icr": 3.3872203211023,
       "icr_alert": true,
-      "lcr": 37.34138998224428,
+      "lcr": 38.02527827007639,
       "lcr_fragile": false,
-      "lvr": 0.03272984064203999,
+      "lvr": 0.045266303978335684,
       "lvr_status": "dead",
-      "dai": -0.4439461883408072,
+      "dai": -0.45038167938931295,
       "dai_status": "sell_wall",
-      "crash_threshold": 275846.6357142857,
-      "ips_10k": 1.5298890991041505,
-      "ips_50k": 7.208327809952149,
-      "ips_100k": 13.447328126841654,
-      "nbp": -44.39461883408072,
+      "crash_threshold": 270432.9,
+      "ips_10k": 1.560037821556946,
+      "ips_50k": 7.342035015339714,
+      "ips_100k": 13.679701552687165,
+      "nbp": -45.038167938931295,
       "nbp_status": "distribution",
-      "ev": 109.89112708659634,
+      "ev": 157.89384317290305,
       "ev_trend": "stable",
-      "ac": 9099.91576673866,
+      "ac": 6333.369179600887,
       "vwad": 0.0,
       "flow_classification": "DISTRIBUTION",
       "bull_flag": false,
@@ -4446,31 +4431,31 @@
       "pole_high": 0.0,
       "pole_low": 0.0,
       "squeeze_factor": 1.0,
-      "rsi_1h": 41.37,
+      "rsi_1h": 33.32,
       "rsi_1d": 0,
-      "ber": 0.3412883262014791,
-      "ber_zone": "equilibrium",
-      "rmd": -0.40000000000000024,
+      "ber": -0.06922407618865944,
+      "ber_zone": "oversold",
+      "rmd": -0.766,
       "rmd_divergence": "none",
-      "si": 34.52760109344041,
-      "si_status": "normal",
+      "si": 0,
+      "si_status": "active_expansion",
       "saturated": false,
       "wcc": 4.736842105263158,
       "wcc_alert": false,
-      "scr": 26.544312365827896,
+      "scr": 26.794051779436373,
       "tci": 25,
-      "fci": 44.875413581930715,
-      "top5_pct": 26.544312365827896,
-      "top10_pct": 33.48166825980191,
-      "top20_pct": 41.68817247271437,
-      "price_usd": 3.491e-05,
-      "price_change_24h": -4.63,
-      "volume_24h": 42132.61,
-      "liquidity_usd": 1287284.3,
-      "mcap": 3447339.0,
-      "buys_24h": 186,
-      "sells_24h": 483,
-      "narrative_phase": "Phase: DISTRIBUTION | NBP -44% (selling pressure) | Active distribution",
+      "fci": 44.91700649650538,
+      "top5_pct": 26.794051779436373,
+      "top10_pct": 33.687053498601124,
+      "top20_pct": 41.89350571598756,
+      "price_usd": 3.361e-05,
+      "price_change_24h": -9.02,
+      "volume_24h": 57126.99,
+      "liquidity_usd": 1262020.2,
+      "mcap": 3318898.0,
+      "buys_24h": 180,
+      "sells_24h": 475,
+      "narrative_phase": "Phase: DISTRIBUTION | NBP -45% (selling pressure) | Active distribution",
       "narrative_insight": "Moderate (FHS 5.9/10). CP 15%. Monitoring required.",
       "narrative_structure": "No bull flag detected.",
       "support_key": 0.0,
@@ -4479,34 +4464,34 @@
         {
           "severity": "critical",
           "code": "ICR_HIGH",
-          "message": "Top holder can crash >30%. Threshold: $275,847. ICR=3.35"
+          "message": "Top holder can crash >30%. Threshold: $270,433. ICR=3.39"
         },
         {
           "severity": "warning",
           "code": "SELL_WALL",
-          "message": "Sell wall detected. DAI=-0.44"
+          "message": "Sell wall detected. DAI=-0.45"
         }
       ],
       "top20_holders": [
         {
           "address": "0x498581ff718922c3f8e6a244956af099b2652b2b",
-          "usd_value": 327055.1235462216,
-          "pct_supply": 9.39191936722274,
+          "usd_value": 326682.03638256306,
+          "pct_supply": 9.555659695921266,
           "is_contract": true,
           "entity": "Uniswap",
           "label": "Uniswap: PoolManager"
         },
         {
           "address": "0xcd55381a53da35ab1d7bc5e3fe5f76cac976fac3",
-          "usd_value": 233816.2410219198,
-          "pct_supply": 6.714413333795817,
+          "usd_value": 232487.61968075606,
+          "pct_supply": 6.80041241870577,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0xc9e377fb98a1aa6ecf4b553ce1b57940121213bf",
-          "usd_value": 206966.0037559192,
+          "usd_value": 203187.50223171487,
           "pct_supply": 5.94336513660273,
           "is_contract": true,
           "entity": null,
@@ -4514,7 +4499,7 @@
         },
         {
           "address": "0x90ef2a9211a3e7ce788561e5af54c76b0fa3aed0",
-          "usd_value": 79895.09494146318,
+          "usd_value": 78436.47984268208,
           "pct_supply": 2.2943174881061927,
           "is_contract": true,
           "entity": null,
@@ -4522,7 +4507,7 @@
         },
         {
           "address": "0x1733c2f1147dd0ea0feb45843e61842b8cd99850",
-          "usd_value": 76621.01772294313,
+          "usd_value": 75222.17623691019,
           "pct_supply": 2.2002970401004136,
           "is_contract": false,
           "entity": null,
@@ -4530,7 +4515,7 @@
         },
         {
           "address": "0x02f67b2e6afbac5d1590c39097d03829bc0beda9",
-          "usd_value": 65266.03140384764,
+          "usd_value": 64074.4936891366,
           "pct_supply": 1.8742201550526538,
           "is_contract": false,
           "entity": null,
@@ -4538,7 +4523,7 @@
         },
         {
           "address": "0x5638484ba2d2f1d1d35020572b0aa439a9869192",
-          "usd_value": 49347.12634216217,
+          "usd_value": 48446.21416955793,
           "pct_supply": 1.4170829265245881,
           "is_contract": false,
           "entity": null,
@@ -4546,7 +4531,7 @@
         },
         {
           "address": "0x000000000000000000000000000000000000dead",
-          "usd_value": 43758.30894269204,
+          "usd_value": 42959.42973530512,
           "pct_supply": 1.2565909525575856,
           "is_contract": false,
           "entity": "Burn Addresses",
@@ -4554,31 +4539,31 @@
         },
         {
           "address": "0x9b5daf8fe589a8fa66d7ff3c9ad5d18fb35504bf",
-          "usd_value": 41793.28240014351,
+          "usd_value": 41030.277953110366,
           "pct_supply": 1.2001620220398221,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
-          "address": "0x4c76ef610b9f6feeb3ca70951bef09ed31e7f6d0",
-          "usd_value": 41415.028193538616,
-          "pct_supply": 1.1892998377993604,
-          "is_contract": true,
-          "entity": null,
-          "label": null
-        },
-        {
           "address": "0x4e3ae00e8323558fa5cac04b152238924aa31b60",
-          "usd_value": 39870.48127455005,
+          "usd_value": 39142.58069410345,
           "pct_supply": 1.1449456629901018,
           "is_contract": false,
           "entity": "MEXC",
           "label": "MEXC: Hot Wallet"
         },
         {
+          "address": "0x4c76ef610b9f6feeb3ca70951bef09ed31e7f6d0",
+          "usd_value": 39140.80310837237,
+          "pct_supply": 1.1448936674640708,
+          "is_contract": true,
+          "entity": null,
+          "label": null
+        },
+        {
           "address": "0x669c1810b0eec5a39f81967623b4cce3d1b11910",
-          "usd_value": 36289.80147740135,
+          "usd_value": 35627.27203919881,
           "pct_supply": 1.0421206236816702,
           "is_contract": false,
           "entity": null,
@@ -4586,7 +4571,7 @@
         },
         {
           "address": "0x9ba58eea1ea9abdea25ba83603d54f6d9a01e506",
-          "usd_value": 34827.73532861051,
+          "usd_value": 34191.898289504636,
           "pct_supply": 1.0001350182274609,
           "is_contract": false,
           "entity": null,
@@ -4594,7 +4579,7 @@
         },
         {
           "address": "0xae287c21e05fe7ac11954a0689383c488bfbf294",
-          "usd_value": 32853.4687818253,
+          "usd_value": 32253.675194401523,
           "pct_supply": 0.943440745972186,
           "is_contract": true,
           "entity": null,
@@ -4602,7 +4587,7 @@
         },
         {
           "address": "0x6458c84d7c4b9d9d58017024a636134d26429cb4",
-          "usd_value": 27560.360760991767,
+          "usd_value": 27057.201482399134,
           "pct_supply": 0.7914405473676142,
           "is_contract": false,
           "entity": null,
@@ -4610,7 +4595,7 @@
         },
         {
           "address": "0x520bec061113167c59b1b7b87ced17db0df69907",
-          "usd_value": 26256.86585367165,
+          "usd_value": 25777.50399786692,
           "pct_supply": 0.7540085728050574,
           "is_contract": false,
           "entity": null,
@@ -4618,7 +4603,7 @@
         },
         {
           "address": "0x176f9bdad4cd9253e3a35cf2c76aaf7edcdb3d10",
-          "usd_value": 23296.226939425123,
+          "usd_value": 22870.91636956633,
           "pct_supply": 0.6689890150725043,
           "is_contract": false,
           "entity": null,
@@ -4626,7 +4611,7 @@
         },
         {
           "address": "0xfa859fe707097e72f5a4cf0909a7a8785304adbe",
-          "usd_value": 23005.06601633531,
+          "usd_value": 22585.07106339774,
           "pct_supply": 0.6606278560027574,
           "is_contract": false,
           "entity": null,
@@ -4634,7 +4619,7 @@
         },
         {
           "address": "0x9eb29ad216db3ad9795c81b76f66a65ceacf0a8d",
-          "usd_value": 22180.441107538834,
+          "usd_value": 21775.501025537742,
           "pct_supply": 0.6369474116555054,
           "is_contract": false,
           "entity": null,
@@ -4642,7 +4627,7 @@
         },
         {
           "address": "0xda88fe2e02ebdfa2e44bdcd4f99c4a770fa1d789",
-          "usd_value": 19634.92427593792,
+          "usd_value": 19276.456750074285,
           "pct_supply": 0.5638487591376055,
           "is_contract": false,
           "entity": null,
@@ -4650,14 +4635,6 @@
         }
       ],
       "history": [
-        {
-          "ts": "03-21 10:00",
-          "fhs": 5.9,
-          "phase": "DIST",
-          "nbp": "-53%",
-          "icr": 3.34,
-          "flow": "DIST"
-        },
         {
           "ts": "03-21 12:00",
           "fhs": 5.9,
@@ -4841,6 +4818,14 @@
           "nbp": "-44%",
           "icr": 3.35,
           "flow": "DIST"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 5.9,
+          "phase": "DIST",
+          "nbp": "-45%",
+          "icr": 3.39,
+          "flow": "DIST"
         }
       ]
     },
@@ -4851,24 +4836,24 @@
       "fhs": 5.9,
       "fhs_label": "moderate",
       "phase": "CONSOLIDATION",
-      "cp": 28.2,
-      "icr": 7.324241700763805,
+      "cp": 27.4,
+      "icr": 7.342852168327407,
       "icr_alert": true,
-      "lcr": 13.02830513376427,
+      "lcr": 13.048314232401099,
       "lcr_fragile": false,
-      "lvr": 0.055955448396334144,
+      "lvr": 0.054471055378811827,
       "lvr_status": "dead",
-      "dai": -0.05454545454545454,
+      "dai": -0.07920792079207921,
       "dai_status": "balanced",
-      "crash_threshold": 180803.49642857144,
-      "ips_10k": 2.315485742888579,
-      "ips_50k": 10.59603041971989,
-      "ips_100k": 19.161683072181148,
-      "nbp": -5.454545454545454,
+      "crash_threshold": 179934.98571428572,
+      "ips_10k": 2.326402128378779,
+      "ips_50k": 10.641732661371767,
+      "ips_100k": 19.236381075017462,
+      "nbp": -7.920792079207921,
       "nbp_status": "neutral",
-      "ev": 126.66166656676353,
+      "ev": 150.41815372210593,
       "ev_trend": "stable",
-      "ac": 7895.048494983277,
+      "ac": 6648.133720930233,
       "vwad": 0.0,
       "flow_classification": "NEUTRAL",
       "bull_flag": false,
@@ -4883,32 +4868,32 @@
       "pole_high": 0.0,
       "pole_low": 0.0,
       "squeeze_factor": 1.0,
-      "rsi_1h": 32.39,
+      "rsi_1h": 43.08,
       "rsi_1d": 0,
-      "ber": 0.030886238669187722,
+      "ber": 0.09232716806861088,
       "ber_zone": "oversold",
-      "rmd": -1.1629999999999998,
+      "rmd": -0.004000000000000226,
       "rmd_divergence": "none",
       "si": 0,
       "si_status": "active_expansion",
       "saturated": false,
       "wcc": 10.0,
       "wcc_alert": false,
-      "scr": 20.220447691159233,
+      "scr": 20.233123322937402,
       "tci": 50,
       "fci": 61.84639269393604,
-      "top5_pct": 20.220447691159233,
-      "top10_pct": 28.80224644062215,
-      "top20_pct": 39.98026891328826,
-      "price_usd": 6.562e-05,
-      "price_change_24h": -5.98,
-      "volume_24h": 47212.39,
-      "liquidity_usd": 843749.65,
-      "mcap": 6476281.0,
-      "buys_24h": 104,
-      "sells_24h": 116,
-      "narrative_phase": "Phase: CONSOLIDATION | NBP -5% | EV 126.66",
-      "narrative_insight": "Moderate (FHS 5.9/10). CP 28%. Monitoring required.",
+      "top5_pct": 20.233123322937402,
+      "top10_pct": 28.814922072400318,
+      "top20_pct": 39.992944545066436,
+      "price_usd": 6.521e-05,
+      "price_change_24h": -6.88,
+      "volume_24h": 45739.16,
+      "liquidity_usd": 839696.6,
+      "mcap": 6435288.0,
+      "buys_24h": 93,
+      "sells_24h": 109,
+      "narrative_phase": "Phase: CONSOLIDATION | NBP -8% | EV 150.42",
+      "narrative_insight": "Moderate (FHS 5.9/10). CP 27%. Monitoring required.",
       "narrative_structure": "No bull flag detected.",
       "support_key": 0.0,
       "resistance_key": 0.0,
@@ -4916,7 +4901,7 @@
         {
           "severity": "critical",
           "code": "ICR_HIGH",
-          "message": "Top holder can crash >30%. Threshold: $180,803. ICR=7.32"
+          "message": "Top holder can crash >30%. Threshold: $179,935. ICR=7.34"
         },
         {
           "severity": "critical",
@@ -4927,15 +4912,15 @@
       "top20_holders": [
         {
           "address": "0x5116773e18a9c7bb03ebb961b38678e45e238923",
-          "usd_value": 446553.5590285732,
-          "pct_supply": 6.818593961647645,
+          "usd_value": 446086.30949115567,
+          "pct_supply": 6.831269593425815,
           "is_contract": true,
           "entity": "Uniswap",
           "label": "Uniswap: V3 Pool"
         },
         {
           "address": "0x3e2b2cdc0ad8c5c945d1768ea36db2a6f15bbefc",
-          "usd_value": 373433.29600977636,
+          "usd_value": 372350.36358149635,
           "pct_supply": 5.702093210923243,
           "is_contract": false,
           "entity": null,
@@ -4943,7 +4928,7 @@
         },
         {
           "address": "0xb1058c959987e3513600eb5b4fd82aeee2a0e4f9",
-          "usd_value": 205358.38191747433,
+          "usd_value": 204762.8558795612,
           "pct_supply": 3.135694240042155,
           "is_contract": false,
           "entity": null,
@@ -4951,7 +4936,7 @@
         },
         {
           "address": "0xecd1f3e99caa4cdbf174ad12ce79d89a8ba54fca",
-          "usd_value": 150220.8167818666,
+          "usd_value": 149785.18612002133,
           "pct_supply": 2.2937780553151343,
           "is_contract": false,
           "entity": null,
@@ -4959,7 +4944,7 @@
         },
         {
           "address": "0xfa859fe707097e72f5a4cf0909a7a8785304adbe",
-          "usd_value": 148682.45444835196,
+          "usd_value": 148251.2849378695,
           "pct_supply": 2.2702882232310553,
           "is_contract": false,
           "entity": null,
@@ -4967,7 +4952,7 @@
         },
         {
           "address": "0x096ea0499fd9f2d036bc1bd834afde011d320000",
-          "usd_value": 138689.73834064673,
+          "usd_value": 138287.54706117703,
           "pct_supply": 2.117705688986606,
           "is_contract": false,
           "entity": null,
@@ -4975,7 +4960,7 @@
         },
         {
           "address": "0x1733c2f1147dd0ea0feb45843e61842b8cd99850",
-          "usd_value": 130981.1310183843,
+          "usd_value": 130601.2942020419,
           "pct_supply": 2.0000000694084443,
           "is_contract": false,
           "entity": null,
@@ -4983,7 +4968,7 @@
         },
         {
           "address": "0xaaa3bfb53d5d5116faedc5dd457531f8465f78af",
-          "usd_value": 104610.3677012643,
+          "usd_value": 104307.0043945413,
           "pct_supply": 1.5973349828076047,
           "is_contract": false,
           "entity": null,
@@ -4991,7 +4976,7 @@
         },
         {
           "address": "0xc37ba887da49efb6e35df6fffa41a74e0989055f",
-          "usd_value": 96058.01306178689,
+          "usd_value": 95779.45103089066,
           "pct_supply": 1.4667458686384829,
           "is_contract": false,
           "entity": null,
@@ -4999,7 +4984,7 @@
         },
         {
           "address": "0xa0d3f65f597f6fe1ef02f67add11cde7675d5e53",
-          "usd_value": 91687.58356161807,
+          "usd_value": 91421.69549386819,
           "pct_supply": 1.4000121396217784,
           "is_contract": false,
           "entity": null,
@@ -5007,7 +4992,7 @@
         },
         {
           "address": "0x176e225f401dfa8366dd92d19e2b8b03cc323197",
-          "usd_value": 90158.27220716725,
+          "usd_value": 89896.81904352571,
           "pct_supply": 1.3766605103354235,
           "is_contract": false,
           "entity": null,
@@ -5015,7 +5000,7 @@
         },
         {
           "address": "0x000000000000000000000000000000000000dead",
-          "usd_value": 86138.5758719079,
+          "usd_value": 85888.77956789781,
           "pct_supply": 1.3152822577045835,
           "is_contract": false,
           "entity": "Burn Addresses",
@@ -5023,7 +5008,7 @@
         },
         {
           "address": "0xe9c22cef07759cb8e94893d6199c38af8dacd9f1",
-          "usd_value": 79452.16762916309,
+          "usd_value": 79221.76147700116,
           "pct_supply": 1.2131849796798135,
           "is_contract": false,
           "entity": null,
@@ -5031,7 +5016,7 @@
         },
         {
           "address": "0x2e16fcf678e0339fa4f690ac58b724ad36e695eb",
-          "usd_value": 74243.79318078673,
+          "usd_value": 74028.49097797542,
           "pct_supply": 1.1336563546231568,
           "is_contract": false,
           "entity": null,
@@ -5039,7 +5024,7 @@
         },
         {
           "address": "0x84ab974710c76ac224a94cb35ce7ea718e26e31b",
-          "usd_value": 68684.19762689767,
+          "usd_value": 68485.01789194814,
           "pct_supply": 1.0487648026323566,
           "is_contract": true,
           "entity": null,
@@ -5047,7 +5032,7 @@
         },
         {
           "address": "0x304b739ebf7ccd2bed1650cd495a91c3d4ef0286",
-          "usd_value": 68404.26947920247,
+          "usd_value": 68205.90151779313,
           "pct_supply": 1.0444904746397148,
           "is_contract": false,
           "entity": null,
@@ -5055,7 +5040,7 @@
         },
         {
           "address": "0xe0ab8197d24de3bf308e1ec8959feb9c38e99a44",
-          "usd_value": 67060.23310834415,
+          "usd_value": 66865.76276556267,
           "pct_supply": 1.0239678786436028,
           "is_contract": false,
           "entity": null,
@@ -5063,7 +5048,7 @@
         },
         {
           "address": "0xae430a24ba9d69520b823654def4df5b772e4fdb",
-          "usd_value": 66815.81830406933,
+          "usd_value": 66622.05674842688,
           "pct_supply": 1.0202358172259511,
           "is_contract": false,
           "entity": null,
@@ -5071,7 +5056,7 @@
         },
         {
           "address": "0x58918db69302e21e0478c97f20de9153b9ee92d6",
-          "usd_value": 65561.93306286393,
+          "usd_value": 65371.80769339864,
           "pct_supply": 1.0010897726778316,
           "is_contract": false,
           "entity": null,
@@ -5079,7 +5064,7 @@
         },
         {
           "address": "0xfbd463c3794b6adb79cb3c4b28e1e97450afd3ca",
-          "usd_value": 65535.72713356082,
+          "usd_value": 65345.67775959716,
           "pct_supply": 1.0006896245036816,
           "is_contract": false,
           "entity": null,
@@ -5087,14 +5072,6 @@
         }
       ],
       "history": [
-        {
-          "ts": "03-21 10:00",
-          "fhs": 5.9,
-          "phase": "DIST",
-          "nbp": "-17%",
-          "icr": 7.42,
-          "flow": "DIST"
-        },
         {
           "ts": "03-21 12:00",
           "fhs": 5.9,
@@ -5278,875 +5255,456 @@
           "nbp": "-5%",
           "icr": 7.32,
           "flow": "NEUT"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 5.9,
+          "phase": "CONS",
+          "nbp": "-8%",
+          "icr": 7.34,
+          "flow": "NEUT"
         }
       ]
     },
     {
-      "symbol": "Doppel",
-      "address": "0xf27b8e",
+      "symbol": "Lumen",
+      "address": "0xa9FEE7",
       "chain": "base",
-      "fhs": 5.8,
+      "fhs": 5.7,
       "fhs_label": "moderate",
-      "phase": "DISTRIBUTION",
-      "cp": 0,
-      "icr": 2.50874961503695,
+      "phase": "ACCUMULATION",
+      "cp": 23.4,
+      "icr": 2.4380050265090616,
       "icr_alert": true,
-      "lcr": 57.91836579724541,
+      "lcr": 84.10083767978506,
       "lcr_fragile": false,
-      "lvr": 0.15561322684381923,
-      "lvr_status": "suspicious",
-      "dai": -0.5431034482758621,
-      "dai_status": "sell_wall",
-      "crash_threshold": 60474.096428571436,
-      "ips_10k": 6.617861044440756,
-      "ips_50k": 26.163459615195684,
-      "ips_100k": 41.475494877828226,
-      "nbp": -54.310344827586206,
-      "nbp_status": "distribution",
-      "ev": 99.50817458515681,
+      "lvr": 0.03755827841467235,
+      "lvr_status": "dead",
+      "dai": 0.40969162995594716,
+      "dai_status": "buy_wall",
+      "crash_threshold": 77535.44571428573,
+      "ips_10k": 5.237904578368585,
+      "ips_50k": 21.652891674393864,
+      "ips_100k": 35.59782488746459,
+      "nbp": 40.969162995594715,
+      "nbp_status": "accumulation",
+      "ev": 19.867856677697006,
       "ev_trend": "stable",
-      "ac": 10049.425629290618,
+      "ac": 50332.555555555555,
       "vwad": 0.0,
-      "flow_classification": "DISTRIBUTION",
+      "flow_classification": "ACCUMULATION",
       "bull_flag": true,
-      "bf_retracement": 61.1,
-      "bf_class": 3,
-      "fqs": 102.97053334008181,
-      "fqs_label": "Standard",
-      "bpi": 0.008260175164173905,
+      "bf_retracement": 11.0,
+      "bf_class": 1,
+      "fqs": 77.21926346627689,
+      "fqs_label": "Fragile",
+      "bpi": 0.015915234327045266,
       "bpi_label": "Improbable",
-      "fib_target": 6.8198175064830156e-06,
-      "fib_upside_pct": 35.582853011590764,
-      "pole_high": 5.91987771905016e-06,
-      "pole_low": 4.46366447077693e-06,
+      "fib_target": 4.674248713556976e-06,
+      "fib_upside_pct": 8.652922211924135,
+      "pole_high": 4.35835439301057e-06,
+      "pole_low": 3.84719853452124e-06,
       "squeeze_factor": 1.0,
-      "rsi_1h": 34.91,
+      "rsi_1h": 71.04,
       "rsi_1d": 0,
-      "ber": 0.31736616917234584,
-      "ber_zone": "equilibrium",
-      "rmd": -1.0720000000000003,
+      "ber": 0.9248880694734426,
+      "ber_zone": "overbought",
+      "rmd": 2.0770000000000004,
       "rmd_divergence": "none",
       "si": 0,
       "si_status": "active_expansion",
       "saturated": false,
-      "wcc": 8.947368421052632,
+      "wcc": 3.1578947368421053,
       "wcc_alert": false,
-      "scr": 30.496330880126997,
-      "tci": 55,
-      "fci": 58.31695853815515,
-      "top5_pct": 30.496330880126997,
-      "top10_pct": 38.74447554869917,
-      "top20_pct": 51.24951260789303,
-      "price_usd": 5.03e-06,
-      "price_change_24h": -4.37,
-      "volume_24h": 43915.99,
-      "liquidity_usd": 282212.45,
-      "mcap": 486016.0,
-      "buys_24h": 53,
-      "sells_24h": 179,
-      "narrative_phase": "Phase: DISTRIBUTION | NBP -54% (selling pressure) | Active distribution",
-      "narrative_insight": "Moderate (FHS 5.8/10). CP 0%. Monitoring required.",
-      "narrative_structure": "Bull Flag Class 3 | Retrace 61.1% | FQS 103 (Standard) | BPI 0.01 (Improbable) | Target 1.618: $0.000007 (+36%)",
-      "support_key": 4.46366447077693e-06,
-      "resistance_key": 5.91987771905016e-06,
+      "scr": 44.50265686233817,
+      "tci": 25,
+      "fci": 32.46129275857913,
+      "top5_pct": 44.50265686233817,
+      "top10_pct": 53.80353239522325,
+      "top20_pct": 61.82000961261105,
+      "price_usd": 4.302e-06,
+      "price_change_24h": 0.27,
+      "volume_24h": 13589.79,
+      "liquidity_usd": 361832.08,
+      "mcap": 430236.0,
+      "buys_24h": 160,
+      "sells_24h": 67,
+      "narrative_phase": "Phase: ACCUMULATION | NBP +41% (buying pressure) | Smart money accumulating",
+      "narrative_insight": "Moderate (FHS 5.7/10). CP 23%. Monitoring required.",
+      "narrative_structure": "Bull Flag Class 1 | Retrace 11.0% | FQS 77 (Fragile) | BPI 0.02 (Improbable) | Target 1.618: $0.000005 (+9%)",
+      "support_key": 3.84719853452124e-06,
+      "resistance_key": 4.35835439301057e-06,
       "alerts": [
         {
           "severity": "critical",
           "code": "ICR_HIGH",
-          "message": "Top holder can crash >30%. Threshold: $60,474. ICR=2.51"
+          "message": "Top holder can crash >30%. Threshold: $77,535. ICR=2.44"
         },
         {
           "severity": "warning",
-          "code": "SELL_WALL",
-          "message": "Sell wall detected. DAI=-0.54"
+          "code": "BUY_WALL",
+          "message": "Buy wall detected. DAI=0.41"
+        },
+        {
+          "severity": "warning",
+          "code": "CENTRALIZED",
+          "message": "Centralized supply: Top5=44.5%"
         }
       ],
       "top20_holders": [
         {
           "address": "0x498581ff718922c3f8e6a244956af099b2652b2b",
-          "usd_value": 98421.93698675514,
-          "pct_supply": 19.783940260097175,
+          "usd_value": 95412.72899354773,
+          "pct_supply": 22.462462904641722,
           "is_contract": true,
           "entity": "Uniswap",
           "label": "Uniswap: PoolManager"
         },
         {
-          "address": "0x000000000000000000000000000000000000dead",
-          "usd_value": 15663.849864787393,
-          "pct_supply": 3.14861380964071,
-          "is_contract": false,
-          "entity": "Burn Addresses",
-          "label": "Burn Address: 0x00...dEaD"
-        },
-        {
-          "address": "0xcd83f4c3a4b96d56367e482a3774802877b82e13",
-          "usd_value": 13407.274099733782,
-          "pct_supply": 2.6950161514863944,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x08a45d496ec763e503f89d2ce3337cd25be0e560",
-          "usd_value": 13358.090003460691,
-          "pct_supply": 2.685129582981401,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x7769866270304ec1b6b3cbd6a6eefcdf66f3d68d",
-          "usd_value": 10863.215180148976,
-          "pct_supply": 2.1836310759213164,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x7f841af39a9229b2c795393d72be3f29cb7a9a24",
-          "usd_value": 9299.16841438858,
-          "pct_supply": 1.869239704189159,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x859bc5fe903dfe749fe3331512ff7297d2e924f3",
-          "usd_value": 8585.329970200813,
-          "pct_supply": 1.7257499744851807,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x3b787a16f51a5fa01fc3918085c9480fbe25aae9",
-          "usd_value": 7898.557157916229,
-          "pct_supply": 1.5877007477937206,
+          "address": "0x38488b6ed75be4956b93adc4e8475e6b09c5a93b",
+          "usd_value": 50705.247233043534,
+          "pct_supply": 11.937240943186419,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
-          "address": "0xe37de56465af7b098e980b9e7cbc350b1b134ad5",
-          "usd_value": 7787.884351973592,
-          "pct_supply": 1.5654542421038242,
+          "address": "0x2e100b1e4cec437468c44435fd4fd81cbe8bf6e5",
+          "usd_value": 19174.637563602082,
+          "pct_supply": 4.514173208602892,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
-          "address": "0x936a220132591ac87dd2d2cec4d8c26ec769dfe8",
-          "usd_value": 7462.259971433805,
-          "pct_supply": 1.5000000000002858,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xca8056ca9a945d691ec4d26cb32b473c0f09ba2a",
-          "usd_value": 7310.054489067574,
-          "pct_supply": 1.469404949114445,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xeda614d4f7ec885b914712ade5bc6fa770e9a08f",
-          "usd_value": 7148.93055561924,
-          "pct_supply": 1.43701718708287,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x7ad3c2303655f78594e4f976ddb873aef9322efc",
-          "usd_value": 6514.962513522758,
-          "pct_supply": 1.3095823259569868,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x3eca307c62c524f707c6580339787b38aee4a89c",
-          "usd_value": 6496.442909526866,
-          "pct_supply": 1.3058596727527045,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x85718c19c52107fa97dbc4f4dd76e96c3f7215f8",
-          "usd_value": 6319.006695339024,
-          "pct_supply": 1.270192954854819,
+          "address": "0x515fe019bb81220c45f2f6f119a93202a1c21403",
+          "usd_value": 12695.990250354515,
+          "pct_supply": 2.988943016770506,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
-          "address": "0xac8a6c9d8a549b5b457613e591dd4bb5ad2f0b5f",
-          "usd_value": 6218.549976193653,
-          "pct_supply": 1.25,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x4a790b3d830a0a63246fb8283d0d7b208f968c23",
-          "usd_value": 6028.74627721937,
-          "pct_supply": 1.2118472755503888,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x923aa15bc94ea568a485306edd47221abae2ba3b",
-          "usd_value": 5969.807977145906,
-          "pct_supply": 1.2,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x265b3e14ecc4045159d1f360a02b9c860c361631",
-          "usd_value": 5211.5718264416055,
-          "pct_supply": 1.0475858211305205,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xf3973c5d3d7dcfc34daa7ba3d15c9f0f46ab173b",
-          "usd_value": 4992.485105324605,
-          "pct_supply": 1.0035468727511303,
+          "address": "0xf3622742b1e446d92e45e22923ef11c2fcd55d68",
+          "usd_value": 11043.202343501234,
+          "pct_supply": 2.5998367891366345,
           "is_contract": true,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xb47b3cfcc0d7850fd701f1c8bd4599fc249a92c7",
+          "usd_value": 10878.220327912311,
+          "pct_supply": 2.5609960344051586,
+          "is_contract": true,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x28e5d92148aa12b0fccd268ff643be86bbb5265e",
+          "usd_value": 9653.778736867998,
+          "pct_supply": 2.272732884321763,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xe5387a884a9714304c516f70c8a319b7bf1b44ec",
+          "usd_value": 7317.019883844467,
+          "pct_supply": 1.7226033617013188,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x4409d79d6518b9b4d43d00bd06785e3eb695f65a",
+          "usd_value": 6586.409645999204,
+          "pct_supply": 1.5506000500000001,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x53e6b6ef95a443c393d6578bc387b98aadc67cf7",
+          "usd_value": 5071.4554184600265,
+          "pct_supply": 1.1939432024568364,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x520bec061113167c59b1b7b87ced17db0df69907",
+          "usd_value": 4758.3187798892195,
+          "pct_supply": 1.1202232679976025,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xa9a8a0cfd1904d16ea097154bd7c4bba159e51d9",
+          "usd_value": 4247.652156337286,
+          "pct_supply": 1.0,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x7e088fd5312edd6a6a9203e743d09c134af1a29c",
+          "usd_value": 3719.548584851432,
+          "pct_supply": 0.8756716529393891,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xb7656dd77e7a2ce907622448ec463a226dc1dd06",
+          "usd_value": 3311.2843759373013,
+          "pct_supply": 0.7795563888151785,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x32e8f4d3c835513148ac21ff42f82169bcf2eb56",
+          "usd_value": 3253.6054786350146,
+          "pct_supply": 0.7659773820652419,
+          "is_contract": true,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x527fe4752386cbc3c1db3db2d3f2b0afbc8c5083",
+          "usd_value": 3077.887976012576,
+          "pct_supply": 0.7246092341672846,
+          "is_contract": true,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x1b72db473abeec41bb4679645bedff476828aef4",
+          "usd_value": 3074.5404602549725,
+          "pct_supply": 0.7238211480353707,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x952ff99efe64a43b915e8188aeb5cb8bd3c20c17",
+          "usd_value": 2927.3158482503795,
+          "pct_supply": 0.6891609153736775,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x2207cf5db28dbda3ed55ae3f9e83e6dbf64a07fd",
+          "usd_value": 2852.779869398322,
+          "pct_supply": 0.6716133441252047,
+          "is_contract": true,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xe5a413855c46ee71e3487992ed679bfec3dc81dd",
+          "usd_value": 2828.273209099519,
+          "pct_supply": 0.6658438838688511,
+          "is_contract": false,
           "entity": null,
           "label": null
         }
       ],
       "history": [
         {
-          "ts": "03-21 10:00",
-          "fhs": 6.2,
-          "phase": "DIST",
-          "nbp": "-45%",
-          "icr": 2.59,
-          "flow": "DIST"
-        },
-        {
           "ts": "03-21 12:00",
-          "fhs": 6.2,
-          "phase": "DIST",
-          "nbp": "-43%",
-          "icr": 2.56,
-          "flow": "DIST"
+          "fhs": 5.5,
+          "phase": "CONS",
+          "nbp": "-1%",
+          "icr": 2.42,
+          "flow": "NEUT"
         },
         {
           "ts": "03-21 14:00",
-          "fhs": 6.2,
-          "phase": "DIST",
-          "nbp": "-44%",
-          "icr": 2.59,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 16:00",
-          "fhs": 6.1,
-          "phase": "DIST",
-          "nbp": "-43%",
-          "icr": 2.66,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 18:00",
-          "fhs": 6.2,
-          "phase": "DIST",
-          "nbp": "-44%",
-          "icr": 2.58,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 20:00",
-          "fhs": 6.2,
-          "phase": "DIST",
-          "nbp": "-44%",
-          "icr": 2.54,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 22:00",
-          "fhs": 6.2,
-          "phase": "DIST",
-          "nbp": "-43%",
-          "icr": 2.59,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 00:00",
-          "fhs": 6.3,
-          "phase": "DIST",
-          "nbp": "-40%",
-          "icr": 2.49,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 02:00",
-          "fhs": 6.3,
-          "phase": "DIST",
-          "nbp": "-29%",
-          "icr": 2.53,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 04:00",
-          "fhs": 5.9,
-          "phase": "DIST",
-          "nbp": "-30%",
-          "icr": 2.56,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 06:00",
-          "fhs": 5.3,
-          "phase": "DIST",
-          "nbp": "-32%",
-          "icr": 2.53,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 08:00",
-          "fhs": 5.9,
-          "phase": "DIST",
-          "nbp": "-30%",
-          "icr": 2.53,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 10:00",
-          "fhs": 4.5,
-          "phase": "DIST",
-          "nbp": "-28%",
-          "icr": 2.58,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 12:00",
-          "fhs": 5.6,
-          "phase": "DIST",
-          "nbp": "-29%",
-          "icr": 2.66,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 14:00",
-          "fhs": 5.3,
-          "phase": "DIST",
-          "nbp": "-32%",
-          "icr": 2.55,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 16:00",
-          "fhs": 5.0,
-          "phase": "DIST",
-          "nbp": "-34%",
-          "icr": 2.54,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 18:00",
-          "fhs": 5.0,
-          "phase": "DIST",
-          "nbp": "-34%",
-          "icr": 2.55,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 20:00",
-          "fhs": 4.9,
-          "phase": "DIST",
-          "nbp": "-34%",
-          "icr": 2.55,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-22 22:00",
-          "fhs": 4.9,
-          "phase": "DIST",
-          "nbp": "-38%",
-          "icr": 2.54,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-23 00:00",
-          "fhs": 4.8,
-          "phase": "DIST",
-          "nbp": "-40%",
-          "icr": 2.55,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-23 02:00",
-          "fhs": 5.2,
-          "phase": "DIST",
-          "nbp": "-55%",
-          "icr": 2.6,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-23 04:00",
-          "fhs": 6.3,
-          "phase": "DIST",
-          "nbp": "-52%",
-          "icr": 2.54,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-23 06:00",
-          "fhs": 6.3,
-          "phase": "DIST",
-          "nbp": "-50%",
-          "icr": 2.52,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-23 08:00",
           "fhs": 5.8,
-          "phase": "DIST",
-          "nbp": "-54%",
-          "icr": 2.51,
-          "flow": "DIST"
-        }
-      ]
-    },
-    {
-      "symbol": "MOLT",
-      "address": "0xB69555",
-      "chain": "base",
-      "fhs": 5.7,
-      "fhs_label": "moderate",
-      "phase": "DISTRIBUTION",
-      "cp": 0,
-      "icr": 1.7117419692423848,
-      "icr_alert": true,
-      "lcr": 65.76101109659767,
-      "lcr_fragile": false,
-      "lvr": 0.11241240671412371,
-      "lvr_status": "suspicious",
-      "dai": -0.3855855855855856,
-      "dai_status": "sell_wall",
-      "crash_threshold": 341985.91071428574,
-      "ips_10k": 1.2376741194760863,
-      "ips_50k": 5.896455007026363,
-      "ips_100k": 11.136265150018716,
-      "nbp": -38.55855855855856,
-      "nbp_status": "distribution",
-      "ev": 49.497552463085725,
-      "ev_trend": "stable",
-      "ac": 20203.019144144142,
-      "vwad": 0.0,
-      "flow_classification": "DISTRIBUTION",
-      "bull_flag": true,
-      "bf_retracement": 56.0,
-      "bf_class": 3,
-      "fqs": 24.576174671304667,
-      "fqs_label": "Fragile",
-      "bpi": 0.041508702227052,
-      "bpi_label": "Improbable",
-      "fib_target": 3.267689831045577e-05,
-      "fib_upside_pct": 34.69455198044422,
-      "pole_high": 2.82607358528581e-05,
-      "pole_low": 2.11148419085253e-05,
-      "squeeze_factor": 1.1973889042155792,
-      "rsi_1h": 37.28,
-      "rsi_1d": 0,
-      "ber": 0.483984182022372,
-      "ber_zone": "equilibrium",
-      "rmd": -0.3839999999999997,
-      "rmd_divergence": "none",
-      "si": 19.738890421557926,
-      "si_status": "active_expansion",
-      "saturated": false,
-      "wcc": 7.368421052631578,
-      "wcc_alert": false,
-      "scr": 24.28620964573139,
-      "tci": 30,
-      "fci": 57.50877252623229,
-      "top5_pct": 24.28620964573139,
-      "top10_pct": 30.479066516503266,
-      "top20_pct": 38.815018424395966,
-      "price_usd": 2.426e-05,
-      "price_change_24h": -8.88,
-      "volume_24h": 179402.81,
-      "liquidity_usd": 1595934.25,
-      "mcap": 2426870.0,
-      "buys_24h": 341,
-      "sells_24h": 769,
-      "narrative_phase": "Phase: DISTRIBUTION | NBP -39% (selling pressure) | Active distribution",
-      "narrative_insight": "Moderate (FHS 5.7/10). CP 0%. Monitoring required.",
-      "narrative_structure": "Bull Flag Class 3 | Retrace 56.0% | FQS 25 (Fragile) | BPI 0.04 (Improbable) | Target 1.618: $0.000033 (+35%)",
-      "support_key": 2.11148419085253e-05,
-      "resistance_key": 2.82607358528581e-05,
-      "alerts": [
-        {
-          "severity": "critical",
-          "code": "ICR_HIGH",
-          "message": "Top holder can crash >30%. Threshold: $341,986. ICR=1.71"
-        }
-      ],
-      "top20_holders": [
-        {
-          "address": "0x498581ff718922c3f8e6a244956af099b2652b2b",
-          "usd_value": 217975.25877379463,
-          "pct_supply": 9.043164446269508,
-          "is_contract": true,
-          "entity": "Uniswap",
-          "label": "Uniswap: PoolManager"
-        },
-        {
-          "address": "0xfc72b05ff4970b5744f29884f6d361be2ae0b9db",
-          "usd_value": 167195.1758299876,
-          "pct_supply": 6.936445347784099,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x4e3ae00e8323558fa5cac04b152238924aa31b60",
-          "usd_value": 122021.08383800929,
-          "pct_supply": 5.062302635934826,
-          "is_contract": false,
-          "entity": "MEXC",
-          "label": "MEXC: Hot Wallet"
-        },
-        {
-          "address": "0x34f4f946665d1e06c3376e2f2eee3887ec7a5868",
-          "usd_value": 44841.85193675923,
-          "pct_supply": 1.8603590307476399,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xa84f72c1c0698bf68c5875913e57a601e3acbd02",
-          "usd_value": 33358.26588067109,
-          "pct_supply": 1.3839381849953176,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xd20c77d05669a56ad239362a3557f82361cef1cf",
-          "usd_value": 32599.10799935152,
-          "pct_supply": 1.3524429153024446,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x3d7849b4114c56d10ab22fad7cdb7acad40a6164",
-          "usd_value": 30948.440973260174,
-          "pct_supply": 1.2839615039397472,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x78057826a08a028c17a7b833430242b37e6d3353",
-          "usd_value": 29979.72570087226,
-          "pct_supply": 1.2437723028391412,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x2398dfc659856785620c357bacde24a38de84194",
-          "usd_value": 28008.996505092615,
-          "pct_supply": 1.1620124357021357,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xf26af131ddac672e3bafd6fb5051acc7c1b51982",
-          "usd_value": 27735.544785405888,
-          "pct_supply": 1.1506677129884058,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xbd6b8d8fa94f7307840252548549b56a33c98054",
-          "usd_value": 27362.06445624214,
-          "pct_supply": 1.135173091933364,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xea409250bba048e3166db36d7229cc6234339533",
-          "usd_value": 23311.976797596573,
-          "pct_supply": 0.9671466428538975,
-          "is_contract": true,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x3232422f5dddfec7717abfc6cd48e95d409c8f90",
-          "usd_value": 23176.350541904063,
-          "pct_supply": 0.9615199008999771,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xaf64f47f6b27c8d69ae2950c71bb4899387e0139",
-          "usd_value": 22650.926769582842,
-          "pct_supply": 0.9397215848717761,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x7a8ba143f8866242782e5b3a5ad1410bb6722206",
-          "usd_value": 18551.58562551346,
-          "pct_supply": 0.7696517508194228,
-          "is_contract": false,
-          "entity": "HTX",
-          "label": "HTX: Hot Wallet"
-        },
-        {
-          "address": "0x1af331dc34dd7c5c62af28b5685328318b61888a",
-          "usd_value": 18232.172045992567,
-          "pct_supply": 0.7564002031794379,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0xd6b7467288bd5c7299df7d03f1344d3f2c038051",
-          "usd_value": 18229.37922537371,
-          "pct_supply": 0.756284337111576,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x9d703cdc89c9934d9e90a52c31d632775c9838c6",
-          "usd_value": 17655.107385889416,
-          "pct_supply": 0.7324594557441568,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x6bc5f9b852fc1af6e6362b4bf5567c798479ad4a",
-          "usd_value": 15977.63879324171,
-          "pct_supply": 0.6628661247298886,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        },
-        {
-          "address": "0x0c0058fe98cf6252cfd443957dc0aaf184b50f90",
-          "usd_value": 15781.498156706175,
-          "pct_supply": 0.6547288157492049,
-          "is_contract": false,
-          "entity": null,
-          "label": null
-        }
-      ],
-      "history": [
-        {
-          "ts": "03-21 10:00",
-          "fhs": 7.1,
-          "phase": "DIST",
-          "nbp": "-40%",
-          "icr": 1.64,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 12:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-38%",
-          "icr": 1.69,
-          "flow": "DIST"
-        },
-        {
-          "ts": "03-21 14:00",
-          "fhs": 7.7,
-          "phase": "DIST",
-          "nbp": "-37%",
-          "icr": 1.62,
-          "flow": "DIST"
+          "phase": "CONS",
+          "nbp": "5%",
+          "icr": 2.42,
+          "flow": "NEUT"
         },
         {
           "ts": "03-21 16:00",
-          "fhs": 7.7,
-          "phase": "DIST",
-          "nbp": "-39%",
-          "icr": 1.64,
-          "flow": "DIST"
+          "fhs": 5.9,
+          "phase": "CONS",
+          "nbp": "5%",
+          "icr": 2.46,
+          "flow": "NEUT"
         },
         {
           "ts": "03-21 18:00",
-          "fhs": 8.4,
-          "phase": "DIST",
-          "nbp": "-38%",
-          "icr": 1.73,
-          "flow": "DIST"
+          "fhs": 5.8,
+          "phase": "CONS",
+          "nbp": "8%",
+          "icr": 2.41,
+          "flow": "NEUT"
         },
         {
           "ts": "03-21 20:00",
-          "fhs": 8.4,
-          "phase": "DIST",
-          "nbp": "-37%",
-          "icr": 1.72,
-          "flow": "DIST"
+          "fhs": 6.5,
+          "phase": "CONS",
+          "nbp": "11%",
+          "icr": 2.37,
+          "flow": "NEUT"
         },
         {
           "ts": "03-21 22:00",
-          "fhs": 7.7,
-          "phase": "DIST",
-          "nbp": "-38%",
-          "icr": 1.7,
-          "flow": "DIST"
+          "fhs": 6.5,
+          "phase": "CONS",
+          "nbp": "19%",
+          "icr": 2.39,
+          "flow": "NEUT"
         },
         {
           "ts": "03-22 00:00",
-          "fhs": 7.0,
-          "phase": "DIST",
-          "nbp": "-39%",
-          "icr": 1.66,
-          "flow": "DIST"
+          "fhs": 6.4,
+          "phase": "CONS",
+          "nbp": "25%",
+          "icr": 2.39,
+          "flow": "NEUT"
         },
         {
           "ts": "03-22 02:00",
-          "fhs": 6.8,
-          "phase": "DIST",
-          "nbp": "-43%",
-          "icr": 1.73,
-          "flow": "DIST"
+          "fhs": 6.5,
+          "phase": "CONS",
+          "nbp": "22%",
+          "icr": 2.35,
+          "flow": "NEUT"
         },
         {
           "ts": "03-22 04:00",
-          "fhs": 8.1,
-          "phase": "DIST",
-          "nbp": "-42%",
-          "icr": 1.83,
-          "flow": "DIST"
+          "fhs": 6.4,
+          "phase": "CONS",
+          "nbp": "22%",
+          "icr": 2.4,
+          "flow": "NEUT"
         },
         {
           "ts": "03-22 06:00",
-          "fhs": 7.6,
-          "phase": "DIST",
-          "nbp": "-41%",
-          "icr": 1.87,
-          "flow": "DIST"
+          "fhs": 6.5,
+          "phase": "CONS",
+          "nbp": "19%",
+          "icr": 2.36,
+          "flow": "NEUT"
         },
         {
           "ts": "03-22 08:00",
-          "fhs": 6.9,
-          "phase": "DIST",
-          "nbp": "-40%",
-          "icr": 1.78,
-          "flow": "DIST"
+          "fhs": 6.5,
+          "phase": "CONS",
+          "nbp": "-4%",
+          "icr": 2.35,
+          "flow": "NEUT"
         },
         {
           "ts": "03-22 10:00",
-          "fhs": 7.2,
-          "phase": "DIST",
-          "nbp": "-41%",
-          "icr": 1.8,
-          "flow": "DIST"
+          "fhs": 6.5,
+          "phase": "CONS",
+          "nbp": "-5%",
+          "icr": 2.35,
+          "flow": "NEUT"
         },
         {
           "ts": "03-22 12:00",
-          "fhs": 6.9,
-          "phase": "DIST",
-          "nbp": "-41%",
-          "icr": 1.8,
-          "flow": "DIST"
+          "fhs": 6.5,
+          "phase": "CONS",
+          "nbp": "-1%",
+          "icr": 2.36,
+          "flow": "NEUT"
         },
         {
           "ts": "03-22 14:00",
-          "fhs": 6.1,
+          "fhs": 6.5,
           "phase": "DIST",
-          "nbp": "-43%",
-          "icr": 1.73,
+          "nbp": "-11%",
+          "icr": 2.32,
           "flow": "DIST"
         },
         {
           "ts": "03-22 16:00",
-          "fhs": 5.7,
+          "fhs": 6.5,
           "phase": "DIST",
-          "nbp": "-42%",
-          "icr": 1.76,
+          "nbp": "-13%",
+          "icr": 2.29,
           "flow": "DIST"
         },
         {
           "ts": "03-22 18:00",
-          "fhs": 4.1,
+          "fhs": 6.5,
           "phase": "DIST",
-          "nbp": "-43%",
-          "icr": 1.77,
+          "nbp": "-19%",
+          "icr": 2.28,
           "flow": "DIST"
         },
         {
           "ts": "03-22 20:00",
-          "fhs": 7.0,
+          "fhs": 6.5,
           "phase": "DIST",
-          "nbp": "-40%",
-          "icr": 1.69,
+          "nbp": "-10%",
+          "icr": 2.34,
           "flow": "DIST"
         },
         {
           "ts": "03-22 22:00",
-          "fhs": 7.0,
-          "phase": "DIST",
-          "nbp": "-40%",
-          "icr": 1.68,
-          "flow": "DIST"
+          "fhs": 6.5,
+          "phase": "CONS",
+          "nbp": "-5%",
+          "icr": 2.35,
+          "flow": "NEUT"
         },
         {
           "ts": "03-23 00:00",
-          "fhs": 5.6,
-          "phase": "DIST",
-          "nbp": "-40%",
-          "icr": 1.69,
-          "flow": "DIST"
+          "fhs": 6.5,
+          "phase": "CONS",
+          "nbp": "-5%",
+          "icr": 2.37,
+          "flow": "NEUT"
         },
         {
           "ts": "03-23 02:00",
-          "fhs": 6.9,
-          "phase": "DIST",
-          "nbp": "-37%",
-          "icr": 1.7,
-          "flow": "DIST"
+          "fhs": 6.5,
+          "phase": "CONS",
+          "nbp": "6%",
+          "icr": 2.36,
+          "flow": "NEUT"
         },
         {
           "ts": "03-23 04:00",
-          "fhs": 7.0,
-          "phase": "DIST",
-          "nbp": "-37%",
-          "icr": 1.72,
-          "flow": "DIST"
+          "fhs": 6.5,
+          "phase": "CONS",
+          "nbp": "16%",
+          "icr": 2.37,
+          "flow": "NEUT"
         },
         {
           "ts": "03-23 06:00",
-          "fhs": 6.2,
-          "phase": "DIST",
-          "nbp": "-36%",
-          "icr": 1.75,
-          "flow": "DIST"
+          "fhs": 6.6,
+          "phase": "ACCU",
+          "nbp": "39%",
+          "icr": 2.46,
+          "flow": "ACCU"
         },
         {
           "ts": "03-23 08:00",
+          "fhs": 6.1,
+          "phase": "ACCU",
+          "nbp": "42%",
+          "icr": 2.48,
+          "flow": "ACCU"
+        },
+        {
+          "ts": "03-23 10:00",
           "fhs": 5.7,
-          "phase": "DIST",
-          "nbp": "-39%",
-          "icr": 1.71,
-          "flow": "DIST"
+          "phase": "ACCU",
+          "nbp": "41%",
+          "icr": 2.44,
+          "flow": "ACCU"
         }
       ]
     },
@@ -6154,75 +5712,75 @@
       "symbol": "JUNO",
       "address": "0x4E6c9f",
       "chain": "base",
-      "fhs": 4.9,
+      "fhs": 4.8,
       "fhs_label": "moderate",
       "phase": "DISTRIBUTION",
       "cp": 0,
-      "icr": 2.7322202522625663,
+      "icr": 2.733205686285076,
       "icr_alert": true,
-      "lcr": 47.21129268812882,
+      "lcr": 47.115714101824274,
       "lcr_fragile": false,
-      "lvr": 0.14688034785565784,
+      "lvr": 0.14349607873970882,
       "lvr_status": "suspicious",
-      "dai": -0.4495726495726496,
+      "dai": -0.4479166666666667,
       "dai_status": "sell_wall",
-      "crash_threshold": 115263.57214285716,
-      "ips_10k": 3.5848932383840895,
-      "ips_50k": 15.676520148631596,
-      "ips_100k": 27.10406593920528,
-      "nbp": -44.95726495726496,
+      "crash_threshold": 115297.57071428571,
+      "ips_10k": 3.58387402195406,
+      "ips_50k": 15.672621996590799,
+      "ips_100k": 27.098239369126976,
+      "nbp": -44.79166666666667,
       "nbp_status": "distribution",
-      "ev": 92.1443755541478,
+      "ev": 76.54564898859367,
       "ev_trend": "stable",
-      "ac": 10852.53434065934,
+      "ac": 13064.099830795261,
       "vwad": 0.0,
       "flow_classification": "DISTRIBUTION",
       "bull_flag": true,
-      "bf_retracement": 61.3,
+      "bf_retracement": 62.8,
       "bf_class": 3,
-      "fqs": 27.755447064623194,
+      "fqs": 20.214079777633575,
       "fqs_label": "Fragile",
-      "bpi": 0.03946508176786044,
+      "bpi": 0.056474810273910395,
       "bpi_label": "Improbable",
-      "fib_target": 1.4131420856107955e-05,
-      "fib_upside_pct": 22.668583820381553,
+      "fib_target": 1.4080708203271594e-05,
+      "fib_upside_pct": 22.01653555694623,
       "pole_high": 1.28203580762965e-05,
-      "pole_low": 1.06988972675401e-05,
-      "squeeze_factor": 1.1604449560191044,
-      "rsi_1h": 47.43,
+      "pole_low": 1.07809565763368e-05,
+      "squeeze_factor": 1.0,
+      "rsi_1h": 49.94,
       "rsi_1d": 0,
-      "ber": 0.23448059561480733,
+      "ber": 0.30292057750844176,
       "ber_zone": "equilibrium",
-      "rmd": -0.985,
+      "rmd": -0.5970000000000002,
       "rmd_divergence": "none",
-      "si": 16.044495601910448,
+      "si": 0,
       "si_status": "active_expansion",
       "saturated": false,
       "wcc": 9.473684210526317,
       "wcc_alert": false,
-      "scr": 27.1073546280361,
+      "scr": 27.07913099844487,
       "tci": 50,
-      "fci": 67.62210179802352,
-      "top5_pct": 27.1073546280361,
-      "top10_pct": 34.03183301824001,
-      "top20_pct": 44.07380164826089,
-      "price_usd": 1.152e-05,
-      "price_change_24h": 7.28,
-      "volume_24h": 79006.45,
-      "liquidity_usd": 537896.67,
-      "mcap": 1139339.0,
-      "buys_24h": 161,
-      "sells_24h": 424,
+      "fci": 67.63465183106165,
+      "top5_pct": 27.07913099844487,
+      "top10_pct": 34.003609388648776,
+      "top20_pct": 44.04557801866966,
+      "price_usd": 1.154e-05,
+      "price_change_24h": 5.91,
+      "volume_24h": 77208.83,
+      "liquidity_usd": 538055.33,
+      "mcap": 1141987.0,
+      "buys_24h": 159,
+      "sells_24h": 417,
       "narrative_phase": "Phase: DISTRIBUTION | NBP -45% (selling pressure) | Active distribution",
-      "narrative_insight": "Moderate (FHS 4.9/10). CP 0%. Monitoring required.",
-      "narrative_structure": "Bull Flag Class 3 | Retrace 61.3% | FQS 28 (Fragile) | BPI 0.04 (Improbable) | Target 1.618: $0.000014 (+23%)",
-      "support_key": 1.06988972675401e-05,
+      "narrative_insight": "Moderate (FHS 4.8/10). CP 0%. Monitoring required.",
+      "narrative_structure": "Bull Flag Class 3 | Retrace 62.8% | FQS 20 (Fragile) | BPI 0.06 (Improbable) | Target 1.618: $0.000014 (+22%)",
+      "support_key": 1.07809565763368e-05,
       "resistance_key": 1.28203580762965e-05,
       "alerts": [
         {
           "severity": "critical",
           "code": "ICR_HIGH",
-          "message": "Top holder can crash >30%. Threshold: $115,264. ICR=2.73"
+          "message": "Top holder can crash >30%. Threshold: $115,298. ICR=2.73"
         },
         {
           "severity": "warning",
@@ -6238,23 +5796,23 @@
       "top20_holders": [
         {
           "address": "0x498581ff718922c3f8e6a244956af099b2652b2b",
-          "usd_value": 192450.45823655472,
-          "pct_supply": 16.56526188056261,
+          "usd_value": 192302.87053917098,
+          "pct_supply": 16.524488217933264,
           "is_contract": true,
           "entity": "Uniswap",
           "label": "Uniswap: PoolManager"
         },
         {
           "address": "0xeaec194b018d71f93313df12c6271b29dfddd4fb",
-          "usd_value": 58209.95632412107,
-          "pct_supply": 5.010448815767078,
+          "usd_value": 58454.88735269292,
+          "pct_supply": 5.022998848805195,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
           "address": "0x0937039f3cb060eee7cf9b2f7baee4b1796629c8",
-          "usd_value": 23240.85415316416,
+          "usd_value": 23280.333160651553,
           "pct_supply": 2.000467231425895,
           "is_contract": false,
           "entity": null,
@@ -6262,7 +5820,7 @@
         },
         {
           "address": "0xb0a2e1c264744d2af06b8bc203aa56cfdb6a658a",
-          "usd_value": 23235.42599255527,
+          "usd_value": 23274.895779280298,
           "pct_supply": 2.0,
           "is_contract": false,
           "entity": null,
@@ -6270,7 +5828,7 @@
         },
         {
           "address": "0x8255da2b3e57acfa068f3b56922531b2214be9f3",
-          "usd_value": 17788.771450446464,
+          "usd_value": 17818.989059345666,
           "pct_supply": 1.5311767002805166,
           "is_contract": false,
           "entity": null,
@@ -6278,7 +5836,7 @@
         },
         {
           "address": "0x78fbd0924400a8dc33f4b198ef7b3de7e223add4",
-          "usd_value": 17426.685671546416,
+          "usd_value": 17456.28820893912,
           "pct_supply": 1.50001,
           "is_contract": false,
           "entity": null,
@@ -6286,7 +5844,7 @@
         },
         {
           "address": "0x3491da78801aad4c2499828432b49236cbc8aaaf",
-          "usd_value": 16854.966858839376,
+          "usd_value": 16883.59822317885,
           "pct_supply": 1.450799039728368,
           "is_contract": false,
           "entity": null,
@@ -6294,7 +5852,7 @@
         },
         {
           "address": "0x3b50adfd327f465b4d4ae2d8f90c543493982ffe",
-          "usd_value": 15823.55646629928,
+          "usd_value": 15850.435784077072,
           "pct_supply": 1.36201991488077,
           "is_contract": false,
           "entity": null,
@@ -6302,7 +5860,7 @@
         },
         {
           "address": "0x5f0b85d2c131b0e27e2304f569e2756aa9988c8d",
-          "usd_value": 15585.921778227226,
+          "usd_value": 15612.397428327065,
           "pct_supply": 1.3415653995946553,
           "is_contract": false,
           "entity": null,
@@ -6310,7 +5868,7 @@
         },
         {
           "address": "0x550c8263edb6c18c57adf7d68fcc15779da722e9",
-          "usd_value": 14755.471811403278,
+          "usd_value": 14780.536784415173,
           "pct_supply": 1.2700840360001142,
           "is_contract": false,
           "entity": null,
@@ -6318,7 +5876,7 @@
         },
         {
           "address": "0x000000000000000000000000000000000000dead",
-          "usd_value": 12983.354021410605,
+          "usd_value": 13005.408715581687,
           "pct_supply": 1.1175481805731065,
           "is_contract": false,
           "entity": "Burn Addresses",
@@ -6326,7 +5884,7 @@
         },
         {
           "address": "0x0712fabf212f06856036f7371d31f0689f825595",
-          "usd_value": 12600.037783284524,
+          "usd_value": 12621.441341979462,
           "pct_supply": 1.0845540587309765,
           "is_contract": false,
           "entity": null,
@@ -6334,7 +5892,7 @@
         },
         {
           "address": "0xe1784eaf4aa9bd73f7ef7d420ba8a96544ebd410",
-          "usd_value": 12229.569228350758,
+          "usd_value": 12250.343475801037,
           "pct_supply": 1.0526658071402835,
           "is_contract": false,
           "entity": null,
@@ -6342,7 +5900,7 @@
         },
         {
           "address": "0x982a2d16bafab84819a7ad33fc299cd37c500eff",
-          "usd_value": 11777.098203823769,
+          "usd_value": 11797.103843250978,
           "pct_supply": 1.0137191551897695,
           "is_contract": false,
           "entity": null,
@@ -6350,7 +5908,7 @@
         },
         {
           "address": "0xb47b781ced1380f374fba5431783015a73a29d9e",
-          "usd_value": 11670.445869177503,
+          "usd_value": 11690.27033934603,
           "pct_supply": 1.0045390063359942,
           "is_contract": false,
           "entity": null,
@@ -6358,7 +5916,7 @@
         },
         {
           "address": "0xf2aafffa10eeb133b6bda8b40aba2b5068c7d633",
-          "usd_value": 11618.32447077447,
+          "usd_value": 11638.060402842622,
           "pct_supply": 1.0000526329491037,
           "is_contract": false,
           "entity": null,
@@ -6366,7 +5924,7 @@
         },
         {
           "address": "0xa647378333b6d8ab7e89774795d7722176e6d9d1",
-          "usd_value": 11490.847570358283,
+          "usd_value": 11510.36695868528,
           "pct_supply": 0.98908,
           "is_contract": false,
           "entity": null,
@@ -6374,7 +5932,7 @@
         },
         {
           "address": "0x28af8cad1375cc416750cd1602aaf8d10c12f088",
-          "usd_value": 11012.002551229218,
+          "usd_value": 11030.708530291178,
           "pct_supply": 0.94786319431006,
           "is_contract": false,
           "entity": null,
@@ -6382,7 +5940,7 @@
         },
         {
           "address": "0x05d4e83354c85c9afb0749f1001f4db385c4f1b4",
-          "usd_value": 10753.336448188162,
+          "usd_value": 10771.60303371702,
           "pct_supply": 0.9255983902884825,
           "is_contract": false,
           "entity": null,
@@ -6390,7 +5948,7 @@
         },
         {
           "address": "0xe751d56c31dc1b16595a2cdfc94388687e26a674",
-          "usd_value": 10529.693314608634,
+          "usd_value": 10547.579999773809,
           "pct_supply": 0.9063482045031058,
           "is_contract": false,
           "entity": null,
@@ -6398,14 +5956,6 @@
         }
       ],
       "history": [
-        {
-          "ts": "03-21 10:00",
-          "fhs": 5.1,
-          "phase": "DIST",
-          "nbp": "-51%",
-          "icr": 2.83,
-          "flow": "DIST"
-        },
         {
           "ts": "03-21 12:00",
           "fhs": 5.2,
@@ -6589,6 +6139,451 @@
           "nbp": "-45%",
           "icr": 2.73,
           "flow": "DIST"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 4.8,
+          "phase": "DIST",
+          "nbp": "-45%",
+          "icr": 2.73,
+          "flow": "DIST"
+        }
+      ]
+    },
+    {
+      "symbol": "CLAWNCH",
+      "address": "0xa1F724",
+      "chain": "base",
+      "fhs": 4.5,
+      "fhs_label": "moderate",
+      "phase": "DISTRIBUTION",
+      "cp": 0,
+      "icr": 2.2458556369251728,
+      "icr_alert": true,
+      "lcr": 35.05020138369565,
+      "lcr_fragile": false,
+      "lvr": 0.07256839514628853,
+      "lvr_status": "dead",
+      "dai": -0.49455864570737607,
+      "dai_status": "sell_wall",
+      "crash_threshold": 278002.575,
+      "ips_10k": 1.5182047744731477,
+      "ips_50k": 7.156427006394662,
+      "ips_100k": 13.356972057247848,
+      "nbp": -49.4558645707376,
+      "nbp_status": "distribution",
+      "ev": 3.823837099441114,
+      "ev_trend": "stable",
+      "ac": 261517.4166666667,
+      "vwad": 0.0,
+      "flow_classification": "DISTRIBUTION",
+      "bull_flag": true,
+      "bf_retracement": 37.3,
+      "bf_class": 1,
+      "fqs": 73.85362244949687,
+      "fqs_label": "Fragile",
+      "bpi": 0.018981342439132638,
+      "bpi_label": "Improbable",
+      "fib_target": 4.476055584581111e-05,
+      "fib_upside_pct": 20.388800015629666,
+      "pole_high": 4.00334296803164e-05,
+      "pole_low": 3.23843582151146e-05,
+      "squeeze_factor": 1.0178352456018538,
+      "rsi_1h": 65.58,
+      "rsi_1d": 0,
+      "ber": 0.8774838861725349,
+      "ber_zone": "equilibrium",
+      "rmd": 1.5219999999999998,
+      "rmd_divergence": "none",
+      "si": 1.783524560185382,
+      "si_status": "active_expansion",
+      "saturated": false,
+      "wcc": 8.421052631578947,
+      "wcc_alert": false,
+      "scr": 17.01064865416484,
+      "tci": 25,
+      "fci": 54.35222963574716,
+      "top5_pct": 17.01064865416484,
+      "top10_pct": 24.305830738966364,
+      "top20_pct": 32.78134231505344,
+      "price_usd": 3.718e-05,
+      "price_change_24h": 0.36,
+      "volume_24h": 94146.27,
+      "liquidity_usd": 1297345.35,
+      "mcap": 3701392.0,
+      "buys_24h": 209,
+      "sells_24h": 618,
+      "narrative_phase": "Phase: DISTRIBUTION | NBP -49% (selling pressure) | Active distribution",
+      "narrative_insight": "Moderate (FHS 4.5/10). CP 0%. Monitoring required.",
+      "narrative_structure": "Bull Flag Class 1 | Retrace 37.3% | FQS 74 (Fragile) | BPI 0.02 (Improbable) | Target 1.618: $0.000045 (+20%)",
+      "support_key": 3.23843582151146e-05,
+      "resistance_key": 4.00334296803164e-05,
+      "alerts": [
+        {
+          "severity": "critical",
+          "code": "ICR_HIGH",
+          "message": "Top holder can crash >30%. Threshold: $278,003. ICR=2.25"
+        },
+        {
+          "severity": "warning",
+          "code": "SELL_WALL",
+          "message": "Sell wall detected. DAI=-0.49"
+        }
+      ],
+      "top20_holders": [
+        {
+          "address": "0x498581ff718922c3f8e6a244956af099b2652b2b",
+          "usd_value": 271417.46262171736,
+          "pct_supply": 7.394826784791067,
+          "is_contract": true,
+          "entity": "Uniswap",
+          "label": "Uniswap: PoolManager"
+        },
+        {
+          "address": "0x4e3ae00e8323558fa5cac04b152238924aa31b60",
+          "usd_value": 131650.4602701268,
+          "pct_supply": 3.5868449304326706,
+          "is_contract": false,
+          "entity": "MEXC",
+          "label": "MEXC: Hot Wallet"
+        },
+        {
+          "address": "0x3779b90f1a7f87d7982b055bf4ac9fd2c41bc488",
+          "usd_value": 84491.25866806108,
+          "pct_supply": 2.3019824024738176,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x07da9c5d35028f578dfac5be6e5aaa8a835704f6",
+          "usd_value": 75254.41435768813,
+          "pct_supply": 2.050322604856118,
+          "is_contract": true,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xe45332fbcb1e94cd47aa6eb9abc0e2d4b0543d60",
+          "usd_value": 61540.0542258698,
+          "pct_supply": 1.6766719316111673,
+          "is_contract": true,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xdb9f90626b16551810a3493f85cee01eb9eaff63",
+          "usd_value": 59734.36109923783,
+          "pct_supply": 1.627475436407978,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xb82ace4dc5b5f84675c5352165088acef8e26b26",
+          "usd_value": 54566.70819254816,
+          "pct_supply": 1.4866816283759867,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x1751596d3fd0ff980e0ae16f15e3890c705c9080",
+          "usd_value": 51385.172192527614,
+          "pct_supply": 1.4000000000000001,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xb393ae8238e9a265169f3d184e3b57544e5a6b7a",
+          "usd_value": 51306.51745257366,
+          "pct_supply": 1.3978570347974517,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x4dbb3835744b2976560e0259cb218cab89abef96",
+          "usd_value": 50767.375065519074,
+          "pct_supply": 1.3831679852201073,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x0e6f8b7f47e8019e3927e60af64067968ec0269c",
+          "usd_value": 37733.98958852152,
+          "pct_supply": 1.0280706120045322,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xe0c7beccdca1b328462f4c68abcbecccb2a428bd",
+          "usd_value": 36703.69442323401,
+          "pct_supply": 1.0,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xbac7c3665a414ba1b8eb5eefad4b5e673803034e",
+          "usd_value": 33790.85061910414,
+          "pct_supply": 0.9206389479341894,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xf816647c6e35c411cf706fb665f2566c73f3662b",
+          "usd_value": 31401.894452128236,
+          "pct_supply": 0.8555513265239684,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0xb8fce960baa63e2c52bb5160c7efbfe64e016f72",
+          "usd_value": 30722.695087382082,
+          "pct_supply": 0.8370463946521454,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x443278e10f756ebecdd195e859c8a20b8681bfec",
+          "usd_value": 28733.38438336428,
+          "pct_supply": 0.7828471993047,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x10f7ba31ddff342ca6f818acf879d0cc13a96ce1",
+          "usd_value": 28554.122715178182,
+          "pct_supply": 0.7779631768376695,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x8f8feaa30ab8dba4cfe20b2cadbe21d07eda4d18",
+          "usd_value": 28220.929461261883,
+          "pct_supply": 0.7688852554144412,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x6b13fd18feef65c43f06271d49d1ee823de53aa9",
+          "usd_value": 27627.131163227645,
+          "pct_supply": 0.7527070938597191,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        },
+        {
+          "address": "0x514cd39ac9c8d3007567827600ff0b83c3a6caa3",
+          "usd_value": 27593.89507588069,
+          "pct_supply": 0.7518015695557155,
+          "is_contract": false,
+          "entity": null,
+          "label": null
+        }
+      ],
+      "history": [
+        {
+          "ts": "03-21 12:00",
+          "fhs": 6.0,
+          "phase": "DIST",
+          "nbp": "-51%",
+          "icr": 2.4,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-21 14:00",
+          "fhs": 6.5,
+          "phase": "DIST",
+          "nbp": "-55%",
+          "icr": 2.37,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-21 16:00",
+          "fhs": 6.5,
+          "phase": "DIST",
+          "nbp": "-59%",
+          "icr": 2.36,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-21 18:00",
+          "fhs": 5.7,
+          "phase": "DIST",
+          "nbp": "-57%",
+          "icr": 2.39,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-21 20:00",
+          "fhs": 5.5,
+          "phase": "DIST",
+          "nbp": "-59%",
+          "icr": 2.36,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-21 22:00",
+          "fhs": 6.4,
+          "phase": "DIST",
+          "nbp": "-59%",
+          "icr": 2.4,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 00:00",
+          "fhs": 6.4,
+          "phase": "DIST",
+          "nbp": "-58%",
+          "icr": 2.41,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 02:00",
+          "fhs": 6.4,
+          "phase": "DIST",
+          "nbp": "-59%",
+          "icr": 2.36,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 04:00",
+          "fhs": 6.4,
+          "phase": "DIST",
+          "nbp": "-59%",
+          "icr": 2.38,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 06:00",
+          "fhs": 6.4,
+          "phase": "DIST",
+          "nbp": "-60%",
+          "icr": 2.38,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 08:00",
+          "fhs": 6.4,
+          "phase": "DIST",
+          "nbp": "-61%",
+          "icr": 2.38,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 10:00",
+          "fhs": 6.4,
+          "phase": "DIST",
+          "nbp": "-63%",
+          "icr": 2.36,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 12:00",
+          "fhs": 6.4,
+          "phase": "DIST",
+          "nbp": "-65%",
+          "icr": 2.36,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 14:00",
+          "fhs": 6.4,
+          "phase": "DIST",
+          "nbp": "-63%",
+          "icr": 2.35,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 16:00",
+          "fhs": 6.4,
+          "phase": "DIST",
+          "nbp": "-61%",
+          "icr": 2.35,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 18:00",
+          "fhs": 6.5,
+          "phase": "DIST",
+          "nbp": "-57%",
+          "icr": 2.33,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 20:00",
+          "fhs": 6.5,
+          "phase": "DIST",
+          "nbp": "-55%",
+          "icr": 2.31,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-22 22:00",
+          "fhs": 6.5,
+          "phase": "DIST",
+          "nbp": "-53%",
+          "icr": 2.31,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 00:00",
+          "fhs": 6.5,
+          "phase": "DIST",
+          "nbp": "-51%",
+          "icr": 2.33,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 02:00",
+          "fhs": 6.5,
+          "phase": "DIST",
+          "nbp": "-51%",
+          "icr": 2.3,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 04:00",
+          "fhs": 6.5,
+          "phase": "DIST",
+          "nbp": "-50%",
+          "icr": 2.31,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 06:00",
+          "fhs": 5.3,
+          "phase": "DIST",
+          "nbp": "-48%",
+          "icr": 2.31,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 08:00",
+          "fhs": 7.0,
+          "phase": "DIST",
+          "nbp": "-49%",
+          "icr": 2.3,
+          "flow": "DIST"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 4.5,
+          "phase": "DIST",
+          "nbp": "-49%",
+          "icr": 2.25,
+          "flow": "DIST"
         }
       ]
     },
@@ -6596,80 +6591,80 @@
       "symbol": "CLANKER",
       "address": "0x1bc0c4",
       "chain": "base",
-      "fhs": 4.5,
+      "fhs": 4.4,
       "fhs_label": "moderate",
       "phase": "ACCUMULATION",
-      "cp": 25.9,
-      "icr": 20.64969386840271,
+      "cp": 24.2,
+      "icr": 20.628833162098992,
       "icr_alert": true,
-      "lcr": 9.922380684148848,
+      "lcr": 9.922323032380143,
       "lcr_fragile": false,
-      "lvr": 0.01890095833137614,
+      "lvr": 0.018967143324164,
       "lvr_status": "dead",
-      "dai": 0.8360655737704918,
+      "dai": 0.8225806451612904,
       "dai_status": "buy_wall",
-      "crash_threshold": 543326.0785714287,
-      "ips_10k": 0.7826190636534215,
-      "ips_50k": 3.794315182455147,
-      "ips_100k": 7.311219647791497,
-      "nbp": 83.60655737704919,
+      "crash_threshold": 542316.9257142857,
+      "ips_10k": 0.7840639565360106,
+      "ips_50k": 3.8011073325063345,
+      "ips_100k": 7.323828098153593,
+      "nbp": 82.25806451612904,
       "nbp_status": "accumulation",
-      "ev": 23.57910340563632,
+      "ev": 14.374317219932053,
       "ev_trend": "stable",
-      "ac": 42410.43362831859,
+      "ac": 69568.52173913043,
       "vwad": 0.0,
       "flow_classification": "ACCUMULATION",
       "bull_flag": true,
-      "bf_retracement": 55.7,
+      "bf_retracement": 58.4,
       "bf_class": 3,
-      "fqs": 7.811427680796596,
+      "fqs": 0.8807435250588371,
       "fqs_label": "Fragile",
-      "bpi": 0.008348436587514985,
+      "bpi": 0.0012348023030111339,
       "bpi_label": "Improbable",
-      "fib_target": 27.08141804480686,
-      "fib_upside_pct": 4.561459632458924,
-      "pole_high": 26.460136212176,
+      "fib_target": 27.030628007096993,
+      "fib_upside_pct": 4.526790437343363,
+      "pole_high": 26.4287455831835,
       "pole_low": 25.4548258033882,
-      "squeeze_factor": 1.0421872047182585,
-      "rsi_1h": 51.0,
+      "squeeze_factor": 1.0335983390850085,
+      "rsi_1h": 49.65,
       "rsi_1d": 0,
-      "ber": 0.3188101960029219,
+      "ber": 0.3294997622578388,
       "ber_zone": "equilibrium",
-      "rmd": 0.213,
+      "rmd": 0.03399999999999985,
       "rmd_divergence": "none",
-      "si": 4.218720471825868,
+      "si": 3.3598339085008693,
       "si_status": "active_expansion",
       "saturated": false,
       "wcc": 5.263157894736842,
       "wcc_alert": false,
-      "scr": 43.39629733409287,
+      "scr": 43.39652039781607,
       "tci": 45,
       "fci": 100,
-      "top5_pct": 43.39629733409287,
-      "top10_pct": 56.64287959144571,
-      "top20_pct": 72.05338346740517,
-      "price_usd": 25.9,
-      "price_change_24h": -1.13,
-      "volume_24h": 47923.79,
-      "liquidity_usd": 2535521.7,
-      "mcap": 25553562.0,
-      "buys_24h": 112,
-      "sells_24h": 10,
-      "narrative_phase": "Phase: ACCUMULATION | NBP +84% (buying pressure) | Smart money accumulating",
-      "narrative_insight": "Moderate (FHS 4.5/10). CP 26%. Monitoring required.",
-      "narrative_structure": "Bull Flag Class 3 | Retrace 55.7% | FQS 8 (Fragile) | BPI 0.01 (Improbable) | Target 1.618: $27.081418 (+5%)",
+      "top5_pct": 43.39652039781607,
+      "top10_pct": 56.6431026551689,
+      "top20_pct": 72.06032367221007,
+      "price_usd": 25.86,
+      "price_change_24h": -0.69,
+      "volume_24h": 48002.28,
+      "liquidity_usd": 2530812.32,
+      "mcap": 25506248.0,
+      "buys_24h": 113,
+      "sells_24h": 11,
+      "narrative_phase": "Phase: ACCUMULATION | NBP +82% (buying pressure) | Smart money accumulating",
+      "narrative_insight": "Moderate (FHS 4.4/10). CP 24%. Monitoring required.",
+      "narrative_structure": "Bull Flag Class 3 | Retrace 58.4% | FQS 1 (Fragile) | BPI 0.00 (Improbable) | Target 1.618: $27.030628 (+5%)",
       "support_key": 25.4548258033882,
-      "resistance_key": 26.460136212176,
+      "resistance_key": 26.4287455831835,
       "alerts": [
         {
           "severity": "critical",
           "code": "ICR_HIGH",
-          "message": "Top holder can crash >30%. Threshold: $543,326. ICR=20.65"
+          "message": "Top holder can crash >30%. Threshold: $542,317. ICR=20.63"
         },
         {
           "severity": "warning",
           "code": "BUY_WALL",
-          "message": "Buy wall detected. DAI=0.84"
+          "message": "Buy wall detected. DAI=0.82"
         },
         {
           "severity": "critical",
@@ -6685,15 +6680,15 @@
       "top20_holders": [
         {
           "address": "0x8d4ab2a3e89eadfdc729204adf863a0bfc7746f6",
-          "usd_value": 3605833.468432914,
-          "pct_supply": 13.94710829695091,
+          "usd_value": 3595558.017856894,
+          "pct_supply": 13.947404195888064,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0x46a830062405992852186b904af5ac321a50d684",
-          "usd_value": 1965781.9126405763,
+          "usd_value": 1960138.4887679622,
           "pct_supply": 7.603505115753656,
           "is_contract": false,
           "entity": null,
@@ -6701,15 +6696,15 @@
         },
         {
           "address": "0xc1a6fbedae68e1472dbb91fe29b51f7a0bd44f97",
-          "usd_value": 1942300.1998472903,
-          "pct_supply": 7.512679514906319,
+          "usd_value": 1936705.4114726756,
+          "pct_supply": 7.512606679692357,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0xeee260644e8891a28e2de8b5319cd4b00a4a2191",
-          "usd_value": 1895847.6660598817,
+          "usd_value": 1890405.0114557857,
           "pct_supply": 7.333004406481988,
           "is_contract": false,
           "entity": null,
@@ -6717,7 +6712,7 @@
         },
         {
           "address": "0x4e68ba26426fa565e00c0392f65c542d59038453",
-          "usd_value": 1809753.9462390568,
+          "usd_value": 1804558.4519891154,
           "pct_supply": 7.000000000000001,
           "is_contract": false,
           "entity": null,
@@ -6725,7 +6720,7 @@
         },
         {
           "address": "0x27d2c478fe2790caf21a20f846baf663e32dbb8a",
-          "usd_value": 908347.3137790292,
+          "usd_value": 905739.6038991883,
           "pct_supply": 3.5134230317148853,
           "is_contract": false,
           "entity": null,
@@ -6733,7 +6728,7 @@
         },
         {
           "address": "0x301f742573c76ee107cb8e263f2d5c009ecbfb28",
-          "usd_value": 649213.2389470526,
+          "usd_value": 647349.4587039179,
           "pct_supply": 2.511110796068998,
           "is_contract": false,
           "entity": null,
@@ -6741,7 +6736,7 @@
         },
         {
           "address": "0xbf82a1b2659a8687be1041e73656cfb81b7a3828",
-          "usd_value": 646340.6950853774,
+          "usd_value": 644485.1614246841,
           "pct_supply": 2.5,
           "is_contract": false,
           "entity": null,
@@ -6749,7 +6744,7 @@
         },
         {
           "address": "0xffa8db7b38579e6a2d14f9b347a9ace4d044cd54",
-          "usd_value": 612581.7074656457,
+          "usd_value": 610823.0900882,
           "pct_supply": 2.369422628513,
           "is_contract": false,
           "entity": null,
@@ -6757,7 +6752,7 @@
         },
         {
           "address": "0x1c30a767addc1afe9759acf68cb2dec5aab9d562",
-          "usd_value": 608239.1182121198,
+          "usd_value": 606492.9676661697,
           "pct_supply": 2.352625801055956,
           "is_contract": true,
           "entity": null,
@@ -6765,7 +6760,7 @@
         },
         {
           "address": "0x0d0707963952f2fba59dd06f2b425ace40b492fe",
-          "usd_value": 527747.5700052135,
+          "usd_value": 526232.4969362582,
           "pct_supply": 2.041290197329682,
           "is_contract": false,
           "entity": "Gate.io",
@@ -6773,7 +6768,7 @@
         },
         {
           "address": "0x3c716d252b53891753de883894ff29a9ebee0f54",
-          "usd_value": 516178.50116524467,
+          "usd_value": 514696.6409155016,
           "pct_supply": 1.9965418590000001,
           "is_contract": false,
           "entity": null,
@@ -6781,7 +6776,7 @@
         },
         {
           "address": "0x351a910d4a853870e23bfd7761ee720a43ddb889",
-          "usd_value": 492675.40469851904,
+          "usd_value": 491261.0178214974,
           "pct_supply": 1.9056335476193393,
           "is_contract": false,
           "entity": null,
@@ -6789,7 +6784,7 @@
         },
         {
           "address": "0x4e3ae00e8323558fa5cac04b152238924aa31b60",
-          "usd_value": 447612.57262372464,
+          "usd_value": 446327.553435287,
           "pct_supply": 1.7313337069260273,
           "is_contract": false,
           "entity": "MEXC",
@@ -6797,15 +6792,15 @@
         },
         {
           "address": "0x73d8bd54f7cf5fab43fe4ef40a62d390644946db",
-          "usd_value": 412135.92662411544,
-          "pct_supply": 1.5941125545625552,
+          "usd_value": 411002.87819330866,
+          "pct_supply": 1.5943069863887753,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0x000000000000000000000000000000000000dead",
-          "usd_value": 354782.7003534631,
+          "usd_value": 353764.17986149475,
           "pct_supply": 1.372274340186017,
           "is_contract": false,
           "entity": "Burn Addresses",
@@ -6813,15 +6808,15 @@
         },
         {
           "address": "0xd23fe2db317e1a96454a2d1c7e8fc0dbf19bb000",
-          "usd_value": 343660.4819701562,
-          "pct_supply": 1.3292543877527347,
+          "usd_value": 344355.4071970992,
+          "pct_supply": 1.3357770970082345,
           "is_contract": true,
           "entity": "Aerodrome Finance",
           "label": "Aerodrome Finance: CLPool"
         },
         {
           "address": "0x2cde9919e81b20b4b33dd562a48a84b54c48f00c",
-          "usd_value": 336097.16144439625,
+          "usd_value": 335132.28394083574,
           "pct_supply": 1.3,
           "is_contract": true,
           "entity": null,
@@ -6829,7 +6824,7 @@
         },
         {
           "address": "0x20fe51a9229eef2cf8ad9e89d91cab9312cf3b7a",
-          "usd_value": 293738.6984802943,
+          "usd_value": 292895.42488384154,
           "pct_supply": 1.13616046735806,
           "is_contract": false,
           "entity": "Coinbase",
@@ -6837,7 +6832,7 @@
         },
         {
           "address": "0x58918db69302e21e0478c97f20de9153b9ee92d6",
-          "usd_value": 259545.29735628786,
+          "usd_value": 258800.1871700019,
           "pct_supply": 1.0039028152250402,
           "is_contract": false,
           "entity": null,
@@ -6845,14 +6840,6 @@
         }
       ],
       "history": [
-        {
-          "ts": "03-21 10:00",
-          "fhs": 4.8,
-          "phase": "ACCU",
-          "nbp": "59%",
-          "icr": 20.5,
-          "flow": "ACCU"
-        },
         {
           "ts": "03-21 12:00",
           "fhs": 5.1,
@@ -7036,6 +7023,14 @@
           "nbp": "84%",
           "icr": 20.65,
           "flow": "ACCU"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 4.4,
+          "phase": "ACCU",
+          "nbp": "82%",
+          "icr": 20.63,
+          "flow": "ACCU"
         }
       ]
     },
@@ -7043,80 +7038,80 @@
       "symbol": "VVV",
       "address": "0xacfe60",
       "chain": "base",
-      "fhs": 4.3,
-      "fhs_label": "moderate",
-      "phase": "CONSOLIDATION",
-      "cp": 19.6,
-      "icr": 692.089303681284,
+      "fhs": 3.2,
+      "fhs_label": "critical",
+      "phase": "ACCUMULATION",
+      "cp": 14.8,
+      "icr": 688.3936538156752,
       "icr_alert": true,
-      "lcr": 1.1024650714536588,
+      "lcr": 1.1114176828572637,
       "lcr_fragile": true,
-      "lvr": 0.1544201376748899,
+      "lvr": 0.16623757169500886,
       "lvr_status": "suspicious",
-      "dai": 0.15471394037066882,
+      "dai": 0.12514439738159414,
       "dai_status": "balanced",
-      "crash_threshold": 1153434.1114285714,
-      "ips_10k": 0.3701857902511173,
-      "ips_50k": 1.8239213604486433,
-      "ips_100k": 3.5825007249369345,
-      "nbp": 15.471394037066883,
-      "nbp_status": "accumulation",
-      "ev": 9.408128613497379,
+      "crash_threshold": 1137704.3464285715,
+      "ips_10k": 0.37528472734987556,
+      "ips_50k": 1.8486724946251927,
+      "ips_100k": 3.630233854491823,
+      "nbp": 12.514439738159414,
+      "nbp_status": "neutral",
+      "ev": 5.087225120033303,
       "ev_trend": "stable",
-      "ac": 106291.06393861891,
+      "ac": 196570.81737193762,
       "vwad": 0.0,
-      "flow_classification": "NEUTRAL",
+      "flow_classification": "ACCUMULATION",
       "bull_flag": true,
-      "bf_retracement": 32.5,
-      "bf_class": 1,
-      "fqs": 71.75233532735153,
+      "bf_retracement": 54.9,
+      "bf_class": 3,
+      "fqs": 41.23321027936231,
       "fqs_label": "Fragile",
-      "bpi": 0.5204399946924106,
+      "bpi": 0.6423805064717043,
       "bpi_label": "Improbable",
-      "fib_target": 6.760490267677789,
-      "fib_upside_pct": 9.748218631132938,
+      "fib_target": 6.740408256172618,
+      "fib_upside_pct": 11.688620649090598,
       "pole_high": 6.36681102294936,
-      "pole_low": 5.72978959134996,
-      "squeeze_factor": 1.140160125381552,
-      "rsi_1h": 64.55,
+      "pole_low": 5.76228475559781,
+      "squeeze_factor": 1.1248691819571244,
+      "rsi_1h": 59.8,
       "rsi_1d": 0,
-      "ber": 0.6843635225772909,
+      "ber": 0.4217244384660962,
       "ber_zone": "equilibrium",
-      "rmd": 0.6729999999999996,
+      "rmd": 0.5309999999999997,
       "rmd_divergence": "none",
-      "si": 14.016012538155223,
+      "si": 12.486918195712438,
       "si_status": "active_expansion",
       "saturated": false,
       "wcc": 3.684210526315789,
       "wcc_alert": false,
-      "scr": 114.68789110796529,
+      "scr": 114.68997154324147,
       "tci": 5,
       "fci": 65,
-      "top5_pct": 114.68789110796529,
-      "top10_pct": 128.61052893967857,
-      "top20_pct": 133.1623227931671,
-      "price_usd": 6.16,
-      "price_change_24h": 7.82,
-      "volume_24h": 831196.12,
-      "liquidity_usd": 5382692.52,
-      "mcap": 270932226.0,
-      "buys_24h": 1433,
-      "sells_24h": 1049,
-      "narrative_phase": "Phase: CONSOLIDATION | NBP +15% | EV 9.41",
-      "narrative_insight": "Moderate (FHS 4.3/10). CP 20%. Monitoring required.",
-      "narrative_structure": "Bull Flag Class 1 | Retrace 32.5% | FQS 72 (Fragile) | BPI 0.52 (Improbable) | Target 1.618: $6.760490 (+10%)",
-      "support_key": 5.72978959134996,
+      "top5_pct": 114.68997154324147,
+      "top10_pct": 128.6124440860252,
+      "top20_pct": 133.16568298386082,
+      "price_usd": 6.035,
+      "price_change_24h": 4.49,
+      "volume_24h": 882602.97,
+      "liquidity_usd": 5309286.95,
+      "mcap": 264831945.0,
+      "buys_24h": 1461,
+      "sells_24h": 1136,
+      "narrative_phase": "Phase: ACCUMULATION | NBP +13% (buying pressure) | Smart money accumulating",
+      "narrative_insight": "Critical (FHS 3.2/10). structural risk. ICR 688.39. CP 15%.",
+      "narrative_structure": "Bull Flag Class 3 | Retrace 54.9% | FQS 41 (Fragile) | BPI 0.64 (Improbable) | Target 1.618: $6.740408 (+12%)",
+      "support_key": 5.76228475559781,
       "resistance_key": 6.36681102294936,
       "alerts": [
         {
           "severity": "critical",
           "code": "ICR_HIGH",
-          "message": "Top holder can crash >30%. Threshold: $1,153,434. ICR=692.09"
+          "message": "Top holder can crash >30%. Threshold: $1,137,704. ICR=688.39"
         },
         {
           "severity": "warning",
           "code": "LOW_COVERAGE",
-          "message": "Fragile LCR: 1.10%"
+          "message": "Fragile LCR: 1.11%"
         },
         {
           "severity": "critical",
@@ -7132,174 +7127,166 @@
       "top20_holders": [
         {
           "address": "0x0000000000000000000000000000000000000000",
-          "usd_value": 207862796.3825179,
-          "pct_supply": 29.863410514909305,
+          "usd_value": 203927163.539814,
+          "pct_supply": 29.863055977844056,
           "is_contract": false,
           "entity": "Burn Addresses",
           "label": "Null Address: 0x000...000"
         },
         {
           "address": "0x328d006528faff5167ca1ed5f532c45f6fd08654",
-          "usd_value": 200507769.00732,
-          "pct_supply": 28.806722133551588,
+          "usd_value": 196711394.79001984,
+          "pct_supply": 28.806380141443235,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0x321b7ff75154472b18edb199033ff4d116f340ff",
-          "usd_value": 197760026.8537435,
-          "pct_supply": 28.41195715708908,
+          "usd_value": 194038738.1389414,
+          "pct_supply": 28.414996797531177,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0x2d8cb8dc596dad0e1e34e2042e7ae6df93b11524",
-          "usd_value": 124704337.90019442,
-          "pct_supply": 17.916129776538888,
+          "usd_value": 122343655.0402883,
+          "pct_supply": 17.91598213589072,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0x0bd4078e15eea5ac22a0e6f215c27286920fda1a",
-          "usd_value": 67444480.87706469,
-          "pct_supply": 9.689671525876427,
+          "usd_value": 66167500.490875594,
+          "pct_supply": 9.689556490532278,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0x4665883f3adb708f301ba75764d39ad0cd2a4d84",
-          "usd_value": 52506604.71182262,
-          "pct_supply": 7.5435639207301035,
+          "usd_value": 51512455.101796,
+          "pct_supply": 7.543474363878831,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0x4cb16d4153123a74bc724d161050959754f378d8",
-          "usd_value": 24836956.737875693,
-          "pct_supply": 3.568297203311394,
+          "usd_value": 24366698.739082497,
+          "pct_supply": 3.5682548406476324,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0xb3c89592d84ae6adb6a1aa41515ac14ec822b175",
-          "usd_value": 9077902.751755435,
-          "pct_supply": 1.3042119186697216,
+          "usd_value": 8906023.546652593,
+          "pct_supply": 1.3041964351245356,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0xb6e08047320b4b4d943d7f1363776dddc6f4aa66",
-          "usd_value": 6017836.70821079,
-          "pct_supply": 0.8645757257026101,
+          "usd_value": 5903896.1849279255,
+          "pct_supply": 0.8645654614985158,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0xa7cd9a7234968ff4ba5e449d813ab1903ff0cad8",
-          "usd_value": 4468533.219867717,
-          "pct_supply": 0.6419890632994603,
+          "usd_value": 4383926.900675986,
+          "pct_supply": 0.6419814416342016,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
           "address": "0xe261b366f231b12fcb58d6bbd71e57faee82431d",
-          "usd_value": 4384906.176317481,
-          "pct_supply": 0.629974461479647,
+          "usd_value": 4301883.234934875,
+          "pct_supply": 0.6299669824512003,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0x323dd264edd7dcc706a85652a3d15ddaed3ef0e1",
-          "usd_value": 4134042.6175749428,
-          "pct_supply": 0.5939331805561812,
+          "usd_value": 4055769.4769166945,
+          "pct_supply": 0.5939261294081991,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
           "address": "0xfb6bfa5f138a877be843e1ea098c0c0aa78dce84",
-          "usd_value": 3492179.9598047487,
-          "pct_supply": 0.5017175057131087,
+          "usd_value": 3426059.719041953,
+          "pct_supply": 0.501711549345467,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
           "address": "0xd2fae4ace1076bb05c015c1144ff0ed6f62c6075",
-          "usd_value": 3488196.160819842,
-          "pct_supply": 0.5011451578636349,
+          "usd_value": 3422151.348514647,
+          "pct_supply": 0.5011392082908812,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
           "address": "0xf9282c578f399d1c97f294f5062fb521330ad203",
-          "usd_value": 3418275.571031494,
-          "pct_supply": 0.49109974659893,
+          "usd_value": 3353554.6212661155,
+          "pct_supply": 0.4910939162848465,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
           "address": "0x0810a411a9c4f4c9dd0cb5d95dfb9aa95a02f043",
-          "usd_value": 2972186.0074704383,
-          "pct_supply": 0.4270105685695665,
+          "usd_value": 2915911.228774112,
+          "pct_supply": 0.4270054991193195,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
           "address": "0x01784ef301d79e4b2df3a21ad9a536d4cf09a5ce",
-          "usd_value": 2691023.273502745,
-          "pct_supply": 0.3866162397522061,
+          "usd_value": 2661811.124999957,
+          "pct_supply": 0.38979512708615927,
           "is_contract": true,
           "entity": null,
           "label": null
         },
         {
           "address": "0xbaed383ede0e5d9d72430661f3285daa77e9439f",
-          "usd_value": 2511665.890566433,
-          "pct_supply": 0.3608481694254212,
+          "usd_value": 2452608.2115211426,
+          "pct_supply": 0.35915949126648006,
           "is_contract": false,
           "entity": "Bybit",
           "label": "Bybit: Hot Wallet"
         },
         {
           "address": "0x0fa6f285456c61942881e4185c0028f5e3293ef5",
-          "usd_value": 2440643.2635303503,
-          "pct_supply": 0.3506444297281898,
+          "usd_value": 2394432.6094236975,
+          "pct_supply": 0.3506402668933053,
           "is_contract": false,
           "entity": null,
           "label": null
         },
         {
           "address": "0xe2415d7cfc9e3b2ccb644036f7105819b0cdcfa8",
-          "usd_value": 2149417.756514152,
-          "pct_supply": 0.3088043938016416,
+          "usd_value": 2108721.108232461,
+          "pct_supply": 0.30880072768978,
           "is_contract": false,
           "entity": null,
           "label": null
         }
       ],
       "history": [
-        {
-          "ts": "03-21 10:00",
-          "fhs": 2.5,
-          "phase": "ACCU",
-          "nbp": "29%",
-          "icr": 649.81,
-          "flow": "ACCU"
-        },
         {
           "ts": "03-21 12:00",
           "fhs": 4.0,
@@ -7483,6 +7470,14 @@
           "nbp": "15%",
           "icr": 692.09,
           "flow": "NEUT"
+        },
+        {
+          "ts": "03-23 10:00",
+          "fhs": 3.2,
+          "phase": "ACCU",
+          "nbp": "13%",
+          "icr": 688.39,
+          "flow": "ACCU"
         }
       ]
     }

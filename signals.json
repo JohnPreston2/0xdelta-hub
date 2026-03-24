@@ -1,35 +1,42 @@
 {
-  "updated_at": "2026-03-24T10:42:51.790929+00:00",
-  "cycle": "20260324_1042",
+  "updated_at": "2026-03-24T12:42:51.485770+00:00",
+  "cycle": "20260324_1242",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-03-24 10:42",
-      "note": "New bull flag detected"
+      "status": "CONFIRMED",
+      "since": "previous_cycle",
+      "note": "Strengthening signal"
+    },
+    {
+      "symbol": "AntiHunter",
+      "type": "BULL_FLAG",
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Signal weakening"
     },
     {
       "symbol": "CLAWNCH",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous cycle",
-      "note": "Strengthening distribution phase"
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Signal weakening"
     },
     {
-      "symbol": "FELIX",
-      "type": "BULL_FLAG",
+      "symbol": "CLANKER",
+      "type": "DISTRIBUTION_POTENTIELLE",
       "status": "DETECTED",
-      "since": "previous cycle",
-      "note": "Bull flag remains active"
+      "since": "current_cycle",
+      "note": "Phase change to distribution potential"
     },
     {
-      "symbol": "WORK",
-      "type": "CONSOLIDATION",
-      "status": "HOLDING",
-      "since": "previous cycle",
-      "note": "Consolidation phase continues"
+      "symbol": "DRB",
+      "type": "DISTRIBUTION_POTENTIELLE",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "Phase change to distribution potential"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in distribution, but some showing signs of consolidation. Notable shifts include CLAWNCH's increase in FHS and NBP, indicating a potential strengthening of its distribution phase.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nMOLT's FHS decreased by 1.3, while its NBP decreased by 1.4, indicating a weakening of its distribution phase. CLAWNCH's FHS increased by 1.6, and its NBP increased by 2.7, showing a strengthening of its distribution phase. Lumen's NBP increased by 16.5, indicating a significant change in its distribution phase.\n\n### 3. SIGNAL TRACKING\n- MOLT: WEAKENING ⚠️ — FHS decrease and NBP decrease indicate a weakening of its distribution phase.\n- AntiHunter: HOLDING ⏳ — minor changes in FHS and NBP, but overall distribution phase remains active.\n- CLAWNCH: CONFIRMED ✅ — increase in FHS and NBP confirms the strengthening of its distribution phase.\n- BNKRW: HOLDING ⏳ — no significant changes in metrics, distribution phase continues.\n- FELIX: HOLDING ⏳ — minor changes, but bull flag remains detected.\n- WORK: HOLDING ⏳ — consolidation phase continues with minor changes.\n- Other tokens:Either HOLDING ⏳ or no significant changes.\n\n### 4. NEW SIGNALS DETECTED\nA new bull flag has been detected for MOLT, indicating a potential strengthening of its distribution phase.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-24 10:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Strengthening distribution phase\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous cycle\", \"note\": \"Bull flag remains active\"},\n  {\"symbol\": \"WORK\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Consolidation phase continues\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the strengthening of CLAWNCH's distribution phase, indicated by its increase in FHS and NBP, making it a token to closely monitor for potential further developments."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is dominated by tokens in the distribution phase, with most tokens maintaining their current phase. Notable shifts include CLANKER and DRB changing from consolidation to distribution potential, indicating potential increased activity. The overall market appears to be in a mixed state, with distribution phases prevailing but some tokens experiencing shifts that could lead to accumulation or further distribution.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nGiven the data, there are no significant price or volume movements (greater than 2% price change or 20% volume change) reported for any of the tokens. The focus is on the changes in metrics such as FHS ( Fundamental Health Score), NBP (Net Buy Pressure), and phase changes, which indicate underlying shifts in market sentiment and activity.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag detected previously is still active, with an increase in FHS and a slight improvement in NBP, indicating strengthening of the signal.\n- **AntiHunter**: The bull flag remains detected, but with a slight decrease in NBP, indicating the signal might be weakening.\n- **CLAWNCH**: The bull flag is still active, but with a decrease in FHS and NBP, indicating the signal is weakening.\n- **WORK**: Previously had a bull flag, but it has been lost, and there's a significant decrease in NBP, indicating the signal has been invalidated.\n- **FELIX**: Also lost its bull flag with a decrease in NBP, indicating the signal has been invalidated.\n\n### 4. NEW SIGNALS DETECTED\nNew signals are not explicitly mentioned in the provided data, but changes in FHS, NBP, and phase shifts could indicate emerging trends. For instance, the phase changes in CLANKER and DRB, along with improvements in their metrics, might suggest new accumulation or distribution phases starting.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Strengthening signal\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Signal weakening\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Signal weakening\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Phase change to distribution potential\"},\n  {\"symbol\": \"DRB\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Phase change to distribution potential\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is the shift of several tokens towards distribution potential, coupled with the loss of bull flags in WORK and FELIX, indicating a complex market environment where both potential for accumulation and increased distribution activity are present."
 }

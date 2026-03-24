@@ -1,42 +1,35 @@
 {
-  "updated_at": "2026-03-24T16:43:42.529181+00:00",
-  "cycle": "20260324_1643",
+  "updated_at": "2026-03-24T18:42:47.368667+00:00",
+  "cycle": "20260324_1842",
   "signals": [
-    {
-      "symbol": "JUNO",
-      "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-03-24 16:42",
-      "note": "New bull flag with NBP increase"
-    },
     {
       "symbol": "VVV",
       "type": "BULL_FLAG",
       "status": "DETECTED",
-      "since": "2026-03-24 16:42",
-      "note": "New bull flag with phase change to ACCUMULATION"
+      "since": "previous cycle",
+      "note": "Accumulation phase"
     },
     {
       "symbol": "bio",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
       "since": "previous cycle",
-      "note": "Maintains bull flag with increased NBP"
-    },
-    {
-      "symbol": "CLAWD",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous cycle",
-      "note": "Maintains bull flag with slight changes"
+      "note": "Distribution phase but with a bull flag"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
       "since": "previous cycle",
-      "note": "Maintains bull flag with minor changes"
+      "note": "Distribution phase with a weakening bull flag"
+    },
+    {
+      "symbol": "DRB",
+      "type": "PHASE_CHANGE",
+      "status": "NEW",
+      "since": "current cycle",
+      "note": "Changed from distribution to consolidation"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens experiencing negative net buying pressure (NBP) and low liquidity. Notable shifts include the phase change of Squaer from \"DISTRIBUTION_POTENTIELLE\" to \"DISTRIBUTION\" and VVV from \"CONSOLIDATION\" to \"ACCUMULATION\". Additionally, JUNO and VVV have detected new bull flags.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price or volume movements (greater than 2% or 20%, respectively), several tokens exhibit notable changes in their metrics. For instance, AntiHunter's FHS increased by 1.3, and BNKRW's FHS increased by 1.4, despite both losing their bull flags. Bio saw a significant 30.0 increase in NBP, while JUNO detected a new bull flag with a 2.8 increase in NBP.\n\n### 3. SIGNAL TRACKING\nBased on the previous cycle's signals:\n- **AntiHunter**: WEAKENING ⚠️ — Lost bull flag and slight increase in FHS.\n- **BNKRW**: WEAKENING ⚠️ — Lost bull flag and slight increase in FHS.\n- **bio**: HOLDING ⏳ — Maintains bull flag detection with increased NBP.\n- **CLAWD**: HOLDING ⏳ — Maintains bull flag detection with slight changes.\n- **Doppel**: HOLDING ⏳ — Maintains bull flag detection with minor changes.\n\n### 4. NEW SIGNALS DETECTED\nNew signals this cycle include:\n- **JUNO**: New bull flag detected with an increase in NBP.\n- **VVV**: New bull flag detected, transitioning from \"CONSOLIDATION\" to \"ACCUMULATION\" phase.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-24 16:42\", \"note\": \"New bull flag with NBP increase\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-24 16:42\", \"note\": \"New bull flag with phase change to ACCUMULATION\"},\n  {\"symbol\": \"bio\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Maintains bull flag with increased NBP\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Maintains bull flag with slight changes\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Maintains bull flag with minor changes\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is the detection of new bull flags in JUNO and VVV, alongside the maintenance of bull flags in bio, CLAWD, and Doppel, indicating potential accumulation or distribution phases in these tokens."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe current market is characterized by a dominant distribution phase across most tokens, with some exceptions like VVV in accumulation and WORK and DRB in consolidation. Notable shifts include DRB's phase change from distribution to consolidation and the loss of bull flags in JUNO and CLAWD.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) were observed in the provided data. However, notable changes in other metrics include a substantial decrease in NBP for fomolt (-25%) and changes in FHS for several tokens, indicating shifts in their respective market sentiments.\n\n### 3. SIGNAL TRACKING\n- **JUNO**: WEAKENING ⚠️ — Lost its bull flag.\n- **VVV**: HOLDING ⏳ — Continues in accumulation with a bull flag.\n- **bio**: HOLDING ⏳ — Maintains its bull flag.\n- **CLAWD**: WEAKENING ⚠️ — Lost its bull flag.\n- **Doppel**: HOLDING ⏳ — Maintains its bull flag despite weakening metrics.\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags or significant accumulation phases were detected in this cycle. However, DRB's transition to consolidation could be a signal for potential future movements.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous cycle\", \"note\": \"Accumulation phase\"},\n  {\"symbol\": \"bio\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Distribution phase but with a bull flag\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Distribution phase with a weakening bull flag\"},\n  {\"symbol\": \"DRB\", \"type\": \"PHASE_CHANGE\", \"status\": \"NEW\", \"since\": \"current cycle\", \"note\": \"Changed from distribution to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the dominant distribution phase across most tokens, coupled with the loss of bull flags in JUNO and CLAWD, indicating a potential weakening in market sentiment for these tokens."
 }

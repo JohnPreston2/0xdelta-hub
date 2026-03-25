@@ -1,63 +1,56 @@
 {
-  "updated_at": "2026-03-25T16:42:53.573589+00:00",
-  "cycle": "20260325_1642",
+  "updated_at": "2026-03-25T18:43:00.276150+00:00",
+  "cycle": "20260325_1843",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG_LOST",
       "status": "WEAKENING",
-      "since": "2026-03-25 16:42",
+      "since": "previous_cycle",
       "note": "Lost bull flag, weakening buying pressure"
     },
     {
       "symbol": "AntiHunter",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
-      "since": "previous cycle",
+      "since": "previous_cycle",
       "note": "Stable buying pressure"
     },
     {
       "symbol": "JUNO",
-      "type": "BULL_FLAG_WEAKENING",
-      "status": "WEAKENING",
-      "since": "2026-03-25 16:42",
-      "note": "Weakening bull flag due to decreasing FHS"
+      "type": "BULL_FLAG_LOST",
+      "status": "INVALIDATED",
+      "since": "current_cycle",
+      "note": "Lost bull flag due to decreasing metrics"
     },
     {
       "symbol": "VVV",
       "type": "PHASE_CHANGE",
       "status": "CONFIRMED",
-      "since": "previous cycle",
+      "since": "previous_cycle",
       "note": "Phase change to consolidation"
     },
     {
       "symbol": "CLANKER",
       "type": "PHASE_CHANGE",
       "status": "DETECTED",
-      "since": "2026-03-25 16:42",
-      "note": "Phase change to distribution potentielle"
+      "since": "current_cycle",
+      "note": "Phase change to accumulation"
     },
     {
       "symbol": "DRB",
-      "type": "BULL_FLAG_LOST",
-      "status": "INVALIDATED",
-      "since": "2026-03-25 16:42",
-      "note": "Lost bull flag"
+      "type": "BULL_FLAG",
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "New bull flag detected"
     },
     {
       "symbol": "Doppel",
       "type": "NBP_INCREASE",
       "status": "DETECTED",
-      "since": "2026-03-25 16:42",
+      "since": "previous_cycle",
       "note": "Increase in NBP, potential strengthening of buying pressure"
-    },
-    {
-      "symbol": "BNKRW",
-      "type": "FHS_DECREASE",
-      "status": "DETECTED",
-      "since": "2026-03-25 16:42",
-      "note": "Decrease in FHS but increase in NBP, complex market dynamics"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a distribution phase, with most tokens showing negative NBP values, indicating a dominance of selling pressure. However, there are a few tokens like WORK and VVV that are in a consolidation phase, suggesting a more balanced market sentiment for these specific tokens. Notable shifts include changes in FHS (Fundamental Health Score) and NBP (Net Buying Pressure) for several tokens, indicating evolving market dynamics.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nGiven the data, there are no significant price or volume movements (greater than 2% or 20%, respectively) reported for any of the tokens. The market appears to be relatively stable in terms of price and volume, with the focus being on the changes in health scores, buying pressures, and phase changes.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag has been lost, indicating weakening buying pressure.\n- **AntiHunter**: The bull flag is still detected, showing stable buying pressure.\n- **JUNO**: The bull flag is weakening due to decreasing FHS.\n- **VVV**: The phase change to consolidation was detected previously, and the signal remains active.\n- **CLANKER**: The bull flag was lost, and there was a phase change from distribution to distribution potentielle.\n- **DRB**: The bull flag was lost.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include:\n- **CLANKER** entering a distribution potentielle phase with a significant increase in FHS and NBP.\n- **Doppel** showing an increase in NBP, potentially indicating strengthening buying pressure.\n- **BNKRW** with a decrease in FHS but an increase in NBP, suggesting complex market dynamics.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG_LOST\", \"status\": \"WEAKENING\", \"since\": \"2026-03-25 16:42\", \"note\": \"Lost bull flag, weakening buying pressure\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Stable buying pressure\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG_WEAKENING\", \"status\": \"WEAKENING\", \"since\": \"2026-03-25 16:42\", \"note\": \"Weakening bull flag due to decreasing FHS\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Phase change to consolidation\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"2026-03-25 16:42\", \"note\": \"Phase change to distribution potentielle\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG_LOST\", \"status\": \"INVALIDATED\", \"since\": \"2026-03-25 16:42\", \"note\": \"Lost bull flag\"},\n  {\"symbol\": \"Doppel\", \"type\": \"NBP_INCREASE\", \"status\": \"DETECTED\", \"since\": \"2026-03-25 16:42\", \"note\": \"Increase in NBP, potential strengthening of buying pressure\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"FHS_DECREASE\", \"status\": \"DETECTED\", \"since\": \"2026-03-25 16:42\", \"note\": \"Decrease in FHS but increase in NBP, complex market dynamics\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe single most important thing happening across the watchlist right now is the loss of bull flags in several tokens, including MOLT and DRB, indicating a weakening of buying pressure and potential market downturn for these specific tokens."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing signs of distribution. Notable shifts include WORK changing from consolidation to distribution and CLANKER transitioning from distribution potentielle to accumulation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed for any token, with all price delta percentages and volume delta percentages being 0. However, several tokens experienced changes in their metrics, such as FHS (Fundamental Health Score), NBP (Net Buying Pressure), and BPI (Buying Pressure Index).\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag lost status is still WEAKENING.\n- **AntiHunter**: The bull flag detected remains CONFIRMED.\n- **JUNO**: The bull flag weakening status has now turned into a lost bull flag, marking it as INVALIDATED.\n- **VVV**: The phase change to consolidation remains CONFIRMED.\n- **CLANKER**: The phase change to distribution potentielle is now DETECTED as it moves into accumulation.\n- **DRB**: The new bull flag detected is CONFIRMED.\n- **Doppel**: The increase in NBP (status: DETECTED) shows potential strengthening of buying pressure.\n\n### 4. NEW SIGNALS DETECTED\n- **DRB**: A new bull flag has been detected.\n- **CLANKER**: Transitioned from distribution potentielle to accumulation.\n- **WORK**: Changed phase from consolidation to distribution.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG_LOST\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Lost bull flag, weakening buying pressure\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Stable buying pressure\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG_LOST\", \"status\": \"INVALIDATED\", \"since\": \"current_cycle\", \"note\": \"Lost bull flag due to decreasing metrics\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Phase change to consolidation\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Phase change to accumulation\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"Doppel\", \"type\": \"NBP_INCREASE\", \"status\": \"DETECTED\", \"since\": \"previous_cycle\", \"note\": \"Increase in NBP, potential strengthening of buying pressure\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is the phase change of **WORK** from consolidation to distribution and **CLANKER** from distribution potentielle to accumulation, indicating potential market shifts."
 }

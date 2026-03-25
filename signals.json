@@ -1,42 +1,42 @@
 {
-  "updated_at": "2026-03-25T06:43:27.636771+00:00",
-  "cycle": "20260325_0643",
+  "updated_at": "2026-03-25T08:42:45.527854+00:00",
+  "cycle": "20260325_0842",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "DISTRIBUTION",
+      "status": "HOLDING",
+      "since": "2026-03-25 08:42",
+      "note": "FHS increase, NBP decrease"
+    },
+    {
+      "symbol": "AntiHunter",
+      "type": "DISTRIBUTION",
       "status": "WEAKENING",
-      "since": "2026-03-25 06:42",
-      "note": "FHS decrease by 1.1"
+      "since": "2026-03-25 08:42",
+      "note": "FHS decrease, NBP increase"
     },
     {
-      "symbol": "CLAWNCH",
+      "symbol": "BNKRW",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
-      "since": "2026-03-25 06:42",
-      "note": "FHS increase by 0.5"
-    },
-    {
-      "symbol": "Doppel",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "2026-03-25 06:42",
+      "since": "2026-03-25 08:42",
       "note": "New bull flag detected"
     },
     {
-      "symbol": "Lumen",
+      "symbol": "WORK",
       "type": "PHASE_CHANGE",
       "status": "CONFIRMED",
-      "since": "2026-03-25 06:42",
-      "note": "Phase change to DISTRIBUTION_POTENTIELLE and new bull flag"
+      "since": "2026-03-25 08:42",
+      "note": "Phase changed to consolidation"
     },
     {
       "symbol": "VVV",
       "type": "PHASE_CHANGE",
-      "status": "WEAKENING",
-      "since": "2026-03-25 06:42",
-      "note": "Phase change to CONSOLIDATION"
+      "status": "CONFIRMED",
+      "since": "2026-03-25 08:42",
+      "note": "Phase changed to rupture"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mixed trend, with most tokens in the distribution phase. Notable shifts include changes in the FHS (Fundamental Health Score) and NBP (Negative Balance Percentage) for several tokens, indicating potential changes in market sentiment.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price movements (all prices are at $0.000000), several tokens have notable changes in their metrics:\n- MOLT's FHS decreased by 1.1, and its NBP improved by 3.6.\n- CLAWNCH's FHS increased by 0.5, with a slight improvement in NBP.\n- Squaer's NBP saw a significant increase of 15.\n- Doppel's FHS decreased by 1.2, but it has a new bull flag detected.\n- Lumen's phase changed from CONSOLIDATION to DISTRIBUTION_POTENTIELLE, with a new bull flag detected.\n\n### 3. SIGNAL TRACKING\n- MOLT: WEAKENING ⚠️ — FHS decrease and slight NBP improvement.\n- AntiHunter: HOLDING ⏳ — Minor changes in FHS and NBP, but overall stable.\n- CLAWNCH: CONFIRMED ✅ — FHS increase and slight NBP improvement.\n- Doppel: CONFIRMED ✅ — New bull flag detected despite FHS decrease.\n- Lumen: CONFIRMED ✅ — Phase change and new bull flag detected.\n- VVV: WEAKENING ⚠️ — Phase change from RUPTURE to CONSOLIDATION and decrease in FHS.\n\n### 4. NEW SIGNALS DETECTED\n- Doppel: A new bull flag has been detected.\n- Lumen: A new bull flag has been detected, and its phase changed from CONSOLIDATION to DISTRIBUTION_POTENTIELLE.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-03-25 06:42\", \"note\": \"FHS decrease by 1.1\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-25 06:42\", \"note\": \"FHS increase by 0.5\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-25 06:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"Lumen\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-25 06:42\", \"note\": \"Phase change to DISTRIBUTION_POTENTIELLE and new bull flag\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"WEAKENING\", \"since\": \"2026-03-25 06:42\", \"note\": \"Phase change to CONSOLIDATION\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is the detection of new bull flags in Doppel and Lumen, along with Lumen's phase change, indicating potential shifts in market sentiment and opportunities for growth."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a distribution phase, with most tokens showing no significant price or volume changes. However, there are notable shifts in some tokens, such as WORK changing from distribution to consolidation and VVV moving from consolidation to rupture.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nDespite no token showing a price change greater than 2% or a volume change greater than 20%, several tokens have experienced changes in their metrics. For instance, MOLT's FHS increased by 0.6, and its NBP decreased by 1.2. AntiHunter's FHS decreased by 1.5, and its NBP increased by 0.5. BNKRW's FHS decreased by 1.4, but it detected a new bull flag. DRB's FHS increased significantly by 2.6, and it changed phase from distribution potentielle to distribution.\n\n### 3. SIGNAL TRACKING\n- MOLT: HOLDING \n- AntiHunter: WEAKENING \n- CLAWNCH: HOLDING \n- BNKRW: CONFIRMED \n- fomolt: HOLDING \n- WORK: CONFIRMED \n- Squaer: HOLDING \n- BUNKER: HOLDING \n- FELIX: HOLDING \n- bio: HOLDING \n- JUNO: WEAKENING \n- CLAWD: HOLDING \n- Doppel: HOLDING \n- CLANKER: HOLDING \n- DRB: CONFIRMED \n- Lumen: HOLDING \n- VVV: CONFIRMED \n\n### 4. NEW SIGNALS DETECTED\nNew signals include BNKRW detecting a new bull flag and WORK changing its phase to consolidation. VVV also changed its phase to rupture, indicating a potential significant move.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"2026-03-25 08:42\", \"note\": \"FHS increase, NBP decrease\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-03-25 08:42\", \"note\": \"FHS decrease, NBP increase\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-25 08:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"WORK\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-25 08:42\", \"note\": \"Phase changed to consolidation\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-25 08:42\", \"note\": \"Phase changed to rupture\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is the phase change of VVV to rupture and WORK to consolidation, indicating potential significant moves in these tokens."
 }

@@ -1,35 +1,49 @@
 {
-  "updated_at": "2026-03-25T12:43:20.745408+00:00",
-  "cycle": "20260325_1243",
+  "updated_at": "2026-03-25T14:43:34.370180+00:00",
+  "cycle": "20260325_1443",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "weakening buying pressure"
+      "note": "Weakening buying pressure"
     },
     {
       "symbol": "AntiHunter",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "stable buying pressure"
+      "note": "Stable buying pressure"
     },
     {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
       "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "decreasing FHS"
+      "note": "Decreasing FHS"
     },
     {
       "symbol": "VVV",
       "type": "PHASE_CHANGE",
       "status": "DETECTED",
       "since": "current_cycle",
-      "note": "phase change from consolidation to rupture"
+      "note": "RUPTURE to CONSOLIDATION"
+    },
+    {
+      "symbol": "CLANKER",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag with significant FHS and NBP changes"
+    },
+    {
+      "symbol": "DRB",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detection"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens experiencing negative price movements and high negative net buying pressure (NBP). Notable shifts include the phase change of VVV from consolidation to rupture, indicating a significant increase in buying pressure.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price movements (all prices are at $0.000000), several tokens have experienced changes in their metrics. For example, Doppel's FHS increased by 2.5, while JUNO's FHS decreased by 0.9. Additionally, VVV's phase changed from consolidation to rupture, which could be a sign of increased buying pressure.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag is still detected, but the NBP has decreased by 3.0, indicating weakening buying pressure. Status: HOLDING ⏳\n- **AntiHunter**: The bull flag is still detected, with a slight decrease in NBP. Status: HOLDING ⏳\n- **JUNO**: The bull flag is still detected, but the FHS has decreased by 0.9, indicating a weakening signal. Status: WEAKENING ⚠️\n- **CLANKER**: The bull flag has been lost, with an increase in FHS and NBP. Status: INVALIDATED ❌\n- **Doppel**: The bull flag has been lost, with a significant increase in FHS. Status: INVALIDATED ❌\n- **DRB**: The bull flag has been lost, with a slight increase in FHS. Status: INVALIDATED ❌\n- **Lumen**: The bull flag has been lost, with an increase in FHS. Status: INVALIDATED ❌\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags have been detected this cycle. However, VVV's phase change from consolidation to rupture could be a sign of increased buying pressure and a potential new signal.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"weakening buying pressure\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"stable buying pressure\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"decreasing FHS\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"phase change from consolidation to rupture\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the phase change of VVV from consolidation to rupture, which could indicate a significant increase in buying pressure and a potential new signal."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens experiencing negative price and volume movements. Notable shifts include changes in the Fear, Greed, and Holdings (FHS) and Net Buying Pressure (NBP) metrics for several tokens, indicating potential buying or selling opportunities.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price movements (all 0%) or volume changes (all 0%) for the tokens listed, notable changes in other metrics are observed:\n- **AntiHunter**: Experienced a decrease in FHS by 0.7 and an increase in NBP by 1.6.\n- **CLANKER**: Saw a significant decrease in FHS by 1.0, an increase in NBP by 11.0, and a new bull flag detection.\n- **DRB**: Had a decrease in FHS by 0.3, an increase in NBP by 1.5, and detected a new bull flag.\n- **JUNO**: Increased in FHS by 0.5 and had a slight increase in NBP by 0.1.\n- **CLAWD**: Increased in FHS by 0.6 and had a notable increase in NBP by 6.1.\n- **VVV**: Changed phase from RUPTURE to CONSOLIDATION, with a decrease in FHS by 0.5 and a decrease in NBP by 2.2.\n\n### 3. SIGNAL TRACKING\nGiven the previous cycle's signals:\n- **MOLT**: The bull flag detection is still active but with a slight weakening due to a decrease in FHS.\n- **AntiHunter**: The bull flag detection is holding but with a slight decrease in FHS.\n- **JUNO**: The bull flag detection is weakening due to a slight increase in FHS but overall stability in NBP.\n- **VVV**: The phase change detection from RUPTURE to CONSOLIDATION indicates a potential shift in market sentiment.\n\n### 4. NEW SIGNALS DETECTED\nNew signals detected this cycle include:\n- **CLANKER**: A new bull flag detection with significant changes in FHS and NBP.\n- **DRB**: A new bull flag detection with increases in NBP.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Weakening buying pressure\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Stable buying pressure\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decreasing FHS\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"RUPTURE to CONSOLIDATION\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag with significant FHS and NBP changes\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detection\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe single most important thing happening across the watchlist right now is the detection of new bull flags in **CLANKER** and **DRB**, alongside the phase change in **VVV**, indicating potential shifts in market sentiment and buying pressure."
 }

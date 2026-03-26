@@ -1,35 +1,28 @@
 {
-  "updated_at": "2026-03-26T14:42:56.935052+00:00",
-  "cycle": "20260326_1442",
+  "updated_at": "2026-03-26T16:42:47.120292+00:00",
+  "cycle": "20260326_1642",
   "signals": [
     {
       "symbol": "BNKRW",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-03-26 14:42",
-      "note": "New bull flag detected"
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "FHS and NBP have decreased"
     },
     {
       "symbol": "BUNKER",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous cycle",
-      "note": "No significant changes"
-    },
-    {
-      "symbol": "DRB",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous cycle",
-      "note": "Slight decrease in NBP"
+      "since": "previous_cycle",
+      "note": "FHS has decreased"
     },
     {
       "symbol": "CLANKER",
       "type": "ACCUMULATION",
       "status": "HOLDING",
-      "since": "previous cycle",
-      "note": "No significant changes"
+      "since": "previous_cycle",
+      "note": "NBP has slightly increased"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens experiencing negative price movements and low trading volumes. Notable shifts include the detection of a bull flag in BNKRW and changes in the Net Buying Pressure (NBP) of several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) were observed in the provided data. However, BNKRW detected a bull flag, indicating potential buying interest. Additionally, several tokens experienced changes in NBP, such as MOLT (-1.4), AntiHunter (-0.9), and CLAWNCH (2.6), which may indicate shifts in market sentiment.\n\n### 3. SIGNAL TRACKING\n- **BUNKER**: HOLDING ⏳ - No significant changes in metrics.\n- **DRB**: HOLDING ⏳ - Slight decrease in NBP, but still in consolidation phase.\n- **CLANKER**: HOLDING ⏳ - No significant changes in metrics, still in accumulation phase.\n\n### 4. NEW SIGNALS DETECTED\n- **BNKRW**: A new bull flag was detected, indicating potential buying interest.\n- **bio**: Experienced a significant decrease in NBP (-12.5), which may indicate increased selling pressure.\n- **VVV**: Experienced an increase in FHS (0.5) and a decrease in ICR (-5.5), which may indicate a shift in market sentiment.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-26 14:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Slight decrease in NBP\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"No significant changes\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe detection of a bull flag in BNKRW and changes in NBP across several tokens may indicate a shift in market sentiment, with potential buying interest emerging in certain tokens."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mixed trend, with most tokens in the distribution phase. Notable shifts include BNKRW's significant decrease in FHS and NBP, and DRB's loss of its bull flag. The market is generally stagnant, with no major price or volume movements.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements in the market, with all tokens experiencing 0% changes in price and volume. However, some tokens have notable changes in their metrics, such as BNKRW's -0.8 FHS delta and -28.6 NBP delta, and DRB's 1.4 FHS delta and -2.4 NBP delta.\n\n### 3. SIGNAL TRACKING\n- BNKRW: BULL_FLAG (status: HOLDING) — No significant changes, but FHS and NBP have decreased.\n- BUNKER: BULL_FLAG (status: HOLDING) — FHS has decreased, but no significant changes otherwise.\n- DRB: BULL_FLAG (status: INVALIDATED) — DRB has lost its bull flag, with a significant increase in FHS but decrease in NBP.\n- CLANKER: ACCUMULATION (status: HOLDING) — No significant changes, with a slight increase in NBP.\n\n### 4. NEW SIGNALS DETECTED\nNo new signals have been detected in this cycle.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"FHS and NBP have decreased\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"FHS has decreased\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"NBP has slightly increased\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the loss of DRB's bull flag, indicating a potential shift in market sentiment."
 }

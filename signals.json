@@ -1,28 +1,35 @@
 {
-  "updated_at": "2026-03-26T16:42:47.120292+00:00",
-  "cycle": "20260326_1642",
+  "updated_at": "2026-03-26T18:42:44.098631+00:00",
+  "cycle": "20260326_1842",
   "signals": [
     {
       "symbol": "BNKRW",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "FHS and NBP have decreased"
+      "note": "Bull flag still active"
     },
     {
       "symbol": "BUNKER",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "FHS has decreased"
+      "note": "Bull flag still active with slight BPI increase"
     },
     {
       "symbol": "CLANKER",
       "type": "ACCUMULATION",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "NBP has slightly increased"
+      "note": "Accumulation continues with slight NBP decrease"
+    },
+    {
+      "symbol": "WORK",
+      "type": "PHASE_CHANGE",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "Transitioned from distribution to consolidation"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mixed trend, with most tokens in the distribution phase. Notable shifts include BNKRW's significant decrease in FHS and NBP, and DRB's loss of its bull flag. The market is generally stagnant, with no major price or volume movements.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements in the market, with all tokens experiencing 0% changes in price and volume. However, some tokens have notable changes in their metrics, such as BNKRW's -0.8 FHS delta and -28.6 NBP delta, and DRB's 1.4 FHS delta and -2.4 NBP delta.\n\n### 3. SIGNAL TRACKING\n- BNKRW: BULL_FLAG (status: HOLDING) — No significant changes, but FHS and NBP have decreased.\n- BUNKER: BULL_FLAG (status: HOLDING) — FHS has decreased, but no significant changes otherwise.\n- DRB: BULL_FLAG (status: INVALIDATED) — DRB has lost its bull flag, with a significant increase in FHS but decrease in NBP.\n- CLANKER: ACCUMULATION (status: HOLDING) — No significant changes, with a slight increase in NBP.\n\n### 4. NEW SIGNALS DETECTED\nNo new signals have been detected in this cycle.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"FHS and NBP have decreased\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"FHS has decreased\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"NBP has slightly increased\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the loss of DRB's bull flag, indicating a potential shift in market sentiment."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing no significant price or volume changes. However, there are a few notable exceptions, such as WORK, which has transitioned from distribution to consolidation, and BNKRW, which has a bull flag detected.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price movements (above 2%) or volume changes (above 20%) for any of the tokens. The market is relatively stable, with most tokens experiencing minimal fluctuations.\n\n### 3. SIGNAL TRACKING\n- **BNKRW**: The bull flag detected is still active, but there are no changes in its metrics, so it's HOLDING ⏳.\n- **BUNKER**: The bull flag detected is still active, but with a slight increase in BPI, so it's HOLDING ⏳.\n- **CLANKER**: The accumulation phase continues with a slight decrease in NBP, so it's HOLDING ⏳.\n\n### 4. NEW SIGNALS DETECTED\n- **WORK**: Transitioned from distribution to consolidation, which could be a sign of a potential reversal or stabilization.\n- No new bull flags or significant changes in accumulation/distribution phases for other tokens.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag still active\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag still active with slight BPI increase\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Accumulation continues with slight NBP decrease\"},\n  {\"symbol\": \"WORK\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Transitioned from distribution to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event in the current cycle is WORK's phase change from distribution to consolidation, which may indicate a potential reversal or stabilization in its price movement."
 }

@@ -1,35 +1,42 @@
 {
-  "updated_at": "2026-03-27T16:42:42.336944+00:00",
-  "cycle": "20260327_1642",
+  "updated_at": "2026-03-27T18:42:48.713752+00:00",
+  "cycle": "20260327_1842",
   "signals": [
+    {
+      "symbol": "CLAWNCH",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-03-27 18:42",
+      "note": "New bull flag with decreased FHS score"
+    },
+    {
+      "symbol": "BUNKER",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-03-27 18:42",
+      "note": "New bull flag with increased NBP score"
+    },
     {
       "symbol": "FELIX",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-03-27 16:42",
-      "note": "New bull flag with negative fhs delta"
-    },
-    {
-      "symbol": "CLANKER",
-      "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-03-27 16:42",
-      "note": "New bull flag with negative fhs delta"
+      "status": "HOLDING",
+      "since": "previous cycle",
+      "note": "Bull flag still active with minor metric changes"
     },
     {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous cycle",
-      "note": "Existing bull flag"
+      "note": "Bull flag remains active with slight metric adjustments"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous cycle",
-      "note": "Existing bull flag"
+      "note": "Bull flag still present with minor changes in NBP and FHS scores"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing no significant price or volume changes over the last 2 hours. Notable shifts include FELIX and CLANKER, which have newly detected bull flags.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price movements (greater than 2%) or volume changes (greater than 20%) for any token in the provided data. All tokens have a price delta of 0%, indicating no change in price.\n\n### 3. SIGNAL TRACKING\n- **FELIX**: A new bull flag has been detected.\n- **CLANKER**: A new bull flag has been detected.\n- **JUNO** and **Doppel** had existing bull flags, but there's no update on their status in the provided deltas.\n- **WORK** remains in a potential distribution phase with no bull flag detected.\n- Other tokens either have no bull flag or are in consolidation phases without significant changes.\n\n### 4. NEW SIGNALS DETECTED\n- **FELIX** has a new bull flag detected with an fhs delta of -1.2 and an icr delta of -0.03.\n- **CLANKER** also has a new bull flag detected with an fhs delta of -1.0 and an icr delta of -0.07.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-27 16:42\", \"note\": \"New bull flag with negative fhs delta\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-27 16:42\", \"note\": \"New bull flag with negative fhs delta\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Existing bull flag\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Existing bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe detection of new bull flags in FELIX and CLANKER, alongside existing signals in JUNO and Doppel, suggests potential upcoming movements in these tokens, warranting close monitoring."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens experiencing negative price movements and low trading volumes. Notable shifts include the emergence of new bull flags in tokens such as CLAWNCH and BUNKER, indicating potential buying interest. However, the majority of tokens remain in a distribution phase, suggesting ongoing selling pressure.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nDespite the lack of significant price movements, several tokens have experienced notable changes in their metrics. For instance, CLAWNCH has seen a 0.7 decrease in its FHS (Fear, Greed, and Sentiment) score, accompanied by a new bull flag detection, which could indicate a potential reversal in its price trend. Similarly, BUNKER has also detected a new bull flag, with a 0.7 decrease in its FHS score and a 20-point increase in its NBP (Net Buying Pressure) score. On the other hand, WORK has transitioned from a \"DISTRIBUTION_POTENTIELLE\" phase to a \"DISTRIBUTION\" phase, with a 27.7-point decrease in its NBP score, suggesting increased selling pressure.\n\n### 3. SIGNAL TRACKING\n- **FELIX**: HOLDING ⏳ — The bull flag detected previously is still active, but with a slight decrease in its NBP score and an increase in its FHS score.\n- **CLANKER**: INVALIDATED ❌ — The bull flag detected earlier has been lost, with a significant decrease in its NBP score and an increase in its FHS score.\n- **JUNO**: HOLDING ⏳ — The bull flag remains active, but with minor changes in its metrics.\n- **Doppel**: HOLDING ⏳ — The bull flag is still present, with slight adjustments in its NBP and FHS scores.\n\n### 4. NEW SIGNALS DETECTED\nNew bull flags have been detected in **CLAWNCH** and **BUNKER**, indicating potential buying interest and possible reversals in their price trends.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-27 18:42\", \"note\": \"New bull flag with decreased FHS score\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-27 18:42\", \"note\": \"New bull flag with increased NBP score\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Bull flag still active with minor metric changes\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Bull flag remains active with slight metric adjustments\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Bull flag still present with minor changes in NBP and FHS scores\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe emergence of new bull flags in tokens like CLAWNCH and BUNKER, alongside the ongoing distribution phase in most tokens, suggests a complex market landscape where potential buying opportunities are arising amidst continued selling pressure."
 }

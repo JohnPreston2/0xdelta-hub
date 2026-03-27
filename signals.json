@@ -1,42 +1,56 @@
 {
-  "updated_at": "2026-03-27T02:42:51.264009+00:00",
-  "cycle": "20260327_0242",
+  "updated_at": "2026-03-27T04:42:44.483539+00:00",
+  "cycle": "20260327_0442",
   "signals": [
+    {
+      "symbol": "JUNO",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-03-27 04:42",
+      "note": "New bull flag detected"
+    },
+    {
+      "symbol": "Doppel",
+      "type": "BULL_FLAG",
+      "status": "LOST",
+      "since": "2026-03-27 04:42",
+      "note": "Lost bull flag"
+    },
+    {
+      "symbol": "CLANKER",
+      "type": "BULL_FLAG",
+      "status": "LOST",
+      "since": "2026-03-27 04:42",
+      "note": "Lost bull flag"
+    },
+    {
+      "symbol": "DRB",
+      "type": "BULL_FLAG",
+      "status": "HOLDING",
+      "since": "previous cycle",
+      "note": "No change"
+    },
     {
       "symbol": "BNKRW",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "bull flag still active"
+      "since": "previous cycle",
+      "note": "No change"
     },
     {
       "symbol": "BUNKER",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "bull flag still active"
+      "since": "previous cycle",
+      "note": "No change"
     },
     {
-      "symbol": "Doppel",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "bull flag still active"
-    },
-    {
-      "symbol": "DRB",
-      "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "bull flag still active but with a -7.487 BPI delta"
-    },
-    {
-      "symbol": "CLANKER",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "bull flag still active"
+      "symbol": "VVV",
+      "type": "PHASE_CHANGE",
+      "status": "DETECTED",
+      "since": "2026-03-27 04:42",
+      "note": "Phase change to CONSOLIDATION"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in distribution, but some showing signs of accumulation or consolidation. Notable shifts include CLAWNCH losing its bull flag and VVV changing its phase from consolidation to distribution.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all price deltas and volume deltas being 0%. However, some tokens have notable changes in their metrics, such as MOLT with a 15.1 NBP delta and fomolt with a 16.7 NBP delta.\n\n### 3. SIGNAL TRACKING\n- CLAWNCH: WEAKENING ⚠️ — lost its bull flag\n- BNKRW: HOLDING ⏳ — bull flag still active\n- BUNKER: HOLDING ⏳ — bull flag still active\n- Doppel: HOLDING ⏳ — bull flag still active\n- DRB: WEAKENING ⚠️ — bull flag still active but with a -7.487 BPI delta\n- CLANKER: HOLDING ⏳ — bull flag still active\n- VVV: INVALIDATED ❌ — phase changed from consolidation to distribution\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags or significant signals were detected this cycle. However, VVV's phase change from consolidation to distribution could be a notable event.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active but with a -7.487 BPI delta\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the loss of the bull flag by CLAWNCH and the phase change of VVV from consolidation to distribution, which could indicate a shift in market sentiment."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mix of distribution and accumulation phases, with most tokens in distribution. Notable shifts include JUNO entering a bull flag, while Doppel and CLANKER lost their bull flags. The market is relatively stable, with no significant price or volume movements.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo tokens experienced significant price movements (>2%) or volume changes (>20%). However, some tokens had notable changes in their metrics, such as JUNO's new bull flag detection and Doppel's lost bull flag.\n\n### 3. SIGNAL TRACKING\n- **JUNO**: NEW BULL FLAG DETECTED \n- **Doppel**: BULL FLAG LOST \n- **CLANKER**: BULL FLAG LOST \n- **DRB**: NO CHANGE\n- **BNKRW**: NO CHANGE\n- **BUNKER**: NO CHANGE\n\n### 4. NEW SIGNALS DETECTED\n- **JUNO**: New bull flag detected, indicating potential accumulation.\n- **VVV**: Phase change from DISTRIBUTION_POTENTIELLE to CONSOLIDATION, with a lost bull flag.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-27 04:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"LOST\", \"since\": \"2026-03-27 04:42\", \"note\": \"Lost bull flag\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"LOST\", \"since\": \"2026-03-27 04:42\", \"note\": \"Lost bull flag\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"No change\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"No change\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"No change\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"2026-03-27 04:42\", \"note\": \"Phase change to CONSOLIDATION\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is JUNO's new bull flag detection, indicating potential accumulation and a possible shift in market sentiment."
 }

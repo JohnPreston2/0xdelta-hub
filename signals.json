@@ -1,28 +1,35 @@
 {
-  "updated_at": "2026-03-27T14:42:37.624790+00:00",
-  "cycle": "20260327_1442",
+  "updated_at": "2026-03-27T16:42:42.336944+00:00",
+  "cycle": "20260327_1642",
   "signals": [
+    {
+      "symbol": "FELIX",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-03-27 16:42",
+      "note": "New bull flag with negative fhs delta"
+    },
+    {
+      "symbol": "CLANKER",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-03-27 16:42",
+      "note": "New bull flag with negative fhs delta"
+    },
     {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "previous_cycle",
-      "note": "Bull flag remains active"
+      "status": "HOLDING",
+      "since": "previous cycle",
+      "note": "Existing bull flag"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "previous_cycle",
-      "note": "Bull flag still active"
-    },
-    {
-      "symbol": "WORK",
-      "type": "PHASE_CHANGE",
-      "status": "DISTRIBUTION",
-      "since": "current_cycle",
-      "note": "Changed from consolidation to distribution"
+      "status": "HOLDING",
+      "since": "previous cycle",
+      "note": "Existing bull flag"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is predominantly in a distribution phase, with most tokens showing no significant price or volume changes over the last cycle. Notable shifts include WORK's phase change from consolidation to distribution and minor changes in FHS and NBP for several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo token experienced a price change greater than 2% or a volume change greater than 20% in the last cycle, indicating a relatively stable market. However, WORK's phase changed from consolidation to distribution, which could be a significant development.\n\n### 3. SIGNAL TRACKING\n- **JUNO**: BULL_FLAG (status: DETECTED) — The bull flag signal remains active.\n- **Doppel**: BULL_FLAG (status: DETECTED) — The bull flag signal is still active.\n- **WORK**: PHASE_CHANGE (status: DISTRIBUTION) — The phase change from consolidation to distribution is a new development.\n\n### 4. NEW SIGNALS DETECTED\nNo new significant signals were detected this cycle. The market remains largely in a distribution phase with minor adjustments in FHS and NBP for some tokens.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous_cycle\", \"note\": \"Bull flag remains active\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous_cycle\", \"note\": \"Bull flag still active\"},\n  {\"symbol\": \"WORK\", \"type\": \"PHASE_CHANGE\", \"status\": \"DISTRIBUTION\", \"since\": \"current_cycle\", \"note\": \"Changed from consolidation to distribution\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important development across the watchlist is WORK's phase change from consolidation to distribution, which may indicate a shift in market dynamics for this token."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing no significant price or volume changes over the last 2 hours. Notable shifts include FELIX and CLANKER, which have newly detected bull flags.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price movements (greater than 2%) or volume changes (greater than 20%) for any token in the provided data. All tokens have a price delta of 0%, indicating no change in price.\n\n### 3. SIGNAL TRACKING\n- **FELIX**: A new bull flag has been detected.\n- **CLANKER**: A new bull flag has been detected.\n- **JUNO** and **Doppel** had existing bull flags, but there's no update on their status in the provided deltas.\n- **WORK** remains in a potential distribution phase with no bull flag detected.\n- Other tokens either have no bull flag or are in consolidation phases without significant changes.\n\n### 4. NEW SIGNALS DETECTED\n- **FELIX** has a new bull flag detected with an fhs delta of -1.2 and an icr delta of -0.03.\n- **CLANKER** also has a new bull flag detected with an fhs delta of -1.0 and an icr delta of -0.07.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-27 16:42\", \"note\": \"New bull flag with negative fhs delta\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-27 16:42\", \"note\": \"New bull flag with negative fhs delta\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Existing bull flag\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Existing bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe detection of new bull flags in FELIX and CLANKER, alongside existing signals in JUNO and Doppel, suggests potential upcoming movements in these tokens, warranting close monitoring."
 }

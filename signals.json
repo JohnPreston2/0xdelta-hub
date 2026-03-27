@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-03-27T20:42:52.997635+00:00",
-  "cycle": "20260327_2042",
+  "updated_at": "2026-03-27T22:43:01.472350+00:00",
+  "cycle": "20260327_2243",
   "signals": [
     {
       "symbol": "CLAWNCH",
@@ -19,31 +19,38 @@
     {
       "symbol": "FELIX",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Minor adjustments in metrics"
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "Strengthening signal with FHS increase"
     },
     {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Slight metric adjustments"
+      "status": "WEAKENING",
+      "since": "current_cycle",
+      "note": "Signal weakening with slight FHS and NBP decrease"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Minor changes in metrics"
+      "note": "Minor changes, bull flag still active"
     },
     {
       "symbol": "CLANKER",
       "type": "ACCUMULATION",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Accumulation continues with positive NBP and ICR changes"
+    },
+    {
+      "symbol": "DRB",
+      "type": "ACCUMULATION",
       "status": "DETECTED",
       "since": "current_cycle",
-      "note": "Potential for future growth"
+      "note": "New signal with significant FHS and NBP increase"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing no significant price or volume changes over the last 2 hours. However, there are notable shifts in some tokens' metrics, such as changes in FHS (Fear, Greed, and Sentiment) scores and NBP (Net Buying Pressure) values.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo token has experienced a price change greater than 2% or a volume change greater than 20% in the last 2 hours. The market is relatively stable, with minimal fluctuations in price and volume.\n\n### 3. SIGNAL TRACKING\n- **CLAWNCH**: HOLDING ⏳ — The bull flag detected previously is still active, but there are no significant changes in its metrics.\n- **BUNKER**: HOLDING ⏳ — The bull flag remains active with no substantial changes in its metrics.\n- **FELIX**: HOLDING ⏳ — The bull flag is still present, with minor adjustments in its metrics.\n- **JUNO**: HOLDING ⏳ — The bull flag continues to be active, with slight metric adjustments.\n- **Doppel**: HOLDING ⏳ — The bull flag is still detected, with minor changes in its metrics.\n\n### 4. NEW SIGNALS DETECTED\n- **JUNO** has seen an increase in its FHS score and NBP value, potentially indicating a strengthening bull flag.\n- **FELIX** has a slight increase in its FHS score and a minor decrease in its BPI (Buying Pressure Index), which might suggest a holding pattern for its bull flag.\n- **CLANKER** is in an accumulation phase, which could be a sign of potential future growth.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag still active\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag remains active\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minor adjustments in metrics\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Slight metric adjustments\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minor changes in metrics\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Potential for future growth\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the stable market condition with most tokens in a distribution phase, but with notable shifts in metrics for some tokens, indicating potential future movements."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing no significant price or volume movements. However, there are notable shifts in certain metrics such as FHS (Fundamental Health Score) and NBP (Net Buying Pressure) for some tokens, indicating potential changes in market sentiment.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo token has shown a price movement of more than 2% or a volume change of more than 20%, indicating a relatively stable market. However, tokens like FELIX and DRB have seen increases in their FHS, which could be indicative of improving fundamentals.\n\n### 3. SIGNAL TRACKING\n- **CLAWNCH**: HOLDING ⏳ - The bull flag detected previously is still active, but there are no significant changes in its metrics.\n- **BUNKER**: HOLDING ⏳ - The bull flag remains active with no substantial changes.\n- **FELIX**: CONFIRMED ✅ - With an increase in FHS and a bull flag detected, FELIX's signal is strengthening.\n- **JUNO**: WEAKENING ⚠️ - The slight decrease in FHS and NBP might indicate a weakening of its bull flag signal.\n- **Doppel**: HOLDING ⏳ - Minor changes in metrics, but the bull flag remains active.\n- **CLANKER**: HOLDING ⏳ - Accumulation phase continues with minor positive changes in NBP and ICR.\n\n### 4. NEW SIGNALS DETECTED\n- **DRB**: A new signal is detected with a significant increase in FHS and NBP, indicating potential accumulation or strengthening fundamentals.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag still active\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag remains active\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Strengthening signal with FHS increase\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"current_cycle\", \"note\": \"Signal weakening with slight FHS and NBP decrease\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minor changes, bull flag still active\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Accumulation continues with positive NBP and ICR changes\"},\n  {\"symbol\": \"DRB\", \"type\": \"ACCUMULATION\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New signal with significant FHS and NBP increase\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the strengthening of FELIX's signal, indicated by an increase in its Fundamental Health Score, suggesting improving market sentiment towards this token."
 }

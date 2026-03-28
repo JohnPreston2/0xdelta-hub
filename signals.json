@@ -1,42 +1,56 @@
 {
-  "updated_at": "2026-03-28T16:42:47.173658+00:00",
-  "cycle": "20260328_1642",
+  "updated_at": "2026-03-28T18:42:50.903372+00:00",
+  "cycle": "20260328_1842",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
-      "since": "current_cycle",
-      "note": "Increasing FHS"
+      "since": "previous_cycle",
+      "note": "Weakening signal"
     },
     {
       "symbol": "AntiHunter",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "current_cycle",
-      "note": "Increasing FHS"
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Mixed signal"
     },
     {
-      "symbol": "VVV",
+      "symbol": "CLAWNCH",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
-      "since": "current_cycle",
-      "note": "New bull flag and phase change to rupture"
+      "since": "previous_cycle",
+      "note": "Strengthening signal"
     },
     {
       "symbol": "WORK",
-      "type": "PHASE_CHANGE",
+      "type": "BULL_FLAG",
       "status": "DETECTED",
       "since": "current_cycle",
-      "note": "Transitioned from accumulation to consolidation"
+      "note": "New signal"
+    },
+    {
+      "symbol": "Doppel",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New signal"
     },
     {
       "symbol": "CLANKER",
       "type": "PHASE_CHANGE",
-      "status": "DETECTED",
+      "status": "CONFIRMED",
       "since": "current_cycle",
-      "note": "Transitioned from distribution potentielle to consolidation"
+      "note": "Accumulation phase"
+    },
+    {
+      "symbol": "VVV",
+      "type": "PHASE_CHANGE",
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "Consolidation phase"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens experiencing minimal price and volume changes. Notable shifts include phase changes in WORK and CLANKER, with WORK transitioning from accumulation to consolidation and CLANKER moving from distribution potentielle to consolidation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\n- MOLT saw a 0.6 increase in FHS and a -4.4 change in NBP.\n- AntiHunter experienced a 0.6 increase in FHS and a -6.6 change in NBP.\n- Doppel had a 1.5 increase in FHS, a 4.7 change in NBP, and lost its bull flag.\n- VVV showed a significant change with a 1.9 increase in FHS, a 9.2 change in NBP, and a new bull flag detected, alongside a phase change from distribution potentielle to rupture.\n\n### 3. SIGNAL TRACKING\n- MOLT: CONFIRMED - The signal is strengthening with an increase in FHS.\n- AntiHunter: CONFIRMED - The signal remains strong with an increase in FHS.\n- Doppel: WEAKENING - The signal is fading as it lost its bull flag.\n- VVV: CONFIRMED - A new bull flag was detected, indicating a strengthening signal.\n\n### 4. NEW SIGNALS DETECTED\n- VVV has a new bull flag detected and has transitioned into a rupture phase, indicating potential for significant movement.\n- WORK and CLANKER have changed phases, which could signal new opportunities or risks.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Increasing FHS\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Increasing FHS\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"New bull flag and phase change to rupture\"},\n  {\"symbol\": \"WORK\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Transitioned from accumulation to consolidation\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Transitioned from distribution potentielle to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is VVV's transition into a rupture phase with a new bull flag detected, indicating a potential for substantial price movement and presenting a key opportunity or risk for investors."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a state of distribution, with most tokens showing a \"DISTRIBUTION\" phase. However, there are notable exceptions, such as CLANKER, which is in an \"ACCUMULATION\" phase, and WORK and VVV, which are in \"CONSOLIDATION\" phases. This mixed landscape suggests a complex market environment where different tokens are experiencing different trends.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nGiven the data, there are no significant price or volume movements (above 2% or 20%, respectively) to highlight. All tokens have shown 0% change in price and volume, indicating a stable but potentially stagnant market condition.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag detected previously is still active, but the FHS has decreased by 0.2, indicating a slight weakening of the signal.\n- **AntiHunter**: The bull flag remains confirmed, but with a decrease in FHS by 0.4 and an increase in NBP, suggesting a mixed signal.\n- **CLAWNCH**: The bull flag is still detected with an increase in FHS by 1.1, confirming the signal's strength.\n- **WORK**: A new bull flag has been detected with a decrease in FHS by 1.1, which might indicate a potential weakening, but the signal is still considered new and worth watching.\n- **Doppel**: A new bull flag has appeared with an increase in FHS by 0.5, indicating a strengthening signal.\n- **BUNKER**: The bull flag previously detected has been lost, with an increase in FHS by 0.2 but a significant decrease in NBP, suggesting distribution.\n- **CLANKER**: The phase change to accumulation is a significant development, indicating potential for future growth.\n- **VVV**: The phase change from rupture to consolidation, along with a decrease in FHS by 0.9, suggests a weakening signal.\n\n### 4. NEW SIGNALS DETECTED\nNew bull flags have been detected for WORK and Doppel, indicating potential buying opportunities. The phase change in CLANKER to accumulation and in VVV from rupture to consolidation are also noteworthy, as they may signal shifts in market sentiment towards these tokens.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Weakening signal\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Mixed signal\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Strengthening signal\"},\n  {\"symbol\": \"WORK\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New signal\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New signal\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Accumulation phase\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Consolidation phase\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the detection of new bull flags for WORK and Doppel, alongside the phase changes in CLANKER and VVV, which could indicate upcoming market shifts and potential investment opportunities."
 }

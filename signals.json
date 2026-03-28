@@ -1,49 +1,63 @@
 {
-  "updated_at": "2026-03-28T02:42:51.303312+00:00",
-  "cycle": "20260328_0242",
+  "updated_at": "2026-03-28T04:43:02.863299+00:00",
+  "cycle": "20260328_0443",
   "signals": [
     {
       "symbol": "CLAWNCH",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "bull flag remains active"
+      "note": "Bull flag with improving metrics"
     },
     {
       "symbol": "FELIX",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
+      "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "bull flag remains active"
+      "note": "Bull flag with decreasing FHS"
     },
     {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
+      "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "signal weakening"
+      "note": "Bull flag with slight FHS decrease"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
+      "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "bull flag remains active"
+      "note": "Bull flag with significant FHS decrease"
     },
     {
       "symbol": "CLANKER",
       "type": "ACCUMULATION",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "accumulation continues"
+      "note": "Continued accumulation"
+    },
+    {
+      "symbol": "CLAWD",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected"
+    },
+    {
+      "symbol": "WORK",
+      "type": "DISTRIBUTION_POTENTIELLE",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "Phase change to distribution potential"
     },
     {
       "symbol": "DRB",
-      "type": "ACCUMULATION",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "accumulation remains"
+      "type": "CONSOLIDATION",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "Phase change to consolidation"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a distribution phase, with most tokens experiencing a decrease in their Net Buying Pressure (NBP) and no significant changes in price or volume. Notable shifts include AntiHunter's FHS increase by 1.1 and CLAWNCH's FHS decrease by 0.7.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements in the current cycle, as all tokens have a price delta of 0% and a volume delta of 0%. However, some tokens have notable changes in their NBP, such as bio's 25% increase and Lumen's 8.9% decrease.\n\n### 3. SIGNAL TRACKING\n- AntiHunter: BULL_FLAG LOST \n- CLAWNCH: HOLDING \n- FELIX: HOLDING \n- JUNO: WEAKENING \n- Doppel: HOLDING \n- CLANKER: HOLDING \n- DRB: HOLDING \n\n### 4. NEW SIGNALS DETECTED\nNo new signals have been detected in the current cycle.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag remains active\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag remains active\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"signal weakening\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag remains active\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"accumulation continues\"},\n  {\"symbol\": \"DRB\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"accumulation remains\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the overall distribution phase, with most tokens experiencing a decrease in their NBP and no significant changes in price or volume."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in the distribution phase, but some showing signs of accumulation or consolidation. Notable shifts include WORK's phase change from distribution to distribution potential and DRB's phase change from distribution to consolidation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price movements (all prices are at 0% change), several tokens have notable changes in their metrics:\n- CLAWNCH saw an increase in its FHS by 0.5 and a slight improvement in its NBP.\n- FELIX experienced a decrease in its FHS by 0.8.\n- CLAWD had a significant decrease in its FHS by 1.1 and saw a new bull flag detected.\n- Doppel's FHS decreased by 1.9.\n- Lumen's FHS increased by 0.7, despite a negative change in its NBP.\n\n### 3. SIGNAL TRACKING\n- **CLAWNCH**: The bull flag remains active, and its metrics slightly improved, so its status is **HOLDING** ⏳.\n- **FELIX**: The bull flag remains active, but its FHS decreased, indicating a potential weakening, so its status is **WEAKENING** ⚠️.\n- **JUNO**: The bull flag remains active, but with a slight decrease in FHS, so its status is **HOLDING** ⏳.\n- **Doppel**: The bull flag remains active, but with a significant decrease in FHS, so its status is **WEAKENING** ⚠️.\n- **CLANKER**: Accumulation continues, so its status is **HOLDING** ⏳.\n- **DRB**: The signal transitions from distribution to consolidation, so its status is **INVALIDATED** ❌ for the distribution signal but now shows a consolidation signal.\n\n### 4. NEW SIGNALS DETECTED\n- **CLAWD** has a new bull flag detected.\n- **WORK**'s phase change to distribution potential could be a signal of interest.\n- **DRB**'s phase change to consolidation is a new signal.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag with improving metrics\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag with decreasing FHS\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag with slight FHS decrease\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag with significant FHS decrease\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Continued accumulation\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"WORK\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Phase change to distribution potential\"},\n  {\"symbol\": \"DRB\", \"type\": \"CONSOLIDATION\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Phase change to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the detection of new signals, particularly the bull flag in **CLAWD** and the phase changes in **WORK** and **DRB**, which could indicate potential shifts in market dynamics."
 }

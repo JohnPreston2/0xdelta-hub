@@ -1,70 +1,56 @@
 {
-  "updated_at": "2026-03-29T08:43:18.454597+00:00",
-  "cycle": "20260329_0843",
+  "updated_at": "2026-03-29T10:42:49.629209+00:00",
+  "cycle": "20260329_1042",
   "signals": [
     {
       "symbol": "AntiHunter",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "2026-03-29 08:42",
-      "note": "Strengthening signal"
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Decrease in FHS by 1.1"
     },
     {
       "symbol": "CLAWNCH",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "2026-03-29 08:42",
-      "note": "Stable signal"
+      "type": "DISTRIBUTION",
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "Lost bull flag, increase in FHS by 1.2"
     },
     {
       "symbol": "BNKRW",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "2026-03-29 08:42",
-      "note": "No change"
+      "since": "previous_cycle",
+      "note": "Minimal changes in metrics"
     },
     {
       "symbol": "FELIX",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "2026-03-29 08:42",
-      "note": "Weakening due to negative metric changes"
+      "status": "STRENGTHENING",
+      "since": "previous_cycle",
+      "note": "Slight increase in FHS"
     },
     {
-      "symbol": "Doppel",
+      "symbol": "JUNO",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "2026-03-29 08:42",
-      "note": "Weakening due to decrease in FHS and BPI"
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected"
     },
     {
       "symbol": "Lumen",
       "type": "PHASE_CHANGE",
       "status": "CONFIRMED",
-      "since": "2026-03-29 08:42",
-      "note": "Phase change to consolidation"
+      "since": "previous_cycle",
+      "note": "Consolidation phase"
     },
     {
       "symbol": "VVV",
-      "type": "PHASE_CHANGE",
-      "status": "CONFIRMED",
-      "since": "2026-03-29 08:42",
-      "note": "Phase change to consolidation"
-    },
-    {
-      "symbol": "fomolt",
-      "type": "PHASE_CHANGE",
-      "status": "CONFIRMED",
-      "since": "2026-03-29 08:42",
-      "note": "Phase change to distribution potentielle"
-    },
-    {
-      "symbol": "WORK",
-      "type": "PHASE_CHANGE",
-      "status": "CONFIRMED",
-      "since": "2026-03-29 08:42",
-      "note": "Phase change from accumulation to distribution"
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected, significant decrease in FHS by 2.3"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens experiencing minimal price and volume changes. Notable shifts include phase changes in Lumen, from rupture to consolidation, and in WORK, from accumulation to distribution. Additionally, fomolt and VVV have also undergone phase changes.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements (>2% or >20%) among the listed tokens. All tokens have a price delta of 0%, indicating no change in their prices over the observed period. Similarly, volume deltas are 0% across the board, suggesting stable trading volumes.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag has been lost, indicating a weakening of the previous signal.\n- **AntiHunter**: The signal remains active with an increase in FHS and BPI, suggesting a strengthening of the bull flag.\n- **CLAWNCH**: The signal is holding with minor adjustments, indicating stability.\n- **BNKRW**: The signal is holding with no significant changes.\n- **FELIX**: The signal is weakening due to negative changes in metrics.\n- **Doppel**: The signal is weakening due to a decrease in FHS and BPI.\n- **Lumen**: The phase change from rupture to consolidation indicates a shift in market dynamics, potentially weakening the previous signal.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include the phase changes in **fomolt** (to distribution potentielle), **WORK** (from accumulation to distribution), **Lumen** (from rupture to consolidation), and **VVV** (from distribution potentielle to consolidation). **CLANKER** remains in accumulation with a positive NBP, indicating potential strength.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-29 08:42\", \"note\": \"Strengthening signal\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-03-29 08:42\", \"note\": \"Stable signal\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-03-29 08:42\", \"note\": \"No change\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-03-29 08:42\", \"note\": \"Weakening due to negative metric changes\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-03-29 08:42\", \"note\": \"Weakening due to decrease in FHS and BPI\"},\n  {\"symbol\": \"Lumen\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-29 08:42\", \"note\": \"Phase change to consolidation\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-29 08:42\", \"note\": \"Phase change to consolidation\"},\n  {\"symbol\": \"fomolt\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-29 08:42\", \"note\": \"Phase change to distribution potentielle\"},\n  {\"symbol\": \"WORK\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-29 08:42\", \"note\": \"Phase change from accumulation to distribution\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is the phase change in **Lumen** from rupture to consolidation, indicating a potential shift in market dynamics and a weakening of previous bull flags."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a distribution phase, with most tokens experiencing minimal price and volume changes. Notable shifts include changes in FHS (Fundamental Health Score) and NBP (Net Buying Pressure) for several tokens, indicating potential adjustments in market sentiment.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nGiven the data, there are no significant price movements (>2%) or volume changes (>20%) for any of the tokens listed. However, notable changes in metrics such as FHS and NBP for tokens like AntiHunter, CLAWNCH, and JUNO suggest underlying market dynamics are shifting, even if prices and volumes remain stable.\n\n### 3. SIGNAL TRACKING\n- **AntiHunter**: The bull flag detected previously is still active, but with a decrease in FHS by 1.1, indicating a potential weakening of the signal.\n- **CLAWNCH**: The bull flag previously detected has been lost, with an increase in FHS by 1.2, suggesting a change in market dynamics.\n- **BNKRW**: The bull flag remains, with minimal changes in metrics, indicating a stable signal.\n- **FELIX**: The bull flag is still present, with a slight increase in FHS, suggesting a strengthening or stable signal.\n- **JUNO**: A new bull flag has been detected, with a decrease in FHS by 0.2, indicating a potentially emerging signal.\n- **Lumen**: The phase change to consolidation remains, with minimal changes, suggesting a stable but consolidating market.\n- **VVV**: A new bull flag has been detected, with a significant decrease in FHS by 2.3, indicating a potentially emerging but volatile signal.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include a bull flag for JUNO and VVV, indicating potential buying interest or accumulation phases starting for these tokens. Additionally, the phase change for fomolt from distribution potentielle to distribution suggests a shift in its market dynamics.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS by 1.1\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"DISTRIBUTION\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Lost bull flag, increase in FHS by 1.2\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minimal changes in metrics\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"STRENGTHENING\", \"since\": \"previous_cycle\", \"note\": \"Slight increase in FHS\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"Lumen\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Consolidation phase\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected, significant decrease in FHS by 2.3\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe detection of new bull flags for JUNO and VVV, alongside the weakening of the AntiHunter signal and the loss of the bull flag for CLAWNCH, suggests that market dynamics are shifting, with potential for new accumulation phases in some tokens while others may be entering distribution."
 }

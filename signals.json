@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-03-29T16:42:50.241467+00:00",
-  "cycle": "20260329_1642",
+  "updated_at": "2026-03-29T18:42:40.495975+00:00",
+  "cycle": "20260329_1842",
   "signals": [
     {
       "symbol": "AntiHunter",
@@ -10,40 +10,40 @@
       "note": "Decrease in FHS and NBP"
     },
     {
-      "symbol": "CLANKER",
-      "type": "ACCUMULATION",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Minimal changes in metrics"
-    },
-    {
-      "symbol": "Lumen",
-      "type": "CONSOLIDATION",
-      "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "Slight decrease in FHS and NBP"
-    },
-    {
-      "symbol": "VVV",
-      "type": "DISTRIBUTION_POTENTIELLE",
-      "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "Phase change and increase in NBP and ICR"
-    },
-    {
-      "symbol": "JUNO",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous_cycle",
-      "note": "Increase in FHS and NBP"
-    },
-    {
       "symbol": "BNKRW",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
       "since": "previous_cycle",
-      "note": "Maintaining bull flag"
+      "note": "No significant changes"
+    },
+    {
+      "symbol": "JUNO",
+      "type": "BULL_FLAG",
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Decrease in FHS and NBP"
+    },
+    {
+      "symbol": "Lumen",
+      "type": "PHASE_CHANGE",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "Lost bull flag, phase changed to DISTRIBUTION_POTENTIELLE"
+    },
+    {
+      "symbol": "bio",
+      "type": "NBP_INCREASE",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "Increase in NBP by 16.7"
+    },
+    {
+      "symbol": "CLANKER",
+      "type": "WEAKENING_ACCUMULATION",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "Decrease in NBP and ICR"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mixed trend, with most tokens in the distribution phase. Notable shifts include changes in the FHS (Funding Health Score) and NBP (Net Buying Pressure) of several tokens, indicating potential changes in market sentiment. The majority of tokens are in the distribution phase, suggesting a bearish trend.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all price and volume deltas being 0%. This suggests a stable but potentially stagnant market. However, changes in FHS, NBP, and other metrics indicate underlying shifts in market dynamics.\n\n### 3. SIGNAL TRACKING\n- **AntiHunter**: The bull flag detected previously is still active, but with a decrease in FHS and NBP, indicating potential weakening of the signal.\n- **CLANKER**: The accumulation phase continues, with minimal changes in metrics, suggesting a holding pattern.\n- **Lumen**: The consolidation phase continues, with a slight decrease in FHS and NBP, indicating a potential weakening of the signal.\n\n### 4. NEW SIGNALS DETECTED\n- **VVV** has transitioned from consolidation to distribution potential, with an increase in NBP and a significant increase in ICR, suggesting a potential shift in market dynamics.\n- **FELIX** and **Doppel** have lost their bull flags, indicating a weakening of their previous signals.\n- **JUNO** and **BNKRW** maintain their bull flags, with JUNO showing an increase in FHS and NBP, suggesting a strengthening signal.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minimal changes in metrics\"},\n  {\"symbol\": \"Lumen\", \"type\": \"CONSOLIDATION\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Slight decrease in FHS and NBP\"},\n  {\"symbol\": \"VVV\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Phase change and increase in NBP and ICR\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Increase in FHS and NBP\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Maintaining bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the transition of **VVV** from consolidation to distribution potential, coupled with the loss of bull flags by **FELIX** and **Doppel**, indicating a complex and potentially shifting market landscape."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a distribution phase, with most tokens showing no significant price or volume changes over the last 2 hours. Notable shifts include changes in the NBP (Net Buying Pressure) and FHS (Fear, Greed, and Holdings Score) for several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\n- **AntiHunter**: Experienced a decrease in FHS by 0.4 and NBP by 10.0.\n- **Lumen**: Saw an increase in FHS by 1.0 and a phase change from CONSOLIDATION to DISTRIBUTION_POTENTIELLE, losing its bull flag.\n- **JUNO**: Had a decrease in FHS by 0.9 and NBP by 2.0.\n- **VVV**: Experienced a decrease in FHS by 0.5 and NBP by 1.5.\n\n### 3. SIGNAL TRACKING\n- **AntiHunter**: The bull flag detected previously is still active but weakening due to decreases in FHS and NBP.\n- **BNKRW**: The bull flag remains confirmed with no significant changes in metrics.\n- **JUNO**: The bull flag is confirmed but weakening due to a decrease in FHS and NBP.\n- **Lumen**: The bull flag was lost as the phase changed to DISTRIBUTION_POTENTIELLE, indicating a potential shift in market sentiment.\n\n### 4. NEW SIGNALS DETECTED\n- **bio**: Shows an increase in NBP by 16.7, which could indicate improving market sentiment.\n- **CLANKER**: Although in accumulation, the decrease in NBP by 3.5 and ICR by 0.17 might suggest a weakening of the accumulation phase.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"Lumen\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Lost bull flag, phase changed to DISTRIBUTION_POTENTIELLE\"},\n  {\"symbol\": \"bio\", \"type\": \"NBP_INCREASE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Increase in NBP by 16.7\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"WEAKENING_ACCUMULATION\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Decrease in NBP and ICR\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is the phase change and loss of the bull flag for Lumen, indicating a potential shift in market sentiment towards distribution."
 }

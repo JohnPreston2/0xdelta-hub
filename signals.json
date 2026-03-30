@@ -1,49 +1,63 @@
 {
-  "updated_at": "2026-03-30T00:42:52.256621+00:00",
-  "cycle": "20260330_0042",
+  "updated_at": "2026-03-30T02:43:02.751732+00:00",
+  "cycle": "20260330_0243",
   "signals": [
+    {
+      "symbol": "CLAWNCH",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-03-30 02:42",
+      "note": "New bull flag detected"
+    },
+    {
+      "symbol": "FELIX",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-03-30 02:42",
+      "note": "New bull flag detected"
+    },
+    {
+      "symbol": "VVV",
+      "type": "PHASE_CHANGE",
+      "status": "CONFIRMED",
+      "since": "2026-03-30 02:42",
+      "note": "Phase changed from RUPTURE to CONSOLIDATION"
+    },
     {
       "symbol": "CLANKER",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-03-30 00:42",
-      "note": "Strong accumulation"
+      "status": "WEAKENING",
+      "since": "previous cycle",
+      "note": "Bull flag still detected but weakening"
     },
     {
       "symbol": "DRB",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-03-30 00:42",
-      "note": "Increased buying interest"
+      "status": "WEAKENING",
+      "since": "previous cycle",
+      "note": "Bull flag still detected but weakening"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
       "status": "WEAKENING",
       "since": "previous cycle",
-      "note": "Decrease in buying pressure"
+      "note": "Bull flag still detected but weakening"
     },
     {
       "symbol": "AntiHunter",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous cycle",
-      "note": "Stable buying interest"
+      "note": "Bull flag still detected with minimal change"
     },
     {
       "symbol": "BNKRW",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
+      "status": "STRENGTHENING",
       "since": "previous cycle",
-      "note": "Decrease in buying pressure"
-    },
-    {
-      "symbol": "VVV",
-      "type": "PHASE_CHANGE",
-      "status": "CONFIRMED",
-      "since": "2026-03-30 00:42",
-      "note": "Phase changed to RUPTURE"
+      "note": "Bull flag still detected with increased FHS and BPI"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing negative NBP (Net Buying Pressure) values, indicating a selling pressure. However, a few tokens like CLANKER are in accumulation, showing a positive NBP. There's a notable shift in VVV's phase from DISTRIBUTION_POTENTIELLE to RUPTURE.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) were observed in the provided data. However, notable changes include:\n- CLANKER's NBP increased by 22.4, and its BPI (Buying Pressure Indicator) surged by 80.711, indicating strong buying interest.\n- DRB's FHS (Fear and Greed Index) increased by 1.4, and its BPI rose by 21.36, suggesting an increase in buying pressure.\n- VVV's phase changed to RUPTURE, with an FHS increase of 3.1 and a significant ICR (Investor Confidence Rating) delta of 1.9.\n\n### 3. SIGNAL TRACKING\n- **Doppel**: The bull flag detected previously is still active, but the signal is weakening slightly with a decrease in BPI.\n- **AntiHunter**: The bull flag remains detected, but with minimal changes in metrics.\n- **BNKRW**: The bull flag is still active, but the signal is weakening due to decreases in FHS and NBP.\n- **CLANKER**: A new bull flag was detected with a significant increase in NBP and BPI, indicating strong accumulation.\n- **DRB**: A new bull flag was detected with increases in FHS and BPI, suggesting increased buying interest.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include:\n- **CLANKER**: Bull flag detected with significant increases in NBP and BPI.\n- **DRB**: Bull flag detected with increases in FHS and BPI.\n- **VVV**: Phase change to RUPTURE, which could indicate a significant market movement.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-30 00:42\", \"note\": \"Strong accumulation\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-30 00:42\", \"note\": \"Increased buying interest\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous cycle\", \"note\": \"Decrease in buying pressure\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Stable buying interest\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous cycle\", \"note\": \"Decrease in buying pressure\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-30 00:42\", \"note\": \"Phase changed to RUPTURE\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the detection of new bull flags in CLANKER and DRB, along with the phase change in VVV to RUPTURE, indicating potential significant market movements in these tokens."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens showing no significant price or volume movements. Notable exceptions include CLAWNCH and FELIX, which have newly detected bull flags, and VVV, which has changed its phase from RUPTURE to CONSOLIDATION.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price movements (greater than 2%) or volume changes (greater than 20%) among the listed tokens. However, several tokens have seen changes in their metrics that could indicate potential future movements. For example, CLAWNCH has a new bull flag detected, and FELIX also has a new bull flag, which could be indicative of upcoming price increases.\n\n### 3. SIGNAL TRACKING\n- **CLANKER**: The bull flag is still detected, but its FHS has decreased by 1.0, indicating some weakening of the signal.\n- **DRB**: The bull flag is still detected, but with a decrease in FHS and BPI, suggesting the signal is weakening.\n- **Doppel**: The bull flag is still detected but with a decrease in BPI, indicating the signal might be weakening.\n- **AntiHunter**: The bull flag is still detected with minimal changes, suggesting the signal is holding.\n- **BNKRW**: The bull flag is still detected with an increase in FHS and BPI, suggesting the signal is strengthening.\n- **VVV**: The phase change from RUPTURE to CONSOLIDATION indicates a significant shift, potentially leading to a more stable period.\n\n### 4. NEW SIGNALS DETECTED\n- **CLAWNCH** and **FELIX** have new bull flags detected, indicating potential for price increases.\n- **VVV** has changed its phase from RUPTURE to CONSOLIDATION, which could signal a period of price stabilization or preparation for a future move.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-30 02:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-03-30 02:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-30 02:42\", \"note\": \"Phase changed from RUPTURE to CONSOLIDATION\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous cycle\", \"note\": \"Bull flag still detected but weakening\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous cycle\", \"note\": \"Bull flag still detected but weakening\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous cycle\", \"note\": \"Bull flag still detected but weakening\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Bull flag still detected with minimal change\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"STRENGTHENING\", \"since\": \"previous cycle\", \"note\": \"Bull flag still detected with increased FHS and BPI\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the detection of new bull flags in CLAWNCH and FELIX, along with the phase change in VVV, which could signal upcoming price movements or stabilization in these tokens."
 }

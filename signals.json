@@ -1,37 +1,44 @@
 {
-  "updated_at": "2026-03-30T20:42:47.266548+00:00",
-  "cycle": "20260330_2042",
+  "updated_at": "2026-03-30T22:42:46.026846+00:00",
+  "cycle": "20260330_2242",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
       "status": "WEAKENING",
       "since": "2026-03-30 20:42",
-      "note": "Decrease in FHS and NBP"
+      "note": "Decrease in FHS and increase in NBP"
     },
     {
       "symbol": "AntiHunter",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "2026-03-30 20:42",
-      "note": "Minimal changes in metrics"
+      "type": "BULL_FLAG_LOST",
+      "status": "INVALIDATED",
+      "since": "2026-03-30 22:42",
+      "note": "Lost bull flag"
     },
     {
       "symbol": "BNKRW",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
       "since": "2026-03-30 20:42",
-      "note": "New bull flag detected"
+      "note": "Increase in NBP"
     },
     {
       "symbol": "fomolt",
       "type": "BULL_FLAG",
       "status": "WEAKENING",
       "since": "2026-03-30 20:42",
-      "note": "Increase in NBP"
+      "note": "Slight decrease in FHS"
     },
     {
       "symbol": "CLAWD",
+      "type": "BULL_FLAG",
+      "status": "CONFIRMED",
+      "since": "2026-03-30 20:42",
+      "note": "Slight increase in FHS"
+    },
+    {
+      "symbol": "Doppel",
       "type": "BULL_FLAG",
       "status": "WEAKENING",
       "since": "2026-03-30 20:42",
@@ -40,38 +47,31 @@
     {
       "symbol": "DRB",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
+      "status": "CONFIRMED",
       "since": "2026-03-30 20:42",
-      "note": "Minimal changes"
+      "note": "Increase in FHS and NBP"
+    },
+    {
+      "symbol": "Lumen",
+      "type": "BULL_FLAG",
+      "status": "WEAKENING",
+      "since": "2026-03-30 20:42",
+      "note": "Decrease in FHS and NBP"
     },
     {
       "symbol": "CLANKER",
       "type": "PHASE_CHANGE",
       "status": "CONFIRMED",
-      "since": "2026-03-30 20:42",
-      "note": "Phase change to distribution potential"
+      "since": "2026-03-30 22:42",
+      "note": "Phase change to rupture"
     },
     {
       "symbol": "VVV",
       "type": "PHASE_CHANGE",
       "status": "CONFIRMED",
-      "since": "2026-03-30 20:42",
-      "note": "Phase change to accumulation"
-    },
-    {
-      "symbol": "Doppel",
-      "type": "BULL_FLAG",
-      "status": "NEW",
-      "since": "2026-03-30 20:42",
-      "note": "New bull flag detected"
-    },
-    {
-      "symbol": "Lumen",
-      "type": "BULL_FLAG",
-      "status": "NEW",
-      "since": "2026-03-30 20:42",
-      "note": "New bull flag detected"
+      "since": "2026-03-30 22:42",
+      "note": "Phase change to consolidation"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in the distribution phase, but some showing signs of accumulation or consolidation. Notable shifts include changes in the Fear, Greed, and Hope (FHS) scores and Net Buying Pressure (NBP) for several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nGiven the data, there are no significant price or volume movements (greater than 2% or 20%, respectively) reported for any token. However, changes in metrics such as FHS, NBP, and the detection of new bull flags are noteworthy. For example, Doppel and Lumen have seen new bull flags detected, indicating potential strengthening of their signals.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The signal is weakening slightly with a decrease in FHS and NBP.\n- **AntiHunter**: The signal is holding with minimal changes in metrics.\n- **BNKRW**: The signal is confirmed with a new bull flag detected, but FHS has decreased.\n- **fomolt**: The signal is weakening due to an increase in NBP.\n- **CLAWD**: The signal is weakening with a decrease in FHS and NBP.\n- **DRB**: The signal is holding with minimal changes.\n- **CLANKER**: The phase change to distribution potential is confirmed, with an increase in NBP.\n- **VVV**: The phase change to accumulation is confirmed, but with a decrease in FHS.\n\n### 4. NEW SIGNALS DETECTED\nNew bull flags have been detected for **Doppel** and **Lumen**, indicating potential buy signals. **CLANKER** shows a significant increase in NBP, suggesting a potential shift in market sentiment towards this token.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-03-30 20:42\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-03-30 20:42\", \"note\": \"Minimal changes in metrics\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-30 20:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"fomolt\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-03-30 20:42\", \"note\": \"Increase in NBP\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-03-30 20:42\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-03-30 20:42\", \"note\": \"Minimal changes\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-30 20:42\", \"note\": \"Phase change to distribution potential\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-30 20:42\", \"note\": \"Phase change to accumulation\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"NEW\", \"since\": \"2026-03-30 20:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"NEW\", \"since\": \"2026-03-30 20:42\", \"note\": \"New bull flag detected\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe detection of new bull flags for **Doppel** and **Lumen**, along with significant changes in NBP for **CLANKER**, are the most critical developments across the watchlist, indicating potential buy opportunities and shifts in market sentiment."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a state of distribution, with most tokens showing no significant price or volume changes over the last 2 hours. However, there are notable shifts in some tokens' phases and metrics, indicating potential changes in market sentiment.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\n- **AntiHunter**: Experienced a slight increase in FHS by 0.8 and a minimal change in NBP, but lost its bull flag.\n- **CLANKER**: Saw a significant increase in FHS by 1.6 and a change in phase from distribution potential to rupture, indicating a potential breakout.\n- **VVV**: Changed phase from accumulation to consolidation, with a slight increase in FHS and NBP.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: Bull flag detected, but with weakening signals due to a decrease in FHS and an increase in NBP.\n- **AntiHunter**: Bull flag lost, indicating a weakening signal.\n- **BNKRW**: Bull flag confirmed, with an increase in NBP.\n- **fomolt**: Bull flag detected, but with a slight decrease in FHS.\n- **CLAWD**: Bull flag detected, with a slight increase in FHS.\n- **Doppel**: Bull flag detected, but with a decrease in FHS and NBP.\n- **DRB**: Bull flag detected, with an increase in FHS and NBP.\n- **Lumen**: Bull flag detected, but with a decrease in FHS and NBP.\n\n### 4. NEW SIGNALS DETECTED\n- **CLANKER**: New signal detected with a phase change to rupture.\n- **VVV**: New signal detected with a phase change to consolidation.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-03-30 20:42\", \"note\": \"Decrease in FHS and increase in NBP\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG_LOST\", \"status\": \"INVALIDATED\", \"since\": \"2026-03-30 22:42\", \"note\": \"Lost bull flag\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-30 20:42\", \"note\": \"Increase in NBP\"},\n  {\"symbol\": \"fomolt\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-03-30 20:42\", \"note\": \"Slight decrease in FHS\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-30 20:42\", \"note\": \"Slight increase in FHS\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-03-30 20:42\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-30 20:42\", \"note\": \"Increase in FHS and NBP\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-03-30 20:42\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-30 22:42\", \"note\": \"Phase change to rupture\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-30 22:42\", \"note\": \"Phase change to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant development is **CLANKER**'s phase change to rupture, indicating a potential breakout, while **VVV**'s phase change to consolidation may signal a period of stabilization after accumulation."
 }

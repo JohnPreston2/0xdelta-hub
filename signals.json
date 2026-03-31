@@ -1,77 +1,56 @@
 {
-  "updated_at": "2026-03-31T08:43:03.410117+00:00",
-  "cycle": "20260331_0843",
+  "updated_at": "2026-03-31T10:42:47.180592+00:00",
+  "cycle": "20260331_1042",
   "signals": [
-    {
-      "symbol": "MOLT",
-      "type": "BULL_FLAG",
-      "status": "LOST",
-      "since": "previous cycle",
-      "note": "Bull flag lost"
-    },
-    {
-      "symbol": "AntiHunter",
-      "type": "BULL_FLAG",
-      "status": "LOST",
-      "since": "previous cycle",
-      "note": "Bull flag lost"
-    },
     {
       "symbol": "CLAWNCH",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous cycle",
-      "note": "Bull flag still active"
-    },
-    {
-      "symbol": "CLANKER",
-      "type": "PHASE_CHANGE",
-      "status": "CONFIRMED",
-      "since": "previous cycle",
-      "note": "Phase changed to accumulation"
-    },
-    {
-      "symbol": "Doppel",
-      "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "previous cycle",
-      "note": "New bull flag detected"
-    },
-    {
-      "symbol": "DRB",
-      "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "previous cycle",
-      "note": "New bull flag detected"
-    },
-    {
-      "symbol": "Lumen",
-      "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "previous cycle",
-      "note": "New bull flag detected"
+      "since": "previous_cycle",
+      "note": "bull flag still active"
     },
     {
       "symbol": "BNKRW",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous cycle",
-      "note": "Bull flag still active"
+      "since": "previous_cycle",
+      "note": "bull flag still active"
     },
     {
       "symbol": "fomolt",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous cycle",
-      "note": "Bull flag still active"
+      "since": "previous_cycle",
+      "note": "bull flag still active"
+    },
+    {
+      "symbol": "Doppel",
+      "type": "BULL_FLAG",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "bull flag still active"
+    },
+    {
+      "symbol": "CLANKER",
+      "type": "BULL_FLAG",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "bull flag still active"
+    },
+    {
+      "symbol": "Lumen",
+      "type": "BULL_FLAG",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "bull flag still active"
     },
     {
       "symbol": "VVV",
-      "type": "PHASE_CHANGE",
-      "status": "CONFIRMED",
-      "since": "this cycle",
-      "note": "Phase changed from accumulation to consolidation"
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "new bull flag detected"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens experiencing negative price and volume changes. Notable shifts include changes in the Fear-Hype-Sentiment (FHS) scores and phase changes for some tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all price delta percentages and volume delta percentages being 0. However, some tokens have experienced changes in their FHS scores, such as MOLT with a 0.9 increase, and phase changes, like VVV which transitioned from accumulation to consolidation.\n\n### 3. SIGNAL TRACKING\n- MOLT: BULL_FLAG status changed from DETECTED to LOST.\n- AntiHunter: BULL_FLAG status remains LOST.\n- CLAWNCH: BULL_FLAG status remains HOLDING.\n- CLANKER: PHASE_CHANGE status remains CONFIRMED, with a phase of accumulation.\n- Doppel: BULL_FLAG status remains DETECTED.\n- DRB: BULL_FLAG status remains DETECTED.\n- Lumen: BULL_FLAG status remains DETECTED.\n- BNKRW: BULL_FLAG status remains HOLDING.\n- fomolt: BULL_FLAG status remains HOLDING.\n- VVV: PHASE_CHANGE status is CONFIRMED, changing from accumulation to consolidation.\n\n### 4. NEW SIGNALS DETECTED\nNew signals detected this cycle include:\n- CLANKER: A bull flag is still detected, but its FHS score decreased by 1.2.\n- VVV: Transitioned from accumulation to consolidation, with an increase in FHS score by 0.9.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"LOST\", \"since\": \"previous cycle\", \"note\": \"Bull flag lost\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"LOST\", \"since\": \"previous cycle\", \"note\": \"Bull flag lost\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Bull flag still active\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Phase changed to accumulation\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Bull flag still active\"},\n  {\"symbol\": \"fomolt\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Bull flag still active\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"this cycle\", \"note\": \"Phase changed from accumulation to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the phase change of VVV from accumulation to consolidation, indicating a potential shift in market sentiment towards this token."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens showing a distribution phase. There are no notable shifts in the market, with all tokens maintaining their current phase. The market appears to be stable, with no significant changes in price or volume.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements in the current market. All tokens have a price delta of 0% and a volume delta of 0%, indicating no changes in price or trading volume.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag detected in the previous cycle has been lost.\n- **AntiHunter**: The bull flag detected in the previous cycle has been lost.\n- **CLAWNCH**: The bull flag is still active, but the token's FHS has decreased by 0.4.\n- **BNKRW**: The bull flag is still active, with no changes in FHS or BPI.\n- **fomolt**: The bull flag is still active, but the token's FHS has decreased by 0.1.\n- **Doppel**: The bull flag is still active, with a slight increase in BPI.\n- **CLANKER**: The bull flag is still active, but the token's FHS has decreased by 2.3.\n- **Lumen**: The bull flag is still active, with a slight decrease in BPI.\n- **VVV**: A new bull flag has been detected, and the token's phase has changed from consolidation to distribution.\n\n### 4. NEW SIGNALS DETECTED\nA new bull flag has been detected for **VVV**, and the token's phase has changed from consolidation to distribution.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"fomolt\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"new bull flag detected\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the detection of a new bull flag for **VVV**, which has also changed its phase from consolidation to distribution."
 }

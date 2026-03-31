@@ -1,49 +1,63 @@
 {
-  "updated_at": "2026-03-31T18:42:48.749113+00:00",
-  "cycle": "20260331_1842",
+  "updated_at": "2026-03-31T20:42:51.271858+00:00",
+  "cycle": "20260331_2042",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "2026-03-31 18:42",
-      "note": "New bull flag detected with FHS increase"
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Decrease in FHS and NBP"
     },
     {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "2026-03-31 18:42",
-      "note": "New bull flag detected with FHS increase"
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Decrease in FHS and NBP"
     },
     {
       "symbol": "FELIX",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "2026-03-31 18:42",
-      "note": "New bull flag detected with FHS decrease"
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Minimal changes in FHS and NBP"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "2026-03-31 18:42",
-      "note": "New bull flag detected with no FHS change"
+      "status": "STRENGTHENING",
+      "since": "previous_cycle",
+      "note": "Increase in FHS and NBP"
     },
     {
       "symbol": "CLANKER",
       "type": "PHASE_CHANGE",
       "status": "HOLDING",
-      "since": "2026-03-31 18:42",
-      "note": "Phase changed to consolidation"
+      "since": "previous_cycle",
+      "note": "Consolidation phase holding"
     },
     {
       "symbol": "VVV",
       "type": "PHASE_CHANGE",
-      "status": "HOLDING",
-      "since": "2026-03-31 18:42",
-      "note": "Phase changed from distribution potentielle to consolidation"
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Decrease in FHS and NBP"
+    },
+    {
+      "symbol": "BUNKER",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected"
+    },
+    {
+      "symbol": "CLAWD",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in the distribution phase, but some have shifted to consolidation. Notable shifts include BNKRW and CLANKER changing from distribution to consolidation, and VVV changing from distribution potentielle to consolidation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all price and volume deltas being 0%. However, some tokens have notable changes in their metrics, such as MOLT's FHS increasing by 1.4 and JUNO's FHS increasing by 1.4, both with new bull flags detected.\n\n### 3. SIGNAL TRACKING\n- MOLT: CONFIRMED - New bull flag detected with an FHS increase of 1.4.\n- JUNO: CONFIRMED - New bull flag detected with an FHS increase of 1.4.\n- FELIX: CONFIRMED - New bull flag detected with an FHS decrease of 1.2.\n- Doppel: CONFIRMED - New bull flag detected with no FHS change.\n- CLAWD: WEAKENING - Bull flag lost with an FHS increase of 0.9.\n- BNKRW: INVALIDATED - Phase changed to consolidation and bull flag lost.\n- CLANKER: HOLDING - Phase changed to consolidation with a slight FHS increase.\n\n### 4. NEW SIGNALS DETECTED\nNew signals detected include bull flags for MOLT, JUNO, FELIX, and Doppel. Additionally, BNKRW and CLANKER have changed phases to consolidation, and VVV has changed from distribution potentielle to consolidation.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-31 18:42\", \"note\": \"New bull flag detected with FHS increase\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-31 18:42\", \"note\": \"New bull flag detected with FHS increase\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-31 18:42\", \"note\": \"New bull flag detected with FHS decrease\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-03-31 18:42\", \"note\": \"New bull flag detected with no FHS change\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"HOLDING\", \"since\": \"2026-03-31 18:42\", \"note\": \"Phase changed to consolidation\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"HOLDING\", \"since\": \"2026-03-31 18:42\", \"note\": \"Phase changed from distribution potentielle to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the detection of new bull flags for several tokens, including MOLT, JUNO, FELIX, and Doppel, indicating potential buying opportunities."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in the distribution phase, but some showing signs of accumulation or consolidation. Notable shifts include changes in the FHS (Fundamental Health Score) and NBP (Net Buying Pressure) of several tokens, indicating potential changes in market sentiment.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price or volume movements (all price and volume deltas are 0%), several tokens have experienced changes in their FHS and NBP. For instance, MOLT's FHS decreased by 1.9, and its NBP decreased by 0.6. In contrast, Doppel's FHS increased by 0.7, and its NBP increased by 13.4. These changes suggest underlying shifts in market dynamics, even in the absence of overt price or volume movements.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag detected previously is still active, but the FHS has decreased, indicating a potential weakening of the signal.\n- **JUNO**: The bull flag remains confirmed, but with a decrease in FHS and NBP, suggesting the signal might be weakening.\n- **FELIX**: The bull flag is still confirmed, with minimal changes in FHS and NBP, indicating the signal is holding.\n- **Doppel**: The bull flag is confirmed, and with an increase in FHS and NBP, the signal is strengthening.\n- **CLANKER**: The phase change to consolidation is still holding, with minimal changes in metrics, indicating the signal is holding.\n- **VVV**: The phase change to consolidation is still in effect, but with a decrease in FHS and NBP, the signal might be weakening.\n\n### 4. NEW SIGNALS DETECTED\nNew bull flags have been detected for **BUNKER** and **CLAWD**, indicating potential accumulation or buying interest in these tokens. No new signals of distribution or phase changes have been detected among the tracked tokens.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minimal changes in FHS and NBP\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"STRENGTHENING\", \"since\": \"previous_cycle\", \"note\": \"Increase in FHS and NBP\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Consolidation phase holding\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe single most important thing happening across the watchlist right now is the detection of new bull flags for **BUNKER** and **CLAWD**, indicating potential buying interest and accumulation in these tokens, while previously detected bull flags for **MOLT** and **JUNO** are weakening due to decreases in their FHS and NBP."
 }

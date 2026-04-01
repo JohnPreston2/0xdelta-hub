@@ -1,634 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>0xDELTA Forensic System</title>
-    <style>
-        body {
-            background-color: #0a0a0a;
-            color: #ffffff;
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(180deg, #121212 0%, #0a0a0a 100%);
-            padding: 80px 0;
-            text-align: left;
-            margin-bottom: 40px;
-        }
-
-        .hero-content {
-            width: 80%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 4em;
-            font-family: monospace;
-            margin-bottom: 20px;
-            letter-spacing: 2px;
-        }
-
-        .hero p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #d0d0d0;
-            margin-bottom: 30px;
-        }
-
-        /* Status Indicators */
-        .status-bar {
-            background-color: #121212;
-            color: #00ff88;
-            padding: 10px 0;
-            text-align: center;
-            font-size: 0.9em;
-            letter-spacing: 1px;
-        }
-
-        .status-bar span {
-            margin: 0 20px;
-        }
-
-        /* Call to Action Buttons */
-        .cta-buttons {
-            text-align: left;
-            margin-top: 30px;
-        }
-
-        .cta-button {
-            background-color: #00ff88;
-            color: #000000;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1.1em;
-            font-weight: bold;
-            letter-spacing: 1px;
-            margin-right: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-            border-radius: 5px;
-        }
-
-        .cta-button:hover {
-            background-color: #00aa55;
-            color: #ffffff;
-        }
-
-        .cta-button.amber {
-            background-color: #ffaa00;
-            color: #000000;
-        }
-
-        .cta-button.amber:hover {
-            background-color: #cc8800;
-            color: #ffffff;
-        }
-
-        /* Pipeline Section */
-        .pipeline {
-            width: 80%;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #121212;
-            border-radius: 5px;
-        }
-
-        .pipeline h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            font-family: monospace;
-        }
-
-        .pipeline-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .pipeline-step {
-            padding: 15px;
-            border: 1px solid #333;
-            border-radius: 5px;
-            font-size: 0.9em;
-            line-height: 1.4;
-        }
-
-        /* Micropayment Explanation */
-        .micropayment {
-            width: 80%;
-            max-width: 1200px;
-            margin: 40px auto;
-            text-align: center;
-            color: #d0d0d0;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #121212;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 0.8em;
-            color: #777;
-        }
-
-        footer a {
-            color: #777;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero {
-                padding: 60px 0;
-            }
-
-            .hero h1 {
-                font-size: 3em;
-            }
-
-            .hero p {
-                font-size: 1em;
-            }
-
-            .cta-buttons {
-                text-align: center;
-            }
-
-            .cta-button {
-                margin: 10px;
-            }
-
-            .pipeline {
-                width: 95%;
-            }
-
-            .pipeline-steps {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Pretext Styling (Example) */
-        .pretext-container {
-            display: inline-block;
-            position: relative;
-        }
-
-        .pretext-letter {
-            display: inline-block;
-            transition: transform 0.2s;
-        }
-
-        .pretext-letter:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Animated Background */
-        .animated-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(45deg, #002b19, #001a0f);
-            background-size: 400% 400%;
-            animation: gradientAnimation 15s infinite alternate;
-        }
-
-        @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            100% {
-                background-position: 100% 50%;
-            }
-        }
-
-        /* Terminal Style */
-        .terminal {
-            background-color: #000000;
-            color: #00ff88;
-            padding: 20px;
-            border-radius: 5px;
-            font-family: monospace;
-            font-size: 0.9em;
-            line-height: 1.4;
-            overflow-x: auto; /* Enable horizontal scrolling */
-            white-space: pre; /* Respect whitespace */
-        }
-
-        /* Status Indicators Style */
-        .status-indicators {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-            background-color: #1a1a1a;
-            border-bottom: 1px solid #333;
-            font-family: monospace;
-            font-size: 0.85em;
-            color: #00ff88;
-            letter-spacing: 1px;
-        }
-
-        .status-indicators span {
-            margin: 0 15px;
-        }
-
-        .status-indicators .indicator {
-            display: inline-flex;
-            align-items: center;
-        }
-
-        .status-indicators .indicator::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            margin-right: 5px;
-        }
-
-        .status-indicators .online::before {
-            background-color: #00ff88;
-        }
-
-        .status-indicators .base::before {
-            background-color: #ffaa00;
-        }
-
-        /* x402 Micropayments Style */
-        .x402-micropayments {
-            background-color: #121212;
-            padding: 30px;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 1.1em;
-            color: #d0d0d0;
-            line-height: 1.6;
-            margin-top: 30px;
-        }
-
-        .x402-micropayments h2 {
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            font-family: monospace;
-        }
-
-        /* Dashboard and Synthesis Section */
-        .dashboard-synthesis {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            width: 80%;
-            max-width: 1200px;
-            margin: 40px auto;
-        }
-
-        .dashboard-synthesis-item {
-            background-color: #121212;
-            padding: 30px;
-            border-radius: 5px;
-        }
-
-        .dashboard-synthesis-item h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            font-family: monospace;
-        }
-
-        .dashboard-synthesis-item p {
-            color: #d0d0d0;
-            line-height: 1.6;
-        }
-
-        .dashboard-synthesis-item .price {
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .dashboard-synthesis-item .cta-button {
-            margin: 0;
-        }
-
-        @media (max-width: 768px) {
-            .dashboard-synthesis {
-                grid-template-columns: 1fr;
-            }
-        }
-
-         /* How to Read Dashboard Section */
-        .how-to-read {
-            width: 80%;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #121212;
-            border-radius: 5px;
-        }
-
-        .how-to-read h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            font-family: monospace;
-        }
-
-        .how-to-read-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .how-to-read-step {
-            padding: 15px;
-            border: 1px solid #333;
-            border-radius: 5px;
-            font-size: 0.9em;
-            line-height: 1.4;
-        }
-
-        .how-to-read-step h3 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        /* Infrastructure Section */
-        .infrastructure {
-            width: 80%;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #121212;
-            border-radius: 5px;
-        }
-
-        .infrastructure h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            font-family: monospace;
-        }
-
-        .infrastructure-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .infrastructure-item {
-            padding: 15px;
-            border: 1px solid #333;
-            border-radius: 5px;
-            font-size: 0.9em;
-            line-height: 1.4;
-        }
-
-        .infrastructure-item h3 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .infrastructure-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0xΔ | Tactical Forensic Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #050505;
+      --surface: #0a0a0c;
+      --border: #1a1a1e;
+      --border-bright: #2a2a30;
+      --accent: #bfff00;
+      --text-main: #f0f0f0;
+      --text-dim: #888890;
+      --text-ghost: #55555c;
+      --red: #ff3e3e;
+      --blue: #0070ff;
+      --yellow: #ffb800;
+      --amber: #ff8c00;
+      --purple: #c084fc;
+      --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; cursor: crosshair; }
+    body { background: var(--bg); color: var(--text-main); font-family: 'Bricolage Grotesque', sans-serif; font-size: 13px; min-height: 100vh; overflow-x: hidden; display: flex; flex-direction: column; }
+    body::before { content: ""; position: fixed; inset: 0; background: var(--grain); opacity: 0.03; pointer-events: none; z-index: 100; }
+    .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: -0.02em; }
+    header { height: 60px; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--border); background: var(--surface); position: sticky; top: 0; z-index: 50; }
+    .logo-area { display: flex; align-items: center; gap: 15px; }
+    .logo-box { width: 32px; height: 32px; background: var(--accent); color: var(--bg); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 18px; clip-path: polygon(20% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%, 0% 20%); }
+    .status-ticker { display: flex; gap: 20px; font-size: 10px; color: var(--text-dim); text-transform: uppercase; }
+    .status-item span { color: var(--accent); margin-right: 4px; }
+    .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100vh - 60px); }
+    .hero-left { padding: 80px 64px; display: flex; flex-direction: column; justify-content: center; border-right: 1px solid var(--border); }
+    .eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 28px; display: flex; align-items: center; gap: 10px; }
+    .eyebrow::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--accent); }
+    .hero-title { font-size: clamp(56px, 7vw, 96px); font-weight: 800; line-height: 0.88; letter-spacing: -0.04em; text-transform: uppercase; margin-bottom: 32px; }
+    .hero-title .accent { color: var(--accent); }
+    .hero-title .dim { color: var(--text-ghost); }
+    .hero-desc { font-size: 14px; line-height: 1.7; color: var(--text-dim); max-width: 480px; margin-bottom: 48px; }
+    .hero-desc strong { color: var(--text-main); font-weight: 700; }
+    .cta-group { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; background: var(--accent); color: var(--bg); font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border: none; cursor: pointer; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%); transition: background 0.15s, transform 0.15s; }
+    .btn-primary:hover { background: #d4ff33; transform: translateX(2px); }
+    .btn-ghost { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); text-decoration: none; border-bottom: 1px solid var(--border-bright); padding-bottom: 2px; transition: color 0.15s, border-color 0.15s; }
+    .btn-ghost:hover { color: var(--text-main); border-color: var(--text-dim); }
+    .hero-right { background: var(--surface); padding: 60px 48px; display: flex; flex-direction: column; justify-content: center; gap: 20px; }
+    .terminal { border: 1px solid var(--border); background: var(--bg); padding: 20px 24px; }
+    .terminal-bar { display: flex; align-items: center; gap: 8px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+    .t-dot { width: 8px; height: 8px; border-radius: 50%; }
+    .t-label { font-size: 9px; color: var(--text-ghost); letter-spacing: 0.12em; text-transform: uppercase; margin-left: 4px; }
+    .t-line { font-family: 'JetBrains Mono', monospace; font-size: 11px; line-height: 1.9; }
+    .t-line .cmd { color: var(--accent); }
+    .t-line .out { color: var(--text-dim); }
+    .t-line .val { color: var(--text-main); }
+    .t-line .warn { color: var(--yellow); }
+    .t-line .priv { color: var(--purple); }
+    .cursor { display: inline-block; width: 8px; height: 13px; background: var(--accent); vertical-align: middle; animation: blink 1s step-end infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .stats-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .stat-cell { background: var(--bg); padding: 16px; text-align: center; }
+    .stat-val { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; color: var(--accent); }
+    .stat-key { font-size: 9px; color: var(--text-ghost); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; }
+    section { padding: 80px 64px; border-top: 1px solid var(--border); }
+    .section-label { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 48px; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .openclaw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+    .oc-card { background: var(--bg); padding: 32px; }
+    .oc-title { font-weight: 800; font-size: 18px; margin-bottom: 16px; }
+    .oc-subtitle { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+    .oc-list { list-style: none; }
+    .oc-list li { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 12px; line-height: 1.5; }
+    .oc-list li:last-child { border-bottom: none; }
+    .oc-list li::before { content: '▸'; color: var(--accent); flex-shrink: 0; margin-top: 1px; }
+    .oc-list .dim { color: var(--text-dim); }
+    .agent-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--border-bright); font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); margin-bottom: 12px; margin-right: 8px; }
+    .agent-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: blink 2s step-end infinite; }
+    footer { padding: 24px 64px; border-top: 1px solid var(--border); background: var(--surface); display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: var(--text-ghost); font-family: 'JetBrains Mono', monospace; }
+    footer .accent { color: var(--accent); }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border-bright); }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+    .pipe-step { display:grid;grid-template-columns:32px 1fr;gap:0; }
+    .pipe-dot-col { display:flex;flex-direction:column;align-items:center;padding-top:18px; }
+    .pipe-dot { width:6px;height:6px;border-radius:50%;background:#1e1e22;border:1px solid #2e2e34;flex-shrink:0; }
+    .pipe-line { flex:1;width:1px;background:#1e1e22;margin-top:5px; }
+    .pipe-card { background:#0e0e10;border:1px solid #1e1e22;padding:14px 18px; }
+    .pipe-header { display:flex;align-items:center;gap:10px;margin-bottom:5px; }
+    .pipe-step-label { font-size:9px;color:var(--text-ghost);letter-spacing:0.08em; }
+    .pipe-step-name { font-size:13px;font-weight:700;color:#d0d0d4;font-family:'Bricolage Grotesque',sans-serif; }
+    .pipe-desc { font-size:11px;color:var(--text-dim);line-height:1.65; }
+    .pipe-tags { display:flex;gap:5px;flex-wrap:wrap;margin-top:8px; }
+    .pipe-tag { font-size:9px;padding:2px 8px;border:1px solid #1e1e22;color:var(--text-ghost); }
+    .pipe-tag-accent { font-size:9px;padding:2px 8px;border:1px solid rgba(191,255,0,0.25);color:var(--accent); }
+    .pipe-tag-purple { font-size:9px;padding:2px 8px;border:1px solid rgba(192,132,252,0.3);color:var(--purple); }
+  </style>
 </head>
 <body>
-    <div class="animated-background"></div>
 
-    <div class="status-indicators">
-        <span class="indicator online">ONLINE</span>
-        <span>EVERY 2H</span>
-        <span>17 TOKENS</span>
-        <span class="indicator base">BASE CHAIN</span>
+<header>
+  <div class="logo-area">
+    <div class="logo-box">Δ</div>
+    <div>
+      <div style="font-weight: 800; font-size: 16px; letter-spacing: -0.02em;">0xDELTA</div>
+      <div class="mono" style="font-size: 9px; color: var(--text-dim);">FIELD INTELLIGENCE UNIT</div>
     </div>
+  </div>
+  <div class="status-ticker mono">
+    <div class="status-item"><span>●</span> SYSTEM: ONLINE</div>
+    <div class="status-item"><span>●</span> ANALYSIS: EVERY 2H</div>
+    <div class="status-item"><span>●</span> BASE CHAIN: 17 TOKENS</div>
+  </div>
+</header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1 id="hero-title">
-                <span class="pretext-container"><span class="pretext-letter">0</span></span>
-                <span class="pretext-container"><span class="pretext-letter">x</span></span>
-                <span class="pretext-container"><span class="pretext-letter">D</span></span>
-                <span class="pretext-container"><span class="pretext-letter">E</span></span>
-                <span class="pretext-container"><span class="pretext-letter">L</span></span>
-                <span class="pretext-container"><span class="pretext-letter">T</span></span>
-                <span class="pretext-container"><span class="pretext-letter">A</span></span>
-            </h1>
-            <h1>FORENSIC SYSTEM</h1>
-            <p>A fully autonomous ERC-8004 AI agent running 24/7 on a GCP VPS. Every 2 hours, it analyzes 17 OpenClaw ecosystem tokens on Base chain, computes 65+ forensic metrics, runs a hybrid privacy AI pipeline (Llama 3.3 70B private + Gemini 3 Flash anonymized via Venice AI), and autonomously trades the best signal — swapping 75% ETH into the top CES-ranked token via Bankr self-custody wallet, with a 90-minute auto-close. Full forensic intelligence is published behind x402 micropayments — trustless, no backend, no account. Trading module in beta.</p>
-            <div class="cta-buttons">
-                <button class="cta-button">ACCESS DASHBOARD</button>
-                <button class="cta-button amber">ACCESS SYNTHESIS</button>
-                <!-- <button class="cta-button">HOW IT WORKS</button> -->
-            </div>
+<div class="hero">
+  <div class="hero-left">
+    <div class="eyebrow">Autonomous forensic agent · Base chain</div>
+    <h1 class="hero-title">
+      <span class="accent">0x</span>DELTA<br>
+      <span class="dim">FORENSIC</span><br>
+      SYSTEM
+    </h1>
+    <p class="hero-desc">
+      A fully autonomous <strong>ERC-8004 AI agent</strong> running <strong>24/7 on a GCP VPS</strong>. Every 2 hours, it analyzes <strong>17 OpenClaw ecosystem tokens</strong> on Base chain, computes <strong>65+ forensic metrics</strong>, runs a <strong>hybrid privacy AI pipeline</strong> (Llama 3.3 70B private + Gemini 3 Flash anonymized via Venice AI), and <strong>autonomously trades the best signal</strong> — swapping 75% ETH into the top CES-ranked token via Bankr self-custody wallet, with a <strong>90-minute auto-close</strong>. Full forensic intelligence is published behind <strong>x402 micropayments</strong> — trustless, no backend, no account. Trading module in beta.
+    </p>
+    <p style="font-size:12px; color:var(--text-ghost); line-height:1.6; max-width:480px; margin-bottom:32px;">
+      ERC-8004 Agent #32715 on Base · Self-custody via Bankr · Report sealed on-chain (SHA256) · The Synthesis hackathon — 6 tracks. Watchlist curated from the OpenClaw ecosystem on Base — future: community-driven watchlist governance (add/remove tokens by holder vote).
+    </p>
+    <div class="cta-group">
+      <a href="index.html" class="btn-primary">Access Dashboard →</a>
+      <a href="report.html" class="btn-primary" style="background:var(--amber);">Access Synthesis →</a>
+      <a href="#how-it-works" class="btn-ghost">How it works</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="t-dot" style="background:#ff3e3e"></div>
+        <div class="t-dot" style="background:#ffb800"></div>
+        <div class="t-dot" style="background:#bfff00"></div>
+        <span class="t-label">openclaw-agent · forensic_engine_v5</span>
+      </div>
+      <div class="t-line"><span class="cmd">$</span> <span class="out">openclaw run</span> <span class="val">forensic_engine_v5</span></div>
+      <div class="t-line"><span class="out">→ Loading watchlist...</span> <span class="val">17 tokens · Base chain</span></div>
+      <div class="t-line"><span class="out">→ Fetching onchain data</span> <span class="val">[Moralis / GeckoTerminal / DexScreener]</span></div>
+      <div class="t-line"><span class="out">→ Computing metrics:</span> <span class="val">FHS / NBP / ICR / LCR / BPI / SI</span></div>
+      <div class="t-line"><span class="priv">→ Signal tracking... </span><span class="priv">llama-3.3-70b [PRIVATE]</span></div>
+      <div class="t-line"><span class="warn">⚠ ANTIHUNTER — ICR=1.76 → CRASH_RISK detected</span></div>
+      <div class="t-line"><span class="priv">→ Venice synthesis... </span><span class="priv">gemini-3-flash [ANONYMIZED]</span></div>
+      <div class="t-line"><span class="out">→ Bankr swap:</span> <span class="val">$BUNKER · 75% ETH · Base DEX ✓</span></div>
+      <div class="t-line"><span class="out">→ Push</span> <span class="val">memory.json + signals.json → GitHub Pages</span></div>
+      <div class="t-line"><span class="cmd">$</span> <span class="cursor"></span></div>
+    </div>
+    <div class="stats-strip">
+      <div class="stat-cell"><div class="stat-val">17</div><div class="stat-key">Tokens</div></div>
+      <div class="stat-cell"><div class="stat-val">65+</div><div class="stat-key">Metrics</div></div>
+      <div class="stat-cell"><div class="stat-val">2H</div><div class="stat-key">Cycle</div></div>
+      <div class="stat-cell"><div class="stat-val">x402</div><div class="stat-key">Paywall</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ SECTION 1: WORKFLOW PIPELINE ═══ -->
+<section id="how-it-works">
+  <div class="section-label">// Workflow — 8-Step Automated Pipeline · every 2h</div>
+  <div style="font-family:'JetBrains Mono',monospace;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+      <div style="border:1px solid #1e1e22;background:#0e0e10;padding:10px 18px;display:flex;align-items:baseline;gap:10px;">
+        <span style="font-size:15px;font-weight:700;color:var(--accent);">0 */2 * * *</span>
+        <span style="font-size:10px;color:var(--text-ghost);">run_pipeline.sh · GCP VPS · every 2h</span>
+      </div>
+      <div style="flex:1;height:1px;background:#1a1a1e;"></div>
+      <div style="font-size:9px;color:var(--text-ghost);letter-spacing:0.15em;text-transform:uppercase;">17 tokens · Base chain</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:2px;">
+
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 0</span><span class="pipe-step-name">Check open position</span></div><div class="pipe-desc">Reads position.json — if position open &gt; T+90min, closes via bankr sell → ETH.</div><div class="pipe-tags"><span class="pipe-tag">position.json</span><span class="pipe-tag-accent">bankr API</span></div></div></div>
+
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card" style="border-color:rgba(192,132,252,0.2);"><div class="pipe-header"><span class="pipe-step-label">STEP 0b</span><span class="pipe-step-name">check_balance.py</span></div><div class="pipe-desc">Queries Venice AI billing endpoint — logs remaining credits and usage for the cycle.</div><div class="pipe-tags"><span class="pipe-tag-purple">Venice AI</span><span class="pipe-tag">billing check</span></div></div></div>
+
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 1</span><span class="pipe-step-name">collector.py</span></div><div class="pipe-desc">Fetches live data for 19 Base chain tokens. Wallet flows, holder distribution, liquidity, OHLCV (1H + 15min).</div><div class="pipe-tags"><span class="pipe-tag">Moralis</span><span class="pipe-tag">GeckoTerminal</span><span class="pipe-tag">DexScreener</span><span class="pipe-tag">OHLCV 1H + 15m</span></div></div></div>
+
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 2</span><span class="pipe-step-name">report_builder.py → forensic_engine_v5</span></div><div class="pipe-desc">Computes 65+ forensic metrics per token. Dual-timeframe analysis (hourly + 15min). Phase detection: EARLY_BREAKOUT, DISTRIBUTION, ACCUMULATION.</div><div class="pipe-tags"><span class="pipe-tag">FHS</span><span class="pipe-tag">NBP</span><span class="pipe-tag">ICR</span><span class="pipe-tag">LCR</span><span class="pipe-tag">BPI</span><span class="pipe-tag">WCC</span><span class="pipe-tag">SI</span><span class="pipe-tag">TCI</span><span class="pipe-tag">FCI</span><span class="pipe-tag">65+ metrics</span></div></div></div>
+
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card" style="border-color:rgba(192,132,252,0.3);"><div class="pipe-header"><span class="pipe-step-label">STEP 2b</span><span class="pipe-step-name">signal_tracker.py</span><span class="pipe-tag-purple">PRIVATE · Venice AI</span></div><div class="pipe-desc">Runs <strong style="color:var(--purple);">Llama 3.3 70B</strong> in <strong style="color:var(--purple);">private mode</strong> (no data retention). Compares current forensic data vs N-1 cycle. Detects momentum shifts, whale entries, volume anomalies. Outputs structured signals per token.</div><div class="pipe-tags"><span class="pipe-tag-purple">llama-3.3-70b</span><span class="pipe-tag-purple">PRIVATE inference</span><span class="pipe-tag">→ signals.json</span></div></div></div>
+
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card" style="border-color:rgba(192,132,252,0.2);"><div class="pipe-header"><span class="pipe-step-label">STEP 3</span><span class="pipe-step-name">request_analysis.py</span><span class="pipe-tag-purple">ANONYMIZED · Venice AI</span></div><div class="pipe-desc">Injects signals.json + top 5 memories + DECISIONS.md → <strong style="color:var(--purple);">Gemini 3 Flash Preview</strong> (anonymized, max 6000 tokens). CES ranking, entry zones, whale watch, full EN narrative.</div><div class="pipe-tags"><span class="pipe-tag-purple">gemini-3-flash-preview</span><span class="pipe-tag-purple">ANONYMIZED inference</span><span class="pipe-tag">→ synthesis.json</span><span class="pipe-tag">→ Telegram</span><span class="pipe-tag">→ Moltbook</span></div></div></div>
+
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 3b</span><span class="pipe-step-name">enter_new_position.py</span></div><div class="pipe-desc">Token #1 from CES ranking → RULE_BOOK filters (ICR, Top5, Phase, BPI, FHS) → swap 75% ETH via bankr on-chain. Position saved with T+90min auto-close.</div><div class="pipe-tags"><span class="pipe-tag-accent">bankr API</span><span class="pipe-tag">Base DEX</span><span class="pipe-tag">OPEN · T+90m</span></div></div></div>
+
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div><div class="pipe-line"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 4</span><span class="pipe-step-name">export_memory_json.py v4</span></div><div class="pipe-desc">Bundles 65 fields + forensic_report per token into memory.json for the live dashboard.</div><div class="pipe-tags"><span class="pipe-tag">65 fields</span><span class="pipe-tag">memory.json</span></div></div></div>
+
+      <div class="pipe-step"><div class="pipe-dot-col"><div class="pipe-dot"></div></div><div class="pipe-card"><div class="pipe-header"><span class="pipe-step-label">STEP 5</span><span class="pipe-step-name">Push GitHub Pages</span></div><div class="pipe-desc">Publishes data.json, memory.json, signals.json and synthesis.json. Frontend unlocks via x402 micropayment on Base.</div><div class="pipe-tags"><span class="pipe-tag">data.json</span><span class="pipe-tag">memory.json</span><span class="pipe-tag">signals.json</span><span class="pipe-tag">synthesis.json</span><span class="pipe-tag-accent">x402 · $0.02 USDC</span><span class="pipe-tag-accent">x402 · $0.05 USDC</span></div></div></div>
+
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding:10px 16px;border:1px solid #1e1e22;background:#0e0e10;">
+      <div style="font-size:9px;color:var(--text-ghost);letter-spacing:0.06em;">8 steps · 2 Venice AI calls/cycle (1 private + 1 anonymized) · duration ≈ 2–4 min</div>
+      <div style="display:flex;gap:8px;"><span style="font-size:9px;padding:2px 10px;border:1px solid rgba(191,255,0,0.2);color:var(--accent);">dashboard · $0.02</span><span style="font-size:9px;padding:2px 10px;border:1px solid rgba(191,255,0,0.2);color:var(--accent);">synthesis · $0.05</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTION 2: x402 MICROPAYMENTS ═══ -->
+<div style="padding: 80px 64px; border-top: 1px solid var(--border); background: var(--surface);" id="access">
+  <div style="font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:48px;display:flex;align-items:center;gap:12px;">// x402 Micropayments · Agents that Pay<span style="flex:1;height:1px;background:var(--border);display:block;"></span></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);">
+    <div style="background:var(--bg);padding:40px;">
+      <div style="font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:inline-block;padding:3px 12px;border:1px solid rgba(191,255,0,0.3);background:rgba(191,255,0,0.06);">Per-token forensic</div>
+      <h2 style="font-size:clamp(28px,3.5vw,48px);font-weight:800;line-height:0.9;letter-spacing:-0.04em;text-transform:uppercase;margin-bottom:20px;">TOKEN<br>DASHBOARD</h2>
+      <p style="font-size:14px;color:var(--text-dim);line-height:1.7;margin-bottom:16px;">FHS scores are always visible for free. Pay once to unlock the <strong style="color:var(--text-main);">full per-token forensic sheet</strong> for your session:</p>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.8;margin-bottom:24px;">
+        <span style="color:var(--text-main);">→</span> 65+ metrics with thresholds &amp; alerts<br>
+        <span style="color:var(--text-main);">→</span> ICR crash simulation &amp; slippage estimates<br>
+        <span style="color:var(--text-main);">→</span> Wallet flow analysis &amp; holder clustering<br>
+        <span style="color:var(--text-main);">→</span> Bull flag detection with Fibonacci targets<br>
+        <span style="color:var(--text-main);">→</span> AI-generated forensic narrative per token<br>
+        <span style="color:var(--text-main);">→</span> Signal Tracker panel (Llama 70B signals)<br>
+        <span style="color:var(--text-ghost);">Data refreshed every 2 hours automatically.</span>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:28px;"><span style="font-family:'JetBrains Mono',monospace;font-size:52px;font-weight:700;color:var(--accent);">$0.02</span><span style="font-size:12px;color:var(--text-dim);font-family:'JetBrains Mono',monospace;">USDC / session</span></div>
+      <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--accent);color:var(--bg);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;clip-path:polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);">Open Dashboard →</a>
+    </div>
+    <div style="background:var(--bg);padding:40px;border-left:1px solid var(--border);">
+      <div style="font-size:9px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--amber);margin-bottom:20px;display:inline-block;padding:3px 12px;border:1px solid rgba(255,140,0,0.3);background:rgba(255,140,0,0.06);">Global synthesis · every 2h</div>
+      <h2 style="font-size:clamp(28px,3.5vw,48px);font-weight:800;line-height:0.9;letter-spacing:-0.04em;text-transform:uppercase;margin-bottom:20px;">GLOBAL<br>SYNTHESIS</h2>
+      <p style="font-size:14px;color:var(--text-dim);line-height:1.7;margin-bottom:16px;">The full Venice AI synthesis report — <strong style="color:var(--text-main);">cross-analysis of all 17 tokens</strong> in a single narrative:</p>
+      <div style="font-size:12px;color:var(--text-dim);line-height:1.8;margin-bottom:24px;">
+        <span style="color:var(--text-main);">→</span> CES ranking — all tokens scored &amp; ranked<br>
+        <span style="color:var(--text-main);">→</span> Top 3 opportunities with entry zones<br>
+        <span style="color:var(--text-main);">→</span> Whale watch — who's accumulating, who's dumping<br>
+        <span style="color:var(--text-main);">→</span> Phase transitions &amp; momentum shifts<br>
+        <span style="color:var(--text-main);">→</span> AI trade recommendation (INJECTION PRIORITAIRE)<br>
+        <span style="color:var(--text-main);">→</span> Hybrid privacy: Llama 70B private + Gemini Flash anonymized<br>
+        <span style="color:var(--text-ghost);">Generated every 2h. Report hash sealed on-chain.</span>
+      </div>
+      <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:28px;"><span style="font-family:'JetBrains Mono',monospace;font-size:52px;font-weight:700;color:var(--amber);">$0.05</span><span style="font-size:12px;color:var(--text-dim);font-family:'JetBrains Mono',monospace;">USDC / session</span></div>
+      <a href="report.html" style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--amber);color:#0a0a0c;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;clip-path:polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%);">Open Synthesis →</a>
+    </div>
+  </div>
+  <div style="margin-top:16px;padding:16px 20px;border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;"><div class="mono" style="font-size:10px;color:var(--text-ghost);line-height:1.8;">NETWORK: Base (chainId 8453) · USDC: 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913</div><div class="mono" style="font-size:10px;color:var(--text-ghost);">x402 · trustless · no backend · no account</div></div>
+</div>
+
+<!-- ═══ SECTION 3: HOW TO READ THE DASHBOARD ═══ -->
+<section id="reading-guide">
+  <div class="section-label">// How to Read the Dashboard — Forensic Metrics Guide</div>
+  <div style="max-width:700px; margin-bottom:48px;">
+    <h2 style="font-size:clamp(28px,3vw,40px); font-weight:800; line-height:1; letter-spacing:-0.03em; text-transform:uppercase; margin-bottom:16px;">
+      Don't know<br><span style="color:var(--accent);">where to look?</span>
+    </h2>
+    <p style="font-size:14px; color:var(--text-dim); line-height:1.7;">
+      The dashboard shows <strong style="color:var(--text-main);">65+ forensic metrics</strong> per token.
+      Here's how to read it in seconds: <strong style="color:var(--text-main);">start with the big number, then check the danger signals, then the opportunities</strong>.
+    </p>
+  </div>
+
+  <!-- STEP 1 — FHS -->
+  <div style="display:grid; grid-template-columns:140px 1fr; gap:0; border:1px solid var(--border); margin-bottom:2px;">
+    <div style="background:var(--surface); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:1px solid var(--border);">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:48px; font-weight:700; color:var(--accent); line-height:1;">7.2</div>
+      <div style="font-size:9px; color:var(--text-ghost); text-transform:uppercase; letter-spacing:0.1em; margin-top:6px;">example</div>
+    </div>
+    <div style="background:var(--bg); padding:24px 28px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-ghost); letter-spacing:0.08em;">STEP 1</span>
+        <span style="font-size:16px; font-weight:800;">FHS — Forensic Health Score</span>
+      </div>
+      <p style="font-size:13px; color:var(--text-dim); line-height:1.7; margin-bottom:14px;">
+        The <strong style="color:var(--text-main);">single number that summarizes everything</strong>. Aggregates liquidity, flow quality, holder distribution and technical momentum into a 0–10 score.
+      </p>
+      <div style="display:flex; gap:12px; flex-wrap:wrap;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; padding:4px 12px; border:1px solid rgba(255,62,62,0.4); color:var(--red);">0–3 → AVOID</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; padding:4px 12px; border:1px solid rgba(255,184,0,0.4); color:var(--yellow);">4–6 → CAUTION</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:10px; padding:4px 12px; border:1px solid rgba(191,255,0,0.4); color:var(--accent);">7–10 → HEALTHY</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 — DANGER -->
+  <div style="display:grid; grid-template-columns:140px 1fr; gap:0; border:1px solid var(--border); border-top:0; margin-bottom:2px;">
+    <div style="background:var(--surface); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:1px solid var(--border);">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--red); line-height:1;">⚠</div>
+      <div style="font-size:9px; color:var(--text-ghost); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">danger</div>
+    </div>
+    <div style="background:var(--bg); padding:24px 28px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-ghost); letter-spacing:0.08em;">STEP 2</span>
+        <span style="font-size:16px; font-weight:800;">Check the 3 red flags</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:12px;">
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--red); margin-bottom:6px;">ICR</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Impact Crash Risk</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"If the biggest whale sells, how much does the price drop?" Computed from liquidity depth vs top wallet size.</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--red); margin-top:10px; padding:3px 8px; border:1px solid rgba(255,62,62,0.3); display:inline-block;">&gt;1.5 = CRITICAL</div>
         </div>
-    </section>
-
-     <section class="terminal-section">
-        <div class="hero-content">
-            <div class="terminal">
-                $ openclaw run forensic_engine_v5<br>
-                - Loading watchlist... 17 tokens - Base chain<br>
-                - Fetching onchain data [Moralis / GeckoTerminal / DexScreener]<br>
-                - Computing metrics: FHS / NBP / ICR / LCR / BPI / SI<br>
-                - Signal tracking... Llama-3.3-70B [PRIVATE]<br>
-                ▲ ANTIHUNTER - ICR=1.76 - CRASH RISK detected<br>
-                - Venice synthesis... gemini-3-flash [ANONYMIZED]<br>
-                - Bankr swap: $BUNKER - 75% ETH - Base DEX<br>
-                - Push memory.json + signals.json - Github Pages<br>
-                $<span class="cursor">█</span>
-            </div>
-            <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-                <div><strong>17</strong><br>TOKENS</div>
-                <div><strong>65+</strong><br>METRICS</div>
-                <div><strong>2H</strong><br>CYCLE</div>
-                <div><strong>x402</strong><br>PAYWALL</div>
-            </div>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--red); margin-bottom:6px;">WCC</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Whale Concentration</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"How much supply is controlled by a few wallets?" Gini-like measure across top 20 holders.</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--red); margin-top:10px; padding:3px 8px; border:1px solid rgba(255,62,62,0.3); display:inline-block;">&gt;40% = RUG RISK</div>
         </div>
-    </section>
-
-    <section class="pipeline">
-        <div class="hero-content">
-            <h2>// WORKFLOW — 8-STEP AUTOMATED PIPELINE — EVERY 2H</h2>
-            <div class="pipeline-steps">
-                <div class="pipeline-step">
-                    <strong>STEP 0: Check open position</strong><br>
-                    Reads position.json - IF position open > T+90min, closes via Bankr sell - ETH.
-                </div>
-                <div class="pipeline-step">
-                    <strong>STEP 0a: Check balance.py</strong><br>
-                    Queries Venice AI billing endpoint - logs remaining credits and usage for the cycle.
-                </div>
-                <div class="pipeline-step">
-                    <strong>STEP 1: collector.py</strong><br>
-                    Fetches live data for 17 Base chain tokens. Wallet flows, holder distribution, liquidity, OBLEV (1m + 15min).
-                </div>
-                <div class="pipeline-step">
-                    <strong>STEP 2: report_builder.py - forensic_engine_v5</strong><br>
-                    Computes 65+ forensic metrics per token. Dual-timeframe analysis (hourly + 15min). Phase detection: EARLY_BREAKOUT, DISTRIBUTION, ACCUMULATION.
-                </div>
-                <div class="pipeline-step">
-                    <strong>STEP 2a: signal_tracker.py [PRIVATE - Venice AI]</strong><br>
-                    Runs Llama 3.3 70B in private mode (no data retention). Compares current forensic data vs N-1 cycle. Detects momentum shifts and signals per token.
-                </div>
-                <div class="pipeline-step">
-                    <strong>STEP 3: request_analysis.py [ANONYMIZED - Venice AI]</strong><br>
-                    Injects signals.json + top 5 memories + DECISIONS.md + Gemini 3 Flash Preview (anonymized, max 6000 tokens). CES ranking, entry zones, whole watch, full EM narrative.
-                </div>
-                <div class="pipeline-step">
-                    <strong>STEP 3a: enter_new_position.py</strong><br>
-                    Token #1 from CES ranking + RULE_DB00K filters (ICR, Top5, Phase, BPI, FHS) - swap 75% ETH via Bankr on-chain. Position saved with T+90min auto-close.
-                </div>
-                <div class="pipeline-step">
-                    <strong>STEP 4: export_memory_json.py</strong><br>
-                    Bundles 65 fields + forensic_report per token into memory.json for the live dashboard.
-                </div>
-                <div class="pipeline-step">
-                    <strong>STEP 5: Push GitHub Pages</strong><br>
-                    Publishes data.json, memory.json, signals.json and synthesis.json. Frontend unlocks via x402 micropayment on Base.
-                </div>
-            </div>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--red); margin-bottom:6px;">LCR</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Liquidity Coverage Ratio</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">"Is there enough liquidity to handle a big sell-off?" Pool liquidity relative to market cap.</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--red); margin-top:10px; padding:3px 8px; border:1px solid rgba(255,62,62,0.3); display:inline-block;">&lt;2% = FRAGILE</div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <section class="x402-micropayments">
-        <div class="hero-content">
-            <h2>// X402 MICRO PAYMENTS - AGENTS THAT PAY</h2>
-            <p>Full forensic intelligence is published behind x402 micropayments — trustless, no backend, no account.</p>
+  <!-- STEP 3 — OPPORTUNITY -->
+  <div style="display:grid; grid-template-columns:140px 1fr; gap:0; border:1px solid var(--border); border-top:0; margin-bottom:2px;">
+    <div style="background:var(--surface); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:1px solid var(--border);">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--accent); line-height:1;">◆</div>
+      <div style="font-size:9px; color:var(--text-ghost); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">signal</div>
+    </div>
+    <div style="background:var(--bg); padding:24px 28px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-ghost); letter-spacing:0.08em;">STEP 3</span>
+        <span style="font-size:16px; font-weight:800;">Spot the opportunity signals</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:12px;">
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--accent); margin-bottom:6px;">BPI</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Breakout Potential Index</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">Multi-factor signal: volume surge + wallet accumulation + RSI divergence + Bollinger squeeze.</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--accent); margin-top:10px; padding:3px 8px; border:1px solid rgba(191,255,0,0.3); display:inline-block;">&gt;1.5 = POTENTIAL MOVE</div>
         </div>
-    </section>
-
-     <section class="dashboard-synthesis">
-        <div class="dashboard-synthesis-item">
-            <h3>PER-TOKEN FORENSIC<br>TOKEN DASHBOARD</h3>
-            <p>FHS scores are always visible for free. Pay once to unlock the full per-token forensic sheet for your session:</p>
-            <ul>
-                <li>65+ metrics with thresholds & alerts</li>
-                <li>ICR crash simulation & slippage estimates</li>
-                <li>Wallet flow analysis & holder clustering</li>
-                <li>Bull flag detection with Fibonacci targets</li>
-                <li>AI-generated forensic narrative per token</li>
-                <li>Signal Tracker panel (Llama 70B signals)</li>
-                <li>Data refreshed every 2 hours automatically.</li>
-            </ul>
-            <p class="price">$0.02 <small>USDC / session</small></p>
-            <button class="cta-button">OPEN DASHBOARD</button>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--accent); margin-bottom:6px;">NBP</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Net Buying Pressure</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">24h delta between buy and sell flows, normalized by volume. Detects accumulation vs distribution.</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--accent); margin-top:10px; padding:3px 8px; border:1px solid rgba(191,255,0,0.3); display:inline-block;">POSITIVE = ACCUMULATION</div>
         </div>
-
-        <div class="dashboard-synthesis-item">
-            <h3>GLOBAL SYNTHESIS - EVERY 2H<br>GLOBAL SYNTHESIS</h3>
-            <p>The full Venice AI synthesis report — cross-analysis of all 17 tokens in a single narrative:</p>
-            <ul>
-                <li>CES ranking — all tokens scored & ranked</li>
-                <li>Top 5 opportunities with entry zones</li>
-                <li>Whole watch — who's accumulating, who's dumping</li>
-                <li>Phase transitions & momentum shifts</li>
-                <li>AI trade recommendation (INJECTION PRIORITAIRE)</li>
-                <li>Hybrid privacy: Llama 70B private + Gemini Flash anonymized</li>
-                <li>Generated every 2h. Report hash sealed on-chain.</li>
-            </ul>
-            <p class="price">$0.05 <small>USDC / session</small></p>
-            <button class="cta-button amber">OPEN SYNTHESIS</button>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--accent); margin-bottom:6px;">PHASE</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Market Phase</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">What stage is this token at in its lifecycle?</div>
+          <div style="display:flex; flex-direction:column; gap:4px; margin-top:10px;">
+            <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--accent); padding:2px 8px; border:1px solid rgba(191,255,0,0.2); display:inline-block; width:fit-content;">EARLY_BREAKOUT ✓</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--yellow); padding:2px 8px; border:1px solid rgba(255,184,0,0.2); display:inline-block; width:fit-content;">ACCUMULATION ~</span>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--red); padding:2px 8px; border:1px solid rgba(255,62,62,0.2); display:inline-block; width:fit-content;">DISTRIBUTION ✗</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <section class="how-to-read">
-        <div class="hero-content">
-            <h2>// HOW TO READ THE DASHBOARD - FORENSIC METRICS GUIDE</h2>
-            <p><strong>DON'T KNOW WHERE TO LOOK?</strong> The dashboard shows 65+ forensic metrics per token. Here's how to read it in seconds: <strong>start with the big number</strong>, then check the danger signals, then the opportunities.</p>
-
-            <div class="how-to-read-steps">
-                <div class="how-to-read-step">
-                    <h3>STEP 1: FHS — Forensic Health Score</h3>
-                    <p><strong>7.2 <span>EXAMPLE</span></strong> The single number that summarizes everything. Aggregates liquidity, flow quality, holder distribution and technical momentum into a 0-10 score.</p>
-                </div>
-
-                <div class="how-to-read-step">
-                    <h3>STEP 2: Check the 3 red flags</h3>
-                    <p><strong>ICR — Impact Crash Risk</strong> "If the biggest whale sells, how much does the price drop?" Stimulates front liquidity depth vs top wallet size.</p>
-                </div>
-
-                 <div class="how-to-read-step">
-                    <h3>STEP 3: Spot the opportunity signals</h3>
-                    <p><strong>BPI — Breakout Potential Index</strong> Multi-factor signal: volume surge + wallet accumulation + RSI divergence + Bollinger squeeze.</p>
-                </div>
-
-                <div class="how-to-read-step">
-                    <h3>STEP 4: Deep forensic signals <span>ADVANCED</span></h3>
-                    <p><strong>SI — Squeeze Intensity</strong> Bollinger band compression. Dual-timeframe: hourly + 15min. Extreme squeeze often precedes breakout.</p>
-                </div>
-            </div>
+  <!-- STEP 4 — DEEP -->
+  <div style="display:grid; grid-template-columns:140px 1fr; gap:0; border:1px solid var(--border); border-top:0; margin-bottom:32px;">
+    <div style="background:var(--surface); padding:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; border-right:1px solid var(--border);">
+      <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--blue); line-height:1;">⬡</div>
+      <div style="font-size:9px; color:var(--text-ghost); text-transform:uppercase; letter-spacing:0.1em; margin-top:8px;">deep</div>
+    </div>
+    <div style="background:var(--bg); padding:24px 28px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--text-ghost); letter-spacing:0.08em;">STEP 4</span>
+        <span style="font-size:16px; font-weight:800;">Deep forensic signals</span>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:9px; padding:2px 8px; border:1px solid rgba(0,112,255,0.3); color:var(--blue);">ADVANCED</span>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--border); border:1px solid var(--border); margin-top:12px;">
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--blue); margin-bottom:6px;">SI</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Squeeze Intensity</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">Bollinger band compression. Dual-timeframe: hourly + 15min. Extreme squeeze often precedes breakout.</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--blue); margin-top:10px; padding:3px 8px; border:1px solid rgba(0,112,255,0.3); display:inline-block;">&gt;80% = EXTREME COMPRESSION</div>
         </div>
-    </section>
-
-    <section class="infrastructure">
-        <div class="hero-content">
-            <h2>// INFRASTRUCTURE - HYBRID PRIVACY ARCHITECTURE</h2>
-
-            <div class="infrastructure-grid">
-                <div class="infrastructure-item">
-                    <h3>AGENT ARCHITECTURE<br>OxDelta — Autonomous Agent on GCP</h3>
-                    <p>OxDelta + openclaw-agent + GCP VPS</p>
-                    <ul>
-                        <li>OpenClaw Agent — Gemini 3 Pro. Skills: forensics + bankr + evm-wallet. Runs the full pipeline autonomously every 2 hours.</li>
-                        <li>Venice AI — Private — Llama 3.3 70B for signal tracking. No data retention. Validated by Venice team.</li>
-                        <li>Venice AI — Anonymized — Gemini 3 Flash Preview for main synthesis. No model sees the other's output.</li>
-                        <li>Bankr — Self-custody wallet (kn0x.eth). On-chain swaps on Base DEX. No API keys, no custodian.</li>
-                        <li>Memory system — PROFILE.md / PROJECTS.md / DECISIONS.md / ERRORS.md — persistent cognitive context.</li>
-                    </ul>
-                </div>
-
-                <div class="infrastructure-item">
-                    <h3>ERC-8004 AGENT IDENTITY<br>On-chain Verifiable Agent</h3>
-                    <ul>
-                        <li>Agent #32718 — Registered on Base chain via ERC-8004 standard.</li>
-                        <li>agent.json — Published on GitHub Pages. Machine-readable identity + capabilities.</li>
-                        <li>x402 paywall — Trustless micropayment. $0.02 dashboard, $0.05 synthesis. No backend, no account.</li>
-                        <li>Report seal — SHA256 hash of each synthesis report sent on-chain ($0.01 USDC to Forensic Wallet).</li>
-                    </ul>
-                </div>
-            </div>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--blue); margin-bottom:6px;">TCI</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Team Concentration Index</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">Multi-signal: contract ratio, entity clustering, address prefix patterns, balance tier analysis.</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--blue); margin-top:10px; padding:3px 8px; border:1px solid rgba(0,112,255,0.3); display:inline-block;">&gt;30 = INSIDER RISK</div>
         </div>
-    </section>
+        <div style="background:var(--bg); padding:16px;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:700; color:var(--blue); margin-bottom:6px;">FCI</div>
+          <div style="font-size:12px; font-weight:700; margin-bottom:6px;">Flow Concentration Index</div>
+          <div style="font-size:11px; color:var(--text-dim); line-height:1.6;">Unknown whale concentration + balance clustering among top holders.</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:9px; color:var(--blue); margin-top:10px; padding:3px 8px; border:1px solid rgba(0,112,255,0.3); display:inline-block;">&gt;35 = CONCENTRATED FLOW</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <footer>
-        <p>© 2024 All Rights Automated</p>
-    </footer>
+  <!-- TL;DR -->
+  <div style="border:1px solid var(--border-bright); background:var(--surface); padding:24px 28px; display:flex; align-items:flex-start; gap:16px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; color:var(--accent); text-transform:uppercase; letter-spacing:0.1em; flex-shrink:0; padding-top:2px;">TL;DR</div>
+    <div style="font-size:13px; color:var(--text-dim); line-height:1.7;">
+      <strong style="color:var(--text-main);">High FHS + low ICR + positive NBP + EARLY_BREAKOUT phase</strong> = the agent's ideal entry zone.
+      <span style="color:var(--accent);">That's exactly the signal the agent uses to trigger an autonomous swap.</span>
+      Everything else is context for deep analysis.
+    </div>
+  </div>
+</section>
 
-    <script type="module">
-        import { prepare, layout, prepareWithSegments, layoutWithLines, walkLineRanges, layoutNextLine } from 'https://esm.sh/@chenglou/pretext'
+<!-- ═══ SECTION 4: INFRASTRUCTURE ═══ -->
+<section id="infrastructure">
+  <div class="section-label">// Infrastructure — Hybrid Privacy Architecture</div>
+  <div class="openclaw-grid">
+    <div class="oc-card">
+      <div class="oc-subtitle">Agent Architecture</div>
+      <div class="oc-title">0xDelta — Autonomous Agent on GCP</div>
+      <div style="margin-bottom: 20px;"><span class="agent-badge"><span class="dot"></span> 0xDelta · openclaw-agent · GCP VPS</span></div>
+      <ul class="oc-list">
+        <li><span><strong>OpenClaw Agent</strong> — <span class="dim">Gemini 3 Pro. Skills: forensics + bankr + evm-wallet. Runs the full pipeline autonomously every 2 hours.</span></span></li>
+        <li><span><strong>Venice AI — Private</strong> — <span class="dim">Llama 3.3 70B for signal tracking. No data retention. Validated by Venice team.</span></span></li>
+        <li><span><strong>Venice AI — Anonymized</strong> — <span class="dim">Gemini 3 Flash Preview for main synthesis. No model sees the other's output.</span></span></li>
+        <li><span><strong>Bankr</strong> — <span class="dim">Self-custody wallet (0x0ab4...). On-chain swaps on Base DEX. No API keys, no custodian.</span></span></li>
+        <li><span><strong>Memory system</strong> — <span class="dim">PROFILE.md / PROJECTS.md / DECISIONS.md / ERRORS.md — persistent cognitive context.</span></span></li>
+      </ul>
+    </div>
+    <div class="oc-card">
+      <div class="oc-subtitle">ERC-8004 Agent Identity</div>
+      <div class="oc-title">On-chain Verifiable Agent</div>
+      <ul class="oc-list" style="margin-top: 20px;">
+        <li><span><strong>Agent #32715</strong> — <span class="dim">Registered on Base chain via ERC-8004 standard.</span></span></li>
+        <li><span><strong>agent.json</strong> — <span class="dim">Published on GitHub Pages. Machine-readable identity + capabilities.</span></span></li>
+        <li><span><strong>x402 paywall</strong> — <span class="dim">Trustless micropayment. $0.02 dashboard, $0.05 synthesis. No backend, no account.</span></span></li>
+        <li><span><strong>Report seal</strong> — <span class="dim">SHA256 hash of each synthesis report sent on-chain ($0.01 USDC to Forensic Wallet).</span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-        const title = document.getElementById('hero-title');
-        const letters = title.querySelectorAll('.pretext-letter');
+<footer>
+  <div>0xΔ DELTA · <span class="accent">FIELD INTELLIGENCE UNIT</span> · Base Chain</div>
+  <div class="mono">BUILT WITH OPENCLAW · VENICE AI · BANKR · x402</div>
+  <div><a href="https://github.com/JohnPreston2/0xdelta-hub" target="_blank">GitHub →</a> · © 2026 · <span class="accent">ALL SCANS AUTOMATED</span></div>
+</footer>
 
-        letters.forEach(letter => {
-            letter.addEventListener('mouseover', () => {
-                letter.style.transform = 'translateY(-5px)';
-            });
-            letter.addEventListener('mouseout', () => {
-                letter.style.transform = 'translateY(0)';
-            });
-        });
 
-        // Simple cursor animation in the terminal
-        const cursor = document.querySelector('.cursor');
-        if (cursor) {
-            setInterval(() => {
-                cursor.style.opacity = (cursor.style.opacity === '0') ? '1' : '0';
-            }, 500);
-        }
-    </script>
+<!-- 🎨 CREATIVE AGENT INJECTION START -->
+<style>
+  /* CSS animations and styles */
+  .cta-button {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5); /* Green glow */
+  }
+
+  .cron-pipeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em;
+  }
+
+  .cron-step {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.3em 0.5em;
+    border-radius: 5px;
+    background-color: #121212;
+    transition: background-color 0.3s ease;
+  }
+
+  .cron-step:hover {
+    background-color: #1a1a1a;
+  }
+
+  .cron-step-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffaa00; /* Amber */
+    animation: pulse 1.5s infinite alternate;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+
+  .hero-title {
+    position: relative;
+    display: inline-block;
+  }
+
+  .hero-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00ff88, #bfff00, #ffaa00, #00ff88);
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .hero-title:hover::before {
+    opacity: 1;
+  }
+</style>
+
+<script type="module">
+  import { prepareWithSegments, layoutWithLines } from 'https://esm.sh/@chenglou/pretext@1.0.1';
+
+  // Animate CTA buttons
+  const ctaButtons = document.querySelectorAll('a:contains("Dashboard"), a:contains("Synthesis")');
+  ctaButtons.forEach(button => {
+    button.classList.add('cta-button');
+  });
+
+  // Animate the pipeline
+  const terminalBlock = document.querySelector('pre > code');
+  if (terminalBlock) {
+    const pipelineText = terminalBlock.textContent;
+    const steps = pipelineText.split('\n').filter(line => line.startsWith('STEP'));
+
+    if (steps.length > 0) {
+      const cronPipelineDiv = document.createElement('div');
+      cronPipelineDiv.classList.add('cron-pipeline');
+
+      steps.forEach(stepText => {
+        const cronStepDiv = document.createElement('div');
+        cronStepDiv.classList.add('cron-step');
+
+        const indicator = document.createElement('div');
+        indicator.classList.add('cron-step-indicator');
+        cronStepDiv.appendChild(indicator);
+
+        const stepLabel = document.createTextNode(stepText);
+        cronStepDiv.appendChild(stepLabel);
+
+        cronPipelineDiv.appendChild(cronStepDiv);
+      });
+
+      terminalBlock.parentNode.replaceChild(cronPipelineDiv, terminalBlock); // Replace terminal block with animated pipeline
+    }
+  }
+
+  // Animate the title with Pretext
+  const heroTitle = document.querySelector('h1, h2'); // Assuming the title is h1 or h2
+  if (heroTitle) {
+    heroTitle.classList.add('hero-title');
+  }
+</script>
+<!-- 🎨 CREATIVE AGENT INJECTION END -->
 </body>
 </html>

@@ -1,42 +1,56 @@
 {
-  "updated_at": "2026-04-01T04:42:43.892073+00:00",
-  "cycle": "20260401_0442",
+  "updated_at": "2026-04-01T06:42:45.429662+00:00",
+  "cycle": "20260401_0642",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
       "since": "previous_cycle",
-      "note": "FHS and NBP decreases"
+      "note": "Strengthening signal"
     },
     {
       "symbol": "AntiHunter",
-      "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "FHS decrease, minimal NBP change"
-    },
-    {
-      "symbol": "FELIX",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
       "note": "Minimal changes"
     },
     {
+      "symbol": "FELIX",
+      "type": "BULL_FLAG",
+      "status": "CONFIRMED",
+      "since": "previous_cycle",
+      "note": "Strengthening signal"
+    },
+    {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
       "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "No FHS change, minimal NBP change"
+      "note": "Decrease in FHS and NBP"
+    },
+    {
+      "symbol": "CLAWD",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected"
     },
     {
       "symbol": "CLANKER",
-      "type": "PHASE_CHANGE",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "No phase change, minimal metric changes"
+      "type": "RUPTURE",
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "Phase change with significant metric increases"
+    },
+    {
+      "symbol": "VVV",
+      "type": "RUPTURE",
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "Phase change with significant metric increases"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing no significant price or volume changes. Notable shifts include changes in the FHS (Fear, Greed, and Sentiment) scores and NBP (Net Buying Pressure) values for several tokens, indicating potential changes in market sentiment.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all price and volume deltas being 0%. However, notable changes in other metrics include:\n- AntiHunter's FHS score decreased by 2.1 and its NBP decreased by 0.1.\n- BUNKER's NBP decreased by 30.0.\n- bio's NBP decreased by 50.0.\n- VVV's FHS score increased by 1.6.\n\n### 3. SIGNAL TRACKING\nBased on the provided data, the following signals are tracked:\n- MOLT: BULL_FLAG (status: CONFIRMED) — FHS decrease and NBP decrease.\n- AntiHunter: BULL_FLAG (status: WEAKENING) — FHS decrease and minimal NBP change.\n- FELIX: BULL_FLAG (status: HOLDING) — Minimal changes.\n- JUNO: BULL_FLAG (status: WEAKENING) — FHS no change and minimal NBP change.\n- CLANKER: PHASE_CHANGE (status: HOLDING) — No phase change and minimal metric changes.\n\n### 4. NEW SIGNALS DETECTED\nNew signals detected this cycle include:\n- None explicitly mentioned, but changes in FHS and NBP for several tokens could indicate emerging trends.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"FHS and NBP decreases\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"FHS decrease, minimal NBP change\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minimal changes\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"No FHS change, minimal NBP change\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"No phase change, minimal metric changes\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is the decrease in AntiHunter's FHS score by 2.1, indicating a potential weakening of its bull flag signal."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in the distribution phase, but some notable shifts in phase and metrics. CLANKER and VVV have changed phases to RUPTURE, indicating potential significant movements. BNKRW has transitioned from CONSOLIDATION to DISTRIBUTION.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo token has shown a price movement of more than 2% or a volume change of more than 20% in the given data. However, significant changes in other metrics such as FHS (Force Histogram Score), NBP (Net Buying Pressure), and ICR (Investor Concentration Ratio) are observed across several tokens.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag detected previously is still active, but with a slight decrease in NBP and an increase in FHS, indicating a potential strengthening of the signal.\n- **AntiHunter**: The bull flag is still present, but with minimal changes in metrics, suggesting the signal is holding.\n- **FELIX**: The bull flag is confirmed with increases in FHS and NBP, indicating a strengthening signal.\n- **JUNO**: The bull flag is still active, but with a decrease in FHS and NBP, suggesting a weakening signal.\n- **CLAWD**: A new bull flag has been detected with an increase in NBP and a decrease in FHS, indicating a potential new signal.\n- **CLANKER**: The phase change to RUPTURE with significant increases in FHS and BPI (Buyer Power Index) suggests a confirmed and strong signal.\n- **VVV**: The phase change to RUPTURE with significant increases in FHS, BPI, and ICR indicates a strong and confirmed signal.\n\n### 4. NEW SIGNALS DETECTED\n- **CLAWD**: A new bull flag has been detected.\n- **CLANKER** and **VVV**: Both have transitioned to the RUPTURE phase, indicating new and potentially strong signals.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Strengthening signal\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minimal changes\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Strengthening signal\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"RUPTURE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Phase change with significant metric increases\"},\n  {\"symbol\": \"VVV\", \"type\": \"RUPTURE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Phase change with significant metric increases\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the phase change of **CLANKER** and **VVV** to RUPTURE, along with the detection of a new bull flag in **CLAWD**, indicating potential significant price movements in these tokens."
 }

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0xDELTA Forensic System</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(180deg, #121212 0%, rgba(10, 10, 10, 0.8) 100%);
+            padding: 60px;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-family: monospace;
+            font-size: 4em;
+            margin-bottom: 20px;
+            color: #00ff88;
+            text-shadow: 0 0 10px #00ff88;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #dddddd;
+        }
+
+        /* Status Indicators */
+        .status-bar {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 10px 20px;
+            font-size: 0.9em;
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        /* Call-to-Action Buttons */
+        .cta-buttons {
+            margin-top: 30px;
+        }
+
+        .cta-button {
+            background-color: #ffaa00;
+            color: #000000;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #00ff88;
+            color: #000000;
+            transform: scale(1.05);
+        }
+
+        /* Pipeline Section */
+        .pipeline {
+            padding: 40px;
+        }
+
+        .pipeline h2 {
+            color: #00ff88;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .pipeline-step {
+            background-color: #1a1a1a;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #333;
+        }
+
+        .pipeline-step h3 {
+            color: #ffffff;
+            font-family: monospace;
+            margin-bottom: 10px;
+        }
+
+        .pipeline-step p {
+            color: #dddddd;
+            font-size: 0.9em;
+        }
+
+        /* Micropayment Explanation */
+        .micropayment {
+            background-color: #121212;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .micropayment h2 {
+            color: #00ff88;
+            font-family: sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .micropayment p {
+            color: #dddddd;
+            font-size: 1.1em;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #000000;
+            color: #888888;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.8em;
+        }
+
+        .footer a {
+            color: #888888;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Terminal Styling */
+        .terminal {
+            background-color: #222;
+            color: #00ff88;
+            padding: 20px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.9em;
+            line-height: 1.4;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 30px;
+            }
+
+            .hero h1 {
+                font-size: 3em;
+            }
+
+            .cta-buttons {
+                text-align: center;
+            }
+
+            .cta-button {
+                margin: 10px;
+            }
+
+            .pipeline {
+                padding: 20px;
+            }
+
+            .micropayment {
+                padding: 20px;
+            }
+        }
+
+        /* Animated Title Styles */
+        #delta-title {
+            display: inline-block;
+        }
+        .letter {
+            transition: color 0.3s, transform 0.3s;
+            display: inline-block; /* Make sure each letter is inline */
+        }
+
+        .letter:hover {
+            color: #ffaa00;
+            transform: translateY(-5px);
+            cursor: pointer;
+        }
+
+        /* Button Animation */
+        .cta-button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.2), transparent);
+            transition: left 0.5s;
+            z-index: 1;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button span {
+            position: relative;
+            z-index: 2; /* Ensure text is above the pseudo-element */
+        }
+
+        /* Keyframes for pulsating glow */
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 5px rgba(0, 255, 136, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(0, 255, 136, 0.7);
+            }
+            100% {
+                box-shadow: 0 0 5px rgba(0, 255, 136, 0.7);
+            }
+        }
+
+        /* Apply pulsating glow animation */
+        .cta-button:hover {
+            animation: pulseGlow 1.5s infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1 id="delta-title">
+            <span class="letter">0</span><span class="letter">x</span><span class="letter">D</span><span class="letter">E</span><span class="letter">L</span><span class="letter">T</span><span class="letter">A</span>
+        </h1>
+        <p>FORENSIC<br>SYSTEM</p>
+        <p>A fully autonomous ERC-8004 AI agent running 24/7 on a GCP VPS. Every 2 hours, it analyzes 17 OpenClaw ecosystem tokens on Base chain, computes 65+ forensic metrics, runs a hybrid privacy AI pipeline (Llama 3.3 70B private + Gemini 3 Flash anonymized via Venice AI), and autonomously trades the best signal - swapping 75% ETH into the top CES-ranked token via Bankr self-custody wallet, with a 90-minute auto-close. Full forensic intelligence is published behind x402 micropayments - trustless, no backend, no account. Trading module in beta.</p>
+        <div class="cta-buttons">
+            <button class="cta-button"><span>ACCESS DASHBOARD</span></button>
+            <button class="cta-button"><span>ACCESS SYNTHESIS</span></button>
+        </div>
+    </div>
+
+    <div class="status-bar">
+        <span>SYSTEM: ONLINE</span>
+        <span>ANALYSIS: EVERY 2H</span>
+        <span>BASE CHAIN: 17 TOKENS</span>
+    </div>
+
+    <div class="terminal">
+        $ openclaw run forensic_engine_v5<br>
+        - Loading watchlist... 17 tokens - Base chain<br>
+        - Fetching enchain data [Moralis / GeckoTerminal / DexScreener]<br>
+        - Computing metrics: FRS / NBP / ICR / LER / BPI / SI<br>
+        - Signal tracking... Llama-3.3-7B [PRIVATE]<br>
+        ⚠ ANTIHUNTER - ICR=1.76 - CRASH RISK detected<br>
+        - Venice synthesis... gemini-3-flash [ANONYMIZED]<br>
+        - Bankr swap: $BUNKER - 75% ETH - Base DEX<br>
+        - Push memory.json + signals.json - Github Pages<br>
+        $
+    </div>
+
+    <div class="pipeline">
+        <h2>8-STEP AUTOMATED PIPELINE</h2>
+        <div class="pipeline-step">
+            <h3>Step 1: collector.py</h3>
+            <p>Fetches live data for 17 Base chain tokens. Wallet flows, holder distribution, liquidity, OBLEV (1m + 15min).</p>
+        </div>
+        <div class="pipeline-step">
+            <h3>Step 2: report_builder.py</h3>
+            <p>Computes 65+ forensic metrics per token. Dual-timeframe analysis (hourly + 15min). Phase detection: EARLY_BREAKOUT, DISTRIBUTION, ACCUMULATION.</p>
+        </div>
+        <div class="pipeline-step">
+            <h3>Step 3: signal_tracker.py</h3>
+            <p>Runs Llama 3.3 70B in private mode (no data retention). Compares current forensic data vs N-1 cycle. Detects momentum shifts and signals per token.</p>
+        </div>
+        <div class="pipeline-step">
+            <h3>Step 4: request_analysis.py</h3>
+            <p>Injects signals.json + top 5 memories + DECISIONS.md + Gemini 3 Flash Preview (anonymized, max 4000 tokens). CES ranking, entry zones, whale watch, full EM narrative.</p>
+        </div>
+        <div class="pipeline-step">
+            <h3>Step 5: enter_new_position.py</h3>
+            <p>Token #1 from CES ranking + RFLE_DBSON filters (ICR, Top5, Phase, BPI, FRS) - swap 75% ETH via Bankr on-chain. Position saved with T+90min auto-close.</p>
+        </div>
+        <div class="pipeline-step">
+            <h3>Step 6: export_memory_json.py</h3>
+            <p>Bundles 65 fields + forensic report per token into memory.json for the live dashboard.</p>
+        </div>
+        <div class="pipeline-step">
+            <h3>Step 7: Push GitHub Pages</h3>
+            <p>Publishes data.json, memory.json, signals.json and synthesis.json. Frontend unlocks via x402 micropayment on Base.</p>
+        </div>
+        <div class="pipeline-step">
+            <h3>Step 8: Check open position</h3>
+            <p>Reads position.json - IF position open > T+90min, closes via Bankr sell - ETH.</p>
+        </div>
+    </div>
+
+    <div class="micropayment">
+        <h2>x402 Micropayments</h2>
+        <p>Full forensic intelligence is published behind x402 micropayments - trustless, no backend, no account. Trading module in beta.</p>
+    </div>
+
+    <div class="footer">
+        &copy; 2024 0xDELTA | <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+    </div>
+
+    <script>
+        const title = document.getElementById('delta-title');
+        if (title) {
+            title.addEventListener('mouseover', (e) => {
+                if (e.target.classList.contains('letter')) {
+                    e.target.style.color = '#ffaa00';
+                }
+            });
+
+            title.addEventListener('mouseout', (e) => {
+                if (e.target.classList.contains('letter')) {
+                    e.target.style.color = '#00ff88';
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

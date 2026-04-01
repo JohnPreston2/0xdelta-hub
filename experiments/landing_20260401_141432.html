@@ -435,233 +435,122 @@
 
 <!-- 🎨 CREATIVE AGENT INJECTION START -->
 <style>
-/* Button animations */
-a[href*="Dashboard"],
-a[href*="Synthesis"] {
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 5px rgba(0, 255, 136, 0.5); /* Subtle initial glow */
-}
-
-a[href*="Dashboard"]:hover,
-a[href*="Synthesis"]:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 255, 136, 0.8); /* Stronger glow on hover */
-}
-
-/* Pulse animation for the status bar */
-.status-bar { /* Replace with actual selector if needed */
-  animation: pulse 5s infinite alternate;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.8;
+  /* CSS animations and styles */
+  .cta-button {
+    transition: all 0.2s ease-in-out;
   }
-  100% {
+
+  .cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 136, 0.5); /* Green glow */
+  }
+
+  .cron-pipeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    padding: 1em;
+  }
+
+  .cron-step {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.3em 0.5em;
+    border-radius: 5px;
+    background-color: #121212;
+    transition: background-color 0.3s ease;
+  }
+
+  .cron-step:hover {
+    background-color: #1a1a1a;
+  }
+
+  .cron-step-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffaa00; /* Amber */
+    animation: pulse 1.5s infinite alternate;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+  }
+
+  .hero-title {
+    position: relative;
+    display: inline-block;
+  }
+
+  .hero-title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #00ff88, #bfff00, #ffaa00, #00ff88);
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  .hero-title:hover::before {
     opacity: 1;
   }
-}
-
-/* Cron pipeline visualization */
-.pipeline-step { /* Replace with actual selector if needed */
-  opacity: 0.5;
-  transition: opacity 0.5s;
-}
-
-.pipeline-step.active {
-  opacity: 1;
-}
-
-/* Cursor glow */
-body {
-  --glow-size: 40px;
-  --glow-color: rgba(0, 255, 136, 0.2);
-  cursor: none; /* Hide default cursor */
-}
-
-body::after {
-  content: "";
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  width: var(--glow-size);
-  height: var(--glow-size);
-  background: radial-gradient(circle, var(--glow-color), transparent);
-  border-radius: 50%;
-  margin-left: calc(var(--glow-size) / -2);
-  margin-top: calc(var(--glow-size) / -2);
-  opacity: 0;
-  transition: opacity 0.15s, transform 0.15s;
-  z-index: 1000;
-}
-
-body:hover::after {
-  opacity: 1;
-}
-
-/* Magnetic Buttons */
-a[href*="Dashboard"],
-a[href*="Synthesis"] {
-  position: relative;
-  display: inline-block;
-}
-
-a[href*="Dashboard"]:before,
-a[href*="Synthesis"]:before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -20px;
-  bottom: -20px;
-  background: transparent;
-  border-radius: inherit;
-  z-index: -1;
-}
-
-a[href*="Dashboard"].magnetic,
-a[href*="Synthesis"].magnetic {
-  transform: translate(var(--magnetic-x, 0), var(--magnetic-y, 0));
-  transition: transform 0.1s ease;
-}
-
 </style>
 
 <script type="module">
   import { prepareWithSegments, layoutWithLines } from 'https://esm.sh/@chenglou/pretext@1.0.1';
 
-  // Pretext animation for the hero title
-  const title = document.querySelector('h1, h2'); // Adjust selector if needed
-  if (title) {
-    const originalText = title.textContent;
-    title.innerHTML = ''; // Clear original text
+  // Animate CTA buttons
+  const ctaButtons = document.querySelectorAll('a:contains("Dashboard"), a:contains("Synthesis")');
+  ctaButtons.forEach(button => {
+    button.classList.add('cta-button');
+  });
 
-    const canvas = document.createElement('canvas');
-    canvas.style.display = 'block';
-    title.appendChild(canvas);
+  // Animate the pipeline
+  const terminalBlock = document.querySelector('pre > code');
+  if (terminalBlock) {
+    const pipelineText = terminalBlock.textContent;
+    const steps = pipelineText.split('\n').filter(line => line.startsWith('STEP'));
 
-    let prepared;
+    if (steps.length > 0) {
+      const cronPipelineDiv = document.createElement('div');
+      cronPipelineDiv.classList.add('cron-pipeline');
 
-    const setText = async (text) => {
-      prepared = await prepareWithSegments(text);
-      resize();
-      render();
-    };
+      steps.forEach(stepText => {
+        const cronStepDiv = document.createElement('div');
+        cronStepDiv.classList.add('cron-step');
 
-    const resize = () => {
-      const rect = title.getBoundingClientRect();
-      canvas.width = rect.width * window.devicePixelRatio;
-      canvas.height = rect.height * window.devicePixelRatio;
-      canvas.style.width = `${rect.width}px`;
-      canvas.style.height = `${rect.height}px`;
-    };
+        const indicator = document.createElement('div');
+        indicator.classList.add('cron-step-indicator');
+        cronStepDiv.appendChild(indicator);
 
-    const render = () => {
-      if (!prepared) return;
-      const ctx = canvas.getContext('2d');
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.save();
-      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
-      layoutWithLines(ctx, prepared, { x: 0, y: 0, width: title.offsetWidth, height: title.offsetHeight });
-      ctx.restore();
-    };
+        const stepLabel = document.createTextNode(stepText);
+        cronStepDiv.appendChild(stepLabel);
 
-    setText(originalText);
-
-    window.addEventListener('resize', () => {
-      resize();
-      render();
-    });
-
-    canvas.addEventListener('mousemove', (event) => {
-      const rect = canvas.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-
-      prepared.segments.forEach(segment => {
-          segment.items.forEach(item => {
-              const dx = item.x - x;
-              const dy = item.y - y;
-              const distance = Math.sqrt(dx * dx + dy * dy);
-
-              if (distance < 50) { // Adjust influence radius
-                  const angle = Math.atan2(dy, dx);
-                  const force = (50 - distance) / 50 * 5; // Adjust force
-                  item.vx += Math.cos(angle) * force;
-                  item.vy += Math.sin(angle) * force;
-              }
-          });
+        cronPipelineDiv.appendChild(cronStepDiv);
       });
-      render();
-    });
 
-    function updateTextPhysics() {
-        prepared.segments.forEach(segment => {
-            segment.items.forEach(item => {
-                item.x += item.vx;
-                item.y += item.vy;
-                item.vx *= 0.9; // Damping
-                item.vy *= 0.9; // Damping
-            });
-        });
-        render();
-        requestAnimationFrame(updateTextPhysics);
+      terminalBlock.parentNode.replaceChild(cronPipelineDiv, terminalBlock); // Replace terminal block with animated pipeline
     }
-
-    updateTextPhysics();
   }
 
-  // Cursor glow effect
-  document.addEventListener("mousemove", (e) => {
-      document.body.style.setProperty('--x', e.clientX + 'px');
-      document.body.style.setProperty('--y', e.clientY + 'px');
-      document.body.style.setProperty('--glow-size', '40px');
-      document.body.style.setProperty('--glow-color', 'rgba(0, 255, 136, 0.2)');
-      document.body.style.setProperty('cursor', 'none');
-  });
-
-  // Animate pipeline steps
-  const pipelineSteps = document.querySelectorAll('.pipeline-step'); // Adjust selector
-
-  if (pipelineSteps.length > 0) {
-    let currentStep = 0;
-
-    const animatePipeline = () => {
-      pipelineSteps.forEach((step, index) => {
-        step.classList.toggle('active', index === currentStep);
-      });
-
-      currentStep = (currentStep + 1) % pipelineSteps.length;
-    };
-
-    // Run animation every 2 seconds (adjust timing as needed)
-    setInterval(animatePipeline, 2000);
-    animatePipeline(); // Initial activation
+  // Animate the title with Pretext
+  const heroTitle = document.querySelector('h1, h2'); // Assuming the title is h1 or h2
+  if (heroTitle) {
+    heroTitle.classList.add('hero-title');
   }
-
-  // Magnetic Button Effect
-  const magneticButtons = document.querySelectorAll('a[href*="Dashboard"], a[href*="Synthesis"]');
-
-  magneticButtons.forEach(button => {
-    button.addEventListener('mousemove', (e) => {
-      const rect = button.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
-
-      button.style.setProperty('--magnetic-x', `${x / 5}px`);
-      button.style.setProperty('--magnetic-y', `${y / 5}px`);
-      button.classList.add('magnetic');
-    });
-
-    button.addEventListener('mouseleave', () => {
-      button.style.setProperty('--magnetic-x', '0px');
-      button.style.setProperty('--magnetic-y', '0px');
-      button.classList.remove('magnetic');
-    });
-  });
-
 </script>
 <!-- 🎨 CREATIVE AGENT INJECTION END -->
 </body>

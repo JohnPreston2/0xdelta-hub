@@ -1,49 +1,70 @@
 {
-  "updated_at": "2026-03-31T22:42:58.751321+00:00",
-  "cycle": "20260331_2242",
+  "updated_at": "2026-04-01T00:44:09.641328+00:00",
+  "cycle": "20260401_0044",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
       "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "decreasing FHS"
+      "since": "2026-04-01 00:42",
+      "note": "FHS decrease and NBP decrease"
     },
     {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "minimal changes"
+      "since": "2026-04-01 00:42",
+      "note": "Minimal changes"
     },
     {
       "symbol": "FELIX",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous_cycle",
-      "note": "increasing FHS"
+      "status": "HOLDING",
+      "since": "2026-04-01 00:42",
+      "note": "FHS increase and NBP decrease"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "decreasing FHS"
+      "status": "CONFIRMED",
+      "since": "2026-04-01 00:42",
+      "note": "FHS increase and NBP increase"
     },
     {
       "symbol": "CLANKER",
-      "type": "PHASE_CHANGE",
-      "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "transition to rupture phase"
+      "type": "BULL_FLAG",
+      "status": "WEAKENING",
+      "since": "2026-04-01 00:42",
+      "note": "FHS decrease and phase change"
     },
     {
       "symbol": "VVV",
-      "type": "ICR_CRITICAL",
-      "status": "STRENGTHENING",
-      "since": "current_cycle",
-      "note": "significant increase in ICR"
+      "type": "BULL_FLAG",
+      "status": "HOLDING",
+      "since": "2026-04-01 00:42",
+      "note": "FHS increase and NBP decrease"
+    },
+    {
+      "symbol": "fomolt",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-04-01 00:42",
+      "note": "New bull flag detection"
+    },
+    {
+      "symbol": "Lumen",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-04-01 00:42",
+      "note": "New bull flag detection"
+    },
+    {
+      "symbol": "DRB",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-04-01 00:42",
+      "note": "New bull flag detection"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens experiencing little to no price movement over the last 2 hours. Notable exceptions include CLANKER, which has transitioned from a consolidation phase to a rupture phase, and BUNKER, which lost its bull flag.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) were observed in any of the tokens over the last 2 hours. However, several tokens experienced changes in their metrics:\n- BUNKER's FHS increased by 1.0, and its NBP increased by 16.7, but it lost its bull flag.\n- CLANKER's FHS increased by 2.4, and its phase changed from consolidation to rupture.\n- DRB's FHS increased by 1.2, and its BPI increased significantly by 20.543.\n\n### 3. SIGNAL TRACKING\n- MOLT: The bull flag detected previously is still active, but its FHS has decreased by 0.2, indicating a weakening signal ⚠️.\n- JUNO: The bull flag detected previously is still active, with minimal changes in its metrics, indicating a holding signal ⏳.\n- FELIX: The bull flag detected previously is still active, with its FHS increasing by 0.2, indicating a confirmed signal ✅.\n- Doppel: The bull flag detected previously is still active, with its FHS decreasing by 0.2, indicating a weakening signal ⚠️.\n- CLANKER: The phase change to rupture is a new signal, indicating a potential breakout.\n- VVV: The increase in FHS by 0.5 and the significant increase in ICR by 11.1 indicate a strengthening signal ✅.\n\n### 4. NEW SIGNALS DETECTED\n- CLANKER's phase change to rupture is a new signal.\n- BUNKER losing its bull flag could indicate a potential downturn.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"decreasing FHS\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"minimal changes\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"increasing FHS\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"decreasing FHS\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"transition to rupture phase\"},\n  {\"symbol\": \"VVV\", \"type\": \"ICR_CRITICAL\", \"status\": \"STRENGTHENING\", \"since\": \"current_cycle\", \"note\": \"significant increase in ICR\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is CLANKER's phase change to rupture, indicating a potential breakout and increased volatility."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in distribution phase. Notable shifts include CLANKER's phase change from RUPTURE to CONSOLIDATION and the loss of the bull flag for CLAWNCH.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed for any token, with all price and volume deltas being 0%.\n\n### 3. SIGNAL TRACKING\n- MOLT: WEAKENING ⚠️ — FHS decreased by 1.1, and NBP decreased by 1.7.\n- JUNO: HOLDING ⏳ — minimal changes, with FHS decreasing by 0.4 and NBP decreasing by 0.2.\n- FELIX: HOLDING ⏳ — FHS increased by 0.2, and NBP decreased by 4.7.\n- Doppel: CONFIRMED ✅ — FHS increased by 1.2, and NBP increased by 0.5.\n- CLANKER: WEAKENING ⚠️ — FHS decreased by 0.8, and a phase change from RUPTURE to CONSOLIDATION occurred.\n- VVV: HOLDING ⏳ — FHS increased by 0.2, and NBP decreased by 2.8.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include:\n- fomolt: BULL_FLAG detected\n- Lumen: BULL_FLAG detected\n- CLANKER: BULL_FLAG detected\n- VVV: BULL_FLAG detected\n- Doppel: BULL_FLAG detected\n- DRB: BULL_FLAG detected\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-04-01 00:42\", \"note\": \"FHS decrease and NBP decrease\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-04-01 00:42\", \"note\": \"Minimal changes\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-04-01 00:42\", \"note\": \"FHS increase and NBP decrease\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-01 00:42\", \"note\": \"FHS increase and NBP increase\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-04-01 00:42\", \"note\": \"FHS decrease and phase change\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-04-01 00:42\", \"note\": \"FHS increase and NBP decrease\"},\n  {\"symbol\": \"fomolt\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-01 00:42\", \"note\": \"New bull flag detection\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-01 00:42\", \"note\": \"New bull flag detection\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-01 00:42\", \"note\": \"New bull flag detection\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the phase change of CLANKER from RUPTURE to CONSOLIDATION, which may indicate a potential shift in market sentiment."
 }

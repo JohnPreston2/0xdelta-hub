@@ -1,56 +1,35 @@
 {
-  "updated_at": "2026-04-02T02:42:37.868696+00:00",
-  "cycle": "20260402_0242",
+  "updated_at": "2026-04-02T04:42:36.885247+00:00",
+  "cycle": "20260402_0442",
   "signals": [
     {
       "symbol": "MOLT",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Weakening signal"
+      "type": "BULL_FLAG_LOST",
+      "status": "WEAKENING",
+      "since": "2026-04-02 04:42",
+      "note": "Lost bull flag, FHS decreased by 0.8"
     },
     {
       "symbol": "AntiHunter",
       "type": "BULL_FLAG",
       "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Signal holding"
+      "since": "2026-04-02 04:42",
+      "note": "FHS decreased by 0.5, but still has a bull flag detected"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous_cycle",
-      "note": "Signal confirmed"
-    },
-    {
-      "symbol": "BUNKER",
-      "type": "DISTRIBUTION",
-      "status": "NEW",
-      "since": "current_cycle",
-      "note": "Lost bull flag"
-    },
-    {
-      "symbol": "FELIX",
-      "type": "DISTRIBUTION",
-      "status": "NEW",
-      "since": "current_cycle",
-      "note": "Lost bull flag"
-    },
-    {
-      "symbol": "CLAWD",
-      "type": "DISTRIBUTION",
-      "status": "NEW",
-      "since": "current_cycle",
-      "note": "Lost bull flag"
+      "status": "HOLDING",
+      "since": "2026-04-02 04:42",
+      "note": "FHS increased by 0.3, but NBP decreased by 2.9"
     },
     {
       "symbol": "VVV",
-      "type": "DISTRIBUTION",
-      "status": "NEW",
-      "since": "current_cycle",
-      "note": "Lost bull flag"
+      "type": "PHASE_CHANGE",
+      "status": "INVALIDATED",
+      "since": "2026-04-02 04:42",
+      "note": "Phase changed from distribution to consolidation"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens showing no significant price or volume changes over the last 2 hours. Notable shifts include changes in the FHS (Fear, Greed, and Sentiment) scores and NBP (Net Buying Pressure) values for several tokens, indicating some level of market activity and sentiment shifts.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price movements (>2%) or volume changes (>20%) for any of the tokens listed. However, several tokens have experienced changes in their FHS scores and NBP values, which could indicate underlying market sentiment shifts. For example, AntiHunter saw an increase in its FHS score by 0.5, while BUNKER's FHS score increased by 1.4. These changes might suggest evolving market sentiments towards these tokens.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag signal is still detected, but there's a slight decrease in FHS and an increase in NBP, indicating a potential weakening of the signal.\n- **AntiHunter**: The bull flag signal remains, with an increase in FHS and a slight decrease in NBP, suggesting the signal is holding.\n- **BUNKER**: The bull flag signal has been lost, despite an increase in FHS, indicating a weakening of the previous signal.\n- **FELIX**: The bull flag signal has been lost, with an increase in FHS but a decrease in BPI, suggesting a weakening.\n- **Doppel**: The bull flag signal remains, with an increase in FHS and BPI, indicating the signal is confirmed.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include potential accumulation or distribution phases in various tokens, but no new bull flags have been detected this cycle. Tokens like BUNKER, FELIX, CLAWD, and VVV have lost their bull flags, indicating a shift in market sentiment.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Weakening signal\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Signal holding\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Signal confirmed\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"DISTRIBUTION\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"Lost bull flag\"},\n  {\"symbol\": \"FELIX\", \"type\": \"DISTRIBUTION\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"Lost bull flag\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"DISTRIBUTION\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"Lost bull flag\"},\n  {\"symbol\": \"VVV\", \"type\": \"DISTRIBUTION\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"Lost bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe single most important thing happening across the watchlist right now is the loss of bull flags in several tokens, including BUNKER, FELIX, CLAWD, and VVV, indicating a potential shift towards distribution phases for these tokens."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens showing no significant price or volume changes over the last 2 hours. Notable shifts include changes in the FHS (Fundamental Health Score) and NBP (Negative Buy Pressure) of several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all price and volume deltas at 0%. However, some tokens have experienced changes in their FHS and NBP. For example, MOLT's FHS decreased by 0.8, and AntiHunter's FHS decreased by 0.5. BNKRW's NBP increased by 7.1, indicating a potential decrease in negative buy pressure.\n\n### 3. SIGNAL TRACKING\n- MOLT: WEAKENING ⚠️ — Lost bull flag, FHS decreased by 0.8.\n- AntiHunter: HOLDING ⏳ — FHS decreased by 0.5, but still has a bull flag detected.\n- Doppel: HOLDING ⏳ — FHS increased by 0.3, but NBP decreased by 2.9.\n- BUNKER: HOLDING ⏳ — No significant changes.\n- FELIX: WEAKENING ⚠️ — FHS decreased by 0.1, and NBP increased by 1.3.\n- VVV: INVALIDATED ❌ — Phase changed from distribution to consolidation.\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags or significant signals were detected this cycle. However, VVV's phase changed from distribution to consolidation, which may indicate a potential shift in market sentiment.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG_LOST\", \"status\": \"WEAKENING\", \"since\": \"2026-04-02 04:42\", \"note\": \"Lost bull flag, FHS decreased by 0.8\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-04-02 04:42\", \"note\": \"FHS decreased by 0.5, but still has a bull flag detected\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-04-02 04:42\", \"note\": \"FHS increased by 0.3, but NBP decreased by 2.9\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"INVALIDATED\", \"since\": \"2026-04-02 04:42\", \"note\": \"Phase changed from distribution to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the loss of the bull flag for MOLT and the phase change of VVV from distribution to consolidation, which may indicate a shift in market sentiment and potential changes in the distribution phases of other tokens."
 }

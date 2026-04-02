@@ -1,35 +1,56 @@
 {
-  "updated_at": "2026-04-02T10:42:46.834359+00:00",
-  "cycle": "20260402_1042",
+  "updated_at": "2026-04-02T12:42:45.108497+00:00",
+  "cycle": "20260402_1242",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "2026-04-02 10:42",
-      "note": "New bull flag detected"
-    },
-    {
-      "symbol": "VVV",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "2026-04-02 10:42",
-      "note": "New bull flag detected"
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Lost bull flag"
     },
     {
       "symbol": "Lumen",
-      "type": "RUPTURE",
+      "type": "PHASE_CHANGE",
       "status": "CONFIRMED",
-      "since": "2026-04-02 10:42",
-      "note": "Continues in rupture phase with strong BPI"
+      "since": "current_cycle",
+      "note": "Transitioned from rupture to consolidation"
     },
     {
-      "symbol": "bio",
+      "symbol": "VVV",
+      "type": "PHASE_CHANGE",
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "Moved from consolidation to distribution potential"
+    },
+    {
+      "symbol": "BNKRW",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "2026-04-02 10:42",
-      "note": "Lost bull flag, indicating reduced buying interest"
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected"
+    },
+    {
+      "symbol": "fomolt",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected"
+    },
+    {
+      "symbol": "CLANKER",
+      "type": "NBP_INCREASE",
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "Significant NBP increase"
+    },
+    {
+      "symbol": "DRB",
+      "type": "NBP_INCREASE",
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "Significant NBP increase"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing no significant price or volume changes. However, there are notable shifts in certain tokens, such as Lumen, which is in a rupture phase, and VVV, which has newly detected a bull flag.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\n- **Lumen**: Remains in a rupture phase with a significant BPI increase of 77.043, indicating strong buying pressure.\n- **MOLT**: Newly detected a bull flag, with a slight decrease in FHS and an increase in BPI, suggesting potential accumulation.\n- **VVV**: Also detected a new bull flag, with a decrease in FHS and an increase in BPI, indicating possible buying interest.\n- **WORK** and **BUNKER**: Showed improvements in their NBP, suggesting reduced selling pressure.\n- **bio**: Lost its bull flag, with an increase in FHS but a decrease in BPI, indicating weakening buying pressure.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: CONFIRMED - The new bull flag detection strengthens its signal.\n- **AntiHunter**: HOLDING - No significant changes in its metrics.\n- **BNKRW**: HOLDING - Despite a new bull flag, its overall metrics remain stable.\n- **Lumen**: CONFIRMED - Continues in a rupture phase with strong BPI.\n- **bio**: WEAKENING - Lost its bull flag, indicating reduced buying interest.\n- **VVV**: CONFIRMED - New bull flag detection suggests potential for accumulation.\n\n### 4. NEW SIGNALS DETECTED\n- **MOLT** and **VVV** have newly detected bull flags, indicating potential buying interest.\n- **Lumen** continues in its rupture phase, a strong signal of accumulation.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-02 10:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-02 10:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"Lumen\", \"type\": \"RUPTURE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-02 10:42\", \"note\": \"Continues in rupture phase with strong BPI\"},\n  {\"symbol\": \"bio\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-04-02 10:42\", \"note\": \"Lost bull flag, indicating reduced buying interest\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe detection of new bull flags in **MOLT** and **VVV**, alongside **Lumen**'s continued strong performance in its rupture phase, suggests that despite the overall market being in distribution, there are pockets of accumulation and potential buying interest that could lead to future price movements."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a distribution phase, with most tokens showing no significant price or volume movements. Notable exceptions include Lumen, which has transitioned from a rupture phase to consolidation, and VVV, which has moved from consolidation to distribution potential. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo token has shown a price movement of more than 2% or a volume change of over 20%. Thus, there are no significant price or volume highlights to report from the given data.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag detected in the previous cycle has been lost, indicating a weakening signal.\n- **Lumen**: The bull flag has been lost, and the phase has changed from rupture to consolidation, indicating a significant change in market dynamics.\n- **VVV**: The signal remains active, with a phase change from consolidation to distribution potential, indicating potential for future movement.\n- **bio**: The signal remains weak, with no bull flag detected and a negative NBP, indicating continued distribution.\n\n### 4. NEW SIGNALS DETECTED\nNew bull flags have been detected in **BNKRW** and **fomolt**, indicating potential buying interest. **CLANKER** and **DRB** have shown significant increases in NBP, which could be indicative of changing market sentiments.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Lost bull flag\"},\n  {\"symbol\": \"Lumen\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Transitioned from rupture to consolidation\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Moved from consolidation to distribution potential\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"fomolt\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"NBP_INCREASE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Significant NBP increase\"},\n  {\"symbol\": \"DRB\", \"type\": \"NBP_INCREASE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Significant NBP increase\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is the phase change in **Lumen** from rupture to consolidation, indicating a potential shift in market dynamics that could influence other tokens."
 }

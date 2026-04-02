@@ -1,35 +1,49 @@
 {
-  "updated_at": "2026-04-02T04:42:36.885247+00:00",
-  "cycle": "20260402_0442",
+  "updated_at": "2026-04-02T06:42:51.329161+00:00",
+  "cycle": "20260402_0642",
   "signals": [
     {
       "symbol": "MOLT",
-      "type": "BULL_FLAG_LOST",
-      "status": "WEAKENING",
-      "since": "2026-04-02 04:42",
-      "note": "Lost bull flag, FHS decreased by 0.8"
+      "type": "SAC",
+      "status": "STRENGTHENING",
+      "since": "2026-04-02 06:42",
+      "note": "FHS increase"
     },
     {
       "symbol": "AntiHunter",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "2026-04-02 04:42",
-      "note": "FHS decreased by 0.5, but still has a bull flag detected"
+      "status": "CONFIRMED",
+      "since": "previous cycle",
+      "note": "Maintaining bull flag"
     },
     {
-      "symbol": "Doppel",
+      "symbol": "BNKRW",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "2026-04-02 04:42",
-      "note": "FHS increased by 0.3, but NBP decreased by 2.9"
+      "status": "DETECTED",
+      "since": "2026-04-02 06:42",
+      "note": "New bull flag"
+    },
+    {
+      "symbol": "bio",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-04-02 06:42",
+      "note": "New bull flag"
+    },
+    {
+      "symbol": "Lumen",
+      "type": "BULL_FLAG",
+      "status": "CONFIRMED",
+      "since": "2026-04-02 06:42",
+      "note": "Increased FHS and BPI"
     },
     {
       "symbol": "VVV",
-      "type": "PHASE_CHANGE",
-      "status": "INVALIDATED",
-      "since": "2026-04-02 04:42",
-      "note": "Phase changed from distribution to consolidation"
+      "type": "FHS_INCREASE",
+      "status": "STRENGTHENING",
+      "since": "2026-04-02 06:42",
+      "note": "Increase in FHS score"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens showing no significant price or volume changes over the last 2 hours. Notable shifts include changes in the FHS (Fundamental Health Score) and NBP (Negative Buy Pressure) of several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all price and volume deltas at 0%. However, some tokens have experienced changes in their FHS and NBP. For example, MOLT's FHS decreased by 0.8, and AntiHunter's FHS decreased by 0.5. BNKRW's NBP increased by 7.1, indicating a potential decrease in negative buy pressure.\n\n### 3. SIGNAL TRACKING\n- MOLT: WEAKENING ⚠️ — Lost bull flag, FHS decreased by 0.8.\n- AntiHunter: HOLDING ⏳ — FHS decreased by 0.5, but still has a bull flag detected.\n- Doppel: HOLDING ⏳ — FHS increased by 0.3, but NBP decreased by 2.9.\n- BUNKER: HOLDING ⏳ — No significant changes.\n- FELIX: WEAKENING ⚠️ — FHS decreased by 0.1, and NBP increased by 1.3.\n- VVV: INVALIDATED ❌ — Phase changed from distribution to consolidation.\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags or significant signals were detected this cycle. However, VVV's phase changed from distribution to consolidation, which may indicate a potential shift in market sentiment.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG_LOST\", \"status\": \"WEAKENING\", \"since\": \"2026-04-02 04:42\", \"note\": \"Lost bull flag, FHS decreased by 0.8\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-04-02 04:42\", \"note\": \"FHS decreased by 0.5, but still has a bull flag detected\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-04-02 04:42\", \"note\": \"FHS increased by 0.3, but NBP decreased by 2.9\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"INVALIDATED\", \"since\": \"2026-04-02 04:42\", \"note\": \"Phase changed from distribution to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the loss of the bull flag for MOLT and the phase change of VVV from distribution to consolidation, which may indicate a shift in market sentiment and potential changes in the distribution phases of other tokens."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing no significant price or volume changes. Notable shifts include changes in FHS (Fear, Greed, and Sentiment) scores and NBP (Net Buying Pressure) values for several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo token has shown a price change of more than 2% or a volume change of more than 20%. However, several tokens have experienced changes in their FHS scores and NBP values, which could indicate shifts in market sentiment.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The FHS score increased by 1.9, indicating a potential strengthening of the signal.\n- **Doppel**: Lost its bull flag, indicating a weakening of the signal.\n- **CLANKER**: Experienced an increase in NBP, which could be a sign of strengthening.\n- **Lumen**: Saw an increase in FHS and a significant increase in BPI (Bullish Percentage Index), suggesting a confirmed signal.\n- **VVV**: Had an increase in FHS, which might indicate a strengthening signal.\n\n### 4. NEW SIGNALS DETECTED\n- **AntiHunter** maintains a bull flag, suggesting ongoing accumulation or interest.\n- **BNKRW** has a bull flag detected, indicating potential for a bullish move.\n- **bio** has a bull flag, which could suggest accumulation.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"SAC\", \"status\": \"STRENGTHENING\", \"since\": \"2026-04-02 06:42\", \"note\": \"FHS increase\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous cycle\", \"note\": \"Maintaining bull flag\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-02 06:42\", \"note\": \"New bull flag\"},\n  {\"symbol\": \"bio\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-02 06:42\", \"note\": \"New bull flag\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-02 06:42\", \"note\": \"Increased FHS and BPI\"},\n  {\"symbol\": \"VVV\", \"type\": \"FHS_INCREASE\", \"status\": \"STRENGTHENING\", \"since\": \"2026-04-02 06:42\", \"note\": \"Increase in FHS score\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the strengthening of signals for tokens like MOLT and Lumen, alongside the detection of new bull flags for BNKRW and bio, indicating potential for future price movements."
 }

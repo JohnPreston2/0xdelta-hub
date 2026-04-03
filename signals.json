@@ -1,28 +1,49 @@
 {
-  "updated_at": "2026-04-03T04:43:06.904016+00:00",
-  "cycle": "20260403_0443",
+  "updated_at": "2026-04-03T06:42:49.076684+00:00",
+  "cycle": "20260403_0642",
   "signals": [
     {
-      "symbol": "WORK",
+      "symbol": "CLAWNCH",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "2026-04-03 04:42",
-      "note": "New bull flag detected, phase changed from consolidation to rupture"
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected in distribution phase"
+    },
+    {
+      "symbol": "JUNO",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected in distribution phase"
+    },
+    {
+      "symbol": "CLAWD",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected in distribution phase"
+    },
+    {
+      "symbol": "DRB",
+      "type": "PHASE_CHANGE",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "Phase changed from CONSOLIDATION to RUPTURE"
+    },
+    {
+      "symbol": "WORK",
+      "type": "PHASE_CHANGE",
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Phase changed from RUPTURE to CONSOLIDATION"
     },
     {
       "symbol": "CLANKER",
       "type": "ACCUMULATION",
       "status": "HOLDING",
-      "since": "2026-04-03 04:42",
-      "note": "Continued accumulation, with a slight increase in FHS and BPI"
-    },
-    {
-      "symbol": "Doppel",
-      "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-04-03 04:42",
-      "note": "Bull flag detected, with a slight increase in FHS and NBP"
+      "since": "previous_cycle",
+      "note": "Remains in accumulation phase with bull flag"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mixed trend, with most tokens in distribution or accumulation phases. Notable shifts include WORK's phase change from consolidation to rupture and CLANKER's continued accumulation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed, with all tokens experiencing 0% price and volume changes. However, notable changes in metrics such as FHS, NBP, and BPI were observed for several tokens, including WORK, CLANKER, and CLAWD.\n\n### 3. SIGNAL TRACKING\n- **WORK**: CONFIRMED ✅ - New bull flag detected, and phase changed from consolidation to rupture.\n- **CLANKER**: HOLDING ⏳ - Continued accumulation, with a slight increase in FHS and BPI.\n- **CLAWD**: WEAKENING ⚠️ - Lost bull flag, with a decrease in NBP and BPI.\n- **BNKRW**: WEAKENING ⚠️ - Decrease in FHS and NBP, with a significant decrease in BPI.\n- **MOLT**: HOLDING ⏳ - No significant changes, with a slight decrease in NBP.\n- **FELIX**: HOLDING ⏳ - No significant changes, with a slight increase in NBP and FHS.\n- **DRB**: HOLDING ⏳ - No significant changes, with a slight increase in NBP and decrease in FHS.\n- **Lumen**: HOLDING ⏳ - No significant changes, with a slight decrease in NBP.\n\n### 4. NEW SIGNALS DETECTED\nNew signals detected include:\n- **WORK**: New bull flag detected, with a phase change from consolidation to rupture.\n- **CLANKER**: Continued accumulation, with a slight increase in FHS and BPI.\n- **Doppel**: Bull flag detected, with a slight increase in FHS and NBP.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"WORK\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-03 04:42\", \"note\": \"New bull flag detected, phase changed from consolidation to rupture\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"2026-04-03 04:42\", \"note\": \"Continued accumulation, with a slight increase in FHS and BPI\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-03 04:42\", \"note\": \"Bull flag detected, with a slight increase in FHS and NBP\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is WORK's new bull flag detection and phase change from consolidation to rupture, indicating a potential trend reversal."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mixed trend, with most tokens in distribution phase. Notable shifts include WORK changing from RUPTURE to CONSOLIDATION and Lumen changing from CONSOLIDATION to DISTRIBUTION. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements (greater than 2% or 20%) for any token in the provided data. All price and volume deltas are 0, indicating no change.\n\n### 3. SIGNAL TRACKING\n- **WORK**: The signal is WEAKENING ⚠️ as it changed phase from RUPTURE to CONSOLIDATION with a decrease in FHS and NBP.\n- **CLANKER**: The signal is HOLDING ⏳ as it remains in ACCUMULATION phase with a slight decrease in FHS and significant decrease in NBP, but still has a bull flag detected.\n- **Doppel**: The signal is HOLDING ⏳ as it remains in DISTRIBUTION phase with no significant changes.\n\n### 4. NEW SIGNALS DETECTED\nNew bull flags have been detected for **CLAWNCH**, **JUNO**, and **CLAWD**, indicating potential accumulation or upcoming price movements. **DRB** has changed phase from CONSOLIDATION to RUPTURE, which could indicate a significant price movement.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected in distribution phase\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected in distribution phase\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected in distribution phase\"},\n  {\"symbol\": \"DRB\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Phase changed from CONSOLIDATION to RUPTURE\"},\n  {\"symbol\": \"WORK\", \"type\": \"PHASE_CHANGE\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Phase changed from RUPTURE to CONSOLIDATION\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Remains in accumulation phase with bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the detection of new bull flags for **CLAWNCH**, **JUNO**, and **CLAWD**, and the phase change of **DRB** to RUPTURE, indicating potential for significant price movements in these tokens."
 }

@@ -1,63 +1,70 @@
 {
-  "updated_at": "2026-04-02T22:43:07.478098+00:00",
-  "cycle": "20260402_2243",
+  "updated_at": "2026-04-03T00:43:11.289990+00:00",
+  "cycle": "20260403_0043",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
       "status": "DETECTED",
-      "since": "2026-04-02 22:42",
-      "note": "New bull flag detected"
+      "since": "previous_cycle",
+      "note": "FHS score decreased by 0.8, NBP increased by 2.5"
     },
     {
       "symbol": "BNKRW",
       "type": "BULL_FLAG",
       "status": "DETECTED",
-      "since": "2026-04-02 22:42",
-      "note": "New bull flag detected"
+      "since": "previous_cycle",
+      "note": "NBP decreased by 4.8"
     },
     {
       "symbol": "fomolt",
       "type": "BULL_FLAG",
       "status": "DETECTED",
-      "since": "2026-04-02 22:42",
-      "note": "New bull flag detected"
+      "since": "previous_cycle",
+      "note": "No significant changes"
     },
     {
       "symbol": "BUNKER",
       "type": "BULL_FLAG",
       "status": "DETECTED",
-      "since": "2026-04-02 22:42",
-      "note": "New bull flag detected"
+      "since": "previous_cycle",
+      "note": "No significant changes"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
       "status": "DETECTED",
-      "since": "2026-04-02 22:42",
-      "note": "New bull flag detected"
-    },
-    {
-      "symbol": "VVV",
-      "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-04-02 22:42",
-      "note": "New bull flag detected"
+      "since": "previous_cycle",
+      "note": "FHS score decreased by 0.2, NBP increased by 1.0"
     },
     {
       "symbol": "CLANKER",
-      "type": "PHASE_CHANGE",
+      "type": "ACCUMULATION",
       "status": "CONFIRMED",
-      "since": "2026-04-02 22:42",
-      "note": "Phase changed from RUPTURE to ACCUMULATION"
+      "since": "previous_cycle",
+      "note": "FHS score decreased by 0.9, NBP increased by 1.7"
+    },
+    {
+      "symbol": "DRB",
+      "type": "RUPTURE",
+      "status": "CONFIRMED",
+      "since": "previous_cycle",
+      "note": "NBP increased by 6.9"
     },
     {
       "symbol": "Lumen",
-      "type": "PHASE_CHANGE",
+      "type": "CONSOLIDATION",
       "status": "CONFIRMED",
-      "since": "2026-04-02 22:42",
-      "note": "Phase changed from DISTRIBUTION to CONSOLIDATION"
+      "since": "previous_cycle",
+      "note": "No significant changes"
+    },
+    {
+      "symbol": "VVV",
+      "type": "CONSOLIDATION",
+      "status": "DETECTED",
+      "since": "this_cycle",
+      "note": "FHS score decreased by 0.8, NBP increased by 0.1"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mixed phase, with most tokens in distribution, while a few are in accumulation or consolidation. Notable shifts include CLANKER's phase change from RUPTURE to ACCUMULATION and Lumen's phase change from DISTRIBUTION to CONSOLIDATION.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed for any token, with all price deltas and volume deltas being 0.\n\n### 3. SIGNAL TRACKING\n- MOLT: A new bull flag was detected.\n- fomolt: NBP increased by 16.7.\n- WORK: NBP decreased by 15.4.\n- CLANKER: Phase changed from RUPTURE to ACCUMULATION, with a significant increase in NBP and BPI.\n- Lumen: Phase changed from DISTRIBUTION to CONSOLIDATION.\n\n### 4. NEW SIGNALS DETECTED\nNew signals detected include:\n- MOLT: Bull flag detected.\n- BNKRW: Bull flag detected.\n- fomolt: Bull flag detected.\n- BUNKER: Bull flag detected.\n- Doppel: Bull flag detected.\n- VVV: Bull flag detected.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-02 22:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-02 22:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"fomolt\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-02 22:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-02 22:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-02 22:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-02 22:42\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-02 22:42\", \"note\": \"Phase changed from RUPTURE to ACCUMULATION\"},\n  {\"symbol\": \"Lumen\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-02 22:42\", \"note\": \"Phase changed from DISTRIBUTION to CONSOLIDATION\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the detection of new bull flags in several tokens, including MOLT, BNKRW, fomolt, BUNKER, Doppel, and VVV, which may indicate potential buying opportunities."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a mixed state, with most tokens in distribution, but some showing signs of accumulation or consolidation. Notable shifts include changes in the FHS (Fear, Greed, and Sentiment) scores and NBP (Net Buying Pressure) values for several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all price and volume deltas being 0%. However, some tokens have experienced changes in their FHS scores and NBP values. For example, MOLT's FHS score decreased by 0.8, while its NBP increased by 2.5. Squaer's NBP increased by 20.0, and CLANKER's FHS score decreased by 0.9.\n\n### 3. SIGNAL TRACKING\nThe previous cycle's signals are still active, but some have weakened. The bull flag detected for MOLT, BNKRW, fomolt, BUNKER, and Doppel is still present, but the signal strength has not changed significantly. The phase change detected for CLANKER and Lumen is still confirmed.\n\n### 4. NEW SIGNALS DETECTED\nNew signals detected this cycle include:\n- CLANKER: Accumulation phase with a high FHS score and positive NBP.\n- DRB: Rupture phase with a high FHS score and positive NBP.\n- VVV: Consolidation phase with a low FHS score and negative NBP.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous_cycle\", \"note\": \"FHS score decreased by 0.8, NBP increased by 2.5\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous_cycle\", \"note\": \"NBP decreased by 4.8\"},\n  {\"symbol\": \"fomolt\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous_cycle\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous_cycle\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"previous_cycle\", \"note\": \"FHS score decreased by 0.2, NBP increased by 1.0\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"FHS score decreased by 0.9, NBP increased by 1.7\"},\n  {\"symbol\": \"DRB\", \"type\": \"RUPTURE\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"NBP increased by 6.9\"},\n  {\"symbol\": \"Lumen\", \"type\": \"CONSOLIDATION\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"VVV\", \"type\": \"CONSOLIDATION\", \"status\": \"DETECTED\", \"since\": \"this_cycle\", \"note\": \"FHS score decreased by 0.8, NBP increased by 0.1\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the mixed market state, with some tokens showing signs of accumulation or consolidation, while others remain in distribution."
 }

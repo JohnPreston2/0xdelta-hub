@@ -1,28 +1,28 @@
 {
-  "updated_at": "2026-04-03T20:42:52.880781+00:00",
-  "cycle": "20260403_2042",
+  "updated_at": "2026-04-03T22:42:55.713094+00:00",
+  "cycle": "20260403_2242",
   "signals": [
     {
-      "symbol": "CLANKER",
-      "type": "ACCUMULATION",
-      "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "Significant NBP increase"
-    },
-    {
       "symbol": "WORK",
-      "type": "CONSOLIDATION",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "No significant changes"
+      "type": "PHASE_CHANGE",
+      "status": "CONFIRMED",
+      "since": "2026-04-03 22:42",
+      "note": "Changed to DISTRIBUTION_POTENTIELLE"
     },
     {
-      "symbol": "DRB",
-      "type": "CONSOLIDATION",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Minor changes in metrics"
+      "symbol": "VVV",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "2026-04-03 22:42",
+      "note": "New bull flag with phase change to DISTRIBUTION_POTENTIELLE"
+    },
+    {
+      "symbol": "CLANKER",
+      "type": "BULL_FLAG_LOST",
+      "status": "WEAKENING",
+      "since": "2026-04-03 22:42",
+      "note": "Lost bull flag and significant NBP decrease"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a distribution phase, with most tokens experiencing negative price and volume movements. Notable exceptions include CLANKER, which is in accumulation, and WORK and DRB, which are in consolidation. There has been a significant shift in VVV, which has changed its phase from consolidation to distribution.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price movements (all 0%), several tokens have notable changes in their metrics:\n- MOLT's FHS increased by 0.7, and its NBP decreased by -14.5, resulting in the loss of its bull flag.\n- Doppel's FHS increased by 0.6, but it also lost its bull flag.\n- CLANKER's NBP increased by 26.4.\n- VVV's FHS increased by 0.9, and it transitioned from consolidation to distribution, losing its bull flag in the process.\n\n### 3. SIGNAL TRACKING\n- MOLT: WEAKENING ⚠️ — Lost bull flag due to decreased NBP.\n- CLAWNCH: HOLDING ⏳ — No significant changes.\n- BNKRW: HOLDING ⏳ — No significant changes.\n- bio: HOLDING ⏳ — No significant changes.\n- VVV: INVALIDATED ❌ — Lost bull flag and changed phase from consolidation to distribution.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include:\n- CLANKER's continued accumulation phase with a significant increase in NBP.\n- Potential interest in WORK and DRB as they remain in consolidation, but no new bull flags have appeared.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Significant NBP increase\"},\n  {\"symbol\": \"WORK\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"DRB\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minor changes in metrics\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important event across the watchlist is VVV's phase change from consolidation to distribution, accompanied by the loss of its bull flag, indicating a potential shift in market sentiment towards this token."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a distribution phase, with most tokens showing no significant price or volume changes. Notable shifts include phase changes in WORK and VVV, and bull flag detections in several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\n- **MOLT**: No significant price or volume change, but a -9.3% change in NBP.\n- **AntiHunter**: No significant price or volume change, with a minimal 0.4% change in NBP.\n- **CLAWNCH**: No significant price or volume change, but a 0.2 FHS increase and a -0.2% NBP change.\n- **BNKRW**: No significant price or volume change, but a -5.6% NBP decrease.\n- **fomolt**: No significant price or volume change, with an -11.9% NBP decrease.\n- **WORK**: Changed phase from CONSOLIDATION to DISTRIBUTION_POTENTIELLE, with a 5.3% NBP increase.\n- **Squaer**: No significant price or volume change, but a 16.7% NBP increase.\n- **BUNKER**: No significant price or volume change.\n- **FELIX**: No significant price or volume change, but a 0.2 FHS increase and a 2.3% NBP increase.\n- **bio**: No significant price or volume change, but a 1.1 FHS increase.\n- **JUNO**: No significant price or volume change, with a -1.3% NBP decrease.\n- **CLAWD**: No significant price or volume change, but a 3.7% NBP increase.\n- **Doppel**: No significant price or volume change, with a 0.9% NBP increase.\n- **CLANKER**: Lost bull flag, with a 1.4 FHS increase and a -36.8% NBP decrease.\n- **DRB**: No significant price or volume change, with a -1.9% NBP decrease.\n- **Lumen**: No significant price or volume change, but a 0.2 FHS increase and a 1.4% NBP increase.\n- **VVV**: Changed phase from DISTRIBUTION to DISTRIBUTION_POTENTIELLE, with a new bull flag detection, a -1.1 FHS decrease, and a 5.8% NBP increase.\n\n### 3. SIGNAL TRACKING\n- **CLANKER**: WEAKENING ⚠️ — Lost bull flag and significant NBP decrease.\n- **WORK**: CONFIRMED ✅ — Phase change to DISTRIBUTION_POTENTIELLE and NBP increase.\n- **DRB**: HOLDING ⏳ — No significant changes.\n\n### 4. NEW SIGNALS DETECTED\n- **VVV**: New bull flag detected with phase change to DISTRIBUTION_POTENTIELLE.\n- **BNKRW**, **BUNKER**, **FELIX**, **bio**, **JUNO**, **CLAWD**, **Lumen**: Bull flag detections or significant metric changes.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"WORK\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-03 22:42\", \"note\": \"Changed to DISTRIBUTION_POTENTIELLE\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-03 22:42\", \"note\": \"New bull flag with phase change to DISTRIBUTION_POTENTIELLE\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG_LOST\", \"status\": \"WEAKENING\", \"since\": \"2026-04-03 22:42\", \"note\": \"Lost bull flag and significant NBP decrease\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important event across the watchlist is the phase change in WORK and VVV, along with new bull flag detections, indicating potential shifts in market trends."
 }

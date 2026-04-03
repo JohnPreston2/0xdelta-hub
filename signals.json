@@ -1,42 +1,28 @@
 {
-  "updated_at": "2026-04-03T18:42:47.202001+00:00",
-  "cycle": "20260403_1842",
+  "updated_at": "2026-04-03T20:42:52.880781+00:00",
+  "cycle": "20260403_2042",
   "signals": [
     {
-      "symbol": "MOLT",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous_cycle",
-      "note": "FHS increase, NBP slight decrease"
-    },
-    {
-      "symbol": "CLAWNCH",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous_cycle",
-      "note": "FHS and NBP slight decrease"
-    },
-    {
-      "symbol": "BNKRW",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous_cycle",
-      "note": "No changes in FHS, NBP, or BPI"
-    },
-    {
-      "symbol": "bio",
-      "type": "BULL_FLAG",
+      "symbol": "CLANKER",
+      "type": "ACCUMULATION",
       "status": "DETECTED",
       "since": "current_cycle",
-      "note": "New bull flag with significant NBP increase"
+      "note": "Significant NBP increase"
     },
     {
-      "symbol": "VVV",
-      "type": "PHASE_CHANGE",
-      "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "Phase change from distribution to consolidation"
+      "symbol": "WORK",
+      "type": "CONSOLIDATION",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "No significant changes"
+    },
+    {
+      "symbol": "DRB",
+      "type": "CONSOLIDATION",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Minor changes in metrics"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in the distribution phase, but some showing signs of accumulation or consolidation. Notable shifts include the phase change of VVV from distribution to consolidation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all price deltas and volume deltas being 0%. However, some tokens have shown changes in their metrics such as FHS, NBP, and BPI.\n\n### 3. SIGNAL TRACKING\n- MOLT: The bull flag detected remains confirmed, with an increase in FHS and a slight decrease in NBP.\n- CLAWNCH: The bull flag detected remains confirmed, with a slight decrease in FHS and NBP.\n- BNKRW: The bull flag detected remains confirmed, with no changes in FHS, NBP, or BPI.\n- bio: A new bull flag has been detected, with a significant decrease in FHS and an increase in NBP.\n- Other tokens with bull flags detected include BUNKER, FELIX, JUNO, CLAWD, Doppel, CLANKER, DRB, and Lumen, but their signals are either holding or weakening.\n\n### 4. NEW SIGNALS DETECTED\nA new bull flag has been detected for bio, with a significant increase in NBP. VVV has changed its phase from distribution to consolidation, which could be a sign of a new signal.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"FHS increase, NBP slight decrease\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"FHS and NBP slight decrease\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"No changes in FHS, NBP, or BPI\"},\n  {\"symbol\": \"bio\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag with significant NBP increase\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Phase change from distribution to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the detection of a new bull flag for bio, accompanied by significant changes in its metrics, and the phase change of VVV, which could indicate a shift in market dynamics."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a distribution phase, with most tokens experiencing negative price and volume movements. Notable exceptions include CLANKER, which is in accumulation, and WORK and DRB, which are in consolidation. There has been a significant shift in VVV, which has changed its phase from consolidation to distribution.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price movements (all 0%), several tokens have notable changes in their metrics:\n- MOLT's FHS increased by 0.7, and its NBP decreased by -14.5, resulting in the loss of its bull flag.\n- Doppel's FHS increased by 0.6, but it also lost its bull flag.\n- CLANKER's NBP increased by 26.4.\n- VVV's FHS increased by 0.9, and it transitioned from consolidation to distribution, losing its bull flag in the process.\n\n### 3. SIGNAL TRACKING\n- MOLT: WEAKENING ⚠️ — Lost bull flag due to decreased NBP.\n- CLAWNCH: HOLDING ⏳ — No significant changes.\n- BNKRW: HOLDING ⏳ — No significant changes.\n- bio: HOLDING ⏳ — No significant changes.\n- VVV: INVALIDATED ❌ — Lost bull flag and changed phase from consolidation to distribution.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include:\n- CLANKER's continued accumulation phase with a significant increase in NBP.\n- Potential interest in WORK and DRB as they remain in consolidation, but no new bull flags have appeared.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Significant NBP increase\"},\n  {\"symbol\": \"WORK\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"DRB\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minor changes in metrics\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important event across the watchlist is VVV's phase change from consolidation to distribution, accompanied by the loss of its bull flag, indicating a potential shift in market sentiment towards this token."
 }

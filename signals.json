@@ -1,49 +1,49 @@
 {
-  "updated_at": "2026-04-03T06:42:49.076684+00:00",
-  "cycle": "20260403_0642",
+  "updated_at": "2026-04-03T08:42:54.254401+00:00",
+  "cycle": "20260403_0842",
   "signals": [
     {
       "symbol": "CLAWNCH",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "New bull flag detected in distribution phase"
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Bull flag still detected but slight decrease in FHS"
     },
     {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "New bull flag detected in distribution phase"
+      "status": "CONFIRMED",
+      "since": "previous_cycle",
+      "note": "Increase in FHS and NBP"
     },
     {
       "symbol": "CLAWD",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "New bull flag detected in distribution phase"
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Slight increase in FHS and NBP"
     },
     {
       "symbol": "DRB",
-      "type": "PHASE_CHANGE",
-      "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "Phase changed from CONSOLIDATION to RUPTURE"
+      "type": "RUPTURE",
+      "status": "CONFIRMED",
+      "since": "previous_cycle",
+      "note": "Continued rupture phase with increased FHS and BPI"
     },
     {
       "symbol": "WORK",
-      "type": "PHASE_CHANGE",
+      "type": "BULL_FLAG",
       "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "Phase changed from RUPTURE to CONSOLIDATION"
+      "note": "Decrease in NBP indicates weakening"
     },
     {
       "symbol": "CLANKER",
       "type": "ACCUMULATION",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Remains in accumulation phase with bull flag"
+      "note": "Continued accumulation with bull flag detected"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mixed trend, with most tokens in distribution phase. Notable shifts include WORK changing from RUPTURE to CONSOLIDATION and Lumen changing from CONSOLIDATION to DISTRIBUTION. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements (greater than 2% or 20%) for any token in the provided data. All price and volume deltas are 0, indicating no change.\n\n### 3. SIGNAL TRACKING\n- **WORK**: The signal is WEAKENING ⚠️ as it changed phase from RUPTURE to CONSOLIDATION with a decrease in FHS and NBP.\n- **CLANKER**: The signal is HOLDING ⏳ as it remains in ACCUMULATION phase with a slight decrease in FHS and significant decrease in NBP, but still has a bull flag detected.\n- **Doppel**: The signal is HOLDING ⏳ as it remains in DISTRIBUTION phase with no significant changes.\n\n### 4. NEW SIGNALS DETECTED\nNew bull flags have been detected for **CLAWNCH**, **JUNO**, and **CLAWD**, indicating potential accumulation or upcoming price movements. **DRB** has changed phase from CONSOLIDATION to RUPTURE, which could indicate a significant price movement.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected in distribution phase\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected in distribution phase\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected in distribution phase\"},\n  {\"symbol\": \"DRB\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Phase changed from CONSOLIDATION to RUPTURE\"},\n  {\"symbol\": \"WORK\", \"type\": \"PHASE_CHANGE\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Phase changed from RUPTURE to CONSOLIDATION\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Remains in accumulation phase with bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the detection of new bull flags for **CLAWNCH**, **JUNO**, and **CLAWD**, and the phase change of **DRB** to RUPTURE, indicating potential for significant price movements in these tokens."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is primarily in a distribution phase, with most tokens experiencing negative price movements and low trading volumes. However, some tokens like CLANKER and DRB are showing signs of accumulation and rupture, respectively. Notable shifts include changes in the FHS (Fear, Greed, and Sentiment) scores and phase changes for a few tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\n- MOLT: No significant price or volume movement, but its FHS score increased by 1.7, and it has a bull flag detected.\n- AntiHunter: No price or volume change, but its NBP (Net Buying Pressure) decreased by 3.3, indicating increased selling pressure.\n- CLAWNCH: Experienced a slight decrease in FHS and an increase in NBP, with a bull flag still detected.\n- WORK: Saw a decrease in NBP by 14 and an increase in FHS by 0.4, with its phase remaining in consolidation.\n- BUNKER: Had a decrease in FHS by 0.7 and a decrease in NBP by 7.1, with a bull flag detected.\n- JUNO: Increased its FHS by 0.7 and NBP by 0.2, with a bull flag detected.\n- Lumen: Experienced a significant decrease in NBP by 31, with no change in price or volume.\n\n### 3. SIGNAL TRACKING\n- CLAWNCH: HOLDING ⏳ - The bull flag is still detected, but there's a slight decrease in FHS.\n- JUNO: CONFIRMED ✅ - The bull flag is still present, with an increase in FHS and NBP.\n- CLAWD: HOLDING ⏳ - The bull flag remains, with a slight increase in FHS and NBP.\n- DRB: CONFIRMED ✅ - The rupture phase continues, with an increase in FHS and BPI (Buying Pressure Index).\n- WORK: WEAKENING ⚠️ - Despite the bull flag, the decrease in NBP and no significant increase in FHS indicates weakening.\n- CLANKER: HOLDING ⏳ - The accumulation phase continues, with a bull flag detected, but a slight decrease in FHS and NBP.\n\n### 4. NEW SIGNALS DETECTED\n- No new significant bull flags or phase changes detected this cycle that were not already tracked.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag still detected but slight decrease in FHS\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Increase in FHS and NBP\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Slight increase in FHS and NBP\"},\n  {\"symbol\": \"DRB\", \"type\": \"RUPTURE\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Continued rupture phase with increased FHS and BPI\"},\n  {\"symbol\": \"WORK\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in NBP indicates weakening\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Continued accumulation with bull flag detected\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the continued distribution phase for most tokens, with a few exceptions like DRB in a rupture phase and CLANKER in an accumulation phase, indicating potential for future price movements based on their current market dynamics."
 }

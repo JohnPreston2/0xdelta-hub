@@ -1,63 +1,56 @@
 {
-  "updated_at": "2026-04-04T00:43:08.486203+00:00",
-  "cycle": "20260404_0043",
+  "updated_at": "2026-04-04T02:43:01.932447+00:00",
+  "cycle": "20260404_0243",
   "signals": [
     {
       "symbol": "BNKRW",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-04-04 00:42",
-      "note": "Bull flag detected"
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "bull flag still detected"
     },
     {
       "symbol": "BUNKER",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-04-04 00:42",
-      "note": "Bull flag detected"
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "bull flag still detected"
     },
     {
       "symbol": "FELIX",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-04-04 00:42",
-      "note": "Bull flag detected"
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "bull flag weakening due to -0.9 FHS delta"
     },
     {
       "symbol": "bio",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-04-04 00:42",
-      "note": "Bull flag detected"
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "bull flag weakening due to -16.7 NBP delta"
     },
     {
       "symbol": "JUNO",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-04-04 00:42",
-      "note": "Bull flag detected"
-    },
-    {
-      "symbol": "CLAWD",
-      "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-04-04 00:42",
-      "note": "Bull flag detected"
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "bull flag weakening due to -0.8 FHS delta"
     },
     {
       "symbol": "DRB",
       "type": "PHASE_CHANGE",
-      "status": "DETECTED",
-      "since": "2026-04-04 00:42",
-      "note": "Phase change from consolidation to rupture"
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "phase change from RUPTURE to CONSOLIDATION confirmed"
     },
     {
       "symbol": "Lumen",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-04-04 00:42",
-      "note": "Bull flag detected"
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "bull flag weakening due to -1.7 FHS delta"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens experiencing a decrease in price and volume. Notable shifts include CLAWNCH's FHS increase of 1.2 and BUNKER's FHS increase of 0.7, while FELIX's FHS decreased by 0.6. Additionally, DRB's phase changed from consolidation to rupture, and VVV's phase changed from distribution potentielle to consolidation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed in the current cycle, with all tokens experiencing a 0% change in price and volume.\n\n### 3. SIGNAL TRACKING\n- **WORK**: HOLDING ⏳ — No change in signal status.\n- **VVV**: HOLDING ⏳ — Bull flag detected in the previous cycle, but no change in the current cycle.\n- **CLANKER**: HOLDING ⏳ — No change in signal status.\n\n### 4. NEW SIGNALS DETECTED\n- **BNKRW**: A bull flag was detected, indicating potential accumulation.\n- **BUNKER**: A bull flag was detected, indicating potential accumulation.\n- **FELIX**: A bull flag was detected, indicating potential accumulation.\n- **bio**: A bull flag was detected, indicating potential accumulation.\n- **JUNO**: A bull flag was detected, indicating potential accumulation.\n- **CLAWD**: A bull flag was detected, indicating potential accumulation.\n- **DRB**: A phase change from consolidation to rupture was detected, indicating potential volatility.\n- **Lumen**: A bull flag was detected, indicating potential accumulation.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-04 00:42\", \"note\": \"Bull flag detected\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-04 00:42\", \"note\": \"Bull flag detected\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-04 00:42\", \"note\": \"Bull flag detected\"},\n  {\"symbol\": \"bio\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-04 00:42\", \"note\": \"Bull flag detected\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-04 00:42\", \"note\": \"Bull flag detected\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-04 00:42\", \"note\": \"Bull flag detected\"},\n  {\"symbol\": \"DRB\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"2026-04-04 00:42\", \"note\": \"Phase change from consolidation to rupture\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-04 00:42\", \"note\": \"Bull flag detected\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the detection of multiple bull flags and a phase change in DRB, indicating potential accumulation and volatility in the market."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution, with most tokens experiencing negative price movements and low trading volumes. Notable shifts include the phase change of DRB from RUPTURE to CONSOLIDATION and VVV from CONSOLIDATION to DISTRIBUTION_POTENTIELLE.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements in the current cycle, with all tokens experiencing 0% price changes and 0% volume changes. However, some tokens have notable changes in their metrics, such as FELIX with a -0.9 FHS delta and -1.7 NBP delta, and JUNO with a -0.8 FHS delta and -0.7 NBP delta.\n\n### 3. SIGNAL TRACKING\nThe previous cycle's signals are still active, but with some changes:\n- BNKRW: BULL_FLAG (status: HOLDING) — bull flag still detected\n- BUNKER: BULL_FLAG (status: HOLDING) — bull flag still detected\n- FELIX: BULL_FLAG (status: WEAKENING) — bull flag weakening due to -0.9 FHS delta\n- bio: BULL_FLAG (status: WEAKENING) — bull flag weakening due to -16.7 NBP delta\n- JUNO: BULL_FLAG (status: WEAKENING) — bull flag weakening due to -0.8 FHS delta\n- CLAWD: BULL_FLAG (status: INVALIDATED) — bull flag lost due to -4.7 NBP delta and 0.6 FHS delta\n- DRB: PHASE_CHANGE (status: CONFIRMED) — phase change from RUPTURE to CONSOLIDATION confirmed\n- Lumen: BULL_FLAG (status: WEAKENING) — bull flag weakening due to -1.7 FHS delta\n\n### 4. NEW SIGNALS DETECTED\nNo new signals are detected in the current cycle.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still detected\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still detected\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"bull flag weakening due to -0.9 FHS delta\"},\n  {\"symbol\": \"bio\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"bull flag weakening due to -16.7 NBP delta\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"bull flag weakening due to -0.8 FHS delta\"},\n  {\"symbol\": \"DRB\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"phase change from RUPTURE to CONSOLIDATION confirmed\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"bull flag weakening due to -1.7 FHS delta\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the weakening of bull flags in several tokens, including FELIX, bio, and JUNO, which may indicate a potential reversal in their price movements."
 }

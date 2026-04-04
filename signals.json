@@ -1,63 +1,42 @@
 {
-  "updated_at": "2026-04-04T18:43:07.069898+00:00",
-  "cycle": "20260404_1843",
+  "updated_at": "2026-04-04T20:42:42.167299+00:00",
+  "cycle": "20260404_2042",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "FHS score decreased, NBP increased"
+      "note": "FHS score decreased"
     },
     {
       "symbol": "CLAWNCH",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "FHS score decreased, NBP decreased"
+      "note": "FHS score decreased"
     },
     {
-      "symbol": "BNKRW",
+      "symbol": "JUNO",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "No significant changes"
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected"
     },
     {
-      "symbol": "CLAWD",
+      "symbol": "DRB",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "No significant changes"
-    },
-    {
-      "symbol": "bio",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "NBP decreased"
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected"
     },
     {
       "symbol": "CLANKER",
-      "type": "BULL_FLAG",
+      "type": "PHASE_CHANGE",
       "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "FHS score decreased, NBP decreased"
-    },
-    {
-      "symbol": "Lumen",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
       "since": "current_cycle",
-      "note": "New bull flag detected, FHS score increased, NBP increased"
-    },
-    {
-      "symbol": "VVV",
-      "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "FHS score decreased, NBP decreased"
+      "note": "Phase changed from DISTRIBUTION_POTENTIELLE to DISTRIBUTION"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mixed trend, with most tokens in the distribution phase. Notable shifts include changes in the Fear, Greed, and Hope (FHS) scores and Net Buying Pressure (NBP) for several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all price deltas and volume deltas being 0%. However, some tokens have notable changes in their metrics:\n- MOLT's FHS score decreased by 1.1, and its NBP increased by 1.0.\n- BUNKER lost its bull flag.\n- Lumen's FHS score increased by 0.6, and it has a new bull flag.\n- bio's NBP decreased by 50.0.\n- CLANKER's FHS score decreased by 0.5, and its NBP decreased by 3.6.\n- VVV's FHS score decreased by 0.5, and its NBP decreased by 1.8.\n\n### 3. SIGNAL TRACKING\nBased on the provided data, the following signals are being tracked:\n- MOLT: Bull flag detected, FHS score decreased, and NBP increased. Status: HOLDING \n- CLAWNCH: Bull flag detected, FHS score decreased, and NBP decreased. Status: HOLDING \n- BNKRW: Bull flag detected, no significant changes. Status: HOLDING \n- CLAWD: Bull flag detected, no significant changes. Status: HOLDING \n- bio: Bull flag detected, NBP decreased. Status: HOLDING \n- CLANKER: Bull flag detected, FHS score decreased, and NBP decreased. Status: WEAKENING \n- Lumen: New bull flag detected, FHS score increased, and NBP increased. Status: CONFIRMED \n- VVV: Bull flag detected, FHS score decreased, and NBP decreased. Status: WEAKENING \n\n### 4. NEW SIGNALS DETECTED\nOne new signal is detected:\n- Lumen: New bull flag detected.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"FHS score decreased, NBP increased\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"FHS score decreased, NBP decreased\"},\n  {\"symbol\": \"BNKRW\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"CLAWD\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"bio\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"NBP decreased\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"FHS score decreased, NBP decreased\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected, FHS score increased, NBP increased\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"FHS score decreased, NBP decreased\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the new bull flag detected for Lumen, with an increase in its FHS score and NBP, indicating a potential strengthening of the signal."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing no significant price or volume movements. Notable shifts include changes in the FHS scores and NBP values for several tokens, indicating potential changes in market sentiment.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) were observed for any token. However, notable changes in FHS scores and NBP values were detected for several tokens, including MOLT, JUNO, CLANKER, and DRB.\n\n### 3. SIGNAL TRACKING\n- MOLT: HOLDING ⏳ (bull flag detected, FHS score decreased)\n- CLAWNCH: HOLDING ⏳ (bull flag detected, FHS score decreased)\n- BNKRW: HOLDING ⏳ (bull flag detected, no significant changes)\n- CLAWD: HOLDING ⏳ (bull flag detected, FHS score decreased)\n- bio: HOLDING ⏳ (bull flag detected, no significant changes)\n- CLANKER: WEAKENING ⚠️ (FHS score decreased, phase changed)\n- Lumen: CONFIRMED ✅ (bull flag detected, FHS score unchanged)\n- VVV: WEAKENING ⚠️ (FHS score unchanged, NBP increased)\n\n### 4. NEW SIGNALS DETECTED\nNew bull flags were detected for JUNO and DRB, indicating potential accumulation or buying interest. Additionally, CLANKER's phase changed from DISTRIBUTION_POTENTIELLE to DISTRIBUTION.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"FHS score decreased\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"FHS score decreased\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"DRB\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"WEAKENING\", \"since\": \"current_cycle\", \"note\": \"Phase changed from DISTRIBUTION_POTENTIELLE to DISTRIBUTION\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe detection of new bull flags for JUNO and DRB, along with the phase change for CLANKER, suggests potential shifts in market sentiment and accumulation patterns, warranting closer monitoring of these tokens."
 }

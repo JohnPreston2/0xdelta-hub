@@ -1,42 +1,49 @@
 {
-  "updated_at": "2026-04-05T04:42:46.422340+00:00",
-  "cycle": "20260405_0442",
+  "updated_at": "2026-04-05T06:42:48.874294+00:00",
+  "cycle": "20260405_0642",
   "signals": [
     {
       "symbol": "MOLT",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
       "since": "previous_cycle",
-      "note": "Continued interest"
+      "note": "Weakening slightly"
     },
     {
       "symbol": "FELIX",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
       "since": "previous_cycle",
-      "note": "Strengthening sentiment"
+      "note": "Holding pattern"
     },
     {
       "symbol": "Doppel",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
+      "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "Strong positive sentiment"
+      "note": "Loss of upward momentum"
     },
     {
       "symbol": "BUNKER",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "New bull flag with strong buying interest"
+      "status": "CONFIRMED",
+      "since": "previous_cycle",
+      "note": "Stable"
     },
     {
-      "symbol": "CLANKER",
+      "symbol": "VVV",
       "type": "BULL_FLAG",
-      "status": "INVALIDATED",
+      "status": "NEW",
       "since": "current_cycle",
-      "note": "Lost bull flag, shift in sentiment"
+      "note": "Transitioned into accumulation"
+    },
+    {
+      "symbol": "Lumen",
+      "type": "BULL_FLAG",
+      "status": "CONFIRMED",
+      "since": "previous_cycle",
+      "note": "Minimal changes"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing no significant price or volume changes. Notable shifts include changes in FHS (Fear, Greed, and Sentiment) values and NBP (Net Buying Pressure) for several tokens, indicating potential shifts in market sentiment.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo tokens have shown significant price movements greater than 2% or volume changes greater than 20%. However, several tokens have experienced changes in their FHS and NBP values, which could indicate underlying shifts in market dynamics.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag detected previously is still active, with a slight increase in NBP, indicating continued interest.\n- **FELIX**: The bull flag remains confirmed, with a small increase in FHS and NBP, suggesting strengthening sentiment.\n- **Doppel**: The bull flag is confirmed, with significant increases in FHS and NBP, indicating strong positive sentiment.\n- **CLANKER**: The bull flag has been lost, with a decrease in FHS and an increase in NBP, suggesting a shift in market sentiment.\n- **BUNKER**: A new bull flag has been detected, with an increase in FHS and a significant increase in NBP, indicating strong buying interest.\n\n### 4. NEW SIGNALS DETECTED\n- **BUNKER**: A new bull flag has appeared, indicating potential for upward movement.\n- **Doppel**: Continued strengthening of the bull flag, suggesting increased confidence in upward movement.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Continued interest\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Strengthening sentiment\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Strong positive sentiment\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag with strong buying interest\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"BULL_FLAG\", \"status\": \"INVALIDATED\", \"since\": \"current_cycle\", \"note\": \"Lost bull flag, shift in sentiment\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant development across the watchlist is the detection of a new bull flag in **BUNKER**, coupled with the strengthening of the bull flag in **Doppel**, indicating potential upward movements in these tokens."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a state of distribution for most tokens, with some notable exceptions such as VVV, which has shifted into accumulation. The majority of tokens are experiencing minimal price and volume changes, indicating a relatively stable but cautious market environment.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nDespite the overall stability, there are a few tokens with significant changes. BNKRW lost its bull flag, indicating a potential weakening in its upward trend. JUNO also lost its bull flag, suggesting a shift in sentiment. On the other hand, VVV has entered into accumulation with a new bull flag detected, indicating potential for future growth. However, specific price and volume percentages are not provided for these movements, making it difficult to quantify the exact changes.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: The bull flag detected for MOLT remains active, with a slight decrease in FHS and NBP, indicating a potential weakening but still confirmed.\n- **FELIX**: The bull flag for FELIX is still confirmed, with a slight decrease in FHS but an increase in NBP, suggesting a holding pattern.\n- **Doppel**: The signal for Doppel is weakening, with a significant decrease in FHS and NBP, indicating a loss of upward momentum.\n- **BUNKER**: The bull flag detected for BUNKER remains active, with no significant changes in its metrics, indicating a holding pattern.\n- **CLANKER**: The signal for CLANKER is invalid, as it lost its bull flag previously and has not regained it, with minimal changes in its current metrics.\n\n### 4. NEW SIGNALS DETECTED\n- **VVV**: A new bull flag has been detected for VVV, and it has transitioned into accumulation, indicating a potential for upward movement.\n- **Lumen**: While Lumen's bull flag was previously detected, its current status shows minimal changes, but it remains a token to watch due to its previous accumulation phase.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Weakening slightly\"},\n  {\"symbol\": \"FELIX\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Holding pattern\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Loss of upward momentum\"},\n  {\"symbol\": \"BUNKER\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Stable\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"Transitioned into accumulation\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Minimal changes\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the transition of VVV into accumulation with a new bull flag detected, indicating a potential for significant upward movement in the near future."
 }

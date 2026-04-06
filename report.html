@@ -722,7 +722,6 @@ async function triggerPayment() {
   if (!walletAddress) { await connectWallet(); return; }
   setStatus('Switching to Base network...', 'pending');
   try {
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
     try {
       await window.ethereum.request({ method: 'wallet_switchEthereumChain', params: [{ chainId: '0x' + BASE_CHAIN_ID.toString(16) }] });
     } catch(e) {
@@ -737,6 +736,8 @@ async function triggerPayment() {
       } else throw e;
     }
     setStatus('Confirm in wallet...', 'pending');
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const fallbackProvider = new ethers.providers.JsonRpcProvider('https://mainnet.base.org');
     const signer = provider.getSigner();
     const usdc = new ethers.Contract(USDC_BASE, ['function transfer(address to, uint256 amount) returns (bool)'], signer);
     const unlockBtn = document.getElementById('btn-unlock');
@@ -744,7 +745,8 @@ async function triggerPayment() {
     unlockBtn.textContent = 'Pending...';
     const tx = await usdc.transfer(RECEIVER_ADDRESS, USDC_AMOUNT);
     setStatus('Transaction sent · confirming...', 'pending');
-    await tx.wait();
+    const receipt = await fallbackProvider.waitForTransaction(tx.hash, 1, 60000);
+    if (!receipt) throw new Error('Transaction timeout');
     setStatus('✓ Payment confirmed', 'ok');
     setTimeout(unlockReport, 600);
   } catch(e) {

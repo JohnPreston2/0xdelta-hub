@@ -1,42 +1,28 @@
 {
-  "updated_at": "2026-04-07T10:00:20.810455+00:00",
-  "cycle": "20260407_1000",
+  "updated_at": "2026-04-07T12:16:31.115772+00:00",
+  "cycle": "20260407_1216",
   "signals": [
     {
-      "symbol": "Lumen",
+      "symbol": "MORPHO",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "2026-04-07 10:00",
-      "note": "New bull flag detected"
-    },
-    {
-      "symbol": "JUNO",
-      "type": "SAC",
       "status": "CONFIRMED",
-      "since": "2026-04-07 10:00",
-      "note": "Increase in FHS and BPI"
+      "since": "2026-04-07",
+      "note": "Accumulation phase with positive NBP"
     },
     {
-      "symbol": "CLAWNCH",
-      "type": "DISTRIBUTION",
+      "symbol": "fomolt",
+      "type": "BULL_FLAG",
       "status": "WEAKENING",
-      "since": "2026-04-07 10:00",
-      "note": "Decrease in FHS"
+      "since": "2026-04-07",
+      "note": "Significant negative NBP delta despite bull flag detection"
     },
     {
       "symbol": "VVV",
-      "type": "BULL_FLAG",
-      "status": "INVALIDATED",
-      "since": "2026-04-07 10:00",
-      "note": "Bull flag lost"
-    },
-    {
-      "symbol": "CLANKER",
       "type": "PHASE_CHANGE",
-      "status": "DETECTED",
-      "since": "2026-04-07 10:00",
-      "note": "Phase change from distribution to consolidation"
+      "status": "HOLDING",
+      "since": "2026-04-07",
+      "note": "Phase change to consolidation with slight FHS increase"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with most tokens in the distribution phase. Notable shifts include CLANKER's phase change from distribution to consolidation and VVV's phase change from distribution potentielle to distribution. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed for any token, with all price and volume deltas being 0%.\n\n### 3. SIGNAL TRACKING\n- **Lumen**: A new bull flag was detected, indicating a potential strengthening of the signal.\n- **JUNO**: The signal is confirmed with an increase in FHS and BPI, indicating a strengthening of the signal.\n- **CLAWNCH**: The signal is weakening with a decrease in FHS, indicating a fading of the signal.\n- **VVV**: The bull flag was lost, indicating a weakening of the signal.\n\n### 4. NEW SIGNALS DETECTED\nNew signals detected include:\n- **Lumen**: A new bull flag was detected.\n- **JUNO**: An increase in FHS and BPI indicates a potential strengthening of the signal.\n- **CLANKER**: A phase change from distribution to consolidation was observed.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"2026-04-07 10:00\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"JUNO\", \"type\": \"SAC\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-07 10:00\", \"note\": \"Increase in FHS and BPI\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-07 10:00\", \"note\": \"Decrease in FHS\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"INVALIDATED\", \"since\": \"2026-04-07 10:00\", \"note\": \"Bull flag lost\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"2026-04-07 10:00\", \"note\": \"Phase change from distribution to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the detection of a new bull flag for Lumen, indicating a potential strengthening of the signal."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a mixed state, with some tokens in accumulation (AIXBT, MORPHO) and others in distribution (VIRTUAL, AERO, BRETT, fomolt) or consolidation (VVV). Notable shifts include VVV's phase change from distribution to consolidation and fomolt's significant negative NBP delta.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) were observed for any token. However, fomolt experienced a substantial change in its NBP, decreasing by 33.3%, indicating a potential increase in selling pressure.\n\n### 3. SIGNAL TRACKING\n- **MORPHO**: CONFIRMED - The bull flag detected previously is still active, with a positive NBP and accumulation phase.\n- **fomolt**: WEAKENING - Although a bull flag was detected, the significant decrease in NBP (-100%) and lack of change in other metrics suggest a weakening signal.\n- **VVV**: HOLDING - The phase change to consolidation and slight increase in FHS (1.1) do not significantly impact the signal status, keeping it as holding.\n\n### 4. NEW SIGNALS DETECTED\n- **MORPHO**: A new bull flag has been detected, indicating potential accumulation and a future price increase.\n- **fomolt**: Despite the weakening signal, the bull flag detected in the previous cycle is still present, though its strength is questionable due to the negative NBP delta.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"MORPHO\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-07\", \"note\": \"Accumulation phase with positive NBP\"},\n  {\"symbol\": \"fomolt\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-04-07\", \"note\": \"Significant negative NBP delta despite bull flag detection\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"HOLDING\", \"since\": \"2026-04-07\", \"note\": \"Phase change to consolidation with slight FHS increase\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important event across the watchlist is the phase change of VVV from distribution to consolidation, coupled with the detection of a bull flag in MORPHO, indicating potential future price movements in these tokens."
 }

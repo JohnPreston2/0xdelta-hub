@@ -1,28 +1,35 @@
 {
-  "updated_at": "2026-04-07T14:16:55.314183+00:00",
-  "cycle": "20260407_1416",
+  "updated_at": "2026-04-07T16:16:22.703432+00:00",
+  "cycle": "20260407_1616",
   "signals": [
     {
       "symbol": "MORPHO",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Phase change to consolidation"
+      "status": "CONFIRMED",
+      "since": "2026-04-07 16:16",
+      "note": "bull flag detected"
     },
     {
-      "symbol": "fomolt",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "No significant changes"
+      "symbol": "VIRTUAL",
+      "type": "PHASE_CHANGE",
+      "status": "CONFIRMED",
+      "since": "2026-04-07 16:16",
+      "note": "phase change to consolidation"
     },
     {
       "symbol": "VVV",
       "type": "PHASE_CHANGE",
+      "status": "CONFIRMED",
+      "since": "2026-04-07 16:16",
+      "note": "phase change to consolidation"
+    },
+    {
+      "symbol": "fomolt",
+      "type": "BULL_FLAG",
       "status": "WEAKENING",
-      "since": "this_cycle",
-      "note": "Phase change to distribution"
+      "since": "2026-04-07 16:16",
+      "note": "weak signal due to low nbp"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is mixed, with some tokens in accumulation, others in distribution, and a few in consolidation. Notable shifts include MORPHO's phase change from accumulation to consolidation and VVV's phase change from consolidation to distribution.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) were observed for any token. However, notable changes in other metrics include MORPHO's FHS increase by 0.6 and VVV's FHS increase by 0.6, indicating potential changes in market sentiment.\n\n### 3. SIGNAL TRACKING\n- **MORPHO**: The bull flag detected previously is still active, but the phase change to consolidation might affect its strength. Status: HOLDING ⏳\n- **fomolt**: The bull flag detected previously is still active, but no significant changes in metrics were observed. Status: HOLDING ⏳\n- **VVV**: The phase change to distribution might indicate a weakening of the previous signal. Status: WEAKENING ⚠️\n\n### 4. NEW SIGNALS DETECTED\nNo new significant signals were detected this cycle. However, the phase changes in MORPHO and VVV could be indicative of new trends forming.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MORPHO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Phase change to consolidation\"},\n  {\"symbol\": \"fomolt\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"WEAKENING\", \"since\": \"this_cycle\", \"note\": \"Phase change to distribution\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe single most important thing happening across the watchlist right now is the phase change in MORPHO from accumulation to consolidation, which could indicate a shift in market sentiment and potentially impact the strength of its bull flag signal."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is mixed, with some tokens in accumulation, distribution, or consolidation phases. Notable shifts include VIRTUAL and VVV changing from distribution to consolidation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were detected, with all tokens showing 0% changes in price and volume. However, several tokens experienced changes in their market phases and metrics.\n\n### 3. SIGNAL TRACKING\n- **MORPHO**: CONFIRMED ✅ — bull flag detected, with an increase in fhs and a positive nbp.\n- **fomolt**: WEAKENING ⚠️ — despite a bull flag detection, the token's nbp remains at -100%, indicating a weak signal.\n- **VIRTUAL**: CONFIRMED ✅ — phase change to consolidation, with an increase in nbp.\n- **VVV**: CONFIRMED ✅ — phase change to consolidation, with a slight increase in nbp.\n- **BRETT**: HOLDING ⏳ — no significant changes, with a slight increase in nbp.\n- **AIXBT**: HOLDING ⏳ — no significant changes, with a slight increase in nbp.\n- **AERO**: HOLDING ⏳ — no significant changes, with a slight decrease in fhs.\n\n### 4. NEW SIGNALS DETECTED\nNew signals detected include:\n- **MORPHO**: BULL_FLAG — a bull flag was detected, indicating potential accumulation.\n- **VIRTUAL**: PHASE_CHANGE — a phase change to consolidation was detected, indicating potential stabilization.\n- **VVV**: PHASE_CHANGE — a phase change to consolidation was detected, indicating potential stabilization.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MORPHO\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-07 16:16\", \"note\": \"bull flag detected\"},\n  {\"symbol\": \"VIRTUAL\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-07 16:16\", \"note\": \"phase change to consolidation\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-07 16:16\", \"note\": \"phase change to consolidation\"},\n  {\"symbol\": \"fomolt\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-04-07 16:16\", \"note\": \"weak signal due to low nbp\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the phase change of VIRTUAL and VVV to consolidation, indicating potential stabilization and accumulation in these tokens."
 }

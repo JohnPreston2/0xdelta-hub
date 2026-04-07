@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-04-07T02:42:53.932141+00:00",
-  "cycle": "20260407_0242",
+  "updated_at": "2026-04-07T04:42:40.189738+00:00",
+  "cycle": "20260407_0442",
   "signals": [
     {
       "symbol": "MOLT",
@@ -35,22 +35,29 @@
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
       "since": "previous_cycle",
-      "note": "Increase in FHS and NBP"
+      "note": "Increases in FHS and NBP"
     },
     {
       "symbol": "Lumen",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
       "since": "current_cycle",
-      "note": "New bull flag detection"
+      "note": "New bull flag detected"
     },
     {
       "symbol": "VVV",
       "type": "BULL_FLAG",
       "status": "INVALIDATED",
       "since": "current_cycle",
-      "note": "Loss of bull flag"
+      "note": "Loss of bull flag and phase change"
+    },
+    {
+      "symbol": "CLANKER",
+      "type": "PHASE_CHANGE",
+      "status": "NEW",
+      "since": "current_cycle",
+      "note": "Phase change to consolidation"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is predominantly in a distribution phase, with most tokens showing no significant price or volume movements. Notable shifts include changes in FHS (Fear, Greed, and Sentiment) values and NBP (Net Buying Pressure) for several tokens, indicating potential changes in market sentiment.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo token experienced a price movement greater than 2% or a volume change of more than 20%. However, several tokens had notable changes in their metrics:\n- **CLAWNCH** saw a decrease in FHS by 1.2 and a slight decrease in NBP.\n- **JUNO** experienced an increase in FHS by 1.5.\n- **Lumen** had an increase in FHS by 0.6 and a new bull flag detection.\n- **VVV** saw an increase in FHS by 1.0 but lost its bull flag.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: HOLDING ⏳ - The signal is still active with a slight decrease in FHS and NBP.\n- **AntiHunter**: HOLDING ⏳ - The signal remains active with a slight increase in FHS and decrease in NBP.\n- **CLAWNCH**: WEAKENING ⚠️ - The signal is weakening due to a decrease in FHS.\n- **JUNO**: CONFIRMED ✅ - The signal is strengthening with an increase in FHS.\n- **Doppel**: CONFIRMED ✅ - The signal remains confirmed with an increase in FHS and NBP.\n- **Lumen**: CONFIRMED ✅ - The new bull flag detection confirms the signal.\n- **VVV**: INVALIDATED ❌ - The loss of the bull flag invalidates the previous signal.\n\n### 4. NEW SIGNALS DETECTED\n- **Lumen** has a new bull flag detection, indicating a potential buying opportunity.\n- **VVV** lost its bull flag, which might indicate a weakening signal.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Slight decrease in FHS and NBP\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Slight increase in FHS and decrease in NBP\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Increase in FHS\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Increase in FHS and NBP\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detection\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"INVALIDATED\", \"since\": \"current_cycle\", \"note\": \"Loss of bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the detection of new bull flags and the loss of previous ones, indicating shifts in market sentiment and potential buying or selling opportunities."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a distribution phase, with most tokens showing no significant price or volume changes. Notable shifts include CLANKER's phase change from distribution to consolidation and VVV's phase change from distribution potentiel to distribution, along with a loss of its bull flag.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo tokens have shown significant price movements greater than 2% or volume changes greater than 20%. However, several tokens have experienced changes in their metrics, such as FHS, NBP, and BPI, indicating shifts in their market dynamics.\n\n### 3. SIGNAL TRACKING\n- **MOLT**: HOLDING ⏳ - The bull flag remains detected, but with a slight decrease in FHS and NBP.\n- **AntiHunter**: HOLDING ⏳ - The bull flag is still active, with a slight increase in FHS and decrease in NBP.\n- **CLAWNCH**: WEAKENING ⚠️ - The bull flag's strength is decreasing, indicated by a drop in FHS.\n- **JUNO**: CONFIRMED ✅ - The bull flag is confirmed, with an increase in FHS.\n- **Doppel**: CONFIRMED ✅ - The bull flag is confirmed, with increases in FHS and NBP.\n- **Lumen**: CONFIRMED ✅ - A new bull flag has been detected, indicating a potential upward trend.\n- **VVV**: INVALIDATED ❌ - The bull flag has been lost, indicating a potential downward trend.\n\n### 4. NEW SIGNALS DETECTED\n- **Lumen**: A new bull flag has been detected, suggesting a potential for upward movement.\n- **CLANKER**: The phase change to consolidation could indicate a period of stability or preparation for a future move.\n- **VVV**: The loss of the bull flag and phase change may indicate a downward trend.\n\n### 5. SIGNAL WATCHLIST (JSON)\n```json\n[\n  {\"symbol\": \"MOLT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Slight decrease in FHS and NBP\"},\n  {\"symbol\": \"AntiHunter\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Slight increase in FHS and decrease in NBP\"},\n  {\"symbol\": \"CLAWNCH\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS\"},\n  {\"symbol\": \"JUNO\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Increase in FHS\"},\n  {\"symbol\": \"Doppel\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Increases in FHS and NBP\"},\n  {\"symbol\": \"Lumen\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"INVALIDATED\", \"since\": \"current_cycle\", \"note\": \"Loss of bull flag and phase change\"},\n  {\"symbol\": \"CLANKER\", \"type\": \"PHASE_CHANGE\", \"status\": \"NEW\", \"since\": \"current_cycle\", \"note\": \"Phase change to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe detection of a new bull flag in Lumen and the confirmation of bull flags in JUNO and Doppel are the most significant events, indicating potential upward trends in these tokens."
 }

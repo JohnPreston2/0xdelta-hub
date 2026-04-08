@@ -1,28 +1,56 @@
 {
-  "updated_at": "2026-04-08T00:17:06.390364+00:00",
-  "cycle": "20260408_0017",
+  "updated_at": "2026-04-08T04:16:28.642282+00:00",
+  "cycle": "20260408_0416",
   "signals": [
     {
+      "symbol": "AIXBT",
+      "type": "BULL_FLAG",
+      "status": "CONFIRMED",
+      "since": "2026-04-08",
+      "note": "New bull flag detected with significant NBP increase"
+    },
+    {
+      "symbol": "VIRTUAL",
+      "type": "CONSOLIDATION",
+      "status": "HOLDING",
+      "since": "2026-04-08",
+      "note": "FHS decrease but NBP increase"
+    },
+    {
       "symbol": "AERO",
-      "type": "STRENGTHENING_SIGNAL",
-      "status": "DETECTED",
-      "since": "2026-04-08 00:15",
-      "note": "Increased FHS and improved NBP"
+      "type": "DISTRIBUTION",
+      "status": "WEAKENING",
+      "since": "2026-04-08",
+      "note": "Decrease in FHS and NBP"
     },
     {
       "symbol": "MORPHO",
       "type": "CONSOLIDATION",
-      "status": "CONFIRMED",
-      "since": "2026-04-08 00:15",
-      "note": "Transitioned to consolidation with increased FHS"
+      "status": "WEAKENING",
+      "since": "2026-04-08",
+      "note": "Decrease in both FHS and NBP"
+    },
+    {
+      "symbol": "BRETT",
+      "type": "CONSOLIDATION",
+      "status": "HOLDING",
+      "since": "2026-04-08",
+      "note": "Slight FHS decrease but significant NBP increase"
     },
     {
       "symbol": "VVV",
       "type": "DISTRIBUTION",
-      "status": "CONFIRMED",
-      "since": "2026-04-08 00:15",
-      "note": "Phase change to distribution with increased FHS"
+      "status": "WEAKENING",
+      "since": "2026-04-08",
+      "note": "Minimal FHS increase and NBP decrease"
+    },
+    {
+      "symbol": "fomolt",
+      "type": "NEW_TOKEN",
+      "status": "UNDETERMINED",
+      "since": "2026-04-08",
+      "note": "New token, signal undetermined"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is mixed, with some tokens in distribution and others in consolidation or accumulation phases. Notable shifts include VIRTUAL and MORPHO changing from potential distribution and accumulation to consolidation, respectively. AERO and VVV have seen significant changes in their metrics, with AERO's FHS increasing by 2.0 and VVV's phase changing to distribution.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price movements (all tokens have a 0% price change), volume and liquidity remain unchanged for all tokens. However, there are notable changes in other metrics:\n- AIXBT lost its bull flag and saw a decrease in NBP by 5.0.\n- AERO's FHS increased by 2.0, and its NBP improved by 18.2.\n- MORPHO's FHS increased by 0.7, and it transitioned from accumulation to consolidation.\n- VVV's FHS increased by 1.6, and its phase changed from potential distribution to distribution.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: The signal has changed from potential distribution to consolidation, which could indicate a weakening of the previous distribution signal.\n- AIXBT: The loss of the bull flag and decrease in NBP suggest a weakening signal.\n- AERO: The increase in FHS and improvement in NBP could indicate a strengthening signal.\n- MORPHO: The transition to consolidation with an increase in FHS might suggest a confirmed signal.\n- VVV: The phase change to distribution with an increase in FHS could indicate a confirmed distribution signal.\n\n### 4. NEW SIGNALS DETECTED\nNew signals this cycle include:\n- AERO's potential strengthening due to increased FHS and improved NBP.\n- MORPHO's confirmed consolidation signal with increased FHS.\n- VVV's confirmed distribution signal with increased FHS.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AERO\", \"type\": \"STRENGTHENING_SIGNAL\", \"status\": \"DETECTED\", \"since\": \"2026-04-08 00:15\", \"note\": \"Increased FHS and improved NBP\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"CONSOLIDATION\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-08 00:15\", \"note\": \"Transitioned to consolidation with increased FHS\"},\n  {\"symbol\": \"VVV\", \"type\": \"DISTRIBUTION\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-08 00:15\", \"note\": \"Phase change to distribution with increased FHS\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the transition of several tokens into new phases, such as VIRTUAL and MORPHO moving into consolidation, and VVV entering a distribution phase, indicating potential shifts in market dynamics."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing mixed phases, with some tokens in distribution (AIXBT, AERO, VVV) and others in consolidation (VIRTUAL, MORPHO, BRETT). Notable shifts include changes in FHS (Fear, Greed, and Hype Score) and NBP (Net Buying Pressure) across several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nDespite no significant price movements (>2%) or volume changes (>20%) in any of the tokens, there are notable changes in their metrics:\n- VIRTUAL's FHS decreased by 1.4, and its NBP increased by 6.4.\n- AIXBT's FHS decreased by 0.5, with a significant increase in NBP by 27.2 and a new bull flag detected.\n- AERO's FHS decreased by 1.0, with a decrease in NBP by 2.6.\n- MORPHO's FHS decreased by 0.6, with a decrease in NBP by 6.1.\n- BRETT's FHS slightly decreased by 0.1, with an increase in NBP by 19.6.\n\n### 3. SIGNAL TRACKING\n- **VIRTUAL**: HOLDING ⏳ — The signal is still active, with a decrease in FHS but an increase in NBP.\n- **AIXBT**: CONFIRMED ✅ — The new bull flag detection and significant increase in NBP strengthen the signal.\n- **AERO**: WEAKENING ⚠️ — The decrease in FHS and NBP suggests the signal is fading.\n- **MORPHO**: WEAKENING ⚠️ — The decrease in both FHS and NBP indicates a weakening signal.\n- **BRETT**: HOLDING ⏳ — The slight decrease in FHS but significant increase in NBP keeps the signal active.\n- **VVV**: WEAKENING ⚠️ — The increase in FHS is minimal, and the decrease in NBP suggests a weakening signal.\n- **fomolt**: As it's a new token, its signal status is undetermined.\n\n### 4. NEW SIGNALS DETECTED\n- **AIXBT**: A new bull flag has been detected, which is a significant development.\n- **fomolt**: Being a new token, it presents an opportunity for new signal detection, but current data does not confirm any specific signal type.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-08\", \"note\": \"New bull flag detected with significant NBP increase\"},\n  {\"symbol\": \"VIRTUAL\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"2026-04-08\", \"note\": \"FHS decrease but NBP increase\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-08\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"CONSOLIDATION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-08\", \"note\": \"Decrease in both FHS and NBP\"},\n  {\"symbol\": \"BRETT\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"2026-04-08\", \"note\": \"Slight FHS decrease but significant NBP increase\"},\n  {\"symbol\": \"VVV\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-08\", \"note\": \"Minimal FHS increase and NBP decrease\"},\n  {\"symbol\": \"fomolt\", \"type\": \"NEW_TOKEN\", \"status\": \"UNDETERMINED\", \"since\": \"2026-04-08\", \"note\": \"New token, signal undetermined\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe detection of a new bull flag in AIXBT, coupled with a significant increase in its NBP, is the most notable development across the watchlist, suggesting potential for a strong upward movement."
 }

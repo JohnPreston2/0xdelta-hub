@@ -1,27 +1,27 @@
 {
-  "updated_at": "2026-04-08T08:13:49.980898+00:00",
-  "cycle": "20260408_0813",
+  "updated_at": "2026-04-08T10:13:45.221194+00:00",
+  "cycle": "20260408_1013",
   "signals": [
-    {
-      "symbol": "AIXBT",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "2026-04-08 08:13",
-      "note": "Phase change to consolidation with active bull flag"
-    },
     {
       "symbol": "VIRTUAL",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Active bull flag with minimal metric changes"
+      "note": "FHS decrease of 0.7"
+    },
+    {
+      "symbol": "AIXBT",
+      "type": "BULL_FLAG",
+      "status": "CONFIRMED",
+      "since": "previous_cycle",
+      "note": "NBP increase of 12.0"
     },
     {
       "symbol": "AERO",
       "type": "DISTRIBUTION",
       "status": "WEAKENING",
-      "since": "2026-04-08 08:13",
-      "note": "Decrease in ICR with stable distribution phase"
+      "since": "previous_cycle",
+      "note": "FHS decrease of 1.0"
     },
     {
       "symbol": "MORPHO",
@@ -33,17 +33,17 @@
     {
       "symbol": "BRETT",
       "type": "CONSOLIDATION",
-      "status": "HOLDING",
+      "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "Minimal changes in metrics"
+      "note": "NBP decrease of 22.7"
     },
     {
       "symbol": "VVV",
       "type": "DISTRIBUTION",
       "status": "WEAKENING",
-      "since": "2026-04-08 08:13",
-      "note": "Significant decrease in ICR with stable distribution phase"
+      "since": "previous_cycle",
+      "note": "FHS decrease of 0.5"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is currently experiencing a mix of consolidation and distribution phases across various tokens. Most tokens are seeing minimal price and volume changes, with some notable shifts in their metrics. The overall market sentiment appears to be neutral, with no significant bullish or bearish trends dominating the landscape.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nDespite the lack of significant price movements, several tokens have experienced changes in their metrics. For instance, AIXBT's phase changed from \"RUPTURE\" to \"CONSOLIDATION,\" indicating a potential shift in market sentiment. AERO's ICR (Investor Concentration Ratio) decreased by 62.47, which could suggest a reduction in concentration among top holders. However, without significant price or volume changes, these shifts are more indicative of underlying market dynamics rather than immediate trading opportunities.\n\n### 3. SIGNAL TRACKING\n- **VIRTUAL**: HOLDING ⏳ — The bull flag detection remains active, but there are no significant changes in its metrics that would alter its status.\n- **AIXBT**: CONFIRMED ✅ — The phase change to consolidation, coupled with a bull flag detection, suggests a strengthening signal.\n- **AERO**: WEAKENING ⚠️ — The decrease in ICR and stable distribution phase might indicate a weakening of the distribution signal.\n- **MORPHO**: HOLDING ⏳ — Minor changes in metrics do not significantly impact the signal status.\n- **BRETT**: HOLDING ⏳ — The signal remains active with minimal changes in its metrics.\n- **VVV**: WEAKENING ⚠️ — The significant decrease in ICR and stable distribution phase could indicate a weakening of the distribution signal.\n\n### 4. NEW SIGNALS DETECTED\nNo new significant signals have been detected in this cycle. The existing signals are either holding their status or experiencing minor changes that do not warrant a new signal detection.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-08 08:13\", \"note\": \"Phase change to consolidation with active bull flag\"},\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Active bull flag with minimal metric changes\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-08 08:13\", \"note\": \"Decrease in ICR with stable distribution phase\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minor changes in metrics\"},\n  {\"symbol\": \"BRETT\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minimal changes in metrics\"},\n  {\"symbol\": \"VVV\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-08 08:13\", \"note\": \"Significant decrease in ICR with stable distribution phase\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the phase change in AIXBT from \"RUPTURE\" to \"CONSOLIDATION,\" which, combined with an active bull flag, suggests a potential strengthening of its signal, making it a token to closely monitor for future developments."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mixed phase, with some tokens in consolidation and others in distribution. Notable shifts include changes in FHS (Fundamental Health Score) and NBP (Net Buying Pressure) for several tokens. The market is relatively stable, with no significant price or volume movements.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume highlights, as all tokens have a price delta of 0% and a volume delta of 0%. However, some tokens have notable changes in their metrics, such as VIRTUAL's FHS decrease of 0.7 and AIXBT's NBP increase of 12.0.\n\n### 3. SIGNAL TRACKING\n- **VIRTUAL**: BULL_FLAG (status: HOLDING) — The bull flag signal is still active, but the FHS has decreased by 0.7.\n- **AIXBT**: BULL_FLAG (status: CONFIRMED) — The bull flag signal is strengthening, with an NBP increase of 12.0.\n- **AERO**: DISTRIBUTION (status: WEAKENING) — The distribution phase is continuing, but the FHS has decreased by 1.0.\n- **MORPHO**: CONSOLIDATION (status: HOLDING) — The consolidation phase is ongoing, with minor changes in metrics.\n- **BRETT**: CONSOLIDATION (status: WEAKENING) — The consolidation phase is weakening, with an NBP decrease of 22.7.\n- **VVV**: DISTRIBUTION (status: WEAKENING) — The distribution phase is weakening, with an FHS decrease of 0.5.\n\n### 4. NEW SIGNALS DETECTED\nNo new signals have been detected in this cycle.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"FHS decrease of 0.7\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"NBP increase of 12.0\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"FHS decrease of 1.0\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minor changes in metrics\"},\n  {\"symbol\": \"BRETT\", \"type\": \"CONSOLIDATION\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"NBP decrease of 22.7\"},\n  {\"symbol\": \"VVV\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"FHS decrease of 0.5\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the strengthening of the bull flag signal for AIXBT, with an NBP increase of 12.0, while other tokens are experiencing weakening or holding signals."
 }

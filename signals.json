@@ -1,49 +1,49 @@
 {
-  "updated_at": "2026-04-08T18:13:47.138357+00:00",
-  "cycle": "20260408_1813",
+  "updated_at": "2026-04-08T20:13:48.929107+00:00",
+  "cycle": "20260408_2013",
   "signals": [
-    {
-      "symbol": "AIXBT",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Transitioned to Consolidation phase"
-    },
     {
       "symbol": "VIRTUAL",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Minimal changes"
+      "note": "Minor changes in NBP and BPI"
+    },
+    {
+      "symbol": "AIXBT",
+      "type": "BULL_FLAG",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Minor changes in FHS and NBP"
     },
     {
       "symbol": "AERO",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Stable in Distribution phase"
+      "note": "Decrease in FHS"
     },
     {
       "symbol": "MORPHO",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Decrease in NBP"
+      "note": "Increase in NBP"
     },
     {
       "symbol": "BRETT",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
+      "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "Increase in FHS and NBP"
+      "note": "Significant decrease in FHS"
     },
     {
       "symbol": "VVV",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Slight increase in FHS and NBP"
+      "status": "INVALIDATED",
+      "since": "this_cycle",
+      "note": "Lost bull flag"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is currently experiencing a mix of consolidation and distribution phases across various tokens. Most tokens have seen minimal changes in price and volume over the last cycle, with some notable shifts in their metrics. The overall sentiment seems to be stable, with no significant uptrends or downtrends observed.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) were detected for any of the tokens in the given data. All tokens have a price delta of 0%, indicating no change in their prices. Similarly, volume and liquidity deltas are also 0%, showing no notable changes in these aspects.\n\n### 3. SIGNAL TRACKING\n- **AIXBT**: The bull flag detected remains active, but the token has transitioned from a \"RUPTURE\" phase to \"CONSOLIDATION\". Its FHS decreased by 0.9, and NBP decreased significantly by 16.9. Status: HOLDING ⏳\n- **VIRTUAL**: The bull flag is still detected, with minimal changes in its metrics. FHS decreased by 0.1, and NBP decreased by 0.9. Status: HOLDING ⏳\n- **AERO**: The bull flag remains, with a slight decrease in FHS by 0.4 and a minimal increase in NBP by 0.2. Status: HOLDING ⏳\n- **MORPHO**: The bull flag is still active, with a decrease in FHS by 0.3 and a decrease in NBP by 4.1. Status: HOLDING ⏳\n- **BRETT**: The bull flag remains detected, with an increase in FHS by 0.5 and an increase in NBP by 3.2. Status: HOLDING ⏳\n- **VVV**: The bull flag is still active, with a slight increase in FHS by 0.1 and an increase in NBP by 1.4. Status: HOLDING ⏳\n\n### 4. NEW SIGNALS DETECTED\nNo new signals were detected in this cycle. All tokens maintain their previous bull flag status without any new developments.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Transitioned to Consolidation phase\"},\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minimal changes\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Stable in Distribution phase\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in NBP\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Increase in FHS and NBP\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Slight increase in FHS and NBP\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant observation is the transition of AIXBT from a \"RUPTURE\" phase to \"CONSOLIDATION\", indicating a potential stabilization in its market trend, despite the overall market stability with no significant changes in price or volume for any of the tokens."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a mixed state, with some tokens in consolidation and others in distribution. Notable shifts include changes in the FHS (Fear, Greed, and Sentiment) scores and NBP (Net Buying Pressure) values across various tokens. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were detected for any of the tokens, as all price and volume deltas are reported at 0%. However, there are notable changes in other metrics such as FHS, NBP, and BPI (Buying Power Index) across the tokens. For instance, VIRTUAL's NBP decreased by -3.8, and its BPI increased by 0.53. AIXBT's FHS decreased by -0.1, and its NBP decreased by -4.0. AERO's FHS decreased by -0.3, with a minor decrease in NBP. MORPHO's NBP increased by 4.2, despite a decrease in FHS. BRETT's FHS decreased significantly by -0.6, with a minor decrease in NBP. VVV's FHS increased by 0.3, but its NBP decreased by -5.2, and it lost its bull flag.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: HOLDING ⏳ — The bull flag is still detected, but there are changes in NBP and BPI.\n- AIXBT: HOLDING ⏳ — The bull flag remains, with minor changes in FHS and NBP.\n- AERO: HOLDING ⏳ — The bull flag is still present, with a decrease in FHS and minor changes in NBP.\n- MORPHO: HOLDING ⏳ — The bull flag continues, with an increase in NBP and a decrease in FHS.\n- BRETT: WEAKENING ⚠️ — The bull flag is still detected, but there's a significant decrease in FHS and changes in other metrics.\n- VVV: INVALIDATED ❌ — The bull flag was lost, indicating a potential end to the previous signal.\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags were detected in this cycle. However, changes in metrics such as FHS, NBP, and BPI across tokens may indicate potential future signals or shifts in market sentiment.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minor changes in NBP and BPI\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minor changes in FHS and NBP\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Increase in NBP\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Significant decrease in FHS\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"INVALIDATED\", \"since\": \"this_cycle\", \"note\": \"Lost bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is the loss of the bull flag by VVV, indicating a potential shift in market sentiment for this token."
 }

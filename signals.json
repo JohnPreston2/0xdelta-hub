@@ -1,42 +1,42 @@
 {
-  "updated_at": "2026-04-09T06:13:43.181253+00:00",
-  "cycle": "20260409_0613",
+  "updated_at": "2026-04-09T08:13:44.192908+00:00",
+  "cycle": "20260409_0813",
   "signals": [
     {
       "symbol": "AIXBT",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
+      "status": "HOLDING",
       "since": "previous_cycle",
       "note": "Bull flag still active"
     },
     {
       "symbol": "AERO",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "current_cycle",
+      "status": "HOLDING",
+      "since": "previous_cycle",
       "note": "New bull flag detected"
     },
     {
       "symbol": "MORPHO",
-      "type": "PHASE_CHANGE",
-      "status": "CONFIRMED",
-      "since": "current_cycle",
-      "note": "Phase changed to accumulation with a new bull flag"
+      "type": "BULL_FLAG",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Bull flag still active"
     },
     {
       "symbol": "BRETT",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
+      "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Bull flag weakening due to negative NBP delta"
+      "note": "Bull flag still active"
     },
     {
-      "symbol": "VIRTUAL",
-      "type": "PHASE_CHANGE",
-      "status": "DETECTED",
+      "symbol": "VVV",
+      "type": "BULL_FLAG",
+      "status": "CONFIRMED",
       "since": "current_cycle",
-      "note": "Phase changed from consolidation to distribution"
+      "note": "New bull flag detected"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mix of phases, with some tokens in distribution, others in accumulation, and a few in consolidation. Notable shifts include VIRTUAL changing from consolidation to distribution and MORPHO transitioning from distribution potentielle to accumulation. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\nDespite no significant price movements (all tokens showed 0% price change), several tokens experienced changes in their metrics. For instance, AERO saw a new bull flag detected, and MORPHO had both a phase change to accumulation and a new bull flag. Volume and liquidity changes were also minimal, with all tokens showing 0% changes in these areas.\n\n### 3. SIGNAL TRACKING\n- **VIRTUAL**: The phase change from consolidation to distribution could indicate a weakening signal.\n- **AIXBT**: The bull flag remains confirmed, but the decrease in FHS and NBP might suggest a slight weakening.\n- **AERO**: A new bull flag was detected, which could be a strengthening signal.\n- **MORPHO**: The phase change to accumulation and the detection of a new bull flag indicate a confirmed signal.\n- **BRETT**: The signal is weakening due to a negative NBP delta.\n- **VVV**: The signal remains holding, with minimal changes in its metrics.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include a bull flag in AERO and a phase change to accumulation in MORPHO, both of which could indicate potential buying opportunities. The new bull flag in MORPHO also suggests a strengthening accumulation phase.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Bull flag still active\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Phase changed to accumulation with a new bull flag\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag weakening due to negative NBP delta\"},\n  {\"symbol\": \"VIRTUAL\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"Phase changed from consolidation to distribution\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the transition of MORPHO into an accumulation phase with a new bull flag, indicating a potential buying opportunity."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a mixed state, with some tokens in distribution, others in consolidation, and a few in accumulation. Notable shifts include AERO's FHS increase by 1.1 and VVV's new bull flag detection.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements (greater than 2% or 20%, respectively) for any of the tokens. However, AERO's FHS increased by 1.1, and VVV detected a new bull flag.\n\n### 3. SIGNAL TRACKING\n- **AIXBT**: HOLDING ⏳ — Bull flag still active, but with a slight decrease in NBP delta.\n- **AERO**: HOLDING ⏳ — New bull flag detected, with a slight increase in FHS.\n- **MORPHO**: HOLDING ⏳ — Bull flag still active, with a slight decrease in NBP delta.\n- **BRETT**: HOLDING ⏳ — Bull flag still active, with a slight increase in NBP delta.\n- **VIRTUAL**: HOLDING ⏳ — No significant changes.\n- **VVV**: CONFIRMED ✅ — New bull flag detected.\n\n### 4. NEW SIGNALS DETECTED\nA new bull flag was detected for VVV.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag still active\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag still active\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Bull flag still active\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the detection of a new bull flag for VVV, indicating potential for future price increases."
 }

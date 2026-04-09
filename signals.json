@@ -1,49 +1,35 @@
 {
-  "updated_at": "2026-04-08T22:13:46.876658+00:00",
-  "cycle": "20260408_2213",
+  "updated_at": "2026-04-09T00:14:16.065184+00:00",
+  "cycle": "20260409_0014",
   "signals": [
     {
       "symbol": "AIXBT",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
-      "since": "2026-04-08 22:13",
-      "note": "Increasing FHS and NBP"
-    },
-    {
-      "symbol": "VIRTUAL",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "2026-04-08 22:13",
-      "note": "Minor changes in FHS and NBP"
-    },
-    {
-      "symbol": "AERO",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "2026-04-08 22:13",
-      "note": "Decrease in FHS"
-    },
-    {
-      "symbol": "MORPHO",
-      "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "2026-04-08 22:13",
-      "note": "Lost bull flag, increase in FHS and NBP"
+      "since": "previous_cycle",
+      "note": "Maintained bull flag with positive NBP"
     },
     {
       "symbol": "BRETT",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "2026-04-08 22:13",
-      "note": "Decrease in FHS and NBP"
+      "status": "CONFIRMED",
+      "since": "previous_cycle",
+      "note": "Maintained bull flag despite negative NBP"
     },
     {
-      "symbol": "VVV",
-      "type": "BULL_FLAG",
-      "status": "INVALIDATED",
-      "since": "2026-04-08 22:13",
-      "note": "Lost bull flag, negative NBP"
+      "symbol": "VIRTUAL",
+      "type": "BULL_FLAG_LOST",
+      "status": "WEAKENING",
+      "since": "current_cycle",
+      "note": "Lost bull flag with decreasing NBP"
+    },
+    {
+      "symbol": "AERO",
+      "type": "BULL_FLAG_LOST",
+      "status": "WEAKENING",
+      "since": "current_cycle",
+      "note": "Lost bull flag with highly negative NBP"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is currently mixed, with some tokens in consolidation and others in distribution. Notable shifts include changes in the Fear-Hype-Score (FHS) and Net Buying Pressure (NBP) for several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price movements (>2%) or volume changes (>20%) reported for any token, there are notable changes in other metrics:\n- VIRTUAL's FHS decreased by 0.5, and its NBP decreased by 13.3.\n- AIXBT's FHS increased by 0.2, and its NBP increased by 8.4.\n- MORPHO's FHS increased by 0.9, and its NBP increased by 2.8, but it lost its bull flag.\n- VVV's FHS increased by 1.0, and its NBP decreased by 1.8.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: HOLDING ⏳ - The signal is still active, but there are minor changes in FHS and NBP.\n- AIXBT: CONFIRMED ✅ - The signal is strengthening with increases in FHS and NBP.\n- AERO: HOLDING ⏳ - The signal remains active, but with a decrease in FHS.\n- MORPHO: WEAKENING ⚠️ - The signal is fading after losing its bull flag, despite increases in FHS and NBP.\n- BRETT: WEAKENING ⚠️ - The signal is fading with a decrease in FHS and NBP.\n- VVV: INVALIDATED ❌ - The signal is dead, as it lost its bull flag and has a negative NBP.\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags were detected this cycle. However, changes in FHS and NBP for some tokens may indicate potential future signals.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-08 22:13\", \"note\": \"Increasing FHS and NBP\"},\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-04-08 22:13\", \"note\": \"Minor changes in FHS and NBP\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-04-08 22:13\", \"note\": \"Decrease in FHS\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-04-08 22:13\", \"note\": \"Lost bull flag, increase in FHS and NBP\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"2026-04-08 22:13\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"INVALIDATED\", \"since\": \"2026-04-08 22:13\", \"note\": \"Lost bull flag, negative NBP\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the strengthening of AIXBT's signal, indicated by increases in its FHS and NBP, making it a token to closely monitor for potential future growth."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently in a mixed state, with some tokens in consolidation and others in distribution. Notable shifts include changes in the Fear-Hype-Speculation (FHS) scores and Net Buying Pressure (NBP) for several tokens. Most tokens have seen minimal price and volume changes over the last 2 hours.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) were observed for any of the tokens in the provided data. All tokens have a price delta percentage of 0, indicating no change in price over the observed period.\n\n### 3. SIGNAL TRACKING\n- **VIRTUAL**: The bull flag was lost, and there was a decrease in NBP, indicating a weakening signal.\n- **AIXBT**: No significant changes in signal strength; the bull flag remains detected.\n- **AERO**: Lost its bull flag, indicating a weakening signal.\n- **MORPHO**: No change in signal strength.\n- **BRETT**: The signal remains, with the bull flag still detected.\n- **VVV**: No change in signal strength, and the bull flag was not detected.\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags were detected in this cycle. However, **AIXBT** and **BRETT** still have their bull flags detected, indicating potential for accumulation or upward movement.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Maintained bull flag with positive NBP\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Maintained bull flag despite negative NBP\"},\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG_LOST\", \"status\": \"WEAKENING\", \"since\": \"current_cycle\", \"note\": \"Lost bull flag with decreasing NBP\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG_LOST\", \"status\": \"WEAKENING\", \"since\": \"current_cycle\", \"note\": \"Lost bull flag with highly negative NBP\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the maintenance of bull flags in **AIXBT** and **BRETT**, despite mixed market conditions, indicating potential for future growth or accumulation in these tokens."
 }

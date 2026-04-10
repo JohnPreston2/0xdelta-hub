@@ -1,49 +1,49 @@
 {
-  "updated_at": "2026-04-10T18:13:50.183858+00:00",
-  "cycle": "20260410_1813",
+  "updated_at": "2026-04-10T20:13:53.812790+00:00",
+  "cycle": "20260410_2013",
   "signals": [
     {
       "symbol": "VIRTUAL",
-      "type": "DISTRIBUTION",
-      "status": "CONFIRMED",
-      "since": "current_cycle",
-      "note": "Phase change to distribution"
+      "type": "BULL_FLAG",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Weakening NBP"
     },
     {
       "symbol": "AIXBT",
       "type": "BULL_FLAG",
-      "status": "DETECTED",
-      "since": "current_cycle",
-      "note": "New bull flag in distribution phase"
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Slightly improved NBP"
     },
     {
       "symbol": "AERO",
-      "type": "DISTRIBUTION",
+      "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Stable distribution phase"
+      "note": "Improved NBP and BPI"
     },
     {
       "symbol": "MORPHO",
       "type": "DISTRIBUTION_POTENTIELLE",
       "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "Potential distribution without strong signals"
+      "note": "Decreased NBP and ICR"
     },
     {
       "symbol": "BRETT",
       "type": "BULL_FLAG",
-      "status": "CONFIRMED",
+      "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Bull flag in distribution phase"
+      "note": "Improved NBP and BPI"
     },
     {
       "symbol": "VVV",
       "type": "DISTRIBUTION_POTENTIELLE",
-      "status": "WEAKENING",
+      "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Potential distribution without bull flag"
+      "note": "Minimal changes"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a state of distribution, with most tokens (AIXBT, AERO, BRETT, VIRTUAL) currently in the \"DISTRIBUTION\" phase. However, some tokens like MORPHO and VVV are in the \"DISTRIBUTION_POTENTIELLE\" phase, indicating potential for future distribution. There are notable shifts in some tokens' phases and metrics, suggesting ongoing market activity.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) are observed in the provided data for any of the tokens. All price and volume deltas are reported as 0%, indicating a stable period in terms of price and trading volume for the analyzed tokens.\n\n### 3. SIGNAL TRACKING\n- **VIRTUAL**: The signal has transitioned from \"DISTRIBUTION_POTENTIELLE\" to \"DISTRIBUTION\", indicating a confirmed distribution phase. The NBP has decreased, and a bull flag was detected previously but not newly detected in this cycle.\n- **AIXBT**: The signal remains in the \"DISTRIBUTION\" phase with a new bull flag detected, suggesting potential for upward movement despite being in distribution.\n- **AERO**: The signal holds in the \"DISTRIBUTION\" phase with no change in bull flag status, indicating a stable but distributive state.\n- **MORPHO**: The signal remains in \"DISTRIBUTION_POTENTIELLE\" with no new bull flag detection, suggesting ongoing potential for distribution without clear signs of accumulation or strong bullish movements.\n- **BRETT**: The signal is in \"DISTRIBUTION\" with a bull flag detected, similar to AIXBT, indicating potential for future upward movement.\n- **VVV**: The signal is in \"DISTRIBUTION_POTENTIELLE\" without a bull flag, suggesting a potential for future distribution without strong bullish signals.\n\n### 4. NEW SIGNALS DETECTED\n- **VIRTUAL** has transitioned into a confirmed \"DISTRIBUTION\" phase.\n- **AIXBT** has detected a new bull flag while in the \"DISTRIBUTION\" phase, which could be a significant signal for potential upward movement.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"DISTRIBUTION\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Phase change to distribution\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag in distribution phase\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Stable distribution phase\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Potential distribution without strong signals\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Bull flag in distribution phase\"},\n  {\"symbol\": \"VVV\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Potential distribution without bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the transition of **VIRTUAL** into a confirmed \"DISTRIBUTION\" phase and the detection of a new bull flag in **AIXBT**, which could signal potential for future upward movements despite the overall distributive market state."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a distribution phase, with most tokens showing negative price movements and low trading volumes. Notable shifts include changes in the Fear-Hype-Speculation (FHS) scores and Net Buying Pressure (NBP) values for several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed for any token, with all price delta percentages and volume delta percentages being 0. However, there were changes in other metrics such as FHS, NBP, and ICR (Investor Confidence Rating) for some tokens.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: The bull flag detected remains active, but the NBP has decreased further, indicating weakening buying pressure. Status: HOLDING ⏳\n- AIXBT: The bull flag is still detected, but the NBP has improved slightly. Status: HOLDING ⏳\n- AERO: The bull flag remains, and there's a slight improvement in NBP and BPI (Buyer Power Index). Status: HOLDING ⏳\n- MORPHO: The potential distribution signal continues, with a decrease in NBP and a slight decrease in ICR. Status: WEAKENING ⚠️\n- BRETT: The bull flag is still active, with an improvement in NBP and BPI. Status: HOLDING ⏳\n- VVV: No bull flag is detected, and the token remains in a potential distribution phase with minimal changes. Status: HOLDING ⏳\n\n### 4. NEW SIGNALS DETECTED\nNo new significant signals were detected in this cycle, as all tokens either maintained their previous signal status or showed minimal changes that do not constitute a new signal.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Weakening NBP\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Slightly improved NBP\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Improved NBP and BPI\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decreased NBP and ICR\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Improved NBP and BPI\"},\n  {\"symbol\": \"VVV\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minimal changes\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the continued distribution phase with minimal significant movements, suggesting a period of market stagnation or consolidation."
 }

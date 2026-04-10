@@ -1,49 +1,49 @@
 {
-  "updated_at": "2026-04-10T16:13:47.797107+00:00",
-  "cycle": "20260410_1613",
+  "updated_at": "2026-04-10T18:13:50.183858+00:00",
+  "cycle": "20260410_1813",
   "signals": [
     {
       "symbol": "VIRTUAL",
-      "type": "DISTRIBUTION_POTENTIELLE",
-      "status": "WEAKENING",
-      "since": "2026-04-10 16:13",
-      "note": "Phase change from accumulation"
+      "type": "DISTRIBUTION",
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "Phase change to distribution"
     },
     {
       "symbol": "AIXBT",
-      "type": "DISTRIBUTION",
-      "status": "HOLDING",
-      "since": "2026-04-10 16:13",
-      "note": "Minimal changes"
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag in distribution phase"
     },
     {
       "symbol": "AERO",
       "type": "DISTRIBUTION",
       "status": "HOLDING",
-      "since": "2026-04-10 16:13",
-      "note": "Slight increase in FHS and BPI"
+      "since": "previous_cycle",
+      "note": "Stable distribution phase"
     },
     {
       "symbol": "MORPHO",
       "type": "DISTRIBUTION_POTENTIELLE",
       "status": "WEAKENING",
-      "since": "2026-04-10 16:13",
-      "note": "Phase change from consolidation"
+      "since": "previous_cycle",
+      "note": "Potential distribution without strong signals"
     },
     {
       "symbol": "BRETT",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
-      "since": "2026-04-10 16:13",
-      "note": "New bull flag detected"
+      "since": "previous_cycle",
+      "note": "Bull flag in distribution phase"
     },
     {
       "symbol": "VVV",
       "type": "DISTRIBUTION_POTENTIELLE",
       "status": "WEAKENING",
-      "since": "2026-04-10 16:13",
-      "note": "Phase change and loss of bull flag"
+      "since": "previous_cycle",
+      "note": "Potential distribution without bull flag"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a mixed state, with most tokens in distribution or distribution potential phases, indicating a bearish trend. Notable shifts include phase changes in VIRTUAL, MORPHO, and VVV, which may signal changes in market sentiment. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) were observed in the provided data for any of the tokens. However, notable changes include VIRTUAL's phase change from accumulation to distribution potential, MORPHO's phase change from consolidation to distribution potential, and VVV's phase change from consolidation to distribution potential, along with the loss of its bull flag.\n\n### 3. SIGNAL TRACKING\n- **VIRTUAL**: The signal has weakened due to the phase change from accumulation to distribution potential and a significant negative NBP delta.\n- **AIXBT**: The signal remains unchanged with no phase change and minimal metric changes.\n- **AERO**: The signal is holding with minimal changes, despite a slight increase in FHS and BPI.\n- **MORPHO**: The signal has weakened due to the phase change from consolidation to distribution potential.\n- **BRETT**: A new bull flag was detected, potentially strengthening the signal.\n- **VVV**: The signal has weakened due to the phase change and the loss of its bull flag.\n\n### 4. NEW SIGNALS DETECTED\nNew signals detected include a bull flag in BRETT, which could indicate a potential reversal or strengthening of its signal. Phase changes in VIRTUAL, MORPHO, and VVV to distribution potential phases may signal the beginning of new trends.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"WEAKENING\", \"since\": \"2026-04-10 16:13\", \"note\": \"Phase change from accumulation\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"2026-04-10 16:13\", \"note\": \"Minimal changes\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"2026-04-10 16:13\", \"note\": \"Slight increase in FHS and BPI\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"WEAKENING\", \"since\": \"2026-04-10 16:13\", \"note\": \"Phase change from consolidation\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-10 16:13\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"VVV\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"WEAKENING\", \"since\": \"2026-04-10 16:13\", \"note\": \"Phase change and loss of bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the phase changes in several tokens, indicating potential shifts in market trends, alongside the detection of a new bull flag in BRETT, which could signal a reversal or strengthening of its trend."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a state of distribution, with most tokens (AIXBT, AERO, BRETT, VIRTUAL) currently in the \"DISTRIBUTION\" phase. However, some tokens like MORPHO and VVV are in the \"DISTRIBUTION_POTENTIELLE\" phase, indicating potential for future distribution. There are notable shifts in some tokens' phases and metrics, suggesting ongoing market activity.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) are observed in the provided data for any of the tokens. All price and volume deltas are reported as 0%, indicating a stable period in terms of price and trading volume for the analyzed tokens.\n\n### 3. SIGNAL TRACKING\n- **VIRTUAL**: The signal has transitioned from \"DISTRIBUTION_POTENTIELLE\" to \"DISTRIBUTION\", indicating a confirmed distribution phase. The NBP has decreased, and a bull flag was detected previously but not newly detected in this cycle.\n- **AIXBT**: The signal remains in the \"DISTRIBUTION\" phase with a new bull flag detected, suggesting potential for upward movement despite being in distribution.\n- **AERO**: The signal holds in the \"DISTRIBUTION\" phase with no change in bull flag status, indicating a stable but distributive state.\n- **MORPHO**: The signal remains in \"DISTRIBUTION_POTENTIELLE\" with no new bull flag detection, suggesting ongoing potential for distribution without clear signs of accumulation or strong bullish movements.\n- **BRETT**: The signal is in \"DISTRIBUTION\" with a bull flag detected, similar to AIXBT, indicating potential for future upward movement.\n- **VVV**: The signal is in \"DISTRIBUTION_POTENTIELLE\" without a bull flag, suggesting a potential for future distribution without strong bullish signals.\n\n### 4. NEW SIGNALS DETECTED\n- **VIRTUAL** has transitioned into a confirmed \"DISTRIBUTION\" phase.\n- **AIXBT** has detected a new bull flag while in the \"DISTRIBUTION\" phase, which could be a significant signal for potential upward movement.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"DISTRIBUTION\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Phase change to distribution\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag in distribution phase\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Stable distribution phase\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Potential distribution without strong signals\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Bull flag in distribution phase\"},\n  {\"symbol\": \"VVV\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Potential distribution without bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the transition of **VIRTUAL** into a confirmed \"DISTRIBUTION\" phase and the detection of a new bull flag in **AIXBT**, which could signal potential for future upward movements despite the overall distributive market state."
 }

@@ -1,42 +1,49 @@
 {
-  "updated_at": "2026-04-10T04:13:45.793444+00:00",
-  "cycle": "20260410_0413",
+  "updated_at": "2026-04-10T06:14:12.576229+00:00",
+  "cycle": "20260410_0614",
   "signals": [
     {
       "symbol": "VIRTUAL",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Accumulation phase with slight NBP increase"
+      "note": "Accumulation phase continues"
+    },
+    {
+      "symbol": "AIXBT",
+      "type": "DISTRIBUTION",
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "Significant decrease in NBP"
     },
     {
       "symbol": "AERO",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Distribution phase with minimal changes"
+      "note": "Distribution phase continues"
     },
     {
       "symbol": "MORPHO",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
+      "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "Consolidation phase with NBP increase"
+      "note": "Decrease in FHS and NBP"
     },
     {
       "symbol": "BRETT",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
-      "since": "current_cycle",
-      "note": "New bull flag detected in distribution phase"
+      "since": "previous_cycle",
+      "note": "Significant increase in NBP"
     },
     {
       "symbol": "VVV",
       "type": "BULL_FLAG",
-      "status": "HOLDING",
+      "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "Consolidation phase with slight FHS decrease"
+      "note": "Decrease in FHS and NBP"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing mixed phases, with some tokens in accumulation (VIRTUAL), others in distribution (AIXBT, AERO, BRETT), and a few in consolidation (MORPHO, VVV). Notable shifts include AIXBT transitioning from consolidation to distribution and BRETT gaining a new bull flag.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price movements (all tokens show 0% change), volume and liquidity remain unchanged for all tokens. However, there are notable changes in other metrics:\n- VIRTUAL's FHS decreased by 0.7, and its NBP increased slightly.\n- AIXBT's FHS increased by 1.3, but its NBP dropped significantly by 57.8, and it lost its bull flag.\n- BRETT's NBP increased by 12.3, and it detected a new bull flag.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: HOLDING ⏳ — The bull flag is still detected, but with a decrease in FHS.\n- AIXBT: INVALIDATED ❌ — Lost its bull flag and transitioned to distribution phase.\n- AERO: HOLDING ⏳ — Bull flag still detected, with minimal changes.\n- MORPHO: HOLDING ⏳ — Bull flag still detected, with an increase in NBP.\n- BRETT: CONFIRMED ✅ — New bull flag detected, indicating potential strengthening.\n- VVV: HOLDING ⏳ — Bull flag still detected, with a slight decrease in FHS.\n\n### 4. NEW SIGNALS DETECTED\n- BRETT has detected a new bull flag, indicating potential accumulation or strengthening.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Accumulation phase with slight NBP increase\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Distribution phase with minimal changes\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Consolidation phase with NBP increase\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected in distribution phase\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Consolidation phase with slight FHS decrease\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is BRETT's detection of a new bull flag, suggesting a potential shift towards accumulation or strengthening, despite being in a distribution phase."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is experiencing a mix of phases, with some tokens in accumulation (VIRTUAL), distribution (AIXBT, AERO, BRETT), and consolidation (MORPHO, VVV). Notable shifts include changes in the Net Buying Pressure (NBP) and Fluidity Health Score (FHS) for several tokens.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price or volume movements (>2% or >20%) reported for any of the tokens, we can highlight some notable changes in their metrics:\n- VIRTUAL's NBP increased by 3.0, and its FHS slightly increased by 0.1.\n- AIXBT's NBP decreased significantly by -28.9, indicating a strong selling pressure.\n- AERO's FHS decreased by -0.3, and its NBP decreased by -3.6.\n- MORPHO's FHS decreased by -0.8, and its NBP decreased by -8.2.\n- BRETT's NBP increased by 30.6, which is a significant positive change.\n- VVV's FHS decreased by -0.9, and its NBP decreased by -2.0.\n\n### 3. SIGNAL TRACKING\nBased on the provided data, the status of the previous signals is as follows:\n- VIRTUAL: HOLDING ⏳ — The bull flag is still detected, and the accumulation phase continues.\n- AIXBT: WEAKENING ⚠️ — The distribution phase continues with a significant decrease in NBP.\n- AERO: HOLDING ⏳ — The distribution phase continues with minimal changes.\n- MORPHO: WEAKENING ⚠️ — The consolidation phase continues with a decrease in FHS and NBP.\n- BRETT: CONFIRMED ✅ — The bull flag is still detected, and the significant increase in NBP is a positive sign.\n- VVV: WEAKENING ⚠️ — The consolidation phase continues with a decrease in FHS and NBP.\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags or significant phase changes were detected in this cycle. However, BRETT's significant increase in NBP could be a sign of strengthening signal.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Accumulation phase continues\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Significant decrease in NBP\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Distribution phase continues\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and NBP\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"Significant increase in NBP\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and NBP\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is BRETT's significant increase in NBP, which could indicate a strengthening bull flag signal."
 }

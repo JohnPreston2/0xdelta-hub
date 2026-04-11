@@ -1,42 +1,49 @@
 {
-  "updated_at": "2026-04-11T16:13:45.887807+00:00",
-  "cycle": "20260411_1613",
+  "updated_at": "2026-04-11T18:13:48.222587+00:00",
+  "cycle": "20260411_1813",
   "signals": [
     {
+      "symbol": "VIRTUAL",
+      "type": "BULL_FLAG",
+      "status": "CONFIRMED",
+      "since": "2026-04-11 18:13",
+      "note": "New bull flag in distribution phase"
+    },
+    {
       "symbol": "AIXBT",
-      "type": "ACCUMULATION",
-      "status": "HOLDING",
-      "since": "2026-04-11 16:13",
-      "note": "NBP decrease"
+      "type": "BULL_FLAG",
+      "status": "CONFIRMED",
+      "since": "2026-04-11 18:13",
+      "note": "New bull flag with phase change to distribution"
+    },
+    {
+      "symbol": "BRETT",
+      "type": "PHASE_CHANGE",
+      "status": "CONFIRMED",
+      "since": "2026-04-11 18:13",
+      "note": "Changed from distribution to accumulation"
     },
     {
       "symbol": "AERO",
-      "type": "BULL_FLAG",
+      "type": "DISTRIBUTION",
       "status": "HOLDING",
-      "since": "2026-04-11 16:13",
-      "note": "No significant changes"
+      "since": "previous cycle",
+      "note": "Remains in distribution with no significant changes"
     },
     {
       "symbol": "MORPHO",
       "type": "DISTRIBUTION",
       "status": "WEAKENING",
-      "since": "2026-04-11 16:13",
-      "note": "NBP decrease"
+      "since": "previous cycle",
+      "note": "Minor improvement in NBP but still in distribution"
     },
     {
       "symbol": "VVV",
       "type": "CONSOLIDATION",
       "status": "HOLDING",
-      "since": "2026-04-11 16:13",
-      "note": "NBP increase"
-    },
-    {
-      "symbol": "BRETT",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "2026-04-11 16:13",
-      "note": "New bull flag detected"
+      "since": "previous cycle",
+      "note": "Minor changes, remains in consolidation"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is mixed, with most tokens in distribution or accumulation phases. Notable shifts include AIXBT's accumulation phase and VVV's consolidation phase. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) were observed for any token. However, AIXBT's NBP decreased by 17.4, and BRETT's BPI increased by 1.933.\n\n### 3. SIGNAL TRACKING\n- AIXBT: ACCUMULATION (status: HOLDING) — NBP decreased by 17.4\n- AERO: BULL_FLAG (status: HOLDING) — No significant changes\n- MORPHO: DISTRIBUTION (status: WEAKENING) — NBP decreased by 4.4\n- VVV: CONSOLIDATION (status: HOLDING) — NBP increased by 3.1\n- BRETT: BULL_FLAG (status: CONFIRMED) — New bull flag detected\n\n### 4. NEW SIGNALS DETECTED\nA new bull flag was detected for BRETT.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AIXBT\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"2026-04-11 16:13\", \"note\": \"NBP decrease\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"2026-04-11 16:13\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-11 16:13\", \"note\": \"NBP decrease\"},\n  {\"symbol\": \"VVV\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"2026-04-11 16:13\", \"note\": \"NBP increase\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-11 16:13\", \"note\": \"New bull flag detected\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is BRETT's new bull flag detection, which may indicate a potential upward trend."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently mixed, with some tokens in distribution, others in accumulation, and a few in consolidation. Notable shifts include VIRTUAL entering distribution with a new bull flag detected, and BRETT transitioning from distribution to accumulation. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed in the last cycle, with all tokens showing 0% change in price and volume. However, there were notable changes in other metrics such as FHS, NBP, and phase changes for some tokens.\n\n### 3. SIGNAL TRACKING\n- **VIRTUAL**: CONFIRMED ✅ — New bull flag detected and entered distribution phase.\n- **AIXBT**: CONFIRMED ✅ — New bull flag detected, and phase changed from accumulation to distribution.\n- **AERO**: HOLDING ⏳ — No significant changes, remains in distribution.\n- **MORPHO**: WEAKENING ⚠️ — NBP slightly improved but remains in distribution.\n- **BRETT**: CONFIRMED ✅ — Transitioned from distribution to accumulation, indicating potential strengthening.\n- **VVV**: HOLDING ⏳ — Remains in consolidation with minor changes in metrics.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include bull flags for VIRTUAL and AIXBT, and a phase change for BRETT from distribution to accumulation. These signals indicate potential upcoming movements in these tokens.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-11 18:13\", \"note\": \"New bull flag in distribution phase\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-11 18:13\", \"note\": \"New bull flag with phase change to distribution\"},\n  {\"symbol\": \"BRETT\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-11 18:13\", \"note\": \"Changed from distribution to accumulation\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Remains in distribution with no significant changes\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"previous cycle\", \"note\": \"Minor improvement in NBP but still in distribution\"},\n  {\"symbol\": \"VVV\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous cycle\", \"note\": \"Minor changes, remains in consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the detection of new bull flags in VIRTUAL and AIXBT, alongside BRETT's phase change to accumulation, which could signal upcoming price movements in these tokens."
 }

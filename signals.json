@@ -1,49 +1,49 @@
 {
-  "updated_at": "2026-04-12T08:13:46.591892+00:00",
-  "cycle": "20260412_0813",
+  "updated_at": "2026-04-12T10:13:45.363385+00:00",
+  "cycle": "20260412_1013",
   "signals": [
     {
       "symbol": "AIXBT",
-      "type": "PHASE_CHANGE",
+      "type": "ACCUMULATION",
       "status": "CONFIRMED",
       "since": "2026-04-12",
-      "note": "Transitioned from distribution to consolidation"
+      "note": "Transitioned from consolidation to accumulation"
     },
     {
       "symbol": "VIRTUAL",
       "type": "DISTRIBUTION",
       "status": "WEAKENING",
       "since": "2026-04-12",
-      "note": "Weakening distribution signal"
+      "note": "Slight increase in NBP but still in distribution"
     },
     {
       "symbol": "AERO",
       "type": "DISTRIBUTION",
       "status": "HOLDING",
       "since": "2026-04-12",
-      "note": "Stable distribution phase"
+      "note": "No significant changes"
     },
     {
       "symbol": "MORPHO",
       "type": "DISTRIBUTION",
       "status": "WEAKENING",
       "since": "2026-04-12",
-      "note": "Weakening distribution signal"
+      "note": "Increase in NBP"
     },
     {
       "symbol": "BRETT",
       "type": "DISTRIBUTION",
       "status": "WEAKENING",
       "since": "2026-04-12",
-      "note": "Weakening distribution signal"
+      "note": "Decrease in NBP"
     },
     {
       "symbol": "VVV",
-      "type": "PHASE_CHANGE",
+      "type": "CONSOLIDATION",
       "status": "DETECTED",
       "since": "2026-04-12",
-      "note": "Transitioned from consolidation to distribution potential"
+      "note": "Transitioned from distribution potential to consolidation"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a mixed state, with most tokens in distribution phase, but some showing signs of consolidation or potential distribution. Notable shifts include AIXBT transitioning from distribution to consolidation and VVV changing from consolidation to distribution potential.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed for any of the tokens, with all price deltas and volume deltas being 0%. However, there were notable changes in other metrics such as FHS (Fluidity and Health Score), NBP (Net Buying Pressure), and ICR (Investor Concentration Ratio) for some tokens.\n\n### 3. SIGNAL TRACKING\n- **AIXBT**: The signal has changed from distribution to consolidation, which could indicate a strengthening of the signal as it moves into a more stable phase. Status: CONFIRMED \n- **VIRTUAL**: The signal remains in distribution with a slight decrease in NBP, indicating a weakening of the distribution signal. Status: WEAKENING \n- **AERO**: The signal remains in distribution with minimal changes, indicating the signal is HOLDING.\n- **MORPHO**: The signal remains in distribution with a slight decrease in NBP, indicating the signal is WEAKENING.\n- **BRETT**: The signal remains in distribution with a decrease in NBP, indicating the signal is WEAKENING.\n- **VVV**: The signal has transitioned from consolidation to distribution potential, which could indicate a new signal emerging. Status: DETECTED\n\n### 4. NEW SIGNALS DETECTED\nA new signal has been detected for VVV as it transitions from consolidation to distribution potential. This could be an early indicator of a change in market sentiment towards VVV.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AIXBT\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-12\", \"note\": \"Transitioned from distribution to consolidation\"},\n  {\"symbol\": \"VIRTUAL\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-12\", \"note\": \"Weakening distribution signal\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"2026-04-12\", \"note\": \"Stable distribution phase\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-12\", \"note\": \"Weakening distribution signal\"},\n  {\"symbol\": \"BRETT\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-12\", \"note\": \"Weakening distribution signal\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"DETECTED\", \"since\": \"2026-04-12\", \"note\": \"Transitioned from consolidation to distribution potential\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant development across the watchlist is the phase change in AIXBT from distribution to consolidation and VVV from consolidation to distribution potential, indicating potential shifts in market sentiment and investor behavior."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently mixed, with some tokens in distribution (VIRTUAL, AERO, MORPHO, BRETT) and others in accumulation or consolidation (AIXBT, VVV). Notable shifts include AIXBT transitioning from consolidation to accumulation and VVV changing from distribution potential to consolidation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed for any token, with all price deltas and volume deltas being 0%. However, there were notable changes in other metrics such as NBP (Net Buying Pressure) and FHS (Fear and Greed Score) for some tokens.\n\n### 3. SIGNAL TRACKING\n- **AIXBT**: The accumulation signal is CONFIRMED ✅, as it has transitioned from consolidation to accumulation with a significant increase in NBP.\n- **VIRTUAL**: The distribution signal is WEAKENING ⚠️, with a slight increase in NBP but still in distribution phase.\n- **AERO**: The distribution signal is HOLDING ⏳, with no significant changes in NBP or phase.\n- **MORPHO**: The distribution signal is WEAKENING ⚠️, with an increase in NBP.\n- **BRETT**: The distribution signal is WEAKENING ⚠️, with a decrease in NBP.\n- **VVV**: The signal has changed from distribution potential to consolidation, which could indicate a WEAKENING ⚠️ of the previous distribution signal.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include the confirmed accumulation phase of AIXBT and the transition of VVV into consolidation, potentially indicating the end of its distribution phase. No new bull flags were detected.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AIXBT\", \"type\": \"ACCUMULATION\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-12\", \"note\": \"Transitioned from consolidation to accumulation\"},\n  {\"symbol\": \"VIRTUAL\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-12\", \"note\": \"Slight increase in NBP but still in distribution\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"2026-04-12\", \"note\": \"No significant changes\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-12\", \"note\": \"Increase in NBP\"},\n  {\"symbol\": \"BRETT\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-12\", \"note\": \"Decrease in NBP\"},\n  {\"symbol\": \"VVV\", \"type\": \"CONSOLIDATION\", \"status\": \"DETECTED\", \"since\": \"2026-04-12\", \"note\": \"Transitioned from distribution potential to consolidation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant event across the watchlist is AIXBT's transition from consolidation to accumulation, indicating a potential strengthening of its market position."
 }

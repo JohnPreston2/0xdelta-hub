@@ -1,37 +1,37 @@
 {
-  "updated_at": "2026-04-12T16:13:42.998926+00:00",
-  "cycle": "20260412_1613",
+  "updated_at": "2026-04-12T18:13:52.537175+00:00",
+  "cycle": "20260412_1813",
   "signals": [
+    {
+      "symbol": "BRETT",
+      "type": "BULL_FLAG",
+      "status": "DETECTED",
+      "since": "current_cycle",
+      "note": "New bull flag detected and phase changed to consolidation"
+    },
     {
       "symbol": "VIRTUAL",
       "type": "DISTRIBUTION",
       "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "NBP decrease"
-    },
-    {
-      "symbol": "AIXBT",
-      "type": "PHASE_CHANGE",
-      "status": "CONFIRMED",
-      "since": "current_cycle",
-      "note": "Phase changed to consolidation"
-    },
-    {
-      "symbol": "AERO",
-      "type": "DISTRIBUTION",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Little change"
+      "note": "NBP decreased by 6.5%"
     },
     {
       "symbol": "MORPHO",
       "type": "DISTRIBUTION",
       "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "NBP decrease"
+      "note": "NBP decreased by 6.0%"
     },
     {
-      "symbol": "BRETT",
+      "symbol": "AIXBT",
+      "type": "CONSOLIDATION",
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Little change"
+    },
+    {
+      "symbol": "AERO",
       "type": "DISTRIBUTION",
       "status": "HOLDING",
       "since": "previous_cycle",
@@ -45,5 +45,5 @@
       "note": "Little change"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a state of distribution and consolidation, with most tokens experiencing little to no change in price or volume. Notable shifts include AIXBT's phase change from accumulation to consolidation and MORPHO's significant decrease in NBP.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all tokens experiencing 0% changes in price and volume. However, MORPHO's NBP decreased by 13.8, and AIXBT's phase changed from accumulation to consolidation.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: WEAKENING ⚠️ — distribution signal still active but NBP decreased by 5.2\n- AIXBT: PHASE_CHANGE — phase changed from accumulation to consolidation\n- AERO: HOLDING ⏳ — distribution signal still active with little change\n- MORPHO: WEAKENING ⚠️ — distribution signal still active but NBP decreased by 13.8\n- BRETT: HOLDING ⏳ — distribution signal still active with little change\n- VVV: HOLDING ⏳ — consolidation signal still active with little change\n\n### 4. NEW SIGNALS DETECTED\nNo new signals were detected in this cycle.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"NBP decrease\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Phase changed to consolidation\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Little change\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"NBP decrease\"},\n  {\"symbol\": \"BRETT\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Little change\"},\n  {\"symbol\": \"VVV\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Little change\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is AIXBT's phase change from accumulation to consolidation, which may indicate a shift in market sentiment."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a mixed state, with some tokens in distribution and others in consolidation. Notable shifts include BRETT's phase change from distribution to consolidation and the detection of a new bull flag. Most tokens have seen little to no change in price, volume, or liquidity.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed for any token, with all price deltas at 0% and volume deltas at 0%. However, BRETT's NBP (Net Buying Pressure) increased by 22.2%, indicating a potential shift in market sentiment.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: WEAKENING ⚠️ — NBP decreased by 6.5%\n- AIXBT: HOLDING ⏳ — Little change\n- AERO: HOLDING ⏳ — Little change\n- MORPHO: WEAKENING ⚠️ — NBP decreased by 6.0%\n- BRETT: CONFIRMED ✅ — Phase changed to consolidation and a new bull flag was detected\n- VVV: HOLDING ⏳ — Little change\n\n### 4. NEW SIGNALS DETECTED\nA new bull flag was detected for BRETT, and its phase changed from distribution to consolidation. This could indicate a potential buying opportunity.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"DETECTED\", \"since\": \"current_cycle\", \"note\": \"New bull flag detected and phase changed to consolidation\"},\n  {\"symbol\": \"VIRTUAL\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"NBP decreased by 6.5%\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"NBP decreased by 6.0%\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Little change\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Little change\"},\n  {\"symbol\": \"VVV\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Little change\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe detection of a new bull flag and phase change for BRETT is the most significant event in the current market, indicating a potential buying opportunity."
 }

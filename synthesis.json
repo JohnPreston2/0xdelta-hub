@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-12T14:14:02.841077+00:00",
+  "updated_at": "2026-04-12T16:13:57.316458+00:00",
   "synthesis_table": [
     {
       "symbol": "VIRTUAL",
@@ -7,47 +7,47 @@
       "fhs": 4.9,
       "ces": 0,
       "phase": "DISTRIBUTION",
-      "nbp": -19.71153846153846,
+      "nbp": -24.944812362030905,
       "bpi": 0.0,
-      "price_usd": 0.6457,
-      "change_24h": -4.01,
-      "volume_24h": 89490.81
+      "price_usd": 0.6417,
+      "change_24h": -4.86,
+      "volume_24h": 92970.57
     },
     {
       "symbol": "AIXBT",
       "address": "0x4F9Fd6Be4a90f2620860d680c0d4d5Fb53d1A825",
       "fhs": 5.3,
       "ces": 0,
-      "phase": "ACCUMULATION",
-      "nbp": 43.75,
+      "phase": "CONSOLIDATION",
+      "nbp": 42.857142857142854,
       "bpi": 0.0,
-      "price_usd": 0.02352,
-      "change_24h": -2.39,
-      "volume_24h": 6704.37
+      "price_usd": 0.02339,
+      "change_24h": -5.52,
+      "volume_24h": 5907.73
     },
     {
       "symbol": "AERO",
       "address": "0x940181a94A35A4569E4529A3CDfB74e38FD98631",
-      "fhs": 4.9,
+      "fhs": 5.2,
       "ces": 0,
       "phase": "DISTRIBUTION",
-      "nbp": -57.20108695652174,
+      "nbp": -61.67907921462423,
       "bpi": 0.0,
-      "price_usd": 0.3646,
-      "change_24h": -6.7,
-      "volume_24h": 2004816.62
+      "price_usd": 0.357,
+      "change_24h": -9.65,
+      "volume_24h": 2025148.08
     },
     {
       "symbol": "MORPHO",
       "address": "0xBAa5CC21fd487B8Fcc2F632f3F4E8D37262a0842",
-      "fhs": 4.9,
+      "fhs": 5.7,
       "ces": 0,
       "phase": "DISTRIBUTION",
-      "nbp": -16.96014828544949,
+      "nbp": -30.722367275892083,
       "bpi": 0.0,
-      "price_usd": 1.7,
-      "change_24h": -3.2,
-      "volume_24h": 577349.21
+      "price_usd": 1.67,
+      "change_24h": -5.16,
+      "volume_24h": 576958.39
     },
     {
       "symbol": "BRETT",
@@ -55,73 +55,73 @@
       "fhs": 5.0,
       "ces": 0,
       "phase": "DISTRIBUTION",
-      "nbp": -35.483870967741936,
+      "nbp": -31.25,
       "bpi": 0.0,
-      "price_usd": 0.006448,
-      "change_24h": -4.38,
-      "volume_24h": 4102.93
+      "price_usd": 0.006464,
+      "change_24h": -4.66,
+      "volume_24h": 3345.41
     },
     {
       "symbol": "VVV",
       "address": "0xacfe6019ed1a7dc6f7b508c02d1b04ec88cc21bf",
-      "fhs": 5.1,
+      "fhs": 5.3,
       "ces": 0,
       "phase": "CONSOLIDATION",
-      "nbp": -6.646525679758309,
+      "nbp": -8.211297071129707,
       "bpi": 0.0,
-      "price_usd": 7.92,
-      "change_24h": -8.01,
-      "volume_24h": 1630588.28
+      "price_usd": 7.97,
+      "change_24h": -8.6,
+      "volume_24h": 1533974.83
     }
   ],
-  "raw_report": "# \ud83d\udd2c SENIOR ON-CHAIN FORENSIC ANALYSIS\n\n## 1. \ud83c\udfc6 TOP 3 OPPORTUNITIES\n\n**AIXBT** - CES: 78/100 | FHS: 5.3/10\n- Phase: ACCUMULATION | CP: 44.6%\n- Active signals: SAC (Silent Accumulation), buy_wall (DAI +0.44), high FCI (Syndicate Entry), Confirmed Signal (Signal Tracker).\n- Bull Flag: Class 0 | BPI: 0 | Fib Target: N/A\n- Holders: Top5 = 40.3% | HD: [Inter-cycle data suggests consistent accumulation] | Structure: Centralized/Syndicate.\n- Entry zone: $0.0225 - $0.0240 | Stop loss: $0.0205 | Target: $0.0320\n- Risks: High ICR (48.20) indicating low pool depth relative to top whale; centralisation.\n\n**VVV** - CES: 42/100 | FHS: 5.1/10\n- Phase: CONSOLIDATION | CP: 27.8%\n- Active signals: Neutral flow, RSI oversold/near support (33.96).\n- Bull Flag: Class 0 | BPI: 0 | Fib Target: $N/A\n- Holders: Top5 = 2.8% (excluding burn/system contracts) | HD: Stable | Structure: Highly Liquid/Healthy.\n- Entry zone: $7.50 - $7.90 | Stop loss: $7.10 | Target: $9.50\n- Risks: Fragile LCR (1.20%), High ICR (15.62).\n\n**BRETT** - CES: 32/100 | FHS: 5.0/10\n- Phase: DISTRIBUTION (Weakening) | CP: 18.2%\n- Active signals: High TCI (Recent activity), weakening sell pressure (NBP improving from -43% to -35%).\n- Bull Flag: Class 0 | BPI: 0 | Fib Target: $N/A\n- Holders: Top5 = 16.4% | HD: Bearish | Structure: Moderate risk.\n- Entry zone: $0.0062 - $0.0065 | Stop loss: $0.0058 | Target: $0.0078\n- Risks: Sell wall (DAI -0.35), extreme ICR (38.30).\n\n---\n\n## 2. \u26a0\ufe0f TOKENS IN DISTRIBUTION / NEGATIVE MOMENTUM\n\n**AERO** \u26a0\ufe0f NEGATIVE MOMENTUM\n- Signal: DISTRIBUTION (Holding) / Sell Wall.\n- Details: NBP -57.2%, DAI -0.57, FHS 4.9.\n- Since: Stable distribution for multiple cycles.\n- Recommendation: EXIT / WAIT. Price action is underwater with massive sell side resistance.\n\n**MORPHO** \u26a0\ufe0f NEGATIVE MOMENTUM\n- Signal: DISTRIBUTION (Holding) / RSI Exhaustion.\n- Details: RSI 8.88 (Extreme oversold), NBP -16.9%, FHS 4.9.\n- Since: Continuous distribution.\n- Recommendation: REDUCE. While technically oversold, there is no buy-side divergence or accumulation detected yet.\n\n**VIRTUAL** \u26a0\ufe0f NEGATIVE MOMENTUM\n- Signal: DISTRIBUTION (Weakening) / Critical ICR.\n- Details: ICR 70.09 (Extreme instability), NBP -19.7%.\n- Since: Multiple distribution cycles.\n- Recommendation: EXIT. Liquidity structure is too fragile (LCR 0.89%) to sustain any further downside.\n\n---\n\n## 3. \ud83d\udc0b WHALE WATCH\n\n| Token | Top Whale | % Supply | Type | Entity | Alert |\n|-------|-----------|----------|------|--------|-------|\n| AIXBT | 0xf977... | 24.39% | EOA | - | \u26a0\ufe0f Active Accumulator |\n| VIRTUAL| 0x501c... | 9.27% | EOA | - | \u26a0\ufe0f High Nuke Risk |\n| AERO  | 0xebf4... | 50.89% | Contract | - | \u2705 Locked/Protocol |\n| BRETT | 0x7061... | 9.81% | EOA | - | \u26a0\ufe0f Monitoring |\n\n---\n\n## 4. \ud83d\udcca SUMMARY TABLE\n\n| Token | Phase | FHS | NBP | BPI | SI | ICR | Top5% | CES | Signal |\n|-------|-------|-----|-----|-----|-----|-----|-------|-----|--------|\n| AIXBT | ACCUM | 5.3 | +44%| 0.0 | 73% | 48.2| 40.3% | 78  | \ud83d\udfe2 SAC+WSE |\n| VVV   | CONS  | 5.1 | -7% | 0.0 | 2%  | 15.6| 2.8%  | 42  | \ud83d\udfe1 WATCH |\n| BRETT | DIST  | 5.0 | -35%| 0.0 | 0%  | 38.3| 16.4% | 32  | \ud83d\udfe1 WEAK DIST|\n| AERO  | DIST  | 4.9 | -57%| 0.0 | 22% | 13.4| 10.1% | 15  | \ud83d\udd34 SELL WALL|\n| VIRTUAL| DIST | 4.9 | -20%| 0.0 | 91% | 70.1| 26.8% | 12  | \ud83d\udd34 ICR CRIT |\n| MORPHO| DIST  | 4.9 | -17%| 0.0 | 0%  | 22.4| 18.4% | 18  | \ud83d\udd34 DIST     |\n\nLegend:\n- \ud83d\udfe2 = CES \u2265 50 (opportunity)\n- \ud83d\udfe1 = CES 30-49 (watch)\n- \ud83d\udd34 = CES < 30 or critical alert\n\n---\n\n## 5. \ud83d\udd04 CHANGES VS PREVIOUS\n\n1. \ud83d\udc8e **SAC (Silent Accumulation): AIXBT** \u2014 NBP accelerated to +44% from previous levels while price remains in a consolidation range.\n2. \ud83c\udfaf **WSE (Whale Syndicate Entry): AIXBT** \u2014 FCI at 70% suggests coordinated funding for recent buy pressure.\n3. \ud83c\udf0a **VPD Absorption: AIXBT** \u2014 Increasing volume relative to local lows with positive NBP.\n4. \ud83d\udc0b **Holder Drift: AERO** \u2014 Top holders continue to maintain or slightly distribute; no new accumulation.\n5. \ud83d\udcca **FHS Stability**: All tokens maintaining \"Moderate\" health (4.9 - 5.3), indicating no immediate collapse but lack of premium structures.\n\n---\n\n## 6. \ud83c\udfaf ACTION PLAN\n\n\ud83d\udccc **RECOMMENDED ENTRIES (CES \u2265 50):**\n- **AIXBT**: CES=78 | Entry $0.0235, Stop $0.0205, Target $0.0320 (R:R = 2.8:1). *Note: Heavily backed by insider funding (FCI 70%) and strengthening NBP.*\n\n\ud83d\udc40 **WATCHLIST (CES 30-49, await confirmation):**\n- **VVV**: Wait for NBP to flip positive (>+15%) or SI to drop further. Currently in stable consolidation.\n- **BRETT**: Monitor for NBP reversal. Current distribution is weakening but still present.\n\n\ud83d\udeaa **RECOMMENDED EXITS:**\n- **AERO**: Exit/Avoid. Sell wall and distribution phase are fully established.\n- **VIRTUAL**: Exit immediately due to ICR > 70. The liquidity pool cannot support a major exit from the top holder.\n\nReport generated: 2026-04-12T14:13:25.916916\nAnalyzed: 2026-04-12 14:15 UTC\nTokens: 6\nTotal alerts: 16\nTop CES: AIXBT = 78/100\n\n\ud83d\udd10 **SEALED ONBASE**: 0x3cdb5d4121b9f880... (TX: Pending)",
+  "raw_report": "# \ud83d\udd2c SENIOR ON-CHAIN FORENSIC ANALYSIS\n\n## 1. \ud83c\udfc6 TOP 3 OPPORTUNITIES\n\n**AIXBT** - CES: 63/100 | FHS: 5.3/10\n- Phase: CONSOLIDATION | CP: 44.3%\n- Active signals: Buy Wall (DAI 0.43), Phase Change (Confirmed), Low FEI, RSI Opportunity ($31.95)\n- Bull Flag: Class 0 | BPI: 0.0 | Fib Target: N/A\n- Holders: Top5 = 40.3% | HD: -7.8% (Bearish Drift) | Structure: Centralized (FCI 70%)\n- Entry zone: $0.0215 - $0.0235 | Stop loss: $0.0205 | Target: $0.0310 (+33%)\n- Risks: Severe ICR (48.17), high insider funding, low 24h volume/liquidity ratio.\n\n**VVV** - CES: 51/100 | FHS: 5.3/10\n- Phase: CONSOLIDATION | CP: 27.3%\n- Active signals: RSI/Price Equilibrium, Stable EV, Low Concentration (Top 5% = 2.8%)\n- Bull Flag: Class 0 | BPI: 0.0 | Fib Target: N/A\n- Holders: Top5 = 2.8% | HD: +0.1% (Stable) | Structure: Fragmented/Professional\n- Entry zone: $7.50 - $8.00 | Stop loss: $7.10 | Target: $10.80 (+35%)\n- Risks: Fragile LCR (1.19%), High ICR (15.7), High LVR (Suspicious rotation).\n\n**MORPHO** - CES: 42/100 | FHS: 5.7/10\n- Phase: DISTRIBUTION | CP: 19.8%\n- Active signals: Extreme Oversold (RSI 10.15), BER 0.016 (Bottom BB), Weakening Distribution\n- Bull Flag: Class 0 | BPI: 0.0 | Fib Target: N/A\n- Holders: Top5 = 18.4% | HD: -3.8% (Bearish Drift) | Structure: Healthy LP/Contract ratio\n- Entry zone: $1.55 - $1.65 (Scalp only) | Stop loss: $1.45 | Target: $1.95\n- Risks: Critical Selling Pressure (NBP -31%), LVR Suspicious (0.27), high ICR (21.8).\n\n---\n\n## 2. \u26a0\ufe0f TOKENS IN DISTRIBUTION / NEGATIVE MOMENTUM\n\n**AERO** \u26a0\ufe0f NEGATIVE MOMENTUM\n- Signal: Intense Distribution / Sell Wall\n- Details: NBP -62%, DAI -0.62, CP 9.4%, Price -9.65%\n- Since: 3rd consecutive cycle of strengthening distribution\n- Recommendation: EXIT / AVOID. No buy pressure to absorb the whale-weighted sell wall.\n\n**VIRTUAL** \u26a0\ufe0f NEGATIVE MOMENTUM\n- Signal: High Slippage Distribution / Fragile Liquidity\n- Details: ICR 70.32 (Critical), NBP -25%, LCR 0.89% (Fragile)\n- Since: 2nd cycle of active expansion to the downside\n- Recommendation: REDUCE. Top holder can nuke 30% of price with only $1.2M.\n\n**BRETT** \u26a0\ufe0f NEGATIVE MOMENTUM\n- Signal: Insider Distribution / Volume Exhaustion\n- Details: NBP -31%, FCI 65.9% (Insider heavy), Volume $3.3k (Dead)\n- Since: Prolonged distribution phase\n- Recommendation: EXIT. Dead pool status with predatory holder structure.\n\n---\n\n## 3. \ud83d\udc0b WHALE WATCH\n\n| Token | Top Whale | % Supply | Type | Entity | Alert |\n|-------|-----------|----------|------|--------|-------|\n| VIRTUAL| 0x501c... | 9.27% | EOA | - | \u26a0\ufe0f Anonymous Whale |\n| AIXBT  | 0xf977... | 24.39% | EOA | - | \ud83d\udea8 High Concentration |\n| AERO   | 0xebf4... | 50.89% | Contract | - | \u2705 Multi-sig/Locker |\n| MORPHO | 0xcba2... | 40.50% | Contract | - | \u2705 Protocol/Vest |\n| VVV    | 0x328d... | 28.72% | Contract | - | \u2705 Active Vault |\n\n---\n\n## 4. \ud83d\udcca SUMMARY TABLE\n\n| Token | Phase | FHS | NBP | BPI | SI | ICR | Top5% | CES | Signal |\n|-------|-------|-----|-----|-----|-----|-----|-------|-----|--------|\n| AIXBT | CONS  | 5.3 | +43%| 0.0 | 0.0 | 48.1| 40.3% | 63  | \ud83d\udfe1 BW+PHC |\n| VVV   | CONS  | 5.3 | -8% | 0.0 | 10.3| 15.7| 2.8%  | 51  | \ud83d\udfe1 NEUT |\n| MORPHO| DIST  | 5.7 | -31%| 0.0 | 0.0 | 21.8| 18.4% | 42  | \u26aa OVERSOLD|\n| VIRTUAL| DIST | 4.9 | -25%| 0.0 | 8.7 | 70.3| 26.8% | 22  | \ud83d\udd34 ICR+LCR |\n| BRETT | DIST  | 5.0 | -31%| 0.0 | 0.0 | 38.4| 16.4% | 15  | \ud83d\udd34 INSIDER |\n| AERO  | DIST  | 5.2 | -62%| 0.0 | 25.1| 13.4| 10.1% | 10  | \ud83d\udd34 SELL_WALL|\n\nLegend: \ud83d\udfe2 \u2265 70 | \ud83d\udfe1 50-69 | \u26aa 30-49 | \ud83d\udd34 < 30\n\n---\n\n## 5. \ud83d\udd04 CHANGES VS PREVIOUS\n\n1. \ud83d\udd04 **AIXBT Phase Change**: Shifted from ACCUMULATION to CONSOLIDATION. NBP remains high (+43%), suggesting absorption of local sellers.\n2. \u26a0\ufe0f **MORPHO Exhaustion**: RSI dropped to 10.15 (Extreme Oversold). Price is tracking near the lower Bollinger Band with no bounce signature yet.\n3. \ud83d\udc0b **Holder Drift (AIXBT)**: Top 5% decreased from 48.2% to 40.3% across the last cycles, indicating gradual distribution by heavy wallets during this consolidation.\n4. \u26a1 **LVR Deadness**: VIRTUAL, AIXBT, and BRETT show \"Dead\" LVR, meaning pool rotation has stalled\u2014risk of liquidity drying up.\n5. \ud83d\udcca **FHS Stabilization**: VVV and AIXBT FHS held steady at 5.3, indicating structural stability despite price pressure.\n\n---\n\n## \ud83c\udfaf ACTION PLAN\n\n\ud83d\udccc **RECOMMENDED ENTRIES (CES \u2265 50):**\n- **AIXBT**: CES=63. Entry $0.023, Stop $0.020 (ICR risk), Target $0.031. **Note**: High manual monitoring required due to ICR 48.1.\n- **VVV**: CES=51. Entry $7.90, Stop $7.10, Target $10.80. Focus on the low Top5 concentration (2.8%) as a safety buffer.\n\n\ud83d\udc40 **WATCHLIST (CES 30-49):**\n- **MORPHO**: Wait for RSI 1h to cross 30. Current internal selling (NBP -31%) is too aggressive for an immediate entry.\n\n\ud83d\udeaa **RECOMMENDED EXITS:**\n- **AERO**: Exit immediately. NBP -62% and DAI -0.62 indicate a massive sell wall that will likely break local support levels.\n- **VIRTUAL**: Exit half position. ICR 70.3 implies catastrophic downside risk if the top whale moves.\n\nReport generated: 2026-04-12T16:13:26Z\nAnalyzed: 2026-04-12 16:25 UTC\nTokens: 6\nTotal alerts: 14\nTop CES: AIXBT = 63/100\n\n\ud83d\udd10 **SEALED ONBASE**: 0xac64215bf0d62d7d... (TX: Pending)",
   "seal": {
-    "report_hash": "3cdb5d4121b9f88000103e47fc7fb36b35605fded255c3850ac18aef0221860e",
+    "report_hash": "ac64215bf0d62d7dbb46c7150dd8e92f7049687cf42af9b01f6d5f6e44efc9e2",
     "tx_hash": null
   },
   "active_signals": [
     {
-      "symbol": "AIXBT",
-      "type": "ACCUMULATION",
-      "status": "CONFIRMED",
-      "since": "2026-04-12 14:13",
-      "note": "Strengthening accumulation"
-    },
-    {
       "symbol": "VIRTUAL",
       "type": "DISTRIBUTION",
       "status": "WEAKENING",
-      "since": "2026-04-12 14:13",
-      "note": "Weakening distribution signal"
+      "since": "previous_cycle",
+      "note": "NBP decrease"
+    },
+    {
+      "symbol": "AIXBT",
+      "type": "PHASE_CHANGE",
+      "status": "CONFIRMED",
+      "since": "current_cycle",
+      "note": "Phase changed to consolidation"
     },
     {
       "symbol": "AERO",
       "type": "DISTRIBUTION",
       "status": "HOLDING",
-      "since": "2026-04-12 14:13",
-      "note": "Stable distribution"
+      "since": "previous_cycle",
+      "note": "Little change"
     },
     {
       "symbol": "MORPHO",
       "type": "DISTRIBUTION",
-      "status": "HOLDING",
-      "since": "2026-04-12 14:13",
-      "note": "Stable distribution"
+      "status": "WEAKENING",
+      "since": "previous_cycle",
+      "note": "NBP decrease"
     },
     {
       "symbol": "BRETT",
       "type": "DISTRIBUTION",
-      "status": "WEAKENING",
-      "since": "2026-04-12 14:13",
-      "note": "Weakening distribution signal"
+      "status": "HOLDING",
+      "since": "previous_cycle",
+      "note": "Little change"
     },
     {
       "symbol": "VVV",
       "type": "CONSOLIDATION",
       "status": "HOLDING",
-      "since": "2026-04-12 14:13",
-      "note": "Stable consolidation"
+      "since": "previous_cycle",
+      "note": "Little change"
     }
   ],
-  "signal_evolution": "### 1. MARKET OVERVIEW\nThe market is currently experiencing a mix of phases, with some tokens in accumulation, distribution, and consolidation. Most tokens are seeing minimal changes in price and volume, with no notable shifts in the overall market trend. The majority of tokens are in a state of distribution or consolidation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any of the tokens, as all have a price delta percentage and volume delta percentage"
+  "signal_evolution": "### 1. MARKET OVERVIEW\nThe overall market appears to be in a state of distribution and consolidation, with most tokens experiencing little to no change in price or volume. Notable shifts include AIXBT's phase change from accumulation to consolidation and MORPHO's significant decrease in NBP.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all tokens experiencing 0% changes in price and volume. However, MORPHO's NBP decreased by 13.8, and A"
 }

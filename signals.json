@@ -1,35 +1,42 @@
 {
-  "updated_at": "2026-04-13T06:13:45.256174+00:00",
-  "cycle": "20260413_0613",
+  "updated_at": "2026-04-13T08:14:01.182745+00:00",
+  "cycle": "20260413_0814",
   "signals": [
     {
       "symbol": "VIRTUAL",
+      "type": "PHASE_CHANGE",
+      "status": "CONFIRMED",
+      "since": "2026-04-13",
+      "note": "Entered accumulation"
+    },
+    {
+      "symbol": "AIXBT",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "Decrease in FHS and increase in NBP"
+      "status": "CONFIRMED",
+      "since": "2026-04-13",
+      "note": "New bull flag detected"
     },
     {
       "symbol": "MORPHO",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Stable FHS and slight increase in NBP"
+      "type": "PHASE_CHANGE",
+      "status": "CONFIRMED",
+      "since": "2026-04-13",
+      "note": "Entered rupture"
     },
     {
       "symbol": "BRETT",
-      "type": "BULL_FLAG",
-      "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "Decrease in FHS and significant decrease in NBP"
+      "type": "PHASE_CHANGE",
+      "status": "CONFIRMED",
+      "since": "2026-04-13",
+      "note": "Entered rupture"
     },
     {
       "symbol": "VVV",
-      "type": "BULL_FLAG",
-      "status": "STRENGTHENING",
-      "since": "previous_cycle",
-      "note": "Increase in FHS and slight increase in NBP"
+      "type": "HOLDING",
+      "status": "HOLDING",
+      "since": "2026-04-13",
+      "note": "No significant changes"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is currently stagnant, with most tokens showing no significant price or volume changes over the last 2 hours. Tokens like VIRTUAL, AIXBT, AERO, MORPHO, BRETT, and VVV are in various phases such as distribution, consolidation, or accumulation, but none have shown substantial movement.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume highlights to report, as all tokens have shown 0% change in price and volume over the last 2 hours. However, it's worth noting the changes in other metrics such as FHS (Fundamental Health Score), NBP (Net Buying Pressure), and ICR (Investor Confidence Rating) for each token, which may indicate underlying shifts in market sentiment or behavior.\n\n### 3. SIGNAL TRACKING\n- **VIRTUAL**: The bull flag detected previously is still active, but with a decrease in FHS (-1.1) and an increase in NBP (7.6), indicating potential weakening of the bull signal.\n- **MORPHO**: The bull flag remains detected with no change in FHS and a slight increase in NBP (3.6), suggesting the signal is holding.\n- **BRETT**: The bull flag is still active, but with a decrease in FHS (-0.3) and a significant decrease in NBP (-14.9), indicating the signal might be weakening.\n- **VVV**: The bull flag remains detected with an increase in FHS (0.9) and a slight increase in NBP (2.1), suggesting the signal is strengthening.\n\n### 4. NEW SIGNALS DETECTED\nNo new significant signals have been detected in this cycle. The market remains relatively stable with no new bull flags or significant phase changes observed.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and increase in NBP\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Stable FHS and slight increase in NBP\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Decrease in FHS and significant decrease in NBP\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"STRENGTHENING\", \"since\": \"previous_cycle\", \"note\": \"Increase in FHS and slight increase in NBP\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the weakening of bull signals in VIRTUAL and BRETT, contrasted with the strengthening signal in VVV, indicating potential shifts in market favor towards certain tokens."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is currently mixed, with some tokens in accumulation, others in distribution, and a few experiencing phase changes. Notable shifts include VIRTUAL entering accumulation and MORPHO moving into rupture. Most tokens have stable prices, with no significant price movements.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements to report, as all tokens have a price delta of 0% and volume delta of 0%. However, some tokens have experienced changes in their metrics, such as FHS, NBP, and phase changes.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: WEAKENING ⚠️ — FHS decreased by 0.5, and the phase changed from distribution to accumulation.\n- AIXBT: CONFIRMED ✅ — A new bull flag was detected, and FHS decreased by 0.8.\n- MORPHO: CONFIRMED ✅ — The phase changed from distribution to rupture, and FHS increased by 0.6.\n- BRETT: CONFIRMED ✅ — The phase changed from consolidation to rupture, with no change in FHS.\n- VVV: HOLDING ⏳ — FHS decreased by 0.5, with no significant changes in other metrics.\n\n### 4. NEW SIGNALS DETECTED\nNew signals include a bull flag detected for AIXBT and phase changes for VIRTUAL, MORPHO, and BRETT.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-13\", \"note\": \"Entered accumulation\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-13\", \"note\": \"New bull flag detected\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-13\", \"note\": \"Entered rupture\"},\n  {\"symbol\": \"BRETT\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-13\", \"note\": \"Entered rupture\"},\n  {\"symbol\": \"VVV\", \"type\": \"HOLDING\", \"status\": \"HOLDING\", \"since\": \"2026-04-13\", \"note\": \"No significant changes\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the detection of new bull flags and phase changes, indicating potential shifts in market trends and opportunities for trading."
 }

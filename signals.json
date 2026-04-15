@@ -1,35 +1,42 @@
 {
-  "updated_at": "2026-04-15T12:13:48.368173+00:00",
-  "cycle": "20260415_1213",
+  "updated_at": "2026-04-15T14:13:43.442735+00:00",
+  "cycle": "20260415_1413",
   "signals": [
     {
-      "symbol": "VIRTUAL",
+      "symbol": "AERO",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
-      "since": "2026-04-15",
-      "note": "New bull flag with decreased FHS and increased NBP"
+      "since": "2026-04-15 14:13",
+      "note": "new bull flag detected"
     },
     {
-      "symbol": "AIXBT",
+      "symbol": "MORPHO",
       "type": "BULL_FLAG",
       "status": "CONFIRMED",
-      "since": "2026-04-15",
-      "note": "New bull flag with decreased FHS and decreased NBP"
+      "since": "2026-04-15 14:13",
+      "note": "new bull flag detected"
     },
     {
       "symbol": "BRETT",
-      "type": "BULL_FLAG",
+      "type": "PHASE_CHANGE",
       "status": "CONFIRMED",
-      "since": "2026-04-15",
-      "note": "New bull flag with decreased FHS, increased NBP, and phase change to consolidation"
+      "since": "2026-04-15 14:13",
+      "note": "phase changed to accumulation"
     },
     {
       "symbol": "VVV",
       "type": "PHASE_CHANGE",
       "status": "CONFIRMED",
-      "since": "2026-04-15",
-      "note": "Phase change from consolidation to accumulation"
+      "since": "2026-04-15 14:13",
+      "note": "phase changed to consolidation"
+    },
+    {
+      "symbol": "VIRTUAL",
+      "type": "BULL_FLAG_LOST",
+      "status": "WEAKENING",
+      "since": "2026-04-15 14:13",
+      "note": "lost bull flag"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is mixed, with some tokens in accumulation and others in distribution. Notable shifts include VIRTUAL and BRETT, which have new bull flags detected, and VVV, which has changed its phase from consolidation to accumulation. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any of the tokens, as all price and volume deltas are 0%. However, liquidity and market sentiment changes are observed through changes in FHS (Fear, Greed, and Sentiment), NBP (Net Buying Pressure), and ICR (Investor Confidence Rating) for several tokens.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: CONFIRMED ✅ — New bull flag detected with a significant decrease in FHS (-1.8) and an increase in NBP (3.8).\n- AIXBT: CONFIRMED ✅ — New bull flag detected with a decrease in FHS (-1.2) and a decrease in NBP (-13.7).\n- AERO: HOLDING ⏳ — No significant changes in signals or metrics.\n- MORPHO: HOLDING ⏳ — Minor changes in FHS (-0.6) and NBP (0.3) but no new signals.\n- BRETT: CONFIRMED ✅ — New bull flag detected with a significant decrease in FHS (-1.4), a large increase in NBP (20.1), and a phase change from distribution to consolidation.\n- VVV: CONFIRMED ✅ — Phase change from consolidation to accumulation with minor changes in NBP (2.5).\n\n### 4. NEW SIGNALS DETECTED\nNew bull flags have been detected for VIRTUAL, AIXBT, and BRETT. Additionally, VVV has transitioned from consolidation to accumulation, and BRETT has changed its phase from distribution to consolidation.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-15\", \"note\": \"New bull flag with decreased FHS and increased NBP\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-15\", \"note\": \"New bull flag with decreased FHS and decreased NBP\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-15\", \"note\": \"New bull flag with decreased FHS, increased NBP, and phase change to consolidation\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-15\", \"note\": \"Phase change from consolidation to accumulation\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe detection of new bull flags in VIRTUAL, AIXBT, and BRETT, along with phase changes in BRETT and VVV, indicates a potential shift in market sentiment towards accumulation and consolidation for these tokens."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is currently mixed, with some tokens in accumulation and others in distribution. Notable shifts include VIRTUAL and BRETT in accumulation, while AIXBT and AERO are in distribution. MORPHO has also entered accumulation.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nAlthough there are no significant price movements (all prices are at $0.000000), volume and liquidity changes are not reported. However, we can observe changes in other metrics such as FHS, NBP, and phase changes. For instance, BRETT's NBP increased by 22.3, and its phase changed from consolidation to accumulation.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: WEAKENING ⚠️ — lost bull flag, FHS increased by 1.8\n- AIXBT: HOLDING ⏳ — no significant changes\n- AERO: CONFIRMED ✅ — new bull flag detected, FHS decreased by 1.1\n- MORPHO: CONFIRMED ✅ — new bull flag detected, FHS decreased by 1.0\n- BRETT: CONFIRMED ✅ — phase changed to accumulation, NBP increased by 22.3\n- VVV: CONFIRMED ✅ — new bull flag detected, phase changed to consolidation\n\n### 4. NEW SIGNALS DETECTED\nNew signals detected include bull flags in AERO and MORPHO, and phase changes in BRETT and VVV.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-15 14:13\", \"note\": \"new bull flag detected\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-15 14:13\", \"note\": \"new bull flag detected\"},\n  {\"symbol\": \"BRETT\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-15 14:13\", \"note\": \"phase changed to accumulation\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"2026-04-15 14:13\", \"note\": \"phase changed to consolidation\"},\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG_LOST\", \"status\": \"WEAKENING\", \"since\": \"2026-04-15 14:13\", \"note\": \"lost bull flag\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is the detection of new bull flags in AERO and MORPHO, indicating potential accumulation and upcoming price movements."
 }

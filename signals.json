@@ -1,35 +1,49 @@
 {
-  "updated_at": "2026-04-15T02:13:45.997342+00:00",
-  "cycle": "20260415_0213",
+  "updated_at": "2026-04-15T04:13:48.966620+00:00",
+  "cycle": "20260415_0413",
   "signals": [
     {
       "symbol": "VIRTUAL",
       "type": "ACCUMULATION",
       "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "Continued accumulation"
+      "since": "2026-04-15 04:13",
+      "note": "Continued accumulation with NBP increase"
     },
     {
       "symbol": "AIXBT",
       "type": "DISTRIBUTION",
       "status": "WEAKENING",
-      "since": "previous_cycle",
-      "note": "Weakening distribution signal"
+      "since": "2026-04-15 04:13",
+      "note": "Distribution signal weakening with small NBP increase"
     },
     {
       "symbol": "MORPHO",
-      "type": "PHASE_CHANGE",
-      "status": "CONFIRMED",
-      "since": "current_cycle",
-      "note": "Changed to consolidation phase"
+      "type": "CONSOLIDATION",
+      "status": "HOLDING",
+      "since": "2026-04-15 04:13",
+      "note": "Consolidation phase continues with small NBP increase"
     },
     {
       "symbol": "VVV",
-      "type": "PHASE_CHANGE",
-      "status": "INVALIDATED",
-      "since": "current_cycle",
-      "note": "Lost bull flag and entered distribution potential"
+      "type": "DISTRIBUTION_POTENTIELLE",
+      "status": "HOLDING",
+      "since": "2026-04-15 04:13",
+      "note": "Distribution potential continues with small NBP increase"
+    },
+    {
+      "symbol": "AERO",
+      "type": "DISTRIBUTION",
+      "status": "HOLDING",
+      "since": "2026-04-15 04:13",
+      "note": "Distribution phase continues with small NBP increase"
+    },
+    {
+      "symbol": "BRETT",
+      "type": "DISTRIBUTION",
+      "status": "WEAKENING",
+      "since": "2026-04-15 04:13",
+      "note": "Distribution signal weakening with NBP decrease"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is mixed, with some tokens in distribution and others in accumulation or consolidation. Notable shifts include MORPHO changing from distribution to consolidation and VVV transitioning from accumulation to distribution potential.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price movements (>2%) or volume changes (>20%) were observed for any token in the provided data.\n\n### 3. SIGNAL TRACKING\n- **VIRTUAL**: HOLDING ⏳ — Accumulation phase continues with minor changes in metrics.\n- **AIXBT**: WEAKENING ⚠️ — Distribution phase continues with a significant decrease in NBP.\n- **AERO**: HOLDING ⏳ — Distribution phase continues with minor changes in metrics.\n- **MORPHO**: CONFIRMED ✅ — Phase change to consolidation with improvements in NBP and FHS.\n- **BRETT**: HOLDING ⏳ — Distribution phase continues with minor improvements in NBP.\n- **VVV**: INVALIDATED ❌ — Lost bull flag and phase change from accumulation to distribution potential.\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags or significant accumulation signals were detected. However, MORPHO's phase change to consolidation and VVV's transition to distribution potential are notable.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Continued accumulation\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"Weakening distribution signal\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Changed to consolidation phase\"},\n  {\"symbol\": \"VVV\", \"type\": \"PHASE_CHANGE\", \"status\": \"INVALIDATED\", \"since\": \"current_cycle\", \"note\": \"Lost bull flag and entered distribution potential\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist is MORPHO's phase change to consolidation, indicating a potential shift in market dynamics for this token."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is currently experiencing a mix of accumulation and distribution phases across different tokens. Most tokens, such as AIXBT, AERO, BRETT, and VVV, are in a distribution phase, while VIRTUAL is in an accumulation phase. MORPHO is in a consolidation phase. There are no notable shifts in the overall market trend.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements in any of the tokens, with all price and volume deltas being 0%. However, some tokens have notable changes in their metrics: VIRTUAL's NBP increased by 10.2, AIXBT's NBP increased by 2.2, AERO's NBP increased by 1.4, MORPHO's NBP increased by 0.9, BRETT's NBP decreased by 5.5, and VVV's NBP increased by 0.6.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: ACCUMULATION (status: HOLDING) — Continued accumulation with an increase in NBP.\n- AIXBT: DISTRIBUTION (status: WEAKENING) — Distribution signal is weakening with a small increase in NBP.\n- MORPHO: CONSOLIDATION (status: HOLDING) — Consolidation phase continues with a small increase in NBP.\n- VVV: DISTRIBUTION_POTENTIELLE (status: HOLDING) — Distribution potential continues with a small increase in NBP.\n- AERO: DISTRIBUTION (status: HOLDING) — Distribution phase continues with a small increase in NBP.\n- BRETT: DISTRIBUTION (status: WEAKENING) — Distribution signal is weakening with a decrease in NBP.\n\n### 4. NEW SIGNALS DETECTED\nNo new signals are detected in this cycle. However, VIRTUAL's accumulation phase is continuing, and its NBP increase is notable.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"ACCUMULATION\", \"status\": \"HOLDING\", \"since\": \"2026-04-15 04:13\", \"note\": \"Continued accumulation with NBP increase\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-15 04:13\", \"note\": \"Distribution signal weakening with small NBP increase\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"CONSOLIDATION\", \"status\": \"HOLDING\", \"since\": \"2026-04-15 04:13\", \"note\": \"Consolidation phase continues with small NBP increase\"},\n  {\"symbol\": \"VVV\", \"type\": \"DISTRIBUTION_POTENTIELLE\", \"status\": \"HOLDING\", \"since\": \"2026-04-15 04:13\", \"note\": \"Distribution potential continues with small NBP increase\"},\n  {\"symbol\": \"AERO\", \"type\": \"DISTRIBUTION\", \"status\": \"HOLDING\", \"since\": \"2026-04-15 04:13\", \"note\": \"Distribution phase continues with small NBP increase\"},\n  {\"symbol\": \"BRETT\", \"type\": \"DISTRIBUTION\", \"status\": \"WEAKENING\", \"since\": \"2026-04-15 04:13\", \"note\": \"Distribution signal weakening with NBP decrease\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is VIRTUAL's continued accumulation phase with a notable increase in its NBP, indicating potential for further growth."
 }

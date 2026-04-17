@@ -1,42 +1,75 @@
 {
-  "updated_at": "2026-04-17T12:13:41.097098+00:00",
-  "cycle": "20260417_1213",
-  "signals": [
+  "generated_at": "2026-04-17T14:13:31.462859+00:00",
+  "evaluated_source": "2026-04-17T14:13:25.016311+00:00",
+  "token_count": 6,
+  "approved_bot": [],
+  "approved_lt": [],
+  "vetoed": [
     {
-      "symbol": "VIRTUAL",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "bull flag still active"
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "RSI_oversold",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "VETO",
+      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP below -20.",
+      "snapshot": {
+        "price_usd": 0.03086,
+        "rsi_1h": 29.47,
+        "fhs": 4.0,
+        "phase": "DISTRIBUTION",
+        "nbp": -31.23209169054441,
+        "wcc_z24": 0.11624763874381865,
+        "lvr_z24": 1.058716010831828,
+        "vol_z24": 1.1611461214308065,
+        "lmi": 0.08532195135697024,
+        "nbr": 0.3438395415472779
+      },
+      "ts": "2026-04-17T14:13:31.462823+00:00"
     },
     {
       "symbol": "AERO",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "bull flag still active"
-    },
-    {
-      "symbol": "MORPHO",
-      "type": "PHASE_CHANGE",
-      "status": "CONFIRMED",
-      "since": "current_cycle",
-      "note": "phase changed to consolidation"
-    },
-    {
-      "symbol": "BRETT",
-      "type": "BULL_FLAG",
-      "status": "CONFIRMED",
-      "since": "previous_cycle",
-      "note": "bull flag still active"
-    },
-    {
-      "symbol": "VVV",
-      "type": "BULL_FLAG",
-      "status": "HOLDING",
-      "since": "previous_cycle",
-      "note": "bull flag still active"
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "BullFlag",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "VETO",
+      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP below -20 and extreme RSI contradiction.",
+      "snapshot": {
+        "price_usd": 0.4358,
+        "rsi_1h": 78.97,
+        "fhs": 4.5,
+        "phase": "DISTRIBUTION",
+        "nbp": -22.391084093211752,
+        "wcc_z24": 0.7337993857053485,
+        "lvr_z24": 2.022475394770176,
+        "vol_z24": 2.0733187668154835,
+        "lmi": 0.02782841742190978,
+        "nbr": 0.3880445795339412
+      },
+      "ts": "2026-04-17T14:13:31.462854+00:00"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is mixed, with some tokens in accumulation, others in distribution, and a few in consolidation. Notable shifts include MORPHO's phase change from accumulation to consolidation. Most tokens have seen minimal price and volume changes.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed for any token, with all price and volume deltas at 0%. However, notable changes in other metrics include MORPHO's NBP increase by 22.8 and BRETT's NBP increase by 10.7.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: HOLDING ⏳ — bull flag still active\n- AIXBT: HOLDING ⏳ — no bull flag\n- AERO: HOLDING ⏳ — bull flag still active\n- MORPHO: CONFIRMED ✅ — phase changed to consolidation, bull flag still active\n- BRETT: CONFIRMED ✅ — bull flag still active\n- VVV: HOLDING ⏳ — bull flag still active\n\n### 4. NEW SIGNALS DETECTED\nNo new bull flags were detected. However, MORPHO's phase change to consolidation is a significant development.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"phase changed to consolidation\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"}\n]\n```\n\n### 6. KEY INSIGHT\nMORPHO's phase change to consolidation, accompanied by a significant increase in its NBP, is the most important development across the watchlist right now."
+  "stats": {
+    "candidates_bot": 0,
+    "candidates_lt": 2,
+    "submitted_venice": 2,
+    "approved_bot": 0,
+    "approved_lt": 0,
+    "vetoed": 2
+  },
+  "venice_decisions": [
+    {
+      "symbol": "AIXBT",
+      "decision": "VETO",
+      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP below -20."
+    },
+    {
+      "symbol": "AERO",
+      "decision": "VETO",
+      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP below -20 and extreme RSI contradiction."
+    }
+  ]
 }

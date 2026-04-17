@@ -1,32 +1,56 @@
 {
-  "generated_at": "2026-04-17T14:13:31.462859+00:00",
-  "evaluated_source": "2026-04-17T14:13:25.016311+00:00",
+  "generated_at": "2026-04-17T16:14:53.592105+00:00",
+  "evaluated_source": "2026-04-17T16:13:23.933732+00:00",
   "token_count": 6,
   "approved_bot": [],
-  "approved_lt": [],
+  "approved_lt": [
+    {
+      "symbol": "MORPHO",
+      "chain": "base",
+      "direction": "SHORT",
+      "signal": "NBP_positive",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "SHORT is consistent with high RSI and positive NBP context",
+      "snapshot": {
+        "price_usd": 1.98,
+        "rsi_1h": 80.06,
+        "fhs": 5.5,
+        "phase": "CONSOLIDATION",
+        "nbp": 29.925756710451175,
+        "wcc_z24": 0.2294157338705691,
+        "lvr_z24": 0.23820500634898537,
+        "vol_z24": 0.5118120800841851,
+        "lmi": 0.18781610901844398,
+        "nbr": 0.6496287835522558
+      },
+      "ts": "2026-04-17T16:14:53.592102+00:00"
+    }
+  ],
   "vetoed": [
     {
       "symbol": "AIXBT",
       "chain": "base",
       "direction": "LONG",
-      "signal": "RSI_oversold",
+      "signal": "FHS_high",
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "VETO",
-      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP below -20.",
+      "reason": "LONG contradicts DISTRIBUTION phase with NBP < -20",
       "snapshot": {
-        "price_usd": 0.03086,
-        "rsi_1h": 29.47,
-        "fhs": 4.0,
+        "price_usd": 0.03021,
+        "rsi_1h": 41.15,
+        "fhs": 5.0,
         "phase": "DISTRIBUTION",
-        "nbp": -31.23209169054441,
-        "wcc_z24": 0.11624763874381865,
-        "lvr_z24": 1.058716010831828,
-        "vol_z24": 1.1611461214308065,
-        "lmi": 0.08532195135697024,
-        "nbr": 0.3438395415472779
+        "nbp": -34.42622950819672,
+        "wcc_z24": -0.9639815611103626,
+        "lvr_z24": 1.0456251064044304,
+        "vol_z24": 1.1006208314232417,
+        "lmi": 0.01281422873959128,
+        "nbr": 0.32786885245901637
       },
-      "ts": "2026-04-17T14:13:31.462823+00:00"
+      "ts": "2026-04-17T16:14:53.592062+00:00"
     },
     {
       "symbol": "AERO",
@@ -36,40 +60,45 @@
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "VETO",
-      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP below -20 and extreme RSI contradiction.",
+      "reason": "Extreme RSI contradiction for LONG direction",
       "snapshot": {
-        "price_usd": 0.4358,
-        "rsi_1h": 78.97,
-        "fhs": 4.5,
+        "price_usd": 0.4484,
+        "rsi_1h": 97.08,
+        "fhs": 4.9,
         "phase": "DISTRIBUTION",
-        "nbp": -22.391084093211752,
-        "wcc_z24": 0.7337993857053485,
-        "lvr_z24": 2.022475394770176,
-        "vol_z24": 2.0733187668154835,
-        "lmi": 0.02782841742190978,
-        "nbr": 0.3880445795339412
+        "nbp": -16.628175519630485,
+        "wcc_z24": 0.6546536707079801,
+        "lvr_z24": 2.237455991133029,
+        "vol_z24": 2.293845028712898,
+        "lmi": 0.055471869701016696,
+        "nbr": 0.4168591224018476
       },
-      "ts": "2026-04-17T14:13:31.462854+00:00"
+      "ts": "2026-04-17T16:14:53.592095+00:00"
     }
   ],
   "stats": {
     "candidates_bot": 0,
-    "candidates_lt": 2,
-    "submitted_venice": 2,
+    "candidates_lt": 3,
+    "submitted_venice": 3,
     "approved_bot": 0,
-    "approved_lt": 0,
+    "approved_lt": 1,
     "vetoed": 2
   },
   "venice_decisions": [
     {
       "symbol": "AIXBT",
       "decision": "VETO",
-      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP below -20."
+      "reason": "LONG contradicts DISTRIBUTION phase with NBP < -20"
     },
     {
       "symbol": "AERO",
       "decision": "VETO",
-      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP below -20 and extreme RSI contradiction."
+      "reason": "Extreme RSI contradiction for LONG direction"
+    },
+    {
+      "symbol": "MORPHO",
+      "decision": "APPROVE",
+      "reason": "SHORT is consistent with high RSI and positive NBP context"
     }
   ]
 }

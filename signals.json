@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-17T20:13:32.739723+00:00",
-  "evaluated_source": "2026-04-17T20:13:24.706244+00:00",
+  "generated_at": "2026-04-17T22:13:36.039849+00:00",
+  "evaluated_source": "2026-04-17T22:13:25.265427+00:00",
   "token_count": 6,
   "approved_bot": [],
   "approved_lt": [
@@ -12,20 +12,20 @@
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "REDUCE",
-      "reason": "LONG signal conflicts with DISTRIBUTION phase and low confidence score",
+      "reason": "LONG signal contradicts DISTRIBUTION phase and low confidence score.",
       "snapshot": {
-        "price_usd": 0.4435,
-        "rsi_1h": 67.2,
-        "fhs": 4.6,
+        "price_usd": 0.4428,
+        "rsi_1h": 63.07,
+        "fhs": 4.4,
         "phase": "DISTRIBUTION",
-        "nbp": -16.721693532724803,
-        "wcc_z24": 0.4999999999999966,
-        "lvr_z24": 2.183866330434989,
-        "vol_z24": 2.1389443529844816,
-        "lmi": -0.012307789223328734,
-        "nbr": 0.416391532336376
+        "nbp": -18.181818181818183,
+        "wcc_z24": 0.4200840252083954,
+        "lvr_z24": 1.716656332607861,
+        "vol_z24": 1.6897306266296865,
+        "lmi": -0.023689331282180977,
+        "nbr": 0.4090909090909091
       },
-      "ts": "2026-04-17T20:13:32.739714+00:00"
+      "ts": "2026-04-17T22:13:36.039839+00:00"
     },
     {
       "symbol": "MORPHO",
@@ -35,20 +35,20 @@
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "APPROVE",
-      "reason": "SHORT signal is consistent with high RSI and positive NBP during consolidation",
+      "reason": "SHORT signal is consistent with high RSI and positive NBP mean-reversion.",
       "snapshot": {
-        "price_usd": 1.96,
-        "rsi_1h": 72.4,
-        "fhs": 5.1,
+        "price_usd": 1.94,
+        "rsi_1h": 68.03,
+        "fhs": 5.0,
         "phase": "CONSOLIDATION",
-        "nbp": 21.545844910330892,
+        "nbp": 20.957178841309823,
         "wcc_z24": 0.2294157338705691,
-        "lvr_z24": 0.7993716704217539,
-        "vol_z24": 1.0995655287393575,
-        "lmi": 0.0332754318840029,
-        "nbr": 0.6077292245516545
+        "lvr_z24": 0.7754878318929441,
+        "vol_z24": 1.112923989794419,
+        "lmi": 0.012676001020607636,
+        "nbr": 0.6047858942065492
       },
-      "ts": "2026-04-17T20:13:32.739720+00:00"
+      "ts": "2026-04-17T22:13:36.039846+00:00"
     }
   ],
   "vetoed": [
@@ -60,20 +60,20 @@
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "VETO",
-      "reason": "LONG direction contradicts heavy DISTRIBUTION phase with NBP of -55.2",
+      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP < -20.",
       "snapshot": {
         "price_usd": 0.02969,
-        "rsi_1h": 46.22,
+        "rsi_1h": 53.76,
         "fhs": 5.3,
         "phase": "DISTRIBUTION",
-        "nbp": -55.22788203753352,
-        "wcc_z24": -0.2345088235604827,
-        "lvr_z24": 0.0021620552903163547,
-        "vol_z24": 0.021426900237663374,
-        "lmi": -0.010679061578986413,
-        "nbr": 0.22386058981233245
+        "nbp": -58.70786516853933,
+        "wcc_z24": -0.09578262852211464,
+        "lvr_z24": -0.30201743747629445,
+        "vol_z24": -0.2603781442792825,
+        "lmi": -0.0175939642794907,
+        "nbr": 0.20646067415730338
       },
-      "ts": "2026-04-17T20:13:32.739685+00:00"
+      "ts": "2026-04-17T22:13:36.039811+00:00"
     }
   ],
   "stats": {
@@ -88,17 +88,17 @@
     {
       "symbol": "AIXBT",
       "decision": "VETO",
-      "reason": "LONG direction contradicts heavy DISTRIBUTION phase with NBP of -55.2"
+      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP < -20."
     },
     {
       "symbol": "AERO",
       "decision": "REDUCE",
-      "reason": "LONG signal conflicts with DISTRIBUTION phase and low confidence score"
+      "reason": "LONG signal contradicts DISTRIBUTION phase and low confidence score."
     },
     {
       "symbol": "MORPHO",
       "decision": "APPROVE",
-      "reason": "SHORT signal is consistent with high RSI and positive NBP during consolidation"
+      "reason": "SHORT signal is consistent with high RSI and positive NBP mean-reversion."
     }
   ]
 }

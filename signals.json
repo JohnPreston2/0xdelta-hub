@@ -1,49 +1,49 @@
 {
-  "updated_at": "2026-04-17T08:13:44.519748+00:00",
-  "cycle": "20260417_0813",
+  "updated_at": "2026-04-17T10:13:53.296400+00:00",
+  "cycle": "20260417_1013",
   "signals": [
     {
       "symbol": "VIRTUAL",
       "type": "BULL_FLAG",
-      "status": "WEAKENING",
+      "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "FHS and NBP decreased"
+      "note": "bull flag still active"
     },
     {
       "symbol": "AIXBT",
       "type": "BULL_FLAG",
       "status": "WEAKENING",
       "since": "previous_cycle",
-      "note": "FHS and NBP decreased"
+      "note": "bull flag lost"
     },
     {
       "symbol": "AERO",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "Minimal changes"
+      "note": "bull flag still active"
     },
     {
       "symbol": "MORPHO",
       "type": "PHASE_CHANGE",
       "status": "CONFIRMED",
       "since": "current_cycle",
-      "note": "Phase changed to consolidation, FHS and NBP increased"
+      "note": "phase changed to accumulation"
     },
     {
       "symbol": "BRETT",
-      "type": "BULL_FLAG",
+      "type": "PHASE_CHANGE",
       "status": "CONFIRMED",
       "since": "current_cycle",
-      "note": "New bull flag, phase changed to distribution"
+      "note": "phase changed to consolidation"
     },
     {
       "symbol": "VVV",
       "type": "BULL_FLAG",
       "status": "HOLDING",
       "since": "previous_cycle",
-      "note": "FHS increased, NBP decreased"
+      "note": "bull flag still active"
     }
   ],
-  "evolution_report": "### 1. MARKET OVERVIEW\nThe overall market is showing mixed signals, with some tokens in accumulation (VIRTUAL, VVV), others in distribution (AIXBT, AERO, BRETT), and one in consolidation (MORPHO). Notable shifts include MORPHO's phase change from distribution potentielle to consolidation and BRETT's phase change from distribution potentielle to distribution, accompanied by a new bull flag.\n\n### 2. PRICE & VOLUME HIGHLIGHTS\nNo significant price or volume movements were observed in the last cycle, with all tokens showing 0% changes in price and volume. However, notable changes in other metrics include VIRTUAL's FHS decrease by 0.7, AIXBT's FHS decrease by 1.6, and MORPHO's FHS increase by 0.5, along with its phase change.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: WEAKENING ⚠️ — FHS decreased, NBP decreased\n- AIXBT: WEAKENING ⚠️ — FHS decreased, NBP decreased\n- AERO: HOLDING ⏳ — Minimal changes\n- MORPHO: CONFIRMED ✅ — FHS increased, NBP increased, phase changed to consolidation\n- BRETT: CONFIRMED ✅ — New bull flag, phase changed to distribution\n- VVV: HOLDING ⏳ — FHS increased, but NBP decreased\n\n### 4. NEW SIGNALS DETECTED\n- BRETT: New bull flag detected, phase changed from distribution potentielle to distribution.\n- MORPHO: Phase change from distribution potentielle to consolidation, with an increase in FHS and NBP.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"FHS and NBP decreased\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"FHS and NBP decreased\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"Minimal changes\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"Phase changed to consolidation, FHS and NBP increased\"},\n  {\"symbol\": \"BRETT\", \"type\": \"BULL_FLAG\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"New bull flag, phase changed to distribution\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"FHS increased, NBP decreased\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most significant development across the watchlist is MORPHO's phase change to consolidation, accompanied by increases in FHS and NBP, indicating a potential strengthening of its accumulation phase."
+  "evolution_report": "### 1. MARKET OVERVIEW\nThe market is currently mixed, with some tokens in accumulation, distribution, or consolidation phases. Notable shifts include MORPHO changing from consolidation to accumulation and BRETT changing from distribution to consolidation. \n\n### 2. PRICE & VOLUME HIGHLIGHTS\nThere are no significant price or volume movements for any token, with all price deltas and volume deltas being 0%. However, some tokens have seen changes in their metrics such as FHS, NBP, and BPI. For example, AIXBT's FHS increased by 2.6, and MORPHO's FHS increased by 1.1.\n\n### 3. SIGNAL TRACKING\n- VIRTUAL: HOLDING ⏳ - The bull flag detected is still active, but there are no significant changes in its metrics.\n- AIXBT: WEAKENING ⚠️ - The bull flag detected was lost, and its FHS increased, but its NBP and BPI decreased.\n- AERO: HOLDING ⏳ - The bull flag detected is still active, with minimal changes in its metrics.\n- MORPHO: CONFIRMED ✅ - The phase changed to accumulation, and its FHS and NBP increased.\n- BRETT: CONFIRMED ✅ - The phase changed to consolidation, and its NBP increased.\n- VVV: HOLDING ⏳ - The bull flag detected is still active, with minimal changes in its metrics.\n\n### 4. NEW SIGNALS DETECTED\nNo new signals were detected this cycle. However, some tokens have seen changes in their phases, such as MORPHO and BRETT.\n\n### 5. SIGNAL WATCHLIST\n```json\n[\n  {\"symbol\": \"VIRTUAL\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"AIXBT\", \"type\": \"BULL_FLAG\", \"status\": \"WEAKENING\", \"since\": \"previous_cycle\", \"note\": \"bull flag lost\"},\n  {\"symbol\": \"AERO\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"},\n  {\"symbol\": \"MORPHO\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"phase changed to accumulation\"},\n  {\"symbol\": \"BRETT\", \"type\": \"PHASE_CHANGE\", \"status\": \"CONFIRMED\", \"since\": \"current_cycle\", \"note\": \"phase changed to consolidation\"},\n  {\"symbol\": \"VVV\", \"type\": \"BULL_FLAG\", \"status\": \"HOLDING\", \"since\": \"previous_cycle\", \"note\": \"bull flag still active\"}\n]\n```\n\n### 6. KEY INSIGHT\nThe most important thing happening across the watchlist right now is the phase changes in MORPHO and BRETT, which may indicate a shift in market sentiment."
 }

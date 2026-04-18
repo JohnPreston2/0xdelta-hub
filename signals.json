@@ -1,31 +1,54 @@
 {
-  "generated_at": "2026-04-18T02:13:32.558787+00:00",
-  "evaluated_source": "2026-04-18T02:13:24.553280+00:00",
+  "generated_at": "2026-04-18T04:13:37.022533+00:00",
+  "evaluated_source": "2026-04-18T04:13:25.805275+00:00",
   "token_count": 6,
   "approved_bot": [],
   "approved_lt": [
     {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "RSI_oversold",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.03039,
+        "rsi_1h": 33.87,
+        "fhs": 4.1,
+        "phase": "DISTRIBUTION",
+        "nbp": -47.99154334038055,
+        "wcc_z24": -0.20412414523193045,
+        "lvr_z24": -1.8894403271659816,
+        "vol_z24": -1.7656856974089712,
+        "lmi": 0.0005663934663948803,
+        "nbr": 0.26004228329809725
+      },
+      "ts": "2026-04-18T04:13:37.022462+00:00"
+    },
+    {
       "symbol": "AERO",
       "chain": "base",
       "direction": "LONG",
-      "signal": "WCC_high_z",
+      "signal": "WCC_RSI_combo",
       "horizon": "T+12",
       "confidence": 40.0,
-      "decision": "REDUCE",
-      "reason": "LONG signal contradicts DISTRIBUTION phase and low confidence score.",
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.4349,
-        "rsi_1h": 53.18,
-        "fhs": 3.7,
+        "price_usd": 0.4342,
+        "rsi_1h": 45.34,
+        "fhs": 3.2,
         "phase": "DISTRIBUTION",
-        "nbp": -15.889359983848173,
-        "wcc_z24": 3.162277660168379,
-        "lvr_z24": 1.3906735560251697,
-        "vol_z24": 1.3465777567698032,
-        "lmi": -0.0012727016846752833,
-        "nbr": 0.42055320008075914
+        "nbp": -15.776699029126215,
+        "wcc_z24": 2.47358930863565,
+        "lvr_z24": 1.2607264107290364,
+        "vol_z24": 1.2195070532939476,
+        "lmi": 0.0004507194729183389,
+        "nbr": 0.4211165048543689
       },
-      "ts": "2026-04-18T02:13:32.558777+00:00"
+      "ts": "2026-04-18T04:13:37.022522+00:00"
     },
     {
       "symbol": "VVV",
@@ -35,70 +58,30 @@
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "APPROVE",
-      "reason": "Signal is consistent with ACCUMULATION phase and positive NBP.",
+      "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 8.99,
-        "rsi_1h": 48.8,
-        "fhs": 3.3,
+        "price_usd": 8.88,
+        "rsi_1h": 48.42,
+        "fhs": 4.2,
         "phase": "ACCUMULATION",
-        "nbp": 20.219690805532952,
-        "wcc_z24": 1.5275252316519472,
-        "lvr_z24": 1.5633951291568704,
-        "vol_z24": 1.591978585515416,
-        "lmi": -0.006806351657028316,
-        "nbr": 0.6010984540276648
+        "nbp": 18.551130678407045,
+        "wcc_z24": 1.3627702877384935,
+        "lvr_z24": 1.5668395908129271,
+        "vol_z24": 1.5253830619908395,
+        "lmi": 0.010671914284458895,
+        "nbr": 0.5927556533920352
       },
-      "ts": "2026-04-18T02:13:32.558784+00:00"
+      "ts": "2026-04-18T04:13:37.022529+00:00"
     }
   ],
-  "vetoed": [
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "FHS_high",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "VETO",
-      "reason": "LONG direction contradicts heavy DISTRIBUTION phase with NBP below -20.",
-      "snapshot": {
-        "price_usd": 0.02961,
-        "rsi_1h": 54.12,
-        "fhs": 5.3,
-        "phase": "DISTRIBUTION",
-        "nbp": -61.29032258064516,
-        "wcc_z24": -0.14797908710009627,
-        "lvr_z24": -1.9708660099450446,
-        "vol_z24": -1.8366193447310128,
-        "lmi": -0.13208151131407384,
-        "nbr": 0.1935483870967742
-      },
-      "ts": "2026-04-18T02:13:32.558749+00:00"
-    }
-  ],
+  "vetoed": [],
   "stats": {
     "candidates_bot": 0,
     "candidates_lt": 3,
     "submitted_venice": 3,
     "approved_bot": 0,
-    "approved_lt": 2,
-    "vetoed": 1
+    "approved_lt": 3,
+    "vetoed": 0
   },
-  "venice_decisions": [
-    {
-      "symbol": "AIXBT",
-      "decision": "VETO",
-      "reason": "LONG direction contradicts heavy DISTRIBUTION phase with NBP below -20."
-    },
-    {
-      "symbol": "AERO",
-      "decision": "REDUCE",
-      "reason": "LONG signal contradicts DISTRIBUTION phase and low confidence score."
-    },
-    {
-      "symbol": "VVV",
-      "decision": "APPROVE",
-      "reason": "Signal is consistent with ACCUMULATION phase and positive NBP."
-    }
-  ]
+  "venice_decisions": []
 }

@@ -1,76 +1,87 @@
 {
-  "generated_at": "2026-04-18T06:13:32.118444+00:00",
-  "evaluated_source": "2026-04-18T06:13:25.594958+00:00",
+  "generated_at": "2026-04-18T08:13:37.449269+00:00",
+  "evaluated_source": "2026-04-18T08:13:26.240939+00:00",
   "token_count": 6,
   "approved_bot": [],
   "approved_lt": [
     {
-      "symbol": "VVV",
+      "symbol": "AIXBT",
       "chain": "base",
       "direction": "LONG",
-      "signal": "WCC_RSI_combo",
+      "signal": "LVR_deceleration",
       "horizon": "T+12",
       "confidence": 40.0,
-      "decision": "REDUCE",
-      "reason": "Consistent with ACCUMULATION phase but confidence score is low.",
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 9.061,
-        "rsi_1h": 41.57,
-        "fhs": 3.2,
-        "phase": "ACCUMULATION",
-        "nbp": 21.726190476190478,
-        "wcc_z24": 1.2247448713915894,
-        "lvr_z24": 0.7068840488206793,
-        "vol_z24": 0.7478204167855083,
-        "lmi": -0.07526991571163985,
-        "nbr": 0.6086309523809523
-      },
-      "ts": "2026-04-18T06:13:32.118440+00:00"
-    }
-  ],
-  "vetoed": [
-    {
-      "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "WCC_RSI_combo",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "VETO",
-      "reason": "LONG direction contradicts DISTRIBUTION phase and negative NBP trend.",
-      "snapshot": {
-        "price_usd": 0.4383,
-        "rsi_1h": 28.43,
-        "fhs": 3.0,
+        "price_usd": 0.03027,
+        "rsi_1h": 46.35,
+        "fhs": 4.1,
         "phase": "DISTRIBUTION",
-        "nbp": -17.295873573309922,
-        "wcc_z24": 2.0647416048350498,
-        "lvr_z24": 0.7156500067366918,
-        "vol_z24": 0.7139308566200341,
-        "lmi": -0.06342536930292349,
-        "nbr": 0.4135206321334504
+        "nbp": -34.048257372654156,
+        "wcc_z24": 0.845154254728516,
+        "lvr_z24": -2.0340839348028283,
+        "vol_z24": -1.9841000792550858,
+        "lmi": -0.048535336838313015,
+        "nbr": 0.3297587131367292
       },
-      "ts": "2026-04-18T06:13:32.118409+00:00"
-    }
-  ],
-  "stats": {
-    "candidates_bot": 0,
-    "candidates_lt": 2,
-    "submitted_venice": 2,
-    "approved_bot": 0,
-    "approved_lt": 1,
-    "vetoed": 1
-  },
-  "venice_decisions": [
+      "ts": "2026-04-18T08:13:37.449229+00:00"
+    },
     {
       "symbol": "AERO",
-      "decision": "VETO",
-      "reason": "LONG direction contradicts DISTRIBUTION phase and negative NBP trend."
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "WCC_high_z",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.4394,
+        "rsi_1h": 51.33,
+        "fhs": 2.9,
+        "phase": "DISTRIBUTION",
+        "nbp": -17.599999999999998,
+        "wcc_z24": 1.782084222427267,
+        "lvr_z24": 0.5626627034063602,
+        "vol_z24": 0.5701234207823269,
+        "lmi": -0.010710216781648574,
+        "nbr": 0.412
+      },
+      "ts": "2026-04-18T08:13:37.449259+00:00"
     },
     {
       "symbol": "VVV",
-      "decision": "REDUCE",
-      "reason": "Consistent with ACCUMULATION phase but confidence score is low."
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "WCC_RSI_combo",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 9.17,
+        "rsi_1h": 49.86,
+        "fhs": 3.0,
+        "phase": "ACCUMULATION",
+        "nbp": 23.345101500441306,
+        "wcc_z24": 1.105541596785133,
+        "lvr_z24": 0.23209477838809445,
+        "vol_z24": 0.3130033160746882,
+        "lmi": -0.04753077090871135,
+        "nbr": 0.6167255075022066
+      },
+      "ts": "2026-04-18T08:13:37.449266+00:00"
     }
-  ]
+  ],
+  "vetoed": [],
+  "stats": {
+    "candidates_bot": 0,
+    "candidates_lt": 3,
+    "submitted_venice": 3,
+    "approved_bot": 0,
+    "approved_lt": 3,
+    "vetoed": 0
+  },
+  "venice_decisions": []
 }

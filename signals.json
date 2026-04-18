@@ -1,55 +1,9 @@
 {
-  "generated_at": "2026-04-18T04:13:37.022533+00:00",
-  "evaluated_source": "2026-04-18T04:13:25.805275+00:00",
+  "generated_at": "2026-04-18T06:13:32.118444+00:00",
+  "evaluated_source": "2026-04-18T06:13:25.594958+00:00",
   "token_count": 6,
   "approved_bot": [],
   "approved_lt": [
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "RSI_oversold",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.03039,
-        "rsi_1h": 33.87,
-        "fhs": 4.1,
-        "phase": "DISTRIBUTION",
-        "nbp": -47.99154334038055,
-        "wcc_z24": -0.20412414523193045,
-        "lvr_z24": -1.8894403271659816,
-        "vol_z24": -1.7656856974089712,
-        "lmi": 0.0005663934663948803,
-        "nbr": 0.26004228329809725
-      },
-      "ts": "2026-04-18T04:13:37.022462+00:00"
-    },
-    {
-      "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "WCC_RSI_combo",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.4342,
-        "rsi_1h": 45.34,
-        "fhs": 3.2,
-        "phase": "DISTRIBUTION",
-        "nbp": -15.776699029126215,
-        "wcc_z24": 2.47358930863565,
-        "lvr_z24": 1.2607264107290364,
-        "vol_z24": 1.2195070532939476,
-        "lmi": 0.0004507194729183389,
-        "nbr": 0.4211165048543689
-      },
-      "ts": "2026-04-18T04:13:37.022522+00:00"
-    },
     {
       "symbol": "VVV",
       "chain": "base",
@@ -57,31 +11,66 @@
       "signal": "WCC_RSI_combo",
       "horizon": "T+12",
       "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
+      "decision": "REDUCE",
+      "reason": "Consistent with ACCUMULATION phase but confidence score is low.",
       "snapshot": {
-        "price_usd": 8.88,
-        "rsi_1h": 48.42,
-        "fhs": 4.2,
+        "price_usd": 9.061,
+        "rsi_1h": 41.57,
+        "fhs": 3.2,
         "phase": "ACCUMULATION",
-        "nbp": 18.551130678407045,
-        "wcc_z24": 1.3627702877384935,
-        "lvr_z24": 1.5668395908129271,
-        "vol_z24": 1.5253830619908395,
-        "lmi": 0.010671914284458895,
-        "nbr": 0.5927556533920352
+        "nbp": 21.726190476190478,
+        "wcc_z24": 1.2247448713915894,
+        "lvr_z24": 0.7068840488206793,
+        "vol_z24": 0.7478204167855083,
+        "lmi": -0.07526991571163985,
+        "nbr": 0.6086309523809523
       },
-      "ts": "2026-04-18T04:13:37.022529+00:00"
+      "ts": "2026-04-18T06:13:32.118440+00:00"
     }
   ],
-  "vetoed": [],
+  "vetoed": [
+    {
+      "symbol": "AERO",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "WCC_RSI_combo",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "VETO",
+      "reason": "LONG direction contradicts DISTRIBUTION phase and negative NBP trend.",
+      "snapshot": {
+        "price_usd": 0.4383,
+        "rsi_1h": 28.43,
+        "fhs": 3.0,
+        "phase": "DISTRIBUTION",
+        "nbp": -17.295873573309922,
+        "wcc_z24": 2.0647416048350498,
+        "lvr_z24": 0.7156500067366918,
+        "vol_z24": 0.7139308566200341,
+        "lmi": -0.06342536930292349,
+        "nbr": 0.4135206321334504
+      },
+      "ts": "2026-04-18T06:13:32.118409+00:00"
+    }
+  ],
   "stats": {
     "candidates_bot": 0,
-    "candidates_lt": 3,
-    "submitted_venice": 3,
+    "candidates_lt": 2,
+    "submitted_venice": 2,
     "approved_bot": 0,
-    "approved_lt": 3,
-    "vetoed": 0
+    "approved_lt": 1,
+    "vetoed": 1
   },
-  "venice_decisions": []
+  "venice_decisions": [
+    {
+      "symbol": "AERO",
+      "decision": "VETO",
+      "reason": "LONG direction contradicts DISTRIBUTION phase and negative NBP trend."
+    },
+    {
+      "symbol": "VVV",
+      "decision": "REDUCE",
+      "reason": "Consistent with ACCUMULATION phase but confidence score is low."
+    }
+  ]
 }

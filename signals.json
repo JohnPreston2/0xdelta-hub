@@ -1,87 +1,104 @@
 {
-  "generated_at": "2026-04-18T08:13:37.449269+00:00",
-  "evaluated_source": "2026-04-18T08:13:26.240939+00:00",
+  "generated_at": "2026-04-18T10:13:31.362957+00:00",
+  "evaluated_source": "2026-04-18T10:13:24.938165+00:00",
   "token_count": 6,
   "approved_bot": [],
   "approved_lt": [
     {
-      "symbol": "AIXBT",
+      "symbol": "MORPHO",
       "chain": "base",
       "direction": "LONG",
-      "signal": "LVR_deceleration",
+      "signal": "NBP_positive",
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
+      "reason": "Signal is consistent with ACCUMULATION phase and positive NBP",
       "snapshot": {
-        "price_usd": 0.03027,
-        "rsi_1h": 46.35,
-        "fhs": 4.1,
-        "phase": "DISTRIBUTION",
-        "nbp": -34.048257372654156,
-        "wcc_z24": 0.845154254728516,
-        "lvr_z24": -2.0340839348028283,
-        "vol_z24": -1.9841000792550858,
-        "lmi": -0.048535336838313015,
-        "nbr": 0.3297587131367292
+        "price_usd": 1.92,
+        "rsi_1h": 39.85,
+        "fhs": 2.7,
+        "phase": "ACCUMULATION",
+        "nbp": 15.43553084458565,
+        "wcc_z24": 0.2294157338705691,
+        "lvr_z24": 1.0913049063391485,
+        "vol_z24": 1.0585619035645966,
+        "lmi": 0.0009976231827655275,
+        "nbr": 0.5771776542229282
       },
-      "ts": "2026-04-18T08:13:37.449229+00:00"
-    },
+      "ts": "2026-04-18T10:13:31.362947+00:00"
+    }
+  ],
+  "vetoed": [
     {
       "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "WCC_high_z",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.4394,
-        "rsi_1h": 51.33,
-        "fhs": 2.9,
-        "phase": "DISTRIBUTION",
-        "nbp": -17.599999999999998,
-        "wcc_z24": 1.782084222427267,
-        "lvr_z24": 0.5626627034063602,
-        "vol_z24": 0.5701234207823269,
-        "lmi": -0.010710216781648574,
-        "nbr": 0.412
-      },
-      "ts": "2026-04-18T08:13:37.449259+00:00"
-    },
-    {
-      "symbol": "VVV",
       "chain": "base",
       "direction": "LONG",
       "signal": "WCC_RSI_combo",
       "horizon": "T+12",
       "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
+      "decision": "VETO",
+      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP below -20",
       "snapshot": {
-        "price_usd": 9.17,
-        "rsi_1h": 49.86,
-        "fhs": 3.0,
-        "phase": "ACCUMULATION",
-        "nbp": 23.345101500441306,
-        "wcc_z24": 1.105541596785133,
-        "lvr_z24": 0.23209477838809445,
-        "vol_z24": 0.3130033160746882,
-        "lmi": -0.04753077090871135,
-        "nbr": 0.6167255075022066
+        "price_usd": 0.4306,
+        "rsi_1h": 36.14,
+        "fhs": 4.2,
+        "phase": "DISTRIBUTION",
+        "nbp": -22.872340425531913,
+        "wcc_z24": 1.5689290811054748,
+        "lvr_z24": 0.5230903367500753,
+        "vol_z24": 0.4889013492017566,
+        "lmi": 0.009604688989180397,
+        "nbr": 0.38563829787234044
       },
-      "ts": "2026-04-18T08:13:37.449266+00:00"
+      "ts": "2026-04-18T10:13:31.362920+00:00"
+    },
+    {
+      "symbol": "BRETT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "RSI_oversold",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "VETO",
+      "reason": "High-risk token LONG signal with confidence below 60",
+      "snapshot": {
+        "price_usd": 0.00748,
+        "rsi_1h": 22.62,
+        "fhs": 5.0,
+        "phase": "CONSOLIDATION",
+        "nbp": -7.526881720430108,
+        "wcc_z24": 0.0,
+        "lvr_z24": -1.185669644373954,
+        "vol_z24": -1.3080224887829575,
+        "lmi": 0.05342212749061266,
+        "nbr": 0.46236559139784944
+      },
+      "ts": "2026-04-18T10:13:31.362953+00:00"
     }
   ],
-  "vetoed": [],
   "stats": {
     "candidates_bot": 0,
     "candidates_lt": 3,
     "submitted_venice": 3,
     "approved_bot": 0,
-    "approved_lt": 3,
-    "vetoed": 0
+    "approved_lt": 1,
+    "vetoed": 2
   },
-  "venice_decisions": []
+  "venice_decisions": [
+    {
+      "symbol": "AERO",
+      "decision": "VETO",
+      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP below -20"
+    },
+    {
+      "symbol": "MORPHO",
+      "decision": "APPROVE",
+      "reason": "Signal is consistent with ACCUMULATION phase and positive NBP"
+    },
+    {
+      "symbol": "BRETT",
+      "decision": "VETO",
+      "reason": "High-risk token LONG signal with confidence below 60"
+    }
+  ]
 }

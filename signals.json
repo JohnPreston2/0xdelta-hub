@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-17T22:13:36.039849+00:00",
-  "evaluated_source": "2026-04-17T22:13:25.265427+00:00",
+  "generated_at": "2026-04-18T00:13:33.437766+00:00",
+  "evaluated_source": "2026-04-18T00:13:25.995111+00:00",
   "token_count": 6,
   "approved_bot": [],
   "approved_lt": [
@@ -12,43 +12,43 @@
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "REDUCE",
-      "reason": "LONG signal contradicts DISTRIBUTION phase and low confidence score.",
+      "reason": "BullFlag signal contradicts DISTRIBUTION phase and low confidence score.",
       "snapshot": {
-        "price_usd": 0.4428,
-        "rsi_1h": 63.07,
-        "fhs": 4.4,
+        "price_usd": 0.435,
+        "rsi_1h": 57.27,
+        "fhs": 4.0,
         "phase": "DISTRIBUTION",
-        "nbp": -18.181818181818183,
-        "wcc_z24": 0.4200840252083954,
-        "lvr_z24": 1.716656332607861,
-        "vol_z24": 1.6897306266296865,
-        "lmi": -0.023689331282180977,
-        "nbr": 0.4090909090909091
+        "nbp": -18.325655918285598,
+        "wcc_z24": 0.3333333333333199,
+        "lvr_z24": 1.5571202788751155,
+        "vol_z24": 1.5053265999364256,
+        "lmi": 0.00900243655723347,
+        "nbr": 0.408371720408572
       },
-      "ts": "2026-04-17T22:13:36.039839+00:00"
+      "ts": "2026-04-18T00:13:33.437757+00:00"
     },
     {
-      "symbol": "MORPHO",
+      "symbol": "VVV",
       "chain": "base",
-      "direction": "SHORT",
-      "signal": "NBP_positive",
+      "direction": "LONG",
+      "signal": "WCC_RSI_combo",
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "APPROVE",
-      "reason": "SHORT signal is consistent with high RSI and positive NBP mean-reversion.",
+      "reason": "LONG signal is consistent with ACCUMULATION phase and positive NBP.",
       "snapshot": {
-        "price_usd": 1.94,
-        "rsi_1h": 68.03,
-        "fhs": 5.0,
-        "phase": "CONSOLIDATION",
-        "nbp": 20.957178841309823,
-        "wcc_z24": 0.2294157338705691,
-        "lvr_z24": 0.7754878318929441,
-        "vol_z24": 1.112923989794419,
-        "lmi": 0.012676001020607636,
-        "nbr": 0.6047858942065492
+        "price_usd": 8.82,
+        "rsi_1h": 44.89,
+        "fhs": 4.3,
+        "phase": "ACCUMULATION",
+        "nbp": 18.733401430030643,
+        "wcc_z24": 1.7320508075688774,
+        "lvr_z24": 1.6636550059553699,
+        "vol_z24": 1.6605126285621412,
+        "lmi": 0.028682171479092064,
+        "nbr": 0.5936670071501532
       },
-      "ts": "2026-04-17T22:13:36.039846+00:00"
+      "ts": "2026-04-18T00:13:33.437763+00:00"
     }
   ],
   "vetoed": [
@@ -60,20 +60,20 @@
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "VETO",
-      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP < -20.",
+      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP significantly below -20.",
       "snapshot": {
-        "price_usd": 0.02969,
-        "rsi_1h": 53.76,
+        "price_usd": 0.02909,
+        "rsi_1h": 56.18,
         "fhs": 5.3,
         "phase": "DISTRIBUTION",
-        "nbp": -58.70786516853933,
+        "nbp": -54.69448584202683,
         "wcc_z24": -0.09578262852211464,
-        "lvr_z24": -0.30201743747629445,
-        "vol_z24": -0.2603781442792825,
-        "lmi": -0.0175939642794907,
-        "nbr": 0.20646067415730338
+        "lvr_z24": -0.9379311081019553,
+        "vol_z24": -0.9165699876813196,
+        "lmi": -0.0511367808673829,
+        "nbr": 0.22652757078986588
       },
-      "ts": "2026-04-17T22:13:36.039811+00:00"
+      "ts": "2026-04-18T00:13:33.437733+00:00"
     }
   ],
   "stats": {
@@ -88,17 +88,17 @@
     {
       "symbol": "AIXBT",
       "decision": "VETO",
-      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP < -20."
+      "reason": "LONG direction contradicts DISTRIBUTION phase with NBP significantly below -20."
     },
     {
       "symbol": "AERO",
       "decision": "REDUCE",
-      "reason": "LONG signal contradicts DISTRIBUTION phase and low confidence score."
+      "reason": "BullFlag signal contradicts DISTRIBUTION phase and low confidence score."
     },
     {
-      "symbol": "MORPHO",
+      "symbol": "VVV",
       "decision": "APPROVE",
-      "reason": "SHORT signal is consistent with high RSI and positive NBP mean-reversion."
+      "reason": "LONG signal is consistent with ACCUMULATION phase and positive NBP."
     }
   ]
 }

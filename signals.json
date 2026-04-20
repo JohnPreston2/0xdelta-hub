@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-20T18:13:33.120793+00:00",
-  "evaluated_source": "2026-04-20T18:13:24.651233+00:00",
+  "generated_at": "2026-04-20T20:13:35.255755+00:00",
+  "evaluated_source": "2026-04-20T20:13:25.058288+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -11,23 +11,23 @@
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 0.5,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.7,
-      "narrative": "A stealthy exit of liquidity is underway in a potential distribution phase, though low volatility and slightly positive NBP necessitate a reduced size and tight stop-loss.",
+      "multiplier": 0.8,
+      "tp_ratio": 1.2,
+      "sl_ratio": 0.5,
+      "narrative": "A quiet exodus of liquidity in a potential distribution zone suggests a slow breakdown despite low volatility.",
       "snapshot": {
-        "price_usd": 1.95,
-        "rsi_1h": 55.57,
+        "price_usd": 1.94,
+        "rsi_1h": 46.05,
         "fhs": 1.9,
         "phase": "DISTRIBUTION_POTENTIELLE",
-        "nbp": 2.972292191435768,
+        "nbp": 3.0982905982905984,
         "wcc_z24": 0.0,
-        "lvr_z24": -1.7059302932570846,
-        "vol_z24": -2.091572601143022,
-        "lmi": -0.08537349342849947,
-        "nbr": 0.5148614609571789
+        "lvr_z24": -1.635075929773183,
+        "vol_z24": -1.898185879120399,
+        "lmi": -0.02974005201583459,
+        "nbr": 0.5154914529914529
       },
-      "ts": "2026-04-20T18:13:33.120779+00:00"
+      "ts": "2026-04-20T20:13:35.255726+00:00"
     }
   ],
   "approved_lt": [],
@@ -43,20 +43,46 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "The technical BullFlag is a trap as the asset is in a confirmed Distribution phase with heavy negative buying pressure (-30.5) signaling a breakdown.",
+      "narrative": "A deceptive bull flag trapped in a distribution phase with collapsing net buying pressure and negative momentum.",
       "snapshot": {
-        "price_usd": 0.3928,
-        "rsi_1h": 64.67,
-        "fhs": 4.6,
+        "price_usd": 0.3906,
+        "rsi_1h": 63.67,
+        "fhs": 4.0,
         "phase": "DISTRIBUTION",
-        "nbp": -30.465527401296406,
-        "wcc_z24": 0.197385508487932,
-        "lvr_z24": 1.9372294498438285,
-        "vol_z24": 2.0182026822332833,
-        "lmi": 0.004940473393132552,
-        "nbr": 0.34767236299351795
+        "nbp": -31.144631765749782,
+        "wcc_z24": 0.10804236090984612,
+        "lvr_z24": 1.8933149175374722,
+        "vol_z24": 1.9218165274107035,
+        "lmi": 0.011375737384775856,
+        "nbr": 0.3442768411712511
       },
-      "ts": "2026-04-20T18:13:33.120755+00:00"
+      "ts": "2026-04-20T20:13:35.255690+00:00"
+    },
+    {
+      "symbol": "BRETT",
+      "chain": "base",
+      "direction": "SHORT",
+      "signal": "RSI_overbought",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Shorting an accumulation phase backed by strong whale flow and positive buying pressure is a high-risk contrarian trap.",
+      "snapshot": {
+        "price_usd": 0.007224,
+        "rsi_1h": 73.21,
+        "fhs": 4.3,
+        "phase": "ACCUMULATION",
+        "nbp": 12.0,
+        "wcc_z24": 1.7320508075688803,
+        "lvr_z24": 1.5473957082261653,
+        "vol_z24": 1.6643847924739579,
+        "lmi": 0.01722916690597784,
+        "nbr": 0.56
+      },
+      "ts": "2026-04-20T20:13:35.255735+00:00"
     },
     {
       "symbol": "AERO",
@@ -68,36 +94,59 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.3928,
-        "rsi_1h": 64.67,
-        "fhs": 4.6,
+        "price_usd": 0.3906,
+        "rsi_1h": 63.67,
+        "fhs": 4.0,
         "phase": "DISTRIBUTION",
-        "nbp": -30.465527401296406,
-        "wcc_z24": 0.197385508487932,
-        "lvr_z24": 1.9372294498438285,
-        "vol_z24": 2.0182026822332833,
-        "lmi": 0.004940473393132552,
-        "nbr": 0.34767236299351795
+        "nbp": -31.144631765749782,
+        "wcc_z24": 0.10804236090984612,
+        "lvr_z24": 1.8933149175374722,
+        "vol_z24": 1.9218165274107035,
+        "lmi": 0.011375737384775856,
+        "nbr": 0.3442768411712511
       },
-      "ts": "2026-04-20T18:13:33.120788+00:00"
+      "ts": "2026-04-20T20:13:35.255744+00:00"
+    },
+    {
+      "symbol": "BRETT",
+      "chain": "base",
+      "direction": "SHORT",
+      "signal": "RSI_overbought",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.007224,
+        "rsi_1h": 73.21,
+        "fhs": 4.3,
+        "phase": "ACCUMULATION",
+        "nbp": 12.0,
+        "wcc_z24": 1.7320508075688803,
+        "lvr_z24": 1.5473957082261653,
+        "vol_z24": 1.6643847924739579,
+        "lmi": 0.01722916690597784,
+        "nbr": 0.56
+      },
+      "ts": "2026-04-20T20:13:35.255751+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 2,
-    "candidates_lt": 2,
-    "submitted_venice": 2,
+    "candidates_bot": 3,
+    "candidates_lt": 3,
+    "submitted_venice": 3,
     "approved_bot": 1,
     "approved_lt": 0,
-    "vetoed": 2
+    "vetoed": 4
   },
   "venice_decisions": [
     {
       "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 0.5,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.7,
-      "narrative": "A stealthy exit of liquidity is underway in a potential distribution phase, though low volatility and slightly positive NBP necessitate a reduced size and tight stop-loss."
+      "multiplier": 0.8,
+      "tp_ratio": 1.2,
+      "sl_ratio": 0.5,
+      "narrative": "A quiet exodus of liquidity in a potential distribution zone suggests a slow breakdown despite low volatility."
     },
     {
       "symbol": "AERO",
@@ -105,10 +154,26 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "The technical BullFlag is a trap as the asset is in a confirmed Distribution phase with heavy negative buying pressure (-30.5) signaling a breakdown."
+      "narrative": "A deceptive bull flag trapped in a distribution phase with collapsing net buying pressure and negative momentum."
+    },
+    {
+      "symbol": "BRETT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Shorting an accumulation phase backed by strong whale flow and positive buying pressure is a high-risk contrarian trap."
     },
     {
       "symbol": "AERO",
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
+    },
+    {
+      "symbol": "BRETT",
       "action": "SKIP",
       "multiplier": 1.0,
       "tp_ratio": 1.5,
@@ -123,15 +188,23 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "The technical BullFlag is a trap as the asset is in a confirmed Distribution phase with heavy negative buying pressure (-30.5) signaling a breakdown."
+      "narrative": "A deceptive bull flag trapped in a distribution phase with collapsing net buying pressure and negative momentum."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 0.5,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.7,
-      "narrative": "A stealthy exit of liquidity is underway in a potential distribution phase, though low volatility and slightly positive NBP necessitate a reduced size and tight stop-loss."
+      "multiplier": 0.8,
+      "tp_ratio": 1.2,
+      "sl_ratio": 0.5,
+      "narrative": "A quiet exodus of liquidity in a potential distribution zone suggests a slow breakdown despite low volatility."
+    },
+    {
+      "symbol": "BRETT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Shorting an accumulation phase backed by strong whale flow and positive buying pressure is a high-risk contrarian trap."
     }
   ]
 }

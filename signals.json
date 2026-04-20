@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-20T14:13:33.038253+00:00",
-  "evaluated_source": "2026-04-20T14:13:25.106248+00:00",
+  "generated_at": "2026-04-20T16:13:36.032749+00:00",
+  "evaluated_source": "2026-04-20T16:13:26.482971+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -11,23 +11,49 @@
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 3.5,
-      "sl_ratio": 1.2,
-      "narrative": "A textbook distribution play where fading liquidity and negative buying pressure signal a controlled descent in a low-volatility environment.",
+      "multiplier": 0.5,
+      "tp_ratio": 1.5,
+      "sl_ratio": 0.5,
+      "narrative": "A low-velocity drift into distribution where exiting liquidity suggests a slow bleed, requiring a tight leash on risk due to the lack of volatility.",
       "snapshot": {
-        "price_usd": 1.94,
-        "rsi_1h": 53.59,
-        "fhs": 4.0,
-        "phase": "DISTRIBUTION",
-        "nbp": -11.22754491017964,
+        "price_usd": 1.95,
+        "rsi_1h": 60.4,
+        "fhs": 2.0,
+        "phase": "DISTRIBUTION_POTENTIELLE",
+        "nbp": 2.515723270440252,
         "wcc_z24": 0.0,
-        "lvr_z24": -0.8868775874592915,
-        "vol_z24": -1.4339292663985852,
-        "lmi": -0.03946167195161115,
-        "nbr": 0.4438622754491018
+        "lvr_z24": -1.4638999025153518,
+        "vol_z24": -1.978524393162371,
+        "lmi": -0.1409815811578927,
+        "nbr": 0.5125786163522013
       },
-      "ts": "2026-04-20T14:13:33.038239+00:00"
+      "ts": "2026-04-20T16:13:36.032730+00:00"
+    },
+    {
+      "symbol": "BRETT",
+      "chain": "base",
+      "direction": "SHORT",
+      "signal": "RSI_overbought",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 0.8,
+      "tp_ratio": 2.5,
+      "sl_ratio": 1.0,
+      "narrative": "A volatile climax where overbought conditions meet a distribution phase, creating a high-energy reversal opportunity despite whale attempts to support the floor.",
+      "snapshot": {
+        "price_usd": 0.007127,
+        "rsi_1h": 65.17,
+        "fhs": 5.6,
+        "phase": "DISTRIBUTION",
+        "nbp": -12.658227848101266,
+        "wcc_z24": 2.380476142847614,
+        "lvr_z24": 2.05574891745763,
+        "vol_z24": 2.2008290521582703,
+        "lmi": -0.009164002716931002,
+        "nbr": 0.43670886075949367
+      },
+      "ts": "2026-04-20T16:13:36.032737+00:00"
     }
   ],
   "approved_lt": [],
@@ -43,20 +69,20 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed: The technical bull flag is a trap as the asset is in a distribution phase with heavy negative buying pressure.",
+      "narrative": "A textbook trap where the signal suggests a bull flag but the distribution phase and heavy negative buying pressure indicate the smart money has already left the building.",
       "snapshot": {
-        "price_usd": 0.3929,
-        "rsi_1h": 68.35,
-        "fhs": 3.4,
+        "price_usd": 0.3878,
+        "rsi_1h": 60.3,
+        "fhs": 3.8,
         "phase": "DISTRIBUTION",
-        "nbp": -36.56649806605177,
-        "wcc_z24": 0.8911483716013541,
-        "lvr_z24": 1.802584616746048,
-        "vol_z24": 1.95340307017357,
-        "lmi": 0.056505934650341,
-        "nbr": 0.31716750966974117
+        "nbp": -37.01951507983442,
+        "wcc_z24": -0.9526068799876519,
+        "lvr_z24": 1.9375415571073435,
+        "vol_z24": 1.9957416715882919,
+        "lmi": 0.020851199101874413,
+        "nbr": 0.3149024246008279
       },
-      "ts": "2026-04-20T14:13:33.038215+00:00"
+      "ts": "2026-04-20T16:13:36.032708+00:00"
     },
     {
       "symbol": "AERO",
@@ -68,25 +94,25 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.3929,
-        "rsi_1h": 68.35,
-        "fhs": 3.4,
+        "price_usd": 0.3878,
+        "rsi_1h": 60.3,
+        "fhs": 3.8,
         "phase": "DISTRIBUTION",
-        "nbp": -36.56649806605177,
-        "wcc_z24": 0.8911483716013541,
-        "lvr_z24": 1.802584616746048,
-        "vol_z24": 1.95340307017357,
-        "lmi": 0.056505934650341,
-        "nbr": 0.31716750966974117
+        "nbp": -37.01951507983442,
+        "wcc_z24": -0.9526068799876519,
+        "lvr_z24": 1.9375415571073435,
+        "vol_z24": 1.9957416715882919,
+        "lmi": 0.020851199101874413,
+        "nbr": 0.3149024246008279
       },
-      "ts": "2026-04-20T14:13:33.038248+00:00"
+      "ts": "2026-04-20T16:13:36.032745+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 2,
-    "candidates_lt": 2,
-    "submitted_venice": 2,
-    "approved_bot": 1,
+    "candidates_bot": 3,
+    "candidates_lt": 3,
+    "submitted_venice": 3,
+    "approved_bot": 2,
     "approved_lt": 0,
     "vetoed": 2
   },
@@ -94,10 +120,18 @@
     {
       "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 3.5,
-      "sl_ratio": 1.2,
-      "narrative": "A textbook distribution play where fading liquidity and negative buying pressure signal a controlled descent in a low-volatility environment."
+      "multiplier": 0.5,
+      "tp_ratio": 1.5,
+      "sl_ratio": 0.5,
+      "narrative": "A low-velocity drift into distribution where exiting liquidity suggests a slow bleed, requiring a tight leash on risk due to the lack of volatility."
+    },
+    {
+      "symbol": "BRETT",
+      "action": "TRADE",
+      "multiplier": 0.8,
+      "tp_ratio": 2.5,
+      "sl_ratio": 1.0,
+      "narrative": "A volatile climax where overbought conditions meet a distribution phase, creating a high-energy reversal opportunity despite whale attempts to support the floor."
     },
     {
       "symbol": "AERO",
@@ -105,7 +139,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed: The technical bull flag is a trap as the asset is in a distribution phase with heavy negative buying pressure."
+      "narrative": "A textbook trap where the signal suggests a bull flag but the distribution phase and heavy negative buying pressure indicate the smart money has already left the building."
     },
     {
       "symbol": "AERO",
@@ -123,15 +157,23 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed: The technical bull flag is a trap as the asset is in a distribution phase with heavy negative buying pressure."
+      "narrative": "A textbook trap where the signal suggests a bull flag but the distribution phase and heavy negative buying pressure indicate the smart money has already left the building."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 3.5,
-      "sl_ratio": 1.2,
-      "narrative": "A textbook distribution play where fading liquidity and negative buying pressure signal a controlled descent in a low-volatility environment."
+      "multiplier": 0.5,
+      "tp_ratio": 1.5,
+      "sl_ratio": 0.5,
+      "narrative": "A low-velocity drift into distribution where exiting liquidity suggests a slow bleed, requiring a tight leash on risk due to the lack of volatility."
+    },
+    {
+      "symbol": "BRETT",
+      "action": "TRADE",
+      "multiplier": 0.8,
+      "tp_ratio": 2.5,
+      "sl_ratio": 1.0,
+      "narrative": "A volatile climax where overbought conditions meet a distribution phase, creating a high-energy reversal opportunity despite whale attempts to support the floor."
     }
   ]
 }

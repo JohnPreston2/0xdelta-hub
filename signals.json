@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-21T08:13:39.676191+00:00",
-  "evaluated_source": "2026-04-21T08:13:27.395270+00:00",
+  "generated_at": "2026-04-21T10:13:34.724136+00:00",
+  "evaluated_source": "2026-04-21T10:13:25.922867+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -11,53 +11,53 @@
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 0.5,
-      "tp_ratio": 0.045,
+      "multiplier": 0.8,
+      "tp_ratio": 0.05,
       "sl_ratio": 0.015,
-      "narrative": "Quiet accumulation is occurring in a low-volatility environment, but exiting liquidity requires a very tight defensive stance.",
+      "narrative": "Quiet accumulation with positive buying pressure is underway, though negative liquidity velocity necessitates a very tight stop-loss.",
       "snapshot": {
         "price_usd": 1.98,
-        "rsi_1h": 58.07,
-        "fhs": 3.6,
+        "rsi_1h": 63.71,
+        "fhs": 3.3,
         "phase": "ACCUMULATION",
-        "nbp": 19.27319922128488,
+        "nbp": 15.462610899873258,
         "wcc_z24": 0.0,
-        "lvr_z24": -1.1071765210118587,
-        "vol_z24": -1.1086388005433323,
-        "lmi": -0.03971371116976234,
-        "nbr": 0.5963659961064244
+        "lvr_z24": -1.0222383989292074,
+        "vol_z24": -1.0251027263365284,
+        "lmi": -0.011476264698483878,
+        "nbr": 0.5773130544993663
       },
-      "ts": "2026-04-21T08:13:39.676172+00:00"
-    },
-    {
-      "symbol": "VVV",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "WCC_low_ACCUM",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 0.7,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.018,
-      "narrative": "Strong retail buying pressure is fighting an oversold floor, creating a high-conviction accumulation play despite whale-driven liquidity outflows.",
-      "snapshot": {
-        "price_usd": 9.35,
-        "rsi_1h": 33.42,
-        "fhs": 3.5,
-        "phase": "ACCUMULATION",
-        "nbp": 33.17960543171919,
-        "wcc_z24": -1.372578044995728,
-        "lvr_z24": -1.7379359210137686,
-        "vol_z24": -1.7268806678162893,
-        "lmi": -0.0702814281273258,
-        "nbr": 0.6658980271585959
-      },
-      "ts": "2026-04-21T08:13:39.676179+00:00"
+      "ts": "2026-04-21T10:13:34.724117+00:00"
     }
   ],
   "approved_lt": [],
   "vetoed": [
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "FHS_high",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed due to distribution phase and heavy negative buying pressure indicating a bull trap despite the high health score.",
+      "snapshot": {
+        "price_usd": 0.02619,
+        "rsi_1h": 50.21,
+        "fhs": 5.1,
+        "phase": "DISTRIBUTION",
+        "nbp": -42.857142857142854,
+        "wcc_z24": 0.3618097209943957,
+        "lvr_z24": -0.8679748481786153,
+        "vol_z24": -0.8721859237967652,
+        "lmi": 0.245235567038542,
+        "nbr": 0.2857142857142857
+      },
+      "ts": "2026-04-21T10:13:34.724087+00:00"
+    },
     {
       "symbol": "AERO",
       "chain": "base",
@@ -69,20 +69,43 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "A textbook bull trap where the technical flag is invalidated by a distribution phase and heavy negative buying pressure.",
+      "narrative": "Technical bull flag is invalidated by distribution phase and significant whale outflows, suggesting further downside.",
       "snapshot": {
-        "price_usd": 0.3842,
-        "rsi_1h": 40.21,
-        "fhs": 2.9,
+        "price_usd": 0.388,
+        "rsi_1h": 50.68,
+        "fhs": 3.0,
         "phase": "DISTRIBUTION",
-        "nbp": -34.3191196698762,
-        "wcc_z24": -1.3627702877384955,
-        "lvr_z24": -0.27202589245253955,
-        "vol_z24": -0.23711827605117627,
-        "lmi": -0.021960974126585313,
-        "nbr": 0.32840440165061896
+        "nbp": -36.9155617585485,
+        "wcc_z24": -1.7797582046490805,
+        "lvr_z24": -0.3541511569663296,
+        "vol_z24": -0.26553226131725066,
+        "lmi": -0.0036214632061488364,
+        "nbr": 0.3154221912072575
       },
-      "ts": "2026-04-21T08:13:39.676150+00:00"
+      "ts": "2026-04-21T10:13:34.724110+00:00"
+    },
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "FHS_high",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.02619,
+        "rsi_1h": 50.21,
+        "fhs": 5.1,
+        "phase": "DISTRIBUTION",
+        "nbp": -42.857142857142854,
+        "wcc_z24": 0.3618097209943957,
+        "lvr_z24": -0.8679748481786153,
+        "vol_z24": -0.8721859237967652,
+        "lmi": 0.245235567038542,
+        "nbr": 0.2857142857142857
+      },
+      "ts": "2026-04-21T10:13:34.724126+00:00"
     },
     {
       "symbol": "AERO",
@@ -94,44 +117,44 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.3842,
-        "rsi_1h": 40.21,
-        "fhs": 2.9,
+        "price_usd": 0.388,
+        "rsi_1h": 50.68,
+        "fhs": 3.0,
         "phase": "DISTRIBUTION",
-        "nbp": -34.3191196698762,
-        "wcc_z24": -1.3627702877384955,
-        "lvr_z24": -0.27202589245253955,
-        "vol_z24": -0.23711827605117627,
-        "lmi": -0.021960974126585313,
-        "nbr": 0.32840440165061896
+        "nbp": -36.9155617585485,
+        "wcc_z24": -1.7797582046490805,
+        "lvr_z24": -0.3541511569663296,
+        "vol_z24": -0.26553226131725066,
+        "lmi": -0.0036214632061488364,
+        "nbr": 0.3154221912072575
       },
-      "ts": "2026-04-21T08:13:39.676186+00:00"
+      "ts": "2026-04-21T10:13:34.724132+00:00"
     }
   ],
   "stats": {
     "candidates_bot": 3,
     "candidates_lt": 3,
     "submitted_venice": 3,
-    "approved_bot": 2,
+    "approved_bot": 1,
     "approved_lt": 0,
-    "vetoed": 2
+    "vetoed": 4
   },
   "venice_decisions": [
     {
       "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 0.5,
-      "tp_ratio": 0.045,
+      "multiplier": 0.8,
+      "tp_ratio": 0.05,
       "sl_ratio": 0.015,
-      "narrative": "Quiet accumulation is occurring in a low-volatility environment, but exiting liquidity requires a very tight defensive stance."
+      "narrative": "Quiet accumulation with positive buying pressure is underway, though negative liquidity velocity necessitates a very tight stop-loss."
     },
     {
-      "symbol": "VVV",
-      "action": "TRADE",
-      "multiplier": 0.7,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.018,
-      "narrative": "Strong retail buying pressure is fighting an oversold floor, creating a high-conviction accumulation play despite whale-driven liquidity outflows."
+      "symbol": "AIXBT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed due to distribution phase and heavy negative buying pressure indicating a bull trap despite the high health score."
     },
     {
       "symbol": "AERO",
@@ -139,7 +162,15 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "A textbook bull trap where the technical flag is invalidated by a distribution phase and heavy negative buying pressure."
+      "narrative": "Technical bull flag is invalidated by distribution phase and significant whale outflows, suggesting further downside."
+    },
+    {
+      "symbol": "AIXBT",
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
     },
     {
       "symbol": "AERO",
@@ -152,28 +183,28 @@
   ],
   "venice_raw": [
     {
+      "symbol": "AIXBT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed due to distribution phase and heavy negative buying pressure indicating a bull trap despite the high health score."
+    },
+    {
       "symbol": "AERO",
       "action": "SKIP",
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "A textbook bull trap where the technical flag is invalidated by a distribution phase and heavy negative buying pressure."
+      "narrative": "Technical bull flag is invalidated by distribution phase and significant whale outflows, suggesting further downside."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 0.5,
-      "tp_ratio": 0.045,
+      "multiplier": 0.8,
+      "tp_ratio": 0.05,
       "sl_ratio": 0.015,
-      "narrative": "Quiet accumulation is occurring in a low-volatility environment, but exiting liquidity requires a very tight defensive stance."
-    },
-    {
-      "symbol": "VVV",
-      "action": "TRADE",
-      "multiplier": 0.7,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.018,
-      "narrative": "Strong retail buying pressure is fighting an oversold floor, creating a high-conviction accumulation play despite whale-driven liquidity outflows."
+      "narrative": "Quiet accumulation with positive buying pressure is underway, though negative liquidity velocity necessitates a very tight stop-loss."
     }
   ]
 }

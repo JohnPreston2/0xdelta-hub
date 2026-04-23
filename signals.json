@@ -1,60 +1,8 @@
 {
-  "generated_at": "2026-04-23T14:13:37.602614+00:00",
-  "evaluated_source": "2026-04-23T14:13:25.808129+00:00",
+  "generated_at": "2026-04-23T16:13:47.531976+00:00",
+  "evaluated_source": "2026-04-23T16:13:25.697779+00:00",
   "token_count": 6,
   "approved_bot": [
-    {
-      "symbol": "VIRTUAL",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "RSI_oversold",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.5,
-      "narrative": "A quiet accumulation in the shadows while liquidity slowly drains, waiting for a mean-reversion spark.",
-      "snapshot": {
-        "price_usd": 0.6777,
-        "rsi_1h": 32.12,
-        "fhs": 4.9,
-        "phase": "CONSOLIDATION",
-        "nbp": 8.75,
-        "wcc_z24": 0.33333333333333337,
-        "lvr_z24": -1.0885017672199977,
-        "vol_z24": -1.1017854237827143,
-        "lmi": 0.11122008212647777,
-        "nbr": 0.54375
-      },
-      "ts": "2026-04-23T14:13:37.602528+00:00"
-    },
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "RSI_oversold",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 0.6,
-      "tp_ratio": 1.2,
-      "sl_ratio": 0.4,
-      "narrative": "Retail is bottom-fishing a deep oversold bounce while whales are quietly exiting the building through the back door.",
-      "snapshot": {
-        "price_usd": 0.02671,
-        "rsi_1h": 27.01,
-        "fhs": 5.3,
-        "phase": "CONSOLIDATION",
-        "nbp": 9.25925925925926,
-        "wcc_z24": -0.8374036143210805,
-        "lvr_z24": -0.11978835804133225,
-        "vol_z24": -0.2039739368266751,
-        "lmi": -0.009446897723754778,
-        "nbr": 0.5462962962962963
-      },
-      "ts": "2026-04-23T14:13:37.602557+00:00"
-    },
     {
       "symbol": "MORPHO",
       "chain": "base",
@@ -63,52 +11,50 @@
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 1.4,
-      "sl_ratio": 0.6,
-      "narrative": "A steady hand holds the line in a low-volume environment, preparing for a technical bounce from oversold levels.",
+      "multiplier": 0.5,
+      "tp_ratio": 1.5,
+      "sl_ratio": 0.5,
+      "narrative": "A quiet accumulation phase with positive buying pressure is underway, though negative liquidity velocity necessitates a cautious, tight-stop entry.",
       "snapshot": {
-        "price_usd": 1.89,
-        "rsi_1h": 33.49,
-        "fhs": 4.6,
-        "phase": "CONSOLIDATION",
-        "nbp": 7.639680729760548,
+        "price_usd": 1.9,
+        "rsi_1h": 42.05,
+        "fhs": 2.7,
+        "phase": "ACCUMULATION",
+        "nbp": 20.41949413942011,
         "wcc_z24": 0.333333333333334,
-        "lvr_z24": -0.6443018250246432,
-        "vol_z24": -0.5462144712185165,
-        "lmi": -0.007693121186447716,
-        "nbr": 0.5381984036488028
+        "lvr_z24": -0.48765437131767136,
+        "vol_z24": -0.4709540890371195,
+        "lmi": -0.00413787600215529,
+        "nbr": 0.6020974706971005
       },
-      "ts": "2026-04-23T14:13:37.602575+00:00"
-    },
+      "ts": "2026-04-23T16:13:47.531951+00:00"
+    }
+  ],
+  "approved_lt": [
     {
       "symbol": "VVV",
       "chain": "base",
       "direction": "LONG",
-      "signal": "WCC_RSI_combo",
-      "horizon": "T+3",
+      "signal": "LVR_deceleration",
+      "horizon": "T+12",
       "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 2.2,
-      "sl_ratio": 0.5,
-      "narrative": "Whales are aggressively vacuuming up supply in a ghost town, setting the stage for a violent supply-shock rally.",
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 8.62,
-        "rsi_1h": 33.04,
-        "fhs": 4.4,
+        "price_usd": 8.72,
+        "rsi_1h": 44.91,
+        "fhs": 5.0,
         "phase": "ACCUMULATION",
-        "nbp": 32.63274336283185,
-        "wcc_z24": 1.058213432253988,
-        "lvr_z24": -1.6353081146928894,
-        "vol_z24": -1.5755495291713644,
-        "lmi": -0.0739135112148854,
-        "nbr": 0.6631637168141593
+        "nbp": 29.959040374488005,
+        "wcc_z24": 0.9607689228305225,
+        "lvr_z24": -2.3098192204438956,
+        "vol_z24": -2.209514409733567,
+        "lmi": -0.0739290109991949,
+        "nbr": 0.64979520187244
       },
-      "ts": "2026-04-23T14:13:37.602593+00:00"
+      "ts": "2026-04-23T16:13:47.531973+00:00"
     }
   ],
-  "approved_lt": [],
   "vetoed": [
     {
       "symbol": "AERO",
@@ -121,20 +67,20 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "VETO: Attempting to long a distribution phase with heavy negative buying pressure is catching a falling knife.",
+      "narrative": "Price is trapped in a distribution peak with negative buying pressure and overbought RSI, rendering the technical bull flag a likely bull trap.",
       "snapshot": {
-        "price_usd": 0.4186,
-        "rsi_1h": 42.55,
-        "fhs": 2.9,
+        "price_usd": 0.4503,
+        "rsi_1h": 76.62,
+        "fhs": 4.0,
         "phase": "DISTRIBUTION",
-        "nbp": -37.36797031116186,
-        "wcc_z24": -0.37402723571552215,
-        "lvr_z24": -0.17801318046678533,
-        "vol_z24": -0.15076404177043484,
-        "lmi": -0.10341550770238972,
-        "nbr": 0.3131601484441907
+        "nbp": -25.456442357850804,
+        "wcc_z24": 0.6121460921524136,
+        "lvr_z24": 0.3622384287239326,
+        "vol_z24": 0.5088532418095479,
+        "lmi": 0.04983960021274034,
+        "nbr": 0.37271778821074597
       },
-      "ts": "2026-04-23T14:13:37.602567+00:00"
+      "ts": "2026-04-23T16:13:47.531925+00:00"
     },
     {
       "symbol": "AERO",
@@ -146,60 +92,44 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.4186,
-        "rsi_1h": 42.55,
-        "fhs": 2.9,
+        "price_usd": 0.4503,
+        "rsi_1h": 76.62,
+        "fhs": 4.0,
         "phase": "DISTRIBUTION",
-        "nbp": -37.36797031116186,
-        "wcc_z24": -0.37402723571552215,
-        "lvr_z24": -0.17801318046678533,
-        "vol_z24": -0.15076404177043484,
-        "lmi": -0.10341550770238972,
-        "nbr": 0.3131601484441907
+        "nbp": -25.456442357850804,
+        "wcc_z24": 0.6121460921524136,
+        "lvr_z24": 0.3622384287239326,
+        "vol_z24": 0.5088532418095479,
+        "lmi": 0.04983960021274034,
+        "nbr": 0.37271778821074597
       },
-      "ts": "2026-04-23T14:13:37.602607+00:00"
+      "ts": "2026-04-23T16:13:47.531965+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 5,
+    "candidates_bot": 2,
     "candidates_lt": 3,
-    "submitted_venice": 5,
-    "approved_bot": 4,
-    "approved_lt": 0,
+    "submitted_venice": 3,
+    "approved_bot": 1,
+    "approved_lt": 1,
     "vetoed": 2
   },
   "venice_decisions": [
     {
-      "symbol": "VIRTUAL",
-      "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.5,
-      "narrative": "A quiet accumulation in the shadows while liquidity slowly drains, waiting for a mean-reversion spark."
-    },
-    {
-      "symbol": "AIXBT",
-      "action": "TRADE",
-      "multiplier": 0.6,
-      "tp_ratio": 1.2,
-      "sl_ratio": 0.4,
-      "narrative": "Retail is bottom-fishing a deep oversold bounce while whales are quietly exiting the building through the back door."
-    },
-    {
       "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 1.4,
-      "sl_ratio": 0.6,
-      "narrative": "A steady hand holds the line in a low-volume environment, preparing for a technical bounce from oversold levels."
+      "multiplier": 0.5,
+      "tp_ratio": 1.5,
+      "sl_ratio": 0.5,
+      "narrative": "A quiet accumulation phase with positive buying pressure is underway, though negative liquidity velocity necessitates a cautious, tight-stop entry."
     },
     {
       "symbol": "VVV",
-      "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 2.2,
-      "sl_ratio": 0.5,
-      "narrative": "Whales are aggressively vacuuming up supply in a ghost town, setting the stage for a violent supply-shock rally."
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
     },
     {
       "symbol": "AERO",
@@ -207,7 +137,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "VETO: Attempting to long a distribution phase with heavy negative buying pressure is catching a falling knife."
+      "narrative": "Price is trapped in a distribution peak with negative buying pressure and overbought RSI, rendering the technical bull flag a likely bull trap."
     },
     {
       "symbol": "AERO",
@@ -220,44 +150,28 @@
   ],
   "venice_raw": [
     {
-      "symbol": "VIRTUAL",
-      "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.5,
-      "narrative": "A quiet accumulation in the shadows while liquidity slowly drains, waiting for a mean-reversion spark."
-    },
-    {
-      "symbol": "AIXBT",
-      "action": "TRADE",
-      "multiplier": 0.6,
-      "tp_ratio": 1.2,
-      "sl_ratio": 0.4,
-      "narrative": "Retail is bottom-fishing a deep oversold bounce while whales are quietly exiting the building through the back door."
-    },
-    {
       "symbol": "AERO",
       "action": "SKIP",
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "VETO: Attempting to long a distribution phase with heavy negative buying pressure is catching a falling knife."
+      "narrative": "Price is trapped in a distribution peak with negative buying pressure and overbought RSI, rendering the technical bull flag a likely bull trap."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 1.4,
-      "sl_ratio": 0.6,
-      "narrative": "A steady hand holds the line in a low-volume environment, preparing for a technical bounce from oversold levels."
+      "multiplier": 0.5,
+      "tp_ratio": 1.5,
+      "sl_ratio": 0.5,
+      "narrative": "A quiet accumulation phase with positive buying pressure is underway, though negative liquidity velocity necessitates a cautious, tight-stop entry."
     },
     {
       "symbol": "VVV",
       "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 2.2,
-      "sl_ratio": 0.5,
-      "narrative": "Whales are aggressively vacuuming up supply in a ghost town, setting the stage for a violent supply-shock rally."
+      "multiplier": 1.0,
+      "tp_ratio": 2.5,
+      "sl_ratio": 0.4,
+      "narrative": "Whales are aggressively absorbing supply in a deep accumulation zone, but the severe lack of liquidity velocity demands a surgical stop-loss to survive the chop."
     }
   ]
 }

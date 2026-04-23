@@ -1,88 +1,38 @@
 {
-  "generated_at": "2026-04-23T02:13:40.156860+00:00",
-  "evaluated_source": "2026-04-23T02:13:27.159681+00:00",
+  "generated_at": "2026-04-23T04:13:42.505646+00:00",
+  "evaluated_source": "2026-04-23T04:13:26.122150+00:00",
   "token_count": 6,
   "approved_bot": [
     {
-      "symbol": "MORPHO",
+      "symbol": "VVV",
       "chain": "base",
-      "direction": "SHORT",
-      "signal": "Phase_DIST",
+      "direction": "LONG",
+      "signal": "WCC_RSI_combo",
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 4.5,
-      "sl_ratio": 1.2,
-      "narrative": "A quiet exit of liquidity during a potential distribution phase suggests a controlled bleed-out rather than a sharp crash.",
+      "multiplier": 1.0,
+      "tp_ratio": 0.045,
+      "sl_ratio": 0.015,
+      "narrative": "A quiet accumulation scene where whales build a floor under low-volatility conditions, preparing for a slow-burn ascent despite thin liquidity.",
       "snapshot": {
-        "price_usd": 1.94,
-        "rsi_1h": 39.47,
-        "fhs": 3.2,
-        "phase": "DISTRIBUTION_POTENTIELLE",
-        "nbp": -3.6069651741293534,
-        "wcc_z24": 0.333333333333334,
-        "lvr_z24": -1.53078477975265,
-        "vol_z24": -1.3344287998084379,
-        "lmi": -0.019979444113823037,
-        "nbr": 0.48196517412935325
-      },
-      "ts": "2026-04-23T02:13:40.156829+00:00"
-    }
-  ],
-  "approved_lt": [
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "FHS_NBP_combo",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.02722,
-        "rsi_1h": 50.38,
-        "fhs": 4.7,
+        "price_usd": 8.68,
+        "rsi_1h": 44.48,
+        "fhs": 4.6,
         "phase": "ACCUMULATION",
-        "nbp": 31.746031746031743,
-        "wcc_z24": 1.1587867289140283,
-        "lvr_z24": 1.3360182243989311,
-        "vol_z24": 1.2718107285763498,
-        "lmi": -0.013751891818818565,
-        "nbr": 0.6587301587301587
+        "nbp": 23.40208810797046,
+        "wcc_z24": 1.3089257860118415,
+        "lvr_z24": -0.049597256366511376,
+        "vol_z24": -0.20483389389109796,
+        "lmi": -0.06132031505187963,
+        "nbr": 0.6170104405398523
       },
-      "ts": "2026-04-23T02:13:40.156846+00:00"
+      "ts": "2026-04-23T04:13:42.505629+00:00"
     }
   ],
+  "approved_lt": [],
   "vetoed": [
     {
-      "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "BullFlag",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "The bull flag is a technical trap as the asset remains locked in a distribution phase with significant negative buying pressure.",
-      "snapshot": {
-        "price_usd": 0.4209,
-        "rsi_1h": 51.84,
-        "fhs": 3.5,
-        "phase": "DISTRIBUTION",
-        "nbp": -23.21816863976806,
-        "wcc_z24": 0.036785594638881605,
-        "lvr_z24": 1.8388115135359486,
-        "vol_z24": 1.7885272975222253,
-        "lmi": 0.03543073295600583,
-        "nbr": 0.3839091568011597
-      },
-      "ts": "2026-04-23T02:13:40.156800+00:00"
-    },
-    {
       "symbol": "BRETT",
       "chain": "base",
       "direction": "LONG",
@@ -93,43 +43,20 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Oversold RSI is insufficient to counter the extreme negative buying pressure and active distribution phase currently in play.",
+      "narrative": "A falling knife in a distribution theater where heavy selling pressure ignores the oversold siren song, signaling further downside.",
       "snapshot": {
-        "price_usd": 0.007069,
-        "rsi_1h": 32.33,
-        "fhs": 4.4,
+        "price_usd": 0.007011,
+        "rsi_1h": 29.72,
+        "fhs": 5.0,
         "phase": "DISTRIBUTION",
-        "nbp": -50.74626865671642,
-        "wcc_z24": 1.1806025554022819,
-        "lvr_z24": -0.34575574876597,
-        "vol_z24": -0.3489225855055962,
-        "lmi": 0.011364061335720781,
-        "nbr": 0.2462686567164179
+        "nbp": -55.88235294117647,
+        "wcc_z24": 1.0834726777719228,
+        "lvr_z24": -0.28365977247070817,
+        "vol_z24": -0.30946270878319904,
+        "lmi": -0.005059591951150242,
+        "nbr": 0.22058823529411764
       },
-      "ts": "2026-04-23T02:13:40.156837+00:00"
-    },
-    {
-      "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "BullFlag",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.4209,
-        "rsi_1h": 51.84,
-        "fhs": 3.5,
-        "phase": "DISTRIBUTION",
-        "nbp": -23.21816863976806,
-        "wcc_z24": 0.036785594638881605,
-        "lvr_z24": 1.8388115135359486,
-        "vol_z24": 1.7885272975222253,
-        "lmi": 0.03543073295600583,
-        "nbr": 0.3839091568011597
-      },
-      "ts": "2026-04-23T02:13:40.156852+00:00"
+      "ts": "2026-04-23T04:13:42.505597+00:00"
     },
     {
       "symbol": "BRETT",
@@ -141,52 +68,36 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.007069,
-        "rsi_1h": 32.33,
-        "fhs": 4.4,
+        "price_usd": 0.007011,
+        "rsi_1h": 29.72,
+        "fhs": 5.0,
         "phase": "DISTRIBUTION",
-        "nbp": -50.74626865671642,
-        "wcc_z24": 1.1806025554022819,
-        "lvr_z24": -0.34575574876597,
-        "vol_z24": -0.3489225855055962,
-        "lmi": 0.011364061335720781,
-        "nbr": 0.2462686567164179
+        "nbp": -55.88235294117647,
+        "wcc_z24": 1.0834726777719228,
+        "lvr_z24": -0.28365977247070817,
+        "vol_z24": -0.30946270878319904,
+        "lmi": -0.005059591951150242,
+        "nbr": 0.22058823529411764
       },
-      "ts": "2026-04-23T02:13:40.156857+00:00"
+      "ts": "2026-04-23T04:13:42.505641+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 3,
-    "candidates_lt": 4,
-    "submitted_venice": 4,
+    "candidates_bot": 2,
+    "candidates_lt": 2,
+    "submitted_venice": 2,
     "approved_bot": 1,
-    "approved_lt": 1,
-    "vetoed": 4
+    "approved_lt": 0,
+    "vetoed": 2
   },
   "venice_decisions": [
     {
-      "symbol": "MORPHO",
+      "symbol": "VVV",
       "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 4.5,
-      "sl_ratio": 1.2,
-      "narrative": "A quiet exit of liquidity during a potential distribution phase suggests a controlled bleed-out rather than a sharp crash."
-    },
-    {
-      "symbol": "AIXBT",
-      "action": "SKIP",
       "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
-    },
-    {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "The bull flag is a technical trap as the asset remains locked in a distribution phase with significant negative buying pressure."
+      "tp_ratio": 0.045,
+      "sl_ratio": 0.015,
+      "narrative": "A quiet accumulation scene where whales build a floor under low-volatility conditions, preparing for a slow-burn ascent despite thin liquidity."
     },
     {
       "symbol": "BRETT",
@@ -194,15 +105,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Oversold RSI is insufficient to counter the extreme negative buying pressure and active distribution phase currently in play."
-    },
-    {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
+      "narrative": "A falling knife in a distribution theater where heavy selling pressure ignores the oversold siren song, signaling further downside."
     },
     {
       "symbol": "BRETT",
@@ -215,36 +118,20 @@
   ],
   "venice_raw": [
     {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "The bull flag is a technical trap as the asset remains locked in a distribution phase with significant negative buying pressure."
-    },
-    {
-      "symbol": "MORPHO",
-      "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 4.5,
-      "sl_ratio": 1.2,
-      "narrative": "A quiet exit of liquidity during a potential distribution phase suggests a controlled bleed-out rather than a sharp crash."
-    },
-    {
       "symbol": "BRETT",
       "action": "SKIP",
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Oversold RSI is insufficient to counter the extreme negative buying pressure and active distribution phase currently in play."
+      "narrative": "A falling knife in a distribution theater where heavy selling pressure ignores the oversold siren song, signaling further downside."
     },
     {
-      "symbol": "AIXBT",
+      "symbol": "VVV",
       "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 7.5,
-      "sl_ratio": 2.5,
-      "narrative": "A textbook accumulation setup where rising whale flow and liquidity velocity signal a high-conviction bullish expansion."
+      "multiplier": 1.0,
+      "tp_ratio": 0.045,
+      "sl_ratio": 0.015,
+      "narrative": "A quiet accumulation scene where whales build a floor under low-volatility conditions, preparing for a slow-burn ascent despite thin liquidity."
     }
   ]
 }

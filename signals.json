@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-23T00:13:37.835052+00:00",
-  "evaluated_source": "2026-04-23T00:13:27.264351+00:00",
+  "generated_at": "2026-04-23T02:13:40.156860+00:00",
+  "evaluated_source": "2026-04-23T02:13:27.159681+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -12,79 +12,51 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 0.8,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.5,
-      "narrative": "A quiet exit of liquidity in a potential distribution phase suggests a slow-motion collapse as the floor begins to rot under low volatility.",
+      "tp_ratio": 4.5,
+      "sl_ratio": 1.2,
+      "narrative": "A quiet exit of liquidity during a potential distribution phase suggests a controlled bleed-out rather than a sharp crash.",
       "snapshot": {
-        "price_usd": 1.96,
-        "rsi_1h": 41.75,
+        "price_usd": 1.94,
+        "rsi_1h": 39.47,
         "fhs": 3.2,
         "phase": "DISTRIBUTION_POTENTIELLE",
-        "nbp": 1.1606597434331094,
+        "nbp": -3.6069651741293534,
         "wcc_z24": 0.333333333333334,
-        "lvr_z24": -1.440762667775024,
-        "vol_z24": -1.0733867422492744,
-        "lmi": 0.02662069362830702,
-        "nbr": 0.5058032987171656
+        "lvr_z24": -1.53078477975265,
+        "vol_z24": -1.3344287998084379,
+        "lmi": -0.019979444113823037,
+        "nbr": 0.48196517412935325
       },
-      "ts": "2026-04-23T00:13:37.835010+00:00"
-    },
-    {
-      "symbol": "VVV",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "WCC_RSI_combo",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 2.5,
-      "sl_ratio": 1.0,
-      "narrative": "A textbook accumulation breakout where whales and retail are in perfect sync, fueled by fresh liquidity and accelerating momentum.",
-      "snapshot": {
-        "price_usd": 8.77,
-        "rsi_1h": 43.82,
-        "fhs": 4.1,
-        "phase": "ACCUMULATION",
-        "nbp": 22.01697453819271,
-        "wcc_z24": 1.4615384615384623,
-        "lvr_z24": 1.296341396095909,
-        "vol_z24": 1.11298325857099,
-        "lmi": 0.00583112216087273,
-        "nbr": 0.6100848726909636
-      },
-      "ts": "2026-04-23T00:13:37.835025+00:00"
+      "ts": "2026-04-23T02:13:40.156829+00:00"
     }
   ],
-  "approved_lt": [],
+  "approved_lt": [
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "FHS_NBP_combo",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.02722,
+        "rsi_1h": 50.38,
+        "fhs": 4.7,
+        "phase": "ACCUMULATION",
+        "nbp": 31.746031746031743,
+        "wcc_z24": 1.1587867289140283,
+        "lvr_z24": 1.3360182243989311,
+        "vol_z24": 1.2718107285763498,
+        "lmi": -0.013751891818818565,
+        "nbr": 0.6587301587301587
+      },
+      "ts": "2026-04-23T02:13:40.156846+00:00"
+    }
+  ],
   "vetoed": [
     {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "SHORT",
-      "signal": "WCC_high_z",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Whales are aggressively absorbing supply in a consolidation zone, making a short entry a suicide mission against strong positive buying pressure.",
-      "snapshot": {
-        "price_usd": 0.02763,
-        "rsi_1h": 47.55,
-        "fhs": 4.4,
-        "phase": "CONSOLIDATION",
-        "nbp": 41.843971631205676,
-        "wcc_z24": 1.9536514342895386,
-        "lvr_z24": 1.582969138528677,
-        "vol_z24": 1.5443226748887404,
-        "lmi": 0.008496880894330582,
-        "nbr": 0.7092198581560284
-      },
-      "ts": "2026-04-23T00:13:37.834966+00:00"
-    },
-    {
       "symbol": "AERO",
       "chain": "base",
       "direction": "LONG",
@@ -95,69 +67,46 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "The signal attempts to catch a bounce in a distribution phase with negative buying pressure, violating core trend-following safety protocols.",
+      "narrative": "The bull flag is a technical trap as the asset remains locked in a distribution phase with significant negative buying pressure.",
       "snapshot": {
-        "price_usd": 0.4256,
-        "rsi_1h": 66.16,
-        "fhs": 4.2,
+        "price_usd": 0.4209,
+        "rsi_1h": 51.84,
+        "fhs": 3.5,
         "phase": "DISTRIBUTION",
-        "nbp": -19.37672782106057,
-        "wcc_z24": -1.4346381909165364,
-        "lvr_z24": 1.778776967946384,
-        "vol_z24": 1.7642748418178096,
-        "lmi": 0.031004426970465855,
-        "nbr": 0.40311636089469716
+        "nbp": -23.21816863976806,
+        "wcc_z24": 0.036785594638881605,
+        "lvr_z24": 1.8388115135359486,
+        "vol_z24": 1.7885272975222253,
+        "lmi": 0.03543073295600583,
+        "nbr": 0.3839091568011597
       },
-      "ts": "2026-04-23T00:13:37.835001+00:00"
+      "ts": "2026-04-23T02:13:40.156800+00:00"
     },
     {
       "symbol": "BRETT",
       "chain": "base",
       "direction": "LONG",
-      "signal": "WCC_RSI_combo",
+      "signal": "RSI_oversold",
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "SKIP",
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Extreme negative buying pressure and a distribution phase signal a falling knife that even moderate whale flow cannot currently stabilize.",
+      "narrative": "Oversold RSI is insufficient to counter the extreme negative buying pressure and active distribution phase currently in play.",
       "snapshot": {
-        "price_usd": 0.007146,
-        "rsi_1h": 43.84,
+        "price_usd": 0.007069,
+        "rsi_1h": 32.33,
         "fhs": 4.4,
         "phase": "DISTRIBUTION",
-        "nbp": -46.96969696969697,
+        "nbp": -50.74626865671642,
         "wcc_z24": 1.1806025554022819,
-        "lvr_z24": -0.45788090176807933,
-        "vol_z24": -0.4475871594257013,
-        "lmi": 0.0032544170519876047,
-        "nbr": 0.26515151515151514
+        "lvr_z24": -0.34575574876597,
+        "vol_z24": -0.3489225855055962,
+        "lmi": 0.011364061335720781,
+        "nbr": 0.2462686567164179
       },
-      "ts": "2026-04-23T00:13:37.835019+00:00"
-    },
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "SHORT",
-      "signal": "WCC_high_z",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.02763,
-        "rsi_1h": 47.55,
-        "fhs": 4.4,
-        "phase": "CONSOLIDATION",
-        "nbp": 41.843971631205676,
-        "wcc_z24": 1.9536514342895386,
-        "lvr_z24": 1.582969138528677,
-        "vol_z24": 1.5443226748887404,
-        "lmi": 0.008496880894330582,
-        "nbr": 0.7092198581560284
-      },
-      "ts": "2026-04-23T00:13:37.835035+00:00"
+      "ts": "2026-04-23T02:13:40.156837+00:00"
     },
     {
       "symbol": "AERO",
@@ -169,91 +118,59 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.4256,
-        "rsi_1h": 66.16,
-        "fhs": 4.2,
+        "price_usd": 0.4209,
+        "rsi_1h": 51.84,
+        "fhs": 3.5,
         "phase": "DISTRIBUTION",
-        "nbp": -19.37672782106057,
-        "wcc_z24": -1.4346381909165364,
-        "lvr_z24": 1.778776967946384,
-        "vol_z24": 1.7642748418178096,
-        "lmi": 0.031004426970465855,
-        "nbr": 0.40311636089469716
+        "nbp": -23.21816863976806,
+        "wcc_z24": 0.036785594638881605,
+        "lvr_z24": 1.8388115135359486,
+        "vol_z24": 1.7885272975222253,
+        "lmi": 0.03543073295600583,
+        "nbr": 0.3839091568011597
       },
-      "ts": "2026-04-23T00:13:37.835042+00:00"
+      "ts": "2026-04-23T02:13:40.156852+00:00"
     },
     {
       "symbol": "BRETT",
       "chain": "base",
       "direction": "LONG",
-      "signal": "WCC_RSI_combo",
+      "signal": "RSI_oversold",
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.007146,
-        "rsi_1h": 43.84,
+        "price_usd": 0.007069,
+        "rsi_1h": 32.33,
         "fhs": 4.4,
         "phase": "DISTRIBUTION",
-        "nbp": -46.96969696969697,
+        "nbp": -50.74626865671642,
         "wcc_z24": 1.1806025554022819,
-        "lvr_z24": -0.45788090176807933,
-        "vol_z24": -0.4475871594257013,
-        "lmi": 0.0032544170519876047,
-        "nbr": 0.26515151515151514
+        "lvr_z24": -0.34575574876597,
+        "vol_z24": -0.3489225855055962,
+        "lmi": 0.011364061335720781,
+        "nbr": 0.2462686567164179
       },
-      "ts": "2026-04-23T00:13:37.835048+00:00"
+      "ts": "2026-04-23T02:13:40.156857+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 5,
-    "candidates_lt": 5,
-    "submitted_venice": 5,
-    "approved_bot": 2,
-    "approved_lt": 0,
-    "vetoed": 6
+    "candidates_bot": 3,
+    "candidates_lt": 4,
+    "submitted_venice": 4,
+    "approved_bot": 1,
+    "approved_lt": 1,
+    "vetoed": 4
   },
   "venice_decisions": [
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 0.8,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.5,
-      "narrative": "A quiet exit of liquidity in a potential distribution phase suggests a slow-motion collapse as the floor begins to rot under low volatility."
-    },
-    {
-      "symbol": "VVV",
-      "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 2.5,
-      "sl_ratio": 1.0,
-      "narrative": "A textbook accumulation breakout where whales and retail are in perfect sync, fueled by fresh liquidity and accelerating momentum."
-    },
-    {
-      "symbol": "AIXBT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Whales are aggressively absorbing supply in a consolidation zone, making a short entry a suicide mission against strong positive buying pressure."
-    },
-    {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "The signal attempts to catch a bounce in a distribution phase with negative buying pressure, violating core trend-following safety protocols."
-    },
-    {
-      "symbol": "BRETT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Extreme negative buying pressure and a distribution phase signal a falling knife that even moderate whale flow cannot currently stabilize."
+      "tp_ratio": 4.5,
+      "sl_ratio": 1.2,
+      "narrative": "A quiet exit of liquidity during a potential distribution phase suggests a controlled bleed-out rather than a sharp crash."
     },
     {
       "symbol": "AIXBT",
@@ -262,6 +179,22 @@
       "tp_ratio": 1.5,
       "sl_ratio": 1.0,
       "narrative": ""
+    },
+    {
+      "symbol": "AERO",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "The bull flag is a technical trap as the asset remains locked in a distribution phase with significant negative buying pressure."
+    },
+    {
+      "symbol": "BRETT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Oversold RSI is insufficient to counter the extreme negative buying pressure and active distribution phase currently in play."
     },
     {
       "symbol": "AERO",
@@ -282,28 +215,20 @@
   ],
   "venice_raw": [
     {
-      "symbol": "AIXBT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Whales are aggressively absorbing supply in a consolidation zone, making a short entry a suicide mission against strong positive buying pressure."
-    },
-    {
       "symbol": "AERO",
       "action": "SKIP",
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "The signal attempts to catch a bounce in a distribution phase with negative buying pressure, violating core trend-following safety protocols."
+      "narrative": "The bull flag is a technical trap as the asset remains locked in a distribution phase with significant negative buying pressure."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 0.8,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.5,
-      "narrative": "A quiet exit of liquidity in a potential distribution phase suggests a slow-motion collapse as the floor begins to rot under low volatility."
+      "tp_ratio": 4.5,
+      "sl_ratio": 1.2,
+      "narrative": "A quiet exit of liquidity during a potential distribution phase suggests a controlled bleed-out rather than a sharp crash."
     },
     {
       "symbol": "BRETT",
@@ -311,15 +236,15 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Extreme negative buying pressure and a distribution phase signal a falling knife that even moderate whale flow cannot currently stabilize."
+      "narrative": "Oversold RSI is insufficient to counter the extreme negative buying pressure and active distribution phase currently in play."
     },
     {
-      "symbol": "VVV",
+      "symbol": "AIXBT",
       "action": "TRADE",
       "multiplier": 1.2,
-      "tp_ratio": 2.5,
-      "sl_ratio": 1.0,
-      "narrative": "A textbook accumulation breakout where whales and retail are in perfect sync, fueled by fresh liquidity and accelerating momentum."
+      "tp_ratio": 7.5,
+      "sl_ratio": 2.5,
+      "narrative": "A textbook accumulation setup where rising whale flow and liquidity velocity signal a high-conviction bullish expansion."
     }
   ]
 }

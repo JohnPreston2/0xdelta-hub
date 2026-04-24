@@ -1,8 +1,34 @@
 {
-  "generated_at": "2026-04-24T12:13:59.639049+00:00",
-  "evaluated_source": "2026-04-24T12:13:47.819082+00:00",
+  "generated_at": "2026-04-24T14:14:27.104216+00:00",
+  "evaluated_source": "2026-04-24T14:13:31.279632+00:00",
   "token_count": 6,
   "approved_bot": [
+    {
+      "symbol": "VIRTUAL",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "WCC_low_ACCUM",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved",
+      "snapshot": {
+        "price_usd": 0.707,
+        "rsi_1h": 55.33,
+        "fhs": 6.3,
+        "phase": "ACCUMULATION",
+        "nbp": 53.60501567398119,
+        "wcc_z24": -2.9501064579384173,
+        "lvr_z24": -0.31041482905836465,
+        "vol_z24": -0.2594581723869212,
+        "lmi": -0.07159289737506855,
+        "nbr": 0.768025078369906
+      },
+      "ts": "2026-04-24T14:14:27.104167+00:00"
+    },
     {
       "symbol": "AIXBT",
       "chain": "base",
@@ -12,22 +38,48 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 3.5,
-      "sl_ratio": 1.5,
-      "narrative": "Retail momentum is aggressively absorbing whale sell-side pressure within a high-volatility consolidation range.",
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved",
       "snapshot": {
-        "price_usd": 0.02919,
-        "rsi_1h": 67.99,
-        "fhs": 8.5,
+        "price_usd": 0.02903,
+        "rsi_1h": 55.42,
+        "fhs": 8.4,
         "phase": "CONSOLIDATION",
-        "nbp": 51.2396694214876,
-        "wcc_z24": -3.1724749988279464,
-        "lvr_z24": 2.135080980725575,
-        "vol_z24": 2.2198090153769012,
-        "lmi": 0.07178125721003245,
-        "nbr": 0.756198347107438
+        "nbp": 48.54771784232365,
+        "wcc_z24": -2.4967191586914717,
+        "lvr_z24": 2.070583115216936,
+        "vol_z24": 2.1137799159423847,
+        "lmi": 0.022241056617299994,
+        "nbr": 0.7427385892116183
       },
-      "ts": "2026-04-24T12:13:59.638988+00:00"
+      "ts": "2026-04-24T14:14:27.104196+00:00"
+    },
+    {
+      "symbol": "BRETT",
+      "chain": "base",
+      "direction": "SHORT",
+      "signal": "RSI_overbought",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved",
+      "snapshot": {
+        "price_usd": 0.006958,
+        "rsi_1h": 76.5,
+        "fhs": 5.2,
+        "phase": "ACCUMULATION",
+        "nbp": 17.791411042944784,
+        "wcc_z24": -3.0000000000000004,
+        "lvr_z24": 2.061398098214053,
+        "vol_z24": 2.0488439857626455,
+        "lmi": 0.0011056023545000545,
+        "nbr": 0.588957055214724
+      },
+      "ts": "2026-04-24T14:14:27.104204+00:00"
     },
     {
       "symbol": "VVV",
@@ -37,216 +89,68 @@
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 2.5,
-      "sl_ratio": 1.0,
-      "narrative": "Quiet accumulation with strong buying pressure, though negative liquidity velocity requires a tightened defensive stance.",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved",
       "snapshot": {
-        "price_usd": 8.53,
-        "rsi_1h": 46.9,
-        "fhs": 5.7,
+        "price_usd": 8.44,
+        "rsi_1h": 34.91,
+        "fhs": 6.5,
         "phase": "ACCUMULATION",
-        "nbp": 34.96551724137931,
-        "wcc_z24": -2.967637211723625,
-        "lvr_z24": -1.25325168431313,
-        "vol_z24": -1.210285784525376,
-        "lmi": 0.01221951198381682,
-        "nbr": 0.6748275862068965
+        "nbp": 37.461512145056446,
+        "wcc_z24": -2.3626584700965285,
+        "lvr_z24": -1.1368908780498386,
+        "vol_z24": -1.114162334400565,
+        "lmi": 0.005853399248720883,
+        "nbr": 0.6873075607252822
       },
-      "ts": "2026-04-24T12:13:59.639030+00:00"
+      "ts": "2026-04-24T14:14:27.104209+00:00"
     }
   ],
   "approved_lt": [],
-  "vetoed": [
-    {
-      "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "BullFlag",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Vetoed due to active distribution phase and negative net buying pressure invalidating the bull flag.",
-      "snapshot": {
-        "price_usd": 0.4367,
-        "rsi_1h": 50.61,
-        "fhs": 4.8,
-        "phase": "DISTRIBUTION",
-        "nbp": -22.592305706170926,
-        "wcc_z24": -2.9750228563129553,
-        "lvr_z24": 0.4547152751505994,
-        "vol_z24": 0.5340003059248133,
-        "lmi": -0.004299630012431665,
-        "nbr": 0.3870384714691454
-      },
-      "ts": "2026-04-24T12:13:59.639018+00:00"
-    },
-    {
-      "symbol": "MORPHO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "NBP_positive",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Potential distribution phase combined with exiting liquidity velocity creates an unfavorable risk-reward profile.",
-      "snapshot": {
-        "price_usd": 1.87,
-        "rsi_1h": 34.93,
-        "fhs": 3.2,
-        "phase": "DISTRIBUTION_POTENTIELLE",
-        "nbp": 7.515151515151515,
-        "wcc_z24": 0.22941573387056224,
-        "lvr_z24": -1.163840011439019,
-        "vol_z24": -1.77417659466137,
-        "lmi": -0.03843024087537227,
-        "nbr": 0.5375757575757576
-      },
-      "ts": "2026-04-24T12:13:59.639025+00:00"
-    },
-    {
-      "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "BullFlag",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.4367,
-        "rsi_1h": 50.61,
-        "fhs": 4.8,
-        "phase": "DISTRIBUTION",
-        "nbp": -22.592305706170926,
-        "wcc_z24": -2.9750228563129553,
-        "lvr_z24": 0.4547152751505994,
-        "vol_z24": 0.5340003059248133,
-        "lmi": -0.004299630012431665,
-        "nbr": 0.3870384714691454
-      },
-      "ts": "2026-04-24T12:13:59.639038+00:00"
-    },
-    {
-      "symbol": "MORPHO",
-      "chain": "base",
-      "direction": "SHORT",
-      "signal": "NBP_positive",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 1.87,
-        "rsi_1h": 34.93,
-        "fhs": 3.2,
-        "phase": "DISTRIBUTION_POTENTIELLE",
-        "nbp": 7.515151515151515,
-        "wcc_z24": 0.22941573387056224,
-        "lvr_z24": -1.163840011439019,
-        "vol_z24": -1.77417659466137,
-        "lmi": -0.03843024087537227,
-        "nbr": 0.5375757575757576
-      },
-      "ts": "2026-04-24T12:13:59.639045+00:00"
-    }
-  ],
+  "vetoed": [],
   "stats": {
     "candidates_bot": 4,
     "candidates_lt": 4,
     "submitted_venice": 4,
-    "approved_bot": 2,
+    "approved_bot": 4,
     "approved_lt": 0,
-    "vetoed": 4
+    "vetoed": 0
   },
   "venice_decisions": [
     {
+      "symbol": "VIRTUAL",
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved"
+    },
+    {
       "symbol": "AIXBT",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 3.5,
-      "sl_ratio": 1.5,
-      "narrative": "Retail momentum is aggressively absorbing whale sell-side pressure within a high-volatility consolidation range."
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved"
+    },
+    {
+      "symbol": "BRETT",
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved"
     },
     {
       "symbol": "VVV",
       "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 2.5,
-      "sl_ratio": 1.0,
-      "narrative": "Quiet accumulation with strong buying pressure, though negative liquidity velocity requires a tightened defensive stance."
-    },
-    {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Vetoed due to active distribution phase and negative net buying pressure invalidating the bull flag."
-    },
-    {
-      "symbol": "MORPHO",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Potential distribution phase combined with exiting liquidity velocity creates an unfavorable risk-reward profile."
-    },
-    {
-      "symbol": "AERO",
-      "action": "SKIP",
       "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
-    },
-    {
-      "symbol": "MORPHO",
-      "action": "SKIP",
-      "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved"
     }
   ],
-  "venice_raw": [
-    {
-      "symbol": "AIXBT",
-      "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 3.5,
-      "sl_ratio": 1.5,
-      "narrative": "Retail momentum is aggressively absorbing whale sell-side pressure within a high-volatility consolidation range."
-    },
-    {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Vetoed due to active distribution phase and negative net buying pressure invalidating the bull flag."
-    },
-    {
-      "symbol": "MORPHO",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Potential distribution phase combined with exiting liquidity velocity creates an unfavorable risk-reward profile."
-    },
-    {
-      "symbol": "VVV",
-      "action": "TRADE",
-      "multiplier": 0.8,
-      "tp_ratio": 2.5,
-      "sl_ratio": 1.0,
-      "narrative": "Quiet accumulation with strong buying pressure, though negative liquidity velocity requires a tightened defensive stance."
-    }
-  ]
+  "venice_raw": []
 }

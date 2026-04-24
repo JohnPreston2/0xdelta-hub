@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-24T18:13:38.956047+00:00",
-  "evaluated_source": "2026-04-24T18:13:25.281488+00:00",
+  "generated_at": "2026-04-24T20:13:35.808364+00:00",
+  "evaluated_source": "2026-04-24T20:13:26.644210+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -12,48 +12,25 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.045,
-      "sl_ratio": 0.015,
-      "narrative": "A quiet exit as the crowd slowly abandons the distribution zone under thinning liquidity and low volatility.",
+      "tp_ratio": 1.5,
+      "sl_ratio": 0.5,
+      "narrative": "A quiet exit as liquidity drains from a distribution top, suggesting a slow bleed lower as sell pressure outweighs remaining interest.",
       "snapshot": {
-        "price_usd": 1.86,
-        "rsi_1h": 48.41,
-        "fhs": 3.5,
+        "price_usd": 1.87,
+        "rsi_1h": 44.33,
+        "fhs": 3.8,
         "phase": "DISTRIBUTION_POTENTIELLE",
-        "nbp": 0.125,
+        "nbp": -4.1558441558441555,
         "wcc_z24": 0.3333333333333332,
-        "lvr_z24": -0.8425205237720846,
-        "vol_z24": -0.9323209521513972,
-        "lmi": 0.010954396845060438,
-        "nbr": 0.500625
+        "lvr_z24": -1.3849213591640541,
+        "vol_z24": -0.9816643103825626,
+        "lmi": -0.005917982797239832,
+        "nbr": 0.4792207792207792
       },
-      "ts": "2026-04-24T18:13:38.955999+00:00"
+      "ts": "2026-04-24T20:13:35.808330+00:00"
     }
   ],
   "approved_lt": [
-    {
-      "symbol": "VIRTUAL",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "LVR_deceleration",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.7064,
-        "rsi_1h": 50.27,
-        "fhs": 3.7,
-        "phase": "ACCUMULATION",
-        "nbp": 48.63813229571984,
-        "wcc_z24": 0.40612104210851074,
-        "lvr_z24": -2.142989487223361,
-        "vol_z24": -2.111591302104979,
-        "lmi": -0.10452010067592211,
-        "nbr": 0.7431906614785992
-      },
-      "ts": "2026-04-24T18:13:38.956029+00:00"
-    },
     {
       "symbol": "AIXBT",
       "chain": "base",
@@ -67,44 +44,18 @@
         "price_usd": 0.02849,
         "rsi_1h": 50.81,
         "fhs": 4.5,
-        "phase": "CONSOLIDATION",
-        "nbp": 35.42600896860987,
+        "phase": "ACCUMULATION",
+        "nbp": 33.6405529953917,
         "wcc_z24": 0.4468459722602704,
-        "lvr_z24": 1.5640015548472688,
-        "vol_z24": 1.5335215710761947,
-        "lmi": -0.014395621591614489,
-        "nbr": 0.6771300448430493
+        "lvr_z24": 1.3378827211619775,
+        "vol_z24": 1.313939464585162,
+        "lmi": -0.008288860544097512,
+        "nbr": 0.6682027649769585
       },
-      "ts": "2026-04-24T18:13:38.956034+00:00"
+      "ts": "2026-04-24T20:13:35.808353+00:00"
     }
   ],
   "vetoed": [
-    {
-      "symbol": "BRETT",
-      "chain": "base",
-      "direction": "SHORT",
-      "signal": "RSI_overbought",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Vetoed: Attempting to short a high-conviction accumulation phase with strong buying pressure is a recipe for liquidation.",
-      "snapshot": {
-        "price_usd": 0.006997,
-        "rsi_1h": 75.4,
-        "fhs": 4.4,
-        "phase": "ACCUMULATION",
-        "nbp": 46.666666666666664,
-        "wcc_z24": 0.3333333333333331,
-        "lvr_z24": 0.34139775732309574,
-        "vol_z24": 0.346379834024261,
-        "lmi": -0.2725413999682174,
-        "nbr": 0.7333333333333333
-      },
-      "ts": "2026-04-24T18:13:38.956021+00:00"
-    },
     {
       "symbol": "AERO",
       "chain": "base",
@@ -115,67 +66,36 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.4272,
-        "rsi_1h": 42.97,
-        "fhs": 4.3,
-        "phase": "DISTRIBUTION",
-        "nbp": -42.837176799440954,
-        "wcc_z24": 0.36961930524683917,
-        "lvr_z24": -2.855024387491067,
-        "vol_z24": -2.7677578074586515,
-        "lmi": -0.16573891127163423,
-        "nbr": 0.28581411600279527
-      },
-      "ts": "2026-04-24T18:13:38.956039+00:00"
-    },
-    {
-      "symbol": "BRETT",
-      "chain": "base",
-      "direction": "SHORT",
-      "signal": "RSI_overbought",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.006997,
-        "rsi_1h": 75.4,
+        "price_usd": 0.4278,
+        "rsi_1h": 46.85,
         "fhs": 4.4,
-        "phase": "ACCUMULATION",
-        "nbp": 46.666666666666664,
-        "wcc_z24": 0.3333333333333331,
-        "lvr_z24": 0.34139775732309574,
-        "vol_z24": 0.346379834024261,
-        "lmi": -0.2725413999682174,
-        "nbr": 0.7333333333333333
+        "phase": "DISTRIBUTION",
+        "nbp": -46.93877551020408,
+        "wcc_z24": 0.36497246315009957,
+        "lvr_z24": -2.6814068585643507,
+        "vol_z24": -2.629873132989319,
+        "lmi": -0.09651642034331692,
+        "nbr": 0.2653061224489796
       },
-      "ts": "2026-04-24T18:13:38.956044+00:00"
+      "ts": "2026-04-24T20:13:35.808360+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 2,
-    "candidates_lt": 5,
-    "submitted_venice": 5,
+    "candidates_bot": 1,
+    "candidates_lt": 3,
+    "submitted_venice": 3,
     "approved_bot": 1,
-    "approved_lt": 2,
-    "vetoed": 3
+    "approved_lt": 1,
+    "vetoed": 1
   },
   "venice_decisions": [
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.045,
-      "sl_ratio": 0.015,
-      "narrative": "A quiet exit as the crowd slowly abandons the distribution zone under thinning liquidity and low volatility."
-    },
-    {
-      "symbol": "VIRTUAL",
-      "action": "SKIP",
-      "multiplier": 1.0,
       "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
+      "sl_ratio": 0.5,
+      "narrative": "A quiet exit as liquidity drains from a distribution top, suggesting a slow bleed lower as sell pressure outweighs remaining interest."
     },
     {
       "symbol": "AIXBT",
@@ -186,23 +106,7 @@
       "narrative": ""
     },
     {
-      "symbol": "BRETT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Vetoed: Attempting to short a high-conviction accumulation phase with strong buying pressure is a recipe for liquidation."
-    },
-    {
       "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
-    },
-    {
-      "symbol": "BRETT",
       "action": "SKIP",
       "multiplier": 1.0,
       "tp_ratio": 1.5,
@@ -215,33 +119,17 @@
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.045,
-      "sl_ratio": 0.015,
-      "narrative": "A quiet exit as the crowd slowly abandons the distribution zone under thinning liquidity and low volatility."
-    },
-    {
-      "symbol": "BRETT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Vetoed: Attempting to short a high-conviction accumulation phase with strong buying pressure is a recipe for liquidation."
-    },
-    {
-      "symbol": "VIRTUAL",
-      "action": "TRADE",
-      "multiplier": 0.5,
-      "tp_ratio": 0.05,
-      "sl_ratio": 0.012,
-      "narrative": "Strong hands are absorbing supply in a ghost town, waiting for a liquidity spark to ignite the engine."
+      "tp_ratio": 1.5,
+      "sl_ratio": 0.5,
+      "narrative": "A quiet exit as liquidity drains from a distribution top, suggesting a slow bleed lower as sell pressure outweighs remaining interest."
     },
     {
       "symbol": "AIXBT",
       "action": "TRADE",
       "multiplier": 1.2,
-      "tp_ratio": 0.085,
-      "sl_ratio": 0.03,
-      "narrative": "A coiled spring ready to snap as fresh liquidity and rising volatility pour into a stable consolidation base."
+      "tp_ratio": 2.5,
+      "sl_ratio": 1.0,
+      "narrative": "Smart money is aggressively absorbing supply in an accumulation zone, signaling a high-conviction breakout fueled by rising volatility and liquidity."
     },
     {
       "symbol": "AERO",
@@ -249,7 +137,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed: Catching a falling knife in a distribution phase with heavy selling pressure is a terminal error."
+      "narrative": "VETO: Attempting to catch a falling knife while whales dump into a liquidity void during a terminal distribution phase with massive negative buying pressure."
     }
   ]
 }

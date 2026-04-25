@@ -1,8 +1,60 @@
 {
-  "generated_at": "2026-04-25T14:13:32.920893+00:00",
-  "evaluated_source": "2026-04-25T14:13:25.118235+00:00",
+  "generated_at": "2026-04-25T16:13:52.103575+00:00",
+  "evaluated_source": "2026-04-25T16:13:27.283534+00:00",
   "token_count": 6,
   "approved_bot": [
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "FHS_high",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved",
+      "snapshot": {
+        "price_usd": 0.02793,
+        "rsi_1h": 45.08,
+        "fhs": 5.2,
+        "phase": "DISTRIBUTION",
+        "nbp": -77.77777777777779,
+        "wcc_z24": 0.07991055024756413,
+        "lvr_z24": -1.525345844281979,
+        "vol_z24": -1.5261618528336118,
+        "lmi": 0.05186422118500936,
+        "nbr": 0.1111111111111111
+      },
+      "ts": "2026-04-25T16:13:52.103527+00:00"
+    },
+    {
+      "symbol": "AERO",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "BullFlag",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved",
+      "snapshot": {
+        "price_usd": 0.4278,
+        "rsi_1h": 49.61,
+        "fhs": 3.6,
+        "phase": "DISTRIBUTION",
+        "nbp": -68.5058896466212,
+        "wcc_z24": 0.4147607861429497,
+        "lvr_z24": -1.2549214048458008,
+        "vol_z24": -1.2511104167118927,
+        "lmi": 0.004676855739075226,
+        "nbr": 0.15747055176689398
+      },
+      "ts": "2026-04-25T16:13:52.103555+00:00"
+    },
     {
       "symbol": "MORPHO",
       "chain": "base",
@@ -12,238 +64,93 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 1.8,
-      "sl_ratio": 0.6,
-      "narrative": "Whales are quietly exiting during a distribution phase as liquidity drains, setting the stage for a controlled price bleed.",
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved",
       "snapshot": {
-        "price_usd": 1.84,
-        "rsi_1h": 53.64,
-        "fhs": 3.3,
+        "price_usd": 1.83,
+        "rsi_1h": 45.61,
+        "fhs": 3.8,
         "phase": "DISTRIBUTION",
-        "nbp": -13.789359391965256,
+        "nbp": -20.640569395017792,
         "wcc_z24": 0.3333333333333332,
-        "lvr_z24": -1.3359961081309257,
-        "vol_z24": -1.2132960744318337,
-        "lmi": -0.007570891244014534,
-        "nbr": 0.43105320304017375
+        "lvr_z24": 0.2927438224002489,
+        "vol_z24": 0.9156826646594872,
+        "lmi": 0.20526826000582077,
+        "nbr": 0.39679715302491103
       },
-      "ts": "2026-04-25T14:13:32.920868+00:00"
+      "ts": "2026-04-25T16:13:52.103562+00:00"
+    },
+    {
+      "symbol": "VVV",
+      "chain": "base",
+      "direction": "SHORT",
+      "signal": "LVR_spike",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved",
+      "snapshot": {
+        "price_usd": 8.89,
+        "rsi_1h": 56.56,
+        "fhs": 4.8,
+        "phase": "ACCUMULATION",
+        "nbp": 37.88187372708758,
+        "wcc_z24": 0.32547309738370733,
+        "lvr_z24": 2.2806363215697485,
+        "vol_z24": 2.5637673293579932,
+        "lmi": 0.07833655921145664,
+        "nbr": 0.6894093686354379
+      },
+      "ts": "2026-04-25T16:13:52.103566+00:00"
     }
   ],
   "approved_lt": [],
-  "vetoed": [
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "FHS_high",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Long signal vetoed due to active distribution phase and severe negative buying pressure indicating a falling knife.",
-      "snapshot": {
-        "price_usd": 0.02805,
-        "rsi_1h": 45.99,
-        "fhs": 5.2,
-        "phase": "DISTRIBUTION",
-        "nbp": -77.77777777777779,
-        "wcc_z24": 0.0636929755298484,
-        "lvr_z24": -1.659334953898871,
-        "vol_z24": -1.6533240711950619,
-        "lmi": -0.04185243625287423,
-        "nbr": 0.1111111111111111
-      },
-      "ts": "2026-04-25T14:13:32.920830+00:00"
-    },
-    {
-      "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "BullFlag",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Technical bull flag is invalidated by a distribution phase and significant capital outflow.",
-      "snapshot": {
-        "price_usd": 0.4279,
-        "rsi_1h": 54.27,
-        "fhs": 2.9,
-        "phase": "DISTRIBUTION",
-        "nbp": -66.60459342023589,
-        "wcc_z24": 0.4098911473649709,
-        "lvr_z24": -1.3868990615964534,
-        "vol_z24": -1.3817148428441857,
-        "lmi": -0.15033259331311352,
-        "nbr": 0.1669770328988206
-      },
-      "ts": "2026-04-25T14:13:32.920861+00:00"
-    },
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "FHS_high",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.02805,
-        "rsi_1h": 45.99,
-        "fhs": 5.2,
-        "phase": "DISTRIBUTION",
-        "nbp": -77.77777777777779,
-        "wcc_z24": 0.0636929755298484,
-        "lvr_z24": -1.659334953898871,
-        "vol_z24": -1.6533240711950619,
-        "lmi": -0.04185243625287423,
-        "nbr": 0.1111111111111111
-      },
-      "ts": "2026-04-25T14:13:32.920878+00:00"
-    },
-    {
-      "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "BullFlag",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.4279,
-        "rsi_1h": 54.27,
-        "fhs": 2.9,
-        "phase": "DISTRIBUTION",
-        "nbp": -66.60459342023589,
-        "wcc_z24": 0.4098911473649709,
-        "lvr_z24": -1.3868990615964534,
-        "vol_z24": -1.3817148428441857,
-        "lmi": -0.15033259331311352,
-        "nbr": 0.1669770328988206
-      },
-      "ts": "2026-04-25T14:13:32.920884+00:00"
-    },
-    {
-      "symbol": "BRETT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "LVR_deceleration",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.006922,
-        "rsi_1h": 45.31,
-        "fhs": 3.9,
-        "phase": "DISTRIBUTION",
-        "nbp": -47.05882352941176,
-        "wcc_z24": 0.3333333333333331,
-        "lvr_z24": -2.044863958594442,
-        "vol_z24": -2.042975815440073,
-        "lmi": -0.0751448633846206,
-        "nbr": 0.2647058823529412
-      },
-      "ts": "2026-04-25T14:13:32.920889+00:00"
-    }
-  ],
+  "vetoed": [],
   "stats": {
-    "candidates_bot": 3,
+    "candidates_bot": 4,
     "candidates_lt": 4,
     "submitted_venice": 4,
-    "approved_bot": 1,
+    "approved_bot": 4,
     "approved_lt": 0,
-    "vetoed": 5
+    "vetoed": 0
   },
   "venice_decisions": [
     {
+      "symbol": "AIXBT",
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved"
+    },
+    {
+      "symbol": "AERO",
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved"
+    },
+    {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 1.8,
-      "sl_ratio": 0.6,
-      "narrative": "Whales are quietly exiting during a distribution phase as liquidity drains, setting the stage for a controlled price bleed."
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved"
     },
     {
-      "symbol": "AIXBT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Long signal vetoed due to active distribution phase and severe negative buying pressure indicating a falling knife."
-    },
-    {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Technical bull flag is invalidated by a distribution phase and significant capital outflow."
-    },
-    {
-      "symbol": "AIXBT",
-      "action": "SKIP",
+      "symbol": "VVV",
+      "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
-    },
-    {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
-    },
-    {
-      "symbol": "BRETT",
-      "action": "SKIP",
-      "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved"
     }
   ],
-  "venice_raw": [
-    {
-      "symbol": "AIXBT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Long signal vetoed due to active distribution phase and severe negative buying pressure indicating a falling knife."
-    },
-    {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Technical bull flag is invalidated by a distribution phase and significant capital outflow."
-    },
-    {
-      "symbol": "MORPHO",
-      "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 1.8,
-      "sl_ratio": 0.6,
-      "narrative": "Whales are quietly exiting during a distribution phase as liquidity drains, setting the stage for a controlled price bleed."
-    },
-    {
-      "symbol": "BRETT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Long entry rejected as the asset faces massive liquidity velocity exhaustion and a dominant distribution narrative."
-    }
-  ]
+  "venice_raw": []
 }

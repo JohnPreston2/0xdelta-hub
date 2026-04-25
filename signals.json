@@ -1,60 +1,8 @@
 {
-  "generated_at": "2026-04-25T16:13:52.103575+00:00",
-  "evaluated_source": "2026-04-25T16:13:27.283534+00:00",
+  "generated_at": "2026-04-25T18:13:36.868363+00:00",
+  "evaluated_source": "2026-04-25T18:13:26.371788+00:00",
   "token_count": 6,
   "approved_bot": [
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "FHS_high",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved",
-      "snapshot": {
-        "price_usd": 0.02793,
-        "rsi_1h": 45.08,
-        "fhs": 5.2,
-        "phase": "DISTRIBUTION",
-        "nbp": -77.77777777777779,
-        "wcc_z24": 0.07991055024756413,
-        "lvr_z24": -1.525345844281979,
-        "vol_z24": -1.5261618528336118,
-        "lmi": 0.05186422118500936,
-        "nbr": 0.1111111111111111
-      },
-      "ts": "2026-04-25T16:13:52.103527+00:00"
-    },
-    {
-      "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "BullFlag",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved",
-      "snapshot": {
-        "price_usd": 0.4278,
-        "rsi_1h": 49.61,
-        "fhs": 3.6,
-        "phase": "DISTRIBUTION",
-        "nbp": -68.5058896466212,
-        "wcc_z24": 0.4147607861429497,
-        "lvr_z24": -1.2549214048458008,
-        "vol_z24": -1.2511104167118927,
-        "lmi": 0.004676855739075226,
-        "nbr": 0.15747055176689398
-      },
-      "ts": "2026-04-25T16:13:52.103555+00:00"
-    },
     {
       "symbol": "MORPHO",
       "chain": "base",
@@ -64,22 +12,77 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved",
+      "tp_ratio": 4.5,
+      "sl_ratio": 1.8,
+      "narrative": "Orderly distribution with rising volatility provides a clean entry for a downward continuation as sellers dominate.",
       "snapshot": {
-        "price_usd": 1.83,
-        "rsi_1h": 45.61,
+        "price_usd": 1.85,
+        "rsi_1h": 55.63,
         "fhs": 3.8,
         "phase": "DISTRIBUTION",
-        "nbp": -20.640569395017792,
+        "nbp": -16.997411561691113,
         "wcc_z24": 0.3333333333333332,
-        "lvr_z24": 0.2927438224002489,
-        "vol_z24": 0.9156826646594872,
-        "lmi": 0.20526826000582077,
-        "nbr": 0.39679715302491103
+        "lvr_z24": 0.9489641299191833,
+        "vol_z24": 1.4800432584403826,
+        "lmi": 0.03104421231722724,
+        "nbr": 0.41501294219154444
       },
-      "ts": "2026-04-25T16:13:52.103562+00:00"
+      "ts": "2026-04-25T18:13:36.868331+00:00"
+    }
+  ],
+  "approved_lt": [],
+  "vetoed": [
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "FHS_high",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed due to distribution phase and extreme negative buying pressure indicating a falling knife.",
+      "snapshot": {
+        "price_usd": 0.02763,
+        "rsi_1h": 43.55,
+        "fhs": 5.2,
+        "phase": "DISTRIBUTION",
+        "nbp": -77.77777777777779,
+        "wcc_z24": 0.07991055024756413,
+        "lvr_z24": -1.5674110971020967,
+        "vol_z24": -1.5717810901361102,
+        "lmi": -0.08871079402941497,
+        "nbr": 0.1111111111111111
+      },
+      "ts": "2026-04-25T18:13:36.868307+00:00"
+    },
+    {
+      "symbol": "BRETT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "RSI_oversold",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Oversold RSI is irrelevant when faced with a distribution phase and a complete lack of buying support.",
+      "snapshot": {
+        "price_usd": 0.006818,
+        "rsi_1h": 33.6,
+        "fhs": 5.0,
+        "phase": "DISTRIBUTION",
+        "nbp": -92.5925925925926,
+        "wcc_z24": 0.3333333333333331,
+        "lvr_z24": 0.02471137356128374,
+        "vol_z24": -0.0031939932871183677,
+        "lmi": 0.3715418052447243,
+        "nbr": 0.037037037037037035
+      },
+      "ts": "2026-04-25T18:13:36.868338+00:00"
     },
     {
       "symbol": "VVV",
@@ -88,69 +91,193 @@
       "signal": "LVR_spike",
       "horizon": "T+3",
       "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed as the asset is in accumulation with strong positive buying pressure, making a short highly dangerous.",
       "snapshot": {
-        "price_usd": 8.89,
-        "rsi_1h": 56.56,
-        "fhs": 4.8,
+        "price_usd": 8.87,
+        "rsi_1h": 56.03,
+        "fhs": 3.9,
         "phase": "ACCUMULATION",
-        "nbp": 37.88187372708758,
+        "nbp": 31.369266822899228,
         "wcc_z24": 0.32547309738370733,
-        "lvr_z24": 2.2806363215697485,
-        "vol_z24": 2.5637673293579932,
-        "lmi": 0.07833655921145664,
-        "nbr": 0.6894093686354379
+        "lvr_z24": 2.4129505293510634,
+        "vol_z24": 2.496124528210032,
+        "lmi": 0.017657374586047037,
+        "nbr": 0.6568463341144961
       },
-      "ts": "2026-04-25T16:13:52.103566+00:00"
+      "ts": "2026-04-25T18:13:36.868343+00:00"
+    },
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "FHS_high",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.02763,
+        "rsi_1h": 43.55,
+        "fhs": 5.2,
+        "phase": "DISTRIBUTION",
+        "nbp": -77.77777777777779,
+        "wcc_z24": 0.07991055024756413,
+        "lvr_z24": -1.5674110971020967,
+        "vol_z24": -1.5717810901361102,
+        "lmi": -0.08871079402941497,
+        "nbr": 0.1111111111111111
+      },
+      "ts": "2026-04-25T18:13:36.868349+00:00"
+    },
+    {
+      "symbol": "BRETT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "RSI_oversold",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.006818,
+        "rsi_1h": 33.6,
+        "fhs": 5.0,
+        "phase": "DISTRIBUTION",
+        "nbp": -92.5925925925926,
+        "wcc_z24": 0.3333333333333331,
+        "lvr_z24": 0.02471137356128374,
+        "vol_z24": -0.0031939932871183677,
+        "lmi": 0.3715418052447243,
+        "nbr": 0.037037037037037035
+      },
+      "ts": "2026-04-25T18:13:36.868356+00:00"
+    },
+    {
+      "symbol": "VVV",
+      "chain": "base",
+      "direction": "SHORT",
+      "signal": "LVR_spike",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 8.87,
+        "rsi_1h": 56.03,
+        "fhs": 3.9,
+        "phase": "ACCUMULATION",
+        "nbp": 31.369266822899228,
+        "wcc_z24": 0.32547309738370733,
+        "lvr_z24": 2.4129505293510634,
+        "vol_z24": 2.496124528210032,
+        "lmi": 0.017657374586047037,
+        "nbr": 0.6568463341144961
+      },
+      "ts": "2026-04-25T18:13:36.868360+00:00"
     }
   ],
-  "approved_lt": [],
-  "vetoed": [],
   "stats": {
     "candidates_bot": 4,
     "candidates_lt": 4,
     "submitted_venice": 4,
-    "approved_bot": 4,
+    "approved_bot": 1,
     "approved_lt": 0,
-    "vetoed": 0
+    "vetoed": 6
   },
   "venice_decisions": [
     {
-      "symbol": "AIXBT",
+      "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved"
+      "tp_ratio": 4.5,
+      "sl_ratio": 1.8,
+      "narrative": "Orderly distribution with rising volatility provides a clean entry for a downward continuation as sellers dominate."
     },
     {
-      "symbol": "AERO",
-      "action": "TRADE",
+      "symbol": "AIXBT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed due to distribution phase and extreme negative buying pressure indicating a falling knife."
+    },
+    {
+      "symbol": "BRETT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Oversold RSI is irrelevant when faced with a distribution phase and a complete lack of buying support."
+    },
+    {
+      "symbol": "VVV",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed as the asset is in accumulation with strong positive buying pressure, making a short highly dangerous."
+    },
+    {
+      "symbol": "AIXBT",
+      "action": "SKIP",
       "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved"
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
+    },
+    {
+      "symbol": "BRETT",
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
+    },
+    {
+      "symbol": "VVV",
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
+    }
+  ],
+  "venice_raw": [
+    {
+      "symbol": "AIXBT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed due to distribution phase and extreme negative buying pressure indicating a falling knife."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved"
+      "tp_ratio": 4.5,
+      "sl_ratio": 1.8,
+      "narrative": "Orderly distribution with rising volatility provides a clean entry for a downward continuation as sellers dominate."
+    },
+    {
+      "symbol": "BRETT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Oversold RSI is irrelevant when faced with a distribution phase and a complete lack of buying support."
     },
     {
       "symbol": "VVV",
-      "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved"
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed as the asset is in accumulation with strong positive buying pressure, making a short highly dangerous."
     }
-  ],
-  "venice_raw": []
+  ]
 }

@@ -1,60 +1,36 @@
 {
-  "generated_at": "2026-04-24T22:13:38.292027+00:00",
-  "evaluated_source": "2026-04-24T22:13:27.892410+00:00",
+  "generated_at": "2026-04-25T00:13:37.642249+00:00",
+  "evaluated_source": "2026-04-25T00:13:25.295141+00:00",
   "token_count": 6,
   "approved_bot": [
     {
       "symbol": "MORPHO",
       "chain": "base",
       "direction": "SHORT",
-      "signal": "Phase_DIST",
+      "signal": "NBP_negative",
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.02,
-      "narrative": "A quiet exit as liquidity drains from a distribution peak, favoring a controlled descent into lower support.",
+      "multiplier": 0.6,
+      "tp_ratio": 0.05,
+      "sl_ratio": 0.015,
+      "narrative": "A low-volatility bleed-out as liquidity exits during a consolidation phase with no buyer support.",
       "snapshot": {
-        "price_usd": 1.85,
-        "rsi_1h": 42.22,
+        "price_usd": 1.84,
+        "rsi_1h": 42.37,
         "fhs": 4.6,
-        "phase": "DISTRIBUTION",
-        "nbp": -11.776447105788424,
+        "phase": "CONSOLIDATION",
+        "nbp": -9.06474820143885,
         "wcc_z24": 0.3333333333333332,
-        "lvr_z24": -1.647054913579651,
-        "vol_z24": -1.7798435136260295,
-        "lmi": -0.04613797363333781,
-        "nbr": 0.4411177644710579
+        "lvr_z24": -2.16592957192099,
+        "vol_z24": -2.1906567310437985,
+        "lmi": -0.03945853935391248,
+        "nbr": 0.4546762589928058
       },
-      "ts": "2026-04-24T22:13:38.291985+00:00"
+      "ts": "2026-04-25T00:13:37.642214+00:00"
     }
   ],
-  "approved_lt": [
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "FHS_NBP_combo",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.02849,
-        "rsi_1h": 50.81,
-        "fhs": 4.5,
-        "phase": "ACCUMULATION",
-        "nbp": 34.57943925233645,
-        "wcc_z24": 0.4468459722602704,
-        "lvr_z24": 1.183747310700712,
-        "vol_z24": 1.1626312067688116,
-        "lmi": -0.0037439708725371147,
-        "nbr": 0.6728971962616822
-      },
-      "ts": "2026-04-24T22:13:38.292015+00:00"
-    }
-  ],
+  "approved_lt": [],
   "vetoed": [
     {
       "symbol": "AERO",
@@ -66,44 +42,36 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.4246,
-        "rsi_1h": 38.33,
-        "fhs": 4.4,
+        "price_usd": 0.4231,
+        "rsi_1h": 38.78,
+        "fhs": 4.5,
         "phase": "DISTRIBUTION",
-        "nbp": -50.58043117744611,
-        "wcc_z24": 0.36034499946473686,
-        "lvr_z24": -2.464589182934719,
-        "vol_z24": -2.4397073087984347,
-        "lmi": -0.09142805947874033,
-        "nbr": 0.2470978441127695
+        "nbp": -53.8917089678511,
+        "wcc_z24": 0.43362152685204786,
+        "lvr_z24": -2.110402999831622,
+        "vol_z24": -2.0986452930447204,
+        "lmi": -0.020457587559241167,
+        "nbr": 0.2305414551607445
       },
-      "ts": "2026-04-24T22:13:38.292022+00:00"
+      "ts": "2026-04-25T00:13:37.642243+00:00"
     }
   ],
   "stats": {
     "candidates_bot": 1,
-    "candidates_lt": 3,
-    "submitted_venice": 3,
+    "candidates_lt": 2,
+    "submitted_venice": 2,
     "approved_bot": 1,
-    "approved_lt": 1,
+    "approved_lt": 0,
     "vetoed": 1
   },
   "venice_decisions": [
     {
       "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.02,
-      "narrative": "A quiet exit as liquidity drains from a distribution peak, favoring a controlled descent into lower support."
-    },
-    {
-      "symbol": "AIXBT",
-      "action": "SKIP",
-      "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
+      "multiplier": 0.6,
+      "tp_ratio": 0.05,
+      "sl_ratio": 0.015,
+      "narrative": "A low-volatility bleed-out as liquidity exits during a consolidation phase with no buyer support."
     },
     {
       "symbol": "AERO",
@@ -118,18 +86,10 @@
     {
       "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.02,
-      "narrative": "A quiet exit as liquidity drains from a distribution peak, favoring a controlled descent into lower support."
-    },
-    {
-      "symbol": "AIXBT",
-      "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 0.12,
-      "sl_ratio": 0.04,
-      "narrative": "Aggressive accumulation meets rising volatility and positive whale flow, signaling a high-conviction breakout attempt."
+      "multiplier": 0.6,
+      "tp_ratio": 0.05,
+      "sl_ratio": 0.015,
+      "narrative": "A low-volatility bleed-out as liquidity exits during a consolidation phase with no buyer support."
     },
     {
       "symbol": "AERO",
@@ -137,7 +97,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed: Attempting to long during a distribution phase with massive negative buying pressure is a high-risk liquidity trap."
+      "narrative": "VETO: Long position rejected due to Distribution phase and extreme negative buying pressure indicating a strong downtrend."
     }
   ]
 }

@@ -1,103 +1,147 @@
 {
-  "generated_at": "2026-04-25T00:13:37.642249+00:00",
-  "evaluated_source": "2026-04-25T00:13:25.295141+00:00",
+  "generated_at": "2026-04-25T02:13:36.128978+00:00",
+  "evaluated_source": "2026-04-25T02:13:24.929988+00:00",
   "token_count": 6,
   "approved_bot": [
+    {
+      "symbol": "VIRTUAL",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "RSI_oversold",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 0.5,
+      "tp_ratio": 0.08,
+      "sl_ratio": 0.02,
+      "narrative": "Smart money is quietly absorbing supply in an accumulation zone, but the significant exit of liquidity requires a defensive, tight-leash approach.",
+      "snapshot": {
+        "price_usd": 0.7064,
+        "rsi_1h": 34.84,
+        "fhs": 2.0,
+        "phase": "ACCUMULATION",
+        "nbp": 17.318435754189945,
+        "wcc_z24": 0.34552674238605025,
+        "lvr_z24": -2.187020323814126,
+        "vol_z24": -2.1903793981115447,
+        "lmi": -0.30538023249234847,
+        "nbr": 0.5865921787709497
+      },
+      "ts": "2026-04-25T02:13:36.128938+00:00"
+    },
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "RSI_oversold",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 1.2,
+      "tp_ratio": 0.15,
+      "sl_ratio": 0.05,
+      "narrative": "A high-conviction reversal setup where aggressive buying pressure and positive liquidity velocity perfectly align with an oversold accumulation phase.",
+      "snapshot": {
+        "price_usd": 0.02826,
+        "rsi_1h": 34.75,
+        "fhs": 3.9,
+        "phase": "ACCUMULATION",
+        "nbp": 29.126213592233007,
+        "wcc_z24": 0.3806465689624524,
+        "lvr_z24": 1.0339759089753537,
+        "vol_z24": 0.995465359984906,
+        "lmi": 0.0166440031907274,
+        "nbr": 0.6456310679611651
+      },
+      "ts": "2026-04-25T02:13:36.128963+00:00"
+    },
     {
       "symbol": "MORPHO",
       "chain": "base",
       "direction": "SHORT",
-      "signal": "NBP_negative",
+      "signal": "Phase_DIST",
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 0.6,
-      "tp_ratio": 0.05,
-      "sl_ratio": 0.015,
-      "narrative": "A low-volatility bleed-out as liquidity exits during a consolidation phase with no buyer support.",
+      "multiplier": 0.8,
+      "tp_ratio": 0.06,
+      "sl_ratio": 0.02,
+      "narrative": "The market is entering a low-energy distribution bleed; while the direction is clear, the evaporating liquidity necessitates a very tight stop-loss.",
       "snapshot": {
         "price_usd": 1.84,
-        "rsi_1h": 42.37,
-        "fhs": 4.6,
-        "phase": "CONSOLIDATION",
-        "nbp": -9.06474820143885,
+        "rsi_1h": 48.22,
+        "fhs": 3.9,
+        "phase": "DISTRIBUTION_POTENTIELLE",
+        "nbp": -0.9267059814658803,
         "wcc_z24": 0.3333333333333332,
-        "lvr_z24": -2.16592957192099,
-        "vol_z24": -2.1906567310437985,
-        "lmi": -0.03945853935391248,
-        "nbr": 0.4546762589928058
+        "lvr_z24": -2.587008617223727,
+        "vol_z24": -2.424054871692517,
+        "lmi": -0.06068798400883073,
+        "nbr": 0.4953664700926706
       },
-      "ts": "2026-04-25T00:13:37.642214+00:00"
+      "ts": "2026-04-25T02:13:36.128970+00:00"
     }
   ],
   "approved_lt": [],
-  "vetoed": [
-    {
-      "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "LVR_deceleration",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.4231,
-        "rsi_1h": 38.78,
-        "fhs": 4.5,
-        "phase": "DISTRIBUTION",
-        "nbp": -53.8917089678511,
-        "wcc_z24": 0.43362152685204786,
-        "lvr_z24": -2.110402999831622,
-        "vol_z24": -2.0986452930447204,
-        "lmi": -0.020457587559241167,
-        "nbr": 0.2305414551607445
-      },
-      "ts": "2026-04-25T00:13:37.642243+00:00"
-    }
-  ],
+  "vetoed": [],
   "stats": {
-    "candidates_bot": 1,
-    "candidates_lt": 2,
-    "submitted_venice": 2,
-    "approved_bot": 1,
+    "candidates_bot": 3,
+    "candidates_lt": 3,
+    "submitted_venice": 3,
+    "approved_bot": 3,
     "approved_lt": 0,
-    "vetoed": 1
+    "vetoed": 0
   },
   "venice_decisions": [
     {
-      "symbol": "MORPHO",
+      "symbol": "VIRTUAL",
       "action": "TRADE",
-      "multiplier": 0.6,
-      "tp_ratio": 0.05,
-      "sl_ratio": 0.015,
-      "narrative": "A low-volatility bleed-out as liquidity exits during a consolidation phase with no buyer support."
+      "multiplier": 0.5,
+      "tp_ratio": 0.08,
+      "sl_ratio": 0.02,
+      "narrative": "Smart money is quietly absorbing supply in an accumulation zone, but the significant exit of liquidity requires a defensive, tight-leash approach."
     },
     {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
+      "symbol": "AIXBT",
+      "action": "TRADE",
+      "multiplier": 1.2,
+      "tp_ratio": 0.15,
+      "sl_ratio": 0.05,
+      "narrative": "A high-conviction reversal setup where aggressive buying pressure and positive liquidity velocity perfectly align with an oversold accumulation phase."
+    },
+    {
+      "symbol": "MORPHO",
+      "action": "TRADE",
+      "multiplier": 0.8,
+      "tp_ratio": 0.06,
+      "sl_ratio": 0.02,
+      "narrative": "The market is entering a low-energy distribution bleed; while the direction is clear, the evaporating liquidity necessitates a very tight stop-loss."
     }
   ],
   "venice_raw": [
     {
-      "symbol": "MORPHO",
+      "symbol": "VIRTUAL",
       "action": "TRADE",
-      "multiplier": 0.6,
-      "tp_ratio": 0.05,
-      "sl_ratio": 0.015,
-      "narrative": "A low-volatility bleed-out as liquidity exits during a consolidation phase with no buyer support."
+      "multiplier": 0.5,
+      "tp_ratio": 0.08,
+      "sl_ratio": 0.02,
+      "narrative": "Smart money is quietly absorbing supply in an accumulation zone, but the significant exit of liquidity requires a defensive, tight-leash approach."
     },
     {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "VETO: Long position rejected due to Distribution phase and extreme negative buying pressure indicating a strong downtrend."
+      "symbol": "AIXBT",
+      "action": "TRADE",
+      "multiplier": 1.2,
+      "tp_ratio": 0.15,
+      "sl_ratio": 0.05,
+      "narrative": "A high-conviction reversal setup where aggressive buying pressure and positive liquidity velocity perfectly align with an oversold accumulation phase."
+    },
+    {
+      "symbol": "MORPHO",
+      "action": "TRADE",
+      "multiplier": 0.8,
+      "tp_ratio": 0.06,
+      "sl_ratio": 0.02,
+      "narrative": "The market is entering a low-energy distribution bleed; while the direction is clear, the evaporating liquidity necessitates a very tight stop-loss."
     }
   ]
 }

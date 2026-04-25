@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-25T12:13:36.386653+00:00",
-  "evaluated_source": "2026-04-25T12:13:28.240729+00:00",
+  "generated_at": "2026-04-25T14:13:32.920893+00:00",
+  "evaluated_source": "2026-04-25T14:13:25.118235+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -12,22 +12,22 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.065,
-      "sl_ratio": 0.025,
-      "narrative": "A quiet exit is underway as the asset bleeds out in a distribution phase with liquidity steadily departing the order book.",
+      "tp_ratio": 1.8,
+      "sl_ratio": 0.6,
+      "narrative": "Whales are quietly exiting during a distribution phase as liquidity drains, setting the stage for a controlled price bleed.",
       "snapshot": {
         "price_usd": 1.84,
-        "rsi_1h": 46.69,
-        "fhs": 3.9,
+        "rsi_1h": 53.64,
+        "fhs": 3.3,
         "phase": "DISTRIBUTION",
-        "nbp": -11.491935483870968,
+        "nbp": -13.789359391965256,
         "wcc_z24": 0.3333333333333332,
-        "lvr_z24": -1.2524394828339522,
-        "vol_z24": -1.2792710304810069,
-        "lmi": -0.01519219925414107,
-        "nbr": 0.4425403225806452
+        "lvr_z24": -1.3359961081309257,
+        "vol_z24": -1.2132960744318337,
+        "lmi": -0.007570891244014534,
+        "nbr": 0.43105320304017375
       },
-      "ts": "2026-04-25T12:13:36.386632+00:00"
+      "ts": "2026-04-25T14:13:32.920868+00:00"
     }
   ],
   "approved_lt": [],
@@ -43,20 +43,46 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Aggressive distribution and deeply negative buying pressure create a high-probability falling knife scenario that invalidates the long signal.",
+      "narrative": "Long signal vetoed due to active distribution phase and severe negative buying pressure indicating a falling knife.",
       "snapshot": {
-        "price_usd": 0.02829,
-        "rsi_1h": 45.9,
+        "price_usd": 0.02805,
+        "rsi_1h": 45.99,
         "fhs": 5.2,
         "phase": "DISTRIBUTION",
-        "nbp": -72.97297297297297,
-        "wcc_z24": 1.0430302430476728,
-        "lvr_z24": -1.698050394480633,
-        "vol_z24": -1.6827012852209282,
-        "lmi": -0.22142233549686322,
-        "nbr": 0.13513513513513514
+        "nbp": -77.77777777777779,
+        "wcc_z24": 0.0636929755298484,
+        "lvr_z24": -1.659334953898871,
+        "vol_z24": -1.6533240711950619,
+        "lmi": -0.04185243625287423,
+        "nbr": 0.1111111111111111
       },
-      "ts": "2026-04-25T12:13:36.386603+00:00"
+      "ts": "2026-04-25T14:13:32.920830+00:00"
+    },
+    {
+      "symbol": "AERO",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "BullFlag",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Technical bull flag is invalidated by a distribution phase and significant capital outflow.",
+      "snapshot": {
+        "price_usd": 0.4279,
+        "rsi_1h": 54.27,
+        "fhs": 2.9,
+        "phase": "DISTRIBUTION",
+        "nbp": -66.60459342023589,
+        "wcc_z24": 0.4098911473649709,
+        "lvr_z24": -1.3868990615964534,
+        "vol_z24": -1.3817148428441857,
+        "lmi": -0.15033259331311352,
+        "nbr": 0.1669770328988206
+      },
+      "ts": "2026-04-25T14:13:32.920861+00:00"
     },
     {
       "symbol": "AIXBT",
@@ -68,18 +94,41 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.02829,
-        "rsi_1h": 45.9,
+        "price_usd": 0.02805,
+        "rsi_1h": 45.99,
         "fhs": 5.2,
         "phase": "DISTRIBUTION",
-        "nbp": -72.97297297297297,
-        "wcc_z24": 1.0430302430476728,
-        "lvr_z24": -1.698050394480633,
-        "vol_z24": -1.6827012852209282,
-        "lmi": -0.22142233549686322,
-        "nbr": 0.13513513513513514
+        "nbp": -77.77777777777779,
+        "wcc_z24": 0.0636929755298484,
+        "lvr_z24": -1.659334953898871,
+        "vol_z24": -1.6533240711950619,
+        "lmi": -0.04185243625287423,
+        "nbr": 0.1111111111111111
       },
-      "ts": "2026-04-25T12:13:36.386642+00:00"
+      "ts": "2026-04-25T14:13:32.920878+00:00"
+    },
+    {
+      "symbol": "AERO",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "BullFlag",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.4279,
+        "rsi_1h": 54.27,
+        "fhs": 2.9,
+        "phase": "DISTRIBUTION",
+        "nbp": -66.60459342023589,
+        "wcc_z24": 0.4098911473649709,
+        "lvr_z24": -1.3868990615964534,
+        "vol_z24": -1.3817148428441857,
+        "lmi": -0.15033259331311352,
+        "nbr": 0.1669770328988206
+      },
+      "ts": "2026-04-25T14:13:32.920884+00:00"
     },
     {
       "symbol": "BRETT",
@@ -92,35 +141,35 @@
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
         "price_usd": 0.006922,
-        "rsi_1h": 46.87,
+        "rsi_1h": 45.31,
         "fhs": 3.9,
         "phase": "DISTRIBUTION",
-        "nbp": -21.951219512195124,
+        "nbp": -47.05882352941176,
         "wcc_z24": 0.3333333333333331,
-        "lvr_z24": -2.3990469904311778,
-        "vol_z24": -2.3956469850126547,
-        "lmi": -1.054260335981744,
-        "nbr": 0.3902439024390244
+        "lvr_z24": -2.044863958594442,
+        "vol_z24": -2.042975815440073,
+        "lmi": -0.0751448633846206,
+        "nbr": 0.2647058823529412
       },
-      "ts": "2026-04-25T12:13:36.386649+00:00"
+      "ts": "2026-04-25T14:13:32.920889+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 2,
-    "candidates_lt": 3,
-    "submitted_venice": 3,
+    "candidates_bot": 3,
+    "candidates_lt": 4,
+    "submitted_venice": 4,
     "approved_bot": 1,
     "approved_lt": 0,
-    "vetoed": 3
+    "vetoed": 5
   },
   "venice_decisions": [
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.065,
-      "sl_ratio": 0.025,
-      "narrative": "A quiet exit is underway as the asset bleeds out in a distribution phase with liquidity steadily departing the order book."
+      "tp_ratio": 1.8,
+      "sl_ratio": 0.6,
+      "narrative": "Whales are quietly exiting during a distribution phase as liquidity drains, setting the stage for a controlled price bleed."
     },
     {
       "symbol": "AIXBT",
@@ -128,10 +177,26 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Aggressive distribution and deeply negative buying pressure create a high-probability falling knife scenario that invalidates the long signal."
+      "narrative": "Long signal vetoed due to active distribution phase and severe negative buying pressure indicating a falling knife."
+    },
+    {
+      "symbol": "AERO",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Technical bull flag is invalidated by a distribution phase and significant capital outflow."
     },
     {
       "symbol": "AIXBT",
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
+    },
+    {
+      "symbol": "AERO",
       "action": "SKIP",
       "multiplier": 1.0,
       "tp_ratio": 1.5,
@@ -154,15 +219,23 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Aggressive distribution and deeply negative buying pressure create a high-probability falling knife scenario that invalidates the long signal."
+      "narrative": "Long signal vetoed due to active distribution phase and severe negative buying pressure indicating a falling knife."
+    },
+    {
+      "symbol": "AERO",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Technical bull flag is invalidated by a distribution phase and significant capital outflow."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.065,
-      "sl_ratio": 0.025,
-      "narrative": "A quiet exit is underway as the asset bleeds out in a distribution phase with liquidity steadily departing the order book."
+      "tp_ratio": 1.8,
+      "sl_ratio": 0.6,
+      "narrative": "Whales are quietly exiting during a distribution phase as liquidity drains, setting the stage for a controlled price bleed."
     },
     {
       "symbol": "BRETT",
@@ -170,7 +243,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "The attempt to catch a reversal is vetoed by a distribution phase and accelerating liquidity exit, indicating further downside risk."
+      "narrative": "Long entry rejected as the asset faces massive liquidity velocity exhaustion and a dominant distribution narrative."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-25T10:13:40.534692+00:00",
-  "evaluated_source": "2026-04-25T10:13:24.804656+00:00",
+  "generated_at": "2026-04-25T12:13:36.386653+00:00",
+  "evaluated_source": "2026-04-25T12:13:28.240729+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -12,22 +12,22 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.045,
-      "sl_ratio": 0.018,
-      "narrative": "A textbook distribution exit where draining liquidity and negative buying pressure signal a steady bleed out.",
+      "tp_ratio": 0.065,
+      "sl_ratio": 0.025,
+      "narrative": "A quiet exit is underway as the asset bleeds out in a distribution phase with liquidity steadily departing the order book.",
       "snapshot": {
         "price_usd": 1.84,
-        "rsi_1h": 38.68,
-        "fhs": 3.4,
+        "rsi_1h": 46.69,
+        "fhs": 3.9,
         "phase": "DISTRIBUTION",
-        "nbp": -17.0,
+        "nbp": -11.491935483870968,
         "wcc_z24": 0.3333333333333332,
-        "lvr_z24": -1.2466095624658435,
-        "vol_z24": -1.2784954695425954,
-        "lmi": -0.004156965383096553,
-        "nbr": 0.415
+        "lvr_z24": -1.2524394828339522,
+        "vol_z24": -1.2792710304810069,
+        "lmi": -0.01519219925414107,
+        "nbr": 0.4425403225806452
       },
-      "ts": "2026-04-25T10:13:40.534680+00:00"
+      "ts": "2026-04-25T12:13:36.386632+00:00"
     }
   ],
   "approved_lt": [],
@@ -43,20 +43,20 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed: Attempting to long during a distribution phase with massive negative buying pressure is catching a falling knife.",
+      "narrative": "Aggressive distribution and deeply negative buying pressure create a high-probability falling knife scenario that invalidates the long signal.",
       "snapshot": {
-        "price_usd": 0.02845,
-        "rsi_1h": 49.71,
+        "price_usd": 0.02829,
+        "rsi_1h": 45.9,
         "fhs": 5.2,
         "phase": "DISTRIBUTION",
-        "nbp": -83.60655737704919,
-        "wcc_z24": 1.1489034128715438,
-        "lvr_z24": -1.4043602277406972,
-        "vol_z24": -1.3806015542490597,
-        "lmi": -0.07642033887163371,
-        "nbr": 0.08196721311475409
+        "nbp": -72.97297297297297,
+        "wcc_z24": 1.0430302430476728,
+        "lvr_z24": -1.698050394480633,
+        "vol_z24": -1.6827012852209282,
+        "lmi": -0.22142233549686322,
+        "nbr": 0.13513513513513514
       },
-      "ts": "2026-04-25T10:13:40.534656+00:00"
+      "ts": "2026-04-25T12:13:36.386603+00:00"
     },
     {
       "symbol": "AIXBT",
@@ -68,36 +68,59 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.02845,
-        "rsi_1h": 49.71,
+        "price_usd": 0.02829,
+        "rsi_1h": 45.9,
         "fhs": 5.2,
         "phase": "DISTRIBUTION",
-        "nbp": -83.60655737704919,
-        "wcc_z24": 1.1489034128715438,
-        "lvr_z24": -1.4043602277406972,
-        "vol_z24": -1.3806015542490597,
-        "lmi": -0.07642033887163371,
-        "nbr": 0.08196721311475409
+        "nbp": -72.97297297297297,
+        "wcc_z24": 1.0430302430476728,
+        "lvr_z24": -1.698050394480633,
+        "vol_z24": -1.6827012852209282,
+        "lmi": -0.22142233549686322,
+        "nbr": 0.13513513513513514
       },
-      "ts": "2026-04-25T10:13:40.534688+00:00"
+      "ts": "2026-04-25T12:13:36.386642+00:00"
+    },
+    {
+      "symbol": "BRETT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "LVR_deceleration",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.006922,
+        "rsi_1h": 46.87,
+        "fhs": 3.9,
+        "phase": "DISTRIBUTION",
+        "nbp": -21.951219512195124,
+        "wcc_z24": 0.3333333333333331,
+        "lvr_z24": -2.3990469904311778,
+        "vol_z24": -2.3956469850126547,
+        "lmi": -1.054260335981744,
+        "nbr": 0.3902439024390244
+      },
+      "ts": "2026-04-25T12:13:36.386649+00:00"
     }
   ],
   "stats": {
     "candidates_bot": 2,
-    "candidates_lt": 2,
-    "submitted_venice": 2,
+    "candidates_lt": 3,
+    "submitted_venice": 3,
     "approved_bot": 1,
     "approved_lt": 0,
-    "vetoed": 2
+    "vetoed": 3
   },
   "venice_decisions": [
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.045,
-      "sl_ratio": 0.018,
-      "narrative": "A textbook distribution exit where draining liquidity and negative buying pressure signal a steady bleed out."
+      "tp_ratio": 0.065,
+      "sl_ratio": 0.025,
+      "narrative": "A quiet exit is underway as the asset bleeds out in a distribution phase with liquidity steadily departing the order book."
     },
     {
       "symbol": "AIXBT",
@@ -105,10 +128,18 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed: Attempting to long during a distribution phase with massive negative buying pressure is catching a falling knife."
+      "narrative": "Aggressive distribution and deeply negative buying pressure create a high-probability falling knife scenario that invalidates the long signal."
     },
     {
       "symbol": "AIXBT",
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
+    },
+    {
+      "symbol": "BRETT",
       "action": "SKIP",
       "multiplier": 1.0,
       "tp_ratio": 1.5,
@@ -123,15 +154,23 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed: Attempting to long during a distribution phase with massive negative buying pressure is catching a falling knife."
+      "narrative": "Aggressive distribution and deeply negative buying pressure create a high-probability falling knife scenario that invalidates the long signal."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.045,
-      "sl_ratio": 0.018,
-      "narrative": "A textbook distribution exit where draining liquidity and negative buying pressure signal a steady bleed out."
+      "tp_ratio": 0.065,
+      "sl_ratio": 0.025,
+      "narrative": "A quiet exit is underway as the asset bleeds out in a distribution phase with liquidity steadily departing the order book."
+    },
+    {
+      "symbol": "BRETT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "The attempt to catch a reversal is vetoed by a distribution phase and accelerating liquidity exit, indicating further downside risk."
     }
   ]
 }

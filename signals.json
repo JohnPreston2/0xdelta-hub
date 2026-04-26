@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-26T12:13:36.983214+00:00",
-  "evaluated_source": "2026-04-26T12:13:28.921075+00:00",
+  "generated_at": "2026-04-26T14:13:38.013453+00:00",
+  "evaluated_source": "2026-04-26T14:13:25.002220+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -12,51 +12,49 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.048,
-      "sl_ratio": 0.022,
-      "narrative": "Quiet accumulation is meeting accelerating buying pressure, suggesting a steady climb as liquidity begins to flow into the asset.",
+      "tp_ratio": 4.5,
+      "sl_ratio": 2.0,
+      "narrative": "Textbook accumulation phase supported by strong positive buying pressure and healthy liquidity velocity.",
       "snapshot": {
         "price_usd": 1.9,
-        "rsi_1h": 65.12,
-        "fhs": 3.1,
+        "rsi_1h": 63.97,
+        "fhs": 3.2,
         "phase": "ACCUMULATION",
-        "nbp": 18.194640338504936,
+        "nbp": 20.457604306864063,
         "wcc_z24": 0.0,
-        "lvr_z24": 1.4919905698194686,
-        "vol_z24": 1.62219980971385,
-        "lmi": 0.008337009738881426,
-        "nbr": 0.5909732016925247
+        "lvr_z24": 1.3046102251637268,
+        "vol_z24": 1.4887440845084892,
+        "lmi": 0.004218595729110253,
+        "nbr": 0.6022880215343204
       },
-      "ts": "2026-04-26T12:13:36.983196+00:00"
-    },
-    {
-      "symbol": "BRETT",
-      "chain": "base",
-      "direction": "SHORT",
-      "signal": "RSI_overbought",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 0.065,
-      "sl_ratio": 0.025,
-      "narrative": "Whales are aggressively exiting through the gift shop, creating a high-conviction short opportunity as price collapses under heavy distribution.",
-      "snapshot": {
-        "price_usd": 0.00697,
-        "rsi_1h": 75.47,
-        "fhs": 4.8,
-        "phase": "DISTRIBUTION",
-        "nbp": -31.70731707317073,
-        "wcc_z24": 4.358898943540675,
-        "lvr_z24": 1.7751350560322072,
-        "vol_z24": 1.8067673792190864,
-        "lmi": 0.032642557724435084,
-        "nbr": 0.34146341463414637
-      },
-      "ts": "2026-04-26T12:13:36.983202+00:00"
+      "ts": "2026-04-26T14:13:38.013427+00:00"
     }
   ],
-  "approved_lt": [],
+  "approved_lt": [
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "FHS_NBP_combo",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.0286,
+        "rsi_1h": 55.01,
+        "fhs": 4.6,
+        "phase": "DISTRIBUTION_POTENTIELLE",
+        "nbp": 6.976744186046512,
+        "wcc_z24": -1.506798012864474,
+        "lvr_z24": -0.7613783425733232,
+        "vol_z24": -0.7541426710559567,
+        "lmi": -0.0427261010515863,
+        "nbr": 0.5348837209302325
+      },
+      "ts": "2026-04-26T14:13:38.013440+00:00"
+    }
+  ],
   "vetoed": [
     {
       "symbol": "AERO",
@@ -69,20 +67,20 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "A textbook trap where a technical bull flag is invalidated by heavy distribution and negative buying pressure at extreme overbought levels.",
+      "narrative": "Hard veto triggered by active distribution phase, negative buying pressure, and overbought RSI despite the technical bull flag.",
       "snapshot": {
-        "price_usd": 0.4733,
-        "rsi_1h": 86.97,
-        "fhs": 6.3,
+        "price_usd": 0.4605,
+        "rsi_1h": 77.58,
+        "fhs": 5.1,
         "phase": "DISTRIBUTION",
-        "nbp": -20.76502732240437,
-        "wcc_z24": 0.39223227027636604,
-        "lvr_z24": 3.052190064212285,
-        "vol_z24": 3.13822939504994,
-        "lmi": 0.23860218822332568,
-        "nbr": 0.39617486338797814
+        "nbp": -18.907672301690507,
+        "wcc_z24": -3.4569957581881883,
+        "lvr_z24": 3.4878967378191903,
+        "vol_z24": 3.466733531458988,
+        "lmi": 0.21540961779077156,
+        "nbr": 0.4054616384915475
       },
-      "ts": "2026-04-26T12:13:36.983173+00:00"
+      "ts": "2026-04-26T14:13:38.013395+00:00"
     },
     {
       "symbol": "AERO",
@@ -94,26 +92,26 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.4733,
-        "rsi_1h": 86.97,
-        "fhs": 6.3,
+        "price_usd": 0.4605,
+        "rsi_1h": 77.58,
+        "fhs": 5.1,
         "phase": "DISTRIBUTION",
-        "nbp": -20.76502732240437,
-        "wcc_z24": 0.39223227027636604,
-        "lvr_z24": 3.052190064212285,
-        "vol_z24": 3.13822939504994,
-        "lmi": 0.23860218822332568,
-        "nbr": 0.39617486338797814
+        "nbp": -18.907672301690507,
+        "wcc_z24": -3.4569957581881883,
+        "lvr_z24": 3.4878967378191903,
+        "vol_z24": 3.466733531458988,
+        "lmi": 0.21540961779077156,
+        "nbr": 0.4054616384915475
       },
-      "ts": "2026-04-26T12:13:36.983209+00:00"
+      "ts": "2026-04-26T14:13:38.013448+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 3,
+    "candidates_bot": 2,
     "candidates_lt": 3,
     "submitted_venice": 3,
-    "approved_bot": 2,
-    "approved_lt": 0,
+    "approved_bot": 1,
+    "approved_lt": 1,
     "vetoed": 2
   },
   "venice_decisions": [
@@ -121,17 +119,17 @@
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.048,
-      "sl_ratio": 0.022,
-      "narrative": "Quiet accumulation is meeting accelerating buying pressure, suggesting a steady climb as liquidity begins to flow into the asset."
+      "tp_ratio": 4.5,
+      "sl_ratio": 2.0,
+      "narrative": "Textbook accumulation phase supported by strong positive buying pressure and healthy liquidity velocity."
     },
     {
-      "symbol": "BRETT",
-      "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 0.065,
-      "sl_ratio": 0.025,
-      "narrative": "Whales are aggressively exiting through the gift shop, creating a high-conviction short opportunity as price collapses under heavy distribution."
+      "symbol": "AIXBT",
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
     },
     {
       "symbol": "AERO",
@@ -139,7 +137,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "A textbook trap where a technical bull flag is invalidated by heavy distribution and negative buying pressure at extreme overbought levels."
+      "narrative": "Hard veto triggered by active distribution phase, negative buying pressure, and overbought RSI despite the technical bull flag."
     },
     {
       "symbol": "AERO",
@@ -157,23 +155,23 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "A textbook trap where a technical bull flag is invalidated by heavy distribution and negative buying pressure at extreme overbought levels."
+      "narrative": "Hard veto triggered by active distribution phase, negative buying pressure, and overbought RSI despite the technical bull flag."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.048,
-      "sl_ratio": 0.022,
-      "narrative": "Quiet accumulation is meeting accelerating buying pressure, suggesting a steady climb as liquidity begins to flow into the asset."
+      "tp_ratio": 4.5,
+      "sl_ratio": 2.0,
+      "narrative": "Textbook accumulation phase supported by strong positive buying pressure and healthy liquidity velocity."
     },
     {
-      "symbol": "BRETT",
+      "symbol": "AIXBT",
       "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 0.065,
-      "sl_ratio": 0.025,
-      "narrative": "Whales are aggressively exiting through the gift shop, creating a high-conviction short opportunity as price collapses under heavy distribution."
+      "multiplier": 0.5,
+      "tp_ratio": 2.8,
+      "sl_ratio": 0.9,
+      "narrative": "Low-conviction long due to negative liquidity velocity and whale exits, requiring a defensive multiplier and tightened stop-loss."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-26T08:13:34.139859+00:00",
-  "evaluated_source": "2026-04-26T08:13:26.452926+00:00",
+  "generated_at": "2026-04-26T10:13:39.341190+00:00",
+  "evaluated_source": "2026-04-26T10:13:28.395979+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -12,22 +12,48 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.085,
-      "sl_ratio": 0.035,
-      "narrative": "Smart money is quietly absorbing supply in an accumulation phase, setting the stage for a high-volatility breakout as liquidity velocity accelerates.",
+      "tp_ratio": 0.065,
+      "sl_ratio": 0.03,
+      "narrative": "A healthy accumulation phase supported by positive liquidity velocity suggests a steady climb as supply is absorbed.",
       "snapshot": {
-        "price_usd": 1.91,
-        "rsi_1h": 71.24,
-        "fhs": 3.6,
+        "price_usd": 1.9,
+        "rsi_1h": 62.64,
+        "fhs": 3.1,
         "phase": "ACCUMULATION",
-        "nbp": 16.399694889397406,
+        "nbp": 18.781725888324875,
         "wcc_z24": 0.0,
-        "lvr_z24": 1.775453129773622,
-        "vol_z24": 1.7236036336166685,
-        "lmi": 0.017373989437761424,
-        "nbr": 0.581998474446987
+        "lvr_z24": 1.6970409154279467,
+        "vol_z24": 1.7405679475717528,
+        "lmi": 0.02369374591264814,
+        "nbr": 0.5939086294416244
       },
-      "ts": "2026-04-26T08:13:34.139844+00:00"
+      "ts": "2026-04-26T10:13:39.341172+00:00"
+    },
+    {
+      "symbol": "BRETT",
+      "chain": "base",
+      "direction": "SHORT",
+      "signal": "RSI_overbought",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 1.2,
+      "tp_ratio": 0.09,
+      "sl_ratio": 0.035,
+      "narrative": "Perfect alignment of distribution phase and collapsing buying pressure sets the stage for a high-volatility breakdown.",
+      "snapshot": {
+        "price_usd": 0.006945,
+        "rsi_1h": 68.16,
+        "fhs": 3.4,
+        "phase": "DISTRIBUTION",
+        "nbp": -49.22279792746114,
+        "wcc_z24": 0.0,
+        "lvr_z24": 1.7513927651519674,
+        "vol_z24": 1.7808301202520962,
+        "lmi": -0.0004610553361466237,
+        "nbr": 0.2538860103626943
+      },
+      "ts": "2026-04-26T10:13:39.341178+00:00"
     }
   ],
   "approved_lt": [],
@@ -43,20 +69,20 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "A deceptive bull flag masking a distribution phase where whales are exiting and buying pressure has completely collapsed into negative territory.",
+      "narrative": "Vetoed due to distribution phase and negative buying pressure indicating the bull flag is a liquidity trap for exit.",
       "snapshot": {
-        "price_usd": 0.4452,
-        "rsi_1h": 73.63,
-        "fhs": 5.6,
+        "price_usd": 0.4535,
+        "rsi_1h": 78.81,
+        "fhs": 5.8,
         "phase": "DISTRIBUTION",
-        "nbp": -46.03643525356967,
+        "nbp": -34.3585237258348,
         "wcc_z24": -1.3987572123604728,
-        "lvr_z24": 0.26026552187760155,
-        "vol_z24": 0.31132778568249403,
-        "lmi": 0.11858655947302918,
-        "nbr": 0.26981782373215163
+        "lvr_z24": 1.1840764996683129,
+        "vol_z24": 1.2823436971069408,
+        "lmi": 0.10374625283880536,
+        "nbr": 0.328207381370826
       },
-      "ts": "2026-04-26T08:13:34.139816+00:00"
+      "ts": "2026-04-26T10:13:39.341146+00:00"
     },
     {
       "symbol": "AERO",
@@ -68,25 +94,25 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.4452,
-        "rsi_1h": 73.63,
-        "fhs": 5.6,
+        "price_usd": 0.4535,
+        "rsi_1h": 78.81,
+        "fhs": 5.8,
         "phase": "DISTRIBUTION",
-        "nbp": -46.03643525356967,
+        "nbp": -34.3585237258348,
         "wcc_z24": -1.3987572123604728,
-        "lvr_z24": 0.26026552187760155,
-        "vol_z24": 0.31132778568249403,
-        "lmi": 0.11858655947302918,
-        "nbr": 0.26981782373215163
+        "lvr_z24": 1.1840764996683129,
+        "vol_z24": 1.2823436971069408,
+        "lmi": 0.10374625283880536,
+        "nbr": 0.328207381370826
       },
-      "ts": "2026-04-26T08:13:34.139854+00:00"
+      "ts": "2026-04-26T10:13:39.341186+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 2,
-    "candidates_lt": 2,
-    "submitted_venice": 2,
-    "approved_bot": 1,
+    "candidates_bot": 3,
+    "candidates_lt": 3,
+    "submitted_venice": 3,
+    "approved_bot": 2,
     "approved_lt": 0,
     "vetoed": 2
   },
@@ -95,9 +121,17 @@
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.085,
+      "tp_ratio": 0.065,
+      "sl_ratio": 0.03,
+      "narrative": "A healthy accumulation phase supported by positive liquidity velocity suggests a steady climb as supply is absorbed."
+    },
+    {
+      "symbol": "BRETT",
+      "action": "TRADE",
+      "multiplier": 1.2,
+      "tp_ratio": 0.09,
       "sl_ratio": 0.035,
-      "narrative": "Smart money is quietly absorbing supply in an accumulation phase, setting the stage for a high-volatility breakout as liquidity velocity accelerates."
+      "narrative": "Perfect alignment of distribution phase and collapsing buying pressure sets the stage for a high-volatility breakdown."
     },
     {
       "symbol": "AERO",
@@ -105,7 +139,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "A deceptive bull flag masking a distribution phase where whales are exiting and buying pressure has completely collapsed into negative territory."
+      "narrative": "Vetoed due to distribution phase and negative buying pressure indicating the bull flag is a liquidity trap for exit."
     },
     {
       "symbol": "AERO",
@@ -123,15 +157,23 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "A deceptive bull flag masking a distribution phase where whales are exiting and buying pressure has completely collapsed into negative territory."
+      "narrative": "Vetoed due to distribution phase and negative buying pressure indicating the bull flag is a liquidity trap for exit."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.085,
+      "tp_ratio": 0.065,
+      "sl_ratio": 0.03,
+      "narrative": "A healthy accumulation phase supported by positive liquidity velocity suggests a steady climb as supply is absorbed."
+    },
+    {
+      "symbol": "BRETT",
+      "action": "TRADE",
+      "multiplier": 1.2,
+      "tp_ratio": 0.09,
       "sl_ratio": 0.035,
-      "narrative": "Smart money is quietly absorbing supply in an accumulation phase, setting the stage for a high-volatility breakout as liquidity velocity accelerates."
+      "narrative": "Perfect alignment of distribution phase and collapsing buying pressure sets the stage for a high-volatility breakdown."
     }
   ]
 }

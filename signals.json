@@ -1,60 +1,8 @@
 {
-  "generated_at": "2026-04-26T02:13:52.228092+00:00",
-  "evaluated_source": "2026-04-26T02:13:25.775382+00:00",
+  "generated_at": "2026-04-26T04:13:38.489380+00:00",
+  "evaluated_source": "2026-04-26T04:13:26.806767+00:00",
   "token_count": 6,
   "approved_bot": [
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "FHS_high",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved",
-      "snapshot": {
-        "price_usd": 0.02762,
-        "rsi_1h": 41.07,
-        "fhs": 5.2,
-        "phase": "DISTRIBUTION",
-        "nbp": -76.0,
-        "wcc_z24": 0.20412414523193154,
-        "lvr_z24": -1.157511268295914,
-        "vol_z24": -1.156942548644363,
-        "lmi": -0.12371935423606112,
-        "nbr": 0.12
-      },
-      "ts": "2026-04-26T02:13:52.228044+00:00"
-    },
-    {
-      "symbol": "AERO",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "BullFlag",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved",
-      "snapshot": {
-        "price_usd": 0.4262,
-        "rsi_1h": 49.36,
-        "fhs": 3.0,
-        "phase": "DISTRIBUTION",
-        "nbp": -71.8274111675127,
-        "wcc_z24": 0.2617132375932862,
-        "lvr_z24": -0.8305850260144537,
-        "vol_z24": -0.8274791183375824,
-        "lmi": 0.01764216696480564,
-        "nbr": 0.14086294416243655
-      },
-      "ts": "2026-04-26T02:13:52.228075+00:00"
-    },
     {
       "symbol": "MORPHO",
       "chain": "base",
@@ -63,60 +11,200 @@
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved",
+      "multiplier": 0.5,
+      "tp_ratio": 0.15,
+      "sl_ratio": 0.05,
+      "narrative": "Momentum is fighting against a potential topping structure, driven by a sudden surge in liquidity and whale interest.",
       "snapshot": {
-        "price_usd": 1.86,
-        "rsi_1h": 59.32,
-        "fhs": 4.6,
+        "price_usd": 1.85,
+        "rsi_1h": 59.76,
+        "fhs": 2.4,
         "phase": "DISTRIBUTION_POTENTIELLE",
-        "nbp": 6.47985989492119,
+        "nbp": 5.843071786310518,
         "wcc_z24": 0.22941573387056224,
-        "lvr_z24": 1.5711612859141253,
-        "vol_z24": 1.65706129934855,
-        "lmi": 0.01297678221617957,
-        "nbr": 0.532399299474606
+        "lvr_z24": 1.8801340464154659,
+        "vol_z24": 1.821187048060892,
+        "lmi": 0.032702141200731186,
+        "nbr": 0.5292153589315526
       },
-      "ts": "2026-04-26T02:13:52.228083+00:00"
+      "ts": "2026-04-26T04:13:38.489361+00:00"
     }
   ],
   "approved_lt": [],
-  "vetoed": [],
+  "vetoed": [
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "FHS_high",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Whales are dumping into a distribution phase with heavy negative buying pressure, making any long attempt suicidal.",
+      "snapshot": {
+        "price_usd": 0.02761,
+        "rsi_1h": 41.56,
+        "fhs": 5.3,
+        "phase": "DISTRIBUTION",
+        "nbp": -76.92307692307693,
+        "wcc_z24": -0.3592106040535502,
+        "lvr_z24": -1.0479129688781061,
+        "vol_z24": -1.0481890028972334,
+        "lmi": 0.00026532555795482813,
+        "nbr": 0.11538461538461539
+      },
+      "ts": "2026-04-26T04:13:38.489324+00:00"
+    },
+    {
+      "symbol": "AERO",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "BullFlag",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Technical patterns cannot override the reality of a distribution phase and significant negative buying pressure.",
+      "snapshot": {
+        "price_usd": 0.4377,
+        "rsi_1h": 62.44,
+        "fhs": 5.3,
+        "phase": "DISTRIBUTION",
+        "nbp": -60.6114050558495,
+        "wcc_z24": 0.2647553514118325,
+        "lvr_z24": -0.613790120310217,
+        "vol_z24": -0.6020208093742719,
+        "lmi": 0.1133732665024265,
+        "nbr": 0.1969429747207525
+      },
+      "ts": "2026-04-26T04:13:38.489355+00:00"
+    },
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "FHS_high",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.02761,
+        "rsi_1h": 41.56,
+        "fhs": 5.3,
+        "phase": "DISTRIBUTION",
+        "nbp": -76.92307692307693,
+        "wcc_z24": -0.3592106040535502,
+        "lvr_z24": -1.0479129688781061,
+        "vol_z24": -1.0481890028972334,
+        "lmi": 0.00026532555795482813,
+        "nbr": 0.11538461538461539
+      },
+      "ts": "2026-04-26T04:13:38.489370+00:00"
+    },
+    {
+      "symbol": "AERO",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "BullFlag",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.4377,
+        "rsi_1h": 62.44,
+        "fhs": 5.3,
+        "phase": "DISTRIBUTION",
+        "nbp": -60.6114050558495,
+        "wcc_z24": 0.2647553514118325,
+        "lvr_z24": -0.613790120310217,
+        "vol_z24": -0.6020208093742719,
+        "lmi": 0.1133732665024265,
+        "nbr": 0.1969429747207525
+      },
+      "ts": "2026-04-26T04:13:38.489376+00:00"
+    }
+  ],
   "stats": {
     "candidates_bot": 3,
     "candidates_lt": 3,
     "submitted_venice": 3,
-    "approved_bot": 3,
+    "approved_bot": 1,
     "approved_lt": 0,
-    "vetoed": 0
+    "vetoed": 4
   },
   "venice_decisions": [
     {
-      "symbol": "AIXBT",
+      "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved"
+      "multiplier": 0.5,
+      "tp_ratio": 0.15,
+      "sl_ratio": 0.05,
+      "narrative": "Momentum is fighting against a potential topping structure, driven by a sudden surge in liquidity and whale interest."
+    },
+    {
+      "symbol": "AIXBT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Whales are dumping into a distribution phase with heavy negative buying pressure, making any long attempt suicidal."
     },
     {
       "symbol": "AERO",
-      "action": "TRADE",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Technical patterns cannot override the reality of a distribution phase and significant negative buying pressure."
+    },
+    {
+      "symbol": "AIXBT",
+      "action": "SKIP",
       "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved"
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
+    },
+    {
+      "symbol": "AERO",
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
+    }
+  ],
+  "venice_raw": [
+    {
+      "symbol": "AIXBT",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Whales are dumping into a distribution phase with heavy negative buying pressure, making any long attempt suicidal."
+    },
+    {
+      "symbol": "AERO",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Technical patterns cannot override the reality of a distribution phase and significant negative buying pressure."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.1,
-      "sl_ratio": 0.03,
-      "narrative": "auto-approved"
+      "multiplier": 0.5,
+      "tp_ratio": 0.15,
+      "sl_ratio": 0.05,
+      "narrative": "Momentum is fighting against a potential topping structure, driven by a sudden surge in liquidity and whale interest."
     }
-  ],
-  "venice_raw": []
+  ]
 }

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-26T20:13:36.017088+00:00",
-  "evaluated_source": "2026-04-26T20:13:25.771762+00:00",
+  "generated_at": "2026-04-26T22:13:41.876852+00:00",
+  "evaluated_source": "2026-04-26T22:13:27.291554+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -12,22 +12,22 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 0.8,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.02,
-      "narrative": "Strong buying pressure is driving a consolidation breakout, though high RSI and exiting liquidity necessitate a tightened stop-loss.",
+      "tp_ratio": 1.07,
+      "sl_ratio": 0.975,
+      "narrative": "Steady retail accumulation in a low-volatility environment, though thinning liquidity suggests a cautious, tight-leash entry.",
       "snapshot": {
-        "price_usd": 1.97,
-        "rsi_1h": 71.57,
-        "fhs": 5.0,
+        "price_usd": 1.96,
+        "rsi_1h": 64.77,
+        "fhs": 4.6,
         "phase": "CONSOLIDATION",
-        "nbp": 33.876945885841366,
+        "nbp": 28.125,
         "wcc_z24": 0.0,
-        "lvr_z24": -0.4688486737535333,
-        "vol_z24": 0.0599794097493827,
-        "lmi": 0.0480647104842181,
-        "nbr": 0.6693847294292068
+        "lvr_z24": -0.25783871771174594,
+        "vol_z24": -0.09107879812371494,
+        "lmi": -0.005203347338169784,
+        "nbr": 0.640625
       },
-      "ts": "2026-04-26T20:13:36.017058+00:00"
+      "ts": "2026-04-26T22:13:41.876827+00:00"
     },
     {
       "symbol": "VVV",
@@ -37,26 +37,50 @@
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 0.7,
-      "tp_ratio": 0.05,
-      "sl_ratio": 0.015,
-      "narrative": "Retail demand is robust during this consolidation, but negative whale flow and declining liquidity velocity require a very tight defensive posture.",
+      "multiplier": 0.5,
+      "tp_ratio": 1.05,
+      "sl_ratio": 0.96,
+      "narrative": "Aggressive retail buying pressure is fighting a losing battle against a significant liquidity drain and whale divestment.",
       "snapshot": {
-        "price_usd": 9.48,
-        "rsi_1h": 61.78,
-        "fhs": 5.1,
+        "price_usd": 9.64,
+        "rsi_1h": 66.16,
+        "fhs": 5.3,
         "phase": "CONSOLIDATION",
-        "nbp": 44.70856398567242,
-        "wcc_z24": -1.78119675232794,
-        "lvr_z24": -0.5106562555579167,
-        "vol_z24": -0.21044887989656766,
-        "lmi": 0.001878298455062921,
-        "nbr": 0.7235428199283621
+        "nbp": 42.578912021490936,
+        "wcc_z24": -1.6115589663919438,
+        "lvr_z24": -1.252983150544664,
+        "vol_z24": -0.9572958151408537,
+        "lmi": -0.04806342435902816,
+        "nbr": 0.7128945601074547
       },
-      "ts": "2026-04-26T20:13:36.017070+00:00"
+      "ts": "2026-04-26T22:13:41.876834+00:00"
     }
   ],
-  "approved_lt": [],
+  "approved_lt": [
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "FHS_NBP_combo",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.02834,
+        "rsi_1h": 58.35,
+        "fhs": 4.8,
+        "phase": "CONSOLIDATION",
+        "nbp": 6.666666666666667,
+        "wcc_z24": 0.0793051585718153,
+        "lvr_z24": -0.43416739429986273,
+        "vol_z24": -0.4068291961212882,
+        "lmi": 0.0038608232420935177,
+        "nbr": 0.5333333333333333
+      },
+      "ts": "2026-04-26T22:13:41.876842+00:00"
+    }
+  ],
   "vetoed": [
     {
       "symbol": "AERO",
@@ -69,46 +93,20 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "The technical bull flag is a trap as the asset is in a distribution phase with negative buying pressure and whale outflows.",
+      "narrative": "A deceptive bull flag waving over a distribution exit where whales are dumping into negative retail buying pressure.",
       "snapshot": {
-        "price_usd": 0.4695,
-        "rsi_1h": 63.6,
-        "fhs": 5.1,
+        "price_usd": 0.4615,
+        "rsi_1h": 58.75,
+        "fhs": 4.6,
         "phase": "DISTRIBUTION",
-        "nbp": -12.22378937470616,
-        "wcc_z24": -1.8448201388042715,
-        "lvr_z24": 2.1301805192415664,
-        "vol_z24": 2.145802718086561,
-        "lmi": 0.01666710242438439,
-        "nbr": 0.4388810531264692
+        "nbp": -14.49565798263193,
+        "wcc_z24": -1.6153846153846163,
+        "lvr_z24": 1.9994971099188157,
+        "vol_z24": 1.9885832028225743,
+        "lmi": 0.03989758182855713,
+        "nbr": 0.42752171008684037
       },
-      "ts": "2026-04-26T20:13:36.017031+00:00"
-    },
-    {
-      "symbol": "BRETT",
-      "chain": "base",
-      "direction": "SHORT",
-      "signal": "RSI_overbought",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Shorting an accumulation phase with massive positive buying pressure and whale support is a high-probability short-squeeze candidate.",
-      "snapshot": {
-        "price_usd": 0.007056,
-        "rsi_1h": 71.27,
-        "fhs": 5.0,
-        "phase": "ACCUMULATION",
-        "nbp": 61.36363636363637,
-        "wcc_z24": 1.7320508075688803,
-        "lvr_z24": -0.33780982524245323,
-        "vol_z24": -0.29562836262563313,
-        "lmi": -0.009752179714888703,
-        "nbr": 0.8068181818181818
-      },
-      "ts": "2026-04-26T20:13:36.017065+00:00"
+      "ts": "2026-04-26T22:13:41.876795+00:00"
     },
     {
       "symbol": "AERO",
@@ -120,86 +118,47 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.4695,
-        "rsi_1h": 63.6,
-        "fhs": 5.1,
+        "price_usd": 0.4615,
+        "rsi_1h": 58.75,
+        "fhs": 4.6,
         "phase": "DISTRIBUTION",
-        "nbp": -12.22378937470616,
-        "wcc_z24": -1.8448201388042715,
-        "lvr_z24": 2.1301805192415664,
-        "vol_z24": 2.145802718086561,
-        "lmi": 0.01666710242438439,
-        "nbr": 0.4388810531264692
+        "nbp": -14.49565798263193,
+        "wcc_z24": -1.6153846153846163,
+        "lvr_z24": 1.9994971099188157,
+        "vol_z24": 1.9885832028225743,
+        "lmi": 0.03989758182855713,
+        "nbr": 0.42752171008684037
       },
-      "ts": "2026-04-26T20:13:36.017078+00:00"
-    },
-    {
-      "symbol": "BRETT",
-      "chain": "base",
-      "direction": "SHORT",
-      "signal": "RSI_overbought",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.007056,
-        "rsi_1h": 71.27,
-        "fhs": 5.0,
-        "phase": "ACCUMULATION",
-        "nbp": 61.36363636363637,
-        "wcc_z24": 1.7320508075688803,
-        "lvr_z24": -0.33780982524245323,
-        "vol_z24": -0.29562836262563313,
-        "lmi": -0.009752179714888703,
-        "nbr": 0.8068181818181818
-      },
-      "ts": "2026-04-26T20:13:36.017084+00:00"
+      "ts": "2026-04-26T22:13:41.876848+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 4,
+    "candidates_bot": 3,
     "candidates_lt": 3,
     "submitted_venice": 4,
     "approved_bot": 2,
-    "approved_lt": 0,
-    "vetoed": 4
+    "approved_lt": 1,
+    "vetoed": 2
   },
   "venice_decisions": [
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 0.8,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.02,
-      "narrative": "Strong buying pressure is driving a consolidation breakout, though high RSI and exiting liquidity necessitate a tightened stop-loss."
+      "tp_ratio": 1.07,
+      "sl_ratio": 0.975,
+      "narrative": "Steady retail accumulation in a low-volatility environment, though thinning liquidity suggests a cautious, tight-leash entry."
     },
     {
       "symbol": "VVV",
       "action": "TRADE",
-      "multiplier": 0.7,
-      "tp_ratio": 0.05,
-      "sl_ratio": 0.015,
-      "narrative": "Retail demand is robust during this consolidation, but negative whale flow and declining liquidity velocity require a very tight defensive posture."
+      "multiplier": 0.5,
+      "tp_ratio": 1.05,
+      "sl_ratio": 0.96,
+      "narrative": "Aggressive retail buying pressure is fighting a losing battle against a significant liquidity drain and whale divestment."
     },
     {
-      "symbol": "AERO",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "The technical bull flag is a trap as the asset is in a distribution phase with negative buying pressure and whale outflows."
-    },
-    {
-      "symbol": "BRETT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Shorting an accumulation phase with massive positive buying pressure and whale support is a high-probability short-squeeze candidate."
-    },
-    {
-      "symbol": "AERO",
+      "symbol": "AIXBT",
       "action": "SKIP",
       "multiplier": 1.0,
       "tp_ratio": 1.5,
@@ -207,7 +166,15 @@
       "narrative": ""
     },
     {
-      "symbol": "BRETT",
+      "symbol": "AERO",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "A deceptive bull flag waving over a distribution exit where whales are dumping into negative retail buying pressure."
+    },
+    {
+      "symbol": "AERO",
       "action": "SKIP",
       "multiplier": 1.0,
       "tp_ratio": 1.5,
@@ -222,31 +189,31 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "The technical bull flag is a trap as the asset is in a distribution phase with negative buying pressure and whale outflows."
+      "narrative": "A deceptive bull flag waving over a distribution exit where whales are dumping into negative retail buying pressure."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 0.8,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.02,
-      "narrative": "Strong buying pressure is driving a consolidation breakout, though high RSI and exiting liquidity necessitate a tightened stop-loss."
-    },
-    {
-      "symbol": "BRETT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "Shorting an accumulation phase with massive positive buying pressure and whale support is a high-probability short-squeeze candidate."
+      "tp_ratio": 1.07,
+      "sl_ratio": 0.975,
+      "narrative": "Steady retail accumulation in a low-volatility environment, though thinning liquidity suggests a cautious, tight-leash entry."
     },
     {
       "symbol": "VVV",
       "action": "TRADE",
-      "multiplier": 0.7,
-      "tp_ratio": 0.05,
-      "sl_ratio": 0.015,
-      "narrative": "Retail demand is robust during this consolidation, but negative whale flow and declining liquidity velocity require a very tight defensive posture."
+      "multiplier": 0.5,
+      "tp_ratio": 1.05,
+      "sl_ratio": 0.96,
+      "narrative": "Aggressive retail buying pressure is fighting a losing battle against a significant liquidity drain and whale divestment."
+    },
+    {
+      "symbol": "AIXBT",
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 1.08,
+      "sl_ratio": 0.97,
+      "narrative": "A textbook consolidation play with neutral whale flow and positive pressure setting the stage for a slow, controlled grind upward."
     }
   ]
 }

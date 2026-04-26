@@ -1,210 +1,122 @@
 {
-  "generated_at": "2026-04-26T00:13:47.256858+00:00",
-  "evaluated_source": "2026-04-26T00:13:26.864041+00:00",
+  "generated_at": "2026-04-26T02:13:52.228092+00:00",
+  "evaluated_source": "2026-04-26T02:13:25.775382+00:00",
   "token_count": 6,
   "approved_bot": [
     {
-      "symbol": "MORPHO",
+      "symbol": "AIXBT",
       "chain": "base",
-      "direction": "SHORT",
-      "signal": "Phase_DIST",
+      "direction": "LONG",
+      "signal": "FHS_high",
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.055,
-      "sl_ratio": 0.025,
-      "narrative": "The protagonist reaches the summit of a distribution peak just as the ground begins to tremble with expanding volatility.",
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved",
+      "snapshot": {
+        "price_usd": 0.02762,
+        "rsi_1h": 41.07,
+        "fhs": 5.2,
+        "phase": "DISTRIBUTION",
+        "nbp": -76.0,
+        "wcc_z24": 0.20412414523193154,
+        "lvr_z24": -1.157511268295914,
+        "vol_z24": -1.156942548644363,
+        "lmi": -0.12371935423606112,
+        "nbr": 0.12
+      },
+      "ts": "2026-04-26T02:13:52.228044+00:00"
+    },
+    {
+      "symbol": "AERO",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "BullFlag",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved",
+      "snapshot": {
+        "price_usd": 0.4262,
+        "rsi_1h": 49.36,
+        "fhs": 3.0,
+        "phase": "DISTRIBUTION",
+        "nbp": -71.8274111675127,
+        "wcc_z24": 0.2617132375932862,
+        "lvr_z24": -0.8305850260144537,
+        "vol_z24": -0.8274791183375824,
+        "lmi": 0.01764216696480564,
+        "nbr": 0.14086294416243655
+      },
+      "ts": "2026-04-26T02:13:52.228075+00:00"
+    },
+    {
+      "symbol": "MORPHO",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "NBP_positive",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved",
       "snapshot": {
         "price_usd": 1.86,
-        "rsi_1h": 53.19,
-        "fhs": 4.2,
+        "rsi_1h": 59.32,
+        "fhs": 4.6,
         "phase": "DISTRIBUTION_POTENTIELLE",
-        "nbp": -4.98220640569395,
-        "wcc_z24": 0.3333333333333332,
-        "lvr_z24": 1.005172342145192,
-        "vol_z24": 1.6042520537612683,
-        "lmi": 0.018701448902362052,
-        "nbr": 0.4750889679715303
+        "nbp": 6.47985989492119,
+        "wcc_z24": 0.22941573387056224,
+        "lvr_z24": 1.5711612859141253,
+        "vol_z24": 1.65706129934855,
+        "lmi": 0.01297678221617957,
+        "nbr": 0.532399299474606
       },
-      "ts": "2026-04-26T00:13:47.256831+00:00"
+      "ts": "2026-04-26T02:13:52.228083+00:00"
     }
   ],
   "approved_lt": [],
-  "vetoed": [
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "FHS_high",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "A sinking ship in a storm of distribution where the lifeboats of liquidity have already left the deck.",
-      "snapshot": {
-        "price_usd": 0.02766,
-        "rsi_1h": 49.88,
-        "fhs": 5.2,
-        "phase": "DISTRIBUTION",
-        "nbp": -77.77777777777779,
-        "wcc_z24": 0.14797908710009677,
-        "lvr_z24": -1.1838194507397237,
-        "vol_z24": -1.1856075281183283,
-        "lmi": -0.0006765230196162705,
-        "nbr": 0.1111111111111111
-      },
-      "ts": "2026-04-26T00:13:47.256802+00:00"
-    },
-    {
-      "symbol": "VVV",
-      "chain": "base",
-      "direction": "SHORT",
-      "signal": "LVR_spike",
-      "horizon": "T+3",
-      "confidence": 40.0,
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "A high-speed chase where the momentum of accumulation and buying pressure is too powerful for any short-seller to block the road.",
-      "snapshot": {
-        "price_usd": 9.093,
-        "rsi_1h": 69.99,
-        "fhs": 5.2,
-        "phase": "ACCUMULATION",
-        "nbp": 33.00431832202344,
-        "wcc_z24": 0.312736936126139,
-        "lvr_z24": 2.083714355998019,
-        "vol_z24": 2.126817664904734,
-        "lmi": 0.03140930976800878,
-        "nbr": 0.6650215916101172
-      },
-      "ts": "2026-04-26T00:13:47.256839+00:00"
-    },
-    {
-      "symbol": "AIXBT",
-      "chain": "base",
-      "direction": "LONG",
-      "signal": "FHS_high",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 0.02766,
-        "rsi_1h": 49.88,
-        "fhs": 5.2,
-        "phase": "DISTRIBUTION",
-        "nbp": -77.77777777777779,
-        "wcc_z24": 0.14797908710009677,
-        "lvr_z24": -1.1838194507397237,
-        "vol_z24": -1.1856075281183283,
-        "lmi": -0.0006765230196162705,
-        "nbr": 0.1111111111111111
-      },
-      "ts": "2026-04-26T00:13:47.256848+00:00"
-    },
-    {
-      "symbol": "VVV",
-      "chain": "base",
-      "direction": "SHORT",
-      "signal": "LVR_spike",
-      "horizon": "T+12",
-      "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
-      "snapshot": {
-        "price_usd": 9.093,
-        "rsi_1h": 69.99,
-        "fhs": 5.2,
-        "phase": "ACCUMULATION",
-        "nbp": 33.00431832202344,
-        "wcc_z24": 0.312736936126139,
-        "lvr_z24": 2.083714355998019,
-        "vol_z24": 2.126817664904734,
-        "lmi": 0.03140930976800878,
-        "nbr": 0.6650215916101172
-      },
-      "ts": "2026-04-26T00:13:47.256855+00:00"
-    }
-  ],
+  "vetoed": [],
   "stats": {
     "candidates_bot": 3,
     "candidates_lt": 3,
     "submitted_venice": 3,
-    "approved_bot": 1,
+    "approved_bot": 3,
     "approved_lt": 0,
-    "vetoed": 4
+    "vetoed": 0
   },
   "venice_decisions": [
     {
+      "symbol": "AIXBT",
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved"
+    },
+    {
+      "symbol": "AERO",
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved"
+    },
+    {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 0.055,
-      "sl_ratio": 0.025,
-      "narrative": "The protagonist reaches the summit of a distribution peak just as the ground begins to tremble with expanding volatility."
-    },
-    {
-      "symbol": "AIXBT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "A sinking ship in a storm of distribution where the lifeboats of liquidity have already left the deck."
-    },
-    {
-      "symbol": "VVV",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "A high-speed chase where the momentum of accumulation and buying pressure is too powerful for any short-seller to block the road."
-    },
-    {
-      "symbol": "AIXBT",
-      "action": "SKIP",
-      "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
-    },
-    {
-      "symbol": "VVV",
-      "action": "SKIP",
-      "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
+      "tp_ratio": 0.1,
+      "sl_ratio": 0.03,
+      "narrative": "auto-approved"
     }
   ],
-  "venice_raw": [
-    {
-      "symbol": "AIXBT",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "A sinking ship in a storm of distribution where the lifeboats of liquidity have already left the deck."
-    },
-    {
-      "symbol": "MORPHO",
-      "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.055,
-      "sl_ratio": 0.025,
-      "narrative": "The protagonist reaches the summit of a distribution peak just as the ground begins to tremble with expanding volatility."
-    },
-    {
-      "symbol": "VVV",
-      "action": "SKIP",
-      "multiplier": 0.0,
-      "tp_ratio": 0.0,
-      "sl_ratio": 0.0,
-      "narrative": "A high-speed chase where the momentum of accumulation and buying pressure is too powerful for any short-seller to block the road."
-    }
-  ]
+  "venice_raw": []
 }

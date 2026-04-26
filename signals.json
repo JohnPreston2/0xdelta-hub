@@ -1,8 +1,34 @@
 {
-  "generated_at": "2026-04-26T14:13:38.013453+00:00",
-  "evaluated_source": "2026-04-26T14:13:25.002220+00:00",
+  "generated_at": "2026-04-26T16:13:37.225272+00:00",
+  "evaluated_source": "2026-04-26T16:13:26.811686+00:00",
   "token_count": 6,
   "approved_bot": [
+    {
+      "symbol": "AIXBT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "FHS_high",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 0.5,
+      "tp_ratio": 2.5,
+      "sl_ratio": 1.0,
+      "narrative": "A quiet accumulation where retail is nibbling, but negative liquidity velocity suggests a fragile floor.",
+      "snapshot": {
+        "price_usd": 0.02829,
+        "rsi_1h": 56.25,
+        "fhs": 5.4,
+        "phase": "ACCUMULATION",
+        "nbp": 15.789473684210526,
+        "wcc_z24": 0.0793051585718153,
+        "lvr_z24": -0.5315455619077915,
+        "vol_z24": -0.5245104772080156,
+        "lmi": 0.20512205016186702,
+        "nbr": 0.5789473684210527
+      },
+      "ts": "2026-04-26T16:13:37.225222+00:00"
+    },
     {
       "symbol": "MORPHO",
       "chain": "base",
@@ -12,49 +38,51 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 4.5,
-      "sl_ratio": 2.0,
-      "narrative": "Textbook accumulation phase supported by strong positive buying pressure and healthy liquidity velocity.",
+      "tp_ratio": 3.0,
+      "sl_ratio": 1.2,
+      "narrative": "Strong buying pressure is coiling within a consolidation zone, preparing for a breakout despite neutral whale flow.",
       "snapshot": {
-        "price_usd": 1.9,
-        "rsi_1h": 63.97,
-        "fhs": 3.2,
-        "phase": "ACCUMULATION",
-        "nbp": 20.457604306864063,
+        "price_usd": 1.94,
+        "rsi_1h": 64.57,
+        "fhs": 4.9,
+        "phase": "CONSOLIDATION",
+        "nbp": 37.07509881422925,
         "wcc_z24": 0.0,
-        "lvr_z24": 1.3046102251637268,
-        "vol_z24": 1.4887440845084892,
-        "lmi": 0.004218595729110253,
-        "nbr": 0.6022880215343204
+        "lvr_z24": -0.025020654641756603,
+        "vol_z24": 0.24268360820861806,
+        "lmi": -0.13488937903842116,
+        "nbr": 0.6853754940711463
       },
-      "ts": "2026-04-26T14:13:38.013427+00:00"
-    }
-  ],
-  "approved_lt": [
+      "ts": "2026-04-26T16:13:37.225255+00:00"
+    },
     {
-      "symbol": "AIXBT",
+      "symbol": "VVV",
       "chain": "base",
       "direction": "LONG",
-      "signal": "FHS_NBP_combo",
-      "horizon": "T+12",
+      "signal": "WCC_low_ACCUM",
+      "horizon": "T+3",
       "confidence": 40.0,
-      "decision": "APPROVE",
-      "reason": "auto-approved (no Venice response)",
+      "action": "TRADE",
+      "multiplier": 1.2,
+      "tp_ratio": 3.5,
+      "sl_ratio": 1.5,
+      "narrative": "The whales have finished their selling climax, leaving a vacuum in the accumulation zone that aggressive buyers are now filling.",
       "snapshot": {
-        "price_usd": 0.0286,
-        "rsi_1h": 55.01,
-        "fhs": 4.6,
-        "phase": "DISTRIBUTION_POTENTIELLE",
-        "nbp": 6.976744186046512,
-        "wcc_z24": -1.506798012864474,
-        "lvr_z24": -0.7613783425733232,
-        "vol_z24": -0.7541426710559567,
-        "lmi": -0.0427261010515863,
-        "nbr": 0.5348837209302325
+        "price_usd": 9.33,
+        "rsi_1h": 61.25,
+        "fhs": 4.8,
+        "phase": "ACCUMULATION",
+        "nbp": 39.07933398628795,
+        "wcc_z24": -2.331262020600782,
+        "lvr_z24": 0.016151079715057706,
+        "vol_z24": 0.18845389439273014,
+        "lmi": -0.0695303982046748,
+        "nbr": 0.6953966699314398
       },
-      "ts": "2026-04-26T14:13:38.013440+00:00"
+      "ts": "2026-04-26T16:13:37.225260+00:00"
     }
   ],
+  "approved_lt": [],
   "vetoed": [
     {
       "symbol": "AERO",
@@ -67,20 +95,20 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Hard veto triggered by active distribution phase, negative buying pressure, and overbought RSI despite the technical bull flag.",
+      "narrative": "VETO: Long position attempted during a distribution phase with negative buying pressure and heavy whale exits.",
       "snapshot": {
-        "price_usd": 0.4605,
-        "rsi_1h": 77.58,
-        "fhs": 5.1,
+        "price_usd": 0.4692,
+        "rsi_1h": 73.06,
+        "fhs": 5.0,
         "phase": "DISTRIBUTION",
-        "nbp": -18.907672301690507,
-        "wcc_z24": -3.4569957581881883,
-        "lvr_z24": 3.4878967378191903,
-        "vol_z24": 3.466733531458988,
-        "lmi": 0.21540961779077156,
-        "nbr": 0.4054616384915475
+        "nbp": -15.416028586013272,
+        "wcc_z24": -2.619694034381323,
+        "lvr_z24": 2.7145773971570866,
+        "vol_z24": 2.7445988523748337,
+        "lmi": 0.01221043248381788,
+        "nbr": 0.4229198570699336
       },
-      "ts": "2026-04-26T14:13:38.013395+00:00"
+      "ts": "2026-04-26T16:13:37.225249+00:00"
     },
     {
       "symbol": "AERO",
@@ -92,44 +120,52 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.4605,
-        "rsi_1h": 77.58,
-        "fhs": 5.1,
+        "price_usd": 0.4692,
+        "rsi_1h": 73.06,
+        "fhs": 5.0,
         "phase": "DISTRIBUTION",
-        "nbp": -18.907672301690507,
-        "wcc_z24": -3.4569957581881883,
-        "lvr_z24": 3.4878967378191903,
-        "vol_z24": 3.466733531458988,
-        "lmi": 0.21540961779077156,
-        "nbr": 0.4054616384915475
+        "nbp": -15.416028586013272,
+        "wcc_z24": -2.619694034381323,
+        "lvr_z24": 2.7145773971570866,
+        "vol_z24": 2.7445988523748337,
+        "lmi": 0.01221043248381788,
+        "nbr": 0.4229198570699336
       },
-      "ts": "2026-04-26T14:13:38.013448+00:00"
+      "ts": "2026-04-26T16:13:37.225268+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 2,
+    "candidates_bot": 4,
     "candidates_lt": 3,
-    "submitted_venice": 3,
-    "approved_bot": 1,
-    "approved_lt": 1,
+    "submitted_venice": 4,
+    "approved_bot": 3,
+    "approved_lt": 0,
     "vetoed": 2
   },
   "venice_decisions": [
     {
+      "symbol": "AIXBT",
+      "action": "TRADE",
+      "multiplier": 0.5,
+      "tp_ratio": 2.5,
+      "sl_ratio": 1.0,
+      "narrative": "A quiet accumulation where retail is nibbling, but negative liquidity velocity suggests a fragile floor."
+    },
+    {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 4.5,
-      "sl_ratio": 2.0,
-      "narrative": "Textbook accumulation phase supported by strong positive buying pressure and healthy liquidity velocity."
+      "tp_ratio": 3.0,
+      "sl_ratio": 1.2,
+      "narrative": "Strong buying pressure is coiling within a consolidation zone, preparing for a breakout despite neutral whale flow."
     },
     {
-      "symbol": "AIXBT",
-      "action": "SKIP",
-      "multiplier": 1.0,
-      "tp_ratio": 1.5,
-      "sl_ratio": 1.0,
-      "narrative": ""
+      "symbol": "VVV",
+      "action": "TRADE",
+      "multiplier": 1.2,
+      "tp_ratio": 3.5,
+      "sl_ratio": 1.5,
+      "narrative": "The whales have finished their selling climax, leaving a vacuum in the accumulation zone that aggressive buyers are now filling."
     },
     {
       "symbol": "AERO",
@@ -137,7 +173,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Hard veto triggered by active distribution phase, negative buying pressure, and overbought RSI despite the technical bull flag."
+      "narrative": "VETO: Long position attempted during a distribution phase with negative buying pressure and heavy whale exits."
     },
     {
       "symbol": "AERO",
@@ -150,28 +186,36 @@
   ],
   "venice_raw": [
     {
+      "symbol": "AIXBT",
+      "action": "TRADE",
+      "multiplier": 0.5,
+      "tp_ratio": 2.5,
+      "sl_ratio": 1.0,
+      "narrative": "A quiet accumulation where retail is nibbling, but negative liquidity velocity suggests a fragile floor."
+    },
+    {
       "symbol": "AERO",
       "action": "SKIP",
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Hard veto triggered by active distribution phase, negative buying pressure, and overbought RSI despite the technical bull flag."
+      "narrative": "VETO: Long position attempted during a distribution phase with negative buying pressure and heavy whale exits."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 4.5,
-      "sl_ratio": 2.0,
-      "narrative": "Textbook accumulation phase supported by strong positive buying pressure and healthy liquidity velocity."
+      "tp_ratio": 3.0,
+      "sl_ratio": 1.2,
+      "narrative": "Strong buying pressure is coiling within a consolidation zone, preparing for a breakout despite neutral whale flow."
     },
     {
-      "symbol": "AIXBT",
+      "symbol": "VVV",
       "action": "TRADE",
-      "multiplier": 0.5,
-      "tp_ratio": 2.8,
-      "sl_ratio": 0.9,
-      "narrative": "Low-conviction long due to negative liquidity velocity and whale exits, requiring a defensive multiplier and tightened stop-loss."
+      "multiplier": 1.2,
+      "tp_ratio": 3.5,
+      "sl_ratio": 1.5,
+      "narrative": "The whales have finished their selling climax, leaving a vacuum in the accumulation zone that aggressive buyers are now filling."
     }
   ]
 }

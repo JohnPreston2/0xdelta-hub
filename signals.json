@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-27T20:13:36.948119+00:00",
-  "evaluated_source": "2026-04-27T20:13:25.616815+00:00",
+  "generated_at": "2026-04-27T22:13:37.092428+00:00",
+  "evaluated_source": "2026-04-27T22:13:24.810974+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -12,22 +12,22 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 0.5,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.02,
-      "narrative": "Quiet accumulation is visible, but negative liquidity velocity necessitates a reduced size and a very tight stop.",
+      "tp_ratio": 1.5,
+      "sl_ratio": 0.6,
+      "narrative": "A stealthy accumulation play hampered by exiting liquidity, requiring a patient and tightly protected entry.",
       "snapshot": {
-        "price_usd": 1.94,
-        "rsi_1h": 61.2,
-        "fhs": 2.5,
+        "price_usd": 1.93,
+        "rsi_1h": 55.4,
+        "fhs": 2.7,
         "phase": "ACCUMULATION",
-        "nbp": 18.08917197452229,
+        "nbp": 15.532734274711169,
         "wcc_z24": 0.0,
-        "lvr_z24": -1.518434224859852,
-        "vol_z24": -1.6038344215927363,
-        "lmi": -0.06346309413765557,
-        "nbr": 0.5904458598726114
+        "lvr_z24": -1.166429476751908,
+        "vol_z24": -1.289827664331397,
+        "lmi": 0.014014472266206472,
+        "nbr": 0.5776636713735558
       },
-      "ts": "2026-04-27T20:13:36.948097+00:00"
+      "ts": "2026-04-27T22:13:37.092402+00:00"
     },
     {
       "symbol": "BRETT",
@@ -37,23 +37,49 @@
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.08,
-      "sl_ratio": 0.025,
-      "narrative": "Strong alignment between the accumulation phase and rising buying pressure provides a solid foundation for a long entry.",
+      "multiplier": 0.8,
+      "tp_ratio": 2.2,
+      "sl_ratio": 0.7,
+      "narrative": "Strong buying pressure is meeting a wall of low liquidity, suggesting a coiled spring waiting for a volume catalyst.",
       "snapshot": {
-        "price_usd": 0.006879,
-        "rsi_1h": 38.16,
+        "price_usd": 0.006899,
+        "rsi_1h": 40.06,
         "fhs": 5.0,
         "phase": "ACCUMULATION",
-        "nbp": 30.37037037037037,
-        "wcc_z24": 0.42008402520840077,
-        "lvr_z24": -1.0164587188440821,
-        "vol_z24": -1.053068387481501,
-        "lmi": 0.006794264256383768,
-        "nbr": 0.6518518518518519
+        "nbp": 43.75,
+        "wcc_z24": 0.33333333333333165,
+        "lvr_z24": -1.3923125504326306,
+        "vol_z24": -1.4176183471755044,
+        "lmi": -0.11598752834186712,
+        "nbr": 0.71875
       },
-      "ts": "2026-04-27T20:13:36.948102+00:00"
+      "ts": "2026-04-27T22:13:37.092407+00:00"
+    },
+    {
+      "symbol": "VVV",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "RSI_oversold",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 1.2,
+      "tp_ratio": 3.5,
+      "sl_ratio": 1.5,
+      "narrative": "The dramatic reversal of an oversold asset as fresh liquidity and aggressive buying pressure create a perfect snap-back setup.",
+      "snapshot": {
+        "price_usd": 8.92,
+        "rsi_1h": 25.22,
+        "fhs": 5.9,
+        "phase": "CONSOLIDATION",
+        "nbp": 31.282952548330407,
+        "wcc_z24": -0.9999999999999983,
+        "lvr_z24": 0.673668874395975,
+        "vol_z24": 0.5784553350508614,
+        "lmi": -0.037808712734183667,
+        "nbr": 0.656414762741652
+      },
+      "ts": "2026-04-27T22:13:37.092411+00:00"
     }
   ],
   "approved_lt": [],
@@ -62,27 +88,27 @@
       "symbol": "AIXBT",
       "chain": "base",
       "direction": "LONG",
-      "signal": "RSI_oversold",
+      "signal": "FHS_high",
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "SKIP",
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed due to Distribution phase and heavy negative buying pressure despite oversold RSI levels.",
+      "narrative": "Vetoed due to Distribution phase and heavy negative buying pressure indicating a falling knife.",
       "snapshot": {
-        "price_usd": 0.02662,
-        "rsi_1h": 20.52,
+        "price_usd": 0.02668,
+        "rsi_1h": 42.87,
         "fhs": 5.2,
         "phase": "DISTRIBUTION",
-        "nbp": -58.415841584158414,
-        "wcc_z24": 0.6081636405595381,
-        "lvr_z24": 1.706909211114638,
-        "vol_z24": 1.651363699579937,
-        "lmi": 0.0028399426687036136,
-        "nbr": 0.2079207920792079
+        "nbp": -56.70103092783505,
+        "wcc_z24": 0.5443310539518185,
+        "lvr_z24": 1.5769189906421446,
+        "vol_z24": 1.5438787416280757,
+        "lmi": 0.011023974382616625,
+        "nbr": 0.21649484536082475
       },
-      "ts": "2026-04-27T20:13:36.948068+00:00"
+      "ts": "2026-04-27T22:13:37.092370+00:00"
     },
     {
       "symbol": "AERO",
@@ -95,43 +121,43 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed as the asset remains in a Distribution phase with negative NBP, overriding the whale flow signal.",
+      "narrative": "Vetoed as the asset is in a Distribution phase with negative NBP, despite whale flow signals.",
       "snapshot": {
-        "price_usd": 0.4602,
-        "rsi_1h": 54.86,
+        "price_usd": 0.4552,
+        "rsi_1h": 53.42,
         "fhs": 3.1,
         "phase": "DISTRIBUTION",
-        "nbp": -33.24762149652867,
-        "wcc_z24": 1.5434872662825794,
-        "lvr_z24": -0.17655006819328692,
-        "vol_z24": -0.2048458901348405,
-        "lmi": 0.0026775042314343034,
-        "nbr": 0.33376189251735666
+        "nbp": -32.97730307076102,
+        "wcc_z24": 1.7422619545876414,
+        "lvr_z24": -0.4486179458319674,
+        "vol_z24": -0.4917694632351026,
+        "lmi": -0.02182310466802454,
+        "nbr": 0.33511348464619495
       },
-      "ts": "2026-04-27T20:13:36.948091+00:00"
+      "ts": "2026-04-27T22:13:37.092395+00:00"
     },
     {
       "symbol": "AIXBT",
       "chain": "base",
       "direction": "LONG",
-      "signal": "RSI_oversold",
+      "signal": "FHS_high",
       "horizon": "T+12",
       "confidence": 40.0,
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.02662,
-        "rsi_1h": 20.52,
+        "price_usd": 0.02668,
+        "rsi_1h": 42.87,
         "fhs": 5.2,
         "phase": "DISTRIBUTION",
-        "nbp": -58.415841584158414,
-        "wcc_z24": 0.6081636405595381,
-        "lvr_z24": 1.706909211114638,
-        "vol_z24": 1.651363699579937,
-        "lmi": 0.0028399426687036136,
-        "nbr": 0.2079207920792079
+        "nbp": -56.70103092783505,
+        "wcc_z24": 0.5443310539518185,
+        "lvr_z24": 1.5769189906421446,
+        "vol_z24": 1.5438787416280757,
+        "lmi": 0.011023974382616625,
+        "nbr": 0.21649484536082475
       },
-      "ts": "2026-04-27T20:13:36.948109+00:00"
+      "ts": "2026-04-27T22:13:37.092418+00:00"
     },
     {
       "symbol": "AERO",
@@ -143,25 +169,25 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.4602,
-        "rsi_1h": 54.86,
+        "price_usd": 0.4552,
+        "rsi_1h": 53.42,
         "fhs": 3.1,
         "phase": "DISTRIBUTION",
-        "nbp": -33.24762149652867,
-        "wcc_z24": 1.5434872662825794,
-        "lvr_z24": -0.17655006819328692,
-        "vol_z24": -0.2048458901348405,
-        "lmi": 0.0026775042314343034,
-        "nbr": 0.33376189251735666
+        "nbp": -32.97730307076102,
+        "wcc_z24": 1.7422619545876414,
+        "lvr_z24": -0.4486179458319674,
+        "vol_z24": -0.4917694632351026,
+        "lmi": -0.02182310466802454,
+        "nbr": 0.33511348464619495
       },
-      "ts": "2026-04-27T20:13:36.948114+00:00"
+      "ts": "2026-04-27T22:13:37.092424+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 4,
-    "candidates_lt": 4,
-    "submitted_venice": 4,
-    "approved_bot": 2,
+    "candidates_bot": 5,
+    "candidates_lt": 5,
+    "submitted_venice": 5,
+    "approved_bot": 3,
     "approved_lt": 0,
     "vetoed": 4
   },
@@ -170,17 +196,25 @@
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 0.5,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.02,
-      "narrative": "Quiet accumulation is visible, but negative liquidity velocity necessitates a reduced size and a very tight stop."
+      "tp_ratio": 1.5,
+      "sl_ratio": 0.6,
+      "narrative": "A stealthy accumulation play hampered by exiting liquidity, requiring a patient and tightly protected entry."
     },
     {
       "symbol": "BRETT",
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.08,
-      "sl_ratio": 0.025,
-      "narrative": "Strong alignment between the accumulation phase and rising buying pressure provides a solid foundation for a long entry."
+      "multiplier": 0.8,
+      "tp_ratio": 2.2,
+      "sl_ratio": 0.7,
+      "narrative": "Strong buying pressure is meeting a wall of low liquidity, suggesting a coiled spring waiting for a volume catalyst."
+    },
+    {
+      "symbol": "VVV",
+      "action": "TRADE",
+      "multiplier": 1.2,
+      "tp_ratio": 3.5,
+      "sl_ratio": 1.5,
+      "narrative": "The dramatic reversal of an oversold asset as fresh liquidity and aggressive buying pressure create a perfect snap-back setup."
     },
     {
       "symbol": "AIXBT",
@@ -188,7 +222,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed due to Distribution phase and heavy negative buying pressure despite oversold RSI levels."
+      "narrative": "Vetoed due to Distribution phase and heavy negative buying pressure indicating a falling knife."
     },
     {
       "symbol": "AERO",
@@ -196,7 +230,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed as the asset remains in a Distribution phase with negative NBP, overriding the whale flow signal."
+      "narrative": "Vetoed as the asset is in a Distribution phase with negative NBP, despite whale flow signals."
     },
     {
       "symbol": "AIXBT",
@@ -222,7 +256,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed due to Distribution phase and heavy negative buying pressure despite oversold RSI levels."
+      "narrative": "Vetoed due to Distribution phase and heavy negative buying pressure indicating a falling knife."
     },
     {
       "symbol": "AERO",
@@ -230,23 +264,31 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Vetoed as the asset remains in a Distribution phase with negative NBP, overriding the whale flow signal."
+      "narrative": "Vetoed as the asset is in a Distribution phase with negative NBP, despite whale flow signals."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 0.5,
-      "tp_ratio": 0.06,
-      "sl_ratio": 0.02,
-      "narrative": "Quiet accumulation is visible, but negative liquidity velocity necessitates a reduced size and a very tight stop."
+      "tp_ratio": 1.5,
+      "sl_ratio": 0.6,
+      "narrative": "A stealthy accumulation play hampered by exiting liquidity, requiring a patient and tightly protected entry."
     },
     {
       "symbol": "BRETT",
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 0.08,
-      "sl_ratio": 0.025,
-      "narrative": "Strong alignment between the accumulation phase and rising buying pressure provides a solid foundation for a long entry."
+      "multiplier": 0.8,
+      "tp_ratio": 2.2,
+      "sl_ratio": 0.7,
+      "narrative": "Strong buying pressure is meeting a wall of low liquidity, suggesting a coiled spring waiting for a volume catalyst."
+    },
+    {
+      "symbol": "VVV",
+      "action": "TRADE",
+      "multiplier": 1.2,
+      "tp_ratio": 3.5,
+      "sl_ratio": 1.5,
+      "narrative": "The dramatic reversal of an oversold asset as fresh liquidity and aggressive buying pressure create a perfect snap-back setup."
     }
   ]
 }

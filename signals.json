@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-27T08:13:38.277173+00:00",
-  "evaluated_source": "2026-04-27T08:13:26.121339+00:00",
+  "generated_at": "2026-04-27T10:13:39.962785+00:00",
+  "evaluated_source": "2026-04-27T10:13:25.773188+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -11,23 +11,23 @@
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 3.75,
-      "sl_ratio": 1.85,
-      "narrative": "High-velocity distribution with heavy selling pressure indicates a fast-moving breakdown is currently in progress.",
+      "multiplier": 1.2,
+      "tp_ratio": 0.08,
+      "sl_ratio": 0.025,
+      "narrative": "A high-velocity distribution event where aggressive selling pressure meets surging volatility, signaling a sharp breakdown.",
       "snapshot": {
-        "price_usd": 0.7023,
-        "rsi_1h": 37.42,
+        "price_usd": 0.7005,
+        "rsi_1h": 40.52,
         "fhs": 4.9,
         "phase": "DISTRIBUTION",
-        "nbp": -28.65853658536585,
+        "nbp": -30.935251798561154,
         "wcc_z24": 0.0,
-        "lvr_z24": 2.5756920833999284,
-        "vol_z24": 2.489317949912868,
-        "lmi": 0.1022224598263037,
-        "nbr": 0.3567073170731707
+        "lvr_z24": 3.551749863143681,
+        "vol_z24": 3.528526002445776,
+        "lmi": 0.17542191673258586,
+        "nbr": 0.34532374100719426
       },
-      "ts": "2026-04-27T08:13:38.277127+00:00"
+      "ts": "2026-04-27T10:13:39.962728+00:00"
     },
     {
       "symbol": "AIXBT",
@@ -37,111 +37,258 @@
       "horizon": "T+3",
       "confidence": 40.0,
       "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 4.5,
-      "sl_ratio": 1.6,
-      "narrative": "Whales are front-running an accumulation breakout as liquidity pours into a positive buying pressure vacuum.",
+      "multiplier": 1.0,
+      "tp_ratio": 0.05,
+      "sl_ratio": 0.02,
+      "narrative": "Whales are quietly accumulating during a consolidation phase, preparing for a liquidity-driven upward expansion.",
       "snapshot": {
-        "price_usd": 0.02778,
-        "rsi_1h": 44.88,
+        "price_usd": 0.02759,
+        "rsi_1h": 49.34,
         "fhs": 5.2,
-        "phase": "ACCUMULATION",
-        "nbp": 28.30188679245283,
+        "phase": "CONSOLIDATION",
+        "nbp": 0.0,
         "wcc_z24": 0.6741998624632423,
-        "lvr_z24": 2.12069028430132,
-        "vol_z24": 1.9903661730482982,
-        "lmi": 0.020871218929173645,
-        "nbr": 0.6415094339622641
+        "lvr_z24": 2.155064136180048,
+        "vol_z24": 2.0288332403471037,
+        "lmi": 0.03313934385213442,
+        "nbr": 0.5
       },
-      "ts": "2026-04-27T08:13:38.277158+00:00"
+      "ts": "2026-04-27T10:13:39.962753+00:00"
+    },
+    {
+      "symbol": "BRETT",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "ACCUM_NBP",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.04,
+      "sl_ratio": 0.012,
+      "narrative": "Classic accumulation with strong buying pressure and whale support, though tight stops are required as liquidity thins.",
+      "snapshot": {
+        "price_usd": 0.006939,
+        "rsi_1h": 44.42,
+        "fhs": 3.5,
+        "phase": "ACCUMULATION",
+        "nbp": 41.17647058823529,
+        "wcc_z24": 0.8164965809277254,
+        "lvr_z24": -0.5905378378374379,
+        "vol_z24": -0.5968607720238994,
+        "lmi": 0.0023749667408184253,
+        "nbr": 0.7058823529411765
+      },
+      "ts": "2026-04-27T10:13:39.962769+00:00"
+    }
+  ],
+  "approved_lt": [],
+  "vetoed": [
+    {
+      "symbol": "AERO",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "BullFlag",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "VETO: Long signal contradicted by active distribution phase and significant negative buying pressure.",
+      "snapshot": {
+        "price_usd": 0.4548,
+        "rsi_1h": 45.57,
+        "fhs": 2.7,
+        "phase": "DISTRIBUTION",
+        "nbp": -24.346793349168646,
+        "wcc_z24": -0.35059022420922875,
+        "lvr_z24": 1.0877363626952927,
+        "vol_z24": 1.062827130706992,
+        "lmi": -0.02462181117244197,
+        "nbr": 0.37826603325415675
+      },
+      "ts": "2026-04-27T10:13:39.962760+00:00"
+    },
+    {
+      "symbol": "MORPHO",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "NBP_positive",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "VETO: Potential distribution phase and exiting liquidity make this long entry high-risk despite minor buying pressure.",
+      "snapshot": {
+        "price_usd": 1.93,
+        "rsi_1h": 41.78,
+        "fhs": 2.8,
+        "phase": "DISTRIBUTION_POTENTIELLE",
+        "nbp": 5.579937304075235,
+        "wcc_z24": 0.0,
+        "lvr_z24": -0.3261910446364956,
+        "vol_z24": -0.5056621075448956,
+        "lmi": -0.014575841212917785,
+        "nbr": 0.5278996865203762
+      },
+      "ts": "2026-04-27T10:13:39.962764+00:00"
+    },
+    {
+      "symbol": "AERO",
+      "chain": "base",
+      "direction": "LONG",
+      "signal": "BullFlag",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.4548,
+        "rsi_1h": 45.57,
+        "fhs": 2.7,
+        "phase": "DISTRIBUTION",
+        "nbp": -24.346793349168646,
+        "wcc_z24": -0.35059022420922875,
+        "lvr_z24": 1.0877363626952927,
+        "vol_z24": 1.062827130706992,
+        "lmi": -0.02462181117244197,
+        "nbr": 0.37826603325415675
+      },
+      "ts": "2026-04-27T10:13:39.962777+00:00"
     },
     {
       "symbol": "MORPHO",
       "chain": "base",
       "direction": "SHORT",
-      "signal": "Phase_DIST",
-      "horizon": "T+3",
+      "signal": "NBP_positive",
+      "horizon": "T+12",
       "confidence": 40.0,
-      "action": "TRADE",
-      "multiplier": 0.5,
-      "tp_ratio": 1.2,
-      "sl_ratio": 0.6,
-      "narrative": "A low-energy bleed into deep oversold territory suggests the short move is exhausted and lacks the liquidity to sustain further immediate drops.",
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 1.9,
-        "rsi_1h": 27.3,
-        "fhs": 3.5,
+        "price_usd": 1.93,
+        "rsi_1h": 41.78,
+        "fhs": 2.8,
         "phase": "DISTRIBUTION_POTENTIELLE",
-        "nbp": -5.738233397807866,
+        "nbp": 5.579937304075235,
         "wcc_z24": 0.0,
-        "lvr_z24": -0.5277119846327762,
-        "vol_z24": -0.34095247220990044,
-        "lmi": -0.013667226103778988,
-        "nbr": 0.47130883301096066
+        "lvr_z24": -0.3261910446364956,
+        "vol_z24": -0.5056621075448956,
+        "lmi": -0.014575841212917785,
+        "nbr": 0.5278996865203762
       },
-      "ts": "2026-04-27T08:13:38.277165+00:00"
+      "ts": "2026-04-27T10:13:39.962782+00:00"
     }
   ],
-  "approved_lt": [],
-  "vetoed": [],
   "stats": {
-    "candidates_bot": 3,
-    "candidates_lt": 3,
-    "submitted_venice": 3,
+    "candidates_bot": 5,
+    "candidates_lt": 5,
+    "submitted_venice": 5,
     "approved_bot": 3,
     "approved_lt": 0,
-    "vetoed": 0
+    "vetoed": 4
   },
   "venice_decisions": [
     {
       "symbol": "VIRTUAL",
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 3.75,
-      "sl_ratio": 1.85,
-      "narrative": "High-velocity distribution with heavy selling pressure indicates a fast-moving breakdown is currently in progress."
+      "multiplier": 1.2,
+      "tp_ratio": 0.08,
+      "sl_ratio": 0.025,
+      "narrative": "A high-velocity distribution event where aggressive selling pressure meets surging volatility, signaling a sharp breakdown."
     },
     {
       "symbol": "AIXBT",
       "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 4.5,
-      "sl_ratio": 1.6,
-      "narrative": "Whales are front-running an accumulation breakout as liquidity pours into a positive buying pressure vacuum."
+      "multiplier": 1.0,
+      "tp_ratio": 0.05,
+      "sl_ratio": 0.02,
+      "narrative": "Whales are quietly accumulating during a consolidation phase, preparing for a liquidity-driven upward expansion."
+    },
+    {
+      "symbol": "BRETT",
+      "action": "TRADE",
+      "multiplier": 1.0,
+      "tp_ratio": 0.04,
+      "sl_ratio": 0.012,
+      "narrative": "Classic accumulation with strong buying pressure and whale support, though tight stops are required as liquidity thins."
+    },
+    {
+      "symbol": "AERO",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "VETO: Long signal contradicted by active distribution phase and significant negative buying pressure."
     },
     {
       "symbol": "MORPHO",
-      "action": "TRADE",
-      "multiplier": 0.5,
-      "tp_ratio": 1.2,
-      "sl_ratio": 0.6,
-      "narrative": "A low-energy bleed into deep oversold territory suggests the short move is exhausted and lacks the liquidity to sustain further immediate drops."
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "VETO: Potential distribution phase and exiting liquidity make this long entry high-risk despite minor buying pressure."
+    },
+    {
+      "symbol": "AERO",
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
+    },
+    {
+      "symbol": "MORPHO",
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
     }
   ],
   "venice_raw": [
     {
       "symbol": "VIRTUAL",
       "action": "TRADE",
-      "multiplier": 1.0,
-      "tp_ratio": 3.75,
-      "sl_ratio": 1.85,
-      "narrative": "High-velocity distribution with heavy selling pressure indicates a fast-moving breakdown is currently in progress."
+      "multiplier": 1.2,
+      "tp_ratio": 0.08,
+      "sl_ratio": 0.025,
+      "narrative": "A high-velocity distribution event where aggressive selling pressure meets surging volatility, signaling a sharp breakdown."
     },
     {
       "symbol": "AIXBT",
       "action": "TRADE",
-      "multiplier": 1.2,
-      "tp_ratio": 4.5,
-      "sl_ratio": 1.6,
-      "narrative": "Whales are front-running an accumulation breakout as liquidity pours into a positive buying pressure vacuum."
+      "multiplier": 1.0,
+      "tp_ratio": 0.05,
+      "sl_ratio": 0.02,
+      "narrative": "Whales are quietly accumulating during a consolidation phase, preparing for a liquidity-driven upward expansion."
+    },
+    {
+      "symbol": "AERO",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "VETO: Long signal contradicted by active distribution phase and significant negative buying pressure."
     },
     {
       "symbol": "MORPHO",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "VETO: Potential distribution phase and exiting liquidity make this long entry high-risk despite minor buying pressure."
+    },
+    {
+      "symbol": "BRETT",
       "action": "TRADE",
-      "multiplier": 0.5,
-      "tp_ratio": 1.2,
-      "sl_ratio": 0.6,
-      "narrative": "A low-energy bleed into deep oversold territory suggests the short move is exhausted and lacks the liquidity to sustain further immediate drops."
+      "multiplier": 1.0,
+      "tp_ratio": 0.04,
+      "sl_ratio": 0.012,
+      "narrative": "Classic accumulation with strong buying pressure and whale support, though tight stops are required as liquidity thins."
     }
   ]
 }

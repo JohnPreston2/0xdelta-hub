@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-28T10:13:36.394013+00:00",
-  "evaluated_source": "2026-04-28T10:13:24.882359+00:00",
+  "generated_at": "2026-04-28T12:13:53.791543+00:00",
+  "evaluated_source": "2026-04-28T12:13:26.654912+00:00",
   "token_count": 6,
   "approved_bot": [
     {
@@ -12,22 +12,22 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 0.8,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.5,
-      "narrative": "A quiet accumulation play where positive buying pressure is building a base, though low liquidity velocity requires a very tight leash.",
+      "tp_ratio": 2.5,
+      "sl_ratio": 1.0,
+      "narrative": "A quiet accumulation play where buyers are absorbing supply, though exiting liquidity requires a very tight leash.",
       "snapshot": {
-        "price_usd": 1.92,
-        "rsi_1h": 40.0,
-        "fhs": 3.6,
+        "price_usd": 1.91,
+        "rsi_1h": 46.53,
+        "fhs": 3.8,
         "phase": "ACCUMULATION",
-        "nbp": 22.654867256637168,
+        "nbp": 19.408502772643253,
         "wcc_z24": 0.0,
-        "lvr_z24": -1.994527677296364,
-        "vol_z24": -1.928916657035192,
-        "lmi": -0.030194757083484198,
-        "nbr": 0.6132743362831858
+        "lvr_z24": -1.7504709135686507,
+        "vol_z24": -1.7136857759736834,
+        "lmi": -0.0022318524502785344,
+        "nbr": 0.5970425138632163
       },
-      "ts": "2026-04-28T10:13:36.393984+00:00"
+      "ts": "2026-04-28T12:13:53.791509+00:00"
     },
     {
       "symbol": "BRETT",
@@ -38,22 +38,22 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 2.0,
-      "sl_ratio": 0.7,
-      "narrative": "Strong retail buying pressure is successfully absorbing supply in the accumulation zone, signaling a steady grind upward.",
+      "tp_ratio": 3.0,
+      "sl_ratio": 1.2,
+      "narrative": "Strong buying pressure in an accumulation zone suggests a coiled spring, despite the current lack of liquidity velocity.",
       "snapshot": {
-        "price_usd": 0.007178,
-        "rsi_1h": 66.94,
+        "price_usd": 0.00713,
+        "rsi_1h": 54.37,
         "fhs": 3.6,
         "phase": "ACCUMULATION",
-        "nbp": 66.10169491525424,
+        "nbp": 76.36363636363637,
         "wcc_z24": 0.0,
-        "lvr_z24": -1.525273169283376,
-        "vol_z24": -1.501451179822365,
-        "lmi": 0.0888680103065294,
-        "nbr": 0.8305084745762712
+        "lvr_z24": -1.4421185080469292,
+        "vol_z24": -1.4220498591790063,
+        "lmi": -0.1286422653620488,
+        "nbr": 0.8818181818181818
       },
-      "ts": "2026-04-28T10:13:36.393990+00:00"
+      "ts": "2026-04-28T12:13:53.791515+00:00"
     },
     {
       "symbol": "VVV",
@@ -64,27 +64,53 @@
       "confidence": 40.0,
       "action": "TRADE",
       "multiplier": 1.1,
-      "tp_ratio": 2.5,
-      "sl_ratio": 0.8,
-      "narrative": "Whales are aggressively scooping up oversold tokens in an accumulation phase, setting the stage for a high-conviction reversal.",
+      "tp_ratio": 3.5,
+      "sl_ratio": 1.2,
+      "narrative": "Whales are actively positioning alongside retail buyers in a textbook accumulation setup before the next volatility spike.",
       "snapshot": {
-        "price_usd": 8.88,
-        "rsi_1h": 36.27,
-        "fhs": 5.6,
+        "price_usd": 8.91,
+        "rsi_1h": 45.76,
+        "fhs": 5.4,
         "phase": "ACCUMULATION",
-        "nbp": 37.75433308214017,
-        "wcc_z24": 1.1055415967851343,
-        "lvr_z24": -1.7648222527503832,
-        "vol_z24": -1.8470407642118223,
-        "lmi": -0.021217575868819515,
-        "nbr": 0.6887716654107008
+        "nbp": 39.426800929512005,
+        "wcc_z24": 1.0000000000000018,
+        "lvr_z24": -1.7826768376764737,
+        "vol_z24": -1.837904671399156,
+        "lmi": -0.04402725383657067,
+        "nbr": 0.69713400464756
       },
-      "ts": "2026-04-28T10:13:36.393995+00:00"
+      "ts": "2026-04-28T12:13:53.791520+00:00"
     }
   ],
   "approved_lt": [],
   "vetoed": [
     {
+      "symbol": "VIRTUAL",
+      "chain": "base",
+      "direction": "SHORT",
+      "signal": "LVR_spike",
+      "horizon": "T+3",
+      "confidence": 40.0,
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed: Attempting to short during an accumulation phase with positive buying pressure is a recipe for a squeeze.",
+      "snapshot": {
+        "price_usd": 0.68,
+        "rsi_1h": 42.16,
+        "fhs": 4.9,
+        "phase": "ACCUMULATION",
+        "nbp": 20.0,
+        "wcc_z24": 0.0,
+        "lvr_z24": 2.8961438700602318,
+        "vol_z24": 2.8926086117260845,
+        "lmi": 0.3039299167742598,
+        "nbr": 0.6
+      },
+      "ts": "2026-04-28T12:13:53.791452+00:00"
+    },
+    {
       "symbol": "AIXBT",
       "chain": "base",
       "direction": "LONG",
@@ -95,20 +121,20 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Heavy distribution and aggressive negative whale flow create a toxic environment for longs despite the FHS signal.",
+      "narrative": "Vetoed: Long signal contradicted by distribution phase and significant negative buying pressure.",
       "snapshot": {
         "price_usd": 0.02685,
         "rsi_1h": 50.35,
-        "fhs": 5.3,
+        "fhs": 5.2,
         "phase": "DISTRIBUTION",
-        "nbp": -67.64705882352942,
-        "wcc_z24": -2.380476142847615,
-        "lvr_z24": 0.16275413928664495,
-        "vol_z24": 0.12340825968562989,
-        "lmi": -0.0337579474022057,
-        "nbr": 0.16176470588235295
+        "nbp": -45.94594594594595,
+        "wcc_z24": 0.4200840252084048,
+        "lvr_z24": -1.4449992413306192,
+        "vol_z24": -1.5361065766725102,
+        "lmi": -0.2927770505841454,
+        "nbr": 0.2702702702702703
       },
-      "ts": "2026-04-28T10:13:36.393952+00:00"
+      "ts": "2026-04-28T12:13:53.791497+00:00"
     },
     {
       "symbol": "AERO",
@@ -121,20 +147,43 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "The bull flag is a trap as the asset is in a distribution phase with negative buying pressure and exiting liquidity.",
+      "narrative": "Vetoed: Technical bull flag is invalidated by a distribution phase and aggressive selling pressure.",
       "snapshot": {
-        "price_usd": 0.4674,
-        "rsi_1h": 67.8,
+        "price_usd": 0.4644,
+        "rsi_1h": 56.51,
         "fhs": 3.1,
         "phase": "DISTRIBUTION",
-        "nbp": -33.61522198731501,
-        "wcc_z24": 1.0947974973864776,
-        "lvr_z24": -1.325070112170735,
-        "vol_z24": -1.2880856105494374,
-        "lmi": 0.0049330119941664915,
-        "nbr": 0.33192389006342493
+        "nbp": -32.35783172597273,
+        "wcc_z24": 0.9981149841863155,
+        "lvr_z24": -0.9803898190830729,
+        "vol_z24": -0.9558029552149591,
+        "lmi": 0.05211479154805056,
+        "nbr": 0.33821084137013635
       },
-      "ts": "2026-04-28T10:13:36.393977+00:00"
+      "ts": "2026-04-28T12:13:53.791505+00:00"
+    },
+    {
+      "symbol": "VIRTUAL",
+      "chain": "base",
+      "direction": "SHORT",
+      "signal": "LVR_spike",
+      "horizon": "T+12",
+      "confidence": 40.0,
+      "decision": "APPROVE",
+      "reason": "auto-approved (no Venice response)",
+      "snapshot": {
+        "price_usd": 0.68,
+        "rsi_1h": 42.16,
+        "fhs": 4.9,
+        "phase": "ACCUMULATION",
+        "nbp": 20.0,
+        "wcc_z24": 0.0,
+        "lvr_z24": 2.8961438700602318,
+        "vol_z24": 2.8926086117260845,
+        "lmi": 0.3039299167742598,
+        "nbr": 0.6
+      },
+      "ts": "2026-04-28T12:13:53.791527+00:00"
     },
     {
       "symbol": "AIXBT",
@@ -148,16 +197,16 @@
       "snapshot": {
         "price_usd": 0.02685,
         "rsi_1h": 50.35,
-        "fhs": 5.3,
+        "fhs": 5.2,
         "phase": "DISTRIBUTION",
-        "nbp": -67.64705882352942,
-        "wcc_z24": -2.380476142847615,
-        "lvr_z24": 0.16275413928664495,
-        "vol_z24": 0.12340825968562989,
-        "lmi": -0.0337579474022057,
-        "nbr": 0.16176470588235295
+        "nbp": -45.94594594594595,
+        "wcc_z24": 0.4200840252084048,
+        "lvr_z24": -1.4449992413306192,
+        "vol_z24": -1.5361065766725102,
+        "lmi": -0.2927770505841454,
+        "nbr": 0.2702702702702703
       },
-      "ts": "2026-04-28T10:13:36.394002+00:00"
+      "ts": "2026-04-28T12:13:53.791534+00:00"
     },
     {
       "symbol": "AERO",
@@ -169,52 +218,60 @@
       "decision": "APPROVE",
       "reason": "auto-approved (no Venice response)",
       "snapshot": {
-        "price_usd": 0.4674,
-        "rsi_1h": 67.8,
+        "price_usd": 0.4644,
+        "rsi_1h": 56.51,
         "fhs": 3.1,
         "phase": "DISTRIBUTION",
-        "nbp": -33.61522198731501,
-        "wcc_z24": 1.0947974973864776,
-        "lvr_z24": -1.325070112170735,
-        "vol_z24": -1.2880856105494374,
-        "lmi": 0.0049330119941664915,
-        "nbr": 0.33192389006342493
+        "nbp": -32.35783172597273,
+        "wcc_z24": 0.9981149841863155,
+        "lvr_z24": -0.9803898190830729,
+        "vol_z24": -0.9558029552149591,
+        "lmi": 0.05211479154805056,
+        "nbr": 0.33821084137013635
       },
-      "ts": "2026-04-28T10:13:36.394008+00:00"
+      "ts": "2026-04-28T12:13:53.791539+00:00"
     }
   ],
   "stats": {
-    "candidates_bot": 5,
-    "candidates_lt": 5,
-    "submitted_venice": 5,
+    "candidates_bot": 6,
+    "candidates_lt": 6,
+    "submitted_venice": 6,
     "approved_bot": 3,
     "approved_lt": 0,
-    "vetoed": 4
+    "vetoed": 6
   },
   "venice_decisions": [
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 0.8,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.5,
-      "narrative": "A quiet accumulation play where positive buying pressure is building a base, though low liquidity velocity requires a very tight leash."
+      "tp_ratio": 2.5,
+      "sl_ratio": 1.0,
+      "narrative": "A quiet accumulation play where buyers are absorbing supply, though exiting liquidity requires a very tight leash."
     },
     {
       "symbol": "BRETT",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 2.0,
-      "sl_ratio": 0.7,
-      "narrative": "Strong retail buying pressure is successfully absorbing supply in the accumulation zone, signaling a steady grind upward."
+      "tp_ratio": 3.0,
+      "sl_ratio": 1.2,
+      "narrative": "Strong buying pressure in an accumulation zone suggests a coiled spring, despite the current lack of liquidity velocity."
     },
     {
       "symbol": "VVV",
       "action": "TRADE",
       "multiplier": 1.1,
-      "tp_ratio": 2.5,
-      "sl_ratio": 0.8,
-      "narrative": "Whales are aggressively scooping up oversold tokens in an accumulation phase, setting the stage for a high-conviction reversal."
+      "tp_ratio": 3.5,
+      "sl_ratio": 1.2,
+      "narrative": "Whales are actively positioning alongside retail buyers in a textbook accumulation setup before the next volatility spike."
+    },
+    {
+      "symbol": "VIRTUAL",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed: Attempting to short during an accumulation phase with positive buying pressure is a recipe for a squeeze."
     },
     {
       "symbol": "AIXBT",
@@ -222,7 +279,7 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Heavy distribution and aggressive negative whale flow create a toxic environment for longs despite the FHS signal."
+      "narrative": "Vetoed: Long signal contradicted by distribution phase and significant negative buying pressure."
     },
     {
       "symbol": "AERO",
@@ -230,7 +287,15 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "The bull flag is a trap as the asset is in a distribution phase with negative buying pressure and exiting liquidity."
+      "narrative": "Vetoed: Technical bull flag is invalidated by a distribution phase and aggressive selling pressure."
+    },
+    {
+      "symbol": "VIRTUAL",
+      "action": "SKIP",
+      "multiplier": 1.0,
+      "tp_ratio": 1.5,
+      "sl_ratio": 1.0,
+      "narrative": ""
     },
     {
       "symbol": "AIXBT",
@@ -251,12 +316,20 @@
   ],
   "venice_raw": [
     {
+      "symbol": "VIRTUAL",
+      "action": "SKIP",
+      "multiplier": 0.0,
+      "tp_ratio": 0.0,
+      "sl_ratio": 0.0,
+      "narrative": "Vetoed: Attempting to short during an accumulation phase with positive buying pressure is a recipe for a squeeze."
+    },
+    {
       "symbol": "AIXBT",
       "action": "SKIP",
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "Heavy distribution and aggressive negative whale flow create a toxic environment for longs despite the FHS signal."
+      "narrative": "Vetoed: Long signal contradicted by distribution phase and significant negative buying pressure."
     },
     {
       "symbol": "AERO",
@@ -264,31 +337,31 @@
       "multiplier": 0.0,
       "tp_ratio": 0.0,
       "sl_ratio": 0.0,
-      "narrative": "The bull flag is a trap as the asset is in a distribution phase with negative buying pressure and exiting liquidity."
+      "narrative": "Vetoed: Technical bull flag is invalidated by a distribution phase and aggressive selling pressure."
     },
     {
       "symbol": "MORPHO",
       "action": "TRADE",
       "multiplier": 0.8,
-      "tp_ratio": 1.5,
-      "sl_ratio": 0.5,
-      "narrative": "A quiet accumulation play where positive buying pressure is building a base, though low liquidity velocity requires a very tight leash."
+      "tp_ratio": 2.5,
+      "sl_ratio": 1.0,
+      "narrative": "A quiet accumulation play where buyers are absorbing supply, though exiting liquidity requires a very tight leash."
     },
     {
       "symbol": "BRETT",
       "action": "TRADE",
       "multiplier": 1.0,
-      "tp_ratio": 2.0,
-      "sl_ratio": 0.7,
-      "narrative": "Strong retail buying pressure is successfully absorbing supply in the accumulation zone, signaling a steady grind upward."
+      "tp_ratio": 3.0,
+      "sl_ratio": 1.2,
+      "narrative": "Strong buying pressure in an accumulation zone suggests a coiled spring, despite the current lack of liquidity velocity."
     },
     {
       "symbol": "VVV",
       "action": "TRADE",
       "multiplier": 1.1,
-      "tp_ratio": 2.5,
-      "sl_ratio": 0.8,
-      "narrative": "Whales are aggressively scooping up oversold tokens in an accumulation phase, setting the stage for a high-conviction reversal."
+      "tp_ratio": 3.5,
+      "sl_ratio": 1.2,
+      "narrative": "Whales are actively positioning alongside retail buyers in a textbook accumulation setup before the next volatility spike."
     }
   ]
 }

@@ -1,0 +1,250 @@
+<svg viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg">
+  <title>OpenClaw Trading Agent — Orchestration Map v2</title>
+
+  <style>
+    text { font-family: 'Courier New', monospace; }
+  </style>
+
+  <!-- Background -->
+  <rect width="1400" height="820" fill="#0a0e17"/>
+
+  <!-- Title bar -->
+  <rect x="0" y="0" width="1400" height="48" fill="#0d1220" stroke="#1a2440" stroke-width="1"/>
+  <text x="24" y="32" fill="#00d4aa" font-size="15" font-weight="bold" letter-spacing="2">OPENCLAW TRADING AGENT</text>
+  <text x="340" y="32" fill="#4a5568" font-size="11">Orchestration Map v2 | Agent VPS · e2-medium | June 2026</text>
+  <rect x="1300" y="12" width="72" height="24" rx="4" fill="#0d2818" stroke="#00d4aa" stroke-width="1"/>
+  <circle cx="1314" cy="24" r="3" fill="#00d4aa"/>
+  <text x="1324" y="28" fill="#00d4aa" font-size="10" font-weight="bold">LIVE</text>
+
+  <!-- LAYER 1: TRADING PIPELINE -->
+  <rect x="20" y="60" width="930" height="170" rx="6" fill="#0d1220" stroke="#1a3a5c" stroke-width="1"/>
+  <rect x="20" y="60" width="930" height="26" rx="6" fill="#0f1a2e"/>
+  <rect x="20" y="74" width="930" height="12" fill="#0f1a2e"/>
+  <text x="36" y="79" fill="#3b82f6" font-size="11" font-weight="bold" letter-spacing="1.5">LAYER 1 — TRADING PIPELINE</text>
+  <text x="330" y="79" fill="#4a5568" font-size="9">run_pipeline.sh · cron */2h · 0 LLM calls</text>
+
+  <!-- Steps -->
+  <rect x="36" y="96" width="95" height="40" rx="3" fill="#111827" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="83" y="113" fill="#60a5fa" font-size="8" font-weight="bold" text-anchor="middle">Step 0</text>
+  <text x="83" y="127" fill="#94a3b8" font-size="7" text-anchor="middle">check_position</text>
+
+  <text x="139" y="118" fill="#2d4a6f" font-size="12">›</text>
+
+  <rect x="152" y="96" width="95" height="40" rx="3" fill="#111827" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="199" y="113" fill="#60a5fa" font-size="8" font-weight="bold" text-anchor="middle">Step 1</text>
+  <text x="199" y="127" fill="#94a3b8" font-size="7" text-anchor="middle">collector.py</text>
+
+  <text x="255" y="118" fill="#2d4a6f" font-size="12">›</text>
+
+  <rect x="268" y="96" width="95" height="40" rx="3" fill="#111827" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="315" y="113" fill="#60a5fa" font-size="8" font-weight="bold" text-anchor="middle">Step 2</text>
+  <text x="315" y="127" fill="#94a3b8" font-size="7" text-anchor="middle">report_builder</text>
+
+  <text x="371" y="118" fill="#2d4a6f" font-size="12">›</text>
+
+  <rect x="384" y="96" width="95" height="40" rx="3" fill="#111827" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="431" y="113" fill="#60a5fa" font-size="8" font-weight="bold" text-anchor="middle">Step 2c</text>
+  <text x="431" y="127" fill="#94a3b8" font-size="7" text-anchor="middle">velocity_engine</text>
+
+  <text x="487" y="118" fill="#2d4a6f" font-size="12">›</text>
+
+  <rect x="500" y="96" width="100" height="40" rx="3" fill="#111827" stroke="#f59e0b" stroke-width="1"/>
+  <text x="550" y="113" fill="#f59e0b" font-size="8" font-weight="bold" text-anchor="middle">Step 2e</text>
+  <text x="550" y="127" fill="#fbbf24" font-size="7" text-anchor="middle">signal_eval_v2</text>
+
+  <text x="608" y="118" fill="#2d4a6f" font-size="12">›</text>
+
+  <rect x="620" y="96" width="95" height="40" rx="3" fill="#111827" stroke="#1e3a5f" stroke-width="0.8"/>
+  <text x="667" y="113" fill="#60a5fa" font-size="8" font-weight="bold" text-anchor="middle">Step 2f</text>
+  <text x="667" y="127" fill="#94a3b8" font-size="7" text-anchor="middle">signal_tracker</text>
+
+  <text x="723" y="118" fill="#2d4a6f" font-size="12">›</text>
+
+  <rect x="736" y="96" width="200" height="40" rx="3" fill="#111827" stroke="#00d4aa" stroke-width="1"/>
+  <text x="836" y="113" fill="#00d4aa" font-size="8" font-weight="bold" text-anchor="middle">Step 3 — enter_position_hl</text>
+  <text x="836" y="127" fill="#34d399" font-size="7" text-anchor="middle">gate + execute + TP/SL on-chain</text>
+
+  <!-- Tokens row -->
+  <rect x="36" y="148" width="897" height="28" rx="3" fill="#0a0e17" stroke="#1a2440" stroke-width="0.5"/>
+  <text x="50" y="166" fill="#4a5568" font-size="8">TOKENS</text>
+  <text x="110" y="166" fill="#22c55e" font-size="8">AERO · AIXBT · BRETT · MORPHO · VIRTUAL · VVV</text>
+  <text x="500" y="166" fill="#4a5568" font-size="8">|  $100 notional · 5x leverage · max 2 positions · per-token TP/SL backtest-optimized</text>
+  <text x="36" y="192" fill="#6b7280" font-size="7">44 rules (Fisher exact + BH-FDR, OOS WR≥50%)</text>
+  <text x="360" y="192" fill="#6b7280" font-size="7">Horizons: T6=14h · T12=28h · T24=52h</text>
+  <text x="640" y="192" fill="#6b7280" font-size="7">BIAS filter blocks opposite signals</text>
+
+  <!-- LAYER 2: GOLDMAN v4 -->
+  <rect x="20" y="244" width="620" height="280" rx="6" fill="#0d1220" stroke="#7c3aed" stroke-width="1"/>
+  <rect x="20" y="244" width="620" height="26" rx="6" fill="#1a0f2e"/>
+  <rect x="20" y="258" width="620" height="12" fill="#1a0f2e"/>
+  <text x="36" y="263" fill="#a78bfa" font-size="11" font-weight="bold" letter-spacing="1.5">LAYER 2 — GOLDMAN v4</text>
+  <text x="260" y="263" fill="#4a5568" font-size="9">financial_agent.py · 10 modes · Venice deepseek</text>
+
+  <!-- Pro column -->
+  <rect x="36" y="280" width="290" height="22" rx="3" fill="#1a0f2e" stroke="#7c3aed" stroke-width="0.5"/>
+  <text x="181" y="295" fill="#a78bfa" font-size="9" font-weight="bold" text-anchor="middle">STRATEGIST (deepseek-v4-pro)</text>
+
+  <rect x="36" y="308" width="290" height="28" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="50" y="326" fill="#c4b5fd" font-size="8">--morning</text>
+  <text x="150" y="326" fill="#6b7280" font-size="7">07:00</text>
+  <text x="200" y="326" fill="#94a3b8" font-size="7">BIAS + ranking + thesis</text>
+
+  <rect x="36" y="340" width="290" height="28" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="50" y="358" fill="#c4b5fd" font-size="8">--intelligence-memo</text>
+  <text x="190" y="358" fill="#6b7280" font-size="7">00:15</text>
+  <text x="230" y="358" fill="#94a3b8" font-size="7">daily synthesis</text>
+
+  <rect x="36" y="372" width="290" height="28" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="50" y="390" fill="#c4b5fd" font-size="8">--monitor</text>
+  <text x="130" y="390" fill="#6b7280" font-size="7">*/1h (if pos)</text>
+  <text x="230" y="390" fill="#94a3b8" font-size="7">CUT/HOLD</text>
+
+  <rect x="36" y="404" width="290" height="28" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="50" y="422" fill="#c4b5fd" font-size="8">--reflect</text>
+  <text x="130" y="422" fill="#6b7280" font-size="7">on close</text>
+  <text x="200" y="422" fill="#94a3b8" font-size="7">thesis vs outcome</text>
+
+  <!-- Flash column -->
+  <rect x="340" y="280" width="286" height="22" rx="3" fill="#1a1508" stroke="#f59e0b" stroke-width="0.5"/>
+  <text x="483" y="295" fill="#fbbf24" font-size="9" font-weight="bold" text-anchor="middle">SENTINEL (deepseek-v4-flash)</text>
+
+  <rect x="340" y="308" width="286" height="28" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="354" y="326" fill="#fde68a" font-size="8">--quick-monitor</text>
+  <text x="474" y="326" fill="#6b7280" font-size="7">*/15min</text>
+  <text x="534" y="326" fill="#94a3b8" font-size="7">fast sentinel</text>
+
+  <rect x="340" y="340" width="286" height="28" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="354" y="358" fill="#fde68a" font-size="8">--alert</text>
+  <text x="420" y="358" fill="#6b7280" font-size="7">*/2h</text>
+  <text x="474" y="358" fill="#94a3b8" font-size="7">BTC → BIAS_UPDATE</text>
+
+  <rect x="340" y="372" width="286" height="28" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="354" y="390" fill="#fde68a" font-size="8">--gate</text>
+  <text x="410" y="390" fill="#6b7280" font-size="7">pipeline</text>
+  <text x="480" y="390" fill="#94a3b8" font-size="7">GO / WAIT</text>
+
+  <rect x="340" y="404" width="286" height="28" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="354" y="422" fill="#fde68a" font-size="8">--pre-morning</text>
+  <text x="474" y="422" fill="#6b7280" font-size="7">06:55</text>
+  <text x="520" y="422" fill="#94a3b8" font-size="7">overnight</text>
+
+  <rect x="340" y="436" width="286" height="28" rx="2" fill="#111827" stroke="#1e293b" stroke-width="0.5"/>
+  <text x="354" y="454" fill="#fde68a" font-size="8">--post-pipeline</text>
+  <text x="480" y="454" fill="#6b7280" font-size="7">pipeline</text>
+  <text x="540" y="454" fill="#94a3b8" font-size="7">coherence</text>
+
+  <!-- Venice badge -->
+  <rect x="36" y="478" width="590" height="24" rx="3" fill="#0a0e17" stroke="#1a2440" stroke-width="0.5"/>
+  <text x="50" y="494" fill="#4a5568" font-size="8">VENICE API</text>
+  <text x="130" y="494" fill="#a78bfa" font-size="8">pro: 4-8/day</text>
+  <text x="260" y="494" fill="#fbbf24" font-size="8">flash: 40-60/day</text>
+  <text x="420" y="494" fill="#6b7280" font-size="8">flash fallback if pro 429</text>
+
+  <!-- LAYER 3: SENTINEL + FLYWHEEL -->
+  <rect x="656" y="244" width="294" height="168" rx="6" fill="#0d1220" stroke="#f97316" stroke-width="1"/>
+  <rect x="656" y="244" width="294" height="26" rx="6" fill="#1a1208"/>
+  <rect x="656" y="258" width="294" height="12" fill="#1a1208"/>
+  <text x="672" y="263" fill="#fb923c" font-size="11" font-weight="bold" letter-spacing="1">LAYER 3 — SENTINEL</text>
+
+  <text x="672" y="290" fill="#fb923c" font-size="8" font-weight="bold">WebSocket</text>
+  <text x="756" y="290" fill="#94a3b8" font-size="7">HL real-time prices + funding</text>
+  <text x="672" y="310" fill="#fb923c" font-size="8" font-weight="bold">Decision Engine</text>
+  <text x="790" y="310" fill="#94a3b8" font-size="7">cooldowns + budget 150/d</text>
+  <text x="672" y="330" fill="#fb923c" font-size="8" font-weight="bold">Working Memory</text>
+  <text x="790" y="330" fill="#94a3b8" font-size="7">positions + verdicts</text>
+  <text x="672" y="350" fill="#fb923c" font-size="8" font-weight="bold">SR Detection</text>
+  <text x="776" y="350" fill="#94a3b8" font-size="7">tighten SL near key levels</text>
+  <text x="672" y="378" fill="#6b7280" font-size="7">Event-driven monitoring, auto-escalate to pro</text>
+  <text x="672" y="395" fill="#6b7280" font-size="7">Replaces fixed-schedule flash checks</text>
+
+  <!-- Flywheel -->
+  <rect x="656" y="424" width="294" height="100" rx="6" fill="#0d1220" stroke="#06b6d4" stroke-width="1"/>
+  <rect x="656" y="424" width="294" height="22" rx="6" fill="#0a1a20"/>
+  <rect x="656" y="436" width="294" height="10" fill="#0a1a20"/>
+  <text x="672" y="439" fill="#22d3ee" font-size="10" font-weight="bold" letter-spacing="1">INTELLIGENCE FLYWHEEL</text>
+
+  <text x="672" y="462" fill="#94a3b8" font-size="7">trades → close logs → reflector (0 API)</text>
+  <text x="672" y="478" fill="#94a3b8" font-size="7">→ lessons.json (per-signal WR, decay)</text>
+  <text x="672" y="494" fill="#94a3b8" font-size="7">→ intelligence memo (pro) → morning brief</text>
+  <text x="672" y="510" fill="#22d3ee" font-size="8" font-weight="bold">→ better BIAS → better trades ↻</text>
+
+  <!-- CROSS-VPS -->
+  <rect x="966" y="60" width="414" height="170" rx="6" fill="#0d1220" stroke="#06b6d4" stroke-width="1"/>
+  <rect x="966" y="60" width="414" height="26" rx="6" fill="#0a1a20"/>
+  <rect x="966" y="74" width="414" height="12" fill="#0a1a20"/>
+  <text x="982" y="79" fill="#22d3ee" font-size="11" font-weight="bold" letter-spacing="1">DELTA VPS → AGENT</text>
+  <text x="1160" y="79" fill="#4a5568" font-size="9">VPC 10.132.0.5</text>
+
+  <rect x="982" y="96" width="384" height="32" rx="3" fill="#111827" stroke="#06b6d4" stroke-width="0.5"/>
+  <text x="996" y="110" fill="#22d3ee" font-size="8" font-weight="bold">terminal :5002</text>
+  <text x="996" y="122" fill="#6b7280" font-size="7">prices (32), funding (30), HL (33), signals, anomalies</text>
+
+  <rect x="982" y="134" width="384" height="32" rx="3" fill="#111827" stroke="#06b6d4" stroke-width="0.5"/>
+  <text x="996" y="148" fill="#22d3ee" font-size="8" font-weight="bold">/api/intelligence</text>
+  <text x="996" y="160" fill="#6b7280" font-size="7">composite scores + token tier (A/B/C) + composite regime</text>
+
+  <rect x="982" y="172" width="384" height="32" rx="3" fill="#111827" stroke="#06b6d4" stroke-width="0.5"/>
+  <text x="996" y="186" fill="#22d3ee" font-size="8" font-weight="bold">Hermes Intelligence</text>
+  <text x="996" y="198" fill="#6b7280" font-size="7">12 CMD + 3 Gemma + Sentinel → 6 DBs, 54 data files, wiki</text>
+
+  <!-- METRICS -->
+  <rect x="966" y="244" width="414" height="280" rx="6" fill="#0d1220" stroke="#374151" stroke-width="1"/>
+  <rect x="966" y="244" width="414" height="22" rx="6" fill="#111827"/>
+  <rect x="966" y="256" width="414" height="10" fill="#111827"/>
+  <text x="982" y="259" fill="#9ca3af" font-size="10" font-weight="bold" letter-spacing="1">METRICS</text>
+
+  <text x="982" y="284" fill="#f59e0b" font-size="9" font-weight="bold">Signal System</text>
+  <text x="982" y="300" fill="#94a3b8" font-size="8">44 rules (Fisher exact + BH-FDR)</text>
+  <text x="982" y="314" fill="#94a3b8" font-size="8">OOS WR >= 50%, avg R:R ~2.5</text>
+  <text x="982" y="328" fill="#94a3b8" font-size="8">T6 (6h) · T12 (12h) · T24 (24h)</text>
+
+  <text x="982" y="354" fill="#00d4aa" font-size="9" font-weight="bold">Trading</text>
+  <text x="982" y="370" fill="#94a3b8" font-size="8">$100 notional · 5x · ~$20 margin</text>
+  <text x="982" y="384" fill="#94a3b8" font-size="8">Max 2 positions · conf >= 55</text>
+  <text x="982" y="398" fill="#94a3b8" font-size="8">TP/SL on-chain trigger orders</text>
+  <text x="982" y="412" fill="#94a3b8" font-size="8">CUT retry 3x (5→10→15%)</text>
+
+  <text x="982" y="438" fill="#a78bfa" font-size="9" font-weight="bold">Cron Schedule</text>
+  <text x="982" y="454" fill="#94a3b8" font-size="8">Pipeline */2h · Morning 07:00</text>
+  <text x="982" y="468" fill="#94a3b8" font-size="8">Quick-monitor */15min · Monitor */1h</text>
+  <text x="982" y="482" fill="#94a3b8" font-size="8">Alert */2h · Reflector daily 00:00</text>
+  <text x="982" y="496" fill="#94a3b8" font-size="8">Intel memo 00:15 · Technicals */2h</text>
+  <text x="982" y="516" fill="#9ca3af" font-size="9" font-weight="bold">252+ trades · ~$32 USDC · 19 sessions</text>
+
+  <!-- DATA FILES -->
+  <rect x="20" y="540" width="930" height="100" rx="6" fill="#0d1220" stroke="#1a2440" stroke-width="1"/>
+  <rect x="20" y="540" width="930" height="22" rx="6" fill="#0f1520"/>
+  <rect x="20" y="552" width="930" height="10" fill="#0f1520"/>
+  <text x="36" y="556" fill="#6b7280" font-size="10" font-weight="bold" letter-spacing="1">DATA FILES — NERVOUS SYSTEM</text>
+
+  <text x="36" y="582" fill="#22d3ee" font-size="7">regime_card.json</text>
+  <text x="170" y="582" fill="#22d3ee" font-size="7">active_trades.json</text>
+  <text x="310" y="582" fill="#22d3ee" font-size="7">fills_history.json</text>
+  <text x="440" y="582" fill="#fbbf24" font-size="7">evaluated_signals_v2.json</text>
+  <text x="610" y="582" fill="#22d3ee" font-size="7">lessons.json</text>
+  <text x="720" y="582" fill="#22d3ee" font-size="7">intelligence_memo.json</text>
+
+  <text x="36" y="600" fill="#94a3b8" font-size="7">token_technicals.json</text>
+  <text x="170" y="600" fill="#94a3b8" font-size="7">gate_result.json</text>
+  <text x="310" y="600" fill="#94a3b8" font-size="7">monitor_verdicts.json</text>
+  <text x="440" y="600" fill="#94a3b8" font-size="7">dynamics/*.json (138/token)</text>
+  <text x="610" y="600" fill="#94a3b8" font-size="7">trade_reflections.json</text>
+  <text x="720" y="600" fill="#94a3b8" font-size="7">pre_morning_brief.json</text>
+
+  <text x="36" y="626" fill="#6b7280" font-size="7">13 data files total · regime_card is the central state file (BIAS, thesis, ranking, conviction)</text>
+
+  <!-- Footer -->
+  <rect x="20" y="656" width="1360" height="36" rx="6" fill="#0d1220" stroke="#1a2440" stroke-width="0.5"/>
+  <text x="36" y="678" fill="#4a5568" font-size="9">EXECUTION</text>
+  <text x="120" y="678" fill="#00d4aa" font-size="9">Hyperliquid Perps</text>
+  <text x="280" y="678" fill="#4a5568" font-size="9">|</text>
+  <text x="300" y="678" fill="#a78bfa" font-size="9">Venice AI (deepseek-v4)</text>
+  <text x="490" y="678" fill="#4a5568" font-size="9">|</text>
+  <text x="510" y="678" fill="#60a5fa" font-size="9">GCP e2-medium</text>
+  <text x="640" y="678" fill="#4a5568" font-size="9">|</text>
+  <text x="660" y="678" fill="#94a3b8" font-size="9">systemd + crontab</text>
+  <text x="810" y="678" fill="#4a5568" font-size="9">|</text>
+  <text x="830" y="678" fill="#fb923c" font-size="9">Forensics Engine V5 (30 metrics)</text>
+  <text x="1080" y="678" fill="#4a5568" font-size="9">|</text>
+  <text x="1100" y="678" fill="#06b6d4" font-size="9">Built with Claude Code</text>
+</svg>
